@@ -1,2 +1,3 @@
 # procesy_rozproszone
-[TIN] System komunikacji dla zarządzania rozproszonymi procesami.
+[TIN] System komunikacji dla zarządzania rozproszonymi procesami. 
+W poniedziaek (9.11.2015) o godzinie 14 przed sala 161 spotkanie projektowe.
