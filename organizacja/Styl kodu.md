@@ -13,7 +13,7 @@ Zasada ta dotyczy całości wydzielonych części projektu. Jeśli osoba odpowie
 Kod ma być samodokumentujący. Żadnych pajęczyzmów typu klasa A, funkcja f(). Jeśli z nazwy zmiennej/funkcji/klasy nie wynika przeznaczenie, na 99% robisz coś źle. Wyjątek - indeksy w pętlach.
 Wykorzystujemy CamelCase dla klas, camelCase dla funkcji i zmiennych, UPPERCASE_UNDERSCORE dla stałych.
 ````c++
-const int MY_CONSTANT
+const int MY_CONSTANT;
 
 class MyClass
 {
