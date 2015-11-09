@@ -17,17 +17,17 @@ Od 0 do 5 pkt. – za pracę w zespole, przydzielane przez lidera dla członków
 
 Projekt wstępny powinien określać:
 
-    Treść zadania.
-    Nazwę własną projektowanego systemu.
-    Przyjęte założenia funkcjonalne i niefunkcjonalne.
-    Podstawowe przypadki użycia.
-    Wybrane środowisko sprzętowo-programowe (systemy operacyjne, biblioteki programistyczne) i narzędziowe (debugowanie, testowanie).
-    Architekturę rozwiązania, tj. ilustrację i opis struktury logicznej systemu (koncepcyjnych bloków funkcjonalnych).
-    Ewentualnie API modułów stanowiących bloki funkcjonalne.
-    Sposób testowania.
-    Sposób demonstracji rezultatów, tj. scenariusze testów akceptacyjnych do zaprezentowania przy odbiorze projektu.
-    Podział prac w zespole.
-    Adres projektu na serwerze kontroli wersji.
+ - Treść zadania.
+ - Nazwę własną projektowanego systemu.
+ - Przyjęte założenia funkcjonalne i niefunkcjonalne.
+ - Podstawowe przypadki użycia.
+ - Wybrane środowisko sprzętowo-programowe (systemy operacyjne, biblioteki programistyczne) i narzędziowe (debugowanie, testowanie).
+ - Architekturę rozwiązania, tj. ilustrację i opis struktury logicznej systemu (koncepcyjnych bloków funkcjonalnych).
+ - Ewentualnie API modułów stanowiących bloki funkcjonalne.
+ - Sposób testowania.
+ - Sposób demonstracji rezultatów, tj. scenariusze testów akceptacyjnych do zaprezentowania przy odbiorze projektu.
+ - Podział prac w zespole.
+ - Adres projektu na serwerze kontroli wersji.
 
 ## Dokumentacja
 

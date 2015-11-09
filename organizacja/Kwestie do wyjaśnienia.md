@@ -3,10 +3,12 @@
 ### Kwestie wymagające wyjaśnienia z prowadzącym przed projektem wstępnym:
 
 **Kod programów uruchamianych przez agentów**
+
 1. Rozsyłany przez serwer, czy z góry zadany agentom?
 2. Jeśli trzymany na serwerze, to czy jest z góry ustalony, czy też trzeba uwzględnić możliwość edycji listy programów?
 
 **Konsola**
+
 1. osobny program komunikujący się z serwerem z uprzywilejowanego hosta, czy wymagająca autoryzacji usługa dostępna z dowolnego miejsca w sieci?
 2. jaką funkcjonalność powinna dostarczać?
 
