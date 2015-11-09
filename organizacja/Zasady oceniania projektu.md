@@ -3,15 +3,15 @@ Przeklejam ze strony doktora Wytrębowicza, ku wygodzie i przestrodze.
 
 ## Punktacja
 
-Maksymalnie można uzyskać 50 pkt.
-Minimum wymagane do zaliczenia to 25 pkt.
-Od 0 do 10 pkt. – za projekt wstępny i jego publiczną prezentację.
-Od 0 do 15 pkt. – za przedstawienie działania zaplanowanych funkcji, w tym prezentacja przebiegu kompilacji, wykonania testów i scenariuszy demonstracyjnych.
-Od 0 do 10 pkt. – za dokumentację projektu.
-Od 0 do 5 pkt. – za jakość kodu.
-Od 0 do 5 pkt. – za publiczną prezentację projektu.
-Od 0 do 5 pkt. – za pracę w zespole, przydzielane przez lidera dla członków zespołu i przez prowadzącego dla lidera.
--5 pkt. – za niedotrzymanie terminu wysłania projektu wstępnego lub dokumentacji końcowej.
+ - Maksymalnie można uzyskać 50 pkt.
+ - Minimum wymagane do zaliczenia to 25 pkt.
+ - Od 0 do 10 pkt. – za projekt wstępny i jego publiczną prezentację.
+ - Od 0 do 15 pkt. – za przedstawienie działania zaplanowanych funkcji, w tym prezentacja przebiegu kompilacji, wykonania testów i scenariuszy demonstracyjnych.
+ - Od 0 do 10 pkt. – za dokumentację projektu.
+ - Od 0 do 5 pkt. – za jakość kodu.
+ - Od 0 do 5 pkt. – za publiczną prezentację projektu.
+ - Od 0 do 5 pkt. – za pracę w zespole, przydzielane przez lidera dla członków zespołu i przez prowadzącego dla lidera.
+ - -5 pkt. – za niedotrzymanie terminu wysłania projektu wstępnego lub dokumentacji końcowej.
 
 ## Projekt wstępny
 
