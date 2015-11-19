@@ -81,3 +81,7 @@ Zalety:
 
 Wady:
  - obrzydliwa synchronizacja z błędem zależnym od opóźnienia pakietów w sieci (od kilkunastu ms do nawet kilkunastu/kilkudziesięciu sekund)
+
+### Sumy kontrolne
+
+Musimy się zastanowić, czy robimy sumy kontrolne dla nagłówków protokołu i przesyłanych plików.
