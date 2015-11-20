@@ -7,10 +7,7 @@
 
 Przypominam, by przejrzeć wymagania i nie zapomnieć o różnych duperelach, których sobie prowadzący życzył.
 
-[TIN] System komunikacji dla zarządzania rozproszonymi procesami.
--W poniedziaek (9.11.2015) o godzinie 14 przed sala 161 spotkanie projektowe.
--Na 11 listopada każdy wrzuca opis swojej częci projektu.
--W piatek (13.11.2015) o godzinie 19 +/- konsultacjie. Chyba w 319.
+-----------------------------------------------------------------
 
 -Najlepiej, żeby dokumentacja wstępna była już gotowa w niedzielę (22.11.2015), bo w poniedziałek może nie starczyć czasu, a dokumentacje trzeba wysłać mailem. Zalecam, wytwarzanie (i commitowanie) pliku dokumentacji wstępnej itteracyjnie, bo wcześniej będziemy mogli wypatrzyć różne drobne rzeczy do poprawienia.
 
@@ -20,4 +17,5 @@ Niech tak to narazie wygląda na dokumentacji wstępnej. Jeśli okaże się w tr
 
 -----------------------------------------------------------------
 **Nadal nie mamy nazwy projektu!**
+
 Do niedzieli trzeba coś wybrać.
