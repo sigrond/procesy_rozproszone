@@ -41,7 +41,7 @@ Protokół przesyłania plików musi posiadać:
  - kod operacji dodawania [8 bitów]
  - flagę typu pliku: główny/pomocniczy [1 bit]
  - długość pola nazwy pliku (max 128 bajtów) [7 bitów]
- - suma kontrolna nazwy + pliku [8 bitów]
+ - suma kontrolna nazwy + pliku [16 bitów]
  - identyfikator zadania [32 bity]
  - dlugość pola danych (maksimum wybadam później) [32 bity]
  - nazwę pliku [max 2^7 bajtów]
@@ -50,7 +50,8 @@ Protokół przesyłania plików musi posiadać:
 Protokół poza realizacją powyższych założeń musi realizować raportowanie sukcesów/niepowodzeń w wykonywaniu żądanych operacji.
 
 **Serwer czeka na raport i nie daje innych poleceń danemu agentowi dopóki nie dostanie odpowiedzi**
-W wypadku timeoutu serwer wysyła zapytanie "czy żyjesz?". Trzykrotne niepowodzenie oznacza, że agent jest MIA i trzeba przenieśc zadanie gdzie indziej.
+
+W wypadku timeoutu serwer wysyła zapytanie "czy żyjesz?". Trzykrotne niepowodzenie oznacza, że agent jest MIA i trzeba przenieść zadanie gdzie indziej.
 
 Raportowanie:
  - Kod raportu [8 bitów]

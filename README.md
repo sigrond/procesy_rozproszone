@@ -22,3 +22,25 @@ Do niedzieli trzeba coś wybrać.
 
 Proponuję nazwę:
 One to rule them all
+
+## Struktura drzewa katalogów projektu
+
+|- application
+|  |- client 
+|  |- console
+|  |- protocol
+|  |- server
+|     |- server.cpp
+|     |- ...
+|
+|- organizacja
+|- wireshark
+
+Proszę posprzątać ヽ(#`Д´)ﾉ
+
+## Rozszerzenia nagłówków
+
+Nie chcę się z nikim gryźć o to, więc ustalmy czy stosujemy .hpp, by było jednolicie.
+Wedle sztuki .hpp to nagłówki C++ only, a .h to C/C++ compatible; nie żeby mi jakoś bardzo zależało, więc proszę o mniej lub bardziej demokratyczne narzucenie konwencji. Im mniej rozbieżności, tym mniej możliwego czepialstwa ze strony prowadzącego. // AR
+
+
