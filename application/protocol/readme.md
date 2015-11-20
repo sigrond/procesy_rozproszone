@@ -47,15 +47,6 @@ Protokół przesyłania plików musi posiadać:
  - nazwę pliku [max 2^7 bajtów]
  - dane (plik) [max 2^32 bajtów]
 
-Protokół poza realizacją powyższych założeń musi realizować raportowanie sukcesów/niepowodzeń w wykonywaniu żądanych operacji.
-
-**Serwer czeka na raport i nie daje innych poleceń danemu agentowi dopóki nie dostanie odpowiedzi**
-
-W wypadku timeoutu serwer wysyła zapytanie "czy żyjesz?". Trzykrotne niepowodzenie oznacza, że agent jest MIA i trzeba przenieść zadanie gdzie indziej.
-
-Raportowanie:
- - Kod raportu [8 bitów]
-
 ### Zadania
 
 Tu sprawa jest prostsza: 
@@ -63,47 +54,67 @@ Tu sprawa jest prostsza:
  - agent raportuje sukces/błąd
  - po zakończeniu wykonania zadania agent wysyła wynik, serwer odpowiada potwierdzeniem otrzymania
 
+Ustalenie: timestamp mniejszy niż aktualny czas oznacza wykonanie natychmiast; zatem oczywistym zdaje się polecenia do wykonania natychmiast wysyłać z timestamp = 0. 
+
+Pola:
+ - Kod polecenia [8 bitów]
+ - ziemi niczyja [24 bity] // jeszcze pomyślę, jak to zagospodarować
+ - id zadania [32 bity]
+ - timestamp [32 bity]
+
 ### Responsywność agentów
 
 Trzeba okresowo badać, czy agent żyje. Można to zrealizować poprzez mechanizm zapytania-odpowiedzi, albo po prostu kazać agentom okresowo wysyłać serwerowi komunikat o tym, że żyją.
 
+Zapytanie od serwera:
+ - kod "czy żyjesz?" [8 bitów]
+
+Odpowiedź/raport okresowy klienta:
+ - kod "tak, żyję" [8 bitów]
+
+Kodu "nie, nie zyję" nie przewidujemy.
+
 ### Synchronizacja
 
-To jest problem do solidnego przemyślenia. Możemy to ogólnie zrealizować na cztery sposoby:
+Synchronizacja będzie realizowana poprzez wewnętrznego klienta NTP.
 
-**1. Pełna implementacja NTP lub własny protokół synchronizujący**
+Serwer może wysłać do agenta żądanie synchronizacji czasu:
 
-Zalety:
- - brak zależności od zewnętrznych serwerów czasu i obecności klientów NTP na hoście
+Pola:
+ - kod SYN [8 bitów]
 
-Wady:
- - konieczność zaimplementowania serwera i klienta synchronizacji czasu, co może być równie dużym zadaniem co nasz serwer/agent/konsola
+Istotne sugestie co do implementacji:
+ - nie zmieniamy zegara systemowego (co by wymagało uprawnień root), tylko wyliczamy poprawkę na czas systemowy
+ - serwer powinien synchronizować czas natychmiast po uruchomieniu oraz wysyłać polecenie SYN do agenta natychmiast po jego rejestracji
+ - serwer i agenci powinni okresowo automatycznie się synchronizować
 
-**2. Implementacja klienta znanego protokołu (np. ntp)**
+### Raportowanie
 
-Zalety:
- - nie potrzebujemy zewnętrznego klienta ntp
+**Serwer po wydaniu jakiejkolwiek komendy czeka na raport i nie daje innych poleceń danemu agentowi dopóki nie dostanie odpowiedzi**
 
-Wady:
- - zależność od zewnętrznych serwerów czasu
- - prostsze niż 1. ale wciąż dodatkowa rzecz do napisania
+W wypadku timeoutu serwer wysyła zapytanie "czy żyjesz?". Trzykrotne niepowodzenie oznacza, że agent jest MIA i trzeba przenieść zadanie gdzie indziej.
 
-**3. Niech system to zrobi za nas**
+Raportowanie:
+ - Kod raportu [8 bitów]
 
-Zalety:
- - względnie mało roboty
+### Przesyłanie wyniku zadania
 
-Wady:
- - grube założenie, że system ma jakiegoś konkretnego klienta synchronizacji, np. sntp
+Tu jest mały problem, bo nie wiadomo zbytnio, co te zadania mają robić, jak mają być interpretowane wyniki. Opracowałem taki uniwersalny schemat:
 
-**4. Kij z precyzją, walnijmy po prostu timestamp z serwera XDDD**
+Zwracanie typu prostego (liczby):
+ - Kod return dla typu prostego [8 bitów]
+ - Rodzaj zwracanego typu [8 bitów]
+ - Wypełniacz [0-16 bitów]
+ - id zadania [32 bity]
+ - Liczba [8-64 bitów]
 
-Zalety:
- - niemal zero roboty
+Zwracanie czegokolwiek innego:
+ - Kod return dla czegoś innego [8 bitów]
+ - Wypełniacz [8 bitów]
+ - Suma kontrolna danych [16 bitów]
+ - id zadania [32 bity]
+ - Długość pola danych (max 2^32 bajtów) [32 bity]
+ - Dane [max 2^32 bajtów]
 
-Wady:
- - obrzydliwa synchronizacja z błędem zależnym od opóźnienia pakietów w sieci (od kilkunastu ms do nawet kilkunastu/kilkudziesięciu sekund)
-
-### Sumy kontrolne
-
-Musimy się zastanowić, czy robimy sumy kontrolne dla nagłówków protokołu i przesyłanych plików.
+Serwer odpowiada raportem otrzymania danych:
+ - Kod odpowiedzi [8 bit]

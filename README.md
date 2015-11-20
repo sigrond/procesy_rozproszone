@@ -20,8 +20,15 @@ Niech tak to narazie wygląda na dokumentacji wstępnej. Jeśli okaże się w tr
 
 Do niedzieli trzeba coś wybrać.
 
-Proponuję nazwę:
-One to rule them all
+Proponowane nazwy:
+1. One to rule them all
+2. Rozpraszacz
+3. Siewca Procesów
+4. PANDA3
+5. Low Orbit Process Cannon
+
+Proponowane poważne nazwy:
+1. ...
 
 ## Struktura drzewa katalogów projektu
 
@@ -37,8 +44,6 @@ One to rule them all
 |- organizacja
 |- wireshark
 ````
-
-Proszę posprzątać ヽ(#`Д´)ﾉ
 
 ## Rozszerzenia nagłówków
 
