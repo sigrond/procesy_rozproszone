@@ -25,6 +25,7 @@ One to rule them all
 
 ## Struktura drzewa katalogów projektu
 
+````
 |- application
 |  |- client 
 |  |- console
@@ -35,6 +36,7 @@ One to rule them all
 |
 |- organizacja
 |- wireshark
+````
 
 Proszę posprzątać ヽ(#`Д´)ﾉ
 
