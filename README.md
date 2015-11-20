@@ -21,6 +21,7 @@ Niech tak to narazie wygląda na dokumentacji wstępnej. Jeśli okaże się w tr
 Do niedzieli trzeba coś wybrać.
 
 Proponowane nazwy:
+
 1. One to rule them all
 2. Rozpraszacz
 3. Siewca Procesów
@@ -28,6 +29,7 @@ Proponowane nazwy:
 5. Low Orbit Process Cannon
 
 Proponowane poważne nazwy:
+
 1. ...
 
 ## Struktura drzewa katalogów projektu
