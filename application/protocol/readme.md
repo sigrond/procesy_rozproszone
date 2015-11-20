@@ -4,6 +4,22 @@ To jest wstępny i ogólnikowy projekt protokołu. Feedback bardzo pożądany.
 
 ### Przesyłanie plików
 
+**WAŻNE: sugeruję, byśmy nie utrudniali sobie życia i nie zagłębiali się zbytnio w bawienie się plikami zadania.**
+
+ - Pliki dodajemy siłą wyższej konieczności każdy osobno.
+ - Konflikt nazw w obrębie zadania = nadpisanie.
+ - Próba dodania więcej niż jednego pliku głównego = usunięcie starego pliku głównego.
+ - Nie żądamy usuwania pojedynczych plików, tylko całe zadania. Ludobójstwo może nie jest eleganckie, ale za to mniej w nim zastanawiania się.
+ - Żadnych edycji plików. Zadanie jest z zalożenia gotowe i ostateczne.
+
+Innymi słowy, po załadowaniu zadania, możemy je co najwyżej usunąć. Teoretycznie możliwe dodanie kolejnych plików nie powinno wystąpić, patrz punkt wyżej.
+Tak, jest to prymitywne, ale nie mamy czasu na budowanie pelnoprawnego protokołu transmisji plików.
+
+Jeśli będziemy cierpieć na nadmiary czasu, możemy się tym pobawić.
+
+--------------------
+Poniższa specyfikacja zahacza o implementację agenta, proszę to traktować jako wyjaśnienie idei oraz propozycję.
+
  - Serwer każdemu zadaniu przypisuje unikalny w obrębie całego systemu identyfikator
  - Zadanie składa się z głównego pliku wykonywalnego i ewentualnych plików pomocniczych
  - Pliki pomocnicze mogą być dowolnymi plikami, zawierającymi dane lub inne programy
@@ -22,17 +38,22 @@ Taka organizacja ma następujące zalety:
  - serwer musi przechowywać tylko identyfikator zadania - nędzne 4 bajty (oczywiście może przechowywać więcej informacji, jeśli to uprości nam życie)
 
 Protokół przesyłania plików musi posiadać:
- - identyfikator zadania
- - pole określające wykonywaną operację: dodaj, usuń, (nadpisuj?)
- - flagę typu pliku: główny/pomocniczy
- - dane (plik)
+ - kod operacji dodawania [8 bitów]
+ - flagę typu pliku: główny/pomocniczy [1 bit]
+ - długość pola nazwy pliku (max 128 bajtów) [7 bitów]
+ - suma kontrolna nazwy + pliku [8 bitów]
+ - identyfikator zadania [32 bity]
+ - dlugość pola danych (maksimum wybadam później) [32 bity]
+ - nazwę pliku [max 2^7 bajtów]
+ - dane (plik) [max 2^32 bajtów]
 
 Protokół poza realizacją powyższych założeń musi realizować raportowanie sukcesów/niepowodzeń w wykonywaniu żądanych operacji.
 
-Do zastanowienia się:
- - Czy przewidujemy możliwość usuwania pojedynczych plików, czy tylko całego zadania (bardzo uproszczony system)?
- - Pewnie może się przydać informacja o zawartości katalogów danego agenta - trzymamy ją na serwerze (może być tego cholernie dużo) czy odpytujemy agentów (kolejna upierdliwa rzecz do dodania do protokołu)?
- - Jakie mają być domyślne reakcje serwera na komunikaty o błędach: nieudane dodanie/usunięcie, próba dodania istniejącego już pliku, próba usunięcia nieistniejącego pliku?
+**Serwer czeka na raport i nie daje innych poleceń danemu agentowi dopóki nie dostanie odpowiedzi**
+W wypadku timeoutu serwer wysyła zapytanie "czy żyjesz?". Trzykrotne niepowodzenie oznacza, że agent jest MIA i trzeba przenieśc zadanie gdzie indziej.
+
+Raportowanie:
+ - Kod raportu [8 bitów]
 
 ### Zadania
 
