@@ -1,15 +1,23 @@
 # procesy_rozproszone
-[TIN] System komunikacji dla zarz¹dzania rozproszonymi procesami.  
--W poniedziaek (9.11.2015) o godzinie 14 przed sala 161 spotkanie projektowe.  
--Na 11 listopada ka¿dy wrzuca opis swojej czêci projektu.  
--W piatek (13.11.2015) o godzinie 19 +/- konsultacjie. Chyba w 319.	
+[TIN] System komunikacji dla zarzÄ…dzania rozproszonymi procesami.  
 
--Najlepiej, ¿eby dokumentacja wstêpna by³a ju¿ gotowa w niedzielê (22.11.2015), bo w poniedzia³ek mo¿e nie starczyæ czasu, a dokumentacje trzeba wys³aæ mailem. Zalecam, wytwarzanie (i commitowanie) pliku dokumentacji wstêpnej itteracyjnie, bo wczeœniej bêdziemy mogli wypatrzyæ ró¿ne drobne rzeczy do poprawienia.
+ - Do piÄ…tku godzin pÃ³Åºnonocnych/soboty godzin wczesnorannych - porzÄ…dna dokumentacja protokoÅ‚u
+ - Do soboty godzin pÃ³Åºnonocnych - jak najostateczniejsze dokumentacje pozostaÅ‚ych czÄ™Å›ci
+ - Niedziela na ogarniÄ™cie tego do formy reprezentatywnej
 
+Przypominam, by przejrzeÄ‡ wymagania i nie zapomnieÄ‡ o rÃ³Å¼nych duperelach, ktÃ³rych sobie prowadzÄ…cy Å¼yczyÅ‚.
+
+[TIN] System komunikacji dla zarzÄ…dzania rozproszonymi procesami.
+-W poniedziaek (9.11.2015) o godzinie 14 przed sala 161 spotkanie projektowe.
+-Na 11 listopada kaÅ¼dy wrzuca opis swojej czÄ™ci projektu.
+-W piatek (13.11.2015) o godzinie 19 +/- konsultacjie. Chyba w 319.
+
+-Najlepiej, Å¼eby dokumentacja wstÄ™pna byÅ‚a juÅ¼ gotowa w niedzielÄ™ (22.11.2015), bo w poniedziaÅ‚ek moÅ¼e nie starczyÄ‡ czasu, a dokumentacje trzeba wysÅ‚aÄ‡ mailem. Zalecam, wytwarzanie (i commitowanie) pliku dokumentacji wstÄ™pnej itteracyjnie, bo wczeÅ›niej bÄ™dziemy mogli wypatrzyÄ‡ rÃ³Å¼ne drobne rzeczy do poprawienia.
+
+W protokole zadania zgodnie z propozycjÄ… AR. Synchronizacja teÅ¼ zgodnie z propozycjÄ… AR przez implementacjÄ™ minimalnego klienta NTP.
+
+Niech tak to narazie wyglÄ…da na dokumentacji wstÄ™pnej. JeÅ›li okaÅ¼e siÄ™ w trakcie kodzenia, Å¼e lepiej zasosowaÄ‡ jednak inne rozwiÄ…zania, to nie ma problemu, tylko koniecznie w dokumentacji musi siÄ™ znaleÅºÄ‡ wzmianka o tym, wraz z logicznym uzasadnieniem.
 
 -----------------------------------------------------------------
-W protokole zadania zgodnie z propozycj¹ AR.
-Synchronizacja te¿ zgodnie z propozycj¹ AR przez implementacjê minimalnego klienta NTP.
-
-Niech tak to narazie wygl¹da na dokumentacji wstêpnej.
-Jeœli oka¿e siê w trakcie kodzenia, ¿e lepiej zasosowaæ jednak inne rozwi¹zania, to nie ma problemu, tylko koniecznie w dokumentacji musi siê znaleŸæ wzmianka o tym, wraz z logicznym uzasadnieniem.
+**Nadal nie mamy nazwy projektu!**
+Do niedzieli trzeba coÅ› wybraÄ‡.
