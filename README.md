@@ -1,5 +1,5 @@
 # procesy_rozproszone
-[TIN] System komunikacji dla zarządzania rozproszonymi procesami.  
+[TIN] System komunikacji dla zarządzania rozproszonymi procesami.
 
  - Do piątku godzin późnonocnych/soboty godzin wczesnorannych - porządna dokumentacja protokołu
  - Do soboty godzin późnonocnych - jak najostateczniejsze dokumentacje pozostałych części
@@ -19,3 +19,6 @@ Niech tak to narazie wygląda na dokumentacji wstępnej. Jeśli okaże się w tr
 **Nadal nie mamy nazwy projektu!**
 
 Do niedzieli trzeba coś wybrać.
+
+Proponuję nazwę:
+One to rule them all
