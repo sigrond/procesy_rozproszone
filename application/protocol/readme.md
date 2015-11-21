@@ -37,15 +37,15 @@ Taka organizacja ma następujące zalety:
  - łatwe zarządzanie zadaniami (rozumianymi jako zbiór wielu plików)
  - serwer musi przechowywać tylko identyfikator zadania - nędzne 4 bajty (oczywiście może przechowywać więcej informacji, jeśli to uprości nam życie)
 
-Protokół przesyłania plików musi posiadać:
- - kod operacji dodawania [8 bitów]
- - flagę typu pliku: główny/pomocniczy [1 bit]
- - długość pola nazwy pliku (max 128 bajtów) [7 bitów]
- - suma kontrolna nazwy + pliku [16 bitów]
- - identyfikator zadania [32 bity]
- - dlugość pola danych (maksimum wybadam później) [32 bity]
- - nazwę pliku [max 2^7 bajtów]
- - dane (plik) [max 2^32 bajtów]
+Pola:
+ - Kod operacji dodawania [8 bitów]
+ - Flaga typu pliku: główny/pomocniczy [1 bit]
+ - Długość pola nazwy pliku (max 128 bajtów) [7 bitów]
+ - Suma kontrolna nazwy + pliku [16 bitów]
+ - ID zadania [32 bity]
+ - Dlugość pola danych (maksimum wybadam później) [32 bity]
+ - Nazwa pliku [max 2^7 bajtów]
+ - Dane (plik) [max 2^32 bajtów]
 
 ### Zadania
 
@@ -58,9 +58,9 @@ Ustalenie: timestamp mniejszy niż aktualny czas oznacza wykonanie natychmiast; 
 
 Pola:
  - Kod polecenia [8 bitów]
- - ziemi niczyja [24 bity] // jeszcze pomyślę, jak to zagospodarować
- - id zadania [32 bity]
- - timestamp [32 bity]
+ - Wypełniacz [24 bity] // jeszcze pomyślę, jak to zagospodarować
+ - ID zadania [32 bity]
+ - Timestamp [32 bity]
 
 ### Responsywność agentów
 
@@ -101,20 +101,26 @@ Raportowanie:
 
 Tu jest mały problem, bo nie wiadomo zbytnio, co te zadania mają robić, jak mają być interpretowane wyniki. Opracowałem taki uniwersalny schemat:
 
-Zwracanie typu prostego (liczby):
- - Kod return dla typu prostego [8 bitów]
- - Rodzaj zwracanego typu [8 bitów]
- - Wypełniacz [0-16 bitów]
- - id zadania [32 bity]
- - Liczba [8-64 bitów]
-
-Zwracanie czegokolwiek innego:
- - Kod return dla czegoś innego [8 bitów]
+Pola:
+ - Kod return [8 bitów]
+ - Exit code [8 bitów]
+ - Zwracany typ [8 bitów]
  - Wypełniacz [8 bitów]
- - Suma kontrolna danych [16 bitów]
- - id zadania [32 bity]
- - Długość pola danych (max 2^32 bajtów) [32 bity]
+ - ID zadania [32 bity]
+ - Zwracana wartość
+
+Zwracana wartość może mieć następujące postacie:
+
+dla exit code != 0:
+ - Nic
+
+przy zwracaniu typu prostego (liczby)
+ - Liczba [32-64 bitów]
+
+przy zwracaniu innych danych:
+ - Długość pola danych [32 bity]
  - Dane [max 2^32 bajtów]
+
 
 Serwer odpowiada raportem otrzymania danych:
  - Kod odpowiedzi [8 bit]
