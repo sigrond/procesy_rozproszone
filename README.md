@@ -17,15 +17,14 @@ Niech tak to narazie wygląda na dokumentacji wstępnej. Jeśli okaże się w tr
 
 ## Komunikacja
 
-Jakby co, przez cały weekend będę dostępny na ircu:
-
-#tin_projekt@irc.quakenet.org
+Jakby co, przez cały weekend będę dostępny na ircu #tin_projekt@irc.quakenet.org
 
 Jeśli ktoś nie ma klienta IRC, może użyć webchatu:
 
 https://webchat.quakenet.org/
 
 nickname: dowolnie, najlepiej taki jak na GitHubie
+
 channel: #tin_projekt
 
 -----------------------------------------------------------------
