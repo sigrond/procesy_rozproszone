@@ -124,3 +124,74 @@ przy zwracaniu innych danych:
 
 Serwer odpowiada raportem otrzymania danych:
  - Kod odpowiedzi [8 bit]
+
+### Kody komunikatów
+
+Ośmiobitowy kod jest podzielony na trzy sekcje:
+ - kategoria [3 bity]
+ - podkategoria [3 bity]
+ - stan [2 bity]
+
+**Kategorie:**
+
+| Kod | Kategoria | Opis                       |
+|-----|-----------|----------------------------|
+| 0   | START     | Rejestarcja agenta         |
+| 1   | FILE      | Przesyłanie pliku          |
+| 2   | TASK      | Interakcja z zadaniem      |
+| 3   | ALIVE     | Sprawdzanie responsywności |
+| 4   | SYNC      | Synchronizacja             |
+| 5   | RET       | Zwracanie wartości         |
+| 6   | END       | Kończenie pracy agneta     |
+| 7   | PERR      | Błąd protokołu             |
+
+
+**Podkategorie**
+
+TASK:
+
+| Kod | Podkategoria | Opis              |
+|-----|--------------|-------------------|
+| 0   | ADD          | Dodaj zadanie     |
+| 1   | RM           | Usuń zadanie      |
+| 2   | RUN          | Wykonaj zadanie   |
+| 3   | KILL         | Zakończ zadanie   |
+| 4   | STOP         | Wstrzymaj zadanie |
+| 5   | CONT         | Kontynuuj zadanie |
+| 6   | x            | [zabroniony]      |
+| 7   | x            | [zabroniony]      |
+
+ERR:
+
+| Kod | Podkategoria | Opis                    |
+|-----|--------------|-------------------------|
+| 0   | HEAD         | Błędny nagłówek         |
+| 1   | LGTH         | Błędna długość          |
+| 2   | CSUM         | Błędna suma kontrolna   |
+| 3   | x            | [zabroniony]            |
+| 4   | x            | [zabroniony]            |
+| 5   | x            | [zabroniony]            |
+| 6   | x            | [zabroniony]            |
+| 7   | OTH          | Inny błąd               |
+
+dla pozostałych kategorii:
+
+| Kod | Podkategoria | Opis                          |
+|-----|--------------|-------------------------------|
+| 0   | -            | Domyślna podkategotia         |
+| 1   | x            | [zabroniony]                  |
+| 2   | x            | [zabroniony]                  |
+| 3   | x            | [zabroniony]                  |
+| 4   | x            | [zabroniony]                  |
+| 5   | x            | [zabroniony]                  |
+| 6   | x            | [zabroniony]                  |
+
+
+**Stan:**
+
+| Kod | Stan | Opis                   |
+|-----|------|------------------------|
+| 0   | REQ  | Polecenie              |
+| 1   | ACK  | Przyjęcie polecenia    |
+| 2   | OK   | Wykonanie polecenia    |
+| 3   | ERR  | Nie wykonano polecenia |
