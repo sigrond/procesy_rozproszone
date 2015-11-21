@@ -15,7 +15,21 @@ W protokole zadania zgodnie z propozycją AR. Synchronizacja też zgodnie z prop
 
 Niech tak to narazie wygląda na dokumentacji wstępnej. Jeśli okaże się w trakcie kodzenia, że lepiej zasosować jednak inne rozwiązania, to nie ma problemu, tylko koniecznie w dokumentacji musi się znaleźć wzmianka o tym, wraz z logicznym uzasadnieniem.
 
+## Komunikacja
+
+Jakby co, przez cały weekend będę dostępny na ircu:
+
+#tin_projekt@irc.quakenet.org
+
+Jeśli ktoś nie ma klienta IRC, może użyć webchatu:
+
+https://webchat.quakenet.org/
+
+nickname: dowolnie, najlepiej taki jak na GitHubie
+channel: #tin_projekt
+
 -----------------------------------------------------------------
+
 **Nadal nie mamy nazwy projektu!**
 
 Do niedzieli trzeba coś wybrać.
