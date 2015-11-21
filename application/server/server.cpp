@@ -4,16 +4,50 @@
  *
  */
 
- #include "Controller.h"
- #include "AdminServer.h"
- #include "AgentServer.h"
+#include "Controller.hpp"
+#include "AdminServer.hpp"
+#include "AgentServer.hpp"
+#include "Model.hpp"
+
+#include <thread>
+#include <iostream>
+#include <string>
+
+using namespace std;
 
 int main(int argi, char* argv[])
 {
-    Controller controller=new Controller();
-    controller->setAdminServer(new AdminServer());
-    controller->setAgentServer(new AgentServer());
-    controller->start();
-    delete controller;
+    try
+    {
+        Controller controller=new Controller();/**< kontroler jest sercem serwera, o architekturze zbliżonej do modelu MVC */
+        controller->setAdminServer(new AdminServer());/** AdminServer i AgentServer można traktować jak swego rodzaju widoki MVC */
+        controller->setAgentServer(new AgentServer());
+        controller->setModel(new Model());
+        thread controllerThread(controller->start);
+        /** \todo wymyslić jakieś zgrabne zamknięcie oczekiwania na opcjonalne polecenia,
+         * albo zrezygnować z takiej możliwości.
+         */
+        string s;
+        while(cin>>s)
+        {
+            if(s.compare("exit")==0)
+            {
+                /** \todo wstawić jakiś zgrabny przełącznik do kończenia wątka kontrolera */
+                break;
+            }
+        }
+        if(controllerThread.joinable())
+            controllerThread.join();
+        delete controllerThread;
+        delete controller;
+    }
+    catch(exception &e)
+    {
+        cerr<<e.what()<<endl;
+    }
+    catch(...)
+    {
+        cerr<<"nieznany wyjątek"<<endl;
+    }
     return 0;
 }
