@@ -1,11 +1,15 @@
 # procesy_rozproszone
 [TIN] System komunikacji dla zarządzania rozproszonymi procesami.
 
- - Do piątku godzin późnonocnych/soboty godzin wczesnorannych - porządna dokumentacja protokołu
- - Do soboty godzin późnonocnych - jak najostateczniejsze dokumentacje pozostałych części
- - Niedziela na ogarnięcie tego do formy reprezentatywnej
+Wstępny Projekt:
 
-Przypominam, by przejrzeć wymagania i nie zapomnieć o różnych duperelach, których sobie prowadzący życzył.
+ - Deadline I - poniedziałek 00:00
+ - Deadline II - poniedziałek 09:00
+ - Deadline III - poniedziałek 23:50
+
+**Każdy, kto się dowali do mojej roboty po godzinie 23 (niedziela), będzie robił przypadki użycia. Nie żartuję.**
+
+Sugestia na przyszłość: nie używajcie formatów kompresujących, których GitHub nie ogarnia. Jeśli trzeba coś zapisać tekstem, używajcie zwykłych plików tekstowych lub najlepiej plików markdown, takich jak ten. Raz, że łatwiej i szybciej można się do nich dobrać, a dwa, przy kolejnych commitach łatwo prześledzić zmiany wewnątrz plików. 
 
 -----------------------------------------------------------------
 
@@ -31,7 +35,9 @@ channel: #tin_projekt
 
 **Nadal nie mamy nazwy projektu!**
 
-Do niedzieli trzeba coś wybrać.
+Nikt się nie wypowiadał, więc arbitralnie wybrałem **Low Orbit Task Cannon**.
+
+Jeśli komuś się nie podoba, ma czas oprotestować decyzję do "zanim skończę pisac ten syf".
 
 Proponowane nazwy:
 
