@@ -1,0 +1,81 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'DeploymentDiagram.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{393.6bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.65243902)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{DeploymentDiagram.pdf}}%
+    \put(0.48427805,0.59230654){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Serwer LOTC}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{DeploymentDiagram.pdf}}%
+    \put(0.85742447,0.59195423){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Klient LOTC}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{DeploymentDiagram.pdf}}%
+    \put(0.68191057,0.5254065){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{<<LOTC>>}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{DeploymentDiagram.pdf}}%
+    \put(0.31402439,0.5254065){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{<<LOTC>>}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{DeploymentDiagram.pdf}}%
+    \put(0.12210771,0.59195423){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Konsola administratora}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{DeploymentDiagram.pdf}}%
+    \put(0.12161148,0.54070551){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Protokół LOTC}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{DeploymentDiagram.pdf}}%
+    \put(0.79761268,0.08638211){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{<<NTP>>}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{DeploymentDiagram.pdf}}%
+    \put(0.66971545,0.02398309){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Serwer NTP}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{DeploymentDiagram.pdf}}%
+    \put(0.55813474,0.08841463){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{<<NTP>>}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{DeploymentDiagram.pdf}}%
+    \put(0.48380663,0.5407055){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Protokół LOTC}}}%
+    \put(0.85742447,0.54070551){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Protokół LOTC}}}%
+    \put(0.48380665,0.37962827){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Serwer zadań}}}%
+    \put(0.48380665,0.21855104){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Klient NTP}}}%
+    \put(0.12161148,0.37962829){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Administracja zadań}}}%
+    \put(0.85740419,0.37962827){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Agent}}}%
+    \put(0.85742449,0.21855104){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Klient NTP}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{DeploymentDiagram.pdf}}%
+    \put(0.12161149,0.21855104){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{UI}}}%
+  \end{picture}%
+\endgroup%

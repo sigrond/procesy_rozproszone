@@ -1,0 +1,88 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dirtytalk}
+\usepackage{color}
+\usepackage{float}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage[pdftex,
+            pdfauthor={Andrzej Roguski},
+            pdftitle={Techniki Internetowe, Projekt}]{hyperref}
+
+\title{Low Orbit Task Cannon \\ \large Techniki Internetowe, Projekt}
+\date{\today}
+\author{Tomasz Jakubczyk, Eryk Ratyński, Andrzej Roguski, Kacper Stachyra}
+
+\begin{document}
+	\maketitle
+
+	\section{Treść zadania}
+	    \say{W sieci jest zbiór zarządzanych węzłów, serwer zarządzający i stacja konsoli administratora. W węzłach pracują agenty zarządzające. Agent zarządzający może: załadować kod nowego procesu, usunąć kod procesu, uruchomić/zatrzymać/wznowić/zabić dany proces zgodnie z harmonogramem, wznowić proces nie raportujący swej żywotności, podać dane statystyczne serwerowi. System umożliwia administratorowi zarządzanie rozproszonymi procesami. System komunikacji powinien móc pracować w przestrzeni adresów IPv4 i IPv6. Ponadto należy zaprojektować moduł do Wireshark umożliwiający wyświetlanie i analizę zdefiniowanych komunikatów.}
+	
+	\section{Założenia projektowe}
+	    \subsection{Środowisko}
+	
+		\begin{itemize}
+	        \item Low Orbit Task Cannon (LOTC) uruchamiany jest na systemie operacyjnym GNU/Linux
+	        \item LOTC ma stały dostęp do zewnętrznego serwera NTP (w szczególności - łączność z Internetem)
+	    \end{itemize}
+	    
+	    \subsection{Zadania}
+	    \begin{itemize}
+	        \item Zadania po wprowadzeniu do LOTC nie wymaga modyfikacji
+	        \item Wykonanie zadania wymaga uruchomienia wyłącznie jednego pliku wykonywalnego (może on jednak uruchamiać inne podprogramy)
+	        \item Zadania dają się uruchomić w systemie GNU/Linux bez GUI (w szczególności - bez X Window System)
+	        \item Zadania wykonywane są w trybie wsadowym, tj. nie wymagają interakcji z użytkownikiem
+        \end{itemize}
+        
+	\section{Struktura systemu}
+	    \subsection{Moduły}	
+		    Low Orbit Task Cannon zawiera następujące moduły:
+		
+			\begin{enumerate}
+		        \item Protokół LOTC
+		        \item Serwer
+		        \item Klient (agent)
+		        \item Konsola administratora
+		        \item Minimalny klient NTP
+		        \item Plugin Wireshark (opcjonalny)
+		    \end{enumerate}
+		    
+		    \subsection{Topologia}
+			    \begin{itemize}
+			        \item Każdy klient LOTC musi być połączony siecią TCP/IP z serwerem LOTC i serwerem NTP 
+			        \item Konsola administratora musi być połączona siecią TCP/IP z serwerem LOTC 
+			        \item Serwer LOTC musi być połączony siecią TCP/IP z serwerem NTP
+			    \end{itemize}
+			    \begin{figure}[H]
+					\centering
+					\def\svgwidth{\columnwidth}
+					\input{images/Topology.pdf_tex}
+				\end{figure}
+		    
+		    \subsection{Diagram rozmieszczenia}
+		    Komunikacja między konsolą i serwerem oraz serwerem i klientem odbywa się poprzez protokół LOTC. Wykorzystywany jest do tego moduł implementujący protokół LOTC i wystawiający interfejs komunikacyjny. \\
+		    Z racji potrzeby synchronizacji, serwer oraz klient wykorzystują moduł implementujący niezbędne minimum klienta NTP potrzebne do zapytania serwera NTP o aktualny czas. \\
+		    Program do administracji zadaniami wystawia interfejs niezbędny do zbudowania UI, zarówno w wersji tekstowej jak i graficznej. 
+			    \begin{figure}[H]
+					\centering
+					\def\svgwidth{\columnwidth}
+					\input{images/DeploymentDiagram.pdf_tex}
+				\end{figure}
+	    
+    \section{Protokół LOTC}
+    \section{Serwer}
+    \section{Klient}
+    \section{Konsola administratora}
+    \section{Klient NTP}
+    \section{Plugin Wireshark}
+		
+\end{document}

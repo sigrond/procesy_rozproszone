@@ -1,0 +1,81 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'Topology.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{356.8bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.80941704)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{Topology.pdf}}%
+    \put(0.14376976,0.20999305){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Klient 1}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{Topology.pdf}}%
+    \put(0.1430859,0.54134978){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Klient 2}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{Topology.pdf}}%
+    \put(0.84948973,0.56888341){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Klient n}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{Topology.pdf}}%
+    \put(0.50565818,0.57257276){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Serwer NTP}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{Topology.pdf}}%
+    \put(0.50382085,0.23159491){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Serwer LOTC}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{Topology.pdf}}%
+    \put(0.69050363,0.32533393){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{Topology.pdf}}%
+    \put(0.85515117,0.252863){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Konsola administratora}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{Topology.pdf}}%
+    \put(0.67863827,0.66903208){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{Topology.pdf}}%
+    \put(0.31379566,0.67309779){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{Topology.pdf}}%
+    \put(0.26533623,0.56091974){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{Topology.pdf}}%
+    \put(0.26705109,0.43744935){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{Topology.pdf}}%
+    \put(0.33307346,0.32623029){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{Topology.pdf}}%
+    \put(0.69793186,0.50688412){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{Topology.pdf}}%
+    \put(0.50604096,0.49807819){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
+  \end{picture}%
+\endgroup%
