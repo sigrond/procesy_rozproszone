@@ -233,7 +233,7 @@
 				\end{tabular}
 				
         \subsubsection{Szczegóły protokołu}
-            Każda z kategorii komunikatów posiada własny nagłówek.\\
+            Każda z kategorii komunikatów posiada własny nagłówek.
             
             \paragraph{Kategoria HOST:\\}
             Pozwala na dodanie albo usunięcie do $2^{16}$ agentów jednocześnie, obsługuje zarówno IPv4 jak i IPv6. Kod H\_STATE ponadto pozwala zapytać serwer o stan agenta, przy czym adres IP złożony z samych jedynek odpowiada zapytaniu o wszystkich agentów.
@@ -411,6 +411,16 @@
     
         W celu przeprowadzenia synchronizacji hostów, serwer i klienci korzystają z modułu implementującego minimalistycznego klienta NTP. Moduł ten poza pobraniem aktualnego czasu oblicza też różnicę między czasem systemowym i zwraca parametr korygujący pozwalający uzyskać synchronizację systemu LOTC bez zmieniania zegarów systemowych poszczególnych maszyn. 
     
+    \section{Plugin Wireshark}
+    
+        Plugin Wireshark nie jest częścią systemu LOTC, lecz ma na celu ułatwienie analizy komunikacji między jego hostami. Podstawowymi zadaniami pluginu są:
+        
+        \begin{itemize}   
+			\item Identyfikacja i dysekcja protokołu LOTC
+			\item Zdekodowanie pól nagłówka
+		    \item Czytelna prezentacja nagłówka
+	    \end{itemize}    
+    
     \section{Przypadki użycia}
         Aby zmniejszyć objętość przypadków użycia, a zwłaszcza scenariuszy alternatywnych, powtarzające się, schematyczne działania zostaną opisane osobno w sposób ogólny.                    
         
@@ -436,14 +446,14 @@
 	            \item Zlecający podejmuje dalsze działania  
             \end{enumerate}
             
-            Błędy protokołu:
+            \paragraph{Błędy protokołu:}
             
             \begin{itemize}
 	            \item Za długi/za krótki nagłówek
 	            \item Zabronione wartości pól 
             \end{itemize}
             
-            Błędy logiki:
+            \paragraph{Błędy logiki:}
             
             \begin{itemize}
 	            \item Dodawanie istniejących już zadań/plików/agentów
@@ -484,16 +494,20 @@
 	            \item Konsola wyświetla raport administratorowi
             \end{enumerate}
     
-    \section{Plugin Wireshark}
-    
-        Plugin Wireshark nie jest częścią systemu LOTC, lecz ma na celu ułatwienie analizy komunikacji między jego hostami. Podstawowymi zadaniami pluginu są:
-        
-        \begin{itemize}   
-			\item Identyfikacja i dysekcja protokołu LOTC
-			\item Zdekodowanie pól nagłówka
-		    \item Czytelna prezentacja nagłówka
-	    \end{itemize}
+	\section{Sposób testowania aplikacji}
+		Testowanie działania systemu odbywać się będzie etapami: \\
+		\begin{enumerate}
+		    \item Kompilacja i wykrycie błędów składniowych poszczególnych modułów
+		    \item Testy jednostkowe dla poszczególnych metod klas (tam, gdzie to zasadne)
+		    \item Testy integracyjne z wykorzystaniem pluginu do Wiresharka sprawdzające poprawność wysyłanych komunikatów i wywołań powiązanych z nimi metod
+		    \item Uruchomienie skryptu do konsoli administratora symulującego przypadki użycia
+	    \end{enumerate}
 	    
+	    Wykorzystanie metodykę zwiną i iteracyjnego modelu wytwarzania oprogramowania pozwoli na przeprowadzenie testów już po implementacji minimum funkcjonalności systemu. Testy będą stopniowo rozszerzane wraz z rozbudową systemu.
+
+	\section{Sposób  demonstracji rezultatów}
+		Demonstracja rezultatów będzie się opierała na realizacji wybranych (lub wszystkich) przypadków użycia przy wykorzystaniu napisanego wcześniej skryptu testującego.
+
 	\section{Podział prac}
 	
 	    \begin{tabular}{ l | l }
