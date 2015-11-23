@@ -221,21 +221,78 @@
 			\end{Huge}
     
     \section{Serwer}
-			\begin{Huge}
-			TODO
-			\end{Huge}
+			
+		\subsection{Opis}
+			Serwer zarządza agentami, które kontrolują procesy na swojej platformie. Informacje o tym gdzie i co ma być zrobione dostaje z konsoli administratora. Kanałem komunikacyjnym z serwerem jest protokół LOTC działający na IPv6 i Ipv4 z wykorzystaniem mechanizmu gniazd sieciowych. \\
+		
+		\subsection{Reagowanie na zdarzenia}
+			Zdarzeniami przychodzącymi do serwera mogą być polecenia z konsoli administratora, odpowiedzi od agentów lub zdarzenia wewnętrzne serwera np. time-out. Zdarzenia są obiektami z różnych klas typów zdarzeń dziedziczących po bazowej klasie zdarzeń, pojawiającymi się w kolejce zdarzeń. Zostają one obsłużone na podstawie mapy strategii i zdjęte z kolejki. Prawdopodobnie będzie około trzech różnych typów zdarzeń: komunikat z agenta, polecenie od administratora, zdarzenie wewnętrzne.
+		
+		\subsection{Moduły serwera}
+			Serwer da się podzielić na kilka wyraźnych modułów: \\
+			
+			\begin{itemize}   
+				\item Kontroler – przetwarza zdarzenia przychodzące z modułów i wykonuje lub zleca wykonanie odpowiednich metod w modułach. Odpowiada też za uruchomienie usług modułów szczególnie przy starcie serwera.
+				\item Serwer klienta – odpowiada za komunikację z agentami. Serwer nawiązuje połączenie ze słuchającym agentem, wysyła polecenie, czeka na odpowiedź, otrzymaną odpowiedź wrzuca na kolejkę zdarzeń i zamyka połączenie. Może też nasłuchiwać na połączenia od agenta z wiadomością o zmianie statusu lub okresowym raportem.
+				\item Serwer administratora – odpowiada za komunikację z konsolą administratora. Serwer czeka na polecenie od administratora, wrzuca na kolejkę zdarzeń i zwraca odpowiedź. Konsola administratora może sama nawiązać połączenie i wysłać polecenia, ale jeśli serwer ma po jakimś czasie odesłać raport, to konsola powinna też nasłuchiwać.
+				\item Model – zbiór metod wywoływanych przez kontroler w celu realizacji wybranej strategi z mapy. Może też zawierać maszynę stanów i informacje o agentach.
+			\end{itemize}
+			
+			Poszczególne moduły mogą pracować w osobnych wątkach lub procesach. Kontroler powinien być w wątku głównym. \\
+			Model, o ile będzie zgłaszał jakieś zdarzenia (zapewne związane z upływem czasu), powinien mieć osobny wątek. Jeśli nie, to będzie wywoływany (jego metody) w tym samym wątku co kontroler. \\
+			Serwer klienta, a właściwie każda jego instancja, powinien być w osobnym wątku. Wątki te powinny być tworzone wtedy gdy wyniknie to ze strategii działania. \\
+			Serwer administratora również powinien być w osobnym wątku. \\
+		
+		\subsection{Komunikacja z konsolą i agentami}
+			Komunikacja z konsolą i agentami odbywać będzie się poprzez protokół LOTC, przy wykorzystaniu modułu dostarczającego interfejs będący nakładką na protokół. \\
 			
     
-    \section{Klient}
-			\begin{Huge}
-			TODO
-			\end{Huge}
+    \section{Agent (klient LOTC)}
+		\subsection{Opis}
+			Agent to autonomiczny program zarządzający przydzielonymi przez serwer zadaniami. Agent zarządzający może: załadować/usunąć zadanie, uruchomić/zatrzymać/wznowić/zabić dany proces zgodnie z harmonogramem, podać dane statystyczne serwerowi. \\
+			Agent komunikuje się z serwerem (protokołem działającym na IPv6 i IPv4) wykorzystując mechanizm gniazd sieciowych. \\
+		
+		\subsection{Zasady działania agenta}
+			Agent po starcie łączy się z serwerem, następnie stale oczekuje na komunikaty wysyłane przez serwer. Po przyjściu komunikatu potwierdza jego otrzymanie a następnie analizuje jego treść według ustalonego protokołu. Potem wywołuje odpowiednią metodę w nowym wątku. Główny wątek dalej czeka na komunikaty od serwera, oraz wysyła raporty z wykonania innych wątków. \\
+		
+		\subsection{Zarządzanie zadaniami}
+			Agent ma zdefiniowane metody, które będą wykonywane po otrzymaniu odpowiedniego polecenia z serwera. Lista poleceń: \\
+			
+			\begin{itemize}
+				\item Załadowanie nowego zadania
+				\item Usunięcie zadania
+				\item Uruchomienie zadania
+				\item Zabicie zadania
+				\item Zatrzymanie wykonywania zadania
+				\item Wznowienie wykonywania zadania
+				\item Synchronizacja czasu
+				\item Potwierdzenie żywotności 
+			\end{itemize}
+
     
     
     \section{Konsola administratora}
-			\begin{Huge}
-			TODO
-			\end{Huge}
+		\subsection{Opis}
+			Konsola administratora stanowi interfejs, który umożliwia użytkownikowi (administratorowi)  sterowanie systemem komunikacji zarządzania rozproszonymi procesami. Poprzez wysyłanie odpowiednich komend, użytkownik powinien mieć możliwość pełnej konfiguracji systemu, wydawania konkretnych poleceń związanych z pracą systemu oraz otrzymywania informacji zwrotnych o statusie całego systemu. Informacje zwrotne można wykorzystać do generowania raportów. Dodatkowo konsola administratora powinna zadbać o poprawność wprowadzanych komend i danych, a także sprawdzać parametry komunikatów otrzymywanych z sieci.
+		
+		\subsection{Komunikacja z serwerem}
+			Komunikacja konsoli administratora z serwerem odbywa się dwustronnie, tj. do serwera są wysyłane komendy i polecenia, a od niego otrzymywane są raporty i informacje zwrotne, a także komunikaty o błędach. Wymaga to ciągłego nasłuchiwania komunikatów z serwera (informację można dostać w dowolnym momencie) przy jednoczesnym rozpoznawaniu komend wydanych przez użytkownika i, po sprawdzeniu ich poprawności, wysłaniu ich na serwer. Wymaga to powołania do pracy dwóch wątków (nasłuchującego i wysyłającego).
+		
+		\subsection{Sprawdzanie poprawności}
+			W programie konsoli administratora będzie sprawdzana poprawność wpisywanych komend, ewentualnych argumentów programu podawanych z linii poleceń (do czego to będzie potrzebne i czy w ogóle?) oraz parametrów komunikatów odebranych z sieci, w celu uniknięcia błędów związanych z działaniem systemu lub celowego złośliwego działania i ataków na system. Na przykład gdy informacje zwrotne z serwera będą zawierały nieprawidłowy identyfikator węzła/procesu zostaną zignorowane, a próba powtórzona.
+		
+		\subsection{Komendy}
+			Komendy wydawane w konsoli administratora powinny umożliwiać:
+			
+			\begin{itemize}   
+				\item Dodanie/usunięcie zadania
+				\item Nadanie priorytetu zadania (przy dodawaniu)
+				\item Definiowanie kolejności następowania zadań (przy dodawaniu)
+				\item Żądanie otrzymania raportu o pracy systemu (jednorazowo bądź cyklicznie)
+			\end{itemize}
+		
+		\subsection{Raporty}
+			Konsola administratora, dzięki otrzymywaniu raportów z serwera, w tym raportów cyklicznych, może generować zbiorczy raport z całej pracy systemu (przez określony czas lub do zakończenia pracy) w oddzielnym pliku. Format tych raportów pozostaje do ustalenia (jakie informacje, kiedy, jak często, w jakiej formie to przedstawić).
     
     
     \section{Klient NTP}
