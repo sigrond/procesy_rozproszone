@@ -168,7 +168,7 @@
 				    \hline
 				    000 & 0 & H\_ADD & Dodanie agenta \\
 				    001 & 1 & H\_RM & Usunięcie agenta \\
-				    010 & 2 & x & [zabroniony] \\
+				    010 & 2 & H\_STATE & Zapytanie o stan \\
 				    011 & 3 & x & [zabroniony] \\
 				    100 & 4 & x & [zabroniony] \\
 				    101 & 5 & x & [zabroniony] \\
@@ -197,11 +197,11 @@
 		        \begin{tabular}{ c | c | c | c }
 				    \textbf{Kod binarnie} & \textbf{Kod dziesiątkowo} & \textbf{Podkategoria} & \textbf{Opis} \\
 				    \hline
-				    000 & 0 & E\_HEAD & Błędny nagłówek \\
-				    001 & 1 & E\_LGTH & Błędna długość \\
+				    000 & 0 & E\_HEAD & Błędne pola nagłówka \\
+				    001 & 1 & E\_LGTH & Błędna długość nagłówka \\
 				    010 & 2 & E\_CSUM & Błędna suma kontrolna \\
-				    011 & 3 & x & [zabroniony] \\
-				    100 & 4 & x & [zabroniony] \\
+				    011 & 3 & E\_TASK & Błąd obsługi zadania \\
+				    100 & 4 & E\_FILE & Błąd obsługi pliku \\
 				    101 & 5 & x & [zabroniony] \\
 				    110 & 6 & x & [zabroniony] \\
 				    111 & 7 & E\_OTH & Inny błąd \\
@@ -236,7 +236,7 @@
             Każda z kategorii komunikatów posiada własny nagłówek.\\
             
             \paragraph{Kategoria HOST:\\}
-            Pozwala na dodanie albo usunięcie do $2^{16}$ agentów jednocześnie, obsługuje zarówno IPv4 jak i IPv6.
+            Pozwala na dodanie albo usunięcie do $2^{16}$ agentów jednocześnie, obsługuje zarówno IPv4 jak i IPv6. Kod H\_STATE ponadto pozwala zapytać serwer o stan agenta, przy czym adres IP złożony z samych jedynek odpowiada zapytaniu o wszystkich agentów.
             
             \begin{tabular}{ c | c | c }
 			    \textbf{Pole} & \textbf{Długość [bit]} & \textbf{Opis} \\
@@ -296,7 +296,7 @@
 			\end{tabular}
 			
 			\paragraph{Kategoria RET:\\}
-            Pozwala zwracać wyniki działania zadań.
+            Pozwala zwracać wyniki działania zadań. ID zadania 0xFFFFFFFF odpowiada wszystkim zadaniom - wykorzystywane przez konsolę do wysyłania żądań raportu o całym systemie.
             
             \begin{tabular}{ c | c | c }
 			    \textbf{Pole} & \textbf{Długość [bit]} & \textbf{Opis} \\
@@ -311,14 +311,25 @@
 			    Dane & 0 - $ 8 \cdot 2^{32} $ & Tylko gdy exit status = 0 i zwracany jest ciąg \\
 			\end{tabular}
 			
-			\paragraph{Kategorie SYN, PING, ERR:\\}
-            Pozwalają kolejno: zainicjować synchronizację, sprawdzić responsywność i zgłosić błąd w uprzednio otrzymanym komunikacie. \\
+			\paragraph{Kategorie SYN, PING:\\}
+            Pozwalają kolejno: zainicjować synchronizację, sprawdzić responsywność. \\
             Z racji swojej prostoty, te nagłówki wymagają wyłącznie kodu komunikatu - stan czynności zawarty w kodzie wystarcza do przeprowadzenia niezbędnej komunikacji.
             
             \begin{tabular}{ c | c  }
 			    \textbf{Pole} & \textbf{Długość [bit]} \\
 			    \hline
 			    Kod komunikatu & 8 \\
+			\end{tabular}
+						
+			\paragraph{Kategoria ERR:\\}
+            Pozwala na zgłoszenie błędu. \\
+            Komunikaty błędów dotyczą zawsze ostatnio otrzymanego polecenia. Komunikaty błędów dotyczących samego nagłówka zawierają wyłącznie odpowiedni kod. Błędy obsługi zadań i plików mają dodatkowe pole z kodem dalej specyfikującym rodzaj błędu. 
+            
+            \begin{tabular}{ c | c | c  }
+			    \textbf{Pole} & \textbf{Długość [bit]} & \textbf{Opis} \\
+			    \hline
+			    Kod komunikatu & 8 & \\
+			    Szczegółowy kod błędu & 8 & Tylko błędy obsługi zadań i plików \\
 			\end{tabular}
     
     \section{Serwer}
@@ -399,6 +410,79 @@
     \section{Klient NTP}
     
         W celu przeprowadzenia synchronizacji hostów, serwer i klienci korzystają z modułu implementującego minimalistycznego klienta NTP. Moduł ten poza pobraniem aktualnego czasu oblicza też różnicę między czasem systemowym i zwraca parametr korygujący pozwalający uzyskać synchronizację systemu LOTC bez zmieniania zegarów systemowych poszczególnych maszyn. 
+    
+    \section{Przypadki użycia}
+        Aby zmniejszyć objętość przypadków użycia, a zwłaszcza scenariuszy alternatywnych, powtarzające się, schematyczne działania zostaną opisane osobno w sposób ogólny.                    
+        
+        \subsection{Wysłanie polecenia}
+            Proces zlecenia wykonania jakiegoś działania wygląda następująco:
+            
+			\begin{enumerate}
+	            \item Zlecającemu wysyła polecenie i czeka na odpowiedź
+	            \item Odbiorca wysyła potwierdzenie odebrania polecenia
+	            \item Odbiorca wykonuje polecenie
+	            \item Odbiorca wysyła komunikat o sukcesie/porażce
+	            \item Zlecający, po otrzymaniu komunikatu o sukcesie/porażce wysyła potwierdzenie otrzymania
+	            \item Zlecający podejmuje dalsze działania 
+			\end{enumerate} 
+		 
+        \subsection{Błędy}
+            Wystąpienie w trakcie wykonywania polecenia błędu zawsze wiąże się z następującym schematem działania:
+            
+            \begin{enumerate}
+	            \item Wykonawca zgłasza zlecającemu porażkę w wykonaniu czynności
+	            \item Wykonawca wysyła zlecającemu stosowny komunikat ERR określający przyczynę błędu
+	            \item Zlecający wysyła potwierdzenie otrzymania komunikatu o błędzie
+	            \item Zlecający podejmuje dalsze działania  
+            \end{enumerate}
+            
+            Błędy protokołu:
+            
+            \begin{itemize}
+	            \item Za długi/za krótki nagłówek
+	            \item Zabronione wartości pól 
+            \end{itemize}
+            
+            Błędy logiki:
+            
+            \begin{itemize}
+	            \item Dodawanie istniejących już zadań/plików/agentów
+	            \item Usuwanie nieistniejących zadań/agentów
+	            \item Oznaczenie jako gotowych nieistniejących zadań
+	            \item Uruchamianie niegotowych zadań
+	            \item Zabicie nieuruchomionych zadań
+	            \item Zatrzymywanie nieuruchomionych zadań
+	            \item Wznowienie niezatrzymanych zadań
+	            \item Ustalanie kolejności wykonywania nieistniejących zadań
+	            \item Ustalanie kolejności wykonywania zadań oznaczonych jako gotowe
+            \end{itemize}
+            
+		\subsection{Przekroczenie czasu oczekiwania na odpowiedź}
+            Jeśli jedna strona nie odpowiada, strona oczekująca próbuje kilkukrotnie nawiązać komunikację komendą PING (protokołu LOTC). Jeśli uzyska odpowiedź, powtarza polecenie na które nie otrzymała odpowiedzi jeśli nie, dalsze działania zależą od tego, kim jest strona oczekująca:
+            \begin{itemize}
+	            \item Agent: kontynuuje wykonywanie przydzielonych już zadań
+	            \item Serwer: oznacza agenta jako nieresponsywnego, przekazuje zadania tego agenta innym agentom
+	            \item Konsola: powiadamia użytkownika o utracie łączności z serwerem
+            \end{itemize}
+            Ponadto strona oczekująca okresowo próbuje nawiązać komunikację za pomocą komendy PING.
+            
+        \subsection{Przypadek użycia: obsługa zadań i agentów}
+            \begin{enumerate}
+	            \item Administrator wydaje polecenie dodania/usunięcia/wykonania/zabicia/wstrzymania/wznowienia zadania, oznaczenia zadania jako gotowego, ustalenia kolejności wykonywania zadań lub dodania/usunięcia agenta
+	            \item Konsola przesyła odpowiedni komunikat serwerowi
+	            \item Serwer aktualizuje stan zadań/agentów zgodnie z poleceniem
+	            \item Serwer przesyła konsoli odpowiedni raport i aktualizuje strategię wykonywania zadań
+	            \item Konsola wyświetla raport administratorowi
+            \end{enumerate}
+        
+        \subsection{Przypadek użycia: żądanie raportu}
+            \begin{enumerate}
+	            \item Administrator wydaje żądanie raportu
+	            \item Konsola przesyła odpowiedni komunikat serwerowi
+	            \item Serwer zbiera niezbędne dane, odpytując agentów jeśli to konieczne
+	            \item Serwer przesyła konsoli odpowiedni raport
+	            \item Konsola wyświetla raport administratorowi
+            \end{enumerate}
     
     \section{Plugin Wireshark}
     
