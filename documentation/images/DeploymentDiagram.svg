@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   style="background-color: rgb(255, 255, 255);"
+   width="492px"
+   height="321px"
+   version="1.1"
+   content="%3Cmxfile%20userAgent%3D%22Mozilla%2F5.0%20(X11%3B%20Linux%20x86_64%3B%20rv%3A42.0)%20Gecko%2F20100101%20Firefox%2F42.0%22%20type%3D%22device%22%3E%3Cdiagram%3E7VzbcqM4E34aXw4lISHgMs4ctmpnd1Obqdr9L4nBNv9gy4vxJJmnn5ZoGTCQkAnBjA9VLptGRlJ3f32i8YRdrx4%2BpcFm%2BYcMo2Rik%2FBhwt5PbNsmLocPRXnMKZ5NcsIijcOcRAvCbfw9QqIZtovDaFsZmEmZZPGmSpzJ9TqaZRVakKbyvjpsLpPqrJtgYWYsCLezIKlT%2F4nDbGl2IQr6b1G8WJqZqfDzM3fB7Osilbs1zjex2Vy%2F8tOrwFxLb5R9ACamUsJl1LfVw3WUKEYaHuXc%2BNhydr%2FINFrjQp7%2BAZxSP%2FgWJDvcZ07YZo9m42rtGxwWpVmEEq2yO7gzw1Fc5SXooTj%2Fp0iuoix9hCHmQvgL1Avk2n3BY%2B55OW1Z4i%2BjLsoW5brYX7jYLnzBHTfvntV2fxul91EKtM9%2FfYGfiwSmm94BQSzUtxpzFEdiUJKrJF6sgZTJDQwL8GgGLICrsel2E8zi9eKLOvveKwifo7naD3DHUP7GLVJNWwYbNdFsdwcf020OCmAYm4ZxCmyPpZpmK3eKV9O5XGe3uDY1ZpmtYOfvqfpplsqve8VVlHmcJNcykbA82IhRSbxIaSJ1XBpH9GvPigaNKEtea1O75F3X8hnhzHd84oEioEhLsqe2sGyPCUG4DwfEQZGVVcF2mIUofI0yoH0qKcNNKjP5dXLNJlM2uXYmnjqfK8aBGkjgwzyR93Ck%2BPrWvK%2Fp16EaruIwVGvrRUoet2zOhW0L6nDbBc0s45X5lrCduuCIY9lMMI%2B5nHHG3AYMc9dynHxT%2BQtF8Bop4kqeMmh7VMnVRq41F6b%2Fj7Ls0YhIAVQT9gadNwinE2v1jtpZW2ObMZ8V%2FUZaGiVBFn%2Br%2BqMmXuF8NzKGZewne2dMKwrOsMpcQc7n2wjGH%2FB6v%2BpO7Eccltj%2FexIrbtjkzy83HQzqsZH09oChvmfRESEGje5YEKM16IwQg1J%2Biv1RCJEoHq6B%2F8BKHU9G6hIHjj56iLN%2FFdly8Oh%2FOAg4nD6WTqlDcw4EHGrM6YMsSLMrFTIX82naRw1IvFh4MAIopfNlXOKAV0JSMeFpQALP5C6d4SgUHax7ATIqSHXV6qwlXRGFUzeFld%2BDMNChBAD3YgshS%2FIszx2PLTS5yFiMYYvGnqwxpLispvjhkpG9fUbGBLVcKhhkZMT1XB8hdZyEzNiKChhFsFLy1FpQPUL9yCmoG9WjXtwq6H2rX83PGceqpTxmx3oIlTuZZXL10x4XNaHscXM8D%2BByab2Uc8nec0R7FnFch4ALhjdHRzrO5J3WazBHdb%2B5Vp2T%2F62XT64Wufs9t8j1aeCMLnCtF16OixzNmnNCTr2Mcn6Vr2cwM7LCF%2B1QehkUM1qFzgkz9ULJJcAfcYBvdKsc4bdESL0H%2BGbusn2V661MAnXhcBWvY7CRQSZTIFyKBG9SJDhOGcAs8JLaHTgEYREODlNQzpQ8qAnex5nbdWk1GdLbPteVcnLetqHbpbCg55bdPYOdsaV3Dc0pxwXPuRVGGvtK2kPVPON740i1HKaWIlN1To%2Fb3%2BDV93tP8Bav6TY5SsW5odVlf5e3W8J%2FCUJf1TvoWYLZBO4qe3CDmfkoDmMEPMdCf1eyQozAj3y4uwXto5y4xqpW%2B0qtHhpLG5tqjmsuzPfCIhR5bdVagN87SXPRcH%2Bqrduof2sxSJuPOXMTpTEsUfHqHFt%2Fmnp%2FBhN0U02rJVJLZJLEG231m0zysEE1pNTACb2Ad35PRtpmtiUcxhyfQsBMhDgoCLu%2B5flQLj6IlEsW27M49XxKhO9zl7sEmVm22NBDfhjy%2FdSzAC9o%2FUmj%2F3YgMJitIri1TE9GcBQiSgJP7TCHU0H8g7Ytl1q%2BCwPMqyFTggvYDtzRtYXjC2Gbp2HKkqOO5fUhuXqB6I1s63m0SeZIGMBWsg4loeGd4okKmjWEPy1PJ%2FQv6Hrp6ddzirY7jFf0HYuWy0f1YsqATrFD3elFCD2vQJShCI7RhG7m%2FqXjmR4x92RA8zzmhoxnOvTyXHLFviCKlZpKDbGlEaN%2FjL7g2auTTxYBlhYHZMFTIgAyAh8jThb7LuecWSzakHW0dQz2D7oXVGhOPtHn4LOIYMQn8Aw%2BczzTxzHKRJ93KNFc8sWeMMrNn6yUMTpUt5eZ%2FJIwdvCMY0oYec8lnVMEVtNzUkM5PzP5JSvs4P1GlRXynksxp4ishnJLW5tf%2F8h6Qb3l9F2Wwy3uQLuFLYRDoUP4pcAa0GP1XG05RVw11EgGa%2Fw3k188lsYVg8ZVH%2F40zfOozwU04I%2FGY8Fh8b%2BFeYtl8U%2BQ7MMP%3C%2Fdiagram%3E%3C%2Fmxfile%3E"
+   id="svg3766"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="DeploymentDiagram.svg">
+  <metadata
+     id="metadata4004">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2558"
+     inkscape:window-height="1059"
+     id="namedview4002"
+     showgrid="false"
+     inkscape:object-nodes="false"
+     inkscape:snap-smooth-nodes="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-others="true"
+     inkscape:snap-nodes="false"
+     inkscape:snap-bbox="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:zoom="2"
+     inkscape:cx="312.60014"
+     inkscape:cy="157.57134"
+     inkscape:window-x="0"
+     inkscape:window-y="19"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g3770">
+    <sodipodi:guide
+       position="422.17999,256.095"
+       orientation="1,0"
+       id="guide4275" />
+    <sodipodi:guide
+       position="238.36001,256.095"
+       orientation="1,0"
+       id="guide4277" />
+    <sodipodi:guide
+       position="60.159999,256.095"
+       orientation="1,0"
+       id="guide4279" />
+    <sodipodi:guide
+       position="238.36001,269.80885"
+       orientation="0,1"
+       id="guide4304" />
+    <sodipodi:guide
+       position="60.159999,294.99148"
+       orientation="0,1"
+       id="guide4327" />
+    <sodipodi:guide
+       position="238.36001,97.594994"
+       orientation="0,1"
+       id="guide4938" />
+  </sodipodi:namedview>
+  <defs
+     id="defs3768" />
+  <g
+     transform="translate(0.5,0.5)"
+     id="g3770">
+    <path
+       d="M 115.27 64.66 L 358.87 64.66 L 368.87 74.66 L 368.87 190.94 L 125.27 190.94 L 115.27 180.94 L 115.27 64.66 Z"
+       stroke-miterlimit="10"
+       transform="rotate(90,242.07,127.8)"
+       pointer-events="none"
+       id="path3772"
+       stroke="#000000"
+       fill="#ffffff" />
+    <path
+       d="M 125.27 190.94 L 125.27 74.66 L 115.27 64.66 M 125.27 74.66 L 368.87 74.66"
+       stroke-miterlimit="10"
+       transform="rotate(90,242.07,127.8)"
+       pointer-events="none"
+       id="path3774"
+       stroke="#000000"
+       fill="none" />
+    <g
+       transform="translate(208.7648,17.08518)"
+       id="g3776">
+      <switch
+         id="switch3778">
+        <foreignObject
+           pointer-events="all"
+           width="58"
+           height="14"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;">
+            <xhtml:div
+               style="display:inline-block;text-align:inherit;text-decoration:inherit;">Serwer LOTC<xhtml:br />
+</xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="29"
+           y="12"
+           font-size="10px"
+           id="text3780"
+           style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#000000">Serwer LOTC</text>
+      </switch>
+    </g>
+    <rect
+       x="185.24"
+       y="40.63"
+       width="105.24"
+       height="47.55"
+       pointer-events="none"
+       id="rect3782"
+       stroke="#000000"
+       fill="#ffffff" />
+    <path
+       d="M 265.48 65.63 L 281.48 65.63 L 281.48 85.63 L 265.48 85.63 L 265.48 81.63 L 261.48 81.63 L 261.48 77.63 L 265.48 77.63 L 265.48 73.63 L 261.48 73.63 L 261.48 69.63 L 265.48 69.63 Z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3790"
+       stroke="#000000"
+       fill="#ffffff" />
+    <path
+       d="M 265.48 69.63 L 269.48 69.63 L 269.48 73.63 L 265.48 73.63 M 265.48 77.63 L 269.48 77.63 L 269.48 81.63 L 265.48 81.63"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3792"
+       stroke="#000000"
+       fill="none" />
+    <rect
+       x="185.24"
+       y="199.13"
+       width="105.24"
+       height="47.55"
+       pointer-events="none"
+       id="rect3794"
+       stroke="#000000"
+       fill="#ffffff" />
+    <path
+       d="M 265.48 224.13 L 281.48 224.13 L 281.48 244.13 L 265.48 244.13 L 265.48 240.13 L 261.48 240.13 L 261.48 236.13 L 265.48 236.13 L 265.48 232.13 L 261.48 232.13 L 261.48 228.13 L 265.48 228.13 Z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3802"
+       stroke="#000000"
+       fill="#ffffff" />
+    <path
+       d="M 265.48 228.13 L 269.48 228.13 L 269.48 232.13 L 265.48 232.13 M 265.48 236.13 L 269.48 236.13 L 269.48 240.13 L 265.48 240.13"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3804"
+       stroke="#000000"
+       fill="none" />
+    <path
+       d="M 238 120 L 238 120"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3806"
+       stroke="#000000"
+       fill="none" />
+    <rect
+       x="185.24"
+       y="119.88"
+       width="105.24"
+       height="47.55"
+       pointer-events="none"
+       id="rect3808"
+       stroke="#000000"
+       fill="#ffffff" />
+    <path
+       d="M 265.48 144.88 L 281.48 144.88 L 281.48 164.88 L 265.48 164.88 L 265.48 160.88 L 261.48 160.88 L 261.48 156.88 L 265.48 156.88 L 265.48 152.88 L 261.48 152.88 L 261.48 148.88 L 265.48 148.88 Z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3816"
+       stroke="#000000"
+       fill="#ffffff" />
+    <path
+       d="M 265.48 148.88 L 269.48 148.88 L 269.48 152.88 L 265.48 152.88 M 265.48 156.88 L 269.48 156.88 L 269.48 160.88 L 265.48 160.88"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3818"
+       stroke="#000000"
+       fill="none" />
+    <path
+       d="m 488.48296,1.7109322 0,243.5999978 -10,10 -116.28,0 0,-243.599998 10,-9.9999998 116.28,0 z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3820"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10" />
+    <path
+       d="M 309.06 190.94 L 309.06 74.66 L 299.06 64.66 M 309.06 74.66 L 552.66 74.66"
+       stroke-miterlimit="10"
+       transform="rotate(90,425.86,127.8)"
+       pointer-events="none"
+       id="path3822"
+       stroke="#000000"
+       fill="none" />
+    <g
+       transform="translate(394.35284,17.25852)"
+       id="g3824">
+      <switch
+         id="switch3826">
+        <foreignObject
+           pointer-events="all"
+           width="54"
+           height="14"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;">
+            <xhtml:div
+               style="display:inline-block;text-align:inherit;text-decoration:inherit;">Klient LOTC<xhtml:br />
+</xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="27"
+           y="12"
+           font-size="10px"
+           id="text3828"
+           style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#000000">Klient LOTC</text>
+      </switch>
+    </g>
+    <path
+       d="M 305 64 L 363 64"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3830"
+       stroke="#000000"
+       fill="none" />
+    <g
+       transform="translate(310,50)"
+       id="g3832">
+      <switch
+         id="switch3834">
+        <foreignObject
+           pointer-events="all"
+           width="49"
+           height="14"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;">
+            <xhtml:div
+               style="display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#ffffff;">&lt;&lt;LOTC&gt;&gt;</xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="25"
+           y="12"
+           font-size="10px"
+           id="text3836"
+           style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#000000">&lt;&lt;LOTC&gt;&gt;</text>
+      </switch>
+    </g>
+    <rect
+       x="369.06"
+       y="40.63"
+       width="105.24"
+       height="47.55"
+       pointer-events="none"
+       id="rect3838"
+       stroke="#000000"
+       fill="#ffffff" />
+    <path
+       d="M 449.29 65.63 L 465.29 65.63 L 465.29 85.63 L 449.29 85.63 L 449.29 81.63 L 445.29 81.63 L 445.29 77.63 L 449.29 77.63 L 449.29 73.63 L 445.29 73.63 L 445.29 69.63 L 449.29 69.63 Z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3846"
+       stroke="#000000"
+       fill="#ffffff" />
+    <path
+       d="M 449.29 69.63 L 453.29 69.63 L 453.29 73.63 L 449.29 73.63 M 449.29 77.63 L 453.29 77.63 L 453.29 81.63 L 449.29 81.63"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3848"
+       stroke="#000000"
+       fill="none" />
+    <rect
+       x="369.06"
+       y="119.88"
+       width="105.24"
+       height="47.55"
+       pointer-events="none"
+       id="rect3850"
+       stroke="#000000"
+       fill="#ffffff" />
+    <path
+       d="M 449.29 144.88 L 465.29 144.88 L 465.29 164.88 L 449.29 164.88 L 449.29 160.88 L 445.29 160.88 L 445.29 156.88 L 449.29 156.88 L 449.29 152.88 L 445.29 152.88 L 445.29 148.88 L 449.29 148.88 Z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3858"
+       stroke="#000000"
+       fill="#ffffff" />
+    <path
+       d="M 449.29 148.88 L 453.29 148.88 L 453.29 152.88 L 449.29 152.88 M 449.29 156.88 L 453.29 156.88 L 453.29 160.88 L 449.29 160.88"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3860"
+       stroke="#000000"
+       fill="none" />
+    <rect
+       x="369.06"
+       y="199.13"
+       width="105.24"
+       height="47.55"
+       pointer-events="none"
+       id="rect3862"
+       stroke="#000000"
+       fill="#ffffff" />
+    <path
+       d="M 449.29 224.13 L 465.29 224.13 L 465.29 244.13 L 449.29 244.13 L 449.29 240.13 L 445.29 240.13 L 445.29 236.13 L 449.29 236.13 L 449.29 232.13 L 445.29 232.13 L 445.29 228.13 L 449.29 228.13 Z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3870"
+       stroke="#000000"
+       fill="#ffffff" />
+    <path
+       d="M 449.29 228.13 L 453.29 228.13 L 453.29 232.13 L 449.29 232.13 M 449.29 236.13 L 453.29 236.13 L 453.29 240.13 L 449.29 240.13"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3872"
+       stroke="#000000"
+       fill="none" />
+    <path
+       d="M 127 64 L 179 64"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3874"
+       stroke="#000000"
+       fill="none" />
+    <g
+       transform="translate(129,50)"
+       id="g3876">
+      <switch
+         id="switch3878">
+        <foreignObject
+           pointer-events="all"
+           width="49"
+           height="14"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;">
+            <xhtml:div
+               style="display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#ffffff;">&lt;&lt;LOTC&gt;&gt;</xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="25"
+           y="12"
+           font-size="10px"
+           id="text3880"
+           style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#000000">&lt;&lt;LOTC&gt;&gt;</text>
+      </switch>
+    </g>
+    <path
+       d="M -62.66 64.66 L 180.94 64.66 L 190.94 74.66 L 190.94 190.94 L -52.66 190.94 L -62.66 180.94 L -62.66 64.66 Z"
+       stroke-miterlimit="10"
+       transform="rotate(90,64.14,127.8)"
+       pointer-events="none"
+       id="path3882"
+       stroke="#000000"
+       fill="#ffffff" />
+    <path
+       d="M -52.66 190.94 L -52.66 74.66 L -62.66 64.66 M -52.66 74.66 L 190.94 74.66"
+       stroke-miterlimit="10"
+       transform="rotate(90,64.14,127.8)"
+       pointer-events="none"
+       id="path3884"
+       stroke="#000000"
+       fill="none" />
+    <g
+       transform="translate(4.5769912,17.258521)"
+       id="g3886">
+      <switch
+         id="switch3888">
+        <foreignObject
+           pointer-events="all"
+           width="109"
+           height="14"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;">
+            <xhtml:div
+               style="display:inline-block;text-align:inherit;text-decoration:inherit;">Konsola administratora<xhtml:br />
+</xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="55"
+           y="12"
+           font-size="10px"
+           id="text3890"
+           style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#000000">Konsola administratora</text>
+      </switch>
+    </g>
+    <rect
+       x="7.04"
+       y="40.63"
+       width="105.24"
+       height="47.55"
+       pointer-events="none"
+       id="rect3892"
+       stroke="#000000"
+       fill="#ffffff" />
+    <g
+       transform="translate(6.3328506,25.472888)"
+       id="g3894">
+      <switch
+         id="switch3896">
+        <foreignObject
+           pointer-events="all"
+           width="106"
+           height="48"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 104px; height: 46px; overflow: hidden; white-space: nowrap; text-align: center;">Protokół LOTC</xhtml:div>
+        </foreignObject>
+        <text
+           x="53"
+           y="29"
+           font-size="10px"
+           id="text3898"
+           style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#000000">Protokół LOTC</text>
+      </switch>
+    </g>
+    <path
+       d="M 87.28 65.63 L 103.28 65.63 L 103.28 85.63 L 87.28 85.63 L 87.28 81.63 L 83.28 81.63 L 83.28 77.63 L 87.28 77.63 L 87.28 73.63 L 83.28 73.63 L 83.28 69.63 L 87.28 69.63 Z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3900"
+       stroke="#000000"
+       fill="#ffffff" />
+    <path
+       d="M 87.28 69.63 L 91.28 69.63 L 91.28 73.63 L 87.28 73.63 M 87.28 77.63 L 91.28 77.63 L 91.28 81.63 L 87.28 81.63"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3902"
+       stroke="#000000"
+       fill="none" />
+    <rect
+       x="7.04"
+       y="119.88"
+       width="105.24"
+       height="47.55"
+       pointer-events="none"
+       id="rect3904"
+       stroke="#000000"
+       fill="#ffffff" />
+    <path
+       d="M 87.28 144.88 L 103.28 144.88 L 103.28 164.88 L 87.28 164.88 L 87.28 160.88 L 83.28 160.88 L 83.28 156.88 L 87.28 156.88 L 87.28 152.88 L 83.28 152.88 L 83.28 148.88 L 87.28 148.88 Z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3912"
+       stroke="#000000"
+       fill="#ffffff" />
+    <path
+       d="M 87.28 148.88 L 91.28 148.88 L 91.28 152.88 L 87.28 152.88 M 87.28 156.88 L 91.28 156.88 L 91.28 160.88 L 87.28 160.88"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3914"
+       stroke="#000000"
+       fill="none" />
+    <path
+       d="M 411 286 L 426 255"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3916"
+       stroke="#000000"
+       fill="none" />
+    <g
+       transform="translate(369.92544,266)"
+       id="g3918">
+      <switch
+         id="switch3920">
+        <foreignObject
+           pointer-events="all"
+           width="44"
+           height="14"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;">
+            <xhtml:div
+               style="display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#ffffff;">&lt;&lt;NTP&gt;&gt;</xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="22"
+           y="12"
+           font-size="10px"
+           id="text3922"
+           style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#000000">&lt;&lt;NTP&gt;&gt;</text>
+      </switch>
+    </g>
+    <path
+       d="M 318.13 147.8 L 339.83 147.8 L 349.83 157.8 L 349.83 456.5 L 328.13 456.5 L 318.13 446.5 L 318.13 147.8 Z"
+       stroke-miterlimit="10"
+       transform="rotate(90,333.98,302.15)"
+       pointer-events="none"
+       id="path3924"
+       stroke="#000000"
+       fill="#ffffff" />
+    <path
+       d="M 328.13 456.5 L 328.13 157.8 L 318.13 147.8 M 328.13 157.8 L 349.83 157.8"
+       stroke-miterlimit="10"
+       transform="rotate(90,333.98,302.15)"
+       pointer-events="none"
+       id="path3926"
+       stroke="#000000"
+       fill="none" />
+    <g
+       transform="translate(302,303.16334)"
+       id="g3928">
+      <switch
+         id="switch3930">
+        <foreignObject
+           pointer-events="all"
+           width="53"
+           height="14"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;">
+            <xhtml:div
+               style="display:inline-block;text-align:inherit;text-decoration:inherit;">Serwer NTP<xhtml:br />
+</xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="27"
+           y="5.5369797"
+           font-size="10px"
+           id="text3932"
+           style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#000000">Serwer NTP</text>
+      </switch>
+    </g>
+    <path
+       d="M 242 255 L 257 286"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3934"
+       stroke="#000000"
+       fill="none" />
+    <g
+       transform="translate(252.10229,265)"
+       id="g3936">
+      <switch
+         id="switch3938">
+        <foreignObject
+           pointer-events="all"
+           width="44"
+           height="14"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;">
+            <xhtml:div
+               style="display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#ffffff;">&lt;&lt;NTP&gt;&gt;</xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="22"
+           y="12"
+           font-size="10px"
+           id="text3940"
+           style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#000000">&lt;&lt;NTP&gt;&gt;</text>
+      </switch>
+    </g>
+    <circle
+       cx="237.86002"
+       cy="186.08083"
+       pointer-events="none"
+       id="ellipse3944"
+       r="5"
+       style="fill:#ffffff;stroke:#000000" />
+    <path
+       d="m 237.86001,199.03603 0,-7.95521"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3946"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="M 237.85999,194.47241 237.86,188.28"
+       stroke-miterlimit="10"
+       transform="matrix(-1,0,0,-1,475.72,361.8)"
+       pointer-events="none"
+       id="path3948"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="M 229.86 180.28 Q 229.86 188.28 237.86 188.28 Q 245.86 188.28 245.86 180.28"
+       stroke-miterlimit="10"
+       transform="rotate(180,237.86,180.9)"
+       pointer-events="none"
+       id="path3950"
+       stroke="#000000"
+       fill="none" />
+    <circle
+       cx="-237.86002"
+       cy="-99.201927"
+       transform="scale(-1,-1)"
+       pointer-events="none"
+       id="ellipse3956"
+       r="5"
+       style="fill:#ffffff;stroke:#000000" />
+    <path
+       d="m 237.85999,111.84445 0,-5.92638"
+       stroke-miterlimit="10"
+       transform="matrix(-1,0,0,-1,475.72,200.12)"
+       pointer-events="none"
+       id="path3958"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="M 237.86001,119.98966 237.86,111.41"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3962"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="M 229.86 103.41 Q 229.86 111.41 237.86 111.41 Q 245.86 111.41 245.86 103.41"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3964"
+       stroke="#000000"
+       fill="none" />
+    <circle
+       cx="421.67999"
+       cy="186.01227"
+       pointer-events="none"
+       id="ellipse3968"
+       r="5"
+       style="fill:#ffffff;stroke:#000000" />
+    <path
+       d="m 421.67999,199.39021 0,-8.37794"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3970"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="m 421.68,173.52 -1e-5,-6.49715"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3972"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="M 413.68 180.28 Q 413.68 188.28 421.68 188.28 Q 429.68 188.28 429.68 180.28"
+       stroke-miterlimit="10"
+       transform="rotate(180,421.68,180.9)"
+       pointer-events="none"
+       id="path3976"
+       stroke="#000000"
+       fill="none" />
+    <path
+       d="m 421.67999,96.048473 0,-8"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3978"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+    <circle
+       cx="-421.67999"
+       cy="-99.071526"
+       transform="scale(-1,-1)"
+       pointer-events="none"
+       id="ellipse3980"
+       r="5"
+       style="fill:#ffffff;stroke:#000000" />
+    <path
+       d="m 421.67999,111.55467 1e-5,8.32533"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3984"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="M 413.68 103.41 Q 413.68 111.41 421.68 111.41 Q 429.68 111.41 429.68 103.41"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3988"
+       stroke="#000000"
+       fill="none" />
+    <circle
+       cx="-59.66"
+       cy="-99.097153"
+       transform="scale(-1,-1)"
+       pointer-events="none"
+       id="ellipse3992"
+       r="5"
+       style="fill:#ffffff;stroke:#000000" />
+    <path
+       d="m 59.660001,111.81391 0,-6.0815"
+       stroke-miterlimit="10"
+       transform="matrix(-1,0,0,-1,119.32,200.12)"
+       pointer-events="none"
+       id="path3994"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="M 59.659999,119.97884 59.66,111.41"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3998"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10"
+       sodipodi:nodetypes="cc" />
+    <path
+       d="M 51.66 103.41 Q 51.66 111.41 59.66 111.41 Q 67.66 111.41 67.66 103.41"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path4000"
+       stroke="#000000"
+       fill="none" />
+    <g
+       transform="translate(184.53286,25.472893)"
+       id="g3894-4">
+      <switch
+         id="switch3896-4">
+        <foreignObject
+           pointer-events="all"
+           width="106"
+           height="48"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 104px; height: 46px; overflow: hidden; white-space: nowrap; text-align: center;">Protokół LOTC</xhtml:div>
+        </foreignObject>
+        <text
+           x="53"
+           y="29"
+           font-size="10px"
+           id="text3898-0"
+           style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#000000">Protokół LOTC</text>
+      </switch>
+    </g>
+    <g
+       transform="translate(368.35284,25.472888)"
+       id="g3894-4-2">
+      <switch
+         id="switch3896-4-5">
+        <foreignObject
+           pointer-events="all"
+           width="106"
+           height="48"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 104px; height: 46px; overflow: hidden; white-space: nowrap; text-align: center;">Protokół LOTC</xhtml:div>
+        </foreignObject>
+        <text
+           x="53"
+           y="29"
+           font-size="10px"
+           id="text3898-0-9"
+           style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#000000">Protokół LOTC</text>
+      </switch>
+    </g>
+    <g
+       transform="translate(184.53287,104.72289)"
+       id="g3894-4-0">
+      <switch
+         id="switch3896-4-9">
+        <foreignObject
+           pointer-events="all"
+           width="106"
+           height="48"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 104px; height: 46px; overflow: hidden; white-space: nowrap; text-align: center;">Protokół LOTC</xhtml:div>
+        </foreignObject>
+        <text
+           x="53"
+           y="29"
+           font-size="10px"
+           id="text3898-0-4"
+           style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#000000">Serwer zadań</text>
+      </switch>
+    </g>
+    <g
+       transform="translate(184.53287,183.97289)"
+       id="g3894-4-1">
+      <switch
+         id="switch3896-4-2">
+        <foreignObject
+           pointer-events="all"
+           width="106"
+           height="48"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 104px; height: 46px; overflow: hidden; white-space: nowrap; text-align: center;">Protokół LOTC</xhtml:div>
+        </foreignObject>
+        <text
+           x="53"
+           y="29"
+           font-size="10px"
+           id="text3898-0-46"
+           style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#000000">Klient NTP</text>
+      </switch>
+    </g>
+    <g
+       transform="translate(6.3328476,104.72288)"
+       id="g3894-4-9">
+      <switch
+         id="switch3896-4-8">
+        <foreignObject
+           pointer-events="all"
+           width="106"
+           height="48"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 104px; height: 46px; overflow: hidden; white-space: nowrap; text-align: center;">Protokół LOTC</xhtml:div>
+        </foreignObject>
+        <text
+           x="53"
+           y="29"
+           font-size="10px"
+           id="text3898-0-7"
+           style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#000000">Administracja zadań</text>
+      </switch>
+    </g>
+    <g
+       transform="translate(368.34286,104.72289)"
+       id="g3894-4-20">
+      <switch
+         id="switch3896-4-92">
+        <foreignObject
+           pointer-events="all"
+           width="106"
+           height="48"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 104px; height: 46px; overflow: hidden; white-space: nowrap; text-align: center;">Protokół LOTC</xhtml:div>
+        </foreignObject>
+        <text
+           x="53"
+           y="29"
+           font-size="10px"
+           id="text3898-0-1"
+           style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#000000">Agent</text>
+      </switch>
+    </g>
+    <g
+       transform="translate(368.35285,183.97289)"
+       id="g3894-4-08">
+      <switch
+         id="switch3896-4-91">
+        <foreignObject
+           pointer-events="all"
+           width="106"
+           height="48"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 104px; height: 46px; overflow: hidden; white-space: nowrap; text-align: center;">Protokół LOTC</xhtml:div>
+        </foreignObject>
+        <text
+           x="53"
+           y="29"
+           font-size="10px"
+           id="text3898-0-0"
+           style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#000000">Klient NTP</text>
+      </switch>
+    </g>
+    <rect
+       style="fill:#ffffff;stroke:#000000"
+       x="7.04"
+       y="199.13"
+       width="105.24"
+       height="47.549999"
+       pointer-events="none"
+       id="rect3794-1" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10"
+       d="m 87.279995,224.13 16.000005,0 0,20 -16.000005,0 0,-4 -4,0 0,-4 4,0 0,-4 -4,0 0,-4 4,0 z"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3802-1" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10"
+       d="m 87.279995,228.13 4,0 0,4 -4,0 m 0,4 4,0 0,4 -4,0"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path3804-8" />
+    <g
+       id="g4982"
+       transform="matrix(-1,0,0,-1,119.31999,366.36362)">
+      <circle
+         style="fill:#ffffff;stroke:#000000"
+         r="5"
+         id="ellipse3944-4"
+         pointer-events="none"
+         cy="186.08083"
+         cx="59.659996" />
+      <path
+         sodipodi:nodetypes="cc"
+         style="fill:none;stroke:#000000;stroke-miterlimit:10"
+         inkscape:connector-curvature="0"
+         id="path3946-5"
+         pointer-events="none"
+         stroke-miterlimit="10"
+         d="m 59.660005,199.03603 0,-7.95521" />
+      <path
+         sodipodi:nodetypes="cc"
+         style="fill:none;stroke:#000000;stroke-miterlimit:10"
+         inkscape:connector-curvature="0"
+         id="path3948-3"
+         pointer-events="none"
+         stroke-miterlimit="10"
+         d="m 59.660005,167.32759 -10e-6,6.19241" />
+      <path
+         id="path3950-0"
+         pointer-events="none"
+         stroke-miterlimit="10"
+         d="m 67.659995,181.52 q 0,-8 -8,-8 -8,0 -8,8"
+         style="fill:none;stroke:#000000;stroke-miterlimit:10"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       transform="translate(6.3328552,183.97289)"
+       id="g3894-4-1-9">
+      <switch
+         id="switch3896-4-2-3">
+        <foreignObject
+           pointer-events="all"
+           width="106"
+           height="48"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+          <xhtml:div
+             style="display: inline-block; font-size: 10px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 104px; height: 46px; overflow: hidden; white-space: nowrap; text-align: center;">Protokół LOTC</xhtml:div>
+        </foreignObject>
+        <text
+           x="53"
+           y="29"
+           font-size="10px"
+           id="text3898-0-46-0"
+           style="font-size:10px;font-family:Helvetica;text-anchor:middle;fill:#000000">UI</text>
+      </switch>
+    </g>
+  </g>
+</svg>

@@ -9,13 +9,16 @@
 \usepackage{dirtytalk}
 \usepackage{color}
 \usepackage{float}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue}
 
+%\usepackage[pdftex,
+%            pdfauthor={Andrzej Roguski},
+%            pdftitle={Techniki Internetowe, Projekt}]{hyperref}
+            
 \usepackage{graphicx}
-\graphicspath{ {images/} }
 
-\usepackage[pdftex,
-            pdfauthor={Andrzej Roguski},
-            pdftitle={Techniki Internetowe, Projekt}]{hyperref}
+\graphicspath{{./images/}}
 
 \title{Low Orbit Task Cannon \\ \large Techniki Internetowe, Projekt}
 \date{\today}
@@ -23,7 +26,13 @@
 
 \begin{document}
 	\maketitle
-
+	
+	\begin{flushright}
+	    \href
+	    {https://github.com/sigrond/procesy_rozproszone}
+	    {\underline{Low Orbit Task Cannon na serwerze GitHub}}
+	\end{flushright}
+	
 	\section{Treść zadania}
 	    \say{W sieci jest zbiór zarządzanych węzłów, serwer zarządzający i stacja konsoli administratora. W węzłach pracują agenty zarządzające. Agent zarządzający może: załadować kod nowego procesu, usunąć kod procesu, uruchomić/zatrzymać/wznowić/zabić dany proces zgodnie z harmonogramem, wznowić proces nie raportujący swej żywotności, podać dane statystyczne serwerowi. System umożliwia administratorowi zarządzanie rozproszonymi procesami. System komunikacji powinien móc pracować w przestrzeni adresów IPv4 i IPv6. Ponadto należy zaprojektować moduł do Wireshark umożliwiający wyświetlanie i analizę zdefiniowanych komunikatów.}
 	
@@ -44,7 +53,9 @@
         \end{itemize}
         
 	\section{Struktura systemu}
+	
 	    \subsection{Moduły}	
+	    
 		    Low Orbit Task Cannon zawiera następujące moduły:
 		
 			\begin{enumerate}
@@ -56,33 +67,152 @@
 		        \item Plugin Wireshark (opcjonalny)
 		    \end{enumerate}
 		    
-		    \subsection{Topologia}
-			    \begin{itemize}
-			        \item Każdy klient LOTC musi być połączony siecią TCP/IP z serwerem LOTC i serwerem NTP 
-			        \item Konsola administratora musi być połączona siecią TCP/IP z serwerem LOTC 
-			        \item Serwer LOTC musi być połączony siecią TCP/IP z serwerem NTP
-			    \end{itemize}
-			    \begin{figure}[H]
-					\centering
-					\def\svgwidth{\columnwidth}
-					\input{images/Topology.pdf_tex}
-				\end{figure}
+	    \subsection{Topologia}
+	    
+		    \begin{itemize}
+		        \item Każdy klient LOTC musi być połączony siecią TCP/IP z serwerem LOTC i serwerem NTP 
+		        \item Konsola administratora musi być połączona siecią TCP/IP z serwerem LOTC 
+		        \item Serwer LOTC musi być połączony siecią TCP/IP z serwerem NTP
+		    \end{itemize}
 		    
-		    \subsection{Diagram rozmieszczenia}
+		    \begin{figure}[H]
+				\def\svgwidth{\columnwidth}
+				\input{./images/Topology.pdf_tex}
+			\end{figure}
+	    
+	    
+	    \subsection{Diagram rozmieszczenia}
+	    
 		    Komunikacja między konsolą i serwerem oraz serwerem i klientem odbywa się poprzez protokół LOTC. Wykorzystywany jest do tego moduł implementujący protokół LOTC i wystawiający interfejs komunikacyjny. \\
 		    Z racji potrzeby synchronizacji, serwer oraz klient wykorzystują moduł implementujący niezbędne minimum klienta NTP potrzebne do zapytania serwera NTP o aktualny czas. \\
-		    Program do administracji zadaniami wystawia interfejs niezbędny do zbudowania UI, zarówno w wersji tekstowej jak i graficznej. 
-			    \begin{figure}[H]
-					\centering
-					\def\svgwidth{\columnwidth}
-					\input{images/DeploymentDiagram.pdf_tex}
-				\end{figure}
+		    Program do administracji zadaniami wystawia interfejs niezbędny do zbudowania UI, zarówno w wersji tekstowej jak i graficznej. \\
+		    
+		    \begin{figure}[H]
+				\def\svgwidth{\columnwidth}
+				\input{./images/DeploymentDiagram.pdf_tex}
+			\end{figure}
+				
+	\section{Środowisko sprzętowo-programowe}
+	
+	    \begin{itemize}   
+			\item System operacyjny: GNU/Linux
+			\item Język programowania: C++14 (system LOTC), Lua (Plugin Wireshark)
+		    \item Biblioteki: Boost $ \geqslant $ 1.59 (z wyłączeniem nakładek na API gniazd BSD)
+			\item Kompilator: GCC $ \geqslant $ 5.2.0
+			\item Debugger: GDB $ \geqslant $ 7.10
+	    \end{itemize}
 	    
     \section{Protokół LOTC}
+        \subsection{Założenia}
+	        Protokół LOTC zapewnia komunikację w warstwie aplikacji między hostami systemu. Podstawowymi zadaniami protokołu są:
+	        
+	        \begin{enumerate}
+				\item Rejestracja i usuwanie agentów
+				\item Zarządzanie wykonaniem pojedynczych zadań
+				\item Zarządzanie zależnościami między zadaniami
+			    \item Przesyłanie plików
+				\item Przekazywanie wyników zadań
+				\item Przekazywanie żądania synchronizacji
+				\item Monitorowanie responsywności agentów
+				\item Zgłaszanie błędów
+		    \end{enumerate}
+		    
+		    Ponadto protokół powinien weryfikować stan komunikacji poprzez system potwierdzeń i raportów sukcesu/porażki.
+		    
+	    \subsection{Struktura protokołu}
+	        Protokół dzieli się na osiem kategorii, realizujących osiem wyżej wymienionych zadań. Ponadto niektóre z kategorii dzielą się dalej na podkategorie. Ortagonalnie do kategorii funkcjonuje podział komunikatów na:
+	        \begin{itemize}   
+				\item Żądania - komunikaty inicjujące wykonanie czynności
+				\item Potwierdzenia - komunikaty potwierdzające otrzymanie żądania
+			    \item Raporty sukcesu - komunikaty informujące o pomyślnym wykonaniu czynności
+				\item Raporty porażki - komunikaty informujące o błędzie w trakcie wykonaniu czynności
+	        \end{itemize}
+	        
+	        \subsubsection{Kod komunikatu}
+		        Każdy komunikat LOTC rozpoczyna się ośmiobitowym kodem jednoznacznie informującym o kategorii, podkategorii i stanie czynności. Kod ma następującą strukturę:
+		         \begin{itemize}   
+					\item Kategoria [3 bity]
+					\item Podkategoria [3 bity]
+				    \item Stan czynności [2 bity]
+		        \end{itemize}
+		        
+		        \begin{center}
+			        \begin{tabular}{ || c | c | c || c | c | c || c | c || }
+			            \hline
+					    K & K & K & P & P & P & S & S \\
+					    \hline
+					\end{tabular}  
+		        \end{center}
+		        
+	        \subsubsection{Kategorie}
+			        \begin{tabular}{ c | c | c | c }
+					    \textbf{Kod binarnie} & \textbf{Kod dziesiątkowo} & \textbf{Kategoria} & \textbf{Opis} \\
+					    \hline
+					    000 & 0 & HOST & Rejestracja i usuwanie agentów \\
+					    001 & 1 & TASK & Zarządzanie wykonaniem pojedynczych zadań \\
+					    010 & 2 & DEP & Zarządzanie zależnościami między zadaniami \\
+					    011 & 3 & FILE & Przesyłanie plików \\
+					    100 & 4 & RET & Przekazywanie wyników zadań \\
+					    101 & 5 & SYN & Przekazywanie żądania synchronizacji \\
+					    110 & 6 & PING & Monitorowanie responsywności agentów \\
+					    111 & 7 & ERR & Zgłaszanie błędów \\
+					\end{tabular}
+					
+			\subsubsection{Podkategorie}
+			\begin{Huge}
+			TODO
+			\end{Huge}
+		        
+	        \subsubsection{Stany czynności}
+			        \begin{tabular}{ c | c | c | c }
+					    \textbf{Kod binarnie} & \textbf{Kod dziesiątkowo} & \textbf{Stan} & \textbf{Opis} \\
+					    \hline
+					    000 & 0 & REQ & Inicjacja czynności \\
+					    001 & 1 & ACK & Potwierdzenie otrzymania komunikatu REQ \\
+					    010 & 2 & OK & Zakończenie czynności - sukces \\
+					    011 & 3 & ERR & Zakończenie czynności - porażka \\
+					\end{tabular}  
+    
     \section{Serwer}
+			\begin{Huge}
+			TODO
+			\end{Huge}
+    
+    
     \section{Klient}
+			\begin{Huge}
+			TODO
+			\end{Huge}
+    
+    
     \section{Konsola administratora}
+			\begin{Huge}
+			TODO
+			\end{Huge}
+    
+    
     \section{Klient NTP}
+    
+        W celu przeprowadzenia synchronizacji hostów, serwer i klienci korzystają z modułu implementującego minimalistycznego klienta NTP. Moduł ten poza pobraniem aktualnego czasu oblicza też różnicę między czasem systemowym i zwraca parametr korygujący pozwalający uzyskać synchronizację systemu LOTC bez zmieniania zegarów systemowych poszczególnych maszyn. 
+    
     \section{Plugin Wireshark}
+    
+        Plugin Wireshark nie jest częścią systemu LOTC, lecz ma na celu ułatwienie analizy komunikacji między jego hostami. Podstawowymi zadaniami pluginu są:
+        
+        \begin{itemize}   
+			\item Identyfikacja i dysekcja protokołu LOTC
+			\item Zdekodowanie pól nagłówka
+		    \item Czytelna prezentacja nagłówka
+	    \end{itemize}
+	    
+	\section{Podział prac}
+	    \begin{tabular}{ l | l }
+		    \textbf{Osoba odpowiedzialna} & \textbf{Zadania} \\
+		    \hline
+		    Tomasz Jakubczyk  & Teamleader, serwer  \\
+		    Eryk Ratyński  & Agent  \\
+		    Andrzej Roguski  & Protokół, klient NTP, plugin Wireshark, dokumentacja \\
+		    Kacper Stachyra & Konsola administratora \\
+		\end{tabular}  
 		
 \end{document}
