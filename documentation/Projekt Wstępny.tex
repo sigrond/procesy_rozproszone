@@ -10,6 +10,7 @@
 \usepackage{color}
 \usepackage{float}
 \usepackage{hyperref}
+
 \hypersetup{colorlinks=true, urlcolor=blue}
 
 %\usepackage[pdftex,
@@ -34,7 +35,7 @@
 	\end{flushright}
 	
 	\section{Treść zadania}
-	    \say{W sieci jest zbiór zarządzanych węzłów, serwer zarządzający i stacja konsoli administratora. W węzłach pracują agenty zarządzające. Agent zarządzający może: załadować kod nowego procesu, usunąć kod procesu, uruchomić/zatrzymać/wznowić/zabić dany proces zgodnie z harmonogramem, wznowić proces nie raportujący swej żywotności, podać dane statystyczne serwerowi. System umożliwia administratorowi zarządzanie rozproszonymi procesami. System komunikacji powinien móc pracować w przestrzeni adresów IPv4 i IPv6. Ponadto należy zaprojektować moduł do Wireshark umożliwiający wyświetlanie i analizę zdefiniowanych komunikatów.}
+	    \say{W sieci jest zbiór zarządzanych węzłów, serwer zarządzający i stacja konsoli administratora. W węzłach pracują agenty zarządzające. Agent zarządzający może: załadować kod nowego procesu, usunąć kod procesu, uruchomić/zatrzymać/wznowić/zabić dany proces zgodnie z harmonogramem, wznowić proces nie raportujący swej żywotności, podać dane statystyczne serwerowi. System umożliwia administratorowi zarządzanie rozproszonymi procesami. System komunikacji powinien móc pracować w przestrzeni adresów IPv4 i IPv6. Ponadto należy zaprojektować moduł do Wireshark umożliwiający wyświetlanie i analizę zdefiniowanych komunikatów.} \\
 	
 	\section{Założenia projektowe}
 	    \subsection{Środowisko}
@@ -55,7 +56,7 @@
 	\section{Struktura systemu}
 	
 	    \subsection{Moduły}	
-	    
+	        \paragraph{}
 		    Low Orbit Task Cannon zawiera następujące moduły:
 		
 			\begin{enumerate}
@@ -79,10 +80,10 @@
 				\def\svgwidth{\columnwidth}
 				\input{./images/Topology.pdf_tex}
 			\end{figure}
-	    
-	    
+			
+        \pagebreak			
+			
 	    \subsection{Diagram rozmieszczenia}
-	    
 		    Komunikacja między konsolą i serwerem oraz serwerem i klientem odbywa się poprzez protokół LOTC. Wykorzystywany jest do tego moduł implementujący protokół LOTC i wystawiający interfejs komunikacyjny. \\
 		    Z racji potrzeby synchronizacji, serwer oraz klient wykorzystują moduł implementujący niezbędne minimum klienta NTP potrzebne do zapytania serwera NTP o aktualny czas. \\
 		    Program do administracji zadaniami wystawia interfejs niezbędny do zbudowania UI, zarówno w wersji tekstowej jak i graficznej. \\
@@ -186,8 +187,8 @@
 				    011 & 3 & T\_KILL & Zakończenie zadania \\
 				    100 & 4 & T\_STOP & Wstrzymanie zadania \\
 				    101 & 5 & T\_CONT & Kontynuowanie zadania \\
-				    110 & 6 & x & [zabroniony] \\
-				    111 & 7 & x & [zabroniony] \\
+				    110 & 6 & T\_OK & Zadanie gotowe do przetwarzania \\
+				    111 & 7 & T\_NOK & Zadanie niegotowe do przetwarzania \\
 				\end{tabular}
 				
 	
@@ -244,9 +245,9 @@
 			    Wersja IP & 1 & Wersja adresów IP agentów 0 - v4, 1 - v6 \\
 			    Wyrównanie & 7 & Zera \\
 			    Liczba agentów & 16 & Liczba agentów \\
-			    Adres 1 & 32(IPv4)/128(IPv6) & Adres IP pierwszego agenta (długość pola zależna od wersji IP) \\
+			    Adres 1 & 32/128 & Adres IP pierwszego agenta (długość zależna od wersji IP) \\
 			    ... &  &  \\
-			    Adres n & 32(IPv4)/128(IPv6) & Adres IP n-tego agenta, gdzie n to wartość pola \say"Liczba agentów" \\
+			    Adres n & 32/128 & Adres IP n-tego agenta, gdzie n = liczba agentów \\
 			\end{tabular}
             
             \paragraph{Kategoria TASK:\\}
@@ -285,7 +286,7 @@
 			    \textbf{Pole} & \textbf{Długość [bit]} & \textbf{Opis} \\
 			    \hline
 			    Kod komunikatu & 8 & \\
-			    Flaga typu pliku & 1 & 0 - główny plik wykonywalny zadania, 1 - plik pomocniczy \\
+			    Flaga typu pliku & 1 & 0 - główny plik zadania, 1 - plik pomocniczy \\
 			    Długość nazwy pliku & 7 & Maksymalnie 128 znaków \\
 			    Suma kontrolna & 16 & Wyliczana z nazwy i zawartości pliku \\
 			    ID zadania & 32 & Określa, do jakiego zadania należy plik \\
@@ -305,16 +306,16 @@
 			    Zwracany typ & 8 & któryś z typów prostych lub ciąg bitów \\
 			    Wyrównanie & 8 & Zera \\
 			    ID Zadania & 32 & \\
-			    Liczba & 32/64 & Tylko jeśli kod zakończenia = 0 i zwracany typ to liczba \\
-			    Rozmiar danych & 32 & Tylko jeśli kod zakończenia = 0 i zwracany typ to ciąg bitów \\
-			    Dane & 0 - $ 8 \cdot 2^{32} $ & Tylko jeśli kod zakończenia = 0 i zwracany typ to ciąg bitów \\
+			    Liczba & 32/64 & Tylko gdy exit status = 0 i zwracana jest liczba \\
+			    Rozmiar danych & 32 & Tylko gdy exit status = 0 i zwracany jest ciąg \\
+			    Dane & 0 - $ 8 \cdot 2^{32} $ & Tylko gdy exit status = 0 i zwracany jest ciąg \\
 			\end{tabular}
 			
 			\paragraph{Kategorie SYN, PING, ERR:\\}
             Pozwalają kolejno: zainicjować synchronizację, sprawdzić responsywność i zgłosić błąd w uprzednio otrzymanym komunikacie. \\
             Z racji swojej prostoty, te nagłówki wymagają wyłącznie kodu komunikatu - stan czynności zawarty w kodzie wystarcza do przeprowadzenia niezbędnej komunikacji.
             
-            \begin{tabular}{ c | c | c }
+            \begin{tabular}{ c | c  }
 			    \textbf{Pole} & \textbf{Długość [bit]} \\
 			    \hline
 			    Kod komunikatu & 8 \\
@@ -337,7 +338,6 @@
 				\item Serwer administratora – odpowiada za komunikację z konsolą administratora. Serwer czeka na polecenie od administratora, wrzuca na kolejkę zdarzeń i zwraca odpowiedź. Konsola administratora może sama nawiązać połączenie i wysłać polecenia, ale jeśli serwer ma po jakimś czasie odesłać raport, to konsola powinna też nasłuchiwać.
 				\item Model – zbiór metod wywoływanych przez kontroler w celu realizacji wybranej strategi z mapy. Może też zawierać maszynę stanów i informacje o agentach.
 			\end{itemize}
-			
 			Poszczególne moduły mogą pracować w osobnych wątkach lub procesach. Kontroler powinien być w wątku głównym. \\
 			Model, o ile będzie zgłaszał jakieś zdarzenia (zapewne związane z upływem czasu), powinien mieć osobny wątek. Jeśli nie, to będzie wywoływany (jego metody) w tym samym wątku co kontroler. \\
 			Serwer klienta, a właściwie każda jego instancja, powinien być w osobnym wątku. Wątki te powinny być tworzone wtedy gdy wyniknie to ze strategii działania. \\
@@ -385,15 +385,16 @@
 			Komendy wydawane w konsoli administratora powinny umożliwiać:
 			
 			\begin{itemize}   
-				\item Dodanie/usunięcie zadania
-				\item Nadanie priorytetu zadania (przy dodawaniu)
-				\item Definiowanie kolejności następowania zadań (przy dodawaniu)
+				\item Dodanie/usunięcie/wstrzymanie/wznowienie zadania
+				\item Nadanie zadaniu priorytetu podczas dodawania
+				\item Definiowanie kolejności następowania zadań
+				\item Oznaczenie zadania jako gotowego do przetwarzania
+				\item Dodanie/usunięcie agenta
 				\item Żądanie otrzymania raportu o pracy systemu (jednorazowo bądź cyklicznie)
 			\end{itemize}
 		
 		\subsection{Raporty}
 			Konsola administratora, dzięki otrzymywaniu raportów z serwera, w tym raportów cyklicznych, może generować zbiorczy raport z całej pracy systemu (przez określony czas lub do zakończenia pracy) w oddzielnym pliku. Format tych raportów pozostaje do ustalenia (jakie informacje, kiedy, jak często, w jakiej formie to przedstawić).
-    
     
     \section{Klient NTP}
     
@@ -410,6 +411,7 @@
 	    \end{itemize}
 	    
 	\section{Podział prac}
+	
 	    \begin{tabular}{ l | l }
 		    \textbf{Osoba odpowiedzialna} & \textbf{Zadania} \\
 		    \hline

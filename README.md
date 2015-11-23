@@ -7,9 +7,9 @@ Wstępny Projekt:
 
 -----------------------------------------------------------------
 
-Prace szczęśliwie na finiszu. Zostało jeszcze kilka szczegółów do dodania/poprawienia.
+**Wciąż brakuje przypadków użycia**
 
-Teoretycznie powinniśmy też opisać przypadki użycia. Miło by było, gdyby ktoś w tym pomógł.
+Tak naprawdę wypisanie wszystkich przypadków użycia wraz ze scenariuszami alternatywnymi zajęłoby dobrych parę stron.
 
 -----------------------------------------------------------------
 
@@ -17,7 +17,7 @@ Teoretycznie powinniśmy też opisać przypadki użycia. Miło by było, gdyby k
 
 **Zgodnie z ustaleniem, że są to opisy ostateczne, jak do oddania, poza poprawkami stylistycznymi i językowymi, nie wprowadzam żadnych zmian. Wyjątek - usuwam wszelkie "chyba, może, prawdopodobnie" i innych niedookreślone propozycje oraz rzeczy, które są wprost sprzeczne z resztą projektu.**
 
-**Jeśli ktoś uważa, chce jednak wolalby coś poprawić, ma czas do 22:30. Prosiłbym jednak poza samym commitem powiadomić mnie o zmianach drogą bardziej bezpośrednią, bo nie gwarantuję, że będę śledził commity częściej niż co godzine.**
+**Jeśli ktoś uważa, że jednak wolalby coś poprawić, ma czas do 22:30. Prosiłbym jednak poza samym commitem powiadomić mnie o zmianach drogą bardziej bezpośrednią, bo nie gwarantuję, że będę śledził commity częściej niż co godzine.**
 
 -----------------------------------------------------------------
 

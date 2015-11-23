@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{356.8bp}%
+    \setlength{\unitlength}{329.85612793bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,34 +48,34 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.80941704)%
+  \begin{picture}(1,0.58411475)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{Topology.pdf}}%
-    \put(0.14376976,0.20999305){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Klient 1}}}%
+    \put(0.08004702,0.00028421){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Klient 1}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{Topology.pdf}}%
-    \put(0.1430859,0.54134978){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Klient 2}}}%
+    \put(0.0793073,0.35870738){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Klient 2}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{Topology.pdf}}%
-    \put(0.84948973,0.56888341){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Klient n}}}%
+    \put(0.84341282,0.38849006){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Klient n}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{Topology.pdf}}%
-    \put(0.50565818,0.57257276){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Serwer NTP}}}%
+    \put(0.47149583,0.39248077){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Serwer NTP}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{Topology.pdf}}%
-    \put(0.50382085,0.23159491){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Serwer LOTC}}}%
+    \put(0.46950842,0.02365059){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Serwer LOTC}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=6]{Topology.pdf}}%
-    \put(0.69050363,0.32533393){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
+    \put(0.67144014,0.12504656){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=7]{Topology.pdf}}%
-    \put(0.85515117,0.252863){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Konsola administratora}}}%
+    \put(0.8495367,0.04665594){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Konsola administratora}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=8]{Topology.pdf}}%
-    \put(0.67863827,0.66903208){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
+    \put(0.65860558,0.49681925){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=9]{Topology.pdf}}%
-    \put(0.31379566,0.67309779){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
+    \put(0.26396127,0.50121707){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=10]{Topology.pdf}}%
-    \put(0.26533623,0.56091974){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
+    \put(0.21154349,0.37987589){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=11]{Topology.pdf}}%
-    \put(0.26705109,0.43744935){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
+    \put(0.21339843,0.24631998){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=12]{Topology.pdf}}%
-    \put(0.33307346,0.32623029){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
+    \put(0.28481375,0.12601614){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=13]{Topology.pdf}}%
-    \put(0.69793186,0.50688412){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
+    \put(0.67947514,0.32142644){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=14]{Topology.pdf}}%
-    \put(0.50604096,0.49807819){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
+    \put(0.47190988,0.31190121){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{TCP/IP}}}%
   \end{picture}%
 \endgroup%
