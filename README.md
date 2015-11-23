@@ -3,11 +3,13 @@
 
 Wstępny Projekt:
 
- - Deadline I - poniedziałek 00:00
- - Deadline II - poniedziałek 09:00
- - Deadline III - poniedziałek 23:50
+ - Deadline - poniedziałek 23:50
 
-**Każdy, kto się dowali do mojej roboty po godzinie 23 (niedziela), będzie robił przypadki użycia. Nie żartuję.**
+**Zabieram się za wstawianie do projektu opisów serwera, klienta i konsoli.**
+
+**Zgodnie z ustaleniem, że są to opisy ostateczne, jak do oddania, poza poprawkami stylistycznymi i językowymi, nie wprowadzam żadnych zmian. Wyjątek - usuwam wszelkie "chyba, może, prawdopodobnie" i innych niedookreślone propozycje oraz rzeczy, które są wprost sprzeczne z resztą projektu.**
+
+**Jeśli ktoś uważa, chce jednak wolalby coś poprawić, ma czas do 22:30. Prosiłbym jednak poza samym commitem powiadomić mnie o zmianach drogą bardziej bezpośrednią, bo nie gwarantuję, że będę śledził commity częściej niż co godzine.**
 
 Sugestia na przyszłość: nie używajcie formatów kompresujących, których GitHub nie ogarnia. Jeśli trzeba coś zapisać tekstem, używajcie zwykłych plików tekstowych lub najlepiej plików markdown, takich jak ten. Raz, że łatwiej i szybciej można się do nich dobrać, a dwa, przy kolejnych commitach łatwo prześledzić zmiany wewnątrz plików. 
 

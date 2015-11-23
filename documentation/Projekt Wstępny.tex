@@ -145,39 +145,86 @@
 		        \end{center}
 		        
 	        \subsubsection{Kategorie}
-			        \begin{tabular}{ c | c | c | c }
-					    \textbf{Kod binarnie} & \textbf{Kod dziesiątkowo} & \textbf{Kategoria} & \textbf{Opis} \\
-					    \hline
-					    000 & 0 & HOST & Rejestracja i usuwanie agentów \\
-					    001 & 1 & TASK & Zarządzanie wykonaniem pojedynczych zadań \\
-					    010 & 2 & DEP & Zarządzanie zależnościami między zadaniami \\
-					    011 & 3 & FILE & Przesyłanie plików \\
-					    100 & 4 & RET & Przekazywanie wyników zadań \\
-					    101 & 5 & SYN & Przekazywanie żądania synchronizacji \\
-					    110 & 6 & PING & Monitorowanie responsywności agentów \\
-					    111 & 7 & ERR & Zgłaszanie błędów \\
-					\end{tabular}
+		        \begin{tabular}{ c | c | c | c }
+				    \textbf{Kod binarnie} & \textbf{Kod dziesiątkowo} & \textbf{Kategoria} & \textbf{Opis} \\
+				    \hline
+				    000 & 0 & HOST & Rejestracja i usuwanie agentów \\
+				    001 & 1 & TASK & Zarządzanie wykonaniem pojedynczych zadań \\
+				    010 & 2 & DEP & Zarządzanie zależnościami między zadaniami \\
+				    011 & 3 & FILE & Przesyłanie plików \\
+				    100 & 4 & RET & Przekazywanie wyników zadań \\
+				    101 & 5 & SYN & Synchronizacja \\
+				    110 & 6 & PING & Monitorowanie responsywności agentów \\
+				    111 & 7 & ERR & Zgłaszanie błędów \\
+				\end{tabular}
 					
 			\subsubsection{Podkategorie}
-			\begin{Huge}
-			TODO
-			\end{Huge}
+			    \paragraph{Kategoria TASK:\\}
+			    
+		        \begin{tabular}{ c | c | c | c }
+				    \textbf{Kod binarnie} & \textbf{Kod dziesiątkowo} & \textbf{Podkategoria} & \textbf{Opis} \\
+				    \hline
+				    000 & 0 & ADD & Dodanie zadania \\
+				    001 & 1 & RM & Usunięcie zadania \\
+				    010 & 2 & RUN & Wykonanie zadania \\
+				    011 & 3 & KILL & Zakończenie zadania \\
+				    100 & 4 & STOP & Wstrzymanie zadania \\
+				    101 & 5 & CONT & Kontynuowanie zadania \\
+				    110 & 6 & x & [zabroniony] \\
+				    111 & 7 & x & [zabroniony] \\
+				\end{tabular}
+				
+	
+			    \paragraph{Kategoria ERR:\\}
+			    
+		        \begin{tabular}{ c | c | c | c }
+				    \textbf{Kod binarnie} & \textbf{Kod dziesiątkowo} & \textbf{Podkategoria} & \textbf{Opis} \\
+				    \hline
+				    000 & 0 & HEAD & Błędny nagłówek \\
+				    001 & 1 & LGTH & Błędna długość \\
+				    010 & 2 & CSUM & Błędna suma kontrolna \\
+				    011 & 3 & x & [zabroniony] \\
+				    100 & 4 & x & [zabroniony] \\
+				    101 & 5 & x & [zabroniony] \\
+				    110 & 6 & x & [zabroniony] \\
+				    111 & 7 & OTH & Inny błąd \\
+				\end{tabular}
+				
+				\paragraph{Pozostałe kategorie:\\}
+				
+				\begin{tabular}{ c | c | c | c }
+				    \textbf{Kod binarnie} & \textbf{Kod dziesiątkowo} & \textbf{Podkategoria} & \textbf{Opis} \\
+				    \hline
+				    000 & 0 & - & Wartość domyślna \\
+				    001 & 1 & x & [zabroniony] \\
+				    010 & 2 & x & [zabroniony] \\
+				    011 & 3 & x & [zabroniony] \\
+				    100 & 4 & x & [zabroniony] \\
+				    101 & 5 & x & [zabroniony] \\
+				    110 & 6 & x & [zabroniony] \\
+				    111 & 7 & x & [zabroniony] \\
+				\end{tabular}
 		        
 	        \subsubsection{Stany czynności}
-			        \begin{tabular}{ c | c | c | c }
-					    \textbf{Kod binarnie} & \textbf{Kod dziesiątkowo} & \textbf{Stan} & \textbf{Opis} \\
-					    \hline
-					    000 & 0 & REQ & Inicjacja czynności \\
-					    001 & 1 & ACK & Potwierdzenie otrzymania komunikatu REQ \\
-					    010 & 2 & OK & Zakończenie czynności - sukces \\
-					    011 & 3 & ERR & Zakończenie czynności - porażka \\
-					\end{tabular}  
+		        \begin{tabular}{ c | c | c | c }
+				    \textbf{Kod binarnie} & \textbf{Kod dziesiątkowo} & \textbf{Stan} & \textbf{Opis} \\
+				    \hline
+				    000 & 0 & REQ & Inicjacja czynności \\
+				    001 & 1 & ACK & Potwierdzenie otrzymania komunikatu REQ \\
+				    010 & 2 & OK & Zakończenie czynności - sukces \\
+				    011 & 3 & ERR & Zakończenie czynności - porażka \\
+				\end{tabular}
+				
+				
+			\begin{Huge}
+			TODO opisy kategorii
+			\end{Huge}
     
     \section{Serwer}
 			\begin{Huge}
 			TODO
 			\end{Huge}
-    
+			
     
     \section{Klient}
 			\begin{Huge}
