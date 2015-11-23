@@ -159,17 +159,33 @@
 				\end{tabular}
 					
 			\subsubsection{Podkategorie}
+			
+			 \paragraph{Kategoria HOST:\\}
+			    
+		        \begin{tabular}{ c | c | c | c }
+				    \textbf{Kod binarnie} & \textbf{Kod dziesiątkowo} & \textbf{Podkategoria} & \textbf{Opis} \\
+				    \hline
+				    000 & 0 & H\_ADD & Dodanie agenta \\
+				    001 & 1 & H\_RM & Usunięcie agenta \\
+				    010 & 2 & x & [zabroniony] \\
+				    011 & 3 & x & [zabroniony] \\
+				    100 & 4 & x & [zabroniony] \\
+				    101 & 5 & x & [zabroniony] \\
+				    110 & 6 & x & [zabroniony] \\
+				    111 & 7 & x & [zabroniony] \\
+				\end{tabular}
+				
 			    \paragraph{Kategoria TASK:\\}
 			    
 		        \begin{tabular}{ c | c | c | c }
 				    \textbf{Kod binarnie} & \textbf{Kod dziesiątkowo} & \textbf{Podkategoria} & \textbf{Opis} \\
 				    \hline
-				    000 & 0 & ADD & Dodanie zadania \\
-				    001 & 1 & RM & Usunięcie zadania \\
-				    010 & 2 & RUN & Wykonanie zadania \\
-				    011 & 3 & KILL & Zakończenie zadania \\
-				    100 & 4 & STOP & Wstrzymanie zadania \\
-				    101 & 5 & CONT & Kontynuowanie zadania \\
+				    000 & 0 & T\_ADD & Dodanie zadania \\
+				    001 & 1 & T\_RM & Usunięcie zadania \\
+				    010 & 2 & T\_RUN & Wykonanie zadania \\
+				    011 & 3 & T\_KILL & Zakończenie zadania \\
+				    100 & 4 & T\_STOP & Wstrzymanie zadania \\
+				    101 & 5 & T\_CONT & Kontynuowanie zadania \\
 				    110 & 6 & x & [zabroniony] \\
 				    111 & 7 & x & [zabroniony] \\
 				\end{tabular}
@@ -180,14 +196,14 @@
 		        \begin{tabular}{ c | c | c | c }
 				    \textbf{Kod binarnie} & \textbf{Kod dziesiątkowo} & \textbf{Podkategoria} & \textbf{Opis} \\
 				    \hline
-				    000 & 0 & HEAD & Błędny nagłówek \\
-				    001 & 1 & LGTH & Błędna długość \\
-				    010 & 2 & CSUM & Błędna suma kontrolna \\
+				    000 & 0 & E\_HEAD & Błędny nagłówek \\
+				    001 & 1 & E\_LGTH & Błędna długość \\
+				    010 & 2 & E\_CSUM & Błędna suma kontrolna \\
 				    011 & 3 & x & [zabroniony] \\
 				    100 & 4 & x & [zabroniony] \\
 				    101 & 5 & x & [zabroniony] \\
 				    110 & 6 & x & [zabroniony] \\
-				    111 & 7 & OTH & Inny błąd \\
+				    111 & 7 & E\_OTH & Inny błąd \\
 				\end{tabular}
 				
 				\paragraph{Pozostałe kategorie:\\}
@@ -195,7 +211,7 @@
 				\begin{tabular}{ c | c | c | c }
 				    \textbf{Kod binarnie} & \textbf{Kod dziesiątkowo} & \textbf{Podkategoria} & \textbf{Opis} \\
 				    \hline
-				    000 & 0 & - & Wartość domyślna \\
+				    000 & 0 & DEF & Wartość domyślna \\
 				    001 & 1 & x & [zabroniony] \\
 				    010 & 2 & x & [zabroniony] \\
 				    011 & 3 & x & [zabroniony] \\
@@ -215,10 +231,94 @@
 				    011 & 3 & ERR & Zakończenie czynności - porażka \\
 				\end{tabular}
 				
-				
-			\begin{Huge}
-			TODO opisy kategorii
-			\end{Huge}
+        \subsubsection{Szczegóły protokołu}
+            Każda z kategorii komunikatów posiada własny nagłówek.\\
+            
+            \paragraph{Kategoria HOST:\\}
+            Pozwala na dodanie albo usunięcie do $2^{16}$ agentów jednocześnie, obsługuje zarówno IPv4 jak i IPv6.
+            
+            \begin{tabular}{ c | c | c }
+			    \textbf{Pole} & \textbf{Długość [bit]} & \textbf{Opis} \\
+			    \hline
+			    Kod komunikatu & 8 & \\
+			    Wersja IP & 1 & Wersja adresów IP agentów 0 - v4, 1 - v6 \\
+			    Wyrównanie & 7 & Zera \\
+			    Liczba agentów & 16 & Liczba agentów \\
+			    Adres 1 & 32(IPv4)/128(IPv6) & Adres IP pierwszego agenta (długość pola zależna od wersji IP) \\
+			    ... &  &  \\
+			    Adres n & 32(IPv4)/128(IPv6) & Adres IP n-tego agenta, gdzie n to wartość pola \say"Liczba agentów" \\
+			\end{tabular}
+            
+            \paragraph{Kategoria TASK:\\}
+            Pozwala na dodawanie, usuwanie i sterowanie wykonaniem zadań w systemie. 
+            
+            \begin{tabular}{ c | c | c }
+			    \textbf{Pole} & \textbf{Długość [bit]} & \textbf{Opis} \\
+			    \hline
+			    Kod komunikatu & 8 & \\
+			    Flaga priorytetu & 1 & Określa, czy zatrzymywać zadania o niższym priorytecie \\
+			    Wyrównanie & 7 & Zera \\
+			    Priorytet & 16 & \\
+			    ID zadania & 32 & \\
+			    Znacznik czasu & 32 & określa, kiedy polecenie wchodzi w życie \\
+			\end{tabular}
+			
+			\paragraph{Kategoria DEP:\\}
+            Pozwala określić, jakie zadania muszą poprzedzać wykonanie zadania Z (maksymalnie $2^{16}$ zadań).
+            
+            \begin{tabular}{ c | c | c }
+			    \textbf{Pole} & \textbf{Długość [bit]} & \textbf{Opis} \\
+			    \hline
+			    Kod komunikatu & 8 & \\
+			    Wyrównanie & 8 & Zera \\
+			    Liczba zadań poprzedzających & 16 & \\
+			    ID zadania Z & 32 & \\
+			    ID zadania poprzedzającego 1 & 32 & \\
+			    ... &  &  \\
+			    ID zadania poprzedzającego n & 32 & Gdzie n to liczba zadań poprzedzających \\
+			\end{tabular}
+			
+			\paragraph{Kategoria FILE:\\}
+            Pozwala przesyłać pojedyncze pliki.
+            
+            \begin{tabular}{ c | c | c }
+			    \textbf{Pole} & \textbf{Długość [bit]} & \textbf{Opis} \\
+			    \hline
+			    Kod komunikatu & 8 & \\
+			    Flaga typu pliku & 1 & 0 - główny plik wykonywalny zadania, 1 - plik pomocniczy \\
+			    Długość nazwy pliku & 7 & Maksymalnie 128 znaków \\
+			    Suma kontrolna & 16 & Wyliczana z nazwy i zawartości pliku \\
+			    ID zadania & 32 & Określa, do jakiego zadania należy plik \\
+			    Rozmiar pliku & 32 & Maksymalnie $ 2^{3} $ 2 bajtów \\
+			    Nazwa pliku & 8 - $ 8 \cdot 128 $ &  \\
+			    Zawartość pliku & 0 - $ 8 \cdot 2^{32} $ &  \\
+			\end{tabular}
+			
+			\paragraph{Kategoria RET:\\}
+            Pozwala zwracać wyniki działania zadań.
+            
+            \begin{tabular}{ c | c | c }
+			    \textbf{Pole} & \textbf{Długość [bit]} & \textbf{Opis} \\
+			    \hline
+			    Kod komunikatu & 8 & \\
+			    Kod zakończenia zadania & 8 & POSIX exit status \\
+			    Zwracany typ & 8 & któryś z typów prostych lub ciąg bitów \\
+			    Wyrównanie & 8 & Zera \\
+			    ID Zadania & 32 & \\
+			    Liczba & 32/64 & Tylko jeśli kod zakończenia = 0 i zwracany typ to liczba \\
+			    Rozmiar danych & 32 & Tylko jeśli kod zakończenia = 0 i zwracany typ to ciąg bitów \\
+			    Dane & 0 - $ 8 \cdot 2^{32} $ & Tylko jeśli kod zakończenia = 0 i zwracany typ to ciąg bitów \\
+			\end{tabular}
+			
+			\paragraph{Kategorie SYN, PING, ERR:\\}
+            Pozwalają kolejno: zainicjować synchronizację, sprawdzić responsywność i zgłosić błąd w uprzednio otrzymanym komunikacie. \\
+            Z racji swojej prostoty, te nagłówki wymagają wyłącznie kodu komunikatu - stan czynności zawarty w kodzie wystarcza do przeprowadzenia niezbędnej komunikacji.
+            
+            \begin{tabular}{ c | c | c }
+			    \textbf{Pole} & \textbf{Długość [bit]} \\
+			    \hline
+			    Kod komunikatu & 8 \\
+			\end{tabular}
     
     \section{Serwer}
 			
