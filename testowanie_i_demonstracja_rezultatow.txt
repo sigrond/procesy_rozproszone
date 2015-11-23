@@ -1,0 +1,27 @@
+1. Sposób testowania aplikacji
+Aplikacja bêdzie testowana na kilka sposobów.
+Najpierw zostan¹ wykryte powarzne b³¹dy sk³adni przy kompilacji poszczególnych modó³ów.
+Nastêpnie zostan¹ napisane i uruchomione testy jednostkowe dla poszczególnych metod klas,
+o ile bêdzie to rozs¹dnie mo¿liwe do zrealizowania.
+Kiedy bêdzie siê ju¿ wydawa³o, ¿e modó³ jako tako powinien dzia³aæ przyjdzie z pomoc¹ modu³
+Wireshark i zaczniemy przeprowadzaæ pierwsze testy integracyjne. Najpierw sprawdzimy czy dobrze
+przesy³aj¹ siê i odbieraj¹ podstawowe komunikaty sieciowe aplikacji i czy zostaj¹ wywo³ane
+odpowiednie metody prowadz¹c do porz¹danego rezultatu. Do wykonania tych pierwszych testów
+i rozpoczêcia integracji projektu nie s¹ potrzebne iplementacje wszystkich opisanych w dokumentacji
+funkcjonalnoœci, wystarcz¹ tylko najwa¿niejsze. Wko¿ystamy to do realizowania projektu rekurencyjnie
+(metodyka zwinna) i bêdziemy mieli ju¿ doœæ wczeœnie dzia³aj¹ce wersje aplikacji realizuj¹ce
+czêœæ funkcjonalnoœci.
+Na koniec testowania oraz czêsœciowo do testowania poszczególnych iteracji przydadz¹ siê przypadki
+u¿ycia. Pozwol¹ one sprawdziæ czy aplikacja robi to co mia³a robiæ, w tym celu napiszemy
+skrypt do konsoli administratora, który bêdzie "symulowa³" wyko¿ystanie aplikacji zgodnie z
+przeznaczeniem, czyli tak jak wynika z przypadków u¿ycia. Skrypt albo sam porówna otrzymane odpowiedzi
+i raporty z naszymi przewidywaniami, albo chocia¿ bêdzie bardzo pomocny wypisuj¹c co dosta³,
+¿ebyœmy sami mogli porównaæ, czy otrzymane dane s¹ zgodne z oczekiwaniami. Tutaj te¿ mo¿emy
+pods³uchiwaæ wiresharkiem z naszym modu³em, czy komunikacja sieciowa naszym protoko³em przebiega
+tak jak planowaliœmy.
+2. Sposób  demonstracji rezultatów
+Demonstracja rezultatów bêdzie siê opiera³a na realizacji wybranych (lub wszystkich) przypadków
+u¿ycia. Szczególnie wygodne mog¹ byæ do tego skrypty wyko¿ystywane do testowania.
+W celu zademonstrowania poprawnoœci dzia³ania aplikacji urychomimy aplikacjê 
+i wywo³amy skrypty, które zasymuluj¹ poszczególne przypadki u¿ycia. Otrzymanie poprawnych wyników
+dla tych przypadków bêdzi œwiadczyæ o dobrym zrealizowaniu zadania.
