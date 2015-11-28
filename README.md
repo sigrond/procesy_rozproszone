@@ -3,7 +3,7 @@
 [TIN] System komunikacji dla zarządzania rozproszonymi procesami.
 
 ## Proponowane podterminy -- *brak dobrze uzasadnionych kontrargumentów oznacza zgode*
-Przy okazji prezentacji dr J.W. nalegal, żebysmy zrobili wiekszosć aplikacji w najbliższych 3 tygodniach **(28.11.2015-19.11.2015)**, bo w swieta jest mnóstwo innych rzeczy do robienia, a potem nie ma czasy bo jest fala kolokwiów.
+Przy okazji prezentacji dr J.W. nalegal, żebysmy zrobili wiekszosć aplikacji w najbliższych 3 tygodniach **(28.11.2015-19.12.2015)**, bo w swieta jest mnóstwo innych rzeczy do robienia, a potem nie ma czasy bo jest fala kolokwiów.
 Niniejszym proponuje nastepujace kamienie milowe:
 - Na **6.12** przynajmniej szkielety wszystkich elementów, czyli deklaracje klas z metodami. Na tym etapie powinny zostać zadane pytania o szczególy projektu i wypracowanie rozwiazania. **Bez tych rzeczy nie damy rady rozpoczać testów integracyjnych.**
   * Serwer -- TJ -- Rozszeżenie szkieletu serwera. Implementacja kolejki blokujacej i **testy jednostkowe** do niej. Zbudowanie mapy strategii i możliwie metody realizujace te strategie.
