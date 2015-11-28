@@ -11,7 +11,7 @@ Niniejszym proponuje nastepujace kamienie milowe:
   * Konsola administratora -- KS -- Szczególowy szkielet konsoli. Implementacja wszystkich metod które sie już bedzie dalo napisać, a dla tych których jeszcze nie wiadomo funkcje / metody "zaslepki". Do wszystkiego co sie da **testy jednostkowe**.
   * Agent -- ER -- Szczególowy szkielet agenta. Implementacja wszystkich metod które sie już bedzie dalo napisać, a dla tych których jeszcze nie wiadomo funkcje / metody "zaslepki". Do wszystkiego co sie da **testy jednostkowe**.
 - Na **13.12** zaimplementowanie elementów niezbednych do testów integracyjnych, oraz **testy jednostkowe** do nich. Oczekuje, że uda sie nam wtedy wydać pierwsza wersje aplikacji, która jako calosć bedzie realizowala czesć funkcjonalnosci. Do tego **skrypty testowe**. Prosze, żeby zglosil sie ktos, kto bedzie nimi zarzadzal zarzadzal (przynajmniej zdefiniowal co i jak ma dany skrypt testować).
-- Na **19.11** wersja aplikacji realizujaca możliwie wszystkie zaplanowane funkcjonalnosci. Testy (skrypty) akceptacyjne.
+- Na **19.12** wersja aplikacji realizujaca możliwie wszystkie zaplanowane funkcjonalnosci. Testy (skrypty) akceptacyjne.
 - **6.01** finalna wersja do wyslania. Jesli wczesniej czasu nie starczy to do tego czasu powinien zostać zaimplementowany klient NTP i podwójny stost IPv4 IPv6.
 
 ## Inne uwagi dr J.W. podczas prezentacji
