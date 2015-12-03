@@ -10,6 +10,10 @@
 #include "AgentServer.hpp"
 #include "Model.hpp"
 #include "BlockingQueue.hpp"
+#include "Event.hpp"
+#include "Strategy.hpp"
+#include <map>
+#include <string>
 
 /** \brief klasa kontrolera
  */
@@ -25,5 +29,7 @@ public:
 private:
     AdminServer* adminServer;
     AgentServer* agentServer;
-    BlockingQueue* blockingQueue;
+    BlockingQueue<Event*>* blockingQueue;/**< kolejka blokująca na której pojawiają się zdarzenia do obsłużenia */
+    std::map<EventType,Strategy*>* strategyMap;/**< mapa strategii pozwalająca zdecydować jak obsłużyć dany typ zdarzenia */
+    void fillStrategyMap();/**< metoda wypełnia mapę strategii odpowiednimi strategiami dla różnych typów zdarzeń */
 };
