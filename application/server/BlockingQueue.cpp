@@ -63,5 +63,3 @@ T BlockingQueue::pop_front()
 
 
 
-
-
