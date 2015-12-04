@@ -12,5 +12,5 @@
 class Strategy
 {
 public:
-    virtual void doJob() = 0;/**< sposób realizacji danej strategii */
+    virtual void doJob(auto data) = 0;/**< sposób realizacji danej strategii */
 };

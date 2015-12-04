@@ -10,7 +10,11 @@
  */
 enum EventType
 {
-    Test
+    Test,
+    SHUT_DOWN,
+    MESSAGE_FROM_ADMIN_SERVER,
+    MESSAGE_FROM_AGENT_SERVER,
+    MESSAGE_FROM_MODEL
 };
 
 /** \brief Klasa reprezentująca zdarzenie.

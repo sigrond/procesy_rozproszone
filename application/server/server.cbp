@@ -36,6 +36,7 @@
 		<Unit filename="BlockingQueue.cpp" />
 		<Unit filename="BlockingQueue.hpp" />
 		<Unit filename="BlockingQueueTests.cpp" />
+		<Unit filename="Controller.cpp" />
 		<Unit filename="Controller.hpp" />
 		<Unit filename="Event.hpp" />
 		<Unit filename="Model.hpp" />
