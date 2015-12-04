@@ -37,7 +37,7 @@ private:
     std::condition_variable c;/**< warunek blokowania */
 };
 
-#include "BlockingQueue.hpp"/**< Doklejenie implementacji metod rozwiązuje problem z nie obsługiwaniem przez gcc i większość innych kompilatorów dyrektywy export template */
+#include "BlockingQueue.cpp"/**< Doklejenie implementacji metod rozwiązuje problem z nie obsługiwaniem przez gcc i większość innych kompilatorów dyrektywy export template */
 
 
 

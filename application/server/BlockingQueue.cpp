@@ -7,14 +7,16 @@
 #include "BlockingQueue.hpp"
 #include <iostream>
 
-BlockingQueue::BlockingQueue()
+template <class T>
+BlockingQueue<T>::BlockingQueue()
 {
 #ifdef _DEBUG
     std::cout<<"BlockingQueue::BlockingQueue()\n";
 #endif // _DEBUG
 }
 
-BlockingQueue::~BlockingQueue()
+template <class T>
+BlockingQueue<T>::~BlockingQueue()
 {
 #ifdef _DEBUG
     std::cout<<"BlockingQueue::~BlockingQueue()\n";
@@ -22,7 +24,7 @@ BlockingQueue::~BlockingQueue()
 }
 
 template <class T>
-void BlockingQueue::push_back(const T& element)
+void BlockingQueue<T>::push_back(const T& element)
 {
     std::unique_lock<std::mutex> mutexLock(m);
     q.push(element);
@@ -31,7 +33,7 @@ void BlockingQueue::push_back(const T& element)
 }
 
 template <class T>
-T BlockingQueue::pop_front()
+T BlockingQueue<T>::pop_front()
 {
     T element;
     std::unique_lock<std::mutex> mutexLock(m);
