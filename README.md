@@ -2,6 +2,10 @@
 
 [TIN] System komunikacji dla zarządzania rozproszonymi procesami.
 
+## Ogoszenia duszpasterskie
+Od tego momentu zalecam żeby dla każdego większego fragmentu pracy stworzyć lub znaleźć odpowiednie issue i dodać je do odpowiedniego milestone'a (ewentualnie takiego utworzyć). Pociąga to też za sobą dodawanie w wiadomościach commitów odnośnika do issue czyli #nr_issue lub jeśli commit zawiera rozwiązanie danego issue to close #nr_issue.
+https://help.github.com/articles/closing-issues-via-commit-messages/
+
 ## Proponowane podterminy -- *brak dobrze uzasadnionych kontrargumentów oznacza zgode*
 Przy okazji prezentacji dr J.W. nalegal, żebysmy zrobili wiekszosć aplikacji w najbliższych 3 tygodniach **(28.11.2015-19.12.2015)**, bo w swieta jest mnóstwo innych rzeczy do robienia, a potem nie ma czasy bo jest fala kolokwiów.
 Niniejszym proponuje nastepujace kamienie milowe:
