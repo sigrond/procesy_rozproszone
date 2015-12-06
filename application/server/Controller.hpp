@@ -29,6 +29,7 @@ public:
      * \throw ControllerException
      */
     void start();
+    void triggerShutDown();
 private:
     AdminServer* adminServer;
     AgentServer* agentServer;

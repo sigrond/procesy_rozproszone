@@ -41,6 +41,7 @@
 		<Unit filename="Event.hpp" />
 		<Unit filename="Model.hpp" />
 		<Unit filename="ServerUnitTests.cpp" />
+		<Unit filename="Strategies.hpp" />
 		<Unit filename="Strategy.hpp" />
 		<Unit filename="server.cpp" />
 		<Unit filename="version.h" />

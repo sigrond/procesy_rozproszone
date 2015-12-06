@@ -92,6 +92,9 @@ Controller::start()
 	}
 	//tworzymy kolejkę komunikatów i mapę strategii
 	blockingQueue=new BlockingQueue<Event*>;
+	adminServer->setBlockingQueue(blockingQueue);
+	agentServer->setBlockingQueue(blockingQueue);
+	model->setBlockingQueue(blockingQueue);
 	strategyMap=new std::map<EventType,Strategy*>;
 	fillStrategyMap();
 
@@ -113,10 +116,17 @@ Controller::fillStrategyMap()
 	{
 		throw ControllerException("strategyMap==nullptr");
 	}
-	strategyMap->insert(std::pair<EventType,Strategy*>(Test,new testStrategy()));
+	strategyMap->insert(std::pair<EventType,Strategy*>(Test,new TestStrategy()));
+	strategyMap->insert(std::pair<EventType,Strategy*>(SHUT_DOWN,new ShutDownStrategy()));
 	/**< \todo wstawić więcej strategii, ustalić w którym pliku powinny znajdować się strategie i je napisać */
 }
 
+/** \brief Metoda ustawia zmienną prywatną shutDownServer na zamykanie serwera.
+ */
+Controller::triggerShutDown()
+{
+	shutDownServer=true;
+}
 
 
 
