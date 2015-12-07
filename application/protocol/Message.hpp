@@ -68,7 +68,7 @@ namespace message
                               bool respectPriority,
                               unsigned short priority,
                               unsigned long taskId,
-                              const std::chrono::steady_clock::time_polong & timestamp );
+                              const std::chrono::steady_clock::time_point & timestamp );
 
                 taskMessage ( State state );
 
@@ -78,7 +78,7 @@ namespace message
 
                 unsigned long getTaskId() const;
 
-                std::chrono::steady_clock::time_polong & getTimestamp() const;
+                std::chrono::steady_clock::time_point & getTimestamp() const;
         };
 
         class depMessage : public Message
