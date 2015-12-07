@@ -4,9 +4,9 @@
 // nazwy kodowe dla kategorii, podkategorii, stanu komunikatu
 // wartości dobrane tak, by suma kategoria + podkategoria + stan
 // dawała własciwy kod zgodny z dokumentacją
-namespace Message
+namespace message
 {
-        enum class Category = 
+        enum class Category 
         {
                 HOST    = 0x00,   // 000 000 00
                 TASK    = 0x20,   // 001 000 00
@@ -18,7 +18,7 @@ namespace Message
                 ERR     = 0xE0,   // 111 000 00
         };
 
-        enum class State =
+        enum class State
         {
                 REQ     = 0x00,   // 000 000 00
                 ACK     = 0x01,   // 000 000 01
@@ -26,14 +26,14 @@ namespace Message
                 ERR     = 0x03,   // 000 000 11
         };
 
-        enum class HostSub =
+        enum class HostSub
         {
                 H_ADD   = 0x00,   // 000 000 00
                 H_RM    = 0x04,   // 000 001 00
                 H_STATE = 0x08,   // 000 010 00
         };
 
-        enum class TaskSub =
+        enum class TaskSub
         {
                 T_ADD   = 0x00,   // 000 000 00
                 T_RM    = 0x04,   // 000 001 00
@@ -45,7 +45,7 @@ namespace Message
                 T_NOK   = 0x1C,   // 000 111 00
         };
 
-        enum class ErrSub =
+        enum class ErrSub
         {
                 E_HEAD  = 0x00,   // 000 000 00
                 E_LGTH  = 0x04,   // 000 001 00

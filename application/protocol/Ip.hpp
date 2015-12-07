@@ -12,6 +12,8 @@
 #ifndef IP_HPP
 #define IP_HPP
 
+#include <string>
+
 /**
  * \brief Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6
  */
@@ -41,32 +43,32 @@ protected:
          * \param[in] Adres IP w postaci ciągu znaków
          * \return    Czy jest poprawny
          */
-        virtual bool isCorrect ( const std::string & address ) = 0 const;
+        virtual bool isCorrect ( const std::string & address ) const = 0;
 };
 
 
 /**
  * \bref Klasa opakowująca IPv4
  */
-class Ipv4 : public Ip
+class Ipv4 final : public Ip
 {
 public:
         Ipv4 ( const std::string & address = "127.0.0.1" );
 
 private:
-        bool isCorrect ( const std::string & address ) const;
+        bool isCorrect ( const std::string & address ) const override;
 };
 
 /*
  * \brief Klasa opakowująca IPv6
  */
-class Ipv6 : public Ip
+class Ipv6 final : public Ip
 {
 public:
         Ipv6 ( const std::string & address = "::1" );
 
 private:
-        bool isCorrect ( const td::string & address ) const;
+        bool isCorrect ( const std::string & address ) const override;
 };
 
 

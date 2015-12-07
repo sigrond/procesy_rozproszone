@@ -3,40 +3,37 @@
  *
  * \brief    Plik nagłówkowy klasy opakowującej komunikaty LOTC 
  * 
- * \version  0.2
+ * \version  0.3
  * \date     07.12.2015
  *
  * \author   Andrzej Roguski
  *
- * \todo     reszta interfejsu
  * \todo     wyjątki
- * \todo     komantarze
+ * \todo     komantarze dokumentayjne
  * \todo     sekcje prywatne
  */
 
 // WAŻNE : PEWNIE PODZIELĘ TEN PLIK NA MNIEJSZE JAK SIĘ ROZROŚNIE
 
-// INTERFEJS NIEKOMPLETNY
+// komentarze dokumentacyjne zrobię jak będę cierpiał na nadmiar czasu - raczej co robią konstruktory i gettery wszyscy wiedzą
 
+// odnośnie konstruktorów - wersje z jednym argumentem są dla komunikatów ACK, OK i ERR
 
 #ifndef MESSAGE_HPP
 #define MESSAGE_HPP
 
 #include <vector>
+#include <chrono>
 
 #include "MessageCodes.hpp"
 #include "Ip.hpp"
 
-namespace clock std::chrono::steady_clock;
-
-namespace Message
+namespace message
 {
 
         class Message
         {
         public:
-                Message ( unsigned char code );
-
                 virtual ~Message();
 
                 unsigned char getCode() const;
@@ -53,23 +50,27 @@ namespace Message
                 unsigned char code;
         };
 
-        class hostMessage
+        class hostMessage : public Message
         {
                 hostMessage ( HostSub sub, State state, const std::vector<Ip> & addresses );
+
+                hostMessage ( State state );
 
                 unsigned short getAgentCount() const;
 
                 std::vector<Ip> & getAddresses() const;
         };
 
-        class taskMessage
+        class taskMessage : public Message
         {
                 taskMessage ( TaskSub sub,
                               State state,
                               bool respectPriority,
                               unsigned short priority,
                               unsigned int taskId,
-                              const clock::time_point & timestamp );
+                              const std::chrono::steady_clock::time_point & timestamp );
+
+                taskMessage ( State state );
 
                 bool getRespectPriority();
 
@@ -77,23 +78,25 @@ namespace Message
 
                 unsigned int getTaskId() const;
 
-                unsigned int getTaskId() const;
-
-                clock::time_point & getTimestamp() const;
+                std::chrono::steady_clock::time_point & getTimestamp() const;
         };
 
-        class depMessage
+        class depMessage : public Message
         {
                 depMessage ( State state, std::vector<unsigned int> & tasks );
+
+                depMessage ( State state );
 
                 unsigned short getTaskCount();
 
                 std::vector<unsigned int> & getTasks();
         };
 
-        class fileMessage
+        class fileMessage : public Message
         {
                 fileMessage ( State state, bool isMainFile, unsigned int taskId, std::string filename, const std::ifstream & file );
+
+                fileMessage ( State state );
 
                 bool getIsMainFile();
 
@@ -104,28 +107,40 @@ namespace Message
                 std::ofstream & getFile();       
         };
 
-        class retMessage
+        class retMessage : public Message
         {
+                retMessage ( State state, unsigned char exitStatus, unsigned int taskId, std::string filename, const std::ifstream & file );
 
+                retMessage ( State state );
+
+                unsigned char getExitStatus();
+
+                unsigned int getTaskId();
+
+                std::string getFilename();
+
+                std::ofstream & getFile();  
         };
 
-        class synMessage
+        class synMessage : public Message
         {
                 synMessage ( State state );
         };
 
-        class pingMessage
+        class pingMessage : public Message
         {
                 pingMessage ( State state );
         };
 
-        class errMessage
+        class errMessage : public Message
         {
         public:
                 errMessage ( ErrSub sub, State state, unsigned char errCode );
+
+                errMessage ( State state );
 
                 unsigned char getErrCode () const;
         };
 
 }
-#endif
+#endif // MESSAGE_HPP

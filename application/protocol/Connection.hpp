@@ -53,13 +53,13 @@ public:
          * \brief      Funcja wysyłająca komunikat
          * \param[in]  message Referencja do obiektu zawierającego komunikat do wysłania
          */
-        void send ( Message & message );
+        void send ( message::Message & message );
 
         /**
          * \brief      Funkcja oczekująca na komunikat od zdalnego hosta
          * \return     Wskaźnik na obiekt Message utworzony na podstawie danych otrzymanych ze zdalnego hosta 
          */
-        Message* receive ();
+        message::Message* receive ();
 
 };
 
