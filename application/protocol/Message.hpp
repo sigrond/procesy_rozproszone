@@ -67,8 +67,8 @@ namespace message
                               State state,
                               bool respectPriority,
                               unsigned short priority,
-                              unsigned int taskId,
-                              const std::chrono::steady_clock::time_point & timestamp );
+                              unsigned long taskId,
+                              const std::chrono::steady_clock::time_polong & timestamp );
 
                 taskMessage ( State state );
 
@@ -76,31 +76,31 @@ namespace message
 
                 unsigned short getPriority() const;
 
-                unsigned int getTaskId() const;
+                unsigned long getTaskId() const;
 
-                std::chrono::steady_clock::time_point & getTimestamp() const;
+                std::chrono::steady_clock::time_polong & getTimestamp() const;
         };
 
         class depMessage : public Message
         {
-                depMessage ( State state, std::vector<unsigned int> & tasks );
+                depMessage ( State state, std::vector<unsigned long> & tasks );
 
                 depMessage ( State state );
 
                 unsigned short getTaskCount();
 
-                std::vector<unsigned int> & getTasks();
+                std::vector<unsigned long> & getTasks();
         };
 
         class fileMessage : public Message
         {
-                fileMessage ( State state, bool isMainFile, unsigned int taskId, std::string filename, const std::ifstream & file );
+                fileMessage ( State state, bool isMainFile, unsigned long taskId, std::string filename, const std::ifstream & file );
 
                 fileMessage ( State state );
 
                 bool getIsMainFile();
 
-                unsigned int getTaskId();
+                unsigned long getTaskId();
 
                 std::string getFilename();
 
@@ -109,13 +109,13 @@ namespace message
 
         class retMessage : public Message
         {
-                retMessage ( State state, unsigned char exitStatus, unsigned int taskId, std::string filename, const std::ifstream & file );
+                retMessage ( State state, unsigned char exitStatus, unsigned long taskId, std::string filename, const std::ifstream & file );
 
                 retMessage ( State state );
 
                 unsigned char getExitStatus();
 
-                unsigned int getTaskId();
+                unsigned long getTaskId();
 
                 std::string getFilename();
 
