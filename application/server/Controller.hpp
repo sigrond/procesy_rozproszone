@@ -13,7 +13,6 @@
 #include "Event.hpp"
 #include "Strategy.hpp"
 #include <map>
-#include <string>
 
 /** \brief klasa kontrolera
  */
@@ -25,11 +24,22 @@ public:
     void setAdminServer(AdminServer*);
     void setAgentServer(AgentServer*);
     void setModel(Model*);
-    void start();/**< w tej metodzie wszystko się dzieje, w szczególności wywołuje ona nowe wątki */
+    /** \brief w tej metodzie wszystko się dzieje, w szczególności wywołuje ona nowe wątki
+     * \return void
+     * \throw ControllerException
+     */
+    void start();
+    void triggerShutDown();
 private:
     AdminServer* adminServer;
     AgentServer* agentServer;
+    Model* model;
     BlockingQueue<Event*>* blockingQueue;/**< kolejka blokująca na której pojawiają się zdarzenia do obsłużenia */
     std::map<EventType,Strategy*>* strategyMap;/**< mapa strategii pozwalająca zdecydować jak obsłużyć dany typ zdarzenia */
-    void fillStrategyMap();/**< metoda wypełnia mapę strategii odpowiednimi strategiami dla różnych typów zdarzeń */
+    /** \brief metoda wypełnia mapę strategii odpowiednimi strategiami dla różnych typów zdarzeń
+     * \return void
+     * \throw ControllerException
+     */
+    void fillStrategyMap();
+    bool shutDownServer;
 };
