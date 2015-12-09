@@ -7,4 +7,6 @@ run: ServerUnitTests
 clean:
 	rm -f ServerUnitTests
 
-.PHONY: run clean
+all: clean ServerUnitTests run
+
+.PHONY: run clean all

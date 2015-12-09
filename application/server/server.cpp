@@ -38,7 +38,9 @@ int main(int argi, char* argv[])
             }
         }
         if(controllerThread.joinable())
+		{
             controllerThread.join();
+		}
         delete controllerThread;
         delete controller;
     }

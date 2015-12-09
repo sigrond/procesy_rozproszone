@@ -2,7 +2,7 @@
 
 [TIN] System komunikacji dla zarządzania rozproszonymi procesami.
 
-## Ogoszenia duszpasterskie
+## Ogloszenia duszpasterskie
 Od tego momentu zalecam żeby dla każdego większego fragmentu pracy stworzyć lub znaleźć odpowiednie issue i dodać je do odpowiedniego milestone'a (ewentualnie takiego utworzyć). Pociąga to też za sobą dodawanie w wiadomościach commitów odnośnika do issue czyli #nr_issue lub jeśli commit zawiera rozwiązanie danego issue to close #nr_issue.
 https://help.github.com/articles/closing-issues-via-commit-messages/
 
