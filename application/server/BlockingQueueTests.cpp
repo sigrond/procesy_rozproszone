@@ -26,7 +26,7 @@ inline void pushFn()
 	Q->push_back(1);
 }
 
-BOOST_AUTO_TEST_SUITE( BlockingQueue_Test )
+BOOST_AUTO_TEST_SUITE( BlockingQueue_Tests )
 
 	BOOST_AUTO_TEST_CASE( BQ1 )
 	{

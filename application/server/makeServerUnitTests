@@ -1,5 +1,5 @@
-ServerUnitTests: ServerUnitTests.cpp BlockingQueueTests.cpp
-	g++ -std=c++11 -o ServerUnitTests ServerUnitTests.cpp BlockingQueueTests.cpp -lboost_unit_test_framework -D_GLIBCXX_USE_CXX11_ABI=0
+ServerUnitTests: ServerUnitTests.cpp BlockingQueueTests.cpp ControllerTests.cpp Controller.cpp AdminServer.cpp AgentServer.cpp Model.cpp
+	g++ -std=c++11 -o ServerUnitTests ServerUnitTests.cpp BlockingQueueTests.cpp ControllerTests.cpp Controller.cpp AdminServer.cpp AgentServer.cpp Model.cpp -lboost_unit_test_framework -D_GLIBCXX_USE_CXX11_ABI=0
 
 run: ServerUnitTests
 	./ServerUnitTests --log_level=test_suite

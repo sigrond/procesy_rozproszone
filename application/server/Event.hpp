@@ -24,8 +24,14 @@ enum EventType
 class Event
 {
 public:
-    Event();
-    ~Event();
+    Event()
+    {
+
+    }
+    ~Event()
+    {
+
+    }
     EventType type;/**< typ zdarzenia pozwala wybrać właściwą metodę do jego obsługi */
     auto data;/**< dane niezbednę do zrealizowania metody obsługującej zdarzenie */
 };

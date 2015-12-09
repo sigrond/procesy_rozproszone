@@ -5,6 +5,7 @@
  */
 
 #include "Controller.hpp"
+#include "Strategies.hpp"
 #include <iostream>
 #include <exception>
 #include <string>

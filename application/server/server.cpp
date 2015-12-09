@@ -20,7 +20,7 @@ int main(int argi, char* argv[])
 {
     try
     {
-        Controller controller=new Controller();/**< kontroler jest sercem serwera, o architekturze zbliżonej do modelu MVC */
+        Controller* controller=new Controller();/**< kontroler jest sercem serwera, o architekturze zbliżonej do modelu MVC */
         controller->setAdminServer(new AdminServer());/** AdminServer i AgentServer można traktować jak swego rodzaju widoki MVC */
         controller->setAgentServer(new AgentServer());
         controller->setModel(new Model());

@@ -31,14 +31,18 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="AdminServer.cpp" />
 		<Unit filename="AdminServer.hpp" />
+		<Unit filename="AgentServer.cpp" />
 		<Unit filename="AgentServer.hpp" />
 		<Unit filename="BlockingQueue.cpp" />
 		<Unit filename="BlockingQueue.hpp" />
 		<Unit filename="BlockingQueueTests.cpp" />
 		<Unit filename="Controller.cpp" />
 		<Unit filename="Controller.hpp" />
+		<Unit filename="ControllerTests.cpp" />
 		<Unit filename="Event.hpp" />
+		<Unit filename="Model.cpp" />
 		<Unit filename="Model.hpp" />
 		<Unit filename="ServerUnitTests.cpp" />
 		<Unit filename="Strategies.hpp" />
