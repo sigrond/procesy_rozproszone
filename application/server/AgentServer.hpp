@@ -7,6 +7,7 @@
 #pragma once
 
 #include "BlockingQueue.hpp"
+#include "Event.hpp"
 
 /** \brief klasa serwera agenta
  */
@@ -15,8 +16,8 @@ class AgentServer
 public:
     AgentServer();
     void listen();/**< metoda nasłuchująca na połączenie z agentów. może być zrealizowana przez fork-server */
-    void connect(auto who);/**< metoda łącząca się z agentem */
-    void setBlockingQueue(BlockingQueue*);
+    void connect(void* who);/**< metoda łącząca się z agentem */
+    void setBlockingQueue(BlockingQueue<Event*>*);
 private:
-    BlockingQueue* blockingQueue;
+    BlockingQueue<Event*>* blockingQueue;
 };

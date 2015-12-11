@@ -33,5 +33,5 @@ public:
 
     }
     EventType type;/**< typ zdarzenia pozwala wybrać właściwą metodę do jego obsługi */
-    auto data;/**< dane niezbednę do zrealizowania metody obsługującej zdarzenie */
+    void* data;/**< dane niezbednę do zrealizowania metody obsługującej zdarzenie */
 };

@@ -7,7 +7,11 @@
 #define BOOST_TEST_DYN_LINK
 #include <boost/test/unit_test.hpp>
 #include "Controller.hpp"
+#include "Strategies.hpp"
 #include <exception>
+
+int TestStrategy::createdObjects=0;
+int TestStrategy::deletedObjects=0;
 
 BOOST_AUTO_TEST_SUITE( Controller_Tests )
 

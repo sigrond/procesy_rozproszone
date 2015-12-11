@@ -11,7 +11,7 @@ Model::Model()
 
 }
 
-void Model::setBlockingQueue(BlockingQueue* q)
+void Model::setBlockingQueue(BlockingQueue<Event*>* q)
 {
 	blockingQueue=q;
 }

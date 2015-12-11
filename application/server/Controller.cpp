@@ -75,7 +75,7 @@ public:
 	}
 };
 
-Controller::start()
+void Controller::start()
 {
 	/*czy wszystko jest?
 	jeśli nie, to wywalamy się z gracją*/
@@ -105,13 +105,13 @@ Controller::start()
 	Event* e=nullptr;
 	while(!shutDownServer)
 	{
-		e=blockingQueue.pop_front();
+		e=blockingQueue->pop_front();
 		strategyMap->at(e->type)->doJob(e->data);
 		delete e;
 	}
 }
 
-Controller::fillStrategyMap()
+void Controller::fillStrategyMap()
 {
 	if(strategyMap==nullptr)
 	{
@@ -124,7 +124,7 @@ Controller::fillStrategyMap()
 
 /** \brief Metoda ustawia zmienną prywatną shutDownServer na zamykanie serwera.
  */
-Controller::triggerShutDown()
+void Controller::triggerShutDown()
 {
 	shutDownServer=true;
 }

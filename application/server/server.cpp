@@ -16,6 +16,9 @@
 
 using namespace std;
 
+TestStrategy::createdObjects=0;
+TestStrategy::deletedObjects=0;
+
 int main(int argi, char* argv[])
 {
     try
@@ -24,7 +27,7 @@ int main(int argi, char* argv[])
         controller->setAdminServer(new AdminServer());/** AdminServer i AgentServer można traktować jak swego rodzaju widoki MVC */
         controller->setAgentServer(new AgentServer());
         controller->setModel(new Model());
-        thread controllerThread(controller->start);
+        thread controllerThread(&Controller::start,controller);
         /** \todo wymyslić jakieś zgrabne zamknięcie oczekiwania na opcjonalne polecenia,
          * albo zrezygnować z takiej możliwości.
          */

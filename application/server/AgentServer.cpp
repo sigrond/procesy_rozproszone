@@ -11,7 +11,7 @@ AgentServer::AgentServer()
 
 }
 
-void AgentServer::connect(auto who)
+void AgentServer::connect(void* who)
 {
 
 }
@@ -21,7 +21,7 @@ void AgentServer::listen()
 
 }
 
-void AgentServer::setBlockingQueue(BlockingQueue* q)
+void AgentServer::setBlockingQueue(BlockingQueue<Event*>* q)
 {
 	blockingQueue=q;
 }

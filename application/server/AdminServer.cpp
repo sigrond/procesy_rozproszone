@@ -21,7 +21,7 @@ void AdminServer::listen()
 
 }
 
-void AdminServer::setBlockingQueue(BlockingQueue* q)
+void AdminServer::setBlockingQueue(BlockingQueue<Event*>* q)
 {
 	blockingQueue=q;
 }

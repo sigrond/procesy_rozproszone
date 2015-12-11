@@ -7,6 +7,7 @@
 #pragma once
 
 #include "BlockingQueue.hpp"
+#include "Event.hpp"
 
 /** \brief klasa modelu
  */
@@ -14,8 +15,8 @@ class Model
 {
 public:
     Model();
-    void setBlockingQueue(BlockingQueue*);
+    void setBlockingQueue(BlockingQueue<Event*>*);
 private:
-    BlockingQueue* blockingQueue;
+    BlockingQueue<Event*>* blockingQueue;
 };
 

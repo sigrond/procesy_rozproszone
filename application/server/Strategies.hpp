@@ -16,6 +16,7 @@
 #include <string>
 #include <thread>
 
+
 /** \brief Testowa klasa strategii.
  * Ma służyć jako zaślepka do brakujących klas strategii,
  * oraz ewentualnie jako klasa pozwalająca systemowi na samodiagnozę.
@@ -31,12 +32,12 @@ public:
 	{
 		deletedObjects++;
 	}
-	virtual void doJob(auto data) override
+	virtual void doJob(void* data) override
 	{
 		std::clog<<"TestStrategy, ObjectID: "<<ObjectID
 				<<", createdObjects: "<<createdObjects
 				<<", deletedObjects: "<<deletedObjects
-				<<", data: "<<std::string(data)<<std::endl;
+				<<", data: "<<data<<std::endl;
 	}
 	static int createdObjects;
 	static int deletedObjects;
@@ -55,7 +56,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(auto data) override
+	virtual void doJob(void* data) override
 	{
 		std::cout<<"Zamykanie serwera...\n";
 		((Controller*)data)->triggerShutDown();
