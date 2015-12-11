@@ -17,7 +17,8 @@ Controller::Controller() :
 	blockingQueue(nullptr),
 	strategyMap(nullptr),
 	model(nullptr),
-	shutDownServer(false)
+	shutDownServer(false),
+	alive(0)
 {
 #ifdef _DEBUG
 	std::cout<<"Controller::Controller()\n";
@@ -91,11 +92,12 @@ void Controller::start()
 	{
 		throw ControllerException("model==nullptr");
 	}
-	//tworzymy kolejkę komunikatów i mapę strategii
-	blockingQueue=new BlockingQueue<Event*>;
-	adminServer->setBlockingQueue(blockingQueue);
-	agentServer->setBlockingQueue(blockingQueue);
-	model->setBlockingQueue(blockingQueue);
+	if(blockingQueue==nullptr)
+	{
+		throw ControllerException("blockingQueue==nullptr");
+	}
+	alive++;
+	//tworzymy mapę strategii
 	strategyMap=new std::map<EventType,Strategy*>;
 	fillStrategyMap();
 
@@ -108,7 +110,11 @@ void Controller::start()
 		e=blockingQueue->pop_front();
 		strategyMap->at(e->type)->doJob(e->data);
 		delete e;
+		int a;
+		std::cin>>a;
+		if(a==0) break;
 	}
+	alive--;
 }
 
 void Controller::fillStrategyMap()
@@ -129,9 +135,41 @@ void Controller::triggerShutDown()
 	shutDownServer=true;
 }
 
+void Controller::setAdminServer(AdminServer* s)
+{
+	adminServer=s;
+}
 
+void Controller::setAgentServer(AgentServer* s)
+{
+	agentServer=s;
+}
 
+void Controller::setModel(Model* m)
+{
+	model=m;
+}
 
+void Controller::setup()
+{
+	if(adminServer==nullptr)
+	{
+		throw ControllerException("adminServer==nullptr");
+	}
+	if(agentServer==nullptr)
+	{
+		throw ControllerException("agentServer==nullptr");
+	}
+	if(model==nullptr)
+	{
+		throw ControllerException("model==nullptr");
+	}
+	//tworzymy kolejkę komunikatów
+	blockingQueue=new BlockingQueue<Event*>;
+	adminServer->setBlockingQueue(blockingQueue);
+	agentServer->setBlockingQueue(blockingQueue);
+	model->setBlockingQueue(blockingQueue);
+}
 
 
 

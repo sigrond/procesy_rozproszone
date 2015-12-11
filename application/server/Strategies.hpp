@@ -28,15 +28,15 @@ public:
 	{
 		createdObjects++;
 	}
-	~TestStrategy()
+	virtual ~TestStrategy()
 	{
 		deletedObjects++;
 	}
 	virtual void doJob(void* data) override
 	{
 		std::clog<<"TestStrategy, ObjectID: "<<ObjectID
-				<<", createdObjects: "<<createdObjects
-				<<", deletedObjects: "<<deletedObjects
+		//		<<", createdObjects: "<<createdObjects
+		//		<<", deletedObjects: "<<deletedObjects
 				<<", data: "<<data<<std::endl;
 	}
 	static int createdObjects;

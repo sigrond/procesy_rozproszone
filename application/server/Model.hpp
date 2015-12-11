@@ -16,7 +16,10 @@ class Model
 public:
     Model();
     void setBlockingQueue(BlockingQueue<Event*>*);
+    void pushTestEvents();
+    void setController(void* c);
 private:
     BlockingQueue<Event*>* blockingQueue;
+	void* controller;
 };
 

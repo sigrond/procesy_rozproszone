@@ -24,13 +24,23 @@ enum EventType
 class Event
 {
 public:
-    Event()
+    Event() : type(Test), data(nullptr)
+    {
+
+    }
+    Event(EventType t) : type(t), data(nullptr)
+    {
+
+    }
+    Event(EventType t, void* d) : type(t), data(d)
     {
 
     }
     ~Event()
     {
-
+		#ifdef _DEBUG
+		std::cout<<"~Event "<<type<<" "<<data<<"\n";
+		#endif // _DEBUG
     }
     EventType type;/**< typ zdarzenia pozwala wybrać właściwą metodę do jego obsługi */
     void* data;/**< dane niezbednę do zrealizowania metody obsługującej zdarzenie */

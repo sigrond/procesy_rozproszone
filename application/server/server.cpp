@@ -8,6 +8,7 @@
 #include "AdminServer.hpp"
 #include "AgentServer.hpp"
 #include "Model.hpp"
+#include "Strategies.hpp"
 
 #include <thread>
 #include <iostream>
@@ -16,8 +17,8 @@
 
 using namespace std;
 
-TestStrategy::createdObjects=0;
-TestStrategy::deletedObjects=0;
+int TestStrategy::createdObjects=0;
+int TestStrategy::deletedObjects=0;
 
 int main(int argi, char* argv[])
 {
@@ -27,6 +28,7 @@ int main(int argi, char* argv[])
         controller->setAdminServer(new AdminServer());/** AdminServer i AgentServer można traktować jak swego rodzaju widoki MVC */
         controller->setAgentServer(new AgentServer());
         controller->setModel(new Model());
+        controller->setup();
         thread controllerThread(&Controller::start,controller);
         /** \todo wymyslić jakieś zgrabne zamknięcie oczekiwania na opcjonalne polecenia,
          * albo zrezygnować z takiej możliwości.

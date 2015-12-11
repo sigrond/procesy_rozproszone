@@ -30,6 +30,13 @@ public:
      */
     void start();
     void triggerShutDown();
+    int alive;
+    /** \brief Tworzy kolejkę blokującą i podaje wskazanie na nią do serverów i modelu.
+     * Odzieliłem tą metodę od start(), bo występował wyścig i czasem wątki chciały wrzucać zdarzeńa do kolejki zanim kolejka powstała.
+     * \return void
+     * \throw ControllerException
+     */
+    void setup();
 private:
     AdminServer* adminServer;
     AgentServer* agentServer;
