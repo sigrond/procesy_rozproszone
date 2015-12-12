@@ -51,4 +51,30 @@ BOOST_AUTO_TEST_SUITE( Controller_Tests )
 		BOOST_CHECK(controller->alive==0);
 	}
 
+	BOOST_AUTO_TEST_CASE( Test_metody_triggerShutDown )
+	{
+		Controller* controller=nullptr;
+		controller=new Controller();
+		BOOST_REQUIRE(controller!=nullptr);
+		controller->setAdminServer(new AdminServer());
+        controller->setAgentServer(new AgentServer());
+        Model* model=nullptr;
+        model=new Model();
+        BOOST_REQUIRE(model!=nullptr);
+        controller->setModel(model);
+        controller->setup();
+		std::thread controllerThread(&Controller::start,controller);
+		std::cout<<"controller->alive = "<<controller->alive<<std::endl;
+		//model->pushTestEvents();
+		controller->triggerShutDown();
+		model->pushTestEvents();//serwer zamknie się po przetworzeniu jednego zdarzenia
+		std::cout<<"controller->alive = "<<controller->alive<<std::endl;
+		if(controllerThread.joinable())
+		{
+            controllerThread.join();
+		}
+		std::cout<<"controller->alive = "<<controller->alive<<std::endl;
+		BOOST_CHECK(controller->alive==0);
+	}
+
 BOOST_AUTO_TEST_SUITE_END()

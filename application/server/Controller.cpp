@@ -108,11 +108,12 @@ void Controller::start()
 	while(!shutDownServer)
 	{
 		e=blockingQueue->pop_front();
+		std::cout<<this<<" "<<e->data<<std::endl;
 		strategyMap->at(e->type)->doJob(e->data);
 		delete e;
-		int a;
-		std::cin>>a;
-		if(a==0) break;
+		//int a;
+		//std::cin>>a;
+		//if(a==0) break;
 	}
 	alive--;
 }
@@ -129,6 +130,10 @@ void Controller::fillStrategyMap()
 }
 
 /** \brief Metoda ustawia zmienną prywatną shutDownServer na zamykanie serwera.
+ * Użycie metody poza strategią obsługi zadań może prowadzić do zakleszcznia!
+ * Metoda nie potrafi samodzielnie zamknąć serwera, bo nie przerywa oczekiwania na
+ * metodzie BlockingQueue::popfront() i nie przerwie pętli przetważania, dopuki
+ * wątek oczekuje na pojawienie się elementu w kolejce.
  */
 void Controller::triggerShutDown()
 {
@@ -169,6 +174,7 @@ void Controller::setup()
 	adminServer->setBlockingQueue(blockingQueue);
 	agentServer->setBlockingQueue(blockingQueue);
 	model->setBlockingQueue(blockingQueue);
+	model->setController(this);
 }
 
 
