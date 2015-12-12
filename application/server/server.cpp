@@ -46,7 +46,7 @@ int main(int argi, char* argv[])
 		{
             controllerThread.join();
 		}
-        delete controllerThread;
+        //delete controllerThread;
         delete controller;
     }
     catch(exception &e)

@@ -1,0 +1,6 @@
+12 December 2015
+   released version 0.1.1 of server
+
+     Change log:
+        -Added: makefile
+
