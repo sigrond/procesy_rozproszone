@@ -1,5 +1,17 @@
-ServerUnitTests: ServerUnitTests.cpp BlockingQueueTests.cpp ControllerTests.cpp Controller.cpp AdminServer.cpp AgentServer.cpp Model.cpp
-	g++ -std=c++11 -g -O0 -D_DEBUG -o ServerUnitTests ServerUnitTests.cpp BlockingQueueTests.cpp ControllerTests.cpp Controller.cpp AdminServer.cpp AgentServer.cpp Model.cpp -lboost_unit_test_framework -D_GLIBCXX_USE_CXX11_ABI=0
+CFLAGS = -std=c++11
+CFLAGSB = -lboost_unit_test_framework -D_GLIBCXX_USE_CXX11_ABI=0
+CFLAGSC = -fprofile-arcs -ftest-coverage
+CFLAGSD = -g -O0 -D_DEBUG
+CFILES = ServerUnitTests.cpp BlockingQueueTests.cpp ControllerTests.cpp Controller.cpp AdminServer.cpp AgentServer.cpp Model.cpp
+
+ServerUnitTests: $(CFILES)
+	g++ $(CFLAGS) $(CFLAGSD) -o ServerUnitTests $(CFILES) $(CFLAGSB)
+
+ServerUnitTestsCoverage: $(CFILES)
+	g++ $(CFLAGS) $(CFLAGSD) $(CFLAGSC) -o ServerUnitTestsCoverage $(FILES) $(CFLAGSB)
+
+runCoverage: ServerUnitTestsCoverage
+	./ServerUnitTestsCoverage --log_level=test_suite
 
 run: ServerUnitTests
 	./ServerUnitTests --log_level=test_suite
@@ -9,4 +21,4 @@ clean:
 
 all: clean ServerUnitTests run
 
-.PHONY: run clean all
+.PHONY: run clean all runCoverage
