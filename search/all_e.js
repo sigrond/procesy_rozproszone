@@ -5,6 +5,7 @@ var searchData=
   ['readcommand',['readCommand',['../classConsoleClient.html#a8fd6b413df9e1b3d30a7dd2ce9b2ed8e',1,'ConsoleClient']]],
   ['readme_2emd',['README.md',['../readme_8md.html',1,'']]],
   ['receive',['receive',['../classConnection.html#ad55626cd15f9d0d3b69461b4476fdaa8',1,'Connection']]],
+  ['removed',['removed',['../classSlave.html#a4c5de67567bbc7859765e6a2e9b9cf38',1,'Slave']]],
   ['req',['REQ',['../namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063ace4e1a7286ff585e08bf30898cf6b3eb',1,'message']]],
   ['requestanswered',['requestAnswered',['../classConsoleClient.html#acdf9519188b2cc3d0dc370b077ecaa2d',1,'ConsoleClient']]],
   ['ret',['RET',['../namespacemessage.html#ae332e93affac4506495c232e3f8a2be3afb902bc4807c307b9309f2b528b96f2b',1,'message']]],

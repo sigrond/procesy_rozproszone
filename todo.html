@@ -103,15 +103,23 @@ $(document).ready(function(){initNavTree('todo.html','');});
 <div class="textblock"><dl class="reflist">
 <dt><a class="anchor" id="_todo000001"></a>Klasa <a class="el" href="classAdminServer.html">AdminServer</a>  </dt>
 <dd>potrzebne implementacje <a class="el" href="classConnection.html" title="Klasa realizująca połączenie LOTC. ">Connection</a>  </dd>
-<dt><a class="anchor" id="_todo000003"></a>Składowa <a class="el" href="classController.html#ada4383b0c385d09c6e82158e91449948">Controller::fillStrategyMap</a>  ()</dt>
+<dt><a class="anchor" id="_todo000002"></a>Składowa <a class="el" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd">AgentServer::connect</a>  (<a class="el" href="classSlave.html" title="Klasa odpowiedzialna za przechowywanie informacji o agencie. ">Slave</a> *who, <a class="el" href="classmessage_1_1Message.html">message::Message</a> *m)</dt>
+<dd>dodać jakiś zabezpieczeń bo groźnie to wygląda  </dd>
+<dt><a class="anchor" id="_todo000003"></a>Składowa <a class="el" href="classAgentServer.html#a75068a7f83936d0171b46d5dcb99a7b4">AgentServer::listenToAll</a>  ()</dt>
+<dd><p class="startdd">? wątki tutaj potrzebne? </p>
+<p class="enddd">jakiś if, bo jak się doda nowy to co  </p>
+</dd>
+<dt><a class="anchor" id="_todo000006"></a>Składowa <a class="el" href="classController.html#ada4383b0c385d09c6e82158e91449948">Controller::fillStrategyMap</a>  ()</dt>
 <dd>wstawić więcej strategii, ustalić w którym pliku powinny znajdować się strategie i je napisać  </dd>
-<dt><a class="anchor" id="_todo000002"></a>Składowa <a class="el" href="classController.html#ad535ad74055e645b7f44b7feeb4e82a8">Controller::start</a>  ()</dt>
+<dt><a class="anchor" id="_todo000005"></a>Składowa <a class="el" href="classController.html#ad535ad74055e645b7f44b7feeb4e82a8">Controller::start</a>  ()</dt>
 <dd>uruchomić adminServer i agentServer, timery w modelu i inne  </dd>
-<dt><a class="anchor" id="_todo000006"></a>Składowa <a class="el" href="server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164">main</a>  (int argi, char *argv[])</dt>
+<dt><a class="anchor" id="_todo000010"></a>Składowa <a class="el" href="server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164">main</a>  (int argi, char *argv[])</dt>
 <dd><p class="startdd">wymyslić jakieś zgrabne zamknięcie oczekiwania na opcjonalne polecenia, albo zrezygnować z takiej możliwości. </p>
 <p class="enddd">wstawić jakiś zgrabny przełącznik do kończenia wątka kontrolera  </p>
 </dd>
-<dt><a class="anchor" id="_todo000005"></a>Składowa <a class="el" href="classMessageFromAdminStrategy.html#a2dd7b3ccf27bb7b9f5e10b1e7e4ee096">MessageFromAdminStrategy::doJob</a>  (void *data) override</dt>
+<dt><a class="anchor" id="_todo000008"></a>Składowa <a class="el" href="classMessageFromAdminStrategy.html#a2dd7b3ccf27bb7b9f5e10b1e7e4ee096">MessageFromAdminStrategy::doJob</a>  (void *data) override</dt>
+<dd>obsługa kategorii  </dd>
+<dt><a class="anchor" id="_todo000009"></a>Składowa <a class="el" href="classMessageFromAgentStrategy.html#a0819348e6119a2360845ebb1d71c6b09">MessageFromAgentStrategy::doJob</a>  (void *data) override</dt>
 <dd>obsługa kategorii </dd>
 </dl>
 </div></div><!-- contents -->
@@ -119,7 +127,7 @@ $(document).ready(function(){initNavTree('todo.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Wygenerowano Wt, 15 gru 2015 18:20:47 dla LOTC programem
+    <li class="footer">Wygenerowano Wt, 15 gru 2015 23:10:22 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

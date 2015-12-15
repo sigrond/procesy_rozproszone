@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['working',['working',['../classAgentClient.html#a0309e41988778487b9765edc2d42753f',1,'AgentClient']]]
+  ['ubuntu_5fversion_5fstyle',['UBUNTU_VERSION_STYLE',['../namespaceAutoVersion.html#af558e65ae7a276f6c8f99cedd65d7217',1,'AutoVersion']]]
 ];

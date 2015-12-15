@@ -6,6 +6,7 @@ var annotated =
     [ "AdminServerException", "structAdminServerException.html", "structAdminServerException" ],
     [ "AgentClient", "classAgentClient.html", "classAgentClient" ],
     [ "AgentServer", "classAgentServer.html", "classAgentServer" ],
+    [ "AgentServerException", "structAgentServerException.html", "structAgentServerException" ],
     [ "badIpException", "classbadIpException.html", "classbadIpException" ],
     [ "BlockingQueue", "classBlockingQueue.html", "classBlockingQueue" ],
     [ "Connection", "classConnection.html", "classConnection" ],
@@ -18,8 +19,11 @@ var annotated =
     [ "Ipv4", "classIpv4.html", "classIpv4" ],
     [ "Ipv6", "classIpv6.html", "classIpv6" ],
     [ "MessageFromAdminStrategy", "classMessageFromAdminStrategy.html", "classMessageFromAdminStrategy" ],
+    [ "MessageFromAgentStrategy", "classMessageFromAgentStrategy.html", "classMessageFromAgentStrategy" ],
     [ "Model", "classModel.html", "classModel" ],
     [ "ShutDownStrategy", "classShutDownStrategy.html", "classShutDownStrategy" ],
+    [ "Slave", "classSlave.html", "classSlave" ],
     [ "Strategy", "classStrategy.html", "classStrategy" ],
+    [ "Task", "classTask.html", "classTask" ],
     [ "TestStrategy", "classTestStrategy.html", "classTestStrategy" ]
 ];

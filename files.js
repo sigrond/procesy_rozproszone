@@ -11,7 +11,9 @@ var files =
     [ "AgentClient.hpp", "AgentClient_8hpp.html", [
       [ "AgentClient", "classAgentClient.html", "classAgentClient" ]
     ] ],
-    [ "AgentServer.cpp", "AgentServer_8cpp.html", null ],
+    [ "AgentServer.cpp", "AgentServer_8cpp.html", [
+      [ "AgentServerException", "structAgentServerException.html", "structAgentServerException" ]
+    ] ],
     [ "AgentServer.hpp", "AgentServer_8hpp.html", [
       [ "AgentServer", "classAgentServer.html", "classAgentServer" ]
     ] ],
@@ -66,13 +68,22 @@ var files =
     [ "Projekt Wstępny.tex", "Projekt_01Wst_xC4_x99pny_8tex.html", null ],
     [ "server.cpp", "server_8cpp.html", "server_8cpp" ],
     [ "ServerUnitTests.cpp", "ServerUnitTests_8cpp.html", "ServerUnitTests_8cpp" ],
+    [ "Slave.cpp", "Slave_8cpp.html", null ],
+    [ "Slave.hpp", "Slave_8hpp.html", [
+      [ "Slave", "classSlave.html", "classSlave" ]
+    ] ],
     [ "Strategies.hpp", "Strategies_8hpp.html", [
       [ "TestStrategy", "classTestStrategy.html", "classTestStrategy" ],
       [ "ShutDownStrategy", "classShutDownStrategy.html", "classShutDownStrategy" ],
-      [ "MessageFromAdminStrategy", "classMessageFromAdminStrategy.html", "classMessageFromAdminStrategy" ]
+      [ "MessageFromAdminStrategy", "classMessageFromAdminStrategy.html", "classMessageFromAdminStrategy" ],
+      [ "MessageFromAgentStrategy", "classMessageFromAgentStrategy.html", "classMessageFromAgentStrategy" ]
     ] ],
     [ "Strategy.hpp", "Strategy_8hpp.html", [
       [ "Strategy", "classStrategy.html", "classStrategy" ]
+    ] ],
+    [ "Task.cpp", "Task_8cpp.html", null ],
+    [ "Task.hpp", "Task_8hpp.html", [
+      [ "Task", "classTask.html", "classTask" ]
     ] ],
     [ "version.h", "version_8h.html", "version_8h" ]
 ];

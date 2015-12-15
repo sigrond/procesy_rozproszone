@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['shutdownserver',['shutDownServer',['../classController.html#ab67686706e7df70a768c111193e5f0eb',1,'Controller']]],
-  ['status',['STATUS',['../namespaceAutoVersion.html#acb58e6df1058868fe3e780122ab30ef1',1,'AutoVersion']]],
-  ['status_5fshort',['STATUS_SHORT',['../namespaceAutoVersion.html#adc0aeb82b23e4fa3a91bc1f4d2ab0aed',1,'AutoVersion']]],
-  ['strategymap',['strategyMap',['../classController.html#acaeb01295f0462900ad0421149b87a19',1,'Controller']]]
+  ['removed',['removed',['../classSlave.html#a4c5de67567bbc7859765e6a2e9b9cf38',1,'Slave']]],
+  ['requestanswered',['requestAnswered',['../classConsoleClient.html#acdf9519188b2cc3d0dc370b077ecaa2d',1,'ConsoleClient']]],
+  ['revision',['REVISION',['../namespaceAutoVersion.html#ae2d1fcdc67a4319c421677ebe1ef4d09',1,'AutoVersion']]]
 ];
