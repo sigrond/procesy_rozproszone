@@ -29,8 +29,19 @@ public:
      */
     AdminServer(Ip &ip);
     ~AdminServer();
-    void listen();/**< metoda nasłuchująca na połączenie z konsoli administratora */
-    void connect();/**< metoda łącząca się z konsolą administratora */
+    /** \brief Metoda nasłuchująca na połączenie z konsoli administratora.
+     * Odbiera wiadomość i wrzuca w zdarzeniu do blockingQueue.
+     * \return void
+     *
+     */
+    void listen();
+    /** \brief Metoda łącząca się z konsolą administratora.
+     * Wysyła wiadomość.
+     * \param m message::Message* Wiadomość do wysłania.
+     * \return void
+     *
+     */
+    void connect(message::Message* m);
     void setBlockingQueue(BlockingQueue<Event*>*);
 private:
     BlockingQueue<Event*>* blockingQueue;

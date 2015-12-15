@@ -79,9 +79,9 @@ void AdminServer::listen()
 	blockingQueue->push_back(new Event(MESSAGE_FROM_ADMIN_SERVER,m));
 }
 
-void AdminServer::connect()
+void AdminServer::connect(message::Message* m)
 {
-
+	connection->send(*m);
 }
 
 void AdminServer::setBlockingQueue(BlockingQueue<Event*>* q)

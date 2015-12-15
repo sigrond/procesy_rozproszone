@@ -12,6 +12,7 @@
 
 #include "Strategy.hpp"
 #include "Controller.hpp"
+#include "../protocol/Message.hpp"
 #include <iostream>
 #include <string>
 #include <thread>
@@ -60,6 +61,47 @@ public:
 	{
 		std::cout<<"Zamykanie serwera...\n";
 		((Controller*)data)->triggerShutDown();
+	}
+};
+
+/** \brief Strategia przetwarzania i obsługi wiadomości od administratora.
+ */
+class MessageFromAdminStrategy : public Strategy
+{
+public:
+    /** \brief obsługa wiadomości od admina
+     *
+     * \param data message::Message*
+     * \return virtual void
+     *
+     */
+	virtual void doJob(void* data) override
+	{
+		using namespace std;
+		using namespace message;
+		unsigned char category;
+		category=((Message*)data)->getCategory();
+		switch(category)/**< \todo obsługa kategorii */
+		{
+		case HOST:
+			break;
+		case TASK:
+			break;
+		case DEP:
+			break;
+		case FILE:
+			break;
+		case RET:
+			break;
+		case SYN:
+			break;
+		case PING:
+			break;
+		case ERR:
+			break;
+		default:
+			clog<<"Nieznana kategoria wiadomości od admina: "<<category<<endl;
+		}
 	}
 };
 
