@@ -1,0 +1,127 @@
+warning: The selected output language "polish" has not been updated
+since release 1.8.2.  As a result some sentences may appear in English.
+
+warning: source ..\ServerUnitTests.cpp is not a readable file or directory... skipping.
+warning: source ..\server.cpp is not a readable file or directory... skipping.
+warning: source ..\Model.hpp is not a readable file or directory... skipping.
+warning: source ..\version.h is not a readable file or directory... skipping.
+warning: source ..\AgentServer.hpp is not a readable file or directory... skipping.
+warning: source ..\Strategy.hpp is not a readable file or directory... skipping.
+warning: source ..\BlockingQueue.cpp is not a readable file or directory... skipping.
+warning: source ..\AgentServer.cpp is not a readable file or directory... skipping.
+warning: source ..\Event.hpp is not a readable file or directory... skipping.
+warning: source ..\Model.cpp is not a readable file or directory... skipping.
+warning: source ..\BlockingQueueTests.cpp is not a readable file or directory... skipping.
+warning: source ..\Controller.cpp is not a readable file or directory... skipping.
+warning: source ..\ControllerTests.cpp is not a readable file or directory... skipping.
+warning: source ..\..\protocol\Message.hpp is not a readable file or directory... skipping.
+warning: source ..\..\protocol\Connection.hpp is not a readable file or directory... skipping.
+warning: source ..\Strategies.hpp is not a readable file or directory... skipping.
+warning: source ..\BlockingQueue.hpp is not a readable file or directory... skipping.
+warning: source ..\..\protocol\Ip.hpp is not a readable file or directory... skipping.
+warning: source ..\AdminServer.cpp is not a readable file or directory... skipping.
+warning: source ..\..\protocol\MessageCodes.hpp is not a readable file or directory... skipping.
+warning: source ..\AdminServer.hpp is not a readable file or directory... skipping.
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/agent/Agent.cpp:9:10: fatal error: 'iostream' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/ConsoleClient.hpp:4:10: fatal error: 'iostream' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/ConsoleClient.hpp:4:10: fatal error: 'iostream' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueueTests.cpp:8:10: fatal error: 'boost/test/unit_test.hpp' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ControllerTests.cpp:8:10: fatal error: 'boost/test/unit_test.hpp' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ServerUnitTests.cpp:10:10: fatal error: 'boost/test/unit_test.hpp' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:1:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int] [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:6: error: expected ';' after top level declarator [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:8: error: unknown type name 'server' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:14: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:1:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:2:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:3:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:4:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:5:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:6:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:7:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:8:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:9:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:10:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:11:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:12:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:14:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:16:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:20:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:22:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:24:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:25:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:26:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:28:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:29:9: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:32:13: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/agent/Agent.cpp:9:10: fatal error: 'iostream' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueueTests.cpp:8:10: fatal error: 'boost/test/unit_test.hpp' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/ConsoleClient.hpp:4:10: fatal error: 'iostream' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/ConsoleClient.hpp:4:10: fatal error: 'iostream' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ControllerTests.cpp:8:10: fatal error: 'boost/test/unit_test.hpp' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ServerUnitTests.cpp:10:10: fatal error: 'boost/test/unit_test.hpp' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:1:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int] [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:6: error: expected ';' after top level declarator [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:8: error: unknown type name 'server' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:14: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:1:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:2:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:3:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:4:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:5:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:6:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:7:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:8:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:9:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:10:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:11:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:12:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:14:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:16:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:20:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:22:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:24:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:25:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:26:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:28:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:29:9: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:32:13: error: expected unqualified-id [clang]
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.cpp:18: warning: argument 'std' of command @param is not found in the argument list of AdminServerException::AdminServerExceptionException(std::string s)
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.cpp:18: warning: argument 'string' of command @param is not found in the argument list of AdminServerException::AdminServerExceptionException(std::string s)
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.cpp:18: warning: The following parameters of AdminServerException::AdminServerExceptionException(std::string s) are not documented:
+  parameter 's'
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:25: warning: argument 'T' of command @param is not found in the argument list of BlockingQueue< T >::push_back(const T &element)
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:25: warning: The following parameters of BlockingQueue::push_back(const T &element) are not documented:
+  parameter 'element'
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Controller.cpp:64: warning: argument 'std' of command @param is not found in the argument list of ControllerException::ControllerException(std::string s)
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Controller.cpp:64: warning: argument 'string' of command @param is not found in the argument list of ControllerException::ControllerException(std::string s)
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Controller.cpp:64: warning: The following parameters of ControllerException::ControllerException(std::string s) are not documented:
+  parameter 's'
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:42: warning: argument 'Adres' of command @param is not found in the argument list of Ip::isCorrect(const std::string &address) const =0
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:42: warning: The following parameters of Ip::isCorrect(const std::string &address) const =0 are not documented:
+  parameter 'address'
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:51: warning: Found unknown command `\bref'
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:59: warning: argument 'Adres' of command @param is not found in the argument list of Ipv4::isCorrect(const std::string &address) const inherited from member isCorrect at line 42 in file D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:59: warning: The following parameters of Ipv4::isCorrect(const std::string &address) const are not documented:
+  parameter 'address'
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:71: warning: argument 'Adres' of command @param is not found in the argument list of Ipv6::isCorrect(const std::string &address) const inherited from member isCorrect at line 42 in file D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:71: warning: The following parameters of Ipv6::isCorrect(const std::string &address) const are not documented:
+  parameter 'address'
+D:/Moje dokumenty/TIN/procesy_rozproszone/README.md:6: warning: explicit link request to 'nr_issue' could not be resolved
+D:/Moje dokumenty/TIN/procesy_rozproszone/README.md:6: warning: explicit link request to 'nr_issue' could not be resolved
+D:/Moje dokumenty/TIN/procesy_rozproszone/README.md:41: warning: explicit link request to 'tin_projekt' could not be resolved
+D:/Moje dokumenty/TIN/procesy_rozproszone/README.md:49: warning: explicit link request to 'tin_projekt' could not be resolved

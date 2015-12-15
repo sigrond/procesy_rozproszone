@@ -1,0 +1,40 @@
+var hierarchy =
+[
+    [ "AdminServer", "classAdminServer.html", null ],
+    [ "AgentClient", "classAgentClient.html", null ],
+    [ "AgentServer", "classAgentServer.html", null ],
+    [ "Connection", "classConnection.html", null ],
+    [ "ConsoleClient", "classConsoleClient.html", null ],
+    [ "ConsoleServer", "classConsoleServer.html", null ],
+    [ "Controller", "classController.html", null ],
+    [ "Event", "classEvent.html", null ],
+    [ "exception", null, [
+      [ "AdminServerException", "structAdminServerException.html", null ],
+      [ "badIpException", "classbadIpException.html", null ],
+      [ "ControllerException", "structControllerException.html", null ]
+    ] ],
+    [ "Ip", "classIp.html", [
+      [ "Ipv4", "classIpv4.html", null ],
+      [ "Ipv6", "classIpv6.html", null ]
+    ] ],
+    [ "message::Message", "classmessage_1_1Message.html", [
+      [ "message::depMessage", "classmessage_1_1depMessage.html", null ],
+      [ "message::errMessage", "classmessage_1_1errMessage.html", null ],
+      [ "message::fileMessage", "classmessage_1_1fileMessage.html", null ],
+      [ "message::hostMessage", "classmessage_1_1hostMessage.html", null ],
+      [ "message::pingMessage", "classmessage_1_1pingMessage.html", null ],
+      [ "message::retMessage", "classmessage_1_1retMessage.html", null ],
+      [ "message::synMessage", "classmessage_1_1synMessage.html", null ],
+      [ "message::taskMessage", "classmessage_1_1taskMessage.html", null ]
+    ] ],
+    [ "Model", "classModel.html", null ],
+    [ "queue", null, [
+      [ "BlockingQueue< T >", "classBlockingQueue.html", null ],
+      [ "BlockingQueue< Event * >", "classBlockingQueue.html", null ]
+    ] ],
+    [ "Strategy", "classStrategy.html", [
+      [ "MessageFromAdminStrategy", "classMessageFromAdminStrategy.html", null ],
+      [ "ShutDownStrategy", "classShutDownStrategy.html", null ],
+      [ "TestStrategy", "classTestStrategy.html", null ]
+    ] ]
+];

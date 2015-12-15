@@ -1,0 +1,11 @@
+digraph "Controller::start"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Controller::start",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="BOOST_AUTO_TEST_CASE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ControllerTests_8cpp.html#a45c7d89fbe3968a972f9861649e0f129"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164"];
+}

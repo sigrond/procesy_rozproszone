@@ -1,0 +1,11 @@
+digraph "BOOST_AUTO_TEST_CASE"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="BOOST_AUTO_TEST_CASE",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="BlockingQueue::push_back",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBlockingQueue.html#aba9a92a9e6a732cd720c609d7e706c47",tooltip="Dodanie niepodzielnie elementu na koniec kolejki. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="BlockingQueue::pop\l_front",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBlockingQueue.html#a33e18f760365430cee38721dfd0abf5e",tooltip="Zdejmuje pierwszy element z kolejki niepodzielnie i go zwraca. "];
+}

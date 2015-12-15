@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>LOTC: Plik źródłowy AdminServer.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">LOTC
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('AdminServer_8hpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">AdminServer.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="AdminServer_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/** \file AdminServer.hpp</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * \author Tomasz Jakubczyk</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * \brief plik nagłówkowy klasy serwera administratora</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">pragma</span> <span class="preprocessor">once</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="BlockingQueue_8hpp.html" title="plik nagłówkowy klasy kolejki blokującej ">&quot;BlockingQueue.hpp&quot;</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="Event_8hpp.html" title="Plik nagłówkowy klasy Event. ">&quot;Event.hpp&quot;</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;../protocol/Connection.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/**&lt; \todo potrzebne implementacje Connection */</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/** \brief Klasa serwera administratora.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * Należy się spodziewać raczej asynchronicznego działania.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classAdminServer.html">   17</a></span>&#160;<span class="keyword">class</span> <a class="code" href="classAdminServer.html">AdminServer</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">/** \brief Konstruktor bez podania adresu administratora.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">     * Oznacza to, że czekamy na pierwsze zapytanie z konsoli administratora,</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">     * a jak już przyjdzie to przyjmujemy jego adres jako adres admina.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2">AdminServer</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">/** \brief Konstruktor z podaniem adresu administratora.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">     * \param ip Ip&amp; Adres konsoli administratora.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classAdminServer.html#aceeccda640d50e75d295b661771caf5d">AdminServer</a>(<a class="code" href="classIp.html">Ip</a> &amp;ip);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    ~<a class="code" href="classAdminServer.html#ae00d7eaa6769aec515dbc06590424fdd">AdminServer</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">/** \brief Metoda nasłuchująca na połączenie z konsoli administratora.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">     * Odbiera wiadomość i wrzuca w zdarzeniu do blockingQueue.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">     * \return void</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAdminServer.html#a2c3c374cb8653d62a373735cf316d4e4">listen</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">/** \brief Metoda łącząca się z konsolą administratora.</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">     * Wysyła wiadomość.</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">     * \param m message::Message* Wiadomość do wysłania.</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">     * \return void</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec">connect</a>(<a class="code" href="namespacemessage.html">message</a>::<a class="code" href="classmessage_1_1Message.html">Message</a>* m);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAdminServer.html#a3ecf7c2747f0413d3d58f7a9f4dd7ae2">setBlockingQueue</a>(<a class="code" href="classBlockingQueue.html#a36cf39573f86b97a30081075a57434d6">BlockingQueue</a>&lt;<a class="code" href="classEvent.html">Event</a>*&gt;*);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classAdminServer.html#ae24954d3a143d3b37722da223e848e72">   47</a></span>&#160;    <a class="code" href="classBlockingQueue.html#a36cf39573f86b97a30081075a57434d6">BlockingQueue</a>&lt;<a class="code" href="classEvent.html">Event</a>*&gt;* <a class="code" href="classAdminServer.html#ae24954d3a143d3b37722da223e848e72">blockingQueue</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classAdminServer.html#ad430393c63d11556becdb0c00ccbfa9b">   48</a></span>&#160;    <a class="code" href="classConnection.html">Connection</a>* <a class="code" href="classAdminServer.html#ad430393c63d11556becdb0c00ccbfa9b">connection</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classAdminServer.html#a7d89296fe6c6bdcfcc77b457eff1373c">   49</a></span>&#160;    <a class="code" href="classIp.html">Ip</a>* <a class="code" href="classAdminServer.html#a7d89296fe6c6bdcfcc77b457eff1373c">adminIP</a>;<span class="comment">/**&lt; opcjonalne IP admina */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="ttc" id="classBlockingQueue_html_a36cf39573f86b97a30081075a57434d6"><div class="ttname"><a href="classBlockingQueue.html#a36cf39573f86b97a30081075a57434d6">BlockingQueue::q</a></div><div class="ttdeci">std::queue&lt; T &gt; q</div><div class="ttdef"><b>Definition:</b> <a href="BlockingQueue_8hpp_source.html#l00035">BlockingQueue.hpp:35</a></div></div>
+<div class="ttc" id="namespacemessage_html"><div class="ttname"><a href="namespacemessage.html">message</a></div><div class="ttdef"><b>Definition:</b> <a href="Message_8hpp_source.html#l00031">Message.hpp:31</a></div></div>
+<div class="ttc" id="classAdminServer_html_ae00d7eaa6769aec515dbc06590424fdd"><div class="ttname"><a href="classAdminServer.html#ae00d7eaa6769aec515dbc06590424fdd">AdminServer::~AdminServer</a></div><div class="ttdeci">~AdminServer()</div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8cpp_source.html#l00057">AdminServer.cpp:57</a></div></div>
+<div class="ttc" id="classmessage_1_1Message_html"><div class="ttname"><a href="classmessage_1_1Message.html">message::Message</a></div><div class="ttdef"><b>Definition:</b> <a href="Message_8hpp_source.html#l00034">Message.hpp:34</a></div></div>
+<div class="ttc" id="classAdminServer_html_ae24954d3a143d3b37722da223e848e72"><div class="ttname"><a href="classAdminServer.html#ae24954d3a143d3b37722da223e848e72">AdminServer::blockingQueue</a></div><div class="ttdeci">BlockingQueue&lt; Event * &gt; * blockingQueue</div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8hpp_source.html#l00047">AdminServer.hpp:47</a></div></div>
+<div class="ttc" id="classAdminServer_html_a54b8d8388cf90eacb049daa9ae08bac2"><div class="ttname"><a href="classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2">AdminServer::AdminServer</a></div><div class="ttdeci">AdminServer()</div><div class="ttdoc">Konstruktor bez podania adresu administratora. Oznacza to, że czekamy na pierwsze zapytanie z konsoli...</div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8cpp_source.html#l00034">AdminServer.cpp:34</a></div></div>
+<div class="ttc" id="classAdminServer_html_ae0cc7705054a63f1ee974ba30ef9a5ec"><div class="ttname"><a href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec">AdminServer::connect</a></div><div class="ttdeci">void connect(message::Message *m)</div><div class="ttdoc">Metoda łącząca się z konsolą administratora. Wysyła wiadomość. </div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8cpp_source.html#l00082">AdminServer.cpp:82</a></div></div>
+<div class="ttc" id="classIp_html"><div class="ttname"><a href="classIp.html">Ip</a></div><div class="ttdoc">Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8hpp_source.html#l00020">Ip.hpp:20</a></div></div>
+<div class="ttc" id="classAdminServer_html_aceeccda640d50e75d295b661771caf5d"><div class="ttname"><a href="classAdminServer.html#aceeccda640d50e75d295b661771caf5d">AdminServer::AdminServer</a></div><div class="ttdeci">AdminServer(Ip &amp;ip)</div><div class="ttdoc">Konstruktor z podaniem adresu administratora. </div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8cpp_source.html#l00045">AdminServer.cpp:45</a></div></div>
+<div class="ttc" id="classAdminServer_html_a2c3c374cb8653d62a373735cf316d4e4"><div class="ttname"><a href="classAdminServer.html#a2c3c374cb8653d62a373735cf316d4e4">AdminServer::listen</a></div><div class="ttdeci">void listen()</div><div class="ttdoc">Metoda nasłuchująca na połączenie z konsoli administratora. Odbiera wiadomość i wrzuca w zdarzeniu do...</div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8cpp_source.html#l00072">AdminServer.cpp:72</a></div></div>
+<div class="ttc" id="classAdminServer_html_ad430393c63d11556becdb0c00ccbfa9b"><div class="ttname"><a href="classAdminServer.html#ad430393c63d11556becdb0c00ccbfa9b">AdminServer::connection</a></div><div class="ttdeci">Connection * connection</div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8hpp_source.html#l00048">AdminServer.hpp:48</a></div></div>
+<div class="ttc" id="classAdminServer_html_a7d89296fe6c6bdcfcc77b457eff1373c"><div class="ttname"><a href="classAdminServer.html#a7d89296fe6c6bdcfcc77b457eff1373c">AdminServer::adminIP</a></div><div class="ttdeci">Ip * adminIP</div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8hpp_source.html#l00049">AdminServer.hpp:49</a></div></div>
+<div class="ttc" id="classEvent_html"><div class="ttname"><a href="classEvent.html">Event</a></div><div class="ttdoc">Klasa reprezentująca zdarzenie. Na rzecz szybkiego uzyskania działania aplikacji rezygnuję z pomysłu ...</div><div class="ttdef"><b>Definition:</b> <a href="Event_8hpp_source.html#l00024">Event.hpp:24</a></div></div>
+<div class="ttc" id="classAdminServer_html_a3ecf7c2747f0413d3d58f7a9f4dd7ae2"><div class="ttname"><a href="classAdminServer.html#a3ecf7c2747f0413d3d58f7a9f4dd7ae2">AdminServer::setBlockingQueue</a></div><div class="ttdeci">void setBlockingQueue(BlockingQueue&lt; Event * &gt; *)</div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8cpp_source.html#l00087">AdminServer.cpp:87</a></div></div>
+<div class="ttc" id="classConnection_html"><div class="ttname"><a href="classConnection.html">Connection</a></div><div class="ttdoc">Klasa realizująca połączenie LOTC. </div><div class="ttdef"><b>Definition:</b> <a href="Connection_8hpp_source.html#l00032">Connection.hpp:32</a></div></div>
+<div class="ttc" id="classAdminServer_html"><div class="ttname"><a href="classAdminServer.html">AdminServer</a></div><div class="ttdoc">Klasa serwera administratora. Należy się spodziewać raczej asynchronicznego działania. </div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8hpp_source.html#l00017">AdminServer.hpp:17</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_342e7b6bc6a1e66453dad3633c4afb75.html">server</a></li><li class="navelem"><a class="el" href="AdminServer_8hpp.html">AdminServer.hpp</a></li>
+    <li class="footer">Wygenerowano Wt, 15 gru 2015 18:20:45 dla LOTC programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

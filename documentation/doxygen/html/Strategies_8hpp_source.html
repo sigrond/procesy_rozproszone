@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>LOTC: Plik źródłowy Strategies.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">LOTC
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('Strategies_8hpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Strategies.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Strategies_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/** \file Strategies.hpp</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * \author Tomasz Jakubczyk</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * \brief Plik ze wszystkimi strategiami.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Z powodu małej złożoności strategii nie wydzielamy osobnych plików na każdą klasę</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * strategii dziedziczącej po Strategy. Dodatkowo nie rozdzielamy deklaracji od definicji.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Jeśli w puźniejszych fazach projektu okaże się, że jednak klasy strategii się rozrosną,</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * co jest bardzo mało prawdopodobne, to powinno się podzielić ten plik na więcej plików,</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * dla każdej klasy osobny.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">pragma</span> <span class="preprocessor">once</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="Strategy_8hpp.html" title="Plik nagłówkowy abstrakcyjnej klasy Strategy. ">&quot;Strategy.hpp&quot;</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="Controller_8hpp.html" title="Plik nagłówkowy klasy kontrolera. ">&quot;Controller.hpp&quot;</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;../protocol/Message.hpp&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">iostream</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">thread</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/** \brief Testowa klasa strategii.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * Ma służyć jako zaślepka do brakujących klas strategii,</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> * oraz ewentualnie jako klasa pozwalająca systemowi na samodiagnozę.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classTestStrategy.html">   25</a></span>&#160;<span class="keyword">class</span> <a class="code" href="classTestStrategy.html">TestStrategy</a> : <span class="keyword">public</span> <a class="code" href="classStrategy.html">Strategy</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classTestStrategy.html#ad548a651d02444b6af74638418ac137d">   28</a></span>&#160;        <a class="code" href="classTestStrategy.html#ad548a651d02444b6af74638418ac137d">TestStrategy</a>() : <a class="code" href="classTestStrategy.html#a36c1baec8840ffdeaa645e63b95f7c3d">ObjectID</a>(<a class="code" href="classTestStrategy.html#a34516f7a3ab08da4df75df97fb2a3d76">createdObjects</a>)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <a class="code" href="classTestStrategy.html#a34516f7a3ab08da4df75df97fb2a3d76">createdObjects</a>++;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classTestStrategy.html#a98338668da08d0448b767bb38acce8ba">   32</a></span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classTestStrategy.html#a98338668da08d0448b767bb38acce8ba">TestStrategy</a>()</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <a class="code" href="classTestStrategy.html#a0406c17294823e564d8f9fad3f34507a">deletedObjects</a>++;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classTestStrategy.html#ac75d576b4dd124db02e7bfb088d79d22">   36</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTestStrategy.html#ac75d576b4dd124db02e7bfb088d79d22">doJob</a>(<span class="keywordtype">void</span>* <a class="code" href="classTestStrategy.html#ac75d576b4dd124db02e7bfb088d79d22">data</a>) <span class="keyword">override</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                std::clog&lt;&lt;<span class="stringliteral">&quot;TestStrategy, ObjectID: &quot;</span>&lt;&lt;ObjectID</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="comment">//              &lt;&lt;&quot;, createdObjects: &quot;&lt;&lt;createdObjects</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="comment">//              &lt;&lt;&quot;, deletedObjects: &quot;&lt;&lt;deletedObjects</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                &lt;&lt;<span class="stringliteral">&quot;, data: &quot;</span>&lt;&lt;data&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classTestStrategy.html#a34516f7a3ab08da4df75df97fb2a3d76">   43</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classTestStrategy.html#a34516f7a3ab08da4df75df97fb2a3d76">createdObjects</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classTestStrategy.html#a0406c17294823e564d8f9fad3f34507a">   44</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classTestStrategy.html#a0406c17294823e564d8f9fad3f34507a">deletedObjects</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classTestStrategy.html#a36c1baec8840ffdeaa645e63b95f7c3d">   46</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classTestStrategy.html#a36c1baec8840ffdeaa645e63b95f7c3d">ObjectID</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">/** \brief Strategia kończenia pracy serwera.</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classShutDownStrategy.html">   51</a></span>&#160;<span class="keyword">class</span> <a class="code" href="classShutDownStrategy.html">ShutDownStrategy</a> : <span class="keyword">public</span> <a class="code" href="classStrategy.html">Strategy</a></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">/** \brief metoda zamykająca serwer</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">     * \param data Controller* niech strategia wie jaki serwer zamknąc,</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">     * przez podanie wskaźnika na serwer do zamknięcia</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">     * \return virtual void</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classShutDownStrategy.html#aeeee49a347dbfe9c1b861f9dc22fe1b3">   60</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classShutDownStrategy.html#aeeee49a347dbfe9c1b861f9dc22fe1b3">doJob</a>(<span class="keywordtype">void</span>* <a class="code" href="classShutDownStrategy.html#aeeee49a347dbfe9c1b861f9dc22fe1b3">data</a>) <span class="keyword">override</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                std::cout&lt;&lt;<span class="stringliteral">&quot;Zamykanie serwera...\n&quot;</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                ((<a class="code" href="classController.html#acaeb01295f0462900ad0421149b87a19">Controller</a>*)data)<a class="code" href="classController.html#a516427a8bb2fc0e0f46f94c318dd1610">-&gt;</a><a class="code" href="classController.html#a516427a8bb2fc0e0f46f94c318dd1610">triggerShutDown</a><a class="code" href="classController.html#a516427a8bb2fc0e0f46f94c318dd1610">(</a><a class="code" href="classController.html#a516427a8bb2fc0e0f46f94c318dd1610">)</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">/** \brief Strategia przetwarzania i obsługi wiadomości od administratora.</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classMessageFromAdminStrategy.html">   69</a></span>&#160;<span class="keyword">class</span> <a class="code" href="classMessageFromAdminStrategy.html">MessageFromAdminStrategy</a> : <span class="keyword">public</span> <a class="code" href="classStrategy.html">Strategy</a></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">/** \brief obsługa wiadomości od admina</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">     * \param data message::Message*</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">     * \return virtual void</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classMessageFromAdminStrategy.html#a2dd7b3ccf27bb7b9f5e10b1e7e4ee096">   78</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMessageFromAdminStrategy.html#a2dd7b3ccf27bb7b9f5e10b1e7e4ee096">doJob</a>(<span class="keywordtype">void</span>* <a class="code" href="classMessageFromAdminStrategy.html#a2dd7b3ccf27bb7b9f5e10b1e7e4ee096">data</a>) <span class="keyword">override</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="keyword">using</span> <span class="keyword">namespace</span> std;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keyword">using</span> <span class="keyword">namespace</span> <a class="code" href="namespacemessage.html">message</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> category;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                category=((<a class="code" href="classmessage_1_1Message.html">Message</a>*)data)<a class="code" href="classmessage_1_1Message.html#aacea393678e433cdc2eda5fa6036ec90">-&gt;</a><a class="code" href="classmessage_1_1Message.html#aacea393678e433cdc2eda5fa6036ec90">getCategory</a><a class="code" href="classmessage_1_1Message.html#aacea393678e433cdc2eda5fa6036ec90">(</a><a class="code" href="classmessage_1_1Message.html#aacea393678e433cdc2eda5fa6036ec90">)</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">switch</span>(category)<span class="comment">/**&lt; \todo obsługa kategorii */</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="keywordflow">case</span> HOST:</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="keywordflow">case</span> TASK:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                <span class="keywordflow">case</span> DEP:</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <span class="keywordflow">case</span> FILE:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordflow">case</span> RET:</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="keywordflow">case</span> SYN:</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="keywordflow">case</span> PING:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">case</span> ERR:</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                        clog&lt;&lt;<span class="stringliteral">&quot;Nieznana kategoria wiadomości od admina: &quot;</span>&lt;&lt;category&lt;&lt;endl;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;};</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">/**&lt; \todo Napisać więcej strategii, jak już będzie wiadomo co mają robić */</span></div>
+<div class="ttc" id="classTestStrategy_html_ac75d576b4dd124db02e7bfb088d79d22"><div class="ttname"><a href="classTestStrategy.html#ac75d576b4dd124db02e7bfb088d79d22">TestStrategy::doJob</a></div><div class="ttdeci">virtual void doJob(void *data) override</div><div class="ttdef"><b>Definition:</b> <a href="Strategies_8hpp_source.html#l00036">Strategies.hpp:36</a></div></div>
+<div class="ttc" id="classTestStrategy_html_ad548a651d02444b6af74638418ac137d"><div class="ttname"><a href="classTestStrategy.html#ad548a651d02444b6af74638418ac137d">TestStrategy::TestStrategy</a></div><div class="ttdeci">TestStrategy()</div><div class="ttdef"><b>Definition:</b> <a href="Strategies_8hpp_source.html#l00028">Strategies.hpp:28</a></div></div>
+<div class="ttc" id="classTestStrategy_html_a36c1baec8840ffdeaa645e63b95f7c3d"><div class="ttname"><a href="classTestStrategy.html#a36c1baec8840ffdeaa645e63b95f7c3d">TestStrategy::ObjectID</a></div><div class="ttdeci">const int ObjectID</div><div class="ttdef"><b>Definition:</b> <a href="Strategies_8hpp_source.html#l00046">Strategies.hpp:46</a></div></div>
+<div class="ttc" id="namespacemessage_html"><div class="ttname"><a href="namespacemessage.html">message</a></div><div class="ttdef"><b>Definition:</b> <a href="Message_8hpp_source.html#l00031">Message.hpp:31</a></div></div>
+<div class="ttc" id="classController_html_a516427a8bb2fc0e0f46f94c318dd1610"><div class="ttname"><a href="classController.html#a516427a8bb2fc0e0f46f94c318dd1610">Controller::triggerShutDown</a></div><div class="ttdeci">void triggerShutDown()</div><div class="ttdoc">Metoda ustawia zmienną prywatną shutDownServer na zamykanie serwera. Użycie metody poza strategią obs...</div><div class="ttdef"><b>Definition:</b> <a href="Controller_8cpp_source.html#l00141">Controller.cpp:141</a></div></div>
+<div class="ttc" id="classTestStrategy_html_a98338668da08d0448b767bb38acce8ba"><div class="ttname"><a href="classTestStrategy.html#a98338668da08d0448b767bb38acce8ba">TestStrategy::~TestStrategy</a></div><div class="ttdeci">virtual ~TestStrategy()</div><div class="ttdef"><b>Definition:</b> <a href="Strategies_8hpp_source.html#l00032">Strategies.hpp:32</a></div></div>
+<div class="ttc" id="classController_html_acaeb01295f0462900ad0421149b87a19"><div class="ttname"><a href="classController.html#acaeb01295f0462900ad0421149b87a19">Controller::strategyMap</a></div><div class="ttdeci">std::map&lt; EventType, Strategy * &gt; * strategyMap</div><div class="ttdef"><b>Definition:</b> <a href="Controller_8hpp_source.html#l00045">Controller.hpp:45</a></div></div>
+<div class="ttc" id="classStrategy_html"><div class="ttname"><a href="classStrategy.html">Strategy</a></div><div class="ttdoc">Wirtualna klasa strategii obsługi zdarzenia. Klasę należy zkonkretyzować dziedzicząc po niej np...</div><div class="ttdef"><b>Definition:</b> <a href="Strategy_8hpp_source.html#l00012">Strategy.hpp:12</a></div></div>
+<div class="ttc" id="classmessage_1_1Message_html"><div class="ttname"><a href="classmessage_1_1Message.html">message::Message</a></div><div class="ttdef"><b>Definition:</b> <a href="Message_8hpp_source.html#l00034">Message.hpp:34</a></div></div>
+<div class="ttc" id="classShutDownStrategy_html"><div class="ttname"><a href="classShutDownStrategy.html">ShutDownStrategy</a></div><div class="ttdoc">Strategia kończenia pracy serwera. </div><div class="ttdef"><b>Definition:</b> <a href="Strategies_8hpp_source.html#l00051">Strategies.hpp:51</a></div></div>
+<div class="ttc" id="classMessageFromAdminStrategy_html_a2dd7b3ccf27bb7b9f5e10b1e7e4ee096"><div class="ttname"><a href="classMessageFromAdminStrategy.html#a2dd7b3ccf27bb7b9f5e10b1e7e4ee096">MessageFromAdminStrategy::doJob</a></div><div class="ttdeci">virtual void doJob(void *data) override</div><div class="ttdoc">obsługa wiadomości od admina </div><div class="ttdef"><b>Definition:</b> <a href="Strategies_8hpp_source.html#l00078">Strategies.hpp:78</a></div></div>
+<div class="ttc" id="classMessageFromAdminStrategy_html"><div class="ttname"><a href="classMessageFromAdminStrategy.html">MessageFromAdminStrategy</a></div><div class="ttdoc">Strategia przetwarzania i obsługi wiadomości od administratora. </div><div class="ttdef"><b>Definition:</b> <a href="Strategies_8hpp_source.html#l00069">Strategies.hpp:69</a></div></div>
+<div class="ttc" id="classShutDownStrategy_html_aeeee49a347dbfe9c1b861f9dc22fe1b3"><div class="ttname"><a href="classShutDownStrategy.html#aeeee49a347dbfe9c1b861f9dc22fe1b3">ShutDownStrategy::doJob</a></div><div class="ttdeci">virtual void doJob(void *data) override</div><div class="ttdoc">metoda zamykająca serwer </div><div class="ttdef"><b>Definition:</b> <a href="Strategies_8hpp_source.html#l00060">Strategies.hpp:60</a></div></div>
+<div class="ttc" id="classTestStrategy_html"><div class="ttname"><a href="classTestStrategy.html">TestStrategy</a></div><div class="ttdoc">Testowa klasa strategii. Ma służyć jako zaślepka do brakujących klas strategii, oraz ewentualnie jako...</div><div class="ttdef"><b>Definition:</b> <a href="Strategies_8hpp_source.html#l00025">Strategies.hpp:25</a></div></div>
+<div class="ttc" id="classmessage_1_1Message_html_aacea393678e433cdc2eda5fa6036ec90"><div class="ttname"><a href="classmessage_1_1Message.html#aacea393678e433cdc2eda5fa6036ec90">message::Message::getCategory</a></div><div class="ttdeci">unsigned char getCategory() const </div></div>
+<div class="ttc" id="classTestStrategy_html_a34516f7a3ab08da4df75df97fb2a3d76"><div class="ttname"><a href="classTestStrategy.html#a34516f7a3ab08da4df75df97fb2a3d76">TestStrategy::createdObjects</a></div><div class="ttdeci">static int createdObjects</div><div class="ttdef"><b>Definition:</b> <a href="Strategies_8hpp_source.html#l00043">Strategies.hpp:43</a></div></div>
+<div class="ttc" id="classTestStrategy_html_a0406c17294823e564d8f9fad3f34507a"><div class="ttname"><a href="classTestStrategy.html#a0406c17294823e564d8f9fad3f34507a">TestStrategy::deletedObjects</a></div><div class="ttdeci">static int deletedObjects</div><div class="ttdef"><b>Definition:</b> <a href="Strategies_8hpp_source.html#l00044">Strategies.hpp:44</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_342e7b6bc6a1e66453dad3633c4afb75.html">server</a></li><li class="navelem"><a class="el" href="Strategies_8hpp.html">Strategies.hpp</a></li>
+    <li class="footer">Wygenerowano Wt, 15 gru 2015 18:20:46 dla LOTC programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

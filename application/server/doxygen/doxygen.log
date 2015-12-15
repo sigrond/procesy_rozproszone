@@ -1,0 +1,574 @@
+warning: The selected output language "polish" has not been updated
+since release 1.8.2.  As a result some sentences may appear in English.
+
+warning: source ..\ServerUnitTests.cpp is not a readable file or directory... skipping.
+warning: source ..\server.cpp is not a readable file or directory... skipping.
+warning: source ..\Model.hpp is not a readable file or directory... skipping.
+warning: source ..\version.h is not a readable file or directory... skipping.
+warning: source ..\AgentServer.hpp is not a readable file or directory... skipping.
+warning: source ..\Strategy.hpp is not a readable file or directory... skipping.
+warning: source ..\BlockingQueue.cpp is not a readable file or directory... skipping.
+warning: source ..\AgentServer.cpp is not a readable file or directory... skipping.
+warning: source ..\Event.hpp is not a readable file or directory... skipping.
+warning: source ..\Model.cpp is not a readable file or directory... skipping.
+warning: source ..\BlockingQueueTests.cpp is not a readable file or directory... skipping.
+warning: source ..\Controller.cpp is not a readable file or directory... skipping.
+warning: source ..\ControllerTests.cpp is not a readable file or directory... skipping.
+warning: source ..\..\protocol\Message.hpp is not a readable file or directory... skipping.
+warning: source ..\..\protocol\Connection.hpp is not a readable file or directory... skipping.
+warning: source ..\Strategies.hpp is not a readable file or directory... skipping.
+warning: source ..\BlockingQueue.hpp is not a readable file or directory... skipping.
+warning: source ..\..\protocol\Ip.hpp is not a readable file or directory... skipping.
+warning: source ..\AdminServer.cpp is not a readable file or directory... skipping.
+warning: source ..\..\protocol\MessageCodes.hpp is not a readable file or directory... skipping.
+warning: source ..\AdminServer.hpp is not a readable file or directory... skipping.
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.cpp:18: warning: argument 'std' of command @param is not found in the argument list of AdminServerException::AdminServerExceptionException(std::string s)
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.cpp:18: warning: argument 'string' of command @param is not found in the argument list of AdminServerException::AdminServerExceptionException(std::string s)
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.cpp:18: warning: The following parameters of AdminServerException::AdminServerExceptionException(std::string s) are not documented:
+  parameter 's'
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:25: warning: argument 'T' of command @param is not found in the argument list of BlockingQueue< T >::push_back(const T &element)
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:25: warning: The following parameters of BlockingQueue::push_back(const T &element) are not documented:
+  parameter 'element'
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Controller.cpp:64: warning: argument 'std' of command @param is not found in the argument list of ControllerException::ControllerException(std::string s)
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Controller.cpp:64: warning: argument 'string' of command @param is not found in the argument list of ControllerException::ControllerException(std::string s)
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Controller.cpp:64: warning: The following parameters of ControllerException::ControllerException(std::string s) are not documented:
+  parameter 's'
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:42: warning: argument 'Adres' of command @param is not found in the argument list of Ip::isCorrect(const std::string &address) const =0
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:42: warning: The following parameters of Ip::isCorrect(const std::string &address) const =0 are not documented:
+  parameter 'address'
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:51: warning: Found unknown command `\bref'
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:59: warning: argument 'Adres' of command @param is not found in the argument list of Ipv4::isCorrect(const std::string &address) const inherited from member isCorrect at line 42 in file D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:59: warning: The following parameters of Ipv4::isCorrect(const std::string &address) const are not documented:
+  parameter 'address'
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:71: warning: argument 'Adres' of command @param is not found in the argument list of Ipv6::isCorrect(const std::string &address) const inherited from member isCorrect at line 42 in file D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:71: warning: The following parameters of Ipv6::isCorrect(const std::string &address) const are not documented:
+  parameter 'address'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AdminServer_8hpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AdminServer_8hpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AdminServer_8hpp__dep__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AdminServer_8hpp__dep__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Agent_8cpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Agent_8cpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AdminServer_8cpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AdminServer_8cpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AgentClient_8cpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AgentClient_8cpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AgentClient_8hpp__dep__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AgentClient_8hpp__dep__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AgentServer_8cpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AgentServer_8cpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AgentServer_8hpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AgentServer_8hpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AgentServer_8hpp__dep__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AgentServer_8hpp__dep__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueue_8cpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueue_8cpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueue_8hpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueue_8hpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueue_8cpp__dep__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueue_8cpp__dep__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueueTests_8cpp_a3c0e6032c63ed013740bc646dbd259a2_cgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueueTests_8cpp_a3c0e6032c63ed013740bc646dbd259a2_cgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueue_8hpp__dep__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueue_8hpp__dep__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueueTests_8cpp_a78695f41d420d63810400efadf86af03_cgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueueTests_8cpp_a78695f41d420d63810400efadf86af03_cgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueueTests_8cpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueueTests_8cpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueueTests_8cpp_a4260a972913bbded86b9bd65841288b3_cgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueueTests_8cpp_a4260a972913bbded86b9bd65841288b3_cgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueueTests_8cpp_a78695f41d420d63810400efadf86af03_icgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueueTests_8cpp_a78695f41d420d63810400efadf86af03_icgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Console_8cpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Console_8cpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Connection_8hpp__dep__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Connection_8hpp__dep__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Connection_8hpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Connection_8hpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Console_8cpp_af78beb4a0d33807a778c4dd88e28f164_cgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Console_8cpp_af78beb4a0d33807a778c4dd88e28f164_cgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ConsoleClient_8cpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ConsoleClient_8cpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ConsoleServer_8cpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ConsoleServer_8cpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ConsoleClient_8hpp__dep__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ConsoleClient_8hpp__dep__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ConsoleClient_8hpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ConsoleClient_8hpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ConsoleServer_8hpp__dep__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ConsoleServer_8hpp__dep__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Controller_8hpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Controller_8hpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Controller_8cpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Controller_8cpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ControllerTests_8cpp_a45c7d89fbe3968a972f9861649e0f129_cgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ControllerTests_8cpp_a45c7d89fbe3968a972f9861649e0f129_cgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Controller_8hpp__dep__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Controller_8hpp__dep__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ControllerTests_8cpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ControllerTests_8cpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ControllerTests_8cpp_a50b914cba86dd710e0c1831394261b9b_cgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ControllerTests_8cpp_a50b914cba86dd710e0c1831394261b9b_cgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Ip_8hpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Ip_8hpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Event_8hpp__dep__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Event_8hpp__dep__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Ip_8hpp__dep__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Ip_8hpp__dep__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ControllerTests_8cpp_ab7963cacadfa4bcca5a2eb5d103c9f59_cgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ControllerTests_8cpp_ab7963cacadfa4bcca5a2eb5d103c9f59_cgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/MessageCodes_8hpp__dep__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/MessageCodes_8hpp__dep__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Message_8hpp__dep__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Message_8hpp__dep__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Message_8hpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Message_8hpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Model_8hpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Model_8hpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Model_8cpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Model_8cpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Model_8hpp__dep__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Model_8hpp__dep__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/server_8cpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/server_8cpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ServerUnitTests_8cpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ServerUnitTests_8cpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Strategies_8hpp__dep__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Strategies_8hpp__dep__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/server_8cpp_af78beb4a0d33807a778c4dd88e28f164_cgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/server_8cpp_af78beb4a0d33807a778c4dd88e28f164_cgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Strategies_8hpp__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Strategies_8hpp__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classAdminServer_ae0cc7705054a63f1ee974ba30ef9a5ec_cgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classAdminServer_ae0cc7705054a63f1ee974ba30ef9a5ec_cgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Strategy_8hpp__dep__incl.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Strategy_8hpp__dep__incl.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classAdminServer__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classAdminServer__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/structAdminServerException__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/structAdminServerException__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classAdminServer_a3ecf7c2747f0413d3d58f7a9f4dd7ae2_icgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classAdminServer_a3ecf7c2747f0413d3d58f7a9f4dd7ae2_icgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classAdminServer_a2c3c374cb8653d62a373735cf316d4e4_cgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classAdminServer_a2c3c374cb8653d62a373735cf316d4e4_cgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classAgentServer__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classAgentServer__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/structAdminServerException__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/structAdminServerException__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classbadIpException__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classbadIpException__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classAgentServer_ab79904b49f1f80c51b9bfdbde2596d00_icgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classAgentServer_ab79904b49f1f80c51b9bfdbde2596d00_icgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classBlockingQueue__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classBlockingQueue__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classbadIpException__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classbadIpException__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classBlockingQueue__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classBlockingQueue__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classConnection_ad55626cd15f9d0d3b69461b4476fdaa8_icgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classConnection_ad55626cd15f9d0d3b69461b4476fdaa8_icgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classBlockingQueue_a33e18f760365430cee38721dfd0abf5e_icgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classBlockingQueue_a33e18f760365430cee38721dfd0abf5e_icgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classBlockingQueue_aba9a92a9e6a732cd720c609d7e706c47_icgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classBlockingQueue_aba9a92a9e6a732cd720c609d7e706c47_icgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classConnection_a5ed690ca4a6ccd7032c123f38907ff4b_icgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classConnection_a5ed690ca4a6ccd7032c123f38907ff4b_icgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classConsoleClient_a416302ce226015ef7bdf6eef49ec6aa4_icgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classConsoleClient_a416302ce226015ef7bdf6eef49ec6aa4_icgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_ada4383b0c385d09c6e82158e91449948_icgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_ada4383b0c385d09c6e82158e91449948_icgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_ad75c2e9788ecb8dba44650747076fe92_icgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_ad75c2e9788ecb8dba44650747076fe92_icgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_aaff2c0ac01c4d7a6b78718ac8a411c4b_cgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_aaff2c0ac01c4d7a6b78718ac8a411c4b_cgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_a5f9d5a3fc40dd23ecf4b493f22ce94f0_icgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_a5f9d5a3fc40dd23ecf4b493f22ce94f0_icgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_a84a816695c11ec17be45fc5def82c892_icgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_a84a816695c11ec17be45fc5def82c892_icgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_aaff2c0ac01c4d7a6b78718ac8a411c4b_icgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_aaff2c0ac01c4d7a6b78718ac8a411c4b_icgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_ad535ad74055e645b7f44b7feeb4e82a8_cgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_ad535ad74055e645b7f44b7feeb4e82a8_cgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_ad535ad74055e645b7f44b7feeb4e82a8_icgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_ad535ad74055e645b7f44b7feeb4e82a8_icgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_a516427a8bb2fc0e0f46f94c318dd1610_cgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_a516427a8bb2fc0e0f46f94c318dd1610_cgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_a516427a8bb2fc0e0f46f94c318dd1610_icgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_a516427a8bb2fc0e0f46f94c318dd1610_icgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/structControllerException__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/structControllerException__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/structControllerException__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/structControllerException__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classIpv4__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classIpv4__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classIp__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classIp__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classIpv4__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classIpv4__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classIpv6__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classIpv6__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classIpv6__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classIpv6__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classMessageFromAdminStrategy__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classMessageFromAdminStrategy__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classModel_ac9ee04aadbcefc4957321d5f0ad60c5e_cgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classModel_ac9ee04aadbcefc4957321d5f0ad60c5e_cgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classModel__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classModel__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classMessageFromAdminStrategy__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classMessageFromAdminStrategy__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classModel_ac9ee04aadbcefc4957321d5f0ad60c5e_icgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classModel_ac9ee04aadbcefc4957321d5f0ad60c5e_icgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classModel_a61cb5a5695ff5a6555ceaec02b2a16b9_icgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classModel_a61cb5a5695ff5a6555ceaec02b2a16b9_icgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classModel_a8e8771cbc09afdf630f4ca833d29b809_icgraph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classModel_a8e8771cbc09afdf630f4ca833d29b809_icgraph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classShutDownStrategy__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classShutDownStrategy__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classShutDownStrategy__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classShutDownStrategy__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classStrategy__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classStrategy__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classTestStrategy__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classTestStrategy__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classTestStrategy__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classTestStrategy__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1Message__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1Message__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1hostMessage__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1hostMessage__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1taskMessage__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1taskMessage__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1taskMessage__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1taskMessage__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1hostMessage__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1hostMessage__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1depMessage__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1depMessage__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1depMessage__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1depMessage__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1fileMessage__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1fileMessage__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1fileMessage__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1fileMessage__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1retMessage__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1retMessage__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1retMessage__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1retMessage__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1synMessage__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1synMessage__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1pingMessage__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1pingMessage__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1pingMessage__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1pingMessage__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1synMessage__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1synMessage__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1errMessage__inherit__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1errMessage__inherit__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1errMessage__coll__graph.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1errMessage__coll__graph.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/graph_legend.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/graph_legend.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/dir_d75c23162a2652451dce46d2e7e8aead_dep.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/dir_d75c23162a2652451dce46d2e7e8aead_dep.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/dir_6d76cf45829c3b3bce8b59b13f5eef91_dep.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/dir_6d76cf45829c3b3bce8b59b13f5eef91_dep.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/dir_4cf5d4e398eb3b43a4114e1502f69559_dep.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/dir_4cf5d4e398eb3b43a4114e1502f69559_dep.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/dir_75eb1ee5d767627a9a18a84e7e34c1ab_dep.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/dir_75eb1ee5d767627a9a18a84e7e34c1ab_dep.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/dir_342e7b6bc6a1e66453dad3633c4afb75_dep.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/dir_342e7b6bc6a1e66453dad3633c4afb75_dep.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_1.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_1.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_0.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_0.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_2.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_2.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_3.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_3.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_4.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_4.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_6.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_6.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_7.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_7.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_9.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_9.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_5.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_5.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_8.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_8.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_10.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_10.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_11.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_11.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_12.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_12.png"'
+error: Problems running dot: exit code=-1, command='dot', arguments='"D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_13.dot" -Tpng -o "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_13.png"'
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AdminServer_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AdminServer_8hpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AdminServer_8hpp__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Agent_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AgentClient_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AgentClient_8hpp__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AgentServer_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AgentServer_8hpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/AgentServer_8hpp__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueue_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueue_8cpp__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueue_8hpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueue_8hpp__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueueTests_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueueTests_8cpp_a3c0e6032c63ed013740bc646dbd259a2_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueueTests_8cpp_a4260a972913bbded86b9bd65841288b3_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueueTests_8cpp_a78695f41d420d63810400efadf86af03_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/BlockingQueueTests_8cpp_a78695f41d420d63810400efadf86af03_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Connection_8hpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Connection_8hpp__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Console_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Console_8cpp_af78beb4a0d33807a778c4dd88e28f164_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ConsoleClient_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ConsoleClient_8hpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ConsoleClient_8hpp__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ConsoleServer_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ConsoleServer_8hpp__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Controller_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Controller_8hpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Controller_8hpp__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ControllerTests_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ControllerTests_8cpp_a45c7d89fbe3968a972f9861649e0f129_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ControllerTests_8cpp_a50b914cba86dd710e0c1831394261b9b_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ControllerTests_8cpp_ab7963cacadfa4bcca5a2eb5d103c9f59_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Event_8hpp__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Ip_8hpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Ip_8hpp__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Message_8hpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Message_8hpp__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/MessageCodes_8hpp__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Model_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Model_8hpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Model_8hpp__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/server_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/server_8cpp_af78beb4a0d33807a778c4dd88e28f164_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/ServerUnitTests_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Strategies_8hpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Strategies_8hpp__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/Strategy_8hpp__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classAdminServer__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classAdminServer_ae0cc7705054a63f1ee974ba30ef9a5ec_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classAdminServer_a2c3c374cb8653d62a373735cf316d4e4_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classAdminServer_a3ecf7c2747f0413d3d58f7a9f4dd7ae2_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/structAdminServerException__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/structAdminServerException__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classAgentServer__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classAgentServer_ab79904b49f1f80c51b9bfdbde2596d00_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classbadIpException__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classbadIpException__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classBlockingQueue__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classBlockingQueue__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classBlockingQueue_a33e18f760365430cee38721dfd0abf5e_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classBlockingQueue_aba9a92a9e6a732cd720c609d7e706c47_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classConnection_ad55626cd15f9d0d3b69461b4476fdaa8_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classConnection_a5ed690ca4a6ccd7032c123f38907ff4b_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classConsoleClient_a416302ce226015ef7bdf6eef49ec6aa4_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_ada4383b0c385d09c6e82158e91449948_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_ad75c2e9788ecb8dba44650747076fe92_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_a84a816695c11ec17be45fc5def82c892_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_a5f9d5a3fc40dd23ecf4b493f22ce94f0_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_aaff2c0ac01c4d7a6b78718ac8a411c4b_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_aaff2c0ac01c4d7a6b78718ac8a411c4b_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_ad535ad74055e645b7f44b7feeb4e82a8_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_ad535ad74055e645b7f44b7feeb4e82a8_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_a516427a8bb2fc0e0f46f94c318dd1610_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classController_a516427a8bb2fc0e0f46f94c318dd1610_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/structControllerException__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/structControllerException__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classIp__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classIpv4__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classIpv4__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classIpv6__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classIpv6__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classMessageFromAdminStrategy__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classMessageFromAdminStrategy__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classModel__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classModel_ac9ee04aadbcefc4957321d5f0ad60c5e_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classModel_ac9ee04aadbcefc4957321d5f0ad60c5e_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classModel_a61cb5a5695ff5a6555ceaec02b2a16b9_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classModel_a8e8771cbc09afdf630f4ca833d29b809_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classShutDownStrategy__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classShutDownStrategy__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classStrategy__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classTestStrategy__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classTestStrategy__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1Message__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1hostMessage__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1hostMessage__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1taskMessage__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1taskMessage__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1depMessage__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1depMessage__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1fileMessage__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1fileMessage__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1retMessage__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1retMessage__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1synMessage__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1synMessage__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1pingMessage__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1pingMessage__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1errMessage__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/classmessage_1_1errMessage__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/dir_6d76cf45829c3b3bce8b59b13f5eef91_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/dir_d75c23162a2652451dce46d2e7e8aead_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/dir_4cf5d4e398eb3b43a4114e1502f69559_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/dir_75eb1ee5d767627a9a18a84e7e34c1ab_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/dir_342e7b6bc6a1e66453dad3633c4afb75_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_0.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_1.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_2.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_3.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_4.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_5.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_6.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_7.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_8.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_9.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_10.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_11.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_12.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/html/inherit_graph_13.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
