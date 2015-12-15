@@ -6,19 +6,20 @@
 
 #include "Controller.hpp"
 #include "Strategies.hpp"
+#include "Event.hpp"
 #include <iostream>
 #include <exception>
 #include <string>
 #include <cstdlib>
 
 Controller::Controller() :
+	alive(0),
 	adminServer(nullptr),
 	agentServer(nullptr),
+	model(nullptr),
 	blockingQueue(nullptr),
 	strategyMap(nullptr),
-	model(nullptr),
-	shutDownServer(false),
-	alive(0)
+	shutDownServer(false)
 {
 #ifdef _DEBUG
 	std::cout<<"Controller::Controller()\n";
@@ -134,10 +135,15 @@ void Controller::fillStrategyMap()
  * Metoda nie potrafi samodzielnie zamknąć serwera, bo nie przerywa oczekiwania na
  * metodzie BlockingQueue::popfront() i nie przerwie pętli przetważania, dopuki
  * wątek oczekuje na pojawienie się elementu w kolejce.
+ * EDIT: Już powinna sobie dać radę z kolejką blokującą.
  */
 void Controller::triggerShutDown()
 {
 	shutDownServer=true;
+	if(blockingQueue!=nullptr)
+	{
+		blockingQueue->push_back(new Event(SHUT_DOWN,this));
+	}
 }
 
 void Controller::setAdminServer(AdminServer* s)
