@@ -135,6 +135,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 &#160;
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>addSlave()
+: <a class="el" href="classAgentServer.html#a57d551fc559b7800a697a84e2a8e4cf7">AgentServer</a>
+</li>
 <li>AdminServer()
 : <a class="el" href="classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2">AdminServer</a>
 </li>
@@ -146,6 +149,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>AgentServer()
 : <a class="el" href="classAgentServer.html#ae00b5d7d78d9786b11a396246710a621">AgentServer</a>
+</li>
+<li>AgentServerException()
+: <a class="el" href="structAgentServerException.html#a8104a190a2cf276b6bb0c9c67674ecee">AgentServerException</a>
 </li>
 </ul>
 
@@ -166,7 +172,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>connect()
 : <a class="el" href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec">AdminServer</a>
-, <a class="el" href="classAgentServer.html#a017ea98e8aabbd95481942762cf4494d">AgentServer</a>
+, <a class="el" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd">AgentServer</a>
 , <a class="el" href="classConsoleClient.html#a7dbc8c013d758ed6a6e1b9c99220ee6b">ConsoleClient</a>
 </li>
 <li>Connection()
@@ -190,6 +196,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>doJob()
 : <a class="el" href="classMessageFromAdminStrategy.html#a2dd7b3ccf27bb7b9f5e10b1e7e4ee096">MessageFromAdminStrategy</a>
+, <a class="el" href="classMessageFromAgentStrategy.html#a0819348e6119a2360845ebb1d71c6b09">MessageFromAgentStrategy</a>
 , <a class="el" href="classShutDownStrategy.html#aeeee49a347dbfe9c1b861f9dc22fe1b3">ShutDownStrategy</a>
 , <a class="el" href="classStrategy.html#ac620d54307f0355d930c6150259ae27a">Strategy</a>
 , <a class="el" href="classTestStrategy.html#ac75d576b4dd124db02e7bfb088d79d22">TestStrategy</a>
@@ -233,6 +240,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>getCode()
 : <a class="el" href="classmessage_1_1Message.html#a076368ad48b7bc264a68545e45f22aaf">message::Message</a>
 </li>
+<li>getConnection()
+: <a class="el" href="classSlave.html#a828d48eb753fb4fc45ec9c593f60f5fb">Slave</a>
+</li>
 <li>getErrCode()
 : <a class="el" href="classmessage_1_1errMessage.html#af3a80a24fb94cc31e484d9e5ee348d35">message::errMessage</a>
 </li>
@@ -256,11 +266,18 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>getRespectPriority()
 : <a class="el" href="classmessage_1_1taskMessage.html#a7882071b35695b7417687d0c03b24773">message::taskMessage</a>
 </li>
+<li>getSlaveIP()
+: <a class="el" href="classSlave.html#a415c1ae82646360ac138341b0d5a5ec8">Slave</a>
+</li>
 <li>getState()
 : <a class="el" href="classmessage_1_1Message.html#ad0fa5b8319a47f45fa2b4d7de5d1566c">message::Message</a>
+, <a class="el" href="classSlave.html#aaa43497446e919ca73c564541af806bf">Slave</a>
 </li>
 <li>getSubcategory()
 : <a class="el" href="classmessage_1_1Message.html#a62cc9521e50451312900a00b5bf40959">message::Message</a>
+</li>
+<li>getTask()
+: <a class="el" href="classSlave.html#a0ea374477a37c09c2663c3d674e01c87">Slave</a>
 </li>
 <li>getTaskCount()
 : <a class="el" href="classmessage_1_1depMessage.html#ae4dac483da3b364c28383bd42a1260b7">message::depMessage</a>
@@ -314,7 +331,10 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>listen()
 : <a class="el" href="classAdminServer.html#a2c3c374cb8653d62a373735cf316d4e4">AdminServer</a>
 , <a class="el" href="classAgentClient.html#aa1f2e65a8c67cc6cf6d9b7d65d662812">AgentClient</a>
-, <a class="el" href="classAgentServer.html#afae483c3fc2054e138488dec66e7c4e8">AgentServer</a>
+, <a class="el" href="classAgentServer.html#a001e979f72cf3d360d424cea0df70165">AgentServer</a>
+</li>
+<li>listenToAll()
+: <a class="el" href="classAgentServer.html#a75068a7f83936d0171b46d5dcb99a7b4">AgentServer</a>
 </li>
 </ul>
 
@@ -377,14 +397,32 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="classAgentServer.html#ab79904b49f1f80c51b9bfdbde2596d00">AgentServer</a>
 , <a class="el" href="classModel.html#a61cb5a5695ff5a6555ceaec02b2a16b9">Model</a>
 </li>
+<li>setConnection()
+: <a class="el" href="classSlave.html#a92d88c64b3de64989a97d0775c5bc07d">Slave</a>
+</li>
 <li>setController()
 : <a class="el" href="classModel.html#a8e8771cbc09afdf630f4ca833d29b809">Model</a>
+</li>
+<li>setLastContact()
+: <a class="el" href="classSlave.html#a27056b83637658ce11e6db3d97d7d703">Slave</a>
 </li>
 <li>setModel()
 : <a class="el" href="classController.html#a5f9d5a3fc40dd23ecf4b493f22ce94f0">Controller</a>
 </li>
+<li>setSlaveIP()
+: <a class="el" href="classSlave.html#a49dd9b559276c477336d0c63b627c223">Slave</a>
+</li>
+<li>setState()
+: <a class="el" href="classSlave.html#a7733aa198c2281b760030cd62915cab8">Slave</a>
+</li>
+<li>setTask()
+: <a class="el" href="classSlave.html#ac80dabc88a0b32745527fc3d5c5f76c8">Slave</a>
+</li>
 <li>setup()
 : <a class="el" href="classController.html#aaff2c0ac01c4d7a6b78718ac8a411c4b">Controller</a>
+</li>
+<li>Slave()
+: <a class="el" href="classSlave.html#a4a5fa6347b8a8504212fb9647fc5d21e">Slave</a>
 </li>
 <li>start()
 : <a class="el" href="classAgentClient.html#af0e975638976932e9ab31c654843717e">AgentClient</a>
@@ -398,6 +436,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>Task()
+: <a class="el" href="classTask.html#a0ca53354bdc006762a0fda68c64f7608">Task</a>
+</li>
 <li>taskMessage()
 : <a class="el" href="classmessage_1_1taskMessage.html#af2b10d34c6ade3cd84b80603fd249d24">message::taskMessage</a>
 </li>
@@ -413,6 +454,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <h3><a class="anchor" id="index_w"></a>- w -</h3><ul>
 <li>what()
 : <a class="el" href="structAdminServerException.html#a1907196856d89a1f351667d71f1eb331">AdminServerException</a>
+, <a class="el" href="structAgentServerException.html#a8dca75a0aff10a301e8be2a5e4ff2489">AgentServerException</a>
 , <a class="el" href="classbadIpException.html#ab4d4e5946e80f6bd1a5e764ef67673e0">badIpException</a>
 , <a class="el" href="structControllerException.html#a0b23d4e452b48e4a296b44cbaabe4f53">ControllerException</a>
 </li>
@@ -422,6 +464,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <h3><a class="anchor" id="index_~"></a>- ~ -</h3><ul>
 <li>~AdminServer()
 : <a class="el" href="classAdminServer.html#ae00d7eaa6769aec515dbc06590424fdd">AdminServer</a>
+</li>
+<li>~AgentServer()
+: <a class="el" href="classAgentServer.html#afb8fd8d61568af65a604af199a9f3afc">AgentServer</a>
 </li>
 <li>~BlockingQueue()
 : <a class="el" href="classBlockingQueue.html#aaea1ce4feac499ba162b9baeeccca12e">BlockingQueue&lt; T &gt;</a>
@@ -441,6 +486,12 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>~Message()
 : <a class="el" href="classmessage_1_1Message.html#a97532a17d03a5835f89f0dc91ffc0958">message::Message</a>
 </li>
+<li>~Slave()
+: <a class="el" href="classSlave.html#a99d0908d38f846fae1e7417acf78796b">Slave</a>
+</li>
+<li>~Task()
+: <a class="el" href="classTask.html#a3ecf499ea35fb4a96853969a1e1cbbce">Task</a>
+</li>
 <li>~TestStrategy()
 : <a class="el" href="classTestStrategy.html#a98338668da08d0448b767bb38acce8ba">TestStrategy</a>
 </li>
@@ -450,7 +501,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Wygenerowano Wt, 15 gru 2015 18:20:51 dla LOTC programem
+    <li class="footer">Wygenerowano Wt, 15 gru 2015 23:10:27 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 </td></tr>
 <tr><td><img src="inherit_graph_1.png" border="0" alt="" usemap="#AdminServerException"/>
 <map name="AdminServerException" id="AdminServerException">
-<area shape="rect" id="node2" href="structAdminServerException.html" title="Klasa opakowująca exception dla AdminServer. " alt="" coords="132,5,285,32"/><area shape="rect" id="node3" href="classbadIpException.html" title="badIpException" alt="" coords="153,56,264,83"/><area shape="rect" id="node4" href="structControllerException.html" title="Klasa opakowująca exception dla Controller. " alt="" coords="141,107,276,133"/></map>
+<area shape="rect" id="node2" href="structAdminServerException.html" title="Klasa opakowująca exception dla AdminServer. " alt="" coords="132,5,285,32"/><area shape="rect" id="node3" href="structAgentServerException.html" title="Klasa opakowująca exception dla AgentServer. " alt="" coords="133,56,284,83"/><area shape="rect" id="node4" href="classbadIpException.html" title="badIpException" alt="" coords="153,107,264,133"/><area shape="rect" id="node5" href="structControllerException.html" title="Klasa opakowująca exception dla Controller. " alt="" coords="141,157,276,184"/></map>
 </td></tr>
 <tr><td><img src="inherit_graph_2.png" border="0" alt="" usemap="#AgentClient"/>
 <map name="AgentClient" id="AgentClient">
@@ -163,9 +163,17 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 <map name="Model" id="Model">
 <area shape="rect" id="node1" href="classModel.html" title="klasa modelu " alt="" coords="5,5,63,32"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_13.png" border="0" alt="" usemap="#Strategy"/>
+<tr><td><img src="inherit_graph_13.png" border="0" alt="" usemap="#Slave"/>
+<map name="Slave" id="Slave">
+<area shape="rect" id="node1" href="classSlave.html" title="Klasa odpowiedzialna za przechowywanie informacji o agencie. " alt="" coords="5,5,59,32"/></map>
+</td></tr>
+<tr><td><img src="inherit_graph_14.png" border="0" alt="" usemap="#Strategy"/>
 <map name="Strategy" id="Strategy">
-<area shape="rect" id="node1" href="classStrategy.html" title="Wirtualna klasa strategii obsługi zdarzenia. Klasę należy zkonkretyzować dziedzicząc po niej np..." alt="" coords="5,56,76,83"/><area shape="rect" id="node2" href="classMessageFromAdminStrategy.html" title="Strategia przetwarzania i obsługi wiadomości od administratora. " alt="" coords="124,5,315,32"/><area shape="rect" id="node3" href="classShutDownStrategy.html" title="Strategia kończenia pracy serwera. " alt="" coords="154,56,285,83"/><area shape="rect" id="node4" href="classTestStrategy.html" title="Testowa klasa strategii. Ma służyć jako zaślepka do brakujących klas strategii, oraz ewentualnie jako..." alt="" coords="171,107,267,133"/></map>
+<area shape="rect" id="node1" href="classStrategy.html" title="Wirtualna klasa strategii obsługi zdarzenia. Klasę należy zkonkretyzować dziedzicząc po niej np..." alt="" coords="5,81,76,108"/><area shape="rect" id="node2" href="classMessageFromAdminStrategy.html" title="Strategia przetwarzania i obsługi wiadomości od administratora. " alt="" coords="124,5,315,32"/><area shape="rect" id="node3" href="classMessageFromAgentStrategy.html" title="MessageFromAgentStrategy" alt="" coords="125,56,313,83"/><area shape="rect" id="node4" href="classShutDownStrategy.html" title="Strategia kończenia pracy serwera. " alt="" coords="154,107,285,133"/><area shape="rect" id="node5" href="classTestStrategy.html" title="Testowa klasa strategii. Ma służyć jako zaślepka do brakujących klas strategii, oraz ewentualnie jako..." alt="" coords="171,157,267,184"/></map>
+</td></tr>
+<tr><td><img src="inherit_graph_15.png" border="0" alt="" usemap="#Task"/>
+<map name="Task" id="Task">
+<area shape="rect" id="node1" href="classTask.html" title="Klasa odpowiadająca za przechowywanie informacji o zadaniu. " alt="" coords="5,5,56,32"/></map>
 </td></tr>
 </table>
 </div><!-- contents -->
@@ -173,7 +181,7 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Wygenerowano Wt, 15 gru 2015 18:20:51 dla LOTC programem
+    <li class="footer">Wygenerowano Wt, 15 gru 2015 23:10:26 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

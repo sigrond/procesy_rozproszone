@@ -10,6 +10,7 @@ var hierarchy =
     [ "Event", "classEvent.html", null ],
     [ "exception", null, [
       [ "AdminServerException", "structAdminServerException.html", null ],
+      [ "AgentServerException", "structAgentServerException.html", null ],
       [ "badIpException", "classbadIpException.html", null ],
       [ "ControllerException", "structControllerException.html", null ]
     ] ],
@@ -32,9 +33,12 @@ var hierarchy =
       [ "BlockingQueue< T >", "classBlockingQueue.html", null ],
       [ "BlockingQueue< Event * >", "classBlockingQueue.html", null ]
     ] ],
+    [ "Slave", "classSlave.html", null ],
     [ "Strategy", "classStrategy.html", [
       [ "MessageFromAdminStrategy", "classMessageFromAdminStrategy.html", null ],
+      [ "MessageFromAgentStrategy", "classMessageFromAgentStrategy.html", null ],
       [ "ShutDownStrategy", "classShutDownStrategy.html", null ],
       [ "TestStrategy", "classTestStrategy.html", null ]
-    ] ]
+    ] ],
+    [ "Task", "classTask.html", null ]
 ];

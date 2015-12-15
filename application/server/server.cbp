@@ -15,6 +15,7 @@
 				<Option compiler="cygwin" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="server" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -24,6 +25,7 @@
 				<Option compiler="cygwin" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="server" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -60,8 +62,12 @@
 			<Option compile="0" />
 			<Option link="0" />
 		</Unit>
+		<Unit filename="Slave.cpp" />
+		<Unit filename="Slave.hpp" />
 		<Unit filename="Strategies.hpp" />
 		<Unit filename="Strategy.hpp" />
+		<Unit filename="Task.cpp" />
+		<Unit filename="Task.hpp" />
 		<Unit filename="makeServerUnitTests" />
 		<Unit filename="makefile" />
 		<Unit filename="server.cpp" />

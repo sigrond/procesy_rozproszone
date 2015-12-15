@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ubuntu_5fversion_5fstyle',['UBUNTU_VERSION_STYLE',['../namespaceAutoVersion.html#af558e65ae7a276f6c8f99cedd65d7217',1,'AutoVersion']]]
+  ['task',['task',['../classSlave.html#a37f03302910768cddadafa3857caaa8e',1,'Slave']]],
+  ['type',['type',['../classEvent.html#ac721e4f34b3b9a1ae302165412221724',1,'Event']]]
 ];

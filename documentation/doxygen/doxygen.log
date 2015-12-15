@@ -34,6 +34,18 @@ error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ControllerTe
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ServerUnitTests.cpp:10:10: fatal error: 'boost/test/unit_test.hpp' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:17:23: error: unknown type name 'Ip' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:23:17: error: unknown type name 'IP' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:27:33: error: unknown type name 'IP' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:31:17: error: unknown type name 'time_t' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:35:37: error: unknown type name 'time_t' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:47:17: error: unknown type name 'Connection' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:51:36: error: unknown type name 'Connection' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:62:17: error: unknown type name 'IP' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:63:17: error: unknown type name 'time_t' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:65:17: error: unknown type name 'Connection' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.cpp:9:14: error: unknown type name 'Ip' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.cpp:20:8: warning: exception specification in declaration does not match previous declaration [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:1:1: error: expected unqualified-id [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int] [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:6: error: expected ';' after top level declarator [clang]
@@ -73,6 +85,18 @@ error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ControllerTe
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ServerUnitTests.cpp:10:10: fatal error: 'boost/test/unit_test.hpp' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:17:23: error: unknown type name 'Ip' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:23:17: error: unknown type name 'IP' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:27:33: error: unknown type name 'IP' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:31:17: error: unknown type name 'time_t' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:35:37: error: unknown type name 'time_t' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:47:17: error: unknown type name 'Connection' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:51:36: error: unknown type name 'Connection' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:62:17: error: unknown type name 'IP' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:63:17: error: unknown type name 'time_t' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:65:17: error: unknown type name 'Connection' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.cpp:9:14: error: unknown type name 'Ip' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.cpp:20:8: warning: exception specification in declaration does not match previous declaration [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:1:1: error: expected unqualified-id [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int] [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:6: error: expected ';' after top level declarator [clang]
@@ -103,6 +127,10 @@ error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.cpp:18: warning: argument 'std' of command @param is not found in the argument list of AdminServerException::AdminServerExceptionException(std::string s)
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.cpp:18: warning: argument 'string' of command @param is not found in the argument list of AdminServerException::AdminServerExceptionException(std::string s)
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.cpp:18: warning: The following parameters of AdminServerException::AdminServerExceptionException(std::string s) are not documented:
+  parameter 's'
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AgentServer.cpp:19: warning: argument 'std' of command @param is not found in the argument list of AgentServerException::AgentServerException(std::string s)
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AgentServer.cpp:19: warning: argument 'string' of command @param is not found in the argument list of AgentServerException::AgentServerException(std::string s)
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AgentServer.cpp:19: warning: The following parameters of AgentServerException::AgentServerException(std::string s) are not documented:
   parameter 's'
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:25: warning: argument 'T' of command @param is not found in the argument list of BlockingQueue< T >::push_back(const T &element)
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:25: warning: The following parameters of BlockingQueue::push_back(const T &element) are not documented:

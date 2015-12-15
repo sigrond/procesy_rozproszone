@@ -105,6 +105,45 @@ public:
 	}
 };
 
+class MessageFromAgentStrategy : public Strategy
+{
+public:
+    /** \brief obsługa wiadomości od agenta
+     *
+     * \param data message::Message*
+     * \return virtual void
+     *
+     */
+	virtual void doJob(void* data) override
+	{
+		using namespace std;
+		using namespace message;
+		unsigned char category;
+		category=((Message*)data)->getCategory();
+		switch(category)/**< \todo obsługa kategorii */
+		{
+		case HOST:
+			break;
+		case TASK:
+			break;
+		case DEP:
+			break;
+		case FILE:
+			break;
+		case RET:
+			break;
+		case SYN:
+			break;
+		case PING:
+			break;
+		case ERR:
+			break;
+		default:
+			clog<<"Nieznana kategoria wiadomości od agenta: "<<category<<endl;
+		}
+	}
+};
+
 /**< \todo Napisać więcej strategii, jak już będzie wiadomo co mają robić */
 
 

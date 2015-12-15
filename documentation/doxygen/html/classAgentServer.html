@@ -129,22 +129,30 @@ Diagram współpracy dla AgentServer:</div>
 Metody publiczne</h2></td></tr>
 <tr class="memitem:ae00b5d7d78d9786b11a396246710a621"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentServer.html#ae00b5d7d78d9786b11a396246710a621">AgentServer</a> ()</td></tr>
 <tr class="separator:ae00b5d7d78d9786b11a396246710a621"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afae483c3fc2054e138488dec66e7c4e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentServer.html#afae483c3fc2054e138488dec66e7c4e8">listen</a> ()</td></tr>
-<tr class="separator:afae483c3fc2054e138488dec66e7c4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a017ea98e8aabbd95481942762cf4494d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentServer.html#a017ea98e8aabbd95481942762cf4494d">connect</a> (void *who)</td></tr>
-<tr class="separator:a017ea98e8aabbd95481942762cf4494d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb8fd8d61568af65a604af199a9f3afc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentServer.html#afb8fd8d61568af65a604af199a9f3afc">~AgentServer</a> ()</td></tr>
+<tr class="separator:afb8fd8d61568af65a604af199a9f3afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a001e979f72cf3d360d424cea0df70165"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentServer.html#a001e979f72cf3d360d424cea0df70165">listen</a> (<a class="el" href="classSlave.html">Slave</a> *who)</td></tr>
+<tr class="separator:a001e979f72cf3d360d424cea0df70165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a118dad89f6c0aa20e455e5d3d9fbf6fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd">connect</a> (<a class="el" href="classSlave.html">Slave</a> *who, <a class="el" href="classmessage_1_1Message.html">message::Message</a> *m)</td></tr>
+<tr class="separator:a118dad89f6c0aa20e455e5d3d9fbf6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab79904b49f1f80c51b9bfdbde2596d00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentServer.html#ab79904b49f1f80c51b9bfdbde2596d00">setBlockingQueue</a> (<a class="el" href="classBlockingQueue.html">BlockingQueue</a>&lt; <a class="el" href="classEvent.html">Event</a> * &gt; *)</td></tr>
 <tr class="separator:ab79904b49f1f80c51b9bfdbde2596d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57d551fc559b7800a697a84e2a8e4cf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentServer.html#a57d551fc559b7800a697a84e2a8e4cf7">addSlave</a> (<a class="el" href="classIp.html">Ip</a> &amp;ip)</td></tr>
+<tr class="separator:a57d551fc559b7800a697a84e2a8e4cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75068a7f83936d0171b46d5dcb99a7b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentServer.html#a75068a7f83936d0171b46d5dcb99a7b4">listenToAll</a> ()</td></tr>
+<tr class="separator:a75068a7f83936d0171b46d5dcb99a7b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
 <tr class="memitem:a69fbec9452ad2056d585a517f3a36faa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBlockingQueue.html">BlockingQueue</a>&lt; <a class="el" href="classEvent.html">Event</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentServer.html#a69fbec9452ad2056d585a517f3a36faa">blockingQueue</a></td></tr>
 <tr class="separator:a69fbec9452ad2056d585a517f3a36faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92ef83d9d5110a615c2ab9ab3d27a1d8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classSlave.html">Slave</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentServer.html#a92ef83d9d5110a615c2ab9ab3d27a1d8">slaves</a></td></tr>
+<tr class="separator:a92ef83d9d5110a615c2ab9ab3d27a1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>klasa serwera agenta </p>
 
-<p>Definicja w linii <a class="el" href="AgentServer_8hpp_source.html#l00014">14</a> pliku <a class="el" href="AgentServer_8hpp_source.html">AgentServer.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentServer_8hpp_source.html#l00017">17</a> pliku <a class="el" href="AgentServer_8hpp_source.html">AgentServer.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a class="anchor" id="ae00b5d7d78d9786b11a396246710a621"></a>
 <div class="memitem">
@@ -159,56 +167,136 @@ Atrybuty prywatne</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00009">9</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00035">35</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="server_8cpp_source.html#l00023">main()</a>.</p>
+<p>Odwołuje się do <a class="el" href="AgentServer_8cpp_source.html#l00035">AgentServer()</a> i <a class="el" href="AgentServer_8hpp_source.html#l00028">blockingQueue</a>.</p>
+
+<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00035">AgentServer()</a> i <a class="el" href="server_8cpp_source.html#l00023">main()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAgentServer_ae00b5d7d78d9786b11a396246710a621_cgraph.png" border="0" usemap="#classAgentServer_ae00b5d7d78d9786b11a396246710a621_cgraph" alt=""/></div>
+<map name="classAgentServer_ae00b5d7d78d9786b11a396246710a621_cgraph" id="classAgentServer_ae00b5d7d78d9786b11a396246710a621_cgraph">
+</map>
+</div>
+</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAgentServer_ae00b5d7d78d9786b11a396246710a621_icgraph.png" border="0" usemap="#classAgentServer_ae00b5d7d78d9786b11a396246710a621_icgraph" alt=""/></div>
 <map name="classAgentServer_ae00b5d7d78d9786b11a396246710a621_icgraph" id="classAgentServer_ae00b5d7d78d9786b11a396246710a621_icgraph">
-<area shape="rect" id="node2" href="server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="224,5,275,32"/></map>
+<area shape="rect" id="node2" href="server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="224,29,275,56"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
-<a class="anchor" id="a017ea98e8aabbd95481942762cf4494d"></a>
+<a class="anchor" id="afb8fd8d61568af65a604af199a9f3afc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AgentServer::connect </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>who</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>metoda łącząca się z agentem </p>
-
-<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00014">14</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="afae483c3fc2054e138488dec66e7c4e8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AgentServer::listen </td>
+          <td class="memname">AgentServer::~AgentServer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00042">42</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a57d551fc559b7800a697a84e2a8e4cf7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AgentServer::addSlave </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classIp.html">Ip</a> &amp;&#160;</td>
+          <td class="paramname"><em>ip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00074">74</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a118dad89f6c0aa20e455e5d3d9fbf6fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AgentServer::connect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSlave.html">Slave</a> *&#160;</td>
+          <td class="paramname"><em>who</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmessage_1_1Message.html">message::Message</a> *&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>metoda łącząca się z agentem </p>
+<p>&lt;</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Do zrobienia:</a></b></dt><dd>dodać jakiś zabezpieczeń bo groźnie to wygląda </dd></dl>
+
+<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00057">57</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a001e979f72cf3d360d424cea0df70165"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AgentServer::listen </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSlave.html">Slave</a> *&#160;</td>
+          <td class="paramname"><em>who</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 <p>metoda nasłuchująca na połączenie z agentów. może być zrealizowana przez fork-server </p>
 
-<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00019">19</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00062">62</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a75068a7f83936d0171b46d5dcb99a7b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AgentServer::listenToAll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>&lt;</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Do zrobienia:</a></b></dt><dd>? wątki tutaj potrzebne? </dd></dl>
+<p>&lt;</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Do zrobienia:</a></b></dt><dd>jakiś if, bo jak się doda nowy to co </dd></dl>
+
+<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00083">83</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
 
 </div>
 </div>
@@ -226,11 +314,11 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00024">24</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00069">69</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="AgentServer_8hpp_source.html#l00022">blockingQueue</a>.</p>
+<p>Odwołuje się do <a class="el" href="AgentServer_8hpp_source.html#l00028">blockingQueue</a>.</p>
 
-<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00165">Controller::setup()</a>.</p>
+<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00166">Controller::setup()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -262,9 +350,33 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="AgentServer_8hpp_source.html#l00022">22</a> pliku <a class="el" href="AgentServer_8hpp_source.html">AgentServer.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentServer_8hpp_source.html#l00028">28</a> pliku <a class="el" href="AgentServer_8hpp_source.html">AgentServer.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00024">setBlockingQueue()</a>.</p>
+<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00035">AgentServer()</a> i <a class="el" href="AgentServer_8cpp_source.html#l00069">setBlockingQueue()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a92ef83d9d5110a615c2ab9ab3d27a1d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classSlave.html">Slave</a>*&gt; AgentServer::slaves</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="AgentServer_8hpp_source.html#l00029">29</a> pliku <a class="el" href="AgentServer_8hpp_source.html">AgentServer.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="server_8cpp_source.html#l00023">main()</a>.</p>
 
 </div>
 </div>
@@ -278,7 +390,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classAgentServer.html">AgentServer</a></li>
-    <li class="footer">Wygenerowano Wt, 15 gru 2015 18:20:48 dla LOTC programem
+    <li class="footer">Wygenerowano Wt, 15 gru 2015 23:10:22 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
