@@ -1,0 +1,25 @@
+var annotated =
+[
+    [ "AutoVersion", "namespaceAutoVersion.html", null ],
+    [ "message", "namespacemessage.html", "namespacemessage" ],
+    [ "AdminServer", "classAdminServer.html", "classAdminServer" ],
+    [ "AdminServerException", "structAdminServerException.html", "structAdminServerException" ],
+    [ "AgentClient", "classAgentClient.html", "classAgentClient" ],
+    [ "AgentServer", "classAgentServer.html", "classAgentServer" ],
+    [ "badIpException", "classbadIpException.html", "classbadIpException" ],
+    [ "BlockingQueue", "classBlockingQueue.html", "classBlockingQueue" ],
+    [ "Connection", "classConnection.html", "classConnection" ],
+    [ "ConsoleClient", "classConsoleClient.html", "classConsoleClient" ],
+    [ "ConsoleServer", "classConsoleServer.html", "classConsoleServer" ],
+    [ "Controller", "classController.html", "classController" ],
+    [ "ControllerException", "structControllerException.html", "structControllerException" ],
+    [ "Event", "classEvent.html", "classEvent" ],
+    [ "Ip", "classIp.html", "classIp" ],
+    [ "Ipv4", "classIpv4.html", "classIpv4" ],
+    [ "Ipv6", "classIpv6.html", "classIpv6" ],
+    [ "MessageFromAdminStrategy", "classMessageFromAdminStrategy.html", "classMessageFromAdminStrategy" ],
+    [ "Model", "classModel.html", "classModel" ],
+    [ "ShutDownStrategy", "classShutDownStrategy.html", "classShutDownStrategy" ],
+    [ "Strategy", "classStrategy.html", "classStrategy" ],
+    [ "TestStrategy", "classTestStrategy.html", "classTestStrategy" ]
+];

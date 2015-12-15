@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>LOTC: Protokół komunikacyjny serwer-agent</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">LOTC
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_application_protocol_readme.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Protokół komunikacyjny serwer-agent </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>To jest wstępny i ogólnikowy projekt protokołu. Feedback bardzo pożądany.</p>
+<h3>Przesyłanie plików</h3>
+<p><b>WAŻNE: sugeruję, byśmy nie utrudniali sobie życia i nie zagłębiali się zbytnio w bawienie się plikami zadania.</b></p>
+<ul>
+<li>Pliki dodajemy siłą wyższej konieczności każdy osobno.</li>
+<li>Konflikt nazw w obrębie zadania = nadpisanie.</li>
+<li>Próba dodania więcej niż jednego pliku głównego = usunięcie starego pliku głównego.</li>
+<li>Nie żądamy usuwania pojedynczych plików, tylko całe zadania. Ludobójstwo może nie jest eleganckie, ale za to mniej w nim zastanawiania się.</li>
+<li>Żadnych edycji plików. Zadanie jest z zalożenia gotowe i ostateczne.</li>
+</ul>
+<p>Innymi słowy, po załadowaniu zadania, możemy je co najwyżej usunąć. Teoretycznie możliwe dodanie kolejnych plików nie powinno wystąpić, patrz punkt wyżej. Tak, jest to prymitywne, ale nie mamy czasu na budowanie pelnoprawnego protokołu transmisji plików.</p>
+<p>Jeśli będziemy cierpieć na nadmiary czasu, możemy się tym pobawić. </p>
+<hr/>
+<p> Poniższa specyfikacja zahacza o implementację agenta, proszę to traktować jako wyjaśnienie idei oraz propozycję.</p>
+<ul>
+<li>Serwer każdemu zadaniu przypisuje unikalny w obrębie całego systemu identyfikator</li>
+<li>Zadanie składa się z głównego pliku wykonywalnego i ewentualnych plików pomocniczych</li>
+<li>Pliki pomocnicze mogą być dowolnymi plikami, zawierającymi dane lub inne programy</li>
+<li>Pliki nie muszą mieć unikalnych nazw w obrębie całego systemu</li>
+<li>Protokół wykorzystuje flagę binarną do zaznaczenia, czy dany plik jest plikiem głównym czy plikiem pomocniczym</li>
+<li>Jedno zadanie ma dokładnie jeden plik główny</li>
+<li>Po otrzymaniu pliku należącego do zadania o identyfikatorze <em>id</em>, agent umieszcza go w folderze <em>id</em> (jeśli nie ma folderu, tworzy go)</li>
+<li>Agent zapamiętuje powiązanie <em>id</em> -&gt; plik główny zadania <em>id</em></li>
+<li>W sposób oczywisty istnieje bijekcja zbioru identyfikatorów na zbiór głównych plików wykonywalnych</li>
+<li>Komunikat "rozpocznij zadanie *id*" jest realizowany poprzez wejście do folderu <em>id</em> i uruchomienie powiązanego z zadaniem <em>id</em> pliku głównego</li>
+<li>Program główny zadania dowolnie wykorzystuje inne pliki z folderu tegoż zadania</li>
+</ul>
+<p>Taka organizacja ma następujące zalety:</p>
+<ul>
+<li>pełne i wyraźne rozdzielenie plików zadań eliminujące obostrzenia odnośnie powtarzalności nazw plików między zadaniami</li>
+<li>łatwe zarządzanie zadaniami (rozumianymi jako zbiór wielu plików)</li>
+<li>serwer musi przechowywać tylko identyfikator zadania - nędzne 4 bajty (oczywiście może przechowywać więcej informacji, jeśli to uprości nam życie)</li>
+</ul>
+<p>Pola:</p>
+<ul>
+<li>Kod operacji dodawania [8 bitów]</li>
+<li>Flaga typu pliku: główny/pomocniczy [1 bit]</li>
+<li>Długość pola nazwy pliku (max 128 bajtów) [7 bitów]</li>
+<li>Suma kontrolna nazwy + pliku [16 bitów]</li>
+<li>ID zadania [32 bity]</li>
+<li>Dlugość pola danych (maksimum wybadam później) [32 bity]</li>
+<li>Nazwa pliku [max 2^7 bajtów]</li>
+<li>Dane (plik) [max 2^32 bajtów]</li>
+</ul>
+<h3>Zadania</h3>
+<p>Tu sprawa jest prostsza:</p>
+<ul>
+<li>serwer wysyła identyfikator zadania i polecenie (+ ewentualny timestamp dla zadań odłożonych w czasie)</li>
+<li>agent raportuje sukces/błąd</li>
+<li>po zakończeniu wykonania zadania agent wysyła wynik, serwer odpowiada potwierdzeniem otrzymania</li>
+</ul>
+<p>Ustalenie: timestamp mniejszy niż aktualny czas oznacza wykonanie natychmiast; zatem oczywistym zdaje się polecenia do wykonania natychmiast wysyłać z timestamp = 0.</p>
+<p>Pola:</p>
+<ul>
+<li>Kod polecenia [8 bitów]</li>
+<li>Wypełniacz [24 bity] // jeszcze pomyślę, jak to zagospodarować</li>
+<li>ID zadania [32 bity]</li>
+<li>Timestamp [32 bity]</li>
+</ul>
+<h3>Responsywność agentów</h3>
+<p>Trzeba okresowo badać, czy agent żyje. Można to zrealizować poprzez mechanizm zapytania-odpowiedzi, albo po prostu kazać agentom okresowo wysyłać serwerowi komunikat o tym, że żyją.</p>
+<p>Zapytanie od serwera:</p>
+<ul>
+<li>kod "czy żyjesz?" [8 bitów]</li>
+</ul>
+<p>Odpowiedź/raport okresowy klienta:</p>
+<ul>
+<li>kod "tak, żyję" [8 bitów]</li>
+</ul>
+<p>Kodu "nie, nie zyję" nie przewidujemy.</p>
+<h3>Synchronizacja</h3>
+<p>Synchronizacja będzie realizowana poprzez wewnętrznego klienta NTP.</p>
+<p>Serwer może wysłać do agenta żądanie synchronizacji czasu:</p>
+<p>Pola:</p>
+<ul>
+<li>kod SYN [8 bitów]</li>
+</ul>
+<p>Istotne sugestie co do implementacji:</p>
+<ul>
+<li>nie zmieniamy zegara systemowego (co by wymagało uprawnień root), tylko wyliczamy poprawkę na czas systemowy</li>
+<li>serwer powinien synchronizować czas natychmiast po uruchomieniu oraz wysyłać polecenie SYN do agenta natychmiast po jego rejestracji</li>
+<li>serwer i agenci powinni okresowo automatycznie się synchronizować</li>
+</ul>
+<h3>Raportowanie</h3>
+<p><b>Serwer po wydaniu jakiejkolwiek komendy czeka na raport i nie daje innych poleceń danemu agentowi dopóki nie dostanie odpowiedzi</b></p>
+<p>W wypadku timeoutu serwer wysyła zapytanie "czy żyjesz?". Trzykrotne niepowodzenie oznacza, że agent jest MIA i trzeba przenieść zadanie gdzie indziej.</p>
+<p>Raportowanie:</p>
+<ul>
+<li>Kod raportu [8 bitów]</li>
+</ul>
+<h3>Przesyłanie wyniku zadania</h3>
+<p>Tu jest mały problem, bo nie wiadomo zbytnio, co te zadania mają robić, jak mają być interpretowane wyniki. Opracowałem taki uniwersalny schemat:</p>
+<p>Pola:</p>
+<ul>
+<li>Kod return [8 bitów]</li>
+<li>Exit code [8 bitów]</li>
+<li>Zwracany typ [8 bitów]</li>
+<li>Wypełniacz [8 bitów]</li>
+<li>ID zadania [32 bity]</li>
+<li>Zwracana wartość</li>
+</ul>
+<p>Zwracana wartość może mieć następujące postacie:</p>
+<p>dla exit code != 0:</p>
+<ul>
+<li>Nic</li>
+</ul>
+<p>przy zwracaniu typu prostego (liczby)</p>
+<ul>
+<li>Liczba [32-64 bitów]</li>
+</ul>
+<p>przy zwracaniu innych danych:</p>
+<ul>
+<li>Długość pola danych [32 bity]</li>
+<li>Dane [max 2^32 bajtów]</li>
+</ul>
+<p>Serwer odpowiada raportem otrzymania danych:</p>
+<ul>
+<li>Kod odpowiedzi [8 bit]</li>
+</ul>
+<h3>Kody komunikatów</h3>
+<p>Ośmiobitowy kod jest podzielony na trzy sekcje:</p>
+<ul>
+<li>kategoria [3 bity]</li>
+<li>podkategoria [3 bity]</li>
+<li>stan [2 bity]</li>
+</ul>
+<p><b>Kategorie:</b></p>
+<table class="doxtable">
+<tr>
+<th>Kod </th><th>Kategoria </th><th>Opis  </th></tr>
+<tr>
+<td>0 </td><td>START </td><td>Rejestarcja agenta </td></tr>
+<tr>
+<td>1 </td><td>FILE </td><td>Przesyłanie pliku </td></tr>
+<tr>
+<td>2 </td><td>TASK </td><td>Interakcja z zadaniem </td></tr>
+<tr>
+<td>3 </td><td>ALIVE </td><td>Sprawdzanie responsywności </td></tr>
+<tr>
+<td>4 </td><td>SYNC </td><td>Synchronizacja </td></tr>
+<tr>
+<td>5 </td><td>RET </td><td>Zwracanie wartości </td></tr>
+<tr>
+<td>6 </td><td>END </td><td>Kończenie pracy agneta </td></tr>
+<tr>
+<td>7 </td><td>PERR </td><td>Błąd protokołu </td></tr>
+</table>
+<p><b>Podkategorie</b></p>
+<p>TASK:</p>
+<table class="doxtable">
+<tr>
+<th>Kod </th><th>Podkategoria </th><th>Opis  </th></tr>
+<tr>
+<td>0 </td><td>ADD </td><td>Dodaj zadanie </td></tr>
+<tr>
+<td>1 </td><td>RM </td><td>Usuń zadanie </td></tr>
+<tr>
+<td>2 </td><td>RUN </td><td>Wykonaj zadanie </td></tr>
+<tr>
+<td>3 </td><td>KILL </td><td>Zakończ zadanie </td></tr>
+<tr>
+<td>4 </td><td>STOP </td><td>Wstrzymaj zadanie </td></tr>
+<tr>
+<td>5 </td><td>CONT </td><td>Kontynuuj zadanie </td></tr>
+<tr>
+<td>6 </td><td>x </td><td>[zabroniony] </td></tr>
+<tr>
+<td>7 </td><td>x </td><td>[zabroniony] </td></tr>
+</table>
+<p>ERR:</p>
+<table class="doxtable">
+<tr>
+<th>Kod </th><th>Podkategoria </th><th>Opis  </th></tr>
+<tr>
+<td>0 </td><td>HEAD </td><td>Błędny nagłówek </td></tr>
+<tr>
+<td>1 </td><td>LGTH </td><td>Błędna długość </td></tr>
+<tr>
+<td>2 </td><td>CSUM </td><td>Błędna suma kontrolna </td></tr>
+<tr>
+<td>3 </td><td>x </td><td>[zabroniony] </td></tr>
+<tr>
+<td>4 </td><td>x </td><td>[zabroniony] </td></tr>
+<tr>
+<td>5 </td><td>x </td><td>[zabroniony] </td></tr>
+<tr>
+<td>6 </td><td>x </td><td>[zabroniony] </td></tr>
+<tr>
+<td>7 </td><td>OTH </td><td>Inny błąd </td></tr>
+</table>
+<p>dla pozostałych kategorii:</p>
+<table class="doxtable">
+<tr>
+<th>Kod </th><th>Podkategoria </th><th>Opis  </th></tr>
+<tr>
+<td>0 </td><td>- </td><td>Domyślna podkategotia </td></tr>
+<tr>
+<td>1 </td><td>x </td><td>[zabroniony] </td></tr>
+<tr>
+<td>2 </td><td>x </td><td>[zabroniony] </td></tr>
+<tr>
+<td>3 </td><td>x </td><td>[zabroniony] </td></tr>
+<tr>
+<td>4 </td><td>x </td><td>[zabroniony] </td></tr>
+<tr>
+<td>5 </td><td>x </td><td>[zabroniony] </td></tr>
+<tr>
+<td>6 </td><td>x </td><td>[zabroniony] </td></tr>
+</table>
+<p><b>Stan:</b></p>
+<table class="doxtable">
+<tr>
+<th>Kod </th><th>Stan </th><th>Opis  </th></tr>
+<tr>
+<td>0 </td><td>REQ </td><td>Polecenie </td></tr>
+<tr>
+<td>1 </td><td>ACK </td><td>Przyjęcie polecenia </td></tr>
+<tr>
+<td>2 </td><td>OK </td><td>Wykonanie polecenia </td></tr>
+<tr>
+<td>3 </td><td>ERR </td><td>Nie wykonano polecenia </td></tr>
+</table>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Wygenerowano Wt, 15 gru 2015 18:20:47 dla LOTC programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

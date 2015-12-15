@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>LOTC: Plik źródłowy AdminServer.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">LOTC
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('AdminServer_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">AdminServer.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="AdminServer_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/** \file AdminServer.cpp</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * \author Tomasz Jakubczyk</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * \brief plik z implementacjami klasy serwera administratora</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="AdminServer_8hpp.html" title="plik nagłówkowy klasy serwera administratora ">&quot;AdminServer.hpp&quot;</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">exception</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">iostream</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/** \brief Klasa opakowująca exception dla AdminServer</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structAdminServerException.html">   13</a></span>&#160;<span class="keyword">struct</span> <a class="code" href="structAdminServerException.html">AdminServerException</a> : <a class="code" href="structAdminServerException.html">std</a>::<a class="code" href="structAdminServerException.html">exception</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structAdminServerException.html#a56aaeac236570d8e0e2f4f4d2d2af64d">   16</a></span>&#160;        <a class="code" href="structAdminServerException.html#a56aaeac236570d8e0e2f4f4d2d2af64d">std</a>::<a class="code" href="structAdminServerException.html#a56aaeac236570d8e0e2f4f4d2d2af64d">string</a> <a class="code" href="structAdminServerException.html#a56aaeac236570d8e0e2f4f4d2d2af64d">m</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">/** \brief Wygodny kostruktor wyjątku</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">     * \param std::string s komunikat do wyświetlenia</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structAdminServerException.html#a1389d61f70624df1434b8bd6aacdde44">   21</a></span>&#160;        <a class="code" href="structAdminServerException.html#a1389d61f70624df1434b8bd6aacdde44">AdminServerExceptionException</a>(std::string s)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                m=<span class="stringliteral">&quot;AdminServerException: &quot;</span>+s+<span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">/** \brief przeciążona metoda wyświetla nasz komunikat</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">     * \return const char* komunikat</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structAdminServerException.html#a1907196856d89a1f351667d71f1eb331">   28</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="structAdminServerException.html#a1907196856d89a1f351667d71f1eb331">what</a>() <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keywordflow">return</span> m.c_str();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2">   34</a></span>&#160;<a class="code" href="classAdminServer.html">AdminServer</a>::<a class="code" href="classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2">AdminServer</a>() :</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="classAdminServer.html#ae24954d3a143d3b37722da223e848e72">blockingQueue</a>(<span class="keywordtype">nullptr</span>),</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="classAdminServer.html#ad430393c63d11556becdb0c00ccbfa9b">connection</a>(<span class="keywordtype">nullptr</span>),</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="classAdminServer.html#a7d89296fe6c6bdcfcc77b457eff1373c">adminIP</a>(<span class="keywordtype">nullptr</span>)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        #ifdef _DEBUG</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::clog&lt;&lt;<span class="stringliteral">&quot;AdminServer::AdminServer()\n&quot;</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        #endif <span class="comment">// _DEBUG</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        connection=<span class="keyword">new</span> Connection();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classAdminServer.html#aceeccda640d50e75d295b661771caf5d">   45</a></span>&#160;<a class="code" href="classAdminServer.html">AdminServer</a>::<a class="code" href="classAdminServer.html#aceeccda640d50e75d295b661771caf5d">AdminServer</a>(<a class="code" href="classIp.html">Ip</a> &amp;ip) :</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="classAdminServer.html#ae24954d3a143d3b37722da223e848e72">blockingQueue</a>(<span class="keywordtype">nullptr</span>),</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classAdminServer.html#ad430393c63d11556becdb0c00ccbfa9b">connection</a>(<span class="keywordtype">nullptr</span>)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="classAdminServer.html#a7d89296fe6c6bdcfcc77b457eff1373c">adminIP</a>(<span class="keywordtype">nullptr</span>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        #ifdef _DEBUG</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        std::clog&lt;&lt;<span class="stringliteral">&quot;AdminServer::AdminServer(Ip &amp;ip)\n&quot;</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        #endif <span class="comment">// _DEBUG</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        connection=<span class="keyword">new</span> Connection(ip);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classAdminServer.html#a7d89296fe6c6bdcfcc77b457eff1373c">adminIP</a>=&amp;ip;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classAdminServer.html#ae00d7eaa6769aec515dbc06590424fdd">   57</a></span>&#160;<a class="code" href="classAdminServer.html">AdminServer</a>::~<a class="code" href="classAdminServer.html#ae00d7eaa6769aec515dbc06590424fdd">AdminServer</a>()</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        #ifdef _DEBUG</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        std::clog&lt;&lt;<span class="stringliteral">&quot;AdminServer::~AdminServer()\n&quot;</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        #endif <span class="comment">// _DEBUG</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classAdminServer.html#ad430393c63d11556becdb0c00ccbfa9b">connection</a>!=<span class="keywordtype">nullptr</span>)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keyword">delete</span> <a class="code" href="classAdminServer.html#ad430393c63d11556becdb0c00ccbfa9b">connection</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="classAdminServer.html#a7d89296fe6c6bdcfcc77b457eff1373c">adminIP</a>!=<span class="keywordtype">nullptr</span>)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keyword">delete</span> <a class="code" href="classAdminServer.html#a7d89296fe6c6bdcfcc77b457eff1373c">adminIP</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classAdminServer.html#a2c3c374cb8653d62a373735cf316d4e4">   72</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAdminServer.html">AdminServer</a>::<a class="code" href="classAdminServer.html#a2c3c374cb8653d62a373735cf316d4e4">listen</a>()</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        #ifdef _DEBUG</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        std::clog&lt;&lt;<span class="stringliteral">&quot;AdminServer::listen()\n&quot;</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        #endif <span class="comment">// _DEBUG</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="namespacemessage.html">message</a>::<a class="code" href="classmessage_1_1Message.html">Message</a>* m=<span class="keywordtype">nullptr</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        m=<a class="code" href="classAdminServer.html#ad430393c63d11556becdb0c00ccbfa9b">connection</a><a class="code" href="classConnection.html#ad55626cd15f9d0d3b69461b4476fdaa8">-&gt;</a><a class="code" href="classConnection.html#ad55626cd15f9d0d3b69461b4476fdaa8">receive</a><a class="code" href="classConnection.html#ad55626cd15f9d0d3b69461b4476fdaa8">(</a><a class="code" href="classConnection.html#ad55626cd15f9d0d3b69461b4476fdaa8">)</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        blockingQueue-&gt;push_back(<span class="keyword">new</span> Event(MESSAGE_FROM_ADMIN_SERVER,m));</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec">   82</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAdminServer.html">AdminServer</a>::<a class="code" href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec">connect</a>(<a class="code" href="namespacemessage.html">message</a>::<a class="code" href="classmessage_1_1Message.html">Message</a>* m)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="classAdminServer.html#ad430393c63d11556becdb0c00ccbfa9b">connection</a><a class="code" href="classConnection.html#a5ed690ca4a6ccd7032c123f38907ff4b">-&gt;</a><a class="code" href="classConnection.html#a5ed690ca4a6ccd7032c123f38907ff4b">send</a><a class="code" href="classConnection.html#a5ed690ca4a6ccd7032c123f38907ff4b">(</a>*m<a class="code" href="classConnection.html#a5ed690ca4a6ccd7032c123f38907ff4b">)</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classAdminServer.html#a3ecf7c2747f0413d3d58f7a9f4dd7ae2">   87</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAdminServer.html">AdminServer</a>::<a class="code" href="classAdminServer.html#a3ecf7c2747f0413d3d58f7a9f4dd7ae2">setBlockingQueue</a>(<a class="code" href="classBlockingQueue.html#a36cf39573f86b97a30081075a57434d6">BlockingQueue</a>&lt;<a class="code" href="classEvent.html">Event</a>*&gt;* q)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="classAdminServer.html#ae24954d3a143d3b37722da223e848e72">blockingQueue</a>=q;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="ttc" id="classConnection_html_a5ed690ca4a6ccd7032c123f38907ff4b"><div class="ttname"><a href="classConnection.html#a5ed690ca4a6ccd7032c123f38907ff4b">Connection::send</a></div><div class="ttdeci">void send(message::Message &amp;message)</div><div class="ttdoc">Funcja wysyłająca komunikat. </div></div>
+<div class="ttc" id="structAdminServerException_html_a1907196856d89a1f351667d71f1eb331"><div class="ttname"><a href="structAdminServerException.html#a1907196856d89a1f351667d71f1eb331">AdminServerException::what</a></div><div class="ttdeci">const char * what() const noexcept</div><div class="ttdoc">przeciążona metoda wyświetla nasz komunikat </div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8cpp_source.html#l00028">AdminServer.cpp:28</a></div></div>
+<div class="ttc" id="classBlockingQueue_html_a36cf39573f86b97a30081075a57434d6"><div class="ttname"><a href="classBlockingQueue.html#a36cf39573f86b97a30081075a57434d6">BlockingQueue::q</a></div><div class="ttdeci">std::queue&lt; T &gt; q</div><div class="ttdef"><b>Definition:</b> <a href="BlockingQueue_8hpp_source.html#l00035">BlockingQueue.hpp:35</a></div></div>
+<div class="ttc" id="namespacemessage_html"><div class="ttname"><a href="namespacemessage.html">message</a></div><div class="ttdef"><b>Definition:</b> <a href="Message_8hpp_source.html#l00031">Message.hpp:31</a></div></div>
+<div class="ttc" id="classConnection_html_ad55626cd15f9d0d3b69461b4476fdaa8"><div class="ttname"><a href="classConnection.html#ad55626cd15f9d0d3b69461b4476fdaa8">Connection::receive</a></div><div class="ttdeci">message::Message * receive()</div><div class="ttdoc">Funkcja oczekująca na komunikat od zdalnego hosta. </div></div>
+<div class="ttc" id="classAdminServer_html_ae00d7eaa6769aec515dbc06590424fdd"><div class="ttname"><a href="classAdminServer.html#ae00d7eaa6769aec515dbc06590424fdd">AdminServer::~AdminServer</a></div><div class="ttdeci">~AdminServer()</div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8cpp_source.html#l00057">AdminServer.cpp:57</a></div></div>
+<div class="ttc" id="classmessage_1_1Message_html"><div class="ttname"><a href="classmessage_1_1Message.html">message::Message</a></div><div class="ttdef"><b>Definition:</b> <a href="Message_8hpp_source.html#l00034">Message.hpp:34</a></div></div>
+<div class="ttc" id="classAdminServer_html_ae24954d3a143d3b37722da223e848e72"><div class="ttname"><a href="classAdminServer.html#ae24954d3a143d3b37722da223e848e72">AdminServer::blockingQueue</a></div><div class="ttdeci">BlockingQueue&lt; Event * &gt; * blockingQueue</div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8hpp_source.html#l00047">AdminServer.hpp:47</a></div></div>
+<div class="ttc" id="classAdminServer_html_a54b8d8388cf90eacb049daa9ae08bac2"><div class="ttname"><a href="classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2">AdminServer::AdminServer</a></div><div class="ttdeci">AdminServer()</div><div class="ttdoc">Konstruktor bez podania adresu administratora. Oznacza to, że czekamy na pierwsze zapytanie z konsoli...</div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8cpp_source.html#l00034">AdminServer.cpp:34</a></div></div>
+<div class="ttc" id="classAdminServer_html_ae0cc7705054a63f1ee974ba30ef9a5ec"><div class="ttname"><a href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec">AdminServer::connect</a></div><div class="ttdeci">void connect(message::Message *m)</div><div class="ttdoc">Metoda łącząca się z konsolą administratora. Wysyła wiadomość. </div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8cpp_source.html#l00082">AdminServer.cpp:82</a></div></div>
+<div class="ttc" id="classIp_html"><div class="ttname"><a href="classIp.html">Ip</a></div><div class="ttdoc">Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8hpp_source.html#l00020">Ip.hpp:20</a></div></div>
+<div class="ttc" id="classAdminServer_html_aceeccda640d50e75d295b661771caf5d"><div class="ttname"><a href="classAdminServer.html#aceeccda640d50e75d295b661771caf5d">AdminServer::AdminServer</a></div><div class="ttdeci">AdminServer(Ip &amp;ip)</div><div class="ttdoc">Konstruktor z podaniem adresu administratora. </div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8cpp_source.html#l00045">AdminServer.cpp:45</a></div></div>
+<div class="ttc" id="classAdminServer_html_a2c3c374cb8653d62a373735cf316d4e4"><div class="ttname"><a href="classAdminServer.html#a2c3c374cb8653d62a373735cf316d4e4">AdminServer::listen</a></div><div class="ttdeci">void listen()</div><div class="ttdoc">Metoda nasłuchująca na połączenie z konsoli administratora. Odbiera wiadomość i wrzuca w zdarzeniu do...</div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8cpp_source.html#l00072">AdminServer.cpp:72</a></div></div>
+<div class="ttc" id="classAdminServer_html_ad430393c63d11556becdb0c00ccbfa9b"><div class="ttname"><a href="classAdminServer.html#ad430393c63d11556becdb0c00ccbfa9b">AdminServer::connection</a></div><div class="ttdeci">Connection * connection</div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8hpp_source.html#l00048">AdminServer.hpp:48</a></div></div>
+<div class="ttc" id="structAdminServerException_html"><div class="ttname"><a href="structAdminServerException.html">AdminServerException</a></div><div class="ttdoc">Klasa opakowująca exception dla AdminServer. </div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8cpp_source.html#l00013">AdminServer.cpp:13</a></div></div>
+<div class="ttc" id="structAdminServerException_html_a56aaeac236570d8e0e2f4f4d2d2af64d"><div class="ttname"><a href="structAdminServerException.html#a56aaeac236570d8e0e2f4f4d2d2af64d">AdminServerException::m</a></div><div class="ttdeci">std::string m</div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8cpp_source.html#l00016">AdminServer.cpp:16</a></div></div>
+<div class="ttc" id="classAdminServer_html_a7d89296fe6c6bdcfcc77b457eff1373c"><div class="ttname"><a href="classAdminServer.html#a7d89296fe6c6bdcfcc77b457eff1373c">AdminServer::adminIP</a></div><div class="ttdeci">Ip * adminIP</div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8hpp_source.html#l00049">AdminServer.hpp:49</a></div></div>
+<div class="ttc" id="classEvent_html"><div class="ttname"><a href="classEvent.html">Event</a></div><div class="ttdoc">Klasa reprezentująca zdarzenie. Na rzecz szybkiego uzyskania działania aplikacji rezygnuję z pomysłu ...</div><div class="ttdef"><b>Definition:</b> <a href="Event_8hpp_source.html#l00024">Event.hpp:24</a></div></div>
+<div class="ttc" id="structAdminServerException_html_a1389d61f70624df1434b8bd6aacdde44"><div class="ttname"><a href="structAdminServerException.html#a1389d61f70624df1434b8bd6aacdde44">AdminServerException::AdminServerExceptionException</a></div><div class="ttdeci">AdminServerExceptionException(std::string s)</div><div class="ttdoc">Wygodny kostruktor wyjątku. </div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8cpp_source.html#l00021">AdminServer.cpp:21</a></div></div>
+<div class="ttc" id="classAdminServer_html_a3ecf7c2747f0413d3d58f7a9f4dd7ae2"><div class="ttname"><a href="classAdminServer.html#a3ecf7c2747f0413d3d58f7a9f4dd7ae2">AdminServer::setBlockingQueue</a></div><div class="ttdeci">void setBlockingQueue(BlockingQueue&lt; Event * &gt; *)</div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8cpp_source.html#l00087">AdminServer.cpp:87</a></div></div>
+<div class="ttc" id="classAdminServer_html"><div class="ttname"><a href="classAdminServer.html">AdminServer</a></div><div class="ttdoc">Klasa serwera administratora. Należy się spodziewać raczej asynchronicznego działania. </div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8hpp_source.html#l00017">AdminServer.hpp:17</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_342e7b6bc6a1e66453dad3633c4afb75.html">server</a></li><li class="navelem"><a class="el" href="AdminServer_8cpp.html">AdminServer.cpp</a></li>
+    <li class="footer">Wygenerowano Wt, 15 gru 2015 18:20:45 dla LOTC programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>LOTC: Dokumentacja klasy AdminServer</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">LOTC
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="inherits.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classAdminServer.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="classAdminServer-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy AdminServer</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa serwera administratora. Należy się spodziewać raczej asynchronicznego działania.  
+ <a href="classAdminServer.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="AdminServer_8hpp_source.html">AdminServer.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Diagram współpracy dla AdminServer:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdminServer__coll__graph.png" border="0" usemap="#AdminServer_coll__map" alt="Collaboration graph"/></div>
+<map name="AdminServer_coll__map" id="AdminServer_coll__map">
+<area shape="rect" id="node2" href="classIp.html" title="Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. " alt="" coords="5,171,44,197"/><area shape="rect" id="node3" href="classBlockingQueue.html" title="BlockingQueue\&lt; Event * \&gt;" alt="" coords="68,171,243,197"/><area shape="rect" id="node5" href="classBlockingQueue.html" title="Kolejka blokująca. Dziedziczy po queue. Żeby nie ryzykować użycia niezabezpieczonych wątkowo dziedzic..." alt="" coords="233,81,374,108"/><area shape="rect" id="node7" href="classConnection.html" title="Klasa realizująca połączenie LOTC. " alt="" coords="267,171,353,197"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a54b8d8388cf90eacb049daa9ae08bac2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2">AdminServer</a> ()</td></tr>
+<tr class="memdesc:a54b8d8388cf90eacb049daa9ae08bac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor bez podania adresu administratora. Oznacza to, że czekamy na pierwsze zapytanie z konsoli administratora, a jak już przyjdzie to przyjmujemy jego adres jako adres admina.  <a href="#a54b8d8388cf90eacb049daa9ae08bac2">Więcej...</a><br/></td></tr>
+<tr class="separator:a54b8d8388cf90eacb049daa9ae08bac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceeccda640d50e75d295b661771caf5d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminServer.html#aceeccda640d50e75d295b661771caf5d">AdminServer</a> (<a class="el" href="classIp.html">Ip</a> &amp;ip)</td></tr>
+<tr class="memdesc:aceeccda640d50e75d295b661771caf5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor z podaniem adresu administratora.  <a href="#aceeccda640d50e75d295b661771caf5d">Więcej...</a><br/></td></tr>
+<tr class="separator:aceeccda640d50e75d295b661771caf5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae00d7eaa6769aec515dbc06590424fdd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminServer.html#ae00d7eaa6769aec515dbc06590424fdd">~AdminServer</a> ()</td></tr>
+<tr class="separator:ae00d7eaa6769aec515dbc06590424fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c3c374cb8653d62a373735cf316d4e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminServer.html#a2c3c374cb8653d62a373735cf316d4e4">listen</a> ()</td></tr>
+<tr class="memdesc:a2c3c374cb8653d62a373735cf316d4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda nasłuchująca na połączenie z konsoli administratora. Odbiera wiadomość i wrzuca w zdarzeniu do blockingQueue.  <a href="#a2c3c374cb8653d62a373735cf316d4e4">Więcej...</a><br/></td></tr>
+<tr class="separator:a2c3c374cb8653d62a373735cf316d4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0cc7705054a63f1ee974ba30ef9a5ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec">connect</a> (<a class="el" href="classmessage_1_1Message.html">message::Message</a> *m)</td></tr>
+<tr class="memdesc:ae0cc7705054a63f1ee974ba30ef9a5ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda łącząca się z konsolą administratora. Wysyła wiadomość.  <a href="#ae0cc7705054a63f1ee974ba30ef9a5ec">Więcej...</a><br/></td></tr>
+<tr class="separator:ae0cc7705054a63f1ee974ba30ef9a5ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ecf7c2747f0413d3d58f7a9f4dd7ae2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminServer.html#a3ecf7c2747f0413d3d58f7a9f4dd7ae2">setBlockingQueue</a> (<a class="el" href="classBlockingQueue.html">BlockingQueue</a>&lt; <a class="el" href="classEvent.html">Event</a> * &gt; *)</td></tr>
+<tr class="separator:a3ecf7c2747f0413d3d58f7a9f4dd7ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:ae24954d3a143d3b37722da223e848e72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBlockingQueue.html">BlockingQueue</a>&lt; <a class="el" href="classEvent.html">Event</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminServer.html#ae24954d3a143d3b37722da223e848e72">blockingQueue</a></td></tr>
+<tr class="separator:ae24954d3a143d3b37722da223e848e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad430393c63d11556becdb0c00ccbfa9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConnection.html">Connection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminServer.html#ad430393c63d11556becdb0c00ccbfa9b">connection</a></td></tr>
+<tr class="separator:ad430393c63d11556becdb0c00ccbfa9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d89296fe6c6bdcfcc77b457eff1373c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIp.html">Ip</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminServer.html#a7d89296fe6c6bdcfcc77b457eff1373c">adminIP</a></td></tr>
+<tr class="separator:a7d89296fe6c6bdcfcc77b457eff1373c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa serwera administratora. Należy się spodziewać raczej asynchronicznego działania. </p>
+<p>&lt;</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Do zrobienia:</a></b></dt><dd>potrzebne implementacje <a class="el" href="classConnection.html" title="Klasa realizująca połączenie LOTC. ">Connection</a> </dd></dl>
+
+<p>Definicja w linii <a class="el" href="AdminServer_8hpp_source.html#l00017">17</a> pliku <a class="el" href="AdminServer_8hpp_source.html">AdminServer.hpp</a>.</p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="a54b8d8388cf90eacb049daa9ae08bac2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AdminServer::AdminServer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstruktor bez podania adresu administratora. Oznacza to, że czekamy na pierwsze zapytanie z konsoli administratora, a jak już przyjdzie to przyjmujemy jego adres jako adres admina. </p>
+
+<p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00034">34</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00049">adminIP</a>, <a class="el" href="AdminServer_8hpp_source.html#l00047">blockingQueue</a> i <a class="el" href="AdminServer_8hpp_source.html#l00048">connection</a>.</p>
+
+<p>Odwołania w <a class="el" href="server_8cpp_source.html#l00023">main()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdminServer_a54b8d8388cf90eacb049daa9ae08bac2_icgraph.png" border="0" usemap="#classAdminServer_a54b8d8388cf90eacb049daa9ae08bac2_icgraph" alt=""/></div>
+<map name="classAdminServer_a54b8d8388cf90eacb049daa9ae08bac2_icgraph" id="classAdminServer_a54b8d8388cf90eacb049daa9ae08bac2_icgraph">
+<area shape="rect" id="node2" href="server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="229,5,280,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aceeccda640d50e75d295b661771caf5d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AdminServer::AdminServer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classIp.html">Ip</a> &amp;&#160;</td>
+          <td class="paramname"><em>ip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstruktor z podaniem adresu administratora. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip</td><td><a class="el" href="classIp.html" title="Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. ">Ip</a>&amp; Adres konsoli administratora. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00045">45</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00049">adminIP</a>, <a class="el" href="AdminServer_8hpp_source.html#l00047">blockingQueue</a> i <a class="el" href="AdminServer_8hpp_source.html#l00048">connection</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae00d7eaa6769aec515dbc06590424fdd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AdminServer::~AdminServer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00057">57</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00049">adminIP</a> i <a class="el" href="AdminServer_8hpp_source.html#l00048">connection</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="ae0cc7705054a63f1ee974ba30ef9a5ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AdminServer::connect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmessage_1_1Message.html">message::Message</a> *&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda łącząca się z konsolą administratora. Wysyła wiadomość. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td><a class="el" href="classmessage_1_1Message.html">message::Message</a>* Wiadomość do wysłania. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+
+<p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00082">82</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00048">connection</a> i <a class="el" href="classConnection.html#a5ed690ca4a6ccd7032c123f38907ff4b">Connection::send()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdminServer_ae0cc7705054a63f1ee974ba30ef9a5ec_cgraph.png" border="0" usemap="#classAdminServer_ae0cc7705054a63f1ee974ba30ef9a5ec_cgraph" alt=""/></div>
+<map name="classAdminServer_ae0cc7705054a63f1ee974ba30ef9a5ec_cgraph" id="classAdminServer_ae0cc7705054a63f1ee974ba30ef9a5ec_cgraph">
+<area shape="rect" id="node2" href="classConnection.html#a5ed690ca4a6ccd7032c123f38907ff4b" title="Funcja wysyłająca komunikat. " alt="" coords="203,5,325,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2c3c374cb8653d62a373735cf316d4e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AdminServer::listen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda nasłuchująca na połączenie z konsoli administratora. Odbiera wiadomość i wrzuca w zdarzeniu do blockingQueue. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+
+<p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00072">72</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00048">connection</a> i <a class="el" href="classConnection.html#ad55626cd15f9d0d3b69461b4476fdaa8">Connection::receive()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdminServer_a2c3c374cb8653d62a373735cf316d4e4_cgraph.png" border="0" usemap="#classAdminServer_a2c3c374cb8653d62a373735cf316d4e4_cgraph" alt=""/></div>
+<map name="classAdminServer_a2c3c374cb8653d62a373735cf316d4e4_cgraph" id="classAdminServer_a2c3c374cb8653d62a373735cf316d4e4_cgraph">
+<area shape="rect" id="node2" href="classConnection.html#ad55626cd15f9d0d3b69461b4476fdaa8" title="Funkcja oczekująca na komunikat od zdalnego hosta. " alt="" coords="188,5,323,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ecf7c2747f0413d3d58f7a9f4dd7ae2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AdminServer::setBlockingQueue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBlockingQueue.html">BlockingQueue</a>&lt; <a class="el" href="classEvent.html">Event</a> * &gt; *&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00087">87</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00047">blockingQueue</a>.</p>
+
+<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00165">Controller::setup()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdminServer_a3ecf7c2747f0413d3d58f7a9f4dd7ae2_icgraph.png" border="0" usemap="#classAdminServer_a3ecf7c2747f0413d3d58f7a9f4dd7ae2_icgraph" alt=""/></div>
+<map name="classAdminServer_a3ecf7c2747f0413d3d58f7a9f4dd7ae2_icgraph" id="classAdminServer_a3ecf7c2747f0413d3d58f7a9f4dd7ae2_icgraph">
+<area shape="rect" id="node2" href="classController.html#aaff2c0ac01c4d7a6b78718ac8a411c4b" title="Tworzy kolejkę blokującą i podaje wskazanie na nią do serverów i modelu. Odzieliłem tą metodę od star..." alt="" coords="224,13,341,39"/><area shape="rect" id="node3" href="server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="389,13,440,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="a7d89296fe6c6bdcfcc77b457eff1373c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIp.html">Ip</a>* AdminServer::adminIP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>opcjonalne IP admina </p>
+
+<p>Definicja w linii <a class="el" href="AdminServer_8hpp_source.html#l00049">49</a> pliku <a class="el" href="AdminServer_8hpp_source.html">AdminServer.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="AdminServer_8cpp_source.html#l00034">AdminServer()</a> i <a class="el" href="AdminServer_8cpp_source.html#l00057">~AdminServer()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae24954d3a143d3b37722da223e848e72"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classBlockingQueue.html">BlockingQueue</a>&lt;<a class="el" href="classEvent.html">Event</a>*&gt;* AdminServer::blockingQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="AdminServer_8hpp_source.html#l00047">47</a> pliku <a class="el" href="AdminServer_8hpp_source.html">AdminServer.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="AdminServer_8cpp_source.html#l00034">AdminServer()</a> i <a class="el" href="AdminServer_8cpp_source.html#l00087">setBlockingQueue()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad430393c63d11556becdb0c00ccbfa9b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classConnection.html">Connection</a>* AdminServer::connection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="AdminServer_8hpp_source.html#l00048">48</a> pliku <a class="el" href="AdminServer_8hpp_source.html">AdminServer.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="AdminServer_8cpp_source.html#l00034">AdminServer()</a>, <a class="el" href="AdminServer_8cpp_source.html#l00082">connect()</a>, <a class="el" href="AdminServer_8cpp_source.html#l00072">listen()</a> i <a class="el" href="AdminServer_8cpp_source.html#l00057">~AdminServer()</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li><a class="el" href="AdminServer_8hpp_source.html">AdminServer.hpp</a></li>
+<li><a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAdminServer.html">AdminServer</a></li>
+    <li class="footer">Wygenerowano Wt, 15 gru 2015 18:20:48 dla LOTC programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

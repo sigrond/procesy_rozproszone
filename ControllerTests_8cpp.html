@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>LOTC: Dokumentacja pliku ControllerTests.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">LOTC
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('ControllerTests_8cpp.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definicje</a> &#124;
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku ControllerTests.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Plik z testami do klasy <a class="el" href="classController.html" title="klasa kontrolera ">Controller</a>.  
+<a href="#details">Więcej...</a></p>
+<div class="textblock"><code>#include &lt;boost/test/unit_test.hpp&gt;</code><br/>
+<code>#include &quot;<a class="el" href="Controller_8hpp_source.html">Controller.hpp</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="AdminServer_8hpp_source.html">AdminServer.hpp</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="AgentServer_8hpp_source.html">AgentServer.hpp</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="Model_8hpp_source.html">Model.hpp</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="Strategies_8hpp_source.html">Strategies.hpp</a>&quot;</code><br/>
+<code>#include &lt;exception&gt;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla ControllerTests.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="ControllerTests_8cpp__incl.png" border="0" usemap="#ControllerTests_8cpp" alt=""/></div>
+<map name="ControllerTests_8cpp" id="ControllerTests_8cpp">
+<area shape="rect" id="node3" href="Controller_8hpp.html" title="Plik nagłówkowy klasy kontrolera. " alt="" coords="511,155,613,181"/><area shape="rect" id="node4" href="AdminServer_8hpp.html" title="plik nagłówkowy klasy serwera administratora " alt="" coords="661,229,781,256"/><area shape="rect" id="node19" href="AgentServer_8hpp.html" title="plik nagłówkowy serwera klienta / agenta " alt="" coords="397,229,514,256"/><area shape="rect" id="node20" href="Model_8hpp.html" title="plik nagłówkowy klasy modelu " alt="" coords="290,229,373,256"/><area shape="rect" id="node23" href="Strategies_8hpp.html" title="Plik ze wszystkimi strategiami. Z powodu małej złożoności strategii nie wydzielamy osobnych plików na..." alt="" coords="842,80,949,107"/><area shape="rect" id="node5" href="BlockingQueue_8hpp.html" title="plik nagłówkowy klasy kolejki blokującej " alt="" coords="388,304,523,331"/><area shape="rect" id="node11" href="Event_8hpp.html" title="Plik nagłówkowy klasy Event. " alt="" coords="565,304,644,331"/><area shape="rect" id="node21" href="Strategy_8hpp.html" title="Plik nagłówkowy abstrakcyjnej klasy Strategy. " alt="" coords="805,229,901,256"/><area shape="rect" id="node12" href="Connection_8hpp.html" title="../protocol/Connection.hpp" alt="" coords="776,304,951,331"/><area shape="rect" id="node9" href="BlockingQueue_8cpp.html" title="Implementacja metod BlockingQueue. " alt="" coords="471,379,605,405"/><area shape="rect" id="node13" href="Ip_8hpp.html" title="Ip.hpp" alt="" coords="684,453,741,480"/><area shape="rect" id="node15" href="Message_8hpp.html" title="Message.hpp" alt="" coords="827,379,927,405"/><area shape="rect" id="node18" href="MessageCodes_8hpp.html" title="MessageCodes.hpp" alt="" coords="932,453,1069,480"/></map>
+</div>
+</div>
+<p><a href="ControllerTests_8cpp_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definicje</h2></td></tr>
+<tr class="memitem:a139f00d2466d591f60b8d6a73c8273f1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ControllerTests_8cpp.html#a139f00d2466d591f60b8d6a73c8273f1">BOOST_TEST_DYN_LINK</a></td></tr>
+<tr class="separator:a139f00d2466d591f60b8d6a73c8273f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a45c7d89fbe3968a972f9861649e0f129"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ControllerTests_8cpp.html#a45c7d89fbe3968a972f9861649e0f129">BOOST_AUTO_TEST_CASE</a> (Controller_Test_porazki_uruchomienia_z_braku_modulow)</td></tr>
+<tr class="separator:a45c7d89fbe3968a972f9861649e0f129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50b914cba86dd710e0c1831394261b9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ControllerTests_8cpp.html#a50b914cba86dd710e0c1831394261b9b">BOOST_AUTO_TEST_CASE</a> (Test_przetwarzania_komunikatow)</td></tr>
+<tr class="separator:a50b914cba86dd710e0c1831394261b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7963cacadfa4bcca5a2eb5d103c9f59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ControllerTests_8cpp.html#ab7963cacadfa4bcca5a2eb5d103c9f59">BOOST_AUTO_TEST_CASE</a> (Test_metody_triggerShutDown)</td></tr>
+<tr class="separator:ab7963cacadfa4bcca5a2eb5d103c9f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Plik z testami do klasy <a class="el" href="classController.html" title="klasa kontrolera ">Controller</a>. </p>
+<dl class="section author"><dt>Autor</dt><dd>Tomasz Jakubczyk </dd></dl>
+
+<p>Definicja w pliku <a class="el" href="ControllerTests_8cpp_source.html">ControllerTests.cpp</a>.</p>
+</div><h2 class="groupheader">Dokumentacja definicji</h2>
+<a class="anchor" id="a139f00d2466d591f60b8d6a73c8273f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOOST_TEST_DYN_LINK</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="ControllerTests_8cpp_source.html#l00007">7</a> pliku <a class="el" href="ControllerTests_8cpp_source.html">ControllerTests.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a class="anchor" id="a45c7d89fbe3968a972f9861649e0f129"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOST_AUTO_TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">Controller_Test_porazki_uruchomienia_z_braku_modulow&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="ControllerTests_8cpp_source.html#l00022">22</a> pliku <a class="el" href="ControllerTests_8cpp_source.html">ControllerTests.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a50b914cba86dd710e0c1831394261b9b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOST_AUTO_TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">Test_przetwarzania_komunikatow&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="ControllerTests_8cpp_source.html#l00030">30</a> pliku <a class="el" href="ControllerTests_8cpp_source.html">ControllerTests.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab7963cacadfa4bcca5a2eb5d103c9f59"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOST_AUTO_TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">Test_metody_triggerShutDown&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="ControllerTests_8cpp_source.html#l00054">54</a> pliku <a class="el" href="ControllerTests_8cpp_source.html">ControllerTests.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_342e7b6bc6a1e66453dad3633c4afb75.html">server</a></li><li class="navelem"><a class="el" href="ControllerTests_8cpp.html">ControllerTests.cpp</a></li>
+    <li class="footer">Wygenerowano Wt, 15 gru 2015 18:20:47 dla LOTC programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>
