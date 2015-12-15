@@ -58,6 +58,10 @@
 		</Unit>
 		<Unit filename="Strategies.hpp" />
 		<Unit filename="Strategy.hpp" />
+<<<<<<< HEAD
+=======
+		<Unit filename="makeServerUnitTests" />
+>>>>>>> 7661bf8994478896e882062dfb8549938dc2cbf8
 		<Unit filename="makefile" />
 		<Unit filename="server.cpp" />
 		<Unit filename="version.h" />
