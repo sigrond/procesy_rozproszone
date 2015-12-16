@@ -23,6 +23,7 @@ var files =
     ] ],
     [ "BlockingQueueTests.cpp", "BlockingQueueTests_8cpp.html", "BlockingQueueTests_8cpp" ],
     [ "client.cpp", "client_8cpp.html", "client_8cpp" ],
+    [ "Connection.cpp", "Connection_8cpp.html", null ],
     [ "Connection.hpp", "Connection_8hpp.html", [
       [ "Connection", "classConnection.html", "classConnection" ]
     ] ],
@@ -43,6 +44,7 @@ var files =
     ] ],
     [ "ControllerTests.cpp", "ControllerTests_8cpp.html", "ControllerTests_8cpp" ],
     [ "Event.hpp", "Event_8hpp.html", "Event_8hpp" ],
+    [ "Ip.cpp", "Ip_8cpp.html", null ],
     [ "Ip.hpp", "Ip_8hpp.html", [
       [ "Ip", "classIp.html", "classIp" ],
       [ "Ipv4", "classIpv4.html", "classIpv4" ],
@@ -51,7 +53,8 @@ var files =
     ] ],
     [ "application/server/makefile", "application_2server_2makefile.html", null ],
     [ "wireshark/test protocol/application/makefile", "wireshark_2test_01protocol_2application_2makefile.html", null ],
-    [ "message.cpp", "message_8cpp.html", null ],
+    [ "application/protocol/Message.cpp", "application_2protocol_2Message_8cpp.html", null ],
+    [ "wireshark/test protocol/application/Message.cpp", "wireshark_2test_01protocol_2application_2Message_8cpp.html", null ],
     [ "application/protocol/Message.hpp", "application_2protocol_2Message_8hpp.html", [
       [ "Message", "classmessage_1_1Message.html", "classmessage_1_1Message" ],
       [ "hostMessage", "classmessage_1_1hostMessage.html", "classmessage_1_1hostMessage" ],

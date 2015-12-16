@@ -9,11 +9,11 @@ var searchData=
   ['setcontroller',['setController',['../classModel.html#a8e8771cbc09afdf630f4ca833d29b809',1,'Model']]],
   ['setlastcontact',['setLastContact',['../classSlave.html#a27056b83637658ce11e6db3d97d7d703',1,'Slave::setLastContact()'],['../classSlave.html#a94f84a326af17b5fbe5ec4f42e6ca189',1,'Slave::setLastContact(time_t val)']]],
   ['setmodel',['setModel',['../classController.html#a5f9d5a3fc40dd23ecf4b493f22ce94f0',1,'Controller']]],
-  ['setslaveip',['setSlaveIP',['../classSlave.html#a49dd9b559276c477336d0c63b627c223',1,'Slave']]],
+  ['setslaveip',['setSlaveIP',['../classSlave.html#a3332d82ea84ddc81a69cb8a030a46319',1,'Slave']]],
   ['setstate',['setState',['../classSlave.html#a7733aa198c2281b760030cd62915cab8',1,'Slave']]],
   ['settask',['setTask',['../classSlave.html#ac80dabc88a0b32745527fc3d5c5f76c8',1,'Slave']]],
   ['setup',['setup',['../classController.html#aaff2c0ac01c4d7a6b78718ac8a411c4b',1,'Controller']]],
   ['slave',['Slave',['../classSlave.html#a4a5fa6347b8a8504212fb9647fc5d21e',1,'Slave']]],
   ['start',['start',['../classAgentClient.html#af0e975638976932e9ab31c654843717e',1,'AgentClient::start()'],['../classConsoleClient.html#a416302ce226015ef7bdf6eef49ec6aa4',1,'ConsoleClient::start()'],['../classController.html#ad535ad74055e645b7f44b7feeb4e82a8',1,'Controller::start()']]],
-  ['synmessage',['synMessage',['../classmessage_1_1synMessage.html#a7da472f5b327dba38b816506412d2fee',1,'message::synMessage']]]
+  ['synmessage',['synMessage',['../classmessage_1_1synMessage.html#adc773263592bfcd5ae421c8a476b7461',1,'message::synMessage']]]
 ];

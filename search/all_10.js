@@ -13,7 +13,7 @@ var searchData=
   ['setcontroller',['setController',['../classModel.html#a8e8771cbc09afdf630f4ca833d29b809',1,'Model']]],
   ['setlastcontact',['setLastContact',['../classSlave.html#a27056b83637658ce11e6db3d97d7d703',1,'Slave::setLastContact()'],['../classSlave.html#a94f84a326af17b5fbe5ec4f42e6ca189',1,'Slave::setLastContact(time_t val)']]],
   ['setmodel',['setModel',['../classController.html#a5f9d5a3fc40dd23ecf4b493f22ce94f0',1,'Controller']]],
-  ['setslaveip',['setSlaveIP',['../classSlave.html#a49dd9b559276c477336d0c63b627c223',1,'Slave']]],
+  ['setslaveip',['setSlaveIP',['../classSlave.html#a3332d82ea84ddc81a69cb8a030a46319',1,'Slave']]],
   ['setstate',['setState',['../classSlave.html#a7733aa198c2281b760030cd62915cab8',1,'Slave']]],
   ['settask',['setTask',['../classSlave.html#ac80dabc88a0b32745527fc3d5c5f76c8',1,'Slave']]],
   ['setup',['setup',['../classController.html#aaff2c0ac01c4d7a6b78718ac8a411c4b',1,'Controller']]],
@@ -23,8 +23,8 @@ var searchData=
   ['slave',['Slave',['../classSlave.html',1,'Slave'],['../classSlave.html#a4a5fa6347b8a8504212fb9647fc5d21e',1,'Slave::Slave()']]],
   ['slave_2ecpp',['Slave.cpp',['../Slave_8cpp.html',1,'']]],
   ['slave_2ehpp',['Slave.hpp',['../Slave_8hpp.html',1,'']]],
-  ['slaveip',['slaveIP',['../classSlave.html#a0690623ce3ee20e583efac29aba356e0',1,'Slave']]],
-  ['slaves',['slaves',['../classAgentServer.html#a92ef83d9d5110a615c2ab9ab3d27a1d8',1,'AgentServer']]],
+  ['slaveip',['slaveIP',['../classSlave.html#a19d385860a1b9743db1374e0cdf2e9f2',1,'Slave']]],
+  ['slaves',['slaves',['../classAgentServer.html#a3b8ec30077d0b9dec0d855bd5f54f706',1,'AgentServer']]],
   ['start',['start',['../classAgentClient.html#af0e975638976932e9ab31c654843717e',1,'AgentClient::start()'],['../classConsoleClient.html#a416302ce226015ef7bdf6eef49ec6aa4',1,'ConsoleClient::start()'],['../classController.html#ad535ad74055e645b7f44b7feeb4e82a8',1,'Controller::start()']]],
   ['state',['state',['../classSlave.html#ad805a5c152d6fc50231a5859fb94c228',1,'Slave::state()'],['../namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063',1,'message::State()']]],
   ['status',['STATUS',['../namespaceAutoVersion.html#acb58e6df1058868fe3e780122ab30ef1',1,'AutoVersion']]],
@@ -37,5 +37,5 @@ var searchData=
   ['subtract',['SUBTRACT',['../classTestMessage.html#af8a868ce511495fe4020f7a5b380112ca289340a4b7b8933b2cd55d14f1b9a152',1,'TestMessage']]],
   ['syn',['SYN',['../namespacemessage.html#ae332e93affac4506495c232e3f8a2be3abab6eed0f7cd8bd721e728003b63b54d',1,'message']]],
   ['synmessage',['synMessage',['../classmessage_1_1synMessage.html',1,'message']]],
-  ['synmessage',['synMessage',['../classmessage_1_1synMessage.html#a7da472f5b327dba38b816506412d2fee',1,'message::synMessage']]]
+  ['synmessage',['synMessage',['../classmessage_1_1synMessage.html#adc773263592bfcd5ae421c8a476b7461',1,'message::synMessage']]]
 ];

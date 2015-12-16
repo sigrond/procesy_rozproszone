@@ -7,7 +7,7 @@ var searchData=
   ['e_5foth',['E_OTH',['../namespacemessage.html#a9d151a554ab5f74cb8dc30877e8538a4a76fe4483ac7b29530921e751bec49efe',1,'message']]],
   ['e_5ftask',['E_TASK',['../namespacemessage.html#a9d151a554ab5f74cb8dc30877e8538a4a21612a01bbf4ca2f111ec6a09ceb8e3f',1,'message']]],
   ['err',['ERR',['../namespacemessage.html#ae332e93affac4506495c232e3f8a2be3acd22bad976363fdd1bfbf6759fede482',1,'message::ERR()'],['../namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063acd22bad976363fdd1bfbf6759fede482',1,'message::ERR()']]],
-  ['errmessage',['errMessage',['../classmessage_1_1errMessage.html#a493ce4a0aa3ab47ad7c9c8aec756cd00',1,'message::errMessage::errMessage(ErrSub sub, State state, unsigned char errCode)'],['../classmessage_1_1errMessage.html#aae75f33d4d51b767992a47340a397dae',1,'message::errMessage::errMessage(State state)']]],
+  ['errmessage',['errMessage',['../classmessage_1_1errMessage.html#ae1acb4a532d8a0d4cfb982f0617357ad',1,'message::errMessage::errMessage(ErrSub sub, State state, unsigned char errCode)'],['../classmessage_1_1errMessage.html#a798fd4f2b295b29ad640b536eea43020',1,'message::errMessage::errMessage(State state)']]],
   ['errmessage',['errMessage',['../classmessage_1_1errMessage.html',1,'message']]],
   ['error',['ERROR',['../classTestMessage.html#af8a868ce511495fe4020f7a5b380112ca275dae9f0430256713e513229f244225',1,'TestMessage']]],
   ['errsub',['ErrSub',['../namespacemessage.html#a9d151a554ab5f74cb8dc30877e8538a4',1,'message']]],

@@ -30,6 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">LOTC
+   &#160;<span id="projectnumber">https://github.com/sigrond/procesy_rozproszone</span>
    </div>
    <div id="projectbrief">Low Orbit Task Cannon</div>
   </td>
@@ -123,7 +124,7 @@ Diagram współpracy dla AgentServer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAgentServer__coll__graph.png" border="0" usemap="#AgentServer_coll__map" alt="Collaboration graph"/></div>
 <map name="AgentServer_coll__map" id="AgentServer_coll__map">
-<area shape="rect" id="node3" href="classSlave.html" title="Klasa odpowiedzialna za przechowywanie informacji o agencie. " alt="" coords="73,204,203,487"/><area shape="rect" id="node4" href="classTask.html" title="Klasa odpowiadająca za przechowywanie informacji o zadaniu. " alt="" coords="5,27,84,119"/><area shape="rect" id="node5" href="classConnection.html" title="Klasa realizująca połączenie LOTC. " alt="" coords="109,5,223,141"/><area shape="rect" id="node6" title="STL class. " alt="" coords="228,307,341,384"/><area shape="rect" id="node9" title="STL class. " alt="" coords="312,586,460,663"/><area shape="rect" id="node11" title="STL class. " alt="" coords="490,307,605,384"/><area shape="rect" id="node8" href="classBlockingQueue.html" title="{BlockingQueue\&lt; Event * \&gt;\n|&#45; m\l&#45; c\l|+ BlockingQueue()\l+ ~BlockingQueue()\l+ push_back()\l+ pop_front()\l}" alt="" coords="303,763,477,899"/><area shape="rect" id="node10" href="classBlockingQueue.html" title="Kolejka blokująca. Dziedziczy po queue. Żeby nie ryzykować użycia niezabezpieczonych wątkowo dziedzic..." alt="" coords="485,549,626,700"/></map>
+<area shape="rect" id="node3" href="classSlave.html" title="Klasa odpowiedzialna za przechowywanie informacji o agencie. " alt="" coords="129,548,259,816"/><area shape="rect" id="node4" href="classTask.html" title="Klasa odpowiadająca za przechowywanie informacji o zadaniu. " alt="" coords="5,309,84,401"/><area shape="rect" id="node5" href="classIp.html" title="Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. " alt="" coords="108,294,216,415"/><area shape="rect" id="node6" title="STL class. " alt="" coords="122,147,202,224"/><area shape="rect" id="node7" title="STL class. " alt="" coords="99,5,225,97"/><area shape="rect" id="node8" href="classConnection.html" title="Klasa realizująca połączenie LOTC. " alt="" coords="241,287,355,423"/><area shape="rect" id="node9" title="STL class. " alt="" coords="356,447,469,524"/><area shape="rect" id="node12" title="STL class. " alt="" coords="420,643,568,721"/><area shape="rect" id="node14" title="STL class. " alt="" coords="598,316,713,393"/><area shape="rect" id="node11" href="classBlockingQueue.html" title="{BlockingQueue\&lt; Event * \&gt;\n|&#45; m\l&#45; c\l|+ BlockingQueue()\l+ ~BlockingQueue()\l+ push_back()\l+ pop_front()\l}" alt="" coords="431,879,605,1015"/><area shape="rect" id="node13" href="classBlockingQueue.html" title="Kolejka blokująca. Dziedziczy po queue. Żeby nie ryzykować użycia niezabezpieczonych wątkowo dziedzic..." alt="" coords="593,607,734,757"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -147,8 +148,8 @@ Metody publiczne</h2></td></tr>
 Atrybuty prywatne</h2></td></tr>
 <tr class="memitem:a69fbec9452ad2056d585a517f3a36faa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBlockingQueue.html">BlockingQueue</a>&lt; <a class="el" href="classEvent.html">Event</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentServer.html#a69fbec9452ad2056d585a517f3a36faa">blockingQueue</a></td></tr>
 <tr class="separator:a69fbec9452ad2056d585a517f3a36faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92ef83d9d5110a615c2ab9ab3d27a1d8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classSlave.html">Slave</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentServer.html#a92ef83d9d5110a615c2ab9ab3d27a1d8">slaves</a></td></tr>
-<tr class="separator:a92ef83d9d5110a615c2ab9ab3d27a1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b8ec30077d0b9dec0d855bd5f54f706"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classSlave.html">Slave</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentServer.html#a3b8ec30077d0b9dec0d855bd5f54f706">slaves</a></td></tr>
+<tr class="separator:a3b8ec30077d0b9dec0d855bd5f54f706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>klasa serwera agenta </p>
@@ -205,7 +206,7 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 <p>przezorny zawsze ubezpieczony :D BTW na pewno gdzieś w okolicach tego regionu kodu będą problemy. więc: </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Do zrobienia:</a></b></dt><dd>testy jednostkowe! :) </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Do zrobienia:</a></b></dt><dd>testy jednostkowe! :) </dd></dl>
 
 <p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00042">42</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
 
@@ -255,9 +256,20 @@ Oto graf wywoływań tej funkcji:</div>
 </div><div class="memdoc">
 <p>metoda łącząca się z agentem </p>
 <p>&lt;</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Do zrobienia:</a></b></dt><dd>dodać jakiś zabezpieczeń bo groźnie to wygląda </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Do zrobienia:</a></b></dt><dd>dodać jakiś zabezpieczeń bo groźnie to wygląda </dd></dl>
 
 <p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00061">61</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="Slave_8hpp_source.html#l00058">Slave::getConnection()</a> i <a class="el" href="Connection_8cpp_source.html#l00026">Connection::send()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAgentServer_a118dad89f6c0aa20e455e5d3d9fbf6fd_cgraph.png" border="0" usemap="#classAgentServer_a118dad89f6c0aa20e455e5d3d9fbf6fd_cgraph" alt=""/></div>
+<map name="classAgentServer_a118dad89f6c0aa20e455e5d3d9fbf6fd_cgraph" id="classAgentServer_a118dad89f6c0aa20e455e5d3d9fbf6fd_cgraph">
+<area shape="rect" id="node2" href="classSlave.html#a828d48eb753fb4fc45ec9c593f60f5fb" title="Slave::getConnection" alt="" coords="200,5,344,32"/><area shape="rect" id="node3" href="classConnection.html#a5ed690ca4a6ccd7032c123f38907ff4b" title="Funcja wysyłająca komunikat. " alt="" coords="211,56,333,83"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -278,6 +290,17 @@ Oto graf wywoływań tej funkcji:</div>
 
 <p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00066">66</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
 
+<p>Odwołuje się do <a class="el" href="Slave_8hpp_source.html#l00058">Slave::getConnection()</a> i <a class="el" href="Connection_8cpp_source.html#l00031">Connection::receive()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAgentServer_a001e979f72cf3d360d424cea0df70165_cgraph.png" border="0" usemap="#classAgentServer_a001e979f72cf3d360d424cea0df70165_cgraph" alt=""/></div>
+<map name="classAgentServer_a001e979f72cf3d360d424cea0df70165_cgraph" id="classAgentServer_a001e979f72cf3d360d424cea0df70165_cgraph">
+<area shape="rect" id="node2" href="classSlave.html#a828d48eb753fb4fc45ec9c593f60f5fb" title="Slave::getConnection" alt="" coords="184,5,328,32"/><area shape="rect" id="node3" href="classConnection.html#af94d1dc8ff2e11a4a5d934347d3556b4" title="Funkcja oczekująca na komunikat od zdalnego hosta. " alt="" coords="189,56,323,83"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a75068a7f83936d0171b46d5dcb99a7b4"></a>
@@ -293,9 +316,9 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 <p>&lt;</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Do zrobienia:</a></b></dt><dd>? wątki tutaj potrzebne? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Do zrobienia:</a></b></dt><dd>? wątki tutaj potrzebne? </dd></dl>
 <p>&lt;</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Do zrobienia:</a></b></dt><dd>jakiś if, bo jak się doda nowy to co </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Do zrobienia:</a></b></dt><dd>jakiś if, bo jak się doda nowy to co </dd></dl>
 
 <p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00087">87</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
 
@@ -357,7 +380,7 @@ Oto graf wywoływań tej funkcji:</div>
 
 </div>
 </div>
-<a class="anchor" id="a92ef83d9d5110a615c2ab9ab3d27a1d8"></a>
+<a class="anchor" id="a3b8ec30077d0b9dec0d855bd5f54f706"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -365,7 +388,7 @@ Oto graf wywoływań tej funkcji:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classSlave.html">Slave</a>*&gt; AgentServer::slaves</td>
+          <td class="memname">std::vector&lt;<a class="el" href="classSlave.html">Slave</a>*&gt;* AgentServer::slaves</td>
         </tr>
       </table>
   </td>
@@ -391,7 +414,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classAgentServer.html">AgentServer</a></li>
-    <li class="footer">Wygenerowano Śr, 16 gru 2015 12:42:50 dla LOTC programem
+    <li class="footer">Wygenerowano Śr, 16 gru 2015 16:28:03 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

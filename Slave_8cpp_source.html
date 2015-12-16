@@ -30,6 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">LOTC
+   &#160;<span id="projectnumber">https://github.com/sigrond/procesy_rozproszone</span>
    </div>
    <div id="projectbrief">Low Orbit Task Cannon</div>
   </td>
@@ -115,11 +116,11 @@ $(document).ready(function(){initNavTree('Slave_8cpp_source.html','');});
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="Slave_8hpp.html" title="Plik nagłówkowy klasy Slave. ">&quot;Slave.hpp&quot;</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classSlave.html#a4a5fa6347b8a8504212fb9647fc5d21e">    9</a></span>&#160;<a class="code" href="classSlave.html">Slave</a>::<a class="code" href="classSlave.html#a4a5fa6347b8a8504212fb9647fc5d21e">Slave</a>(Ip &amp;ip) :</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="classSlave.html#a4a5fa6347b8a8504212fb9647fc5d21e">slaveIP</a>(&amp;<a class="code" href="classSlave.html#a4a5fa6347b8a8504212fb9647fc5d21e">ip</a>),</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classSlave.html#a4a5fa6347b8a8504212fb9647fc5d21e">    9</a></span>&#160;<a class="code" href="classSlave.html">Slave</a>::<a class="code" href="classSlave.html#a4a5fa6347b8a8504212fb9647fc5d21e">Slave</a>(<a class="code" href="classIp.html">Ip</a> &amp;ip) :</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="classSlave.html#a19d385860a1b9743db1374e0cdf2e9f2">slaveIP</a>(&amp;ip),</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="classSlave.html#a4a5fa6347b8a8504212fb9647fc5d21e">lastContact</a>(0),</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="classSlave.html#ad805a5c152d6fc50231a5859fb94c228">state</a>(0),</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="classSlave.html#a4a5fa6347b8a8504212fb9647fc5d21e">connection</a>(<span class="keywordtype">nullptr</span>),</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="classSlave.html#aca025f5ce065f75a797d8a4ad859e408">connection</a>(<span class="keywordtype">nullptr</span>),</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="classSlave.html#a37f03302910768cddadafa3857caaa8e">task</a>(<span class="keywordtype">nullptr</span>),</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="classSlave.html#a4c5de67567bbc7859765e6a2e9b9cf38">removed</a>(<span class="keyword">false</span>)</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
@@ -131,18 +132,21 @@ $(document).ready(function(){initNavTree('Slave_8cpp_source.html','');});
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="comment">//dtor</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
 <div class="ttc" id="classSlave_html_a4a5fa6347b8a8504212fb9647fc5d21e"><div class="ttname"><a href="classSlave.html#a4a5fa6347b8a8504212fb9647fc5d21e">Slave::Slave</a></div><div class="ttdeci">Slave(Ip &amp;ip)</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8cpp_source.html#l00009">Slave.cpp:9</a></div></div>
-<div class="ttc" id="classSlave_html_a4c5de67567bbc7859765e6a2e9b9cf38"><div class="ttname"><a href="classSlave.html#a4c5de67567bbc7859765e6a2e9b9cf38">Slave::removed</a></div><div class="ttdeci">bool removed</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8hpp_source.html#l00070">Slave.hpp:70</a></div></div>
-<div class="ttc" id="classSlave_html_a37f03302910768cddadafa3857caaa8e"><div class="ttname"><a href="classSlave.html#a37f03302910768cddadafa3857caaa8e">Slave::task</a></div><div class="ttdeci">Task * task</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8hpp_source.html#l00069">Slave.hpp:69</a></div></div>
+<div class="ttc" id="classSlave_html_a4c5de67567bbc7859765e6a2e9b9cf38"><div class="ttname"><a href="classSlave.html#a4c5de67567bbc7859765e6a2e9b9cf38">Slave::removed</a></div><div class="ttdeci">bool removed</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8hpp_source.html#l00022">Slave.hpp:22</a></div></div>
+<div class="ttc" id="classSlave_html_a37f03302910768cddadafa3857caaa8e"><div class="ttname"><a href="classSlave.html#a37f03302910768cddadafa3857caaa8e">Slave::task</a></div><div class="ttdeci">Task * task</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8hpp_source.html#l00021">Slave.hpp:21</a></div></div>
+<div class="ttc" id="classIp_html"><div class="ttname"><a href="classIp.html">Ip</a></div><div class="ttdoc">Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8hpp_source.html#l00020">Ip.hpp:20</a></div></div>
+<div class="ttc" id="classSlave_html_a19d385860a1b9743db1374e0cdf2e9f2"><div class="ttname"><a href="classSlave.html#a19d385860a1b9743db1374e0cdf2e9f2">Slave::slaveIP</a></div><div class="ttdeci">Ip * slaveIP</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8hpp_source.html#l00017">Slave.hpp:17</a></div></div>
 <div class="ttc" id="classSlave_html_a99d0908d38f846fae1e7417acf78796b"><div class="ttname"><a href="classSlave.html#a99d0908d38f846fae1e7417acf78796b">Slave::~Slave</a></div><div class="ttdeci">~Slave()</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8cpp_source.html#l00020">Slave.cpp:20</a></div></div>
-<div class="ttc" id="classSlave_html"><div class="ttname"><a href="classSlave.html">Slave</a></div><div class="ttdoc">Klasa odpowiedzialna za przechowywanie informacji o agencie. </div><div class="ttdef"><b>Definition:</b> <a href="Slave_8hpp_source.html#l00013">Slave.hpp:13</a></div></div>
-<div class="ttc" id="classSlave_html_ad805a5c152d6fc50231a5859fb94c228"><div class="ttname"><a href="classSlave.html#ad805a5c152d6fc50231a5859fb94c228">Slave::state</a></div><div class="ttdeci">int state</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8hpp_source.html#l00067">Slave.hpp:67</a></div></div>
+<div class="ttc" id="classSlave_html"><div class="ttname"><a href="classSlave.html">Slave</a></div><div class="ttdoc">Klasa odpowiedzialna za przechowywanie informacji o agencie. </div><div class="ttdef"><b>Definition:</b> <a href="Slave_8hpp_source.html#l00014">Slave.hpp:14</a></div></div>
+<div class="ttc" id="classSlave_html_aca025f5ce065f75a797d8a4ad859e408"><div class="ttname"><a href="classSlave.html#aca025f5ce065f75a797d8a4ad859e408">Slave::connection</a></div><div class="ttdeci">Connection * connection</div><div class="ttdoc">Member variable &quot;connection&quot;. </div><div class="ttdef"><b>Definition:</b> <a href="Slave_8hpp_source.html#l00020">Slave.hpp:20</a></div></div>
+<div class="ttc" id="classSlave_html_ad805a5c152d6fc50231a5859fb94c228"><div class="ttname"><a href="classSlave.html#ad805a5c152d6fc50231a5859fb94c228">Slave::state</a></div><div class="ttdeci">int state</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8hpp_source.html#l00019">Slave.hpp:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_342e7b6bc6a1e66453dad3633c4afb75.html">server</a></li><li class="navelem"><a class="el" href="Slave_8cpp.html">Slave.cpp</a></li>
-    <li class="footer">Wygenerowano Śr, 16 gru 2015 12:42:45 dla LOTC programem
+    <li class="footer">Wygenerowano Śr, 16 gru 2015 16:28:00 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

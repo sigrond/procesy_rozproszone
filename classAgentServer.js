@@ -8,5 +8,5 @@ var classAgentServer =
     [ "listenToAll", "classAgentServer.html#a75068a7f83936d0171b46d5dcb99a7b4", null ],
     [ "setBlockingQueue", "classAgentServer.html#ab79904b49f1f80c51b9bfdbde2596d00", null ],
     [ "blockingQueue", "classAgentServer.html#a69fbec9452ad2056d585a517f3a36faa", null ],
-    [ "slaves", "classAgentServer.html#a92ef83d9d5110a615c2ab9ab3d27a1d8", null ]
+    [ "slaves", "classAgentServer.html#a3b8ec30077d0b9dec0d855bd5f54f706", null ]
 ];
