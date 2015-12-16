@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['send',['send',['../classAgentClient.html#ab79b29db3558100968db3ed531a23a06',1,'AgentClient::send()'],['../classConnection.html#a5ed690ca4a6ccd7032c123f38907ff4b',1,'Connection::send()']]],
+  ['send',['send',['../classAgentClient.html#ab79b29db3558100968db3ed531a23a06',1,'AgentClient::send()'],['../classConnection.html#a5ed690ca4a6ccd7032c123f38907ff4b',1,'Connection::send()'],['../classTestMessage.html#aae1b4b880bdc6b1a6a62621cabf784b6',1,'TestMessage::send()']]],
   ['sendcommand',['sendCommand',['../classConsoleClient.html#ab7f55eaf0fdee145bc6761d194c5d242',1,'ConsoleClient']]],
   ['setadminserver',['setAdminServer',['../classController.html#ad75c2e9788ecb8dba44650747076fe92',1,'Controller']]],
   ['setagentserver',['setAgentServer',['../classController.html#a84a816695c11ec17be45fc5def82c892',1,'Controller']]],

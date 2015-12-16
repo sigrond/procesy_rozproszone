@@ -31,6 +31,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">LOTC
    </div>
+   <div id="projectbrief">Low Orbit Task Cannon</div>
   </td>
  </tr>
  </tbody>
@@ -124,7 +125,7 @@ $(document).ready(function(){initNavTree('Connection_8hpp_source.html','');});
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">CONNECTION_HPP</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="Ip_8hpp.html">&quot;Ip.hpp&quot;</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="Message_8hpp.html">&quot;Message.hpp&quot;</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="application_2protocol_2Message_8hpp.html">&quot;Message.hpp&quot;</a></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/**</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * \brief  Klasa realizująca połączenie LOTC</span></div>
@@ -174,10 +175,10 @@ $(document).ready(function(){initNavTree('Connection_8hpp_source.html','');});
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span> <span class="comment">// CONNECTION_HPP</span></div>
 <div class="ttc" id="classConnection_html_a5ed690ca4a6ccd7032c123f38907ff4b"><div class="ttname"><a href="classConnection.html#a5ed690ca4a6ccd7032c123f38907ff4b">Connection::send</a></div><div class="ttdeci">void send(message::Message &amp;message)</div><div class="ttdoc">Funcja wysyłająca komunikat. </div></div>
 <div class="ttc" id="classConnection_html_a7a702a352caba4f520e2f8df00144355"><div class="ttname"><a href="classConnection.html#a7a702a352caba4f520e2f8df00144355">Connection::Connection</a></div><div class="ttdeci">Connection(const Ipv6 &amp;address=Ipv6())</div><div class="ttdoc">Konstruktor połączeń po IPv6. </div></div>
-<div class="ttc" id="namespacemessage_html"><div class="ttname"><a href="namespacemessage.html">message</a></div><div class="ttdef"><b>Definition:</b> <a href="Message_8hpp_source.html#l00031">Message.hpp:31</a></div></div>
+<div class="ttc" id="namespacemessage_html"><div class="ttname"><a href="namespacemessage.html">message</a></div><div class="ttdef"><b>Definition:</b> <a href="application_2protocol_2Message_8hpp_source.html#l00031">application/protocol/Message.hpp:31</a></div></div>
 <div class="ttc" id="classConnection_html_ad55626cd15f9d0d3b69461b4476fdaa8"><div class="ttname"><a href="classConnection.html#ad55626cd15f9d0d3b69461b4476fdaa8">Connection::receive</a></div><div class="ttdeci">message::Message * receive()</div><div class="ttdoc">Funkcja oczekująca na komunikat od zdalnego hosta. </div></div>
 <div class="ttc" id="classConnection_html_a2e4352edf667bea83001569e9da8a24d"><div class="ttname"><a href="classConnection.html#a2e4352edf667bea83001569e9da8a24d">Connection::~Connection</a></div><div class="ttdeci">~Connection()</div><div class="ttdoc">Destruktor. </div></div>
-<div class="ttc" id="classmessage_1_1Message_html"><div class="ttname"><a href="classmessage_1_1Message.html">message::Message</a></div><div class="ttdef"><b>Definition:</b> <a href="Message_8hpp_source.html#l00034">Message.hpp:34</a></div></div>
+<div class="ttc" id="classmessage_1_1Message_html"><div class="ttname"><a href="classmessage_1_1Message.html">message::Message</a></div><div class="ttdef"><b>Definition:</b> <a href="application_2protocol_2Message_8hpp_source.html#l00034">application/protocol/Message.hpp:34</a></div></div>
 <div class="ttc" id="classConnection_html_a978d2cc58e5e7a65f6662e7747644325"><div class="ttname"><a href="classConnection.html#a978d2cc58e5e7a65f6662e7747644325">Connection::Connection</a></div><div class="ttdeci">Connection(const Ipv4 &amp;address=Ipv4())</div><div class="ttdoc">Konstruktor połączeń po IPv4. </div></div>
 <div class="ttc" id="classConnection_html"><div class="ttname"><a href="classConnection.html">Connection</a></div><div class="ttdoc">Klasa realizująca połączenie LOTC. </div><div class="ttdef"><b>Definition:</b> <a href="Connection_8hpp_source.html#l00032">Connection.hpp:32</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -186,7 +187,7 @@ $(document).ready(function(){initNavTree('Connection_8hpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_75eb1ee5d767627a9a18a84e7e34c1ab.html">protocol</a></li><li class="navelem"><a class="el" href="Connection_8hpp.html">Connection.hpp</a></li>
-    <li class="footer">Wygenerowano Wt, 15 gru 2015 23:10:18 dla LOTC programem
+    <li class="footer">Wygenerowano Śr, 16 gru 2015 12:42:42 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

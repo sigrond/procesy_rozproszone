@@ -1,6 +1,7 @@
 var searchData=
 [
   ['ack',['ACK',['../namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063a0fc437bc317835cad5faafc12a83fad5',1,'message']]],
+  ['add',['ADD',['../classTestMessage.html#af8a868ce511495fe4020f7a5b380112ca167e1fd3adc4950b75c6f93ef2dabbb0',1,'TestMessage']]],
   ['address',['address',['../classIp.html#a761972a6675d552a770f54d1c162a4b3',1,'Ip']]],
   ['addslave',['addSlave',['../classAgentServer.html#a57d551fc559b7800a697a84e2a8e4cf7',1,'AgentServer']]],
   ['adminip',['adminIP',['../classAdminServer.html#a7d89296fe6c6bdcfcc77b457eff1373c',1,'AdminServer']]],
@@ -13,11 +14,15 @@ var searchData=
   ['agentclient',['AgentClient',['../classAgentClient.html',1,'AgentClient'],['../classAgentClient.html#af82fc2e72f38fb7075d0667a18f4e8ba',1,'AgentClient::AgentClient()']]],
   ['agentclient_2ecpp',['AgentClient.cpp',['../AgentClient_8cpp.html',1,'']]],
   ['agentclient_2ehpp',['AgentClient.hpp',['../AgentClient_8hpp.html',1,'']]],
-  ['agentserver',['AgentServer',['../classAgentServer.html',1,'AgentServer'],['../classController.html#a42c2a5b45f23919302f600b4b4fb274b',1,'Controller::agentServer()'],['../classAgentServer.html#ae00b5d7d78d9786b11a396246710a621',1,'AgentServer::AgentServer()']]],
+  ['agentserver',['AgentServer',['../classAgentServer.html',1,'AgentServer'],['../classAgentServer.html#ae00b5d7d78d9786b11a396246710a621',1,'AgentServer::AgentServer()'],['../classController.html#a42c2a5b45f23919302f600b4b4fb274b',1,'Controller::agentServer()']]],
   ['agentserver_2ecpp',['AgentServer.cpp',['../AgentServer_8cpp.html',1,'']]],
   ['agentserver_2ehpp',['AgentServer.hpp',['../AgentServer_8hpp.html',1,'']]],
   ['agentserverexception',['AgentServerException',['../structAgentServerException.html',1,'AgentServerException'],['../structAgentServerException.html#a8104a190a2cf276b6bb0c9c67674ecee',1,'AgentServerException::AgentServerException()']]],
   ['alive',['alive',['../classController.html#aeedf99dd08a7258db654fb7603eaa4ee',1,'Controller']]],
   ['autoversion',['AutoVersion',['../namespaceAutoVersion.html',1,'']]],
-  ['readme_2emd',['readme.md',['../application_2protocol_2readme_8md.html',1,'']]]
+  ['makefile',['makefile',['../application_2server_2makefile.html',1,'']]],
+  ['aplikacja_20testowa_20dla_20pluginu',['Aplikacja testowa dla pluginu',['../md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_wireshark_test_protocol_application_readme.html',1,'']]],
+  ['message_2ehpp',['Message.hpp',['../application_2protocol_2Message_8hpp.html',1,'']]],
+  ['readme_2emd',['readme.md',['../application_2protocol_2readme_8md.html',1,'']]],
+  ['server_2ecpp',['server.cpp',['../application_2server_2server_8cpp.html',1,'']]]
 ];

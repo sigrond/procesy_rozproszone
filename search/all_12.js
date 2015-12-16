@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['version_2eh',['version.h',['../version_8h.html',1,'']]]
+  ['ubuntu_5fversion_5fstyle',['UBUNTU_VERSION_STYLE',['../namespaceAutoVersion.html#af558e65ae7a276f6c8f99cedd65d7217',1,'AutoVersion']]]
 ];

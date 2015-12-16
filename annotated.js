@@ -25,5 +25,6 @@ var annotated =
     [ "Slave", "classSlave.html", "classSlave" ],
     [ "Strategy", "classStrategy.html", "classStrategy" ],
     [ "Task", "classTask.html", "classTask" ],
+    [ "TestMessage", "classTestMessage.html", "classTestMessage" ],
     [ "TestStrategy", "classTestStrategy.html", "classTestStrategy" ]
 ];

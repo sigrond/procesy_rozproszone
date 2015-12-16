@@ -8,7 +8,7 @@ var hierarchy =
     [ "ConsoleServer", "classConsoleServer.html", null ],
     [ "Controller", "classController.html", null ],
     [ "Event", "classEvent.html", null ],
-    [ "exception", null, [
+    [ "std::exception", null, [
       [ "AdminServerException", "structAdminServerException.html", null ],
       [ "AgentServerException", "structAgentServerException.html", null ],
       [ "badIpException", "classbadIpException.html", null ],
@@ -29,7 +29,7 @@ var hierarchy =
       [ "message::taskMessage", "classmessage_1_1taskMessage.html", null ]
     ] ],
     [ "Model", "classModel.html", null ],
-    [ "queue", null, [
+    [ "std::queue< T >", null, [
       [ "BlockingQueue< T >", "classBlockingQueue.html", null ],
       [ "BlockingQueue< Event * >", "classBlockingQueue.html", null ]
     ] ],
@@ -40,5 +40,6 @@ var hierarchy =
       [ "ShutDownStrategy", "classShutDownStrategy.html", null ],
       [ "TestStrategy", "classTestStrategy.html", null ]
     ] ],
-    [ "Task", "classTask.html", null ]
+    [ "Task", "classTask.html", null ],
+    [ "TestMessage", "classTestMessage.html", null ]
 ];

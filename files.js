@@ -22,6 +22,7 @@ var files =
       [ "BlockingQueue", "classBlockingQueue.html", "classBlockingQueue" ]
     ] ],
     [ "BlockingQueueTests.cpp", "BlockingQueueTests_8cpp.html", "BlockingQueueTests_8cpp" ],
+    [ "client.cpp", "client_8cpp.html", "client_8cpp" ],
     [ "Connection.hpp", "Connection_8hpp.html", [
       [ "Connection", "classConnection.html", "classConnection" ]
     ] ],
@@ -48,8 +49,10 @@ var files =
       [ "Ipv6", "classIpv6.html", "classIpv6" ],
       [ "badIpException", "classbadIpException.html", "classbadIpException" ]
     ] ],
-    [ "makefile", "makefile.html", null ],
-    [ "Message.hpp", "Message_8hpp.html", [
+    [ "application/server/makefile", "application_2server_2makefile.html", null ],
+    [ "wireshark/test protocol/application/makefile", "wireshark_2test_01protocol_2application_2makefile.html", null ],
+    [ "message.cpp", "message_8cpp.html", null ],
+    [ "application/protocol/Message.hpp", "application_2protocol_2Message_8hpp.html", [
       [ "Message", "classmessage_1_1Message.html", "classmessage_1_1Message" ],
       [ "hostMessage", "classmessage_1_1hostMessage.html", "classmessage_1_1hostMessage" ],
       [ "taskMessage", "classmessage_1_1taskMessage.html", "classmessage_1_1taskMessage" ],
@@ -60,13 +63,17 @@ var files =
       [ "pingMessage", "classmessage_1_1pingMessage.html", "classmessage_1_1pingMessage" ],
       [ "errMessage", "classmessage_1_1errMessage.html", "classmessage_1_1errMessage" ]
     ] ],
+    [ "wireshark/test protocol/application/Message.hpp", "wireshark_2test_01protocol_2application_2Message_8hpp.html", [
+      [ "TestMessage", "classTestMessage.html", "classTestMessage" ]
+    ] ],
     [ "MessageCodes.hpp", "MessageCodes_8hpp.html", "MessageCodes_8hpp" ],
     [ "Model.cpp", "Model_8cpp.html", null ],
     [ "Model.hpp", "Model_8hpp.html", [
       [ "Model", "classModel.html", "classModel" ]
     ] ],
     [ "Projekt Wstępny.tex", "Projekt_01Wst_xC4_x99pny_8tex.html", null ],
-    [ "server.cpp", "server_8cpp.html", "server_8cpp" ],
+    [ "application/server/server.cpp", "application_2server_2server_8cpp.html", "application_2server_2server_8cpp" ],
+    [ "wireshark/test protocol/application/server.cpp", "wireshark_2test_01protocol_2application_2server_8cpp.html", "wireshark_2test_01protocol_2application_2server_8cpp" ],
     [ "ServerUnitTests.cpp", "ServerUnitTests_8cpp.html", "ServerUnitTests_8cpp" ],
     [ "Slave.cpp", "Slave_8cpp.html", null ],
     [ "Slave.hpp", "Slave_8hpp.html", [

@@ -31,6 +31,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">LOTC
    </div>
+   <div id="projectbrief">Low Orbit Task Cannon</div>
   </td>
  </tr>
  </tbody>
@@ -114,14 +115,21 @@ $(document).ready(function(){initNavTree('classmessage_1_1Message.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="Message_8hpp_source.html">Message.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="application_2protocol_2Message_8hpp_source.html">Message.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Diagram dziedziczenia dla message::Message</div>
 <div class="dyncontent">
 <div class="center"><img src="classmessage_1_1Message__inherit__graph.png" border="0" usemap="#message_1_1Message_inherit__map" alt="Inheritance graph"/></div>
 <map name="message_1_1Message_inherit__map" id="message_1_1Message_inherit__map">
-<area shape="rect" id="node2" href="classmessage_1_1depMessage.html" title="message::depMessage" alt="" coords="191,5,349,32"/><area shape="rect" id="node3" href="classmessage_1_1errMessage.html" title="message::errMessage" alt="" coords="195,56,345,83"/><area shape="rect" id="node4" href="classmessage_1_1fileMessage.html" title="message::fileMessage" alt="" coords="194,107,346,133"/><area shape="rect" id="node5" href="classmessage_1_1hostMessage.html" title="message::hostMessage" alt="" coords="189,157,351,184"/><area shape="rect" id="node6" href="classmessage_1_1pingMessage.html" title="message::pingMessage" alt="" coords="190,208,350,235"/><area shape="rect" id="node7" href="classmessage_1_1retMessage.html" title="message::retMessage" alt="" coords="195,259,345,285"/><area shape="rect" id="node8" href="classmessage_1_1synMessage.html" title="message::synMessage" alt="" coords="191,309,349,336"/><area shape="rect" id="node9" href="classmessage_1_1taskMessage.html" title="message::taskMessage" alt="" coords="189,360,351,387"/></map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
+<area shape="rect" id="node2" href="classmessage_1_1depMessage.html" title="{message::depMessage\n||&#45; depMessage()\l&#45; depMessage()\l&#45; getTaskCount()\l&#45; getTasks()\l}" alt="" coords="5,219,163,340"/><area shape="rect" id="node3" href="classmessage_1_1errMessage.html" title="{message::errMessage\n||+ errMessage()\l+ errMessage()\l+ getErrCode()\l}" alt="" coords="187,226,338,333"/><area shape="rect" id="node4" href="classmessage_1_1fileMessage.html" title="{message::fileMessage\n||&#45; fileMessage()\l&#45; fileMessage()\l&#45; getIsMainFile()\l&#45; getTaskId()\l&#45; getFilename()\l&#45; getFile()\l}" alt="" coords="363,204,515,355"/><area shape="rect" id="node5" href="classmessage_1_1hostMessage.html" title="{message::hostMessage\n||&#45; hostMessage()\l&#45; hostMessage()\l&#45; getAgentCount()\l&#45; getAddresses()\l}" alt="" coords="539,219,701,340"/><area shape="rect" id="node6" href="classmessage_1_1pingMessage.html" title="{message::pingMessage\n||&#45; pingMessage()\l}" alt="" coords="725,241,885,318"/><area shape="rect" id="node7" href="classmessage_1_1retMessage.html" title="{message::retMessage\n||&#45; retMessage()\l&#45; retMessage()\l&#45; getExitStatus()\l&#45; getTaskId()\l&#45; getFilename()\l&#45; getFile()\l}" alt="" coords="910,204,1061,355"/><area shape="rect" id="node8" href="classmessage_1_1synMessage.html" title="{message::synMessage\n||&#45; synMessage()\l}" alt="" coords="1085,241,1243,318"/><area shape="rect" id="node9" href="classmessage_1_1taskMessage.html" title="{message::taskMessage\n||&#45; taskMessage()\l&#45; taskMessage()\l&#45; getRespectPriority()\l&#45; getPriority()\l&#45; getTaskId()\l&#45; getTimestamp()\l}" alt="" coords="1267,204,1429,355"/></map>
+</div>
+<div class="dynheader">
+Diagram współpracy dla message::Message:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmessage_1_1Message__coll__graph.png" border="0" usemap="#message_1_1Message_coll__map" alt="Collaboration graph"/></div>
+<map name="message_1_1Message_coll__map" id="message_1_1Message_coll__map">
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
@@ -148,7 +156,7 @@ Atrybuty prywatne</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock">
-<p>Definicja w linii <a class="el" href="Message_8hpp_source.html#l00034">34</a> pliku <a class="el" href="Message_8hpp_source.html">Message.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00034">34</a> pliku <a class="el" href="application_2protocol_2Message_8hpp_source.html">application/protocol/Message.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a class="anchor" id="a97532a17d03a5835f89f0dc91ffc0958"></a>
 <div class="memitem">
@@ -287,12 +295,12 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Message_8hpp_source.html#l00050">50</a> pliku <a class="el" href="Message_8hpp_source.html">Message.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00050">50</a> pliku <a class="el" href="application_2protocol_2Message_8hpp_source.html">application/protocol/Message.hpp</a>.</p>
 
 </div>
 </div>
 <hr/>Dokumentacja dla tej klasy została wygenerowana z pliku:<ul>
-<li><a class="el" href="Message_8hpp_source.html">Message.hpp</a></li>
+<li><a class="el" href="application_2protocol_2Message_8hpp_source.html">application/protocol/Message.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -300,7 +308,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemessage.html">message</a></li><li class="navelem"><a class="el" href="classmessage_1_1Message.html">Message</a></li>
-    <li class="footer">Wygenerowano Wt, 15 gru 2015 23:10:24 dla LOTC programem
+    <li class="footer">Wygenerowano Śr, 16 gru 2015 12:42:52 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

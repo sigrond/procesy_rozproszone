@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>LOTC: Plik źródłowy server.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">LOTC
+   </div>
+   <div id="projectbrief">Low Orbit Task Cannon</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('application_2server_2server_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">application/server/server.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="application_2server_2server_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/** \file server.cpp</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * \author Tomasz Jakubczyk</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * \brief Głowny plik serwera zarządzającego procesami rozproszonymi.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="Controller_8hpp.html" title="Plik nagłówkowy klasy kontrolera. ">&quot;Controller.hpp&quot;</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="AdminServer_8hpp.html" title="plik nagłówkowy klasy serwera administratora ">&quot;AdminServer.hpp&quot;</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="AgentServer_8hpp.html" title="plik nagłówkowy serwera klienta / agenta ">&quot;AgentServer.hpp&quot;</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="Model_8hpp.html" title="plik nagłówkowy klasy modelu ">&quot;Model.hpp&quot;</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="Strategies_8hpp.html" title="Plik ze wszystkimi strategiami. Z powodu małej złożoności strategii nie wydzielamy osobnych plików na...">&quot;Strategies.hpp&quot;</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">thread</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">iostream</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">exception</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using</span> <span class="keyword">namespace</span> std;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">int</span> <a class="code" href="classTestStrategy.html">TestStrategy</a>::<a class="code" href="classTestStrategy.html#a34516f7a3ab08da4df75df97fb2a3d76">createdObjects</a>=0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">int</span> <a class="code" href="classTestStrategy.html">TestStrategy</a>::<a class="code" href="classTestStrategy.html#a0406c17294823e564d8f9fad3f34507a">deletedObjects</a>=0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="application_2server_2server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164">   23</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="wireshark_2test_01protocol_2application_2server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(<span class="keywordtype">int</span> argi, <span class="keywordtype">char</span>* argv[])</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        cout&lt;&lt;<span class="stringliteral">&quot;Witamy w serwerze LOTC!&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classController.html#acaeb01295f0462900ad0421149b87a19">Controller</a>* controller=<span class="keyword">new</span> <a class="code" href="classController.html#acaeb01295f0462900ad0421149b87a19">Controller</a><a class="code" href="classController.html#a95c56822d667e94b031451729ce069a9">(</a><a class="code" href="classController.html#a95c56822d667e94b031451729ce069a9">)</a>;<span class="comment">/**&lt; kontroler jest sercem serwera, o architekturze zbliżonej do modelu MVC */</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        controller<a class="code" href="classController.html#ad75c2e9788ecb8dba44650747076fe92">-&gt;</a><a class="code" href="classController.html#ad75c2e9788ecb8dba44650747076fe92">setAdminServer</a><a class="code" href="classController.html#ad75c2e9788ecb8dba44650747076fe92">(</a><span class="keyword">new</span> <a class="code" href="classAdminServer.html">AdminServer</a><a class="code" href="classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2">(</a><a class="code" href="classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2">)</a><a class="code" href="classController.html#ad75c2e9788ecb8dba44650747076fe92">)</a>;<span class="comment">/** AdminServer i AgentServer można traktować jak swego rodzaju widoki MVC */</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        controller<a class="code" href="classController.html#a84a816695c11ec17be45fc5def82c892">-&gt;</a><a class="code" href="classController.html#a84a816695c11ec17be45fc5def82c892">setAgentServer</a><a class="code" href="classController.html#a84a816695c11ec17be45fc5def82c892">(</a><span class="keyword">new</span> <a class="code" href="classAgentServer.html#a92ef83d9d5110a615c2ab9ab3d27a1d8">AgentServer</a><a class="code" href="classAgentServer.html#ae00b5d7d78d9786b11a396246710a621">(</a><a class="code" href="classAgentServer.html#ae00b5d7d78d9786b11a396246710a621">)</a><a class="code" href="classController.html#a84a816695c11ec17be45fc5def82c892">)</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        controller<a class="code" href="classController.html#a5f9d5a3fc40dd23ecf4b493f22ce94f0">-&gt;</a><a class="code" href="classController.html#a5f9d5a3fc40dd23ecf4b493f22ce94f0">setModel</a><a class="code" href="classController.html#a5f9d5a3fc40dd23ecf4b493f22ce94f0">(</a><span class="keyword">new</span> <a class="code" href="classModel.html">Model</a><a class="code" href="classModel.html#ae3b375de5f6df4faf74a95d64748e048">(</a><a class="code" href="classModel.html#ae3b375de5f6df4faf74a95d64748e048">)</a><a class="code" href="classController.html#a5f9d5a3fc40dd23ecf4b493f22ce94f0">)</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        controller<a class="code" href="classController.html#aaff2c0ac01c4d7a6b78718ac8a411c4b">-&gt;</a><a class="code" href="classController.html#aaff2c0ac01c4d7a6b78718ac8a411c4b">setup</a><a class="code" href="classController.html#aaff2c0ac01c4d7a6b78718ac8a411c4b">(</a><a class="code" href="classController.html#aaff2c0ac01c4d7a6b78718ac8a411c4b">)</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        thread controllerThread(&amp;Controller::start,controller);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">/** \todo wymyslić jakieś zgrabne zamknięcie oczekiwania na opcjonalne polecenia,</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">         * albo zrezygnować z takiej możliwości.</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">         */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        string s;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">while</span>(cin&gt;&gt;s)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">if</span>(s.compare(<span class="stringliteral">&quot;exit&quot;</span>)==0)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                cout&lt;&lt;<span class="stringliteral">&quot;Polecenie exit bezpośrednio do serwera&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                controller-&gt;triggerShutDown();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="comment">/** \todo wstawić jakiś zgrabny przełącznik do kończenia wątka kontrolera */</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span>(controllerThread.joinable())</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            controllerThread.join();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">//delete controllerThread;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">delete</span> controller;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">catch</span>(exception &amp;e)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        cerr&lt;&lt;e.what()&lt;&lt;endl;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">catch</span>(...)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        cerr&lt;&lt;<span class="stringliteral">&quot;nieznany wyjątek&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="ttc" id="classController_html_a84a816695c11ec17be45fc5def82c892"><div class="ttname"><a href="classController.html#a84a816695c11ec17be45fc5def82c892">Controller::setAgentServer</a></div><div class="ttdeci">void setAgentServer(AgentServer *)</div><div class="ttdef"><b>Definition:</b> <a href="Controller_8cpp_source.html#l00156">Controller.cpp:156</a></div></div>
+<div class="ttc" id="classController_html_a5f9d5a3fc40dd23ecf4b493f22ce94f0"><div class="ttname"><a href="classController.html#a5f9d5a3fc40dd23ecf4b493f22ce94f0">Controller::setModel</a></div><div class="ttdeci">void setModel(Model *)</div><div class="ttdef"><b>Definition:</b> <a href="Controller_8cpp_source.html#l00161">Controller.cpp:161</a></div></div>
+<div class="ttc" id="classController_html_acaeb01295f0462900ad0421149b87a19"><div class="ttname"><a href="classController.html#acaeb01295f0462900ad0421149b87a19">Controller::strategyMap</a></div><div class="ttdeci">std::map&lt; EventType, Strategy * &gt; * strategyMap</div><div class="ttdef"><b>Definition:</b> <a href="Controller_8hpp_source.html#l00045">Controller.hpp:45</a></div></div>
+<div class="ttc" id="classAgentServer_html_ae00b5d7d78d9786b11a396246710a621"><div class="ttname"><a href="classAgentServer.html#ae00b5d7d78d9786b11a396246710a621">AgentServer::AgentServer</a></div><div class="ttdeci">AgentServer()</div><div class="ttdef"><b>Definition:</b> <a href="AgentServer_8cpp_source.html#l00035">AgentServer.cpp:35</a></div></div>
+<div class="ttc" id="classController_html_a95c56822d667e94b031451729ce069a9"><div class="ttname"><a href="classController.html#a95c56822d667e94b031451729ce069a9">Controller::Controller</a></div><div class="ttdeci">Controller()</div><div class="ttdef"><b>Definition:</b> <a href="Controller_8cpp_source.html#l00015">Controller.cpp:15</a></div></div>
+<div class="ttc" id="classController_html_aaff2c0ac01c4d7a6b78718ac8a411c4b"><div class="ttname"><a href="classController.html#aaff2c0ac01c4d7a6b78718ac8a411c4b">Controller::setup</a></div><div class="ttdeci">void setup()</div><div class="ttdoc">Tworzy kolejkę blokującą i podaje wskazanie na nią do serverów i modelu. Odzieliłem tą metodę od star...</div><div class="ttdef"><b>Definition:</b> <a href="Controller_8cpp_source.html#l00166">Controller.cpp:166</a></div></div>
+<div class="ttc" id="classAdminServer_html_a54b8d8388cf90eacb049daa9ae08bac2"><div class="ttname"><a href="classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2">AdminServer::AdminServer</a></div><div class="ttdeci">AdminServer()</div><div class="ttdoc">Konstruktor bez podania adresu administratora. Oznacza to, że czekamy na pierwsze zapytanie z konsoli...</div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8cpp_source.html#l00034">AdminServer.cpp:34</a></div></div>
+<div class="ttc" id="wireshark_2test_01protocol_2application_2server_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="wireshark_2test_01protocol_2application_2server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="wireshark_2test_01protocol_2application_2server_8cpp_source.html#l00010">wireshark/test protocol/application/server.cpp:10</a></div></div>
+<div class="ttc" id="classModel_html_ae3b375de5f6df4faf74a95d64748e048"><div class="ttname"><a href="classModel.html#ae3b375de5f6df4faf74a95d64748e048">Model::Model</a></div><div class="ttdeci">Model()</div><div class="ttdef"><b>Definition:</b> <a href="Model_8cpp_source.html#l00011">Model.cpp:11</a></div></div>
+<div class="ttc" id="classModel_html"><div class="ttname"><a href="classModel.html">Model</a></div><div class="ttdoc">klasa modelu </div><div class="ttdef"><b>Definition:</b> <a href="Model_8hpp_source.html#l00014">Model.hpp:14</a></div></div>
+<div class="ttc" id="classController_html_ad75c2e9788ecb8dba44650747076fe92"><div class="ttname"><a href="classController.html#ad75c2e9788ecb8dba44650747076fe92">Controller::setAdminServer</a></div><div class="ttdeci">void setAdminServer(AdminServer *)</div><div class="ttdef"><b>Definition:</b> <a href="Controller_8cpp_source.html#l00151">Controller.cpp:151</a></div></div>
+<div class="ttc" id="classTestStrategy_html"><div class="ttname"><a href="classTestStrategy.html">TestStrategy</a></div><div class="ttdoc">Testowa klasa strategii. Ma służyć jako zaślepka do brakujących klas strategii, oraz ewentualnie jako...</div><div class="ttdef"><b>Definition:</b> <a href="Strategies_8hpp_source.html#l00025">Strategies.hpp:25</a></div></div>
+<div class="ttc" id="classAdminServer_html"><div class="ttname"><a href="classAdminServer.html">AdminServer</a></div><div class="ttdoc">Klasa serwera administratora. Należy się spodziewać raczej asynchronicznego działania. </div><div class="ttdef"><b>Definition:</b> <a href="AdminServer_8hpp_source.html#l00017">AdminServer.hpp:17</a></div></div>
+<div class="ttc" id="classTestStrategy_html_a34516f7a3ab08da4df75df97fb2a3d76"><div class="ttname"><a href="classTestStrategy.html#a34516f7a3ab08da4df75df97fb2a3d76">TestStrategy::createdObjects</a></div><div class="ttdeci">static int createdObjects</div><div class="ttdef"><b>Definition:</b> <a href="Strategies_8hpp_source.html#l00043">Strategies.hpp:43</a></div></div>
+<div class="ttc" id="classTestStrategy_html_a0406c17294823e564d8f9fad3f34507a"><div class="ttname"><a href="classTestStrategy.html#a0406c17294823e564d8f9fad3f34507a">TestStrategy::deletedObjects</a></div><div class="ttdeci">static int deletedObjects</div><div class="ttdef"><b>Definition:</b> <a href="Strategies_8hpp_source.html#l00044">Strategies.hpp:44</a></div></div>
+<div class="ttc" id="classAgentServer_html_a92ef83d9d5110a615c2ab9ab3d27a1d8"><div class="ttname"><a href="classAgentServer.html#a92ef83d9d5110a615c2ab9ab3d27a1d8">AgentServer::slaves</a></div><div class="ttdeci">std::vector&lt; Slave * &gt; slaves</div><div class="ttdef"><b>Definition:</b> <a href="AgentServer_8hpp_source.html#l00029">AgentServer.hpp:29</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_342e7b6bc6a1e66453dad3633c4afb75.html">server</a></li><li class="navelem"><a class="el" href="application_2server_2server_8cpp.html">server.cpp</a></li>
+    <li class="footer">Wygenerowano Śr, 16 gru 2015 12:42:44 dla LOTC programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

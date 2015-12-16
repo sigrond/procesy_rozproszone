@@ -2,6 +2,13 @@ var NAVTREE =
 [
   [ "LOTC", "index.html", [
     [ "Protokół komunikacyjny serwer-agent", "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_application_protocol_readme.html", null ],
+    [ "Aplikacja testowa dla pluginu", "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_wireshark_test_protocol_application_readme.html", null ],
+    [ "Plugin do Wiresharka", "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_wireshark_test_protocol_plugin_readme.html", null ],
+    [ "readme", "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_wireshark_test_protocol_screenshots_readme.html", null ],
+    [ "screenshots", "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_wireshark_test_protocol_screenshots_screenshots.html", null ],
+    [ "Styl kodu", "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_organizacja_Styl_kodu.html", null ],
+    [ "Terminarz", "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_organizacja_Terminarz.html", null ],
+    [ "Zasady oceniania projektu", "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_organizacja_Zasady_oceniania_projektu.html", null ],
     [ "Lista rzeczy do zrobienia", "todo.html", null ],
     [ "Przestrzenie nazw", null, [
       [ "Lista przestrzeni nazw", "namespaces.html", "namespaces" ],
@@ -19,7 +26,9 @@ var NAVTREE =
       [ "Składowe klas", "functions.html", [
         [ "All", "functions.html", null ],
         [ "Funkcje", "functions_func.html", null ],
-        [ "Zmienne", "functions_vars.html", null ]
+        [ "Zmienne", "functions_vars.html", null ],
+        [ "Wyliczenia", "functions_enum.html", null ],
+        [ "Wartości wyliczeń", "functions_eval.html", null ]
       ] ]
     ] ],
     [ "Pliki", null, [
@@ -39,7 +48,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AdminServer_8cpp.html",
-"classTestStrategy.html#a0406c17294823e564d8f9fad3f34507a"
+"classStrategy.html#ac620d54307f0355d930c6150259ae27a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

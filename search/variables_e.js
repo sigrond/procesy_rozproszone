@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['year',['YEAR',['../namespaceAutoVersion.html#ac6726fe1f27cfa5f70c5eb624c6095fc',1,'AutoVersion']]]
+  ['ubuntu_5fversion_5fstyle',['UBUNTU_VERSION_STYLE',['../namespaceAutoVersion.html#af558e65ae7a276f6c8f99cedd65d7217',1,'AutoVersion']]]
 ];
