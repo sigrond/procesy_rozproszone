@@ -33,3 +33,5 @@
 # Doxygen
 *.map
 *.md5
+\documentation\doxygen\html
+/documentation/doxygen/html
