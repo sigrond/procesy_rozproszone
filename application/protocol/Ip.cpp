@@ -2,6 +2,7 @@
  *
  * \authors Tomasz Jakubczyk, ...
  * \brief Plik z implementacjami metod klasy Ip
+ * \todo Andrzej napisze
  *
  */
 

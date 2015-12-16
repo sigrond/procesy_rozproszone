@@ -1,4 +1,4 @@
-FILES = server.cpp Controller.cpp AdminServer.cpp AgentServer.cpp Model.cpp Slave.cpp Task.cpp ../protocol/Message.cpp ../protocol/Ip.cpp
+FILES = server.cpp Controller.cpp AdminServer.cpp AgentServer.cpp Model.cpp Slave.cpp Task.cpp ../protocol/Message.cpp ../protocol/Ip.cpp ../protocol/Connection.cpp
 Debug: $(FILES)
 	g++ -std=c++11 -g -O0 -D_DEBUG -Wall -pthread -lpthread -o bin/Debug/server $(FILES)
 

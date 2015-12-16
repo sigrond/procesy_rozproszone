@@ -36,7 +36,9 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="../protocol/Connection.hpp" />
+		<Unit filename="../protocol/Ip.cpp" />
 		<Unit filename="../protocol/Ip.hpp" />
+		<Unit filename="../protocol/Message.cpp" />
 		<Unit filename="../protocol/Message.hpp" />
 		<Unit filename="../protocol/MessageCodes.hpp" />
 		<Unit filename="AdminServer.cpp" />

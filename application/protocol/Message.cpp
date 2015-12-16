@@ -9,6 +9,16 @@
 
 using namespace message;
 
+Message::Message() : code(0)
+{
+
+}
+
+Message::~Message()
+{
+
+}
+
 unsigned char Message::getCode() const
 {
 	return code;

@@ -1,4 +1,22 @@
 16 December 2015
+   released version 0.1.14 of server
+
+     Change log:
+        -Added: destruktor Message
+
+16 December 2015
+   released version 0.1.13 of server
+
+     Change log:
+        -Added: konstruktor Message
+
+16 December 2015
+   released version 0.1.12 of server
+
+     Change log:
+        -Added: zaślepki Connection.cpp
+
+16 December 2015
    released version 0.1.11 of server
 
      Change log:

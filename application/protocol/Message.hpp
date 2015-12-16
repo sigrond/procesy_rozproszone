@@ -35,6 +35,8 @@ namespace message
         class Message
         {
         public:
+				Message();/**< chyba jest potrzebny ten konstruktor, bo trzeba zainicjalizować code */
+
                 virtual ~Message();
 
                 unsigned char getCode() const;
