@@ -34,7 +34,8 @@ public:
 AdminServer::AdminServer() :
 	blockingQueue(nullptr),
 	connection(nullptr),
-	adminIP(nullptr)
+	adminIP(nullptr),
+	shutDown(false)
 {
 	#ifdef _DEBUG
 	std::clog<<"AdminServer::AdminServer()\n";
@@ -90,3 +91,41 @@ void AdminServer::setBlockingQueue(BlockingQueue<Event*>* q)
 {
 	blockingQueue=q;
 }
+
+void AdminServer::start()
+{
+	/**< \todo sprawdzenia i wyjątki */
+	shutDown=false;
+    while(!shutDown)
+	{
+		listen();
+	}
+}
+
+void AdminServer::triggerShutDown()
+{
+	shutDown=true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

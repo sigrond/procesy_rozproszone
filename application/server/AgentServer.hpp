@@ -24,7 +24,9 @@ public:
     void setBlockingQueue(BlockingQueue<Event*>*);
     void addSlave(Ip &ip);
     void listenToAll();
+    void start();
 private:
     BlockingQueue<Event*>* blockingQueue;
     std::vector<Slave*>* slaves;
+    bool shutDown;
 };

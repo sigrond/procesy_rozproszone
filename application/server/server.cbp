@@ -35,6 +35,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="../protocol/Connection.cpp" />
 		<Unit filename="../protocol/Connection.hpp" />
 		<Unit filename="../protocol/Ip.cpp" />
 		<Unit filename="../protocol/Ip.hpp" />

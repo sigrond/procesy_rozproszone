@@ -34,7 +34,8 @@ public:
 
 AgentServer::AgentServer() :
 	blockingQueue(nullptr),
-	slaves(nullptr)
+	slaves(nullptr),
+	shutDown(false)
 {
 	slaves=new std::vector<Slave*>();
 }
@@ -91,6 +92,11 @@ void AgentServer::listenToAll()/**< \todo dobrze przemyśleć jak ma działać *
 	{
 		listen(slaves->at(i));/**< \todo jakiś if, bo jak się doda nowy to co */
 	}
+}
+
+void AgentServer::start()
+{
+
 }
 
 

@@ -25,6 +25,9 @@ warning: source ..\AdminServer.hpp is not a readable file or directory... skippi
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/agent/Agent.cpp:9:10: fatal error: 'iostream' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/ConsoleClient.hpp:4:10: fatal error: 'iostream' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/ConsoleClient.hpp:4:10: fatal error: 'iostream' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:15:10: fatal error: 'string' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:15:10: fatal error: 'string' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Message.hpp:25:10: fatal error: 'vector' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
@@ -34,26 +37,16 @@ error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ControllerTe
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ServerUnitTests.cpp:10:10: fatal error: 'boost/test/unit_test.hpp' file not found [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:17:15: error: unknown type name 'Ip' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:26:9: error: unknown type name 'IP' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:30:25: error: unknown type name 'IP' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:34:9: error: unknown type name 'time_t' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:38:29: error: unknown type name 'time_t' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:50:9: error: unknown type name 'Connection' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:54:28: error: unknown type name 'Connection' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:65:9: error: unknown type name 'IP' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:66:9: error: unknown type name 'time_t' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:68:9: error: unknown type name 'Connection' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.cpp:9:14: error: unknown type name 'Ip' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.cpp:20:8: warning: exception specification in declaration does not match previous declaration [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:15:10: fatal error: 'string' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/client.cpp:1:10: fatal error: 'iostream' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/message.cpp:2:10: fatal error: 'iostream' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/server.cpp:1:10: fatal error: 'iostream' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:1:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:42:52: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:44:1: error: expected unqualified-id [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int] [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:6: error: expected ';' after top level declarator [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:8: error: unknown type name 'server' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:14: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:9: error: use of undeclared identifier 'server' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:21:41: error: expected ';' after top level declarator [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:1:1: error: expected unqualified-id [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:2:1: error: expected unqualified-id [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.tex:3:1: error: expected unqualified-id [clang]
@@ -79,6 +72,10 @@ error: D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/Projekt Wstępny.
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/makefile:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int] [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/makefile:1:5: error: use of undeclared identifier 'g' [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/makefile:18:18: error: expected ';' after top level declarator [clang]
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Message.cpp:1: warning: the name `Message.cpp' supplied as the second argument in the \file statement matches the following input files:
+   D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Message.cpp
+   D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/message.cpp
+Please use a more specific name by including a (larger) part of the path!
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/server.cpp:1: warning: the name `server.cpp' supplied as the second argument in the \file statement matches the following input files:
    D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/server.cpp
    D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/server.cpp
@@ -89,32 +86,25 @@ error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueu
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueueTests.cpp:8:10: fatal error: 'boost/test/unit_test.hpp' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/client.cpp:1:10: fatal error: 'iostream' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:15:10: fatal error: 'string' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/ConsoleClient.hpp:4:10: fatal error: 'iostream' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/ConsoleClient.hpp:4:10: fatal error: 'iostream' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ControllerTests.cpp:8:10: fatal error: 'boost/test/unit_test.hpp' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:15:10: fatal error: 'string' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Message.hpp:25:10: fatal error: 'vector' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/message.cpp:2:10: fatal error: 'iostream' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/server.cpp:1:10: fatal error: 'iostream' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ServerUnitTests.cpp:10:10: fatal error: 'boost/test/unit_test.hpp' file not found [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:17:15: error: unknown type name 'Ip' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:26:9: error: unknown type name 'IP' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:30:25: error: unknown type name 'IP' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:34:9: error: unknown type name 'time_t' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:38:29: error: unknown type name 'time_t' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:50:9: error: unknown type name 'Connection' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:54:28: error: unknown type name 'Connection' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:65:9: error: unknown type name 'IP' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:66:9: error: unknown type name 'time_t' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.hpp:68:9: error: unknown type name 'Connection' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.cpp:9:14: error: unknown type name 'Ip' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Slave.cpp:20:8: warning: exception specification in declaration does not match previous declaration [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:15:10: fatal error: 'string' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:1:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:42:52: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:44:1: error: expected unqualified-id [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int] [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:6: error: expected ';' after top level declarator [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:8: error: unknown type name 'server' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:14: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:9: error: use of undeclared identifier 'server' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:21:41: error: expected ';' after top level declarator [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/makefile:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int] [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/makefile:1:5: error: use of undeclared identifier 'g' [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/makefile:18:18: error: expected ';' after top level declarator [clang]
@@ -144,9 +134,9 @@ D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/plugin/readme.
 D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/plugin/readme.md:9: warning: Found unknown command `\plugins'
 D:/Moje dokumenty/TIN/procesy_rozproszone/organizacja/Styl kodu.md:28: warning: explicit link request to 'include' could not be resolved
 D:/Moje dokumenty/TIN/procesy_rozproszone/organizacja/Styl kodu.md:98: warning: explicit link request to 'define' could not be resolved
-D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.cpp:18: warning: argument 'std' of command @param is not found in the argument list of AdminServerException::AdminServerExceptionException(std::string s)
-D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.cpp:18: warning: argument 'string' of command @param is not found in the argument list of AdminServerException::AdminServerExceptionException(std::string s)
-D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.cpp:18: warning: The following parameters of AdminServerException::AdminServerExceptionException(std::string s) are not documented:
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.cpp:18: warning: argument 'std' of command @param is not found in the argument list of AdminServerException::AdminServerException(std::string s)
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.cpp:18: warning: argument 'string' of command @param is not found in the argument list of AdminServerException::AdminServerException(std::string s)
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.cpp:18: warning: The following parameters of AdminServerException::AdminServerException(std::string s) are not documented:
   parameter 's'
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AgentServer.cpp:19: warning: argument 'std' of command @param is not found in the argument list of AgentServerException::AgentServerException(std::string s)
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AgentServer.cpp:19: warning: argument 'string' of command @param is not found in the argument list of AgentServerException::AgentServerException(std::string s)

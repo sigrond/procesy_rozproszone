@@ -43,8 +43,16 @@ public:
      */
     void connect(message::Message* m);
     void setBlockingQueue(BlockingQueue<Event*>*);
+    /** \brief Metoda odpowiada za wewnętrzne życie AdminServer'a.
+     * Należy raczej oczekiwać, że będzie się zawieszała na funkcjach
+     * blokujących, więc powinna być raczej uruchamiana w osobnym wątku.
+     * \return void
+     */
+    void start();
+    void triggerShutDown();
 private:
     BlockingQueue<Event*>* blockingQueue;
     Connection* connection;
     Ip* adminIP;/**< opcjonalne IP admina */
+    bool shutDown;/**< przełącznik do kończenia pracy AdminServer'a */
 };

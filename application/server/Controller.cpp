@@ -11,6 +11,7 @@
 #include <exception>
 #include <string>
 #include <cstdlib>
+#include <thread>
 
 Controller::Controller() :
 	alive(0),
@@ -97,11 +98,13 @@ void Controller::start()
 	{
 		throw ControllerException("blockingQueue==nullptr");
 	}
+	shutDownServer=false;/**< jeśli chcielibyśmy wielokrotnie zamykać i uruchamiać srwer */
 	alive++;
 	//tworzymy mapę strategii
 	strategyMap=new std::map<EventType,Strategy*>;
 	fillStrategyMap();
 
+	std::thread adminServerThread(&AdminServer::start,adminServer);
 	/**< \todo uruchomić adminServer i agentServer, timery w modelu i inne */
 
 	//pętla przetwarzania komunikatów / zdarzeń

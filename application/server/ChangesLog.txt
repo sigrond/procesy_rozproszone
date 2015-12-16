@@ -1,4 +1,11 @@
 16 December 2015
+   released version 0.1.15 of server
+
+     Change log:
+        -Added: AdminServer start()
+        -Added: adminServerThread
+
+16 December 2015
    released version 0.1.14 of server
 
      Change log:
