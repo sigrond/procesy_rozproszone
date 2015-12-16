@@ -1,3 +1,35 @@
+16 December 2015
+   released version 0.1.10 of server
+
+     Change log:
+        -Applied: konstruktor ofstream
+
+16 December 2015
+   released version 0.1.9 of server
+
+     Change log:
+        -Updated: makefile
+
+16 December 2015
+   released version 0.1.8 of server
+
+     Change log:
+        -Fixed: virtual checkMessage () = 0 const; --> virtual checkMessage () const = 0;
+
+16 December 2015
+   released version 0.1.7 of server
+
+     Change log:
+        -Added: metody - zaślepki do message
+
+16 December 2015
+   released version 0.1.6 of server
+
+     Change log:
+        -Added: metody AdminServer
+        -Added: metody AgentServer
+        -Applied: wykożystanie klas Connection, Message, Ip
+
 15 December 2015
    released version 0.1.5 of server
 

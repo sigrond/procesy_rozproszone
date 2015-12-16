@@ -1,13 +1,14 @@
-Debug: server.cpp Controller.cpp AdminServer.cpp AgentServer.cpp Model.cpp
-	g++ -std=c++11 -g -O0 -D_DEBUG -Wall -pthread -lpthread -o bin/Debug/server server.cpp Controller.cpp AdminServer.cpp AgentServer.cpp Model.cpp
+FILES = server.cpp Controller.cpp AdminServer.cpp AgentServer.cpp Model.cpp Slave.cpp Task.cpp ../protocol/Message.cpp
+Debug: $(FILES)
+	g++ -std=c++11 -g -O0 -D_DEBUG -Wall -pthread -lpthread -o bin/Debug/server $(FILES)
 
 cleanDebug:
 	rm -f bin/Debug/server
 
 Release: server
 
-server: server.cpp Controller.cpp AdminServer.cpp AgentServer.cpp Model.cpp
-	g++ -std=c++11 -Wall -pthread -lpthread -o server server.cpp Controller.cpp AdminServer.cpp AgentServer.cpp Model.cpp
+server: $(FILES)
+	g++ -std=c++11 -Wall -pthread -lpthread -o server $(FILES)
 
 run: server
 	./server

@@ -26,5 +26,5 @@ public:
     void listenToAll();
 private:
     BlockingQueue<Event*>* blockingQueue;
-    std::vector<Slave*> slaves;
+    std::vector<Slave*>* slaves;
 };

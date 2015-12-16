@@ -36,18 +36,22 @@ AgentServer::AgentServer() :
 	blockingQueue(nullptr),
 	slaves(nullptr)
 {
-	slaves=new std::vector<Slave*>;
+	slaves=new std::vector<Slave*>();
 }
 
 AgentServer::~AgentServer()
 {
 	if(slaves!=nullptr)
 	{
-		for(int i=0;i<slaves->size();i++)
+		for(unsigned int i=0;i<slaves->size();i++)
 		{
 			if(slaves->at(i)!=nullptr)
 			{
 				delete slaves->at(i);
+				slaves->at(i)=nullptr;/** przezorny zawsze ubezpieczony :D
+										* BTW na pewno gdzieś w okolicach tego regionu
+										* kodu będą problemy. więc:
+										* \todo testy jednostkowe! :) */
 			}
 		}
 		delete slaves;
@@ -83,7 +87,7 @@ void AgentServer::addSlave(Ip &ip)
 void AgentServer::listenToAll()/**< \todo dobrze przemyśleć jak ma działać */
 {
 	std::thread* t;/**< \todo ? wątki tutaj potrzebne? */
-	for(int i=0;i<slaves->size();i++)
+	for(unsigned int i=0;i<slaves->size();i++)
 	{
 		listen(slaves->at(i));/**< \todo jakiś if, bo jak się doda nowy to co */
 	}

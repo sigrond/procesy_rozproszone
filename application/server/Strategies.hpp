@@ -83,21 +83,21 @@ public:
 		category=((Message*)data)->getCategory();
 		switch(category)/**< \todo obsługa kategorii */
 		{
-		case HOST:
+		case (int)Category::HOST:
 			break;
-		case TASK:
+		case (int)Category::TASK:
 			break;
-		case DEP:
+		case (int)Category::DEP:
 			break;
-		case FILE:
+		case (int)Category::FILE:
 			break;
-		case RET:
+		case (int)Category::RET:
 			break;
-		case SYN:
+		case (int)Category::SYN:
 			break;
-		case PING:
+		case (int)Category::PING:
 			break;
-		case ERR:
+		case (int)Category::ERR:
 			break;
 		default:
 			clog<<"Nieznana kategoria wiadomości od admina: "<<category<<endl;
@@ -122,21 +122,21 @@ public:
 		category=((Message*)data)->getCategory();
 		switch(category)/**< \todo obsługa kategorii */
 		{
-		case HOST:
+		case (int)Category::HOST:
 			break;
-		case TASK:
+		case (int)Category::TASK:
 			break;
-		case DEP:
+		case (int)Category::DEP:
 			break;
-		case FILE:
+		case (int)Category::FILE:
 			break;
-		case RET:
+		case (int)Category::RET:
 			break;
-		case SYN:
+		case (int)Category::SYN:
 			break;
-		case PING:
+		case (int)Category::PING:
 			break;
-		case ERR:
+		case (int)Category::ERR:
 			break;
 		default:
 			clog<<"Nieznana kategoria wiadomości od agenta: "<<category<<endl;

@@ -1,8 +1,8 @@
 /*
  * \file     Message.hpp
  *
- * \brief    Plik nagłówkowy klasy opakowującej komunikaty LOTC 
- * 
+ * \brief    Plik nagłówkowy klasy opakowującej komunikaty LOTC
+ *
  * \version  0.3
  * \date     07.12.2015
  *
@@ -24,6 +24,7 @@
 
 #include <vector>
 #include <chrono>
+#include <fstream>
 
 #include "MessageCodes.hpp"
 #include "Ip.hpp"
@@ -37,7 +38,7 @@ namespace message
                 virtual ~Message();
 
                 unsigned char getCode() const;
-                
+
                 unsigned char getCategory() const;
 
                 unsigned char getState() const;
@@ -45,7 +46,7 @@ namespace message
                 unsigned char getSubcategory() const;
 
         private:
-                virtual bool checkMessage () = 0 const;
+                virtual bool checkMessage () const = 0;
 
                 unsigned char code;
         };
@@ -104,7 +105,7 @@ namespace message
 
                 std::string getFilename();
 
-                std::ofstream & getFile();       
+                std::ofstream & getFile();
         };
 
         class retMessage : public Message
@@ -119,7 +120,7 @@ namespace message
 
                 std::string getFilename();
 
-                std::ofstream & getFile();  
+                std::ofstream & getFile();
         };
 
         class synMessage : public Message

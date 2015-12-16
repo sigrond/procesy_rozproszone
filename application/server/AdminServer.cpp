@@ -18,7 +18,7 @@ public:
     /** \brief Wygodny kostruktor wyjątku
      * \param std::string s komunikat do wyświetlenia
      */
-	AdminServerExceptionException(std::string s)
+	AdminServerException(std::string s)
 	{
 		m="AdminServerException: "+s+"\n";
 	}
@@ -39,18 +39,20 @@ AdminServer::AdminServer() :
 	#ifdef _DEBUG
 	std::clog<<"AdminServer::AdminServer()\n";
 	#endif // _DEBUG
-	connection=new Connection();
+	//connection=new Connection();
+	/**< \todo chciałbym móc zrobić tak^ */
+	connection=new Connection(Ipv4());/**< \todo Klasa connection powinna sobie jakoś poradzić z otwarciem połączenia w trybie serwera jeśli nie znamy adresu admina */
 }
 
 AdminServer::AdminServer(Ip &ip) :
 	blockingQueue(nullptr),
-	connection(nullptr)
+	connection(nullptr),
 	adminIP(nullptr)
 {
 	#ifdef _DEBUG
 	std::clog<<"AdminServer::AdminServer(Ip &ip)\n";
 	#endif // _DEBUG
-	connection=new Connection(ip);
+	connection=new Connection((Ipv4&)ip);/**< \todo z tym to już koniecznie klasa Connection powinna sobie jakoś radzić */
 	adminIP=&ip;
 }
 
