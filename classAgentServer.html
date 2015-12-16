@@ -143,6 +143,8 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:a57d551fc559b7800a697a84e2a8e4cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75068a7f83936d0171b46d5dcb99a7b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentServer.html#a75068a7f83936d0171b46d5dcb99a7b4">listenToAll</a> ()</td></tr>
 <tr class="separator:a75068a7f83936d0171b46d5dcb99a7b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec3723633cda932f432249930ea81694"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentServer.html#aec3723633cda932f432249930ea81694">start</a> ()</td></tr>
+<tr class="separator:aec3723633cda932f432249930ea81694"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
@@ -150,6 +152,8 @@ Atrybuty prywatne</h2></td></tr>
 <tr class="separator:a69fbec9452ad2056d585a517f3a36faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b8ec30077d0b9dec0d855bd5f54f706"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classSlave.html">Slave</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentServer.html#a3b8ec30077d0b9dec0d855bd5f54f706">slaves</a></td></tr>
 <tr class="separator:a3b8ec30077d0b9dec0d855bd5f54f706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a998eef5867d468c1023604ed25f9143f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentServer.html#a998eef5867d468c1023604ed25f9143f">shutDown</a></td></tr>
+<tr class="separator:a998eef5867d468c1023604ed25f9143f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>klasa serwera agenta </p>
@@ -171,7 +175,7 @@ Atrybuty prywatne</h2></td></tr>
 
 <p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00035">35</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="AgentServer_8cpp_source.html#l00035">AgentServer()</a> i <a class="el" href="AgentServer_8hpp_source.html#l00028">blockingQueue</a>.</p>
+<p>Odwołuje się do <a class="el" href="AgentServer_8cpp_source.html#l00035">AgentServer()</a>, <a class="el" href="AgentServer_8hpp_source.html#l00029">blockingQueue</a> i <a class="el" href="AgentServer_8hpp_source.html#l00031">shutDown</a>.</p>
 
 <p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00035">AgentServer()</a> i <a class="el" href="application_2server_2server_8cpp_source.html#l00023">main()</a>.</p>
 
@@ -206,9 +210,9 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 <p>przezorny zawsze ubezpieczony :D BTW na pewno gdzieś w okolicach tego regionu kodu będą problemy. więc: </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Do zrobienia:</a></b></dt><dd>testy jednostkowe! :) </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Do zrobienia:</a></b></dt><dd>testy jednostkowe! :) </dd></dl>
 
-<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00042">42</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00043">43</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
 
 </div>
 </div>
@@ -227,7 +231,7 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00078">78</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00079">79</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
 
 </div>
 </div>
@@ -256,9 +260,9 @@ Oto graf wywoływań tej funkcji:</div>
 </div><div class="memdoc">
 <p>metoda łącząca się z agentem </p>
 <p>&lt;</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Do zrobienia:</a></b></dt><dd>dodać jakiś zabezpieczeń bo groźnie to wygląda </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Do zrobienia:</a></b></dt><dd>dodać jakiś zabezpieczeń bo groźnie to wygląda </dd></dl>
 
-<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00061">61</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00062">62</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
 
 <p>Odwołuje się do <a class="el" href="Slave_8hpp_source.html#l00058">Slave::getConnection()</a> i <a class="el" href="Connection_8cpp_source.html#l00026">Connection::send()</a>.</p>
 
@@ -288,7 +292,7 @@ Oto graf wywołań dla tej funkcji:</div>
 </div><div class="memdoc">
 <p>metoda nasłuchująca na połączenie z agentów. może być zrealizowana przez fork-server </p>
 
-<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00066">66</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00067">67</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
 
 <p>Odwołuje się do <a class="el" href="Slave_8hpp_source.html#l00058">Slave::getConnection()</a> i <a class="el" href="Connection_8cpp_source.html#l00031">Connection::receive()</a>.</p>
 
@@ -316,11 +320,11 @@ Oto graf wywołań dla tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 <p>&lt;</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Do zrobienia:</a></b></dt><dd>? wątki tutaj potrzebne? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Do zrobienia:</a></b></dt><dd>? wątki tutaj potrzebne? </dd></dl>
 <p>&lt;</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Do zrobienia:</a></b></dt><dd>jakiś if, bo jak się doda nowy to co </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Do zrobienia:</a></b></dt><dd>jakiś if, bo jak się doda nowy to co </dd></dl>
 
-<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00087">87</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00088">88</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
 
 </div>
 </div>
@@ -338,11 +342,11 @@ Oto graf wywołań dla tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00073">73</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00074">74</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="AgentServer_8hpp_source.html#l00028">blockingQueue</a>.</p>
+<p>Odwołuje się do <a class="el" href="AgentServer_8hpp_source.html#l00029">blockingQueue</a>.</p>
 
-<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00166">Controller::setup()</a>.</p>
+<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00169">Controller::setup()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -352,6 +356,23 @@ Oto graf wywoływań tej funkcji:</div>
 <area shape="rect" id="node2" href="classController.html#aaff2c0ac01c4d7a6b78718ac8a411c4b" title="Tworzy kolejkę blokującą i podaje wskazanie na nią do serverów i modelu. Odzieliłem tą metodę od star..." alt="" coords="221,13,339,39"/><area shape="rect" id="node3" href="application_2server_2server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="387,13,437,39"/></map>
 </div>
 </p>
+
+</div>
+</div>
+<a class="anchor" id="aec3723633cda932f432249930ea81694"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AgentServer::start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="AgentServer_8cpp_source.html#l00097">97</a> pliku <a class="el" href="AgentServer_8cpp_source.html">AgentServer.cpp</a>.</p>
 
 </div>
 </div>
@@ -374,9 +395,33 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="AgentServer_8hpp_source.html#l00028">28</a> pliku <a class="el" href="AgentServer_8hpp_source.html">AgentServer.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentServer_8hpp_source.html#l00029">29</a> pliku <a class="el" href="AgentServer_8hpp_source.html">AgentServer.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00035">AgentServer()</a> i <a class="el" href="AgentServer_8cpp_source.html#l00073">setBlockingQueue()</a>.</p>
+<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00035">AgentServer()</a> i <a class="el" href="AgentServer_8cpp_source.html#l00074">setBlockingQueue()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a998eef5867d468c1023604ed25f9143f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AgentServer::shutDown</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="AgentServer_8hpp_source.html#l00031">31</a> pliku <a class="el" href="AgentServer_8hpp_source.html">AgentServer.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00035">AgentServer()</a>.</p>
 
 </div>
 </div>
@@ -398,7 +443,7 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="AgentServer_8hpp_source.html#l00029">29</a> pliku <a class="el" href="AgentServer_8hpp_source.html">AgentServer.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentServer_8hpp_source.html#l00030">30</a> pliku <a class="el" href="AgentServer_8hpp_source.html">AgentServer.hpp</a>.</p>
 
 <p>Odwołania w <a class="el" href="application_2server_2server_8cpp_source.html#l00023">main()</a>.</p>
 
@@ -414,7 +459,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classAgentServer.html">AgentServer</a></li>
-    <li class="footer">Wygenerowano Śr, 16 gru 2015 16:28:03 dla LOTC programem
+    <li class="footer">Wygenerowano Śr, 16 gru 2015 17:50:25 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -145,6 +145,11 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:ae0cc7705054a63f1ee974ba30ef9a5ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ecf7c2747f0413d3d58f7a9f4dd7ae2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminServer.html#a3ecf7c2747f0413d3d58f7a9f4dd7ae2">setBlockingQueue</a> (<a class="el" href="classBlockingQueue.html">BlockingQueue</a>&lt; <a class="el" href="classEvent.html">Event</a> * &gt; *)</td></tr>
 <tr class="separator:a3ecf7c2747f0413d3d58f7a9f4dd7ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad843107448ab68ee4d0eb00d3dd60fec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminServer.html#ad843107448ab68ee4d0eb00d3dd60fec">start</a> ()</td></tr>
+<tr class="memdesc:ad843107448ab68ee4d0eb00d3dd60fec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda odpowiada za wewnętrzne życie <a class="el" href="classAdminServer.html" title="Klasa serwera administratora. Należy się spodziewać raczej asynchronicznego działania. ">AdminServer</a>'a. Należy raczej oczekiwać, że będzie się zawieszała na funkcjach blokujących, więc powinna być raczej uruchamiana w osobnym wątku.  <a href="#ad843107448ab68ee4d0eb00d3dd60fec">Więcej...</a><br/></td></tr>
+<tr class="separator:ad843107448ab68ee4d0eb00d3dd60fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae254f9e5cf045c7efbef7dce4c55dd62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminServer.html#ae254f9e5cf045c7efbef7dce4c55dd62">triggerShutDown</a> ()</td></tr>
+<tr class="separator:ae254f9e5cf045c7efbef7dce4c55dd62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
@@ -154,11 +159,13 @@ Atrybuty prywatne</h2></td></tr>
 <tr class="separator:ad430393c63d11556becdb0c00ccbfa9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d89296fe6c6bdcfcc77b457eff1373c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIp.html">Ip</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminServer.html#a7d89296fe6c6bdcfcc77b457eff1373c">adminIP</a></td></tr>
 <tr class="separator:a7d89296fe6c6bdcfcc77b457eff1373c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaad5d3a003688fc71db31d99b7d78922"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminServer.html#aaad5d3a003688fc71db31d99b7d78922">shutDown</a></td></tr>
+<tr class="separator:aaad5d3a003688fc71db31d99b7d78922"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Klasa serwera administratora. Należy się spodziewać raczej asynchronicznego działania. </p>
 <p>&lt;</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Do zrobienia:</a></b></dt><dd>potrzebne implementacje <a class="el" href="classConnection.html" title="Klasa realizująca połączenie LOTC. ">Connection</a> </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Do zrobienia:</a></b></dt><dd>potrzebne implementacje <a class="el" href="classConnection.html" title="Klasa realizująca połączenie LOTC. ">Connection</a> </dd></dl>
 
 <p>Definicja w linii <a class="el" href="AdminServer_8hpp_source.html#l00017">17</a> pliku <a class="el" href="AdminServer_8hpp_source.html">AdminServer.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
@@ -183,7 +190,7 @@ Atrybuty prywatne</h2></td></tr>
 
 <p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00034">34</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00049">adminIP</a>, <a class="el" href="AdminServer_8hpp_source.html#l00047">blockingQueue</a>, <a class="el" href="Connection_8cpp_source.html#l00011">Connection::Connection()</a> i <a class="el" href="AdminServer_8hpp_source.html#l00048">connection</a>.</p>
+<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00056">adminIP</a>, <a class="el" href="AdminServer_8hpp_source.html#l00054">blockingQueue</a>, <a class="el" href="Connection_8cpp_source.html#l00011">Connection::Connection()</a>, <a class="el" href="AdminServer_8hpp_source.html#l00055">connection</a> i <a class="el" href="AdminServer_8hpp_source.html#l00057">shutDown</a>.</p>
 
 <p>Odwołania w <a class="el" href="application_2server_2server_8cpp_source.html#l00023">main()</a>.</p>
 
@@ -231,9 +238,9 @@ Oto graf wywoływań tej funkcji:</div>
 <p>&lt;</p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Do zrobienia:</a></b></dt><dd>z tym to już koniecznie klasa <a class="el" href="classConnection.html" title="Klasa realizująca połączenie LOTC. ">Connection</a> powinna sobie jakoś radzić </dd></dl>
 
-<p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00047">47</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00048">48</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00049">adminIP</a>, <a class="el" href="AdminServer_8hpp_source.html#l00047">blockingQueue</a>, <a class="el" href="Connection_8cpp_source.html#l00011">Connection::Connection()</a> i <a class="el" href="AdminServer_8hpp_source.html#l00048">connection</a>.</p>
+<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00056">adminIP</a>, <a class="el" href="AdminServer_8hpp_source.html#l00054">blockingQueue</a>, <a class="el" href="Connection_8cpp_source.html#l00011">Connection::Connection()</a> i <a class="el" href="AdminServer_8hpp_source.html#l00055">connection</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
@@ -259,9 +266,9 @@ Oto graf wywołań dla tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00059">59</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00060">60</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00049">adminIP</a> i <a class="el" href="AdminServer_8hpp_source.html#l00048">connection</a>.</p>
+<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00056">adminIP</a> i <a class="el" href="AdminServer_8hpp_source.html#l00055">connection</a>.</p>
 
 </div>
 </div>
@@ -289,9 +296,9 @@ Oto graf wywołań dla tej funkcji:</div>
 </dl>
 <dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
 
-<p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00084">84</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00085">85</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00048">connection</a> i <a class="el" href="Connection_8cpp_source.html#l00026">Connection::send()</a>.</p>
+<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00055">connection</a> i <a class="el" href="Connection_8cpp_source.html#l00026">Connection::send()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
@@ -320,9 +327,11 @@ Oto graf wywołań dla tej funkcji:</div>
 <p>Metoda nasłuchująca na połączenie z konsoli administratora. Odbiera wiadomość i wrzuca w zdarzeniu do blockingQueue. </p>
 <dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
 
-<p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00074">74</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00075">75</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00048">connection</a> i <a class="el" href="Connection_8cpp_source.html#l00031">Connection::receive()</a>.</p>
+<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00055">connection</a> i <a class="el" href="Connection_8cpp_source.html#l00031">Connection::receive()</a>.</p>
+
+<p>Odwołania w <a class="el" href="AdminServer_8cpp_source.html#l00095">start()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
@@ -330,6 +339,15 @@ Oto graf wywołań dla tej funkcji:</div>
 <div class="center"><img src="classAdminServer_a2c3c374cb8653d62a373735cf316d4e4_cgraph.png" border="0" usemap="#classAdminServer_a2c3c374cb8653d62a373735cf316d4e4_cgraph" alt=""/></div>
 <map name="classAdminServer_a2c3c374cb8653d62a373735cf316d4e4_cgraph" id="classAdminServer_a2c3c374cb8653d62a373735cf316d4e4_cgraph">
 <area shape="rect" id="node2" href="classConnection.html#af94d1dc8ff2e11a4a5d934347d3556b4" title="Funkcja oczekująca na komunikat od zdalnego hosta. " alt="" coords="188,5,323,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdminServer_a2c3c374cb8653d62a373735cf316d4e4_icgraph.png" border="0" usemap="#classAdminServer_a2c3c374cb8653d62a373735cf316d4e4_icgraph" alt=""/></div>
+<map name="classAdminServer_a2c3c374cb8653d62a373735cf316d4e4_icgraph" id="classAdminServer_a2c3c374cb8653d62a373735cf316d4e4_icgraph">
+<area shape="rect" id="node2" href="classAdminServer.html#ad843107448ab68ee4d0eb00d3dd60fec" title="Metoda odpowiada za wewnętrzne życie AdminServer&#39;a. Należy raczej oczekiwać, że będzie się zawieszała..." alt="" coords="188,5,317,32"/></map>
 </div>
 </p>
 
@@ -349,11 +367,11 @@ Oto graf wywołań dla tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00089">89</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00090">90</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00047">blockingQueue</a>.</p>
+<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00054">blockingQueue</a>.</p>
 
-<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00166">Controller::setup()</a>.</p>
+<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00169">Controller::setup()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -363,6 +381,58 @@ Oto graf wywoływań tej funkcji:</div>
 <area shape="rect" id="node2" href="classController.html#aaff2c0ac01c4d7a6b78718ac8a411c4b" title="Tworzy kolejkę blokującą i podaje wskazanie na nią do serverów i modelu. Odzieliłem tą metodę od star..." alt="" coords="224,13,341,39"/><area shape="rect" id="node3" href="application_2server_2server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="389,13,440,39"/></map>
 </div>
 </p>
+
+</div>
+</div>
+<a class="anchor" id="ad843107448ab68ee4d0eb00d3dd60fec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AdminServer::start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda odpowiada za wewnętrzne życie <a class="el" href="classAdminServer.html" title="Klasa serwera administratora. Należy się spodziewać raczej asynchronicznego działania. ">AdminServer</a>'a. Należy raczej oczekiwać, że będzie się zawieszała na funkcjach blokujących, więc powinna być raczej uruchamiana w osobnym wątku. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+<p>&lt;</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Do zrobienia:</a></b></dt><dd>sprawdzenia i wyjątki </dd></dl>
+
+<p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00095">95</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="AdminServer_8cpp_source.html#l00075">listen()</a> i <a class="el" href="AdminServer_8hpp_source.html#l00057">shutDown</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdminServer_ad843107448ab68ee4d0eb00d3dd60fec_cgraph.png" border="0" usemap="#classAdminServer_ad843107448ab68ee4d0eb00d3dd60fec_cgraph" alt=""/></div>
+<map name="classAdminServer_ad843107448ab68ee4d0eb00d3dd60fec_cgraph" id="classAdminServer_ad843107448ab68ee4d0eb00d3dd60fec_cgraph">
+<area shape="rect" id="node2" href="classAdminServer.html#a2c3c374cb8653d62a373735cf316d4e4" title="Metoda nasłuchująca na połączenie z konsoli administratora. Odbiera wiadomość i wrzuca w zdarzeniu do..." alt="" coords="183,5,317,32"/><area shape="rect" id="node3" href="classConnection.html#af94d1dc8ff2e11a4a5d934347d3556b4" title="Funkcja oczekująca na komunikat od zdalnego hosta. " alt="" coords="365,5,500,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae254f9e5cf045c7efbef7dce4c55dd62"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AdminServer::triggerShutDown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="AdminServer_8cpp_source.html#l00105">105</a> pliku <a class="el" href="AdminServer_8cpp_source.html">AdminServer.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="AdminServer_8hpp_source.html#l00057">shutDown</a>.</p>
 
 </div>
 </div>
@@ -386,9 +456,9 @@ Oto graf wywoływań tej funkcji:</div>
 </div><div class="memdoc">
 <p>opcjonalne IP admina </p>
 
-<p>Definicja w linii <a class="el" href="AdminServer_8hpp_source.html#l00049">49</a> pliku <a class="el" href="AdminServer_8hpp_source.html">AdminServer.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AdminServer_8hpp_source.html#l00056">56</a> pliku <a class="el" href="AdminServer_8hpp_source.html">AdminServer.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="AdminServer_8cpp_source.html#l00034">AdminServer()</a> i <a class="el" href="AdminServer_8cpp_source.html#l00059">~AdminServer()</a>.</p>
+<p>Odwołania w <a class="el" href="AdminServer_8cpp_source.html#l00034">AdminServer()</a> i <a class="el" href="AdminServer_8cpp_source.html#l00060">~AdminServer()</a>.</p>
 
 </div>
 </div>
@@ -410,9 +480,9 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="AdminServer_8hpp_source.html#l00047">47</a> pliku <a class="el" href="AdminServer_8hpp_source.html">AdminServer.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AdminServer_8hpp_source.html#l00054">54</a> pliku <a class="el" href="AdminServer_8hpp_source.html">AdminServer.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="AdminServer_8cpp_source.html#l00034">AdminServer()</a> i <a class="el" href="AdminServer_8cpp_source.html#l00089">setBlockingQueue()</a>.</p>
+<p>Odwołania w <a class="el" href="AdminServer_8cpp_source.html#l00034">AdminServer()</a> i <a class="el" href="AdminServer_8cpp_source.html#l00090">setBlockingQueue()</a>.</p>
 
 </div>
 </div>
@@ -434,9 +504,34 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="AdminServer_8hpp_source.html#l00048">48</a> pliku <a class="el" href="AdminServer_8hpp_source.html">AdminServer.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AdminServer_8hpp_source.html#l00055">55</a> pliku <a class="el" href="AdminServer_8hpp_source.html">AdminServer.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="AdminServer_8cpp_source.html#l00034">AdminServer()</a>, <a class="el" href="AdminServer_8cpp_source.html#l00084">connect()</a>, <a class="el" href="AdminServer_8cpp_source.html#l00074">listen()</a> i <a class="el" href="AdminServer_8cpp_source.html#l00059">~AdminServer()</a>.</p>
+<p>Odwołania w <a class="el" href="AdminServer_8cpp_source.html#l00034">AdminServer()</a>, <a class="el" href="AdminServer_8cpp_source.html#l00085">connect()</a>, <a class="el" href="AdminServer_8cpp_source.html#l00075">listen()</a> i <a class="el" href="AdminServer_8cpp_source.html#l00060">~AdminServer()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaad5d3a003688fc71db31d99b7d78922"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AdminServer::shutDown</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>przełącznik do kończenia pracy <a class="el" href="classAdminServer.html" title="Klasa serwera administratora. Należy się spodziewać raczej asynchronicznego działania. ">AdminServer</a>'a </p>
+
+<p>Definicja w linii <a class="el" href="AdminServer_8hpp_source.html#l00057">57</a> pliku <a class="el" href="AdminServer_8hpp_source.html">AdminServer.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="AdminServer_8cpp_source.html#l00034">AdminServer()</a>, <a class="el" href="AdminServer_8cpp_source.html#l00095">start()</a> i <a class="el" href="AdminServer_8cpp_source.html#l00105">triggerShutDown()</a>.</p>
 
 </div>
 </div>
@@ -450,7 +545,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classAdminServer.html">AdminServer</a></li>
-    <li class="footer">Wygenerowano Śr, 16 gru 2015 16:28:03 dla LOTC programem
+    <li class="footer">Wygenerowano Śr, 16 gru 2015 17:50:24 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

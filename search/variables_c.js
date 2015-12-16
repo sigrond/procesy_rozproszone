@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['shutdown',['shutDown',['../classAdminServer.html#aaad5d3a003688fc71db31d99b7d78922',1,'AdminServer::shutDown()'],['../classAgentServer.html#a998eef5867d468c1023604ed25f9143f',1,'AgentServer::shutDown()']]],
   ['shutdownserver',['shutDownServer',['../classController.html#ab67686706e7df70a768c111193e5f0eb',1,'Controller']]],
   ['slaveip',['slaveIP',['../classSlave.html#a19d385860a1b9743db1374e0cdf2e9f2',1,'Slave']]],
   ['slaves',['slaves',['../classAgentServer.html#a3b8ec30077d0b9dec0d855bd5f54f706',1,'AgentServer']]],

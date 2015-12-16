@@ -1,5 +1,10 @@
 var NAVTREEINDEX1 =
 {
+"classSlave.html#a76c76dd7826c70d58071e1d45b561613":[10,0,22,13],
+"classSlave.html#a7733aa198c2281b760030cd62915cab8":[10,0,22,10],
+"classSlave.html#a828d48eb753fb4fc45ec9c593f60f5fb":[10,0,22,2],
+"classSlave.html#a92d88c64b3de64989a97d0775c5bc07d":[10,0,22,6],
+"classSlave.html#a94f84a326af17b5fbe5ec4f42e6ca189":[10,0,22,8],
 "classSlave.html#a99d0908d38f846fae1e7417acf78796b":[10,0,22,1],
 "classSlave.html#aaa43497446e919ca73c564541af806bf":[10,0,22,4],
 "classSlave.html#ac80dabc88a0b32745527fc3d5c5f76c8":[10,0,22,11],
@@ -110,8 +115,8 @@ var NAVTREEINDEX1 =
 "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_wireshark_test_protocol_plugin_readme.html":[2],
 "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_wireshark_test_protocol_screenshots_readme.html":[3],
 "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_wireshark_test_protocol_screenshots_screenshots.html":[4],
-"namespaceAutoVersion.html":[10,0,0],
 "namespaceAutoVersion.html":[9,0,0],
+"namespaceAutoVersion.html":[10,0,0],
 "namespacemembers.html":[9,1,0],
 "namespacemembers_enum.html":[9,1,2],
 "namespacemembers_eval.html":[9,1,3],

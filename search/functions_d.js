@@ -14,6 +14,6 @@ var searchData=
   ['settask',['setTask',['../classSlave.html#ac80dabc88a0b32745527fc3d5c5f76c8',1,'Slave']]],
   ['setup',['setup',['../classController.html#aaff2c0ac01c4d7a6b78718ac8a411c4b',1,'Controller']]],
   ['slave',['Slave',['../classSlave.html#a4a5fa6347b8a8504212fb9647fc5d21e',1,'Slave']]],
-  ['start',['start',['../classAgentClient.html#af0e975638976932e9ab31c654843717e',1,'AgentClient::start()'],['../classConsoleClient.html#a416302ce226015ef7bdf6eef49ec6aa4',1,'ConsoleClient::start()'],['../classController.html#ad535ad74055e645b7f44b7feeb4e82a8',1,'Controller::start()']]],
+  ['start',['start',['../classAgentClient.html#af0e975638976932e9ab31c654843717e',1,'AgentClient::start()'],['../classConsoleClient.html#a416302ce226015ef7bdf6eef49ec6aa4',1,'ConsoleClient::start()'],['../classAdminServer.html#ad843107448ab68ee4d0eb00d3dd60fec',1,'AdminServer::start()'],['../classAgentServer.html#aec3723633cda932f432249930ea81694',1,'AgentServer::start()'],['../classController.html#ad535ad74055e645b7f44b7feeb4e82a8',1,'Controller::start()']]],
   ['synmessage',['synMessage',['../classmessage_1_1synMessage.html#adc773263592bfcd5ae421c8a476b7461',1,'message::synMessage']]]
 ];
