@@ -1,4 +1,11 @@
 16 December 2015
+   released version 0.1.11 of server
+
+     Change log:
+        -Added: zaślepki Ip.cpp
+        -Updated: makefile
+
+16 December 2015
    released version 0.1.10 of server
 
      Change log:
