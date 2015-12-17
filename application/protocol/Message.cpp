@@ -9,7 +9,7 @@
 
 using namespace message;
 
-Message::Message() : code(0)
+Message::Message( Category category ) : code( (unsigned char) category )
 {
 
 }
@@ -39,12 +39,12 @@ unsigned char Message::getSubcategory() const
 	return 0;
 }
 
-hostMessage::hostMessage( HostSub sub, State state, const std::vector<Ip> & addresses )
+hostMessage::hostMessage( HostSub sub, State state, const std::vector<Ip> & addresses ) : Message::Message( Category::HOST )
 {
 
 }
 
-hostMessage::hostMessage( State state )
+hostMessage::hostMessage( State state ) : Message::Message( Category::HOST )
 {
 
 }
@@ -65,12 +65,12 @@ taskMessage::taskMessage( TaskSub sub,
 						bool respectPriority,
 						unsigned short priority,
 						unsigned long taskId,
-						const std::chrono::steady_clock::time_point & timestamp )
+						const std::chrono::steady_clock::time_point & timestamp ) : Message::Message( Category::TASK )
 {
 
 }
 
-taskMessage::taskMessage( State state )
+taskMessage::taskMessage( State state ) : Message::Message( Category::TASK )
 {
 
 }
@@ -96,12 +96,12 @@ std::chrono::steady_clock::time_point & taskMessage::getTimestamp() const
 	return t;
 }
 
-depMessage::depMessage ( State state, std::vector<unsigned long> & tasks )
+depMessage::depMessage ( State state, std::vector<unsigned long> & tasks ) : Message::Message( Category::DEP )
 {
 
 }
 
-depMessage::depMessage ( State state )
+depMessage::depMessage ( State state ) : Message::Message( Category::DEP )
 {
 
 }
@@ -121,12 +121,12 @@ fileMessage::fileMessage(State state,
 						bool isMainFile,
 						unsigned long taskId,
 						std::string filename,
-						const std::ifstream & file )
+						const std::ifstream & file ) : Message::Message( Category::FILE )
 {
 
 }
 
-fileMessage::fileMessage ( State state )
+fileMessage::fileMessage ( State state ) : Message::Message( Category::FILE )
 {
 
 }
@@ -156,12 +156,12 @@ retMessage::retMessage( State state,
 					unsigned char exitStatus,
 					unsigned long taskId,
 					std::string filename,
-					const std::ifstream & file )
+					const std::ifstream & file ) : Message::Message( Category::RET )
 {
 
 }
 
-retMessage::retMessage ( State state )
+retMessage::retMessage ( State state ) : Message::Message( Category::RET )
 {
 
 }
@@ -187,22 +187,22 @@ std::ofstream & retMessage::getFile()
 	return o;
 }
 
-synMessage::synMessage ( State state )
+synMessage::synMessage ( State state ) : Message::Message( Category::SYN )
 {
 
 }
 
-pingMessage::pingMessage ( State state )
+pingMessage::pingMessage ( State state ) : Message::Message( Category::PING )
 {
 
 }
 
-errMessage::errMessage ( ErrSub sub, State state, unsigned char errCode )
+errMessage::errMessage ( ErrSub sub, State state, unsigned char errCode ) : Message::Message( Category::ERR )
 {
 
 }
 
-errMessage::errMessage ( State state )
+errMessage::errMessage ( State state ) : Message::Message( Category::ERR )
 {
 
 }
