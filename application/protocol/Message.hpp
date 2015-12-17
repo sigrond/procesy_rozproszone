@@ -30,7 +30,9 @@
 
 namespace message
 {
-
+        /**
+         * \brief   Abstrakcyjna klasa bazowa obsługująca komunikaty LOTC
+         */
         class Message
         {
         public:
@@ -50,6 +52,7 @@ namespace message
                 unsigned char code;
         };
 
+
         class hostMessage : public Message
         {
                 hostMessage ( HostSub sub, State state, const std::vector<Ip> & addresses );
@@ -60,6 +63,7 @@ namespace message
 
                 std::vector<Ip> & getAddresses() const;
         };
+
 
         class taskMessage : public Message
         {
@@ -72,7 +76,7 @@ namespace message
 
                 taskMessage ( State state );
 
-                bool getRespectPriority();
+                bool getRespectPriority() const;
 
                 unsigned short getPriority() const;
 
@@ -81,16 +85,18 @@ namespace message
                 std::chrono::steady_clock::time_point & getTimestamp() const;
         };
 
+
         class depMessage : public Message
         {
                 depMessage ( State state, std::vector<unsigned long> & tasks );
 
                 depMessage ( State state );
 
-                unsigned short getTaskCount();
+                unsigned short getTaskCount() const;
 
-                std::vector<unsigned long> & getTasks();
+                std::vector<unsigned long> & getTasks() const;
         };
+
 
         class fileMessage : public Message
         {
@@ -98,14 +104,15 @@ namespace message
 
                 fileMessage ( State state );
 
-                bool getIsMainFile();
+                bool getIsMainFile() const;
 
-                unsigned long getTaskId();
+                unsigned long getTaskId() const;
 
-                std::string getFilename();
+                std::string getFilename() const;
 
-                std::ofstream & getFile();       
+                std::ofstream & getFile() const;       
         };
+
 
         class retMessage : public Message
         {
@@ -113,24 +120,27 @@ namespace message
 
                 retMessage ( State state );
 
-                unsigned char getExitStatus();
+                unsigned char getExitStatus() const;
 
-                unsigned long getTaskId();
+                unsigned long getTaskId() const;
 
-                std::string getFilename();
+                std::string getFilename() const;
 
-                std::ofstream & getFile();  
+                std::ofstream & getFile() const;  
         };
+
 
         class synMessage : public Message
         {
                 synMessage ( State state );
         };
 
+
         class pingMessage : public Message
         {
                 pingMessage ( State state );
         };
+
 
         class errMessage : public Message
         {
@@ -143,4 +153,5 @@ namespace message
         };
 
 }
+
 #endif // MESSAGE_HPP
