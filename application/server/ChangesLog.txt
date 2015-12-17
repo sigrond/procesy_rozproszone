@@ -1,3 +1,75 @@
+16 December 2015
+   released version 0.1.15 of server
+
+     Change log:
+        -Added: AdminServer start()
+        -Added: adminServerThread
+
+16 December 2015
+   released version 0.1.14 of server
+
+     Change log:
+        -Added: destruktor Message
+
+16 December 2015
+   released version 0.1.13 of server
+
+     Change log:
+        -Added: konstruktor Message
+
+16 December 2015
+   released version 0.1.12 of server
+
+     Change log:
+        -Added: zaślepki Connection.cpp
+
+16 December 2015
+   released version 0.1.11 of server
+
+     Change log:
+        -Added: zaślepki Ip.cpp
+        -Updated: makefile
+
+16 December 2015
+   released version 0.1.10 of server
+
+     Change log:
+        -Applied: konstruktor ofstream
+
+16 December 2015
+   released version 0.1.9 of server
+
+     Change log:
+        -Updated: makefile
+
+16 December 2015
+   released version 0.1.8 of server
+
+     Change log:
+        -Fixed: virtual checkMessage () = 0 const; --> virtual checkMessage () const = 0;
+
+16 December 2015
+   released version 0.1.7 of server
+
+     Change log:
+        -Added: metody - zaślepki do message
+
+16 December 2015
+   released version 0.1.6 of server
+
+     Change log:
+        -Added: metody AdminServer
+        -Added: metody AgentServer
+        -Applied: wykożystanie klas Connection, Message, Ip
+
+15 December 2015
+   released version 0.1.5 of server
+
+     Change log:
+        -Updated: update wersji libstdc++6
+        -Fixed: naprawione ostrzeżenie Wreorder
+        -Added: zamykanie poleceniem exit
+
 12 December 2015
    released version 0.1.1 of server
 

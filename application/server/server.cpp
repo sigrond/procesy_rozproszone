@@ -39,6 +39,8 @@ int main(int argi, char* argv[])
         {
             if(s.compare("exit")==0)
             {
+            	cout<<"Polecenie exit bezpośrednio do serwera"<<endl;
+            	controller->triggerShutDown();
                 /** \todo wstawić jakiś zgrabny przełącznik do kończenia wątka kontrolera */
                 break;
             }

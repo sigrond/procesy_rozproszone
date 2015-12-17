@@ -1,8 +1,8 @@
 /*
  * \file     Message.hpp
  *
- * \brief    Plik nagłówkowy klasy opakowującej komunikaty LOTC 
- * 
+ * \brief    Plik nagłówkowy klasy opakowującej komunikaty LOTC
+ *
  * \version  0.3
  * \date     07.12.2015
  *
@@ -24,22 +24,23 @@
 
 #include <vector>
 #include <chrono>
+#include <fstream>
 
 #include "MessageCodes.hpp"
 #include "Ip.hpp"
 
 namespace message
 {
-        /**
-         * \brief   Abstrakcyjna klasa bazowa obsługująca komunikaty LOTC
-         */
+
         class Message
         {
         public:
+				Message();/**< chyba jest potrzebny ten konstruktor, bo trzeba zainicjalizować code */
+
                 virtual ~Message();
 
                 unsigned char getCode() const;
-                
+
                 unsigned char getCategory() const;
 
                 unsigned char getState() const;
@@ -47,11 +48,10 @@ namespace message
                 unsigned char getSubcategory() const;
 
         private:
-                virtual bool checkMessage () = 0 const;
+                virtual bool checkMessage () const = 0;
 
                 unsigned char code;
         };
-
 
         class hostMessage : public Message
         {
@@ -64,7 +64,6 @@ namespace message
                 std::vector<Ip> & getAddresses() const;
         };
 
-
         class taskMessage : public Message
         {
                 taskMessage ( TaskSub sub,
@@ -76,7 +75,7 @@ namespace message
 
                 taskMessage ( State state );
 
-                bool getRespectPriority() const;
+                bool getRespectPriority();
 
                 unsigned short getPriority() const;
 
@@ -85,18 +84,16 @@ namespace message
                 std::chrono::steady_clock::time_point & getTimestamp() const;
         };
 
-
         class depMessage : public Message
         {
                 depMessage ( State state, std::vector<unsigned long> & tasks );
 
                 depMessage ( State state );
 
-                unsigned short getTaskCount() const;
+                unsigned short getTaskCount();
 
-                std::vector<unsigned long> & getTasks() const;
+                std::vector<unsigned long> & getTasks();
         };
-
 
         class fileMessage : public Message
         {
@@ -104,15 +101,14 @@ namespace message
 
                 fileMessage ( State state );
 
-                bool getIsMainFile() const;
+                bool getIsMainFile();
 
-                unsigned long getTaskId() const;
+                unsigned long getTaskId();
 
-                std::string getFilename() const;
+                std::string getFilename();
 
-                std::ofstream & getFile() const;       
+                std::ofstream & getFile();
         };
-
 
         class retMessage : public Message
         {
@@ -120,27 +116,24 @@ namespace message
 
                 retMessage ( State state );
 
-                unsigned char getExitStatus() const;
+                unsigned char getExitStatus();
 
-                unsigned long getTaskId() const;
+                unsigned long getTaskId();
 
-                std::string getFilename() const;
+                std::string getFilename();
 
-                std::ofstream & getFile() const;  
+                std::ofstream & getFile();
         };
-
 
         class synMessage : public Message
         {
                 synMessage ( State state );
         };
 
-
         class pingMessage : public Message
         {
                 pingMessage ( State state );
         };
-
 
         class errMessage : public Message
         {
@@ -153,5 +146,4 @@ namespace message
         };
 
 }
-
 #endif // MESSAGE_HPP

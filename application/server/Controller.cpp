@@ -6,19 +6,21 @@
 
 #include "Controller.hpp"
 #include "Strategies.hpp"
+#include "Event.hpp"
 #include <iostream>
 #include <exception>
 #include <string>
 #include <cstdlib>
+#include <thread>
 
 Controller::Controller() :
+	alive(0),
 	adminServer(nullptr),
 	agentServer(nullptr),
+	model(nullptr),
 	blockingQueue(nullptr),
 	strategyMap(nullptr),
-	model(nullptr),
-	shutDownServer(false),
-	alive(0)
+	shutDownServer(false)
 {
 #ifdef _DEBUG
 	std::cout<<"Controller::Controller()\n";
@@ -96,11 +98,13 @@ void Controller::start()
 	{
 		throw ControllerException("blockingQueue==nullptr");
 	}
+	shutDownServer=false;/**< jeśli chcielibyśmy wielokrotnie zamykać i uruchamiać srwer */
 	alive++;
 	//tworzymy mapę strategii
 	strategyMap=new std::map<EventType,Strategy*>;
 	fillStrategyMap();
 
+	std::thread adminServerThread(&AdminServer::start,adminServer);
 	/**< \todo uruchomić adminServer i agentServer, timery w modelu i inne */
 
 	//pętla przetwarzania komunikatów / zdarzeń
@@ -126,6 +130,8 @@ void Controller::fillStrategyMap()
 	}
 	strategyMap->insert(std::pair<EventType,Strategy*>(Test,new TestStrategy()));
 	strategyMap->insert(std::pair<EventType,Strategy*>(SHUT_DOWN,new ShutDownStrategy()));
+	strategyMap->insert(std::pair<EventType,Strategy*>(MESSAGE_FROM_ADMIN_SERVER,new MessageFromAdminStrategy()));
+	strategyMap->insert(std::pair<EventType,Strategy*>(MESSAGE_FROM_AGENT_SERVER,new MessageFromAgentStrategy()));
 	/**< \todo wstawić więcej strategii, ustalić w którym pliku powinny znajdować się strategie i je napisać */
 }
 
@@ -134,10 +140,15 @@ void Controller::fillStrategyMap()
  * Metoda nie potrafi samodzielnie zamknąć serwera, bo nie przerywa oczekiwania na
  * metodzie BlockingQueue::popfront() i nie przerwie pętli przetważania, dopuki
  * wątek oczekuje na pojawienie się elementu w kolejce.
+ * EDIT: Już powinna sobie dać radę z kolejką blokującą.
  */
 void Controller::triggerShutDown()
 {
 	shutDownServer=true;
+	if(blockingQueue!=nullptr)
+	{
+		blockingQueue->push_back(new Event(SHUT_DOWN,this));
+	}
 }
 
 void Controller::setAdminServer(AdminServer* s)

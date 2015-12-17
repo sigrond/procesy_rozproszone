@@ -1,104 +1,94 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="ServerUnitTests.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Controller.hpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="182" topLine="0" />
+			<Cursor1 position="1604" topLine="21" />
 		</Cursor>
 	</File>
-	<File name="ControllerTests.cpp" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Controller.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1480" topLine="23" />
+			<Cursor1 position="507" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="BlockingQueue.hpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="..\protocol\MessageCodes.hpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1200" topLine="18" />
+			<Cursor1 position="0" topLine="3" />
 		</Cursor>
 	</File>
-	<File name="BlockingQueue.cpp" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Event.hpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="AdminServer.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1649" topLine="59" />
+		</Cursor>
+	</File>
+	<File name="..\protocol\Message.hpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="AgentServer.cpp" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1552" topLine="63" />
+		</Cursor>
+	</File>
+	<File name="AgentServer.hpp" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="699" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Event.hpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Slave.cpp" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="807" topLine="16" />
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Slave.hpp" open="1" top="1" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="503" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Model.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="611" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="Strategies.hpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3324" topLine="110" />
+		</Cursor>
+	</File>
+	<File name="AdminServer.hpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="193" topLine="3" />
+		</Cursor>
+	</File>
+	<File name="..\protocol\Connection.hpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\protocol\Ip.hpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="makeServerUnitTests" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="419" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="makefile" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="260" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="server.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="526" topLine="20" />
-		</Cursor>
-	</File>
-	<File name="version.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="465" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="makeServerUnitTests" open="1" top="1" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="168" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Strategies.hpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1152" topLine="17" />
-		</Cursor>
-	</File>
-	<File name="AgentServer.hpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="421" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Strategy.hpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="338" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Model.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="344" topLine="6" />
-		</Cursor>
-	</File>
-	<File name="Controller.hpp" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="978" topLine="14" />
-		</Cursor>
-	</File>
-	<File name="BlockingQueueTests.cpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="821" topLine="30" />
-		</Cursor>
-	</File>
-	<File name="makefile" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="145" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Controller.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2295" topLine="109" />
-		</Cursor>
-	</File>
-	<File name="Model.hpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="410" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="AdminServer.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="331" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="AdminServer.hpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="506" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="AgentServer.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="237" topLine="0" />
+			<Cursor1 position="1391" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

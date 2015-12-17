@@ -12,6 +12,7 @@
 
 #include "Strategy.hpp"
 #include "Controller.hpp"
+#include "../protocol/Message.hpp"
 #include <iostream>
 #include <string>
 #include <thread>
@@ -60,6 +61,86 @@ public:
 	{
 		std::cout<<"Zamykanie serwera...\n";
 		((Controller*)data)->triggerShutDown();
+	}
+};
+
+/** \brief Strategia przetwarzania i obsługi wiadomości od administratora.
+ */
+class MessageFromAdminStrategy : public Strategy
+{
+public:
+    /** \brief obsługa wiadomości od admina
+     *
+     * \param data message::Message*
+     * \return virtual void
+     *
+     */
+	virtual void doJob(void* data) override
+	{
+		using namespace std;
+		using namespace message;
+		unsigned char category;
+		category=((Message*)data)->getCategory();
+		switch(category)/**< \todo obsługa kategorii */
+		{
+		case (int)Category::HOST:
+			break;
+		case (int)Category::TASK:
+			break;
+		case (int)Category::DEP:
+			break;
+		case (int)Category::FILE:
+			break;
+		case (int)Category::RET:
+			break;
+		case (int)Category::SYN:
+			break;
+		case (int)Category::PING:
+			break;
+		case (int)Category::ERR:
+			break;
+		default:
+			clog<<"Nieznana kategoria wiadomości od admina: "<<category<<endl;
+		}
+	}
+};
+
+class MessageFromAgentStrategy : public Strategy
+{
+public:
+    /** \brief obsługa wiadomości od agenta
+     *
+     * \param data message::Message*
+     * \return virtual void
+     *
+     */
+	virtual void doJob(void* data) override
+	{
+		using namespace std;
+		using namespace message;
+		unsigned char category;
+		category=((Message*)data)->getCategory();
+		switch(category)/**< \todo obsługa kategorii */
+		{
+		case (int)Category::HOST:
+			break;
+		case (int)Category::TASK:
+			break;
+		case (int)Category::DEP:
+			break;
+		case (int)Category::FILE:
+			break;
+		case (int)Category::RET:
+			break;
+		case (int)Category::SYN:
+			break;
+		case (int)Category::PING:
+			break;
+		case (int)Category::ERR:
+			break;
+		default:
+			clog<<"Nieznana kategoria wiadomości od agenta: "<<category<<endl;
+		}
 	}
 };
 

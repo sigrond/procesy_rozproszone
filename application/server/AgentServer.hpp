@@ -8,6 +8,9 @@
 
 #include "BlockingQueue.hpp"
 #include "Event.hpp"
+#include "Slave.hpp"
+#include "../protocol/Connection.hpp"
+#include <vector>
 
 /** \brief klasa serwera agenta
  */
@@ -15,9 +18,15 @@ class AgentServer
 {
 public:
     AgentServer();
-    void listen();/**< metoda nasłuchująca na połączenie z agentów. może być zrealizowana przez fork-server */
-    void connect(void* who);/**< metoda łącząca się z agentem */
+    ~AgentServer();
+    void listen(Slave* who);/**< metoda nasłuchująca na połączenie z agentów. może być zrealizowana przez fork-server */
+    void connect(Slave* who, message::Message* m);/**< metoda łącząca się z agentem */
     void setBlockingQueue(BlockingQueue<Event*>*);
+    void addSlave(Ip &ip);
+    void listenToAll();
+    void start();
 private:
     BlockingQueue<Event*>* blockingQueue;
+    std::vector<Slave*>* slaves;
+    bool shutDown;
 };
