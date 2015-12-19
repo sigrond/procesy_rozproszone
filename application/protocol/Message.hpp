@@ -48,13 +48,14 @@ namespace message
                 unsigned char getSubcategory() const;
 
         private:
-                virtual bool checkMessage () const = 0;
+                virtual bool checkMessage () const; //= 0;
 
                 unsigned char code;
         };
 
         class hostMessage : public Message
         {
+        public:
                 hostMessage ( HostSub sub, State state, const std::vector<Ip> & addresses );
 
                 hostMessage ( State state );
@@ -66,6 +67,7 @@ namespace message
 
         class taskMessage : public Message
         {
+        public:
                 taskMessage ( TaskSub sub,
                               State state,
                               bool respectPriority,
@@ -86,6 +88,7 @@ namespace message
 
         class depMessage : public Message
         {
+        public:
                 depMessage ( State state, std::vector<unsigned long> & tasks );
 
                 depMessage ( State state );
@@ -97,6 +100,7 @@ namespace message
 
         class fileMessage : public Message
         {
+        public:
                 fileMessage ( State state, bool isMainFile, unsigned long taskId, std::string filename, const std::ifstream & file );
 
                 fileMessage ( State state );
@@ -112,6 +116,7 @@ namespace message
 
         class retMessage : public Message
         {
+        public:
                 retMessage ( State state, unsigned char exitStatus, unsigned long taskId, std::string filename, const std::ifstream & file );
 
                 retMessage ( State state );
@@ -127,11 +132,13 @@ namespace message
 
         class synMessage : public Message
         {
+        public:
                 synMessage ( State state );
         };
 
         class pingMessage : public Message
         {
+        public:
                 pingMessage ( State state );
         };
 

@@ -17,6 +17,7 @@
 
 #include "Ip.hpp"
 #include "Message.hpp"
+#include "Socket.hpp"
 
 /**
  * \brief  Klasa realizująca połączenie LOTC
@@ -53,13 +54,23 @@ public:
          * \brief      Funcja wysyłająca komunikat
          * \param[in]  message Referencja do obiektu zawierającego komunikat do wysłania
          */
-        void send ( message::Message & message );
+        void send ( const message::Message & message );
 
         /**
          * \brief      Funkcja oczekująca na komunikat od zdalnego hosta
          * \return     Wskaźnik na obiekt Message utworzony na podstawie danych otrzymanych ze zdalnego hosta 
          */
         message::Message* receive ();
+
+private:
+        Ip * ip;
+
+        // socket nasłuchujący, żyje tak dlugo, jak obiekt Conenction
+        Socket * listeningSocket;
+
+        // socket inicjujący połączenia, wymieniany po każdym wysłanym komunikacie
+        // docelowo - po przejściu przez wymianę komunikatów REQ -> ACK -> OK/NOK -> ACK
+        Socket * connectingSocket;
 
 };
 

@@ -19,6 +19,10 @@ Message::~Message()
 
 }
 
+        
+                                                        bool Message::checkMessage() const {}
+
+
 unsigned char Message::getCode() const
 {
 	return code;
