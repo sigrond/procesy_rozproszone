@@ -26,7 +26,12 @@ int Socket::recv( char*, int ) {}
 
 int Socket::listen()
 {
-        return ::listen( sockfd, BACKLOG );
+        int ret = ::listen( sockfd, BACKLOG );
+
+        if( ret != 0 )
+                throw ListenSockEx();
+
+        return ret;
 }
 
 int Socket::close()
@@ -54,20 +59,33 @@ int SocketIp4::bind()
         int reuseaddr = 1;
         setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &reuseaddr, sizeof(reuseaddr));
 
-        return ::bind( sockfd, (struct sockaddr *) &saddr, sizeof( saddr ) );       
+        int ret = ::bind( sockfd, (struct sockaddr *) &saddr, sizeof( saddr ) ); 
+
+        if(ret != 0)
+                throw BindSockEx();
+
+        return ret;
 }
 
 int SocketIp4::connect()
 {
-        return ::connect( sockfd, (struct sockaddr *) &saddr, sizeof( saddr ) );
+
+        int ret = ::connect( sockfd, (struct sockaddr *) &saddr, sizeof( saddr ) );
+
+        if( ret != 0 )
+                throw ConnectSockEx();
+
+        return ret;
 }
 
 int SocketIp4::accept()
 {
         msgsock = ::accept( sockfd, (struct sockaddr *) 0, (socklen_t *)0 );
         
+        if( msgsock == -1 )
+                throw AcceptSockEx();
+
         return msgsock;
-        //return ::accept( sockfd, (struct sockaddr *) &caddr, (socklen_t *)sizeof( caddr ) );
 }
 
 int SocketIp4::recv( char * buffer, int bufferSize )
@@ -79,4 +97,5 @@ int SocketIp4::send( char * buffer, int bufferSize )
 {
         return ::send( sockfd, buffer, bufferSize, 0 );
 }
+
 

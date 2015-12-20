@@ -48,7 +48,7 @@ namespace message
                 unsigned char getSubcategory() const;
 
         private:
-                virtual bool checkMessage () const; //= 0;
+                virtual bool checkMessage () const; //= 0; TYLKO TYMCZASOWO, BO JEST TO SZYBSZE NIŻ PISANIE METODY DLA 8 PODKLAS
 
                 unsigned char code;
         };

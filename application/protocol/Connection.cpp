@@ -24,8 +24,15 @@ Connection::Connection ( const Ipv4 & address )
 
         listeningSocket = new SocketIp4( Ipv4() );
 
-        std::cout << "Bind: " << listeningSocket->bind() << std::endl;
-        std::cout << "Listen: " << listeningSocket->listen() << std::endl;
+        try
+        {
+                std::cout << "Bind: " << listeningSocket->bind() << std::endl;
+                std::cout << "Listen: " << listeningSocket->listen() << std::endl;
+        }
+        catch (std::exception & e)
+        {
+                std::cerr << e.what() << std::endl;
+        }
 }
 
 Connection::Connection ( const Ipv6 & address )
@@ -42,7 +49,7 @@ Connection::~Connection ()
 
 void Connection::send ( const message::Message & message )
 {
-        connectingSocket = new SocketIp4( *(Ipv4*)ip );i
+        connectingSocket = new SocketIp4( *(Ipv4*)ip );
 
         char pasta[] =  "Gomenasai, my name is Ken-Sama.\n"
                         "I’m a 27 year old American Otaku (Anime fan for you gaijins). I draw Anime and Manga on my tablet, and spend my days perfecting my art and playing superior Japanese games. (Disgaea, Final Fantasy, Persona series)\n"

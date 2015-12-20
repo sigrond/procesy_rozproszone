@@ -18,12 +18,15 @@
 #include <unistd.h>
 
 #include "Ip.hpp"
+#include "SocketException.hpp"
 
 // port z dupy wzięty, bardzo możliwe, że tymczasowy
 // port nasłuchiwania komunikatów
 const unsigned short PORT = 55555; 
 
 const unsigned short BACKLOG = 256;
+
+
 
 class Socket
 {
@@ -78,6 +81,8 @@ private:
         sockaddr_in6 saddr;
         sockaddr_in6 caddr;
 };
+
+
 
 
 #endif // SOCKET_HPP
