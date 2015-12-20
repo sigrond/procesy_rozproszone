@@ -1,197 +1,53 @@
-# Protokół komunikacyjny serwer-agent
+# Koncepcja implementacji modułu komunikacyjnego
 
-To jest wstępny i ogólnikowy projekt protokołu. Feedback bardzo pożądany.
+#### Klasa Socket
 
-### Przesyłanie plików
+Prosty wrapper obiektowy dla socketów unixowych.
 
-**WAŻNE: sugeruję, byśmy nie utrudniali sobie życia i nie zagłębiali się zbytnio w bawienie się plikami zadania.**
+#### Klasa Ip i dziedziczące
 
- - Pliki dodajemy siłą wyższej konieczności każdy osobno.
- - Konflikt nazw w obrębie zadania = nadpisanie.
- - Próba dodania więcej niż jednego pliku głównego = usunięcie starego pliku głównego.
- - Nie żądamy usuwania pojedynczych plików, tylko całe zadania. Ludobójstwo może nie jest eleganckie, ale za to mniej w nim zastanawiania się.
- - Żadnych edycji plików. Zadanie jest z zalożenia gotowe i ostateczne.
+Bardzo drobna klasa, przechowuje adres IP w postaci stringa przetrawialnego dla socketów unixowych. Generalnie zadaniem tej klasy jest sprawdzenie podczas wywołania konstruktora, czy podany adres jest poprawny.
 
-Innymi słowy, po załadowaniu zadania, możemy je co najwyżej usunąć. Teoretycznie możliwe dodanie kolejnych plików nie powinno wystąpić, patrz punkt wyżej.
-Tak, jest to prymitywne, ale nie mamy czasu na budowanie pelnoprawnego protokołu transmisji plików.
+Samo istnienie obiektu IP gwarantuje, że przechowywany w nim adres jest prawidłowy. Ponadto w prezencie dostajemy kontrolę typów, przeciążanie funkcji w zależności od wersji adresu i ochronę stringa przed modyfikacją.
 
-Jeśli będziemy cierpieć na nadmiary czasu, możemy się tym pobawić.
+#### Klasa Message
 
---------------------
-Poniższa specyfikacja zahacza o implementację agenta, proszę to traktować jako wyjaśnienie idei oraz propozycję.
+Idea jest prosta - klasa ta reprezentuje pojedynczy komunikat protokołu LOTC oraz udostępnia interfejs pozwalający na jego wygodne tworzenie i odczytywanie pól.
 
- - Serwer każdemu zadaniu przypisuje unikalny w obrębie całego systemu identyfikator
- - Zadanie składa się z głównego pliku wykonywalnego i ewentualnych plików pomocniczych
- - Pliki pomocnicze mogą być dowolnymi plikami, zawierającymi dane lub inne programy
- - Pliki nie muszą mieć unikalnych nazw w obrębie całego systemu
- - Protokół wykorzystuje flagę binarną do zaznaczenia, czy dany plik jest plikiem głównym czy plikiem pomocniczym
- - Jedno zadanie ma dokładnie jeden plik główny
- - Po otrzymaniu pliku należącego do zadania o identyfikatorze *id*, agent umieszcza go w folderze *id* (jeśli nie ma folderu, tworzy go)
- - Agent zapamiętuje powiązanie *id* -> plik główny zadania *id*
- - W sposób oczywisty istnieje bijekcja zbioru identyfikatorów na zbiór głównych plików wykonywalnych
- - Komunikat "rozpocznij zadanie *id*" jest realizowany poprzez wejście do folderu *id* i uruchomienie powiązanego z zadaniem *id* pliku głównego
- - Program główny zadania dowolnie wykorzystuje inne pliki z folderu tegoż zadania
+## Połączenia
 
-Taka organizacja ma następujące zalety:
- - pełne i wyraźne rozdzielenie plików zadań eliminujące obostrzenia odnośnie powtarzalności nazw plików między zadaniami
- - łatwe zarządzanie zadaniami (rozumianymi jako zbiór wielu plików)
- - serwer musi przechowywać tylko identyfikator zadania - nędzne 4 bajty (oczywiście może przechowywać więcej informacji, jeśli to uprości nam życie)
+Przez jedno "połączenie" rozumiemy wymianę komunikatów:
 
-Pola:
- - Kod operacji dodawania [8 bitów]
- - Flaga typu pliku: główny/pomocniczy [1 bit]
- - Długość pola nazwy pliku (max 128 bajtów) [7 bitów]
- - Suma kontrolna nazwy + pliku [16 bitów]
- - ID zadania [32 bity]
- - Dlugość pola danych (maksimum wybadam później) [32 bity]
- - Nazwa pliku [max 2^7 bajtów]
- - Dane (plik) [max 2^32 bajtów]
+````
+----REQ---> 
+<---ACK---- 
+<--OK/NOK--
+----ACK--->
+````
 
-### Zadania
+ - Po przesłaniu ostatniego komuniktu (ACK), połączenie jest zamykane.
+ - Na raz może być otwarte tylko jedno połączenie (założenie protokołu - hosty nie wysyłają/przymują poleceń, nim nie zakończą przetwarzać poprzednich)
 
-Tu sprawa jest prostsza: 
- - serwer wysyła identyfikator zadania i polecenie (+ ewentualny timestamp dla zadań odłożonych w czasie)
- - agent raportuje sukces/błąd
- - po zakończeniu wykonania zadania agent wysyła wynik, serwer odpowiada potwierdzeniem otrzymania
+### Nawiązywanie połączeń
 
-Ustalenie: timestamp mniejszy niż aktualny czas oznacza wykonanie natychmiast; zatem oczywistym zdaje się polecenia do wykonania natychmiast wysyłać z timestamp = 0. 
+Każdy host nasłuchuje na porcie 55555 (na chwilę obecną). Oznacza to, że połączenie z innym hostem może zostać nawiązane za dwa sposoby - poprzez połączenie z portem 55555 drugiej strony (connect()) lub przyjęcie połączenia na własny port 55555 (accept()).
 
-Pola:
- - Kod polecenia [8 bitów]
- - Wypełniacz [24 bity] // jeszcze pomyślę, jak to zagospodarować
- - ID zadania [32 bity]
- - Timestamp [32 bity]
+Nawiązanie połączenia oznacza utworzenie u hosta zasocjowanego gniazda, wykorzystywanego do wysyłania i odbierania komunikatów.
 
-### Responsywność agentów
+#### Klasa Connection
 
-Trzeba okresowo badać, czy agent żyje. Można to zrealizować poprzez mechanizm zapytania-odpowiedzi, albo po prostu kazać agentom okresowo wysyłać serwerowi komunikat o tym, że żyją.
+**UWAGA! Pliki klasy Connection na chwilę obecną zawierają wersję testową nieaktualnego, zarzuconego rozwiązania.**
 
-Zapytanie od serwera:
- - kod "czy żyjesz?" [8 bitów]
+Klasa Connection reprezentuje pojedyncze, nawiązane, otwarte połączenie. Obiekty tej klasy posiadają wskazanie na jeden zasocjowany socket związany z tym połączeniem. Poza realizacją komunikacji w obrębie swojego połączenia, klasa ta dba również o zachowanie odpowiedniej kolejności wysyłania komunikatów. Dla przykładu próba wysłania pod rząd dwóch komunikatów REQ zakończy się zgloszeniem wyjątku.
 
-Odpowiedź/raport okresowy klienta:
- - kod "tak, żyję" [8 bitów]
+Czas życia obiektów Connection odpowiada czasowi trwania połączenia.
 
-Kodu "nie, nie zyję" nie przewidujemy.
+#### Klasa ConnectionManager
 
-### Synchronizacja
+**Klasa jeszcze nie narodzona**
 
-Synchronizacja będzie realizowana poprzez wewnętrznego klienta NTP.
+"Centrum dowodzenia" połączeniami. Singleton, przechowuje gniazdo nasłuchujące na porcie 55555, zarządza przyjmowaniem i nawiazywaniem połączeń, a także odpowiada za zarządzanie wątkami (jedno połączenie = jeden wątek). Pilnuje też, by z danym hostem nie nawiązać więcej niż jednego połączeni jednocześnie.
 
-Serwer może wysłać do agenta żądanie synchronizacji czasu:
+Klasa ta wystawia całość interfejsu mudułu komunikacyjnego protokołu LOTC. Nie ma potrzeby tworzenia własnych obiektów Socket lub Connection.
 
-Pola:
- - kod SYN [8 bitów]
-
-Istotne sugestie co do implementacji:
- - nie zmieniamy zegara systemowego (co by wymagało uprawnień root), tylko wyliczamy poprawkę na czas systemowy
- - serwer powinien synchronizować czas natychmiast po uruchomieniu oraz wysyłać polecenie SYN do agenta natychmiast po jego rejestracji
- - serwer i agenci powinni okresowo automatycznie się synchronizować
-
-### Raportowanie
-
-**Serwer po wydaniu jakiejkolwiek komendy czeka na raport i nie daje innych poleceń danemu agentowi dopóki nie dostanie odpowiedzi**
-
-W wypadku timeoutu serwer wysyła zapytanie "czy żyjesz?". Trzykrotne niepowodzenie oznacza, że agent jest MIA i trzeba przenieść zadanie gdzie indziej.
-
-Raportowanie:
- - Kod raportu [8 bitów]
-
-### Przesyłanie wyniku zadania
-
-Tu jest mały problem, bo nie wiadomo zbytnio, co te zadania mają robić, jak mają być interpretowane wyniki. Opracowałem taki uniwersalny schemat:
-
-Pola:
- - Kod return [8 bitów]
- - Exit code [8 bitów]
- - Zwracany typ [8 bitów]
- - Wypełniacz [8 bitów]
- - ID zadania [32 bity]
- - Zwracana wartość
-
-Zwracana wartość może mieć następujące postacie:
-
-dla exit code != 0:
- - Nic
-
-przy zwracaniu typu prostego (liczby)
- - Liczba [32-64 bitów]
-
-przy zwracaniu innych danych:
- - Długość pola danych [32 bity]
- - Dane [max 2^32 bajtów]
-
-
-Serwer odpowiada raportem otrzymania danych:
- - Kod odpowiedzi [8 bit]
-
-### Kody komunikatów
-
-Ośmiobitowy kod jest podzielony na trzy sekcje:
- - kategoria [3 bity]
- - podkategoria [3 bity]
- - stan [2 bity]
-
-**Kategorie:**
-
-| Kod | Kategoria | Opis                       |
-|-----|-----------|----------------------------|
-| 0   | START     | Rejestarcja agenta         |
-| 1   | FILE      | Przesyłanie pliku          |
-| 2   | TASK      | Interakcja z zadaniem      |
-| 3   | ALIVE     | Sprawdzanie responsywności |
-| 4   | SYNC      | Synchronizacja             |
-| 5   | RET       | Zwracanie wartości         |
-| 6   | END       | Kończenie pracy agneta     |
-| 7   | PERR      | Błąd protokołu             |
-
-
-**Podkategorie**
-
-TASK:
-
-| Kod | Podkategoria | Opis              |
-|-----|--------------|-------------------|
-| 0   | ADD          | Dodaj zadanie     |
-| 1   | RM           | Usuń zadanie      |
-| 2   | RUN          | Wykonaj zadanie   |
-| 3   | KILL         | Zakończ zadanie   |
-| 4   | STOP         | Wstrzymaj zadanie |
-| 5   | CONT         | Kontynuuj zadanie |
-| 6   | x            | [zabroniony]      |
-| 7   | x            | [zabroniony]      |
-
-ERR:
-
-| Kod | Podkategoria | Opis                    |
-|-----|--------------|-------------------------|
-| 0   | HEAD         | Błędny nagłówek         |
-| 1   | LGTH         | Błędna długość          |
-| 2   | CSUM         | Błędna suma kontrolna   |
-| 3   | x            | [zabroniony]            |
-| 4   | x            | [zabroniony]            |
-| 5   | x            | [zabroniony]            |
-| 6   | x            | [zabroniony]            |
-| 7   | OTH          | Inny błąd               |
-
-dla pozostałych kategorii:
-
-| Kod | Podkategoria | Opis                          |
-|-----|--------------|-------------------------------|
-| 0   | -            | Domyślna podkategotia         |
-| 1   | x            | [zabroniony]                  |
-| 2   | x            | [zabroniony]                  |
-| 3   | x            | [zabroniony]                  |
-| 4   | x            | [zabroniony]                  |
-| 5   | x            | [zabroniony]                  |
-| 6   | x            | [zabroniony]                  |
-
-
-**Stan:**
-
-| Kod | Stan | Opis                   |
-|-----|------|------------------------|
-| 0   | REQ  | Polecenie              |
-| 1   | ACK  | Przyjęcie polecenia    |
-| 2   | OK   | Wykonanie polecenia    |
-| 3   | ERR  | Nie wykonano polecenia |
+Obiekt tej klasy jest monitorem i gwarantuje bezpieczny dostęp współbieżny.
