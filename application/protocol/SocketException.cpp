@@ -10,6 +10,10 @@
 #include "SocketException.hpp"
 #include <string.h>
 
+SockEx::~SockEx() {}
+
+
+BindSockEx::~BindSockEx() {}
 
 BindSockEx::BindSockEx()
 {
@@ -23,6 +27,7 @@ const char * BindSockEx::what() const noexcept
 }
 
 
+AcceptSockEx::~AcceptSockEx() {}
 
 AcceptSockEx::AcceptSockEx()
 {
@@ -36,6 +41,7 @@ const char * AcceptSockEx::what() const noexcept
 }
 
 
+ConnectSockEx::~ConnectSockEx() {}
 
 ConnectSockEx::ConnectSockEx()
 {
@@ -49,6 +55,7 @@ const char * ConnectSockEx::what() const noexcept
 }
 
 
+CreateSockEx::~CreateSockEx() {}
 
 CreateSockEx::CreateSockEx()
 {
@@ -62,6 +69,7 @@ const char * CreateSockEx::what() const noexcept
 }
 
 
+ListenSockEx::~ListenSockEx() {}
 
 ListenSockEx::ListenSockEx()
 {

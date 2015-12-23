@@ -36,15 +36,9 @@ public:
         const std::string & getAddress () const;
 
 protected:
-        std::string address;
-        
-        /**
-         * \brief     Metoda sprawdzająca poprawność otrzymanego adresu
-         * \param[in] Adres IP w postaci ciągu znaków
-         * \return    Czy jest poprawny
-         */
-        virtual bool isCorrect ( const std::string & address ) const = 0;
+        const std::string address;
 };
+
 
 
 /**
@@ -56,8 +50,14 @@ public:
         Ipv4 ( const std::string & address = "127.0.0.1" );
 
 private:
-        bool isCorrect ( const std::string & address ) const override;
+        bool isCorrect () const;
+        void splitToNumbers();
+
+        unsigned char addressNumbers [4];
 };
+
+
+
 
 /*
  * \brief Klasa opakowująca IPv6
@@ -68,14 +68,18 @@ public:
         Ipv6 ( const std::string & address = "::1" );
 
 private:
-        bool isCorrect ( const std::string & address ) const override;
+        bool isCorrect () const;
+        void splitToNumbers();
+        unsigned char addressNumbers [16];
 };
+
+
 
 
 /*
  * \brief Wyjątek sygnalizujący błędny adres IP
  */
-class badIpException : public std::exception
+class BadIpException : public std::exception
 {
 public:
        const char* what();
