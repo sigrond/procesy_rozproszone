@@ -1,9 +1,9 @@
-/** \file Connection.cpp
+/** 
+ * \file Connection.cpp
  *
- * \authors Tomasz Jakubczyk, ...
  * \brief Plik z implementacjami metod klasy Connection.
- * \todo Andrzej napisze
  *
+ * \authors Tomasz Jakubczyk, Andrzej Roguski
  */
 
 // UWAGA!!!
