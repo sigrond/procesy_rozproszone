@@ -10,71 +10,61 @@
  */
 
 #include <regex>
-#include <boost/algorithm/string/find_iterator.hpp>
-#include <boost/algorithm/string/regex.hpp>
 
 #include "Ip.hpp"
 
+#include <iostream>
 
 // ------------------------------------------------------
 // Ip
 // ------------------------------------------------------
-Ip::Ip ( const std::string & address ) : address(address)
-{
-
-        
-}
-
-Ip::~Ip()
-{
-
-}
-
-const std::string & Ip::getAddress () const
-{
-	return address;
-}
+Ip::Ip(){}
+Ip::~Ip(){}
 
 
 // ------------------------------------------------------
 // Ipv4
 // ------------------------------------------------------
-Ipv4::Ipv4 ( const std::string & address ) : Ip(address)
+Ipv4::Ipv4 ( const std::string & str )
 {
-        if( ! isCorrect() )
+        if( ! isCorrect( str ) )
                 throw BadIpException();
 
-        splitToNumbers();
+        inet_aton( str.c_str(), &address );
 }
 
-bool Ipv4::isCorrect () const
+bool Ipv4::isCorrect ( const std::string & str ) const
 {
+        // ten koszmar poniżej to regex sprawdzający, czy ciąg jest poprwanym adresem IPv4 w konwencji A.B.C.D
         const static std::regex exIpv4("(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)");
 	
-        return std::regex_match( address, exIpv4 );
+        return std::regex_match( str, exIpv4 );
 }
 
-void Ipv4::splitToNumbers()
+
+std::string Ipv4::getAddress() const
 {
-        const static std::regex ex3("[0-9]{1,3}");
+        char * addr = inet_ntoa( address );
 
-        std::smatch matches;
-        std::string str = address;
-
-        short i = 0;
-
-        while (std::regex_search ( str, matches, ex3 ) )  
-        {
-                addressNumbers[i++] = (unsigned char)std::stoi( matches[0] );
-                str = matches.suffix().str();
-        }
+        return std::string( addr );
 }
+
+unsigned long Ipv4::getAddressNum() const
+{
+        return address.s_addr;
+}
+
+bool Ipv4::operator<( const Ipv4 & that ) const
+{
+       return getAddressNum() < that.getAddressNum();
+}
+
 
 
 // ------------------------------------------------------
 // Ipv6
 // ------------------------------------------------------
-Ipv6::Ipv6 ( const std::string & address ) : Ip(address)
+Ipv6::Ipv6 ( const std::string & str )
 {
 
 }
@@ -84,9 +74,14 @@ bool Ipv6::isCorrect () const
 	return true;
 }
 
-void Ipv6::splitToNumbers()
+void Ipv6::toNumbers()
 {
 
+}
+
+std::string Ipv6::getAddress() const
+{
+        return "";
 }
 
 

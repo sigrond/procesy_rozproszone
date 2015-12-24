@@ -21,7 +21,7 @@
 Connection::Connection ( const Ipv4 & address )
 {
         ip = new Ipv4( address.getAddress() );
-
+        
         listeningSocket = new SocketIp4( Ipv4() );
 
         try

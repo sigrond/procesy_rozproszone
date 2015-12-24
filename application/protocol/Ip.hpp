@@ -13,6 +13,9 @@
 #define IP_HPP
 
 #include <string>
+#include <array>
+#include <netinet/in.h>
+#include <arpa/inet.h>
 
 /**
  * \brief Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6
@@ -25,18 +28,14 @@ public:
          * \param address Adres IP
          * \throw badIpException Błędny adres IP
          */
-        Ip ( const std::string & address );
-       
+        Ip ();
         virtual ~Ip ();
         
         /**
          * \brief  Metoda zwracająca przechowywany adres IP jako ciąg znaków
          * \return Adres IP
          */
-        const std::string & getAddress () const;
-
-protected:
-        const std::string address;
+        virtual std::string getAddress () const = 0;
 };
 
 
@@ -47,13 +46,44 @@ protected:
 class Ipv4 final : public Ip
 {
 public:
+        /**
+         * \brief Konstruktor.
+         *
+         * \param[in] address referencja do stringu z adresem IPv4 w konwencji A.B.C.D 
+         */
         Ipv4 ( const std::string & address = "127.0.0.1" );
 
-private:
-        bool isCorrect () const;
-        void splitToNumbers();
+        /**
+         * \brief  Zwraca adres IPv4 w konwencji A.B.C.D
+         *
+         * \return string z adresem
+         */
+        virtual std::string getAddress () const;
 
-        unsigned char addressNumbers [4];
+        /**
+         * \brief  Zwraca adres IPv4 w postaci przechowywanej przez strukturę in_addr.
+         *
+         * \return liczba z adresem w postaci bitowej
+         */
+        unsigned long getAddressNum () const;
+
+        /**
+         * \brief     Operator < (mniejszy niż). 
+         *
+         * Służy włącznie do wprowadzenia **jakiegokolwiek** porządku w zbiorze adresów.
+         * Nie musi to być koniecznie porządek typu 10.10.10.10 < 10.10.10.11.
+         * Rzeczywiste uporządkowanie zależy ot tego, co inet_aton() wyprawia z adresami.
+         *
+         * \param[in] porównywany obiekt
+         *
+         * \return    czy porównywany obiekt jest "mniejszy"
+         */
+        bool operator<( const Ipv4 & that ) const;
+
+private:
+        bool isCorrect ( const std::string & str ) const;
+
+        in_addr address;
 };
 
 
@@ -67,10 +97,12 @@ class Ipv6 final : public Ip
 public:
         Ipv6 ( const std::string & address = "::1" );
 
+        virtual std::string getAddress () const;
 private:
         bool isCorrect () const;
-        void splitToNumbers();
-        unsigned char addressNumbers [16];
+        void toNumbers();
+        
+       unsigned long addressNumbers[4];
 };
 
 

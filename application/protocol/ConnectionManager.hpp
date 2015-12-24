@@ -45,6 +45,8 @@ private:
         ConnectionManager( const ConnectionManager & );
         ConnectionManager& operator=( const ConnectionManager & );
         ~ConnectionManager();
+
+        std::map<Ipv4, Connection> Map4;
 };
 
 #endif // CONNECTON_MANAGER_HPP

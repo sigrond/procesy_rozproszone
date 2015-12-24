@@ -49,7 +49,7 @@ SocketIp4::SocketIp4( const Ipv4 & ip ) : ip(ip)
 
         saddr.sin_family = AF_INET;
 
-        saddr.sin_addr.s_addr = inet_addr( ip.getAddress().c_str() );
+        saddr.sin_addr.s_addr = ip.getAddressNum();
 
         saddr.sin_port = htons( PORT );
 } 
