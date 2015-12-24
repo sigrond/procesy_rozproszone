@@ -33,6 +33,8 @@ class Socket
 public:
         Socket();
 
+        Socket( int msgsock );
+
         virtual ~Socket();
 
         virtual int connect();
@@ -44,17 +46,20 @@ public:
         virtual int recv( char * buffer, int bufferSize );
         virtual int send( char * buffer, int bufferSize );
 
+        virtual Ipv4 getIp();
+
         int close();
 
 protected:
         int sockfd;
-        int msgsock;
 };
 
 class SocketIp4 : public Socket
 {
 public:
         SocketIp4( const Ipv4 & ip );
+
+        SocketIp4( int msgsock );
 
         virtual int bind();
 
@@ -65,6 +70,8 @@ public:
         virtual int recv( char * buffer, int bufferSize );
 
         virtual int send( char * buffer, int bufferSize );
+
+        virtual Ipv4 getIp();
 
 private:
         sockaddr_in saddr;

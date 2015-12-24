@@ -1,11 +1,10 @@
 CXX=g++
 CXXFLAGS=-std=c++14 -Wall -Wextra -Wpedantic -g -I.
-LFLAGS=-lboost_system
+LFLAGS=-lboost_system -lpthread
 
 CMD=$(CXX) $(CXXFLAGS) $(LFLAGS) $^ -o $@
 
-OBJS = Connection.o Socket.o SocketException.o Message.o Ip.o
-
+OBJS = ConnectionManager.o Connection.o Socket.o SocketException.o Message.o Ip.o 
 all: server client
 
 server: server.o $(OBJS)

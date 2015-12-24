@@ -93,17 +93,3 @@ const char* BadIpException::what()
 {
 	return "badIpException";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

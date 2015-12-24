@@ -44,7 +44,9 @@ public:
          * \param[in]  address Referencja do obiektu zawierającego adres IPv6 hosta docelowego (domyślnie - localhost) 
          */
         Connection ( const Ipv6 & address = Ipv6() );
-        
+       
+        Connection ( int socket );
+
         /**
          * \brief      Destruktor
          */
@@ -60,18 +62,11 @@ public:
          * \brief      Funkcja oczekująca na komunikat od zdalnego hosta
          * \return     Wskaźnik na obiekt Message utworzony na podstawie danych otrzymanych ze zdalnego hosta 
          */
-        message::Message* receive ();
+        void receive ( message::Message * const message );
 
 private:
         Ip * ip;
 
-        // socket nasłuchujący, żyje tak dlugo, jak obiekt Conenction
-        Socket * listeningSocket;
-
-        // socket inicjujący połączenia, wymieniany po każdym wysłanym komunikacie
-        // docelowo - po przejściu przez wymianę komunikatów REQ -> ACK -> OK/NOK -> ACK
-        Socket * connectingSocket;
-
+        Socket * socket;
 };
-
 #endif // CONNECTION_HPP

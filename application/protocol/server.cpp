@@ -1,14 +1,22 @@
 // banalny serwer
 // przyjmuje trzy "komunikaty"
 
-#include "Connection.hpp"
+#include "ConnectionManager.hpp"
+#include <iostream>
 
-int main()
+#include <string>
+using namespace message;
+
+int main( int argc, char** argv)
 {
-        Connection connection = Connection( Ipv4() );
-        connection.receive( );
-        connection.receive( );
-        connection.receive( );
+        ConnectionManager * mietek = ConnectionManager::getInstance();
+        Message * msg1 = nullptr;
+
+        Message * msg2 = new pingMessage( State::REQ );
+
+        mietek->receive( Ipv4(), msg1 );
+
+        mietek->send( Ipv4(std::string(argv[1])), *msg2 );
 
         return 0;
 }

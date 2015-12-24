@@ -15,7 +15,14 @@
 #include <string>
 #include <cstring>
 
+#define DBG(x) std::cout << x << std::endl;
+#include <iostream>
+
 Socket::Socket() {}
+
+Socket::Socket( int msgsock ) : sockfd( msgsock )
+{
+}
 
 Socket::~Socket() {}
 int Socket::bind() {}
@@ -23,6 +30,7 @@ int Socket::connect() {}
 int Socket::accept() {}
 int Socket::send( char*, int ) {}
 int Socket::recv( char*, int ) {}
+Ipv4 Socket::getIp() {}
 
 int Socket::listen()
 {
@@ -52,7 +60,11 @@ SocketIp4::SocketIp4( const Ipv4 & ip ) : ip(ip)
         saddr.sin_addr.s_addr = ip.getAddressNum();
 
         saddr.sin_port = htons( PORT );
-} 
+}
+
+SocketIp4::SocketIp4( int msgsock ) : Socket( msgsock )
+{
+}
 
 int SocketIp4::bind()
 {
@@ -80,7 +92,9 @@ int SocketIp4::connect()
 
 int SocketIp4::accept()
 {
-        msgsock = ::accept( sockfd, (struct sockaddr *) 0, (socklen_t *)0 );
+        socklen_t addrlen = sizeof( saddr );
+
+        int msgsock = ::accept( sockfd, (struct sockaddr *) &saddr, &addrlen  );
         
         if( msgsock == -1 )
                 throw AcceptSockEx();
@@ -90,7 +104,7 @@ int SocketIp4::accept()
 
 int SocketIp4::recv( char * buffer, int bufferSize )
 {
-        return ::read( msgsock, buffer, bufferSize );
+        return ::read( sockfd, buffer, bufferSize );
 }
 
 int SocketIp4::send( char * buffer, int bufferSize )
@@ -99,3 +113,7 @@ int SocketIp4::send( char * buffer, int bufferSize )
 }
 
 
+Ipv4 SocketIp4::getIp()
+{
+        return Ipv4( inet_ntoa( saddr.sin_addr ) );
+}

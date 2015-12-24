@@ -1,16 +1,24 @@
 // Banalny klient testowy
 // sprawdza działanie zamykania i otwierania nowych połączeń
 
-#include "Connection.hpp"
+#include "ConnectionManager.hpp"
+
+#include <string>
 
 
-int main()
+using namespace message;
+
+int main( int argc, char** argv)
 {
-        Connection connection = Connection( Ipv4() );
+        ConnectionManager * mietek = ConnectionManager::getInstance();
+        
+        Message * msg1 = nullptr;
 
-        connection.send( message::synMessage( message::State::REQ ) );
-        connection.send( message::synMessage( message::State::REQ ) );
-        connection.send( message::synMessage( message::State::REQ ) );
+        Message * msg2 = new pingMessage( State::REQ );
+
+        mietek->send( Ipv4(std::string(argv[1])) , *msg2 );
+        
+        mietek->receive( Ipv4(), msg1 );
 
         return 0;
 }
