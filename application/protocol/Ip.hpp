@@ -51,7 +51,7 @@ public:
          *
          * \param[in] address referencja do stringu z adresem IPv4 w konwencji A.B.C.D 
          */
-        Ipv4 ( const std::string & address = "127.0.0.1" );
+        Ipv4 ( const std::string & address = "0.0.0.0" );
 
         /**
          * \brief  Zwraca adres IPv4 w konwencji A.B.C.D

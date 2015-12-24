@@ -81,6 +81,7 @@ int SocketIp4::bind()
 
 int SocketIp4::connect()
 {
+        DBG("con()")
 
         int ret = ::connect( sockfd, (struct sockaddr *) &saddr, sizeof( saddr ) );
 
@@ -92,10 +93,11 @@ int SocketIp4::connect()
 
 int SocketIp4::accept()
 {
+        DBG("acc()")
         socklen_t addrlen = sizeof( saddr );
 
         int msgsock = ::accept( sockfd, (struct sockaddr *) &saddr, &addrlen  );
-        
+
         if( msgsock == -1 )
                 throw AcceptSockEx();
 
@@ -104,11 +106,13 @@ int SocketIp4::accept()
 
 int SocketIp4::recv( char * buffer, int bufferSize )
 {
+        DBG("rec()")
         return ::read( sockfd, buffer, bufferSize );
 }
 
 int SocketIp4::send( char * buffer, int bufferSize )
 {
+        DBG("send()")
         return ::send( sockfd, buffer, bufferSize, 0 );
 }
 

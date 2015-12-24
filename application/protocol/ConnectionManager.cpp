@@ -17,6 +17,8 @@
 
 void awaitConnections( ConnectionManager * conMan )
 {
+        DBG("awaitConnections()")
+
         int socket;
 
         while( true )
@@ -25,6 +27,8 @@ void awaitConnections( ConnectionManager * conMan )
 
                 Ipv4 ip = conMan->listeningSocket->getIp();
                 
+                DBG("accepted " << conMan->listeningSocket->getIp().getAddress() )
+
                 Connection * connection = conMan->map4[ip];
 
                 if( connection == nullptr )
@@ -65,6 +69,7 @@ ConnectionManager::~ConnectionManager()
 
 void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg )
 {
+        DBG("ConMan::send()")
         Connection * connection = map4[ip];
 
         if( connection == nullptr )
@@ -77,6 +82,7 @@ void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg )
 
 void ConnectionManager::receive( const Ipv4 & ip, message::Message * const msg )
 {
+        DBG("ConMan::receive()")
         Connection * connection = map4[ip];
 
         if( connection == nullptr )
