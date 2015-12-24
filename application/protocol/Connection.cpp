@@ -22,7 +22,8 @@
 #define DBG(x) std::cout << x << std::endl;
 
 Connection::Connection ( const Ipv4 & address )
-{       
+{
+        DBG("Connection(ip)")       
         socket = new SocketIp4( address );
 
         try
@@ -42,6 +43,7 @@ Connection::Connection ( const Ipv6 & address )
 
 Connection::Connection ( int msgsock )
 {
+        DBG("Connection(int)")
         socket = new SocketIp4( msgsock );
 }
 

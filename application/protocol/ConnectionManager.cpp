@@ -74,6 +74,7 @@ void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg )
 
         if( connection == nullptr )
         {
+                DBG("CM::s() connection not found, new connection")
                 connection = new Connection( ip );
         }
         
@@ -87,6 +88,7 @@ void ConnectionManager::receive( const Ipv4 & ip, message::Message * const msg )
 
         if( connection == nullptr )
         {
+                DBG("CM::r() connection not found, new connection")
                 connection = new Connection( ip );
         }
         

@@ -16,6 +16,8 @@ int main( int argc, char** argv)
 
         Message * msg2 = new pingMessage( State::REQ );
 
+        getchar();
+
         mietek->send( Ipv4(std::string(argv[1])) , *msg2 );
         
         mietek->receive( Ipv4(std::string(argv[1])), msg1 );
