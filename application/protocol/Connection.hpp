@@ -64,8 +64,11 @@ public:
          */
         void receive ( message::Message * const message );
 
+        char getCounter() const;
 private:
         Ip * ip;
+
+        char counter;
 
         Socket * socket;
 };

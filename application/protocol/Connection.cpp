@@ -21,7 +21,7 @@
 
 #define DBG(x) std::cout << x << std::endl;
 
-Connection::Connection ( const Ipv4 & address )
+Connection::Connection ( const Ipv4 & address ) : counter(0)
 {
         DBG("Connection(ip)")       
         socket = new SocketIp4( address );
@@ -36,12 +36,12 @@ Connection::Connection ( const Ipv4 & address )
         }
 }
 
-Connection::Connection ( const Ipv6 & address )
+Connection::Connection ( const Ipv6 & address ) : counter(0)
 {
 
 }
 
-Connection::Connection ( int msgsock )
+Connection::Connection ( int msgsock ) : counter(0)
 {
         DBG("Connection(int)")
         socket = new SocketIp4( msgsock );
@@ -49,6 +49,7 @@ Connection::Connection ( int msgsock )
 
 Connection::~Connection ()
 {
+        DBG("~Connection(): My ancestors are smiling at me, Imperials. Can you say the same?")
         delete socket;
 }
 
@@ -65,7 +66,9 @@ void Connection::send ( const message::Message & message )
                         "Wish me luck in Japan!\n";
 
         std::cout << "Send: " << socket->send( pasta, sizeof( pasta ) / sizeof( pasta[0] ) ) << std::endl;
-        std::cout << "Close: " << socket->close() << std::endl;
+
+        if( ++counter == 4)
+                std::cout << "Close: " << socket->close() << std::endl;
 }
 
 void Connection::receive ( message::Message * const message )
@@ -77,19 +80,12 @@ void Connection::receive ( message::Message * const message )
        std::cout << "Read: " << socket->recv( pasta, sizeof( pasta ) / sizeof( pasta[0] ) ) << std::endl;
        std::string pastaStr(pasta);
        std::cout << "Received delicious pasta:" << std::endl << std::endl << pastaStr << std::endl;
+
+       if( ++counter == 4)
+                std::cout << "Close: " << socket->close() << std::endl;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+char Connection::getCounter() const
+{
+        return counter;
+}

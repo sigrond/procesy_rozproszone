@@ -82,6 +82,12 @@ void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg )
         }
         
         (*connection)->send(msg);
+
+        if( (*connection)->getCounter() == 4 )
+        {
+                delete (*connection);
+                *connection = nullptr;
+        }
 }
 
 void ConnectionManager::receive( const Ipv4 & ip, message::Message * const msg )
@@ -96,6 +102,12 @@ void ConnectionManager::receive( const Ipv4 & ip, message::Message * const msg )
         }
         
         (*connection)->receive(msg);
+
+        if( (*connection)->getCounter() == 4 )
+        {
+                delete (*connection);
+                *connection = nullptr;
+        }
 
 }
 
