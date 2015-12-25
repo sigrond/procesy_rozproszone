@@ -87,7 +87,7 @@ private:
 
         friend void awaitConnections( ConnectionManager * conMan );
 
-        std::mutex mapMutex;
+        std::mutex map4Mutex;
 
         // Soon™
         // std::map<Ipv6, Connection*> map6;

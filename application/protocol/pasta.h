@@ -59,4 +59,3 @@ int roll()
         std::uniform_int_distribution<int> distribution( 0, 5 );
         return distribution(mt);       
 }
-

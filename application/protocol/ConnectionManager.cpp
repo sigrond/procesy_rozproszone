@@ -27,7 +27,7 @@ void awaitConnections( ConnectionManager * conMan )
                 
                 DBG("accepted " << conMan->listeningSocket->getIp().getAddress() )
                 
-                conMan->mapMutex.lock();
+                conMan->map4Mutex.lock();
 
                         Connection ** connection = &(conMan->map4[ip]);
 
@@ -41,6 +41,10 @@ void awaitConnections( ConnectionManager * conMan )
                                         std::condition_variable * conVar = conMan->map4Guards.at( ip );
 
                                         conVar->notify_one();
+
+                                        delete conVar;
+
+                                        conMan->map4Guards.erase( ip );
                                 }
                                 catch( std::out_of_range e)
                                 {
@@ -48,7 +52,7 @@ void awaitConnections( ConnectionManager * conMan )
                                 }
                         }
 
-                conMan->mapMutex.unlock();
+                conMan->map4Mutex.unlock();
         }
 }
 
@@ -88,7 +92,7 @@ void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg )
 {
         DBG("ConMan::send( " << ip.getAddress() << " )")
 
-        mapMutex.lock();
+        map4Mutex.lock();
         
                 Connection ** connection = &map4[ip];
 
@@ -98,7 +102,7 @@ void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg )
                         *connection = new Connection( ip );
                 }
 
-        mapMutex.unlock();
+        map4Mutex.unlock();
         
         (*connection)->send(msg);
 
@@ -116,7 +120,7 @@ void ConnectionManager::receive( const Ipv4 & ip, message::Message * const msg )
         Connection ** connection;
        
         {
-                std::unique_lock<std::mutex> lock(mapMutex);
+                std::unique_lock<std::mutex> lock(map4Mutex);
 
                 connection  = &map4[ip];
 
@@ -144,7 +148,25 @@ void ConnectionManager::receive( const Ipv4 & ip, message::Message * const msg )
 
 void ConnectionManager::remove( const Ipv4 & ip )
 {
+        DBG("ConMan::remove( " << ip.getAddress() << " )")
 
+        map4Mutex.lock();
+
+                try
+                {
+                        Connection * connection = map4.at( ip );
+
+                        if( connection != nullptr )
+                                delete connection;
+
+                        map4.erase( ip );
+                }
+                catch ( std::out_of_range e )
+                {
+                        // nic, nie ma elementu do usunięcia
+                }
+
+        map4Mutex.unlock();
 }
 
 void ConnectionManager::send( const Ipv6 & ip, const message::Message & msg )
