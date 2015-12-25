@@ -76,7 +76,7 @@ void Connection::receive ( message::Message * const message )
         socket->recv( delicious_pasta, sizeof( delicious_pasta ) / sizeof( char ) );
         std::string pastaStr( delicious_pasta );
 
-        std::cout << "Received delicious pasta:" << std::endl << std::endl << pastaStr << std::endl;
+        std::cout << "Received delicious pasta:" << std::endl << std::endl << pastaStr << std::endl << std::endl;
 
         if( ++counter == 4)
                 socket->close();

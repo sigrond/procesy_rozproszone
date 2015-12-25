@@ -10,6 +10,7 @@ using namespace message;
 
 int main( int argc, char** argv)
 {
+
         if(argc > 1)
         {
                 ConnectionManager * mietek = ConnectionManager::getInstance();
@@ -83,6 +84,6 @@ int main( int argc, char** argv)
                 std::cout << "To cię nauczy nie zapominać o argumentach, nędzny śmiertelniku." << std::endl;
 
         }
-
+        
         return 0;
 }

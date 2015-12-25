@@ -11,6 +11,7 @@ using namespace message;
 
 int main( int argc, char** argv)
 {
+
         if(argc > 1)
         {
                 ConnectionManager * mietek = ConnectionManager::getInstance();

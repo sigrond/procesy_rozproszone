@@ -115,14 +115,46 @@ int SocketIp4::recv( char * buffer, int bufferSize )
 {
         DBG("SocketIp4::recv()")
 
-        return ::read( sockfd, buffer, bufferSize );
+        int bytesRec;
+
+        while( bufferSize > 0 )
+        {
+                bytesRec = ::read(sockfd, buffer, bufferSize);
+                
+                if (bytesRec == 0)
+                        break;
+
+                else if (bytesRec < 0)
+                        break;
+
+                buffer += bytesRec;
+                bufferSize -= bytesRec;
+        }
+
+        return bytesRec; 
 }
 
 int SocketIp4::send( char * buffer, int bufferSize )
 {
         DBG("SocketIp4::send()")
 
-        return ::send( sockfd, buffer, bufferSize, 0 );
+        int bytesSent;
+
+        while( bufferSize > 0 )
+        {
+                bytesSent = ::send(sockfd, buffer, bufferSize, 0);
+                
+                if (bytesSent == 0)
+                        break;
+
+                else if (bytesSent < 0)
+                        break;
+
+                buffer += bytesSent;
+                bufferSize -= bytesSent;
+        }
+
+        return bytesSent; 
 }
 
 
