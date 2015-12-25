@@ -11,7 +11,8 @@
 #define CONNECTION_MANAGER_HPP
 
 #include <map>
-
+#include <mutex>
+#include <condition_variable>
 
 #include "Message.hpp"
 #include "Ip.hpp"
@@ -80,10 +81,13 @@ private:
         ~ConnectionManager();
 
         std::map<Ipv4, Connection*> map4;
+        std::map<Ipv4, std::condition_variable *> map4Guards;
 
         Socket * listeningSocket;
 
         friend void awaitConnections( ConnectionManager * conMan );
+
+        std::mutex mapMutex;
 
         // Soon™
         // std::map<Ipv6, Connection*> map6;

@@ -26,14 +26,29 @@ void awaitConnections( ConnectionManager * conMan )
                 Ipv4 ip = conMan->listeningSocket->getIp();
                 
                 DBG("accepted " << conMan->listeningSocket->getIp().getAddress() )
+                
+                conMan->mapMutex.lock();
 
-                Connection ** connection = &(conMan->map4[ip]);
+                        Connection ** connection = &(conMan->map4[ip]);
 
-                if( *connection == nullptr )
-                {
-                        DBG("awaitConnections(): connection not found, new connection")
-                        *connection = new Connection( socket );
-                }
+                        if( *connection == nullptr )
+                        {
+                                DBG("awaitConnections(): connection not found, new connection")
+                                *connection = new Connection( socket );
+
+                                try
+                                {
+                                        std::condition_variable * conVar = conMan->map4Guards.at( ip );
+
+                                        conVar->notify_one();
+                                }
+                                catch( std::out_of_range e)
+                                {
+                                        // nic, po protu nikt nie czeka na wiadomość z adresu IP == ip
+                                }
+                        }
+
+                conMan->mapMutex.unlock();
         }
 }
 
@@ -72,13 +87,18 @@ ConnectionManager::~ConnectionManager()
 void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg )
 {
         DBG("ConMan::send( " << ip.getAddress() << " )")
-        Connection ** connection = &map4[ip];
 
-        if( *connection == nullptr )
-        {
-                DBG("ConMan::send() connection not found, new connection")
-                *connection = new Connection( ip );
-        }
+        mapMutex.lock();
+        
+                Connection ** connection = &map4[ip];
+
+                if( *connection == nullptr )
+                {
+                        DBG("ConMan::send() connection not found, new connection")
+                        *connection = new Connection( ip );
+                }
+
+        mapMutex.unlock();
         
         (*connection)->send(msg);
 
@@ -92,14 +112,26 @@ void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg )
 void ConnectionManager::receive( const Ipv4 & ip, message::Message * const msg )
 {
         DBG("ConMan::receive( " << ip.getAddress() << " )")
-        Connection ** connection = &map4[ip];
-
-        if( *connection == nullptr )
-        {
-                DBG("ConMan::rec() connection not found, new connection")
-                *connection = new Connection( ip );
-        }
         
+        Connection ** connection;
+       
+        {
+                std::unique_lock<std::mutex> lock(mapMutex);
+
+                connection  = &map4[ip];
+
+                if( *connection == nullptr )
+                {
+                        DBG("ConMan::rec() connection not found, waiting for new connection")
+                        
+                        std::condition_variable ** conVar = &map4Guards[ip];
+                        
+                        *conVar = new std::condition_variable();
+
+                        (*conVar)->wait(lock);                        
+                }
+        }
+
         (*connection)->receive(msg);
 
         if( (*connection)->getCounter() == 4 )
