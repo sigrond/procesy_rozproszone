@@ -15,8 +15,7 @@
 #include <string>
 #include <cstring>
 
-#define DBG(x) std::cout << x << std::endl;
-#include <iostream>
+#include "debug.h"
 
 Socket::Socket() {}
 
@@ -34,6 +33,8 @@ Ipv4 Socket::getIp() {}
 
 int Socket::listen()
 {
+        DBG("Socket::listen()")
+
         int ret = ::listen( sockfd, BACKLOG );
 
         if( ret != 0 )
@@ -53,6 +54,8 @@ int Socket::close()
 
 SocketIp4::SocketIp4( const Ipv4 & ip ) : ip(ip)
 {
+        DBG("SocketIp4( " << ip.getAddress() << " )")
+
         sockfd = socket ( AF_INET, SOCK_STREAM, 0 );
 
         saddr.sin_family = AF_INET;
@@ -64,10 +67,13 @@ SocketIp4::SocketIp4( const Ipv4 & ip ) : ip(ip)
 
 SocketIp4::SocketIp4( int msgsock ) : Socket( msgsock )
 {
+        DBG("SocketIp4( " << msgsock << " )")
 }
 
 int SocketIp4::bind()
 {
+        DBG("SocketIp4::bind()")
+
         int reuseaddr = 1;
         setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &reuseaddr, sizeof(reuseaddr));
 
@@ -81,7 +87,7 @@ int SocketIp4::bind()
 
 int SocketIp4::connect()
 {
-        DBG("con()")
+        DBG("SocketIp4::connect()")
 
         int ret = ::connect( sockfd, (struct sockaddr *) &saddr, sizeof( saddr ) );
 
@@ -93,7 +99,8 @@ int SocketIp4::connect()
 
 int SocketIp4::accept()
 {
-        DBG("acc()")
+        DBG("SocketIp4::accept()")
+
         socklen_t addrlen = sizeof( saddr );
 
         int msgsock = ::accept( sockfd, (struct sockaddr *) &saddr, &addrlen  );
@@ -106,13 +113,15 @@ int SocketIp4::accept()
 
 int SocketIp4::recv( char * buffer, int bufferSize )
 {
-        DBG("rec()")
+        DBG("SocketIp4::recv()")
+
         return ::read( sockfd, buffer, bufferSize );
 }
 
 int SocketIp4::send( char * buffer, int bufferSize )
 {
-        DBG("send()")
+        DBG("SocketIp4::send()")
+
         return ::send( sockfd, buffer, bufferSize, 0 );
 }
 

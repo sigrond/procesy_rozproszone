@@ -7,13 +7,11 @@
  */
 #include <typeinfo>
 #include <thread>
+#include <iostream>
 
 #include "ConnectionManager.hpp"
 
-
-#include <iostream>
-
-#define DBG(x) std::cout << x << std::endl;
+#include "debug.h"
 
 void awaitConnections( ConnectionManager * conMan )
 {
@@ -33,7 +31,7 @@ void awaitConnections( ConnectionManager * conMan )
 
                 if( *connection == nullptr )
                 {
-                        DBG("aC() connection not found, new connection")
+                        DBG("awaitConnections(): connection not found, new connection")
                         *connection = new Connection( socket );
                 }
         }
@@ -50,12 +48,13 @@ ConnectionManager * ConnectionManager::getInstance()
 
 ConnectionManager::ConnectionManager()
 {
+        DBG("ConnectionManager()")
         listeningSocket = new SocketIp4( Ipv4() );
 
         try
         {
-                std::cout << "Bind: " << listeningSocket->bind() << std::endl;
-                std::cout << "Listen: " << listeningSocket->listen() << std::endl;
+                listeningSocket->bind();
+                listeningSocket->listen();
         }
         catch (std::exception & e)
         {
@@ -67,17 +66,17 @@ ConnectionManager::ConnectionManager()
 
 ConnectionManager::~ConnectionManager()
 {
-
+        DBG("~ConnectionManager()")
 }
 
 void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg )
 {
-        DBG("ConMan::send()")
+        DBG("ConMan::send( " << ip.getAddress() << " )")
         Connection ** connection = &map4[ip];
 
         if( *connection == nullptr )
         {
-                DBG("CM::s() connection not found, new connection")
+                DBG("ConMan::send() connection not found, new connection")
                 *connection = new Connection( ip );
         }
         
@@ -92,12 +91,12 @@ void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg )
 
 void ConnectionManager::receive( const Ipv4 & ip, message::Message * const msg )
 {
-        DBG("ConMan::receive()")
+        DBG("ConMan::receive( " << ip.getAddress() << " )")
         Connection ** connection = &map4[ip];
 
         if( *connection == nullptr )
         {
-                DBG("CM::r() connection not found, new connection")
+                DBG("ConMan::rec() connection not found, new connection")
                 *connection = new Connection( ip );
         }
         
