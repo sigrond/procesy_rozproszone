@@ -80,6 +80,8 @@ public:
          */
         bool operator<( const Ipv4 & that ) const;
 
+        bool operator==( const Ipv4 & that ) const;
+
 private:
         bool isCorrect ( const std::string & str ) const;
 

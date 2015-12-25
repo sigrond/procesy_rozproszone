@@ -29,10 +29,13 @@ void awaitConnections( ConnectionManager * conMan )
                 
                 DBG("accepted " << conMan->listeningSocket->getIp().getAddress() )
 
-                Connection * connection = conMan->map4[ip];
+                Connection ** connection = &(conMan->map4[ip]);
 
-                if( connection == nullptr )
-                        connection = new Connection( socket );
+                if( *connection == nullptr )
+                {
+                        DBG("aC() connection not found, new connection")
+                        *connection = new Connection( socket );
+                }
         }
 }
 
@@ -70,29 +73,29 @@ ConnectionManager::~ConnectionManager()
 void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg )
 {
         DBG("ConMan::send()")
-        Connection * connection = map4[ip];
+        Connection ** connection = &map4[ip];
 
-        if( connection == nullptr )
+        if( *connection == nullptr )
         {
                 DBG("CM::s() connection not found, new connection")
-                connection = new Connection( ip );
+                *connection = new Connection( ip );
         }
         
-        connection->send(msg);
+        (*connection)->send(msg);
 }
 
 void ConnectionManager::receive( const Ipv4 & ip, message::Message * const msg )
 {
         DBG("ConMan::receive()")
-        Connection * connection = map4[ip];
+        Connection ** connection = &map4[ip];
 
-        if( connection == nullptr )
+        if( *connection == nullptr )
         {
                 DBG("CM::r() connection not found, new connection")
-                connection = new Connection( ip );
+                *connection = new Connection( ip );
         }
         
-        connection->receive(msg);
+        (*connection)->receive(msg);
 
 }
 

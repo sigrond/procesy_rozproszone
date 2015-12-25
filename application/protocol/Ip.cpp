@@ -60,6 +60,10 @@ bool Ipv4::operator<( const Ipv4 & that ) const
 }
 
 
+bool Ipv4::operator==( const Ipv4 & that ) const
+{
+        return getAddressNum() == that.getAddressNum();
+}
 
 // ------------------------------------------------------
 // Ipv6

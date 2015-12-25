@@ -3,7 +3,6 @@
 
 #include "ConnectionManager.hpp"
 
-
 #include <string>
 using namespace message;
 
