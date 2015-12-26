@@ -91,7 +91,7 @@ void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg )
         DBG("ConMan::send( " << ip.getAddress() << " )")
 
         map4Mutex.lock();        
-                Connection * connection = map4[ip];
+                Connection * & connection = map4[ip];
 
                 if( connection == nullptr )
                 {
