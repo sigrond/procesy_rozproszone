@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>LOTC: Plik źródłowy SocketException.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">LOTC
+   &#160;<span id="projectnumber">https://github.com/sigrond/procesy_rozproszone</span>
+   </div>
+   <div id="projectbrief">Low Orbit Task Cannon</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('SocketException_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Definicje typów</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Przyjaciele</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">SocketException.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="SocketException_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * \file     SocketException.hpp</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * \brief    Wyjątki dla socketów</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * \author   Andrzej Roguski</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="SocketException_8hpp.html">&quot;SocketException.hpp&quot;</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">.</span><span class="preprocessor">h</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classSockEx.html#a444ea08d52b18712b9f3f3cdfe27903c">   13</a></span>&#160;<a class="code" href="classSockEx.html">SockEx</a>::~<a class="code" href="classSockEx.html#a444ea08d52b18712b9f3f3cdfe27903c">SockEx</a>() {}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classBindSockEx.html#a83d6ce4c487c43e5106dadc7c25f778e">   16</a></span>&#160;<a class="code" href="classBindSockEx.html">BindSockEx</a>::~<a class="code" href="classBindSockEx.html#a83d6ce4c487c43e5106dadc7c25f778e">BindSockEx</a>() {}</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classBindSockEx.html#a89182923e351f5e953917ef667a1a8c2">   18</a></span>&#160;<a class="code" href="classBindSockEx.html">BindSockEx</a>::<a class="code" href="classBindSockEx.html#a89182923e351f5e953917ef667a1a8c2">BindSockEx</a>()</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        error = <span class="stringliteral">&quot;Bind() error: &quot;</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        error += strerror( errno );</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classBindSockEx.html#ab35176d3ff3c39648a94c51e54adad6d">   24</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classBindSockEx.html">BindSockEx</a>::<a class="code" href="classBindSockEx.html#ab35176d3ff3c39648a94c51e54adad6d">what</a>() <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> error.c_str();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classAcceptSockEx.html#ab99c9abdaa604d69880c91c1a865d6f7">   30</a></span>&#160;<a class="code" href="classAcceptSockEx.html">AcceptSockEx</a>::~<a class="code" href="classAcceptSockEx.html#ab99c9abdaa604d69880c91c1a865d6f7">AcceptSockEx</a>() {}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classAcceptSockEx.html#a0c5bc1b55979935f5c72cb64c5543884">   32</a></span>&#160;<a class="code" href="classAcceptSockEx.html">AcceptSockEx</a>::<a class="code" href="classAcceptSockEx.html#a0c5bc1b55979935f5c72cb64c5543884">AcceptSockEx</a>()</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        error = <span class="stringliteral">&quot;Accept() error: &quot;</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        error += strerror( errno );</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classAcceptSockEx.html#a0141c5451e5d6fe9b2e8506c1a180b23">   38</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classAcceptSockEx.html">AcceptSockEx</a>::<a class="code" href="classAcceptSockEx.html#a0141c5451e5d6fe9b2e8506c1a180b23">what</a>() <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> error.c_str();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classConnectSockEx.html#a7f1290a918c8bb37bdf3aa08ff6db41e">   44</a></span>&#160;<a class="code" href="classConnectSockEx.html">ConnectSockEx</a>::~<a class="code" href="classConnectSockEx.html#a7f1290a918c8bb37bdf3aa08ff6db41e">ConnectSockEx</a>() {}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classConnectSockEx.html#a5c38e58f2f62abcf3720c9b6d8ce6c20">   46</a></span>&#160;<a class="code" href="classConnectSockEx.html">ConnectSockEx</a>::<a class="code" href="classConnectSockEx.html#a5c38e58f2f62abcf3720c9b6d8ce6c20">ConnectSockEx</a>()</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        error = <span class="stringliteral">&quot;Connect() error: &quot;</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        error += strerror( errno );</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classConnectSockEx.html#a9dc151c6df86e563013705904ec57d82">   52</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classConnectSockEx.html">ConnectSockEx</a>::<a class="code" href="classConnectSockEx.html#a9dc151c6df86e563013705904ec57d82">what</a>() <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> error.c_str();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classCreateSockEx.html#aa3c1e62f55911e5751659c0cc11a7304">   58</a></span>&#160;<a class="code" href="classCreateSockEx.html">CreateSockEx</a>::~<a class="code" href="classCreateSockEx.html#aa3c1e62f55911e5751659c0cc11a7304">CreateSockEx</a>() {}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classCreateSockEx.html#a68a8a4ea80b19e34b7beec17922b3707">   60</a></span>&#160;<a class="code" href="classCreateSockEx.html">CreateSockEx</a>::<a class="code" href="classCreateSockEx.html#a68a8a4ea80b19e34b7beec17922b3707">CreateSockEx</a>()</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        error = <span class="stringliteral">&quot;Socket() error: &quot;</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        error += strerror( errno );</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classCreateSockEx.html#a39a8e97460789a17509adbd416e9128f">   66</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classCreateSockEx.html">CreateSockEx</a>::<a class="code" href="classCreateSockEx.html#a39a8e97460789a17509adbd416e9128f">what</a>() <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> error.c_str();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classListenSockEx.html#a81be850521b12e73ec76dd5e6528049b">   72</a></span>&#160;<a class="code" href="classListenSockEx.html">ListenSockEx</a>::~<a class="code" href="classListenSockEx.html#a81be850521b12e73ec76dd5e6528049b">ListenSockEx</a>() {}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classListenSockEx.html#a50566d24bd66b5d44d14fcff13b602c3">   74</a></span>&#160;<a class="code" href="classListenSockEx.html">ListenSockEx</a>::<a class="code" href="classListenSockEx.html#a50566d24bd66b5d44d14fcff13b602c3">ListenSockEx</a>()</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        error = <span class="stringliteral">&quot;Listen() error: &quot;</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        error += strerror( errno );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classListenSockEx.html#a5522b2ceba3d20252f2f734d5e9fe9bd">   80</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="classListenSockEx.html">ListenSockEx</a>::<a class="code" href="classListenSockEx.html#a5522b2ceba3d20252f2f734d5e9fe9bd">what</a>() <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> error.c_str();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="ttc" id="classSockEx_html"><div class="ttname"><a href="classSockEx.html">SockEx</a></div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8hpp_source.html#l00015">SocketException.hpp:15</a></div></div>
+<div class="ttc" id="classAcceptSockEx_html_a0c5bc1b55979935f5c72cb64c5543884"><div class="ttname"><a href="classAcceptSockEx.html#a0c5bc1b55979935f5c72cb64c5543884">AcceptSockEx::AcceptSockEx</a></div><div class="ttdeci">AcceptSockEx()</div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8cpp_source.html#l00032">SocketException.cpp:32</a></div></div>
+<div class="ttc" id="classBindSockEx_html_ab35176d3ff3c39648a94c51e54adad6d"><div class="ttname"><a href="classBindSockEx.html#ab35176d3ff3c39648a94c51e54adad6d">BindSockEx::what</a></div><div class="ttdeci">virtual const char * what() const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8cpp_source.html#l00024">SocketException.cpp:24</a></div></div>
+<div class="ttc" id="classSockEx_html_a444ea08d52b18712b9f3f3cdfe27903c"><div class="ttname"><a href="classSockEx.html#a444ea08d52b18712b9f3f3cdfe27903c">SockEx::~SockEx</a></div><div class="ttdeci">virtual ~SockEx()</div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8cpp_source.html#l00013">SocketException.cpp:13</a></div></div>
+<div class="ttc" id="classListenSockEx_html_a5522b2ceba3d20252f2f734d5e9fe9bd"><div class="ttname"><a href="classListenSockEx.html#a5522b2ceba3d20252f2f734d5e9fe9bd">ListenSockEx::what</a></div><div class="ttdeci">virtual const char * what() const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8cpp_source.html#l00080">SocketException.cpp:80</a></div></div>
+<div class="ttc" id="classAcceptSockEx_html"><div class="ttname"><a href="classAcceptSockEx.html">AcceptSockEx</a></div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8hpp_source.html#l00037">SocketException.hpp:37</a></div></div>
+<div class="ttc" id="classCreateSockEx_html_aa3c1e62f55911e5751659c0cc11a7304"><div class="ttname"><a href="classCreateSockEx.html#aa3c1e62f55911e5751659c0cc11a7304">CreateSockEx::~CreateSockEx</a></div><div class="ttdeci">virtual ~CreateSockEx()</div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8cpp_source.html#l00058">SocketException.cpp:58</a></div></div>
+<div class="ttc" id="classConnectSockEx_html_a5c38e58f2f62abcf3720c9b6d8ce6c20"><div class="ttname"><a href="classConnectSockEx.html#a5c38e58f2f62abcf3720c9b6d8ce6c20">ConnectSockEx::ConnectSockEx</a></div><div class="ttdeci">ConnectSockEx()</div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8cpp_source.html#l00046">SocketException.cpp:46</a></div></div>
+<div class="ttc" id="classAcceptSockEx_html_ab99c9abdaa604d69880c91c1a865d6f7"><div class="ttname"><a href="classAcceptSockEx.html#ab99c9abdaa604d69880c91c1a865d6f7">AcceptSockEx::~AcceptSockEx</a></div><div class="ttdeci">virtual ~AcceptSockEx()</div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8cpp_source.html#l00030">SocketException.cpp:30</a></div></div>
+<div class="ttc" id="classListenSockEx_html_a50566d24bd66b5d44d14fcff13b602c3"><div class="ttname"><a href="classListenSockEx.html#a50566d24bd66b5d44d14fcff13b602c3">ListenSockEx::ListenSockEx</a></div><div class="ttdeci">ListenSockEx()</div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8cpp_source.html#l00074">SocketException.cpp:74</a></div></div>
+<div class="ttc" id="classConnectSockEx_html"><div class="ttname"><a href="classConnectSockEx.html">ConnectSockEx</a></div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8hpp_source.html#l00076">SocketException.hpp:76</a></div></div>
+<div class="ttc" id="classCreateSockEx_html_a68a8a4ea80b19e34b7beec17922b3707"><div class="ttname"><a href="classCreateSockEx.html#a68a8a4ea80b19e34b7beec17922b3707">CreateSockEx::CreateSockEx</a></div><div class="ttdeci">CreateSockEx()</div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8cpp_source.html#l00060">SocketException.cpp:60</a></div></div>
+<div class="ttc" id="classCreateSockEx_html"><div class="ttname"><a href="classCreateSockEx.html">CreateSockEx</a></div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8hpp_source.html#l00050">SocketException.hpp:50</a></div></div>
+<div class="ttc" id="classBindSockEx_html_a89182923e351f5e953917ef667a1a8c2"><div class="ttname"><a href="classBindSockEx.html#a89182923e351f5e953917ef667a1a8c2">BindSockEx::BindSockEx</a></div><div class="ttdeci">BindSockEx()</div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8cpp_source.html#l00018">SocketException.cpp:18</a></div></div>
+<div class="ttc" id="classBindSockEx_html_a83d6ce4c487c43e5106dadc7c25f778e"><div class="ttname"><a href="classBindSockEx.html#a83d6ce4c487c43e5106dadc7c25f778e">BindSockEx::~BindSockEx</a></div><div class="ttdeci">virtual ~BindSockEx()</div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8cpp_source.html#l00016">SocketException.cpp:16</a></div></div>
+<div class="ttc" id="classCreateSockEx_html_a39a8e97460789a17509adbd416e9128f"><div class="ttname"><a href="classCreateSockEx.html#a39a8e97460789a17509adbd416e9128f">CreateSockEx::what</a></div><div class="ttdeci">virtual const char * what() const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8cpp_source.html#l00066">SocketException.cpp:66</a></div></div>
+<div class="ttc" id="classListenSockEx_html_a81be850521b12e73ec76dd5e6528049b"><div class="ttname"><a href="classListenSockEx.html#a81be850521b12e73ec76dd5e6528049b">ListenSockEx::~ListenSockEx</a></div><div class="ttdeci">virtual ~ListenSockEx()</div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8cpp_source.html#l00072">SocketException.cpp:72</a></div></div>
+<div class="ttc" id="classConnectSockEx_html_a7f1290a918c8bb37bdf3aa08ff6db41e"><div class="ttname"><a href="classConnectSockEx.html#a7f1290a918c8bb37bdf3aa08ff6db41e">ConnectSockEx::~ConnectSockEx</a></div><div class="ttdeci">virtual ~ConnectSockEx()</div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8cpp_source.html#l00044">SocketException.cpp:44</a></div></div>
+<div class="ttc" id="classConnectSockEx_html_a9dc151c6df86e563013705904ec57d82"><div class="ttname"><a href="classConnectSockEx.html#a9dc151c6df86e563013705904ec57d82">ConnectSockEx::what</a></div><div class="ttdeci">virtual const char * what() const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8cpp_source.html#l00052">SocketException.cpp:52</a></div></div>
+<div class="ttc" id="classListenSockEx_html"><div class="ttname"><a href="classListenSockEx.html">ListenSockEx</a></div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8hpp_source.html#l00063">SocketException.hpp:63</a></div></div>
+<div class="ttc" id="classBindSockEx_html"><div class="ttname"><a href="classBindSockEx.html">BindSockEx</a></div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8hpp_source.html#l00024">SocketException.hpp:24</a></div></div>
+<div class="ttc" id="classAcceptSockEx_html_a0141c5451e5d6fe9b2e8506c1a180b23"><div class="ttname"><a href="classAcceptSockEx.html#a0141c5451e5d6fe9b2e8506c1a180b23">AcceptSockEx::what</a></div><div class="ttdeci">virtual const char * what() const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="SocketException_8cpp_source.html#l00038">SocketException.cpp:38</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_75eb1ee5d767627a9a18a84e7e34c1ab.html">protocol</a></li><li class="navelem"><a class="el" href="SocketException_8cpp.html">SocketException.cpp</a></li>
+    <li class="footer">Wygenerowano So, 26 gru 2015 11:53:38 dla LOTC programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

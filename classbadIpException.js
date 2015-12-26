@@ -1,4 +1,4 @@
-var classbadIpException =
+var classBadIpException =
 [
-    [ "what", "classbadIpException.html#abd187abaa28001ecfae6e24b20cd1ed4", null ]
+    [ "what", "classBadIpException.html#a510d7c6030130d65fe71c2db748066c9", null ]
 ];

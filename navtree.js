@@ -1,11 +1,9 @@
 var NAVTREE =
 [
   [ "LOTC", "index.html", [
-    [ "Protokół komunikacyjny serwer-agent", "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_application_protocol_readme.html", null ],
+    [ "Koncepcja implementacji modułu komunikacyjnego", "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_application_protocol_readme.html", null ],
     [ "Aplikacja testowa dla pluginu", "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_wireshark_test_protocol_application_readme.html", null ],
     [ "Plugin do Wiresharka", "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_wireshark_test_protocol_plugin_readme.html", null ],
-    [ "readme", "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_wireshark_test_protocol_screenshots_readme.html", null ],
-    [ "screenshots", "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_wireshark_test_protocol_screenshots_screenshots.html", null ],
     [ "Styl kodu", "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_organizacja_Styl_kodu.html", null ],
     [ "Terminarz", "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_organizacja_Terminarz.html", null ],
     [ "Zasady oceniania projektu", "md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_organizacja_Zasady_oceniania_projektu.html", null ],
@@ -24,11 +22,13 @@ var NAVTREE =
       [ "Indeks klas", "classes.html", null ],
       [ "Hierarchia klas", "hierarchy.html", "hierarchy" ],
       [ "Składowe klas", "functions.html", [
-        [ "All", "functions.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
         [ "Funkcje", "functions_func.html", null ],
         [ "Zmienne", "functions_vars.html", null ],
+        [ "Definicje typów", "functions_type.html", null ],
         [ "Wyliczenia", "functions_enum.html", null ],
-        [ "Wartości wyliczeń", "functions_eval.html", null ]
+        [ "Wartości wyliczeń", "functions_eval.html", null ],
+        [ "Funkcje powiązane", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Pliki", null, [
@@ -48,7 +48,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AdminServer_8cpp.html",
-"classSlave.html#a76c76dd7826c70d58071e1d45b561613"
+"classConsoleClient.html#a7dbc8c013d758ed6a6e1b9c99220ee6b",
+"namespacemessage.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -22,10 +22,15 @@ var files =
       [ "BlockingQueue", "classBlockingQueue.html", "classBlockingQueue" ]
     ] ],
     [ "BlockingQueueTests.cpp", "BlockingQueueTests_8cpp.html", "BlockingQueueTests_8cpp" ],
-    [ "client.cpp", "client_8cpp.html", "client_8cpp" ],
+    [ "application/protocol/client.cpp", "application_2protocol_2client_8cpp.html", "application_2protocol_2client_8cpp" ],
+    [ "wireshark/test protocol/application/client.cpp", "wireshark_2test_01protocol_2application_2client_8cpp.html", "wireshark_2test_01protocol_2application_2client_8cpp" ],
     [ "Connection.cpp", "Connection_8cpp.html", null ],
     [ "Connection.hpp", "Connection_8hpp.html", [
       [ "Connection", "classConnection.html", "classConnection" ]
+    ] ],
+    [ "ConnectionManager.cpp", "ConnectionManager_8cpp.html", "ConnectionManager_8cpp" ],
+    [ "ConnectionManager.hpp", "ConnectionManager_8hpp.html", [
+      [ "ConnectionManager", "classConnectionManager.html", "classConnectionManager" ]
     ] ],
     [ "Console.cpp", "Console_8cpp.html", "Console_8cpp" ],
     [ "ConsoleClient.cpp", "ConsoleClient_8cpp.html", null ],
@@ -43,14 +48,16 @@ var files =
       [ "Controller", "classController.html", "classController" ]
     ] ],
     [ "ControllerTests.cpp", "ControllerTests_8cpp.html", "ControllerTests_8cpp" ],
+    [ "debug.h", "debug_8h.html", "debug_8h" ],
     [ "Event.hpp", "Event_8hpp.html", "Event_8hpp" ],
     [ "Ip.cpp", "Ip_8cpp.html", null ],
     [ "Ip.hpp", "Ip_8hpp.html", [
       [ "Ip", "classIp.html", "classIp" ],
       [ "Ipv4", "classIpv4.html", "classIpv4" ],
       [ "Ipv6", "classIpv6.html", "classIpv6" ],
-      [ "badIpException", "classbadIpException.html", "classbadIpException" ]
+      [ "BadIpException", "classBadIpException.html", "classBadIpException" ]
     ] ],
+    [ "application/protocol/makefile", "application_2protocol_2makefile.html", null ],
     [ "application/server/makefile", "application_2server_2makefile.html", null ],
     [ "wireshark/test protocol/application/makefile", "wireshark_2test_01protocol_2application_2makefile.html", null ],
     [ "application/protocol/Message.cpp", "application_2protocol_2Message_8cpp.html", null ],
@@ -74,13 +81,26 @@ var files =
     [ "Model.hpp", "Model_8hpp.html", [
       [ "Model", "classModel.html", "classModel" ]
     ] ],
+    [ "pasta.h", "pasta_8h.html", "pasta_8h" ],
     [ "Projekt Wstępny.tex", "Projekt_01Wst_xC4_x99pny_8tex.html", null ],
+    [ "application/protocol/server.cpp", "application_2protocol_2server_8cpp.html", "application_2protocol_2server_8cpp" ],
     [ "application/server/server.cpp", "application_2server_2server_8cpp.html", "application_2server_2server_8cpp" ],
     [ "wireshark/test protocol/application/server.cpp", "wireshark_2test_01protocol_2application_2server_8cpp.html", "wireshark_2test_01protocol_2application_2server_8cpp" ],
     [ "ServerUnitTests.cpp", "ServerUnitTests_8cpp.html", "ServerUnitTests_8cpp" ],
     [ "Slave.cpp", "Slave_8cpp.html", null ],
     [ "Slave.hpp", "Slave_8hpp.html", [
       [ "Slave", "classSlave.html", "classSlave" ]
+    ] ],
+    [ "Socket.cpp", "Socket_8cpp.html", null ],
+    [ "Socket.hpp", "Socket_8hpp.html", "Socket_8hpp" ],
+    [ "SocketException.cpp", "SocketException_8cpp.html", null ],
+    [ "SocketException.hpp", "SocketException_8hpp.html", [
+      [ "SockEx", "classSockEx.html", "classSockEx" ],
+      [ "BindSockEx", "classBindSockEx.html", "classBindSockEx" ],
+      [ "AcceptSockEx", "classAcceptSockEx.html", "classAcceptSockEx" ],
+      [ "CreateSockEx", "classCreateSockEx.html", "classCreateSockEx" ],
+      [ "ListenSockEx", "classListenSockEx.html", "classListenSockEx" ],
+      [ "ConnectSockEx", "classConnectSockEx.html", "classConnectSockEx" ]
     ] ],
     [ "Strategies.hpp", "Strategies_8hpp.html", [
       [ "TestStrategy", "classTestStrategy.html", "classTestStrategy" ],

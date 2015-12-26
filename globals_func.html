@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Definicje typów</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Przyjaciele</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Strony</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -115,23 +115,30 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 
 <div class="contents">
 &#160;<ul>
+<li>awaitConnections()
+: <a class="el" href="ConnectionManager_8cpp.html#a0356e21a4b8c9cb057224466de84606d">ConnectionManager.cpp</a>
+</li>
 <li>BOOST_AUTO_TEST_CASE()
 : <a class="el" href="BlockingQueueTests_8cpp.html#a3c0e6032c63ed013740bc646dbd259a2">BlockingQueueTests.cpp</a>
-, <a class="el" href="ControllerTests_8cpp.html#ab7963cacadfa4bcca5a2eb5d103c9f59">ControllerTests.cpp</a>
-, <a class="el" href="BlockingQueueTests_8cpp.html#a4260a972913bbded86b9bd65841288b3">BlockingQueueTests.cpp</a>
+, <a class="el" href="ControllerTests_8cpp.html#a45c7d89fbe3968a972f9861649e0f129">ControllerTests.cpp</a>
 </li>
 <li>checkMessage()
 : <a class="el" href="ChangesLog_8txt.html#ab59b589752edc8a728d9c87d21ca6a26">ChangesLog.txt</a>
 </li>
 <li>main()
 : <a class="el" href="Agent_8cpp.html#af78beb4a0d33807a778c4dd88e28f164">Agent.cpp</a>
-, <a class="el" href="wireshark_2test_01protocol_2application_2server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">wireshark/test protocol/application/server.cpp</a>
-, <a class="el" href="client_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">client.cpp</a>
-, <a class="el" href="application_2server_2server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164">application/server/server.cpp</a>
 , <a class="el" href="Console_8cpp.html#af78beb4a0d33807a778c4dd88e28f164">Console.cpp</a>
+, <a class="el" href="application_2protocol_2client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">application/protocol/client.cpp</a>
+, <a class="el" href="application_2protocol_2server_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">application/protocol/server.cpp</a>
+, <a class="el" href="application_2server_2server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164">application/server/server.cpp</a>
+, <a class="el" href="wireshark_2test_01protocol_2application_2client_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">wireshark/test protocol/application/client.cpp</a>
+, <a class="el" href="wireshark_2test_01protocol_2application_2server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">wireshark/test protocol/application/server.cpp</a>
 </li>
 <li>pushFn()
 : <a class="el" href="BlockingQueueTests_8cpp.html#a78695f41d420d63810400efadf86af03">BlockingQueueTests.cpp</a>
+</li>
+<li>roll()
+: <a class="el" href="pasta_8h.html#a81c58b95729b7d5c9dc4b87cb342d96e">pasta.h</a>
 </li>
 <li>run()
 : <a class="el" href="ConsoleServer_8cpp.html#a13a43e6d814de94978c515cb084873b1">ConsoleServer.cpp</a>
@@ -142,7 +149,7 @@ $(document).ready(function(){initNavTree('globals_func.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Wygenerowano Śr, 16 gru 2015 17:50:32 dla LOTC programem
+    <li class="footer">Wygenerowano So, 26 gru 2015 11:53:47 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

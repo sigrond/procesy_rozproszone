@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fullversion_5fstring',['FULLVERSION_STRING',['../namespaceAutoVersion.html#a2c666a4ee8f49f7647b06e6c526858ad',1,'AutoVersion']]]
+  ['error',['error',['../classBindSockEx.html#ac3a5bb7e73027c84129eedd405b3b75e',1,'BindSockEx::error()'],['../classAcceptSockEx.html#a696a8014ad65b9a71b9c49cad048512b',1,'AcceptSockEx::error()'],['../classCreateSockEx.html#af0e1c9a26b714f677903a3def347c30a',1,'CreateSockEx::error()'],['../classListenSockEx.html#ab302a4280c5f0042c99cecf58df47183',1,'ListenSockEx::error()'],['../classConnectSockEx.html#a2913c6c23130f7a909bb5562aaf045c9',1,'ConnectSockEx::error()']]]
 ];

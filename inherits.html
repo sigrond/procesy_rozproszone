@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Definicje typów</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Przyjaciele</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Strony</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -119,7 +119,7 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 </td></tr>
 <tr><td><img src="inherit_graph_1.png" border="0" alt="" usemap="#AdminServerException"/>
 <map name="AdminServerException" id="AdminServerException">
-<area shape="rect" id="node1" title="STL class. " alt="" coords="5,81,109,108"/><area shape="rect" id="node2" href="structAdminServerException.html" title="Klasa opakowująca exception dla AdminServer. " alt="" coords="157,5,311,32"/><area shape="rect" id="node3" href="structAgentServerException.html" title="Klasa opakowująca exception dla AgentServer. " alt="" coords="159,56,309,83"/><area shape="rect" id="node4" href="classbadIpException.html" title="badIpException" alt="" coords="179,107,289,133"/><area shape="rect" id="node5" href="structControllerException.html" title="Klasa opakowująca exception dla Controller. " alt="" coords="167,157,301,184"/></map>
+<area shape="rect" id="node1" title="STL class. " alt="" coords="5,107,109,133"/><area shape="rect" id="node2" href="structAdminServerException.html" title="Klasa opakowująca exception dla AdminServer. " alt="" coords="157,5,311,32"/><area shape="rect" id="node3" href="structAgentServerException.html" title="Klasa opakowująca exception dla AgentServer. " alt="" coords="159,56,309,83"/><area shape="rect" id="node4" href="classBadIpException.html" title="BadIpException" alt="" coords="177,107,291,133"/><area shape="rect" id="node5" href="structControllerException.html" title="Klasa opakowująca exception dla Controller. " alt="" coords="167,157,301,184"/><area shape="rect" id="node6" href="classSockEx.html" title="SockEx" alt="" coords="200,208,268,235"/><area shape="rect" id="node7" href="classAcceptSockEx.html" title="AcceptSockEx" alt="" coords="362,107,471,133"/><area shape="rect" id="node8" href="classBindSockEx.html" title="BindSockEx" alt="" coords="369,157,464,184"/><area shape="rect" id="node9" href="classConnectSockEx.html" title="ConnectSockEx" alt="" coords="359,208,475,235"/><area shape="rect" id="node10" href="classCreateSockEx.html" title="CreateSockEx" alt="" coords="363,259,470,285"/><area shape="rect" id="node11" href="classListenSockEx.html" title="ListenSockEx" alt="" coords="365,309,468,336"/></map>
 </td></tr>
 <tr><td><img src="inherit_graph_2.png" border="0" alt="" usemap="#AgentClient"/>
 <map name="AgentClient" id="AgentClient">
@@ -137,47 +137,55 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 <map name="Connection" id="Connection">
 <area shape="rect" id="node1" href="classConnection.html" title="Klasa realizująca połączenie LOTC. " alt="" coords="5,5,92,32"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_6.png" border="0" alt="" usemap="#ConsoleClient"/>
+<tr><td><img src="inherit_graph_6.png" border="0" alt="" usemap="#ConnectionManager"/>
+<map name="ConnectionManager" id="ConnectionManager">
+<area shape="rect" id="node1" href="classConnectionManager.html" title="ConnectionManager" alt="" coords="5,5,143,32"/></map>
+</td></tr>
+<tr><td><img src="inherit_graph_7.png" border="0" alt="" usemap="#ConsoleClient"/>
 <map name="ConsoleClient" id="ConsoleClient">
 <area shape="rect" id="node1" href="classConsoleClient.html" title="ConsoleClient" alt="" coords="5,5,108,32"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_7.png" border="0" alt="" usemap="#ConsoleServer"/>
+<tr><td><img src="inherit_graph_8.png" border="0" alt="" usemap="#ConsoleServer"/>
 <map name="ConsoleServer" id="ConsoleServer">
 <area shape="rect" id="node1" href="classConsoleServer.html" title="ConsoleServer" alt="" coords="5,5,111,32"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_8.png" border="0" alt="" usemap="#Controller"/>
+<tr><td><img src="inherit_graph_9.png" border="0" alt="" usemap="#Controller"/>
 <map name="Controller" id="Controller">
 <area shape="rect" id="node1" href="classController.html" title="klasa kontrolera " alt="" coords="5,5,83,32"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_9.png" border="0" alt="" usemap="#Event"/>
+<tr><td><img src="inherit_graph_10.png" border="0" alt="" usemap="#Event"/>
 <map name="Event" id="Event">
 <area shape="rect" id="node1" href="classEvent.html" title="Klasa reprezentująca zdarzenie. Na rzecz szybkiego uzyskania działania aplikacji rezygnuję z pomysłu ..." alt="" coords="5,5,60,32"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_10.png" border="0" alt="" usemap="#Ip"/>
+<tr><td><img src="inherit_graph_11.png" border="0" alt="" usemap="#Ip"/>
 <map name="Ip" id="Ip">
 <area shape="rect" id="node1" href="classIp.html" title="Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. " alt="" coords="5,31,44,57"/><area shape="rect" id="node2" href="classIpv4.html" title="Ipv4" alt="" coords="92,5,136,32"/><area shape="rect" id="node3" href="classIpv6.html" title="Ipv6" alt="" coords="92,56,136,83"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_11.png" border="0" alt="" usemap="#message_1_1Message"/>
+<tr><td><img src="inherit_graph_12.png" border="0" alt="" usemap="#message_1_1Message"/>
 <map name="message_1_1Message" id="message_1_1Message">
 <area shape="rect" id="node1" href="classmessage_1_1Message.html" title="message::Message" alt="" coords="5,183,141,209"/><area shape="rect" id="node2" href="classmessage_1_1depMessage.html" title="message::depMessage" alt="" coords="191,5,349,32"/><area shape="rect" id="node3" href="classmessage_1_1errMessage.html" title="message::errMessage" alt="" coords="195,56,345,83"/><area shape="rect" id="node4" href="classmessage_1_1fileMessage.html" title="message::fileMessage" alt="" coords="194,107,346,133"/><area shape="rect" id="node5" href="classmessage_1_1hostMessage.html" title="message::hostMessage" alt="" coords="189,157,351,184"/><area shape="rect" id="node6" href="classmessage_1_1pingMessage.html" title="message::pingMessage" alt="" coords="190,208,350,235"/><area shape="rect" id="node7" href="classmessage_1_1retMessage.html" title="message::retMessage" alt="" coords="195,259,345,285"/><area shape="rect" id="node8" href="classmessage_1_1synMessage.html" title="message::synMessage" alt="" coords="191,309,349,336"/><area shape="rect" id="node9" href="classmessage_1_1taskMessage.html" title="message::taskMessage" alt="" coords="189,360,351,387"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_12.png" border="0" alt="" usemap="#Model"/>
+<tr><td><img src="inherit_graph_13.png" border="0" alt="" usemap="#Model"/>
 <map name="Model" id="Model">
 <area shape="rect" id="node1" href="classModel.html" title="klasa modelu " alt="" coords="5,5,63,32"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_13.png" border="0" alt="" usemap="#Slave"/>
+<tr><td><img src="inherit_graph_14.png" border="0" alt="" usemap="#Slave"/>
 <map name="Slave" id="Slave">
 <area shape="rect" id="node1" href="classSlave.html" title="Klasa odpowiedzialna za przechowywanie informacji o agencie. " alt="" coords="5,5,59,32"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_14.png" border="0" alt="" usemap="#Strategy"/>
+<tr><td><img src="inherit_graph_15.png" border="0" alt="" usemap="#Socket"/>
+<map name="Socket" id="Socket">
+<area shape="rect" id="node1" href="classSocket.html" title="Socket" alt="" coords="5,31,68,57"/><area shape="rect" id="node2" href="classSocketIp4.html" title="SocketIp4" alt="" coords="116,5,196,32"/><area shape="rect" id="node3" href="classSocketIp6.html" title="SocketIp6" alt="" coords="116,56,196,83"/></map>
+</td></tr>
+<tr><td><img src="inherit_graph_16.png" border="0" alt="" usemap="#Strategy"/>
 <map name="Strategy" id="Strategy">
 <area shape="rect" id="node1" href="classStrategy.html" title="Wirtualna klasa strategii obsługi zdarzenia. Klasę należy zkonkretyzować dziedzicząc po niej np..." alt="" coords="5,81,76,108"/><area shape="rect" id="node2" href="classMessageFromAdminStrategy.html" title="Strategia przetwarzania i obsługi wiadomości od administratora. " alt="" coords="124,5,315,32"/><area shape="rect" id="node3" href="classMessageFromAgentStrategy.html" title="MessageFromAgentStrategy" alt="" coords="125,56,313,83"/><area shape="rect" id="node4" href="classShutDownStrategy.html" title="Strategia kończenia pracy serwera. " alt="" coords="154,107,285,133"/><area shape="rect" id="node5" href="classTestStrategy.html" title="Testowa klasa strategii. Ma służyć jako zaślepka do brakujących klas strategii, oraz ewentualnie jako..." alt="" coords="171,157,267,184"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_15.png" border="0" alt="" usemap="#Task"/>
+<tr><td><img src="inherit_graph_17.png" border="0" alt="" usemap="#Task"/>
 <map name="Task" id="Task">
 <area shape="rect" id="node1" href="classTask.html" title="Klasa odpowiadająca za przechowywanie informacji o zadaniu. " alt="" coords="5,5,56,32"/></map>
 </td></tr>
-<tr><td><img src="inherit_graph_16.png" border="0" alt="" usemap="#TestMessage"/>
+<tr><td><img src="inherit_graph_18.png" border="0" alt="" usemap="#TestMessage"/>
 <map name="TestMessage" id="TestMessage">
 <area shape="rect" id="node1" href="classTestMessage.html" title="TestMessage" alt="" coords="5,5,105,32"/></map>
 </td></tr>
@@ -187,7 +195,7 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Wygenerowano Śr, 16 gru 2015 17:50:30 dla LOTC programem
+    <li class="footer">Wygenerowano So, 26 gru 2015 11:53:45 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

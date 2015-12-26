@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('classIp.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Definicje typów</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Przyjaciele</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Strony</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,8 +108,6 @@ $(document).ready(function(){initNavTree('classIp.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Metody publiczne</a> &#124;
-<a href="#pro-methods">Metody chronione</a> &#124;
-<a href="#pro-attribs">Atrybuty chronione</a> &#124;
 <a href="classIp-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
 <div class="title">Dokumentacja klasy Ip<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -125,52 +123,40 @@ Diagram dziedziczenia dla Ip</div>
 <div class="dyncontent">
 <div class="center"><img src="classIp__inherit__graph.png" border="0" usemap="#Ip_inherit__map" alt="Inheritance graph"/></div>
 <map name="Ip_inherit__map" id="Ip_inherit__map">
-<area shape="rect" id="node2" href="classIpv4.html" title="{Ipv4\n||+ Ipv4()\l&#45; isCorrect()\l}" alt="" coords="5,175,96,267"/><area shape="rect" id="node3" href="classIpv6.html" title="{Ipv6\n||+ Ipv6()\l&#45; isCorrect()\l}" alt="" coords="120,175,211,267"/></map>
+<area shape="rect" id="node2" href="classIpv4.html" title="{Ipv4\n|&#45; address\l|+ Ipv4()\l+ getAddress()\l+ getAddressNum()\l+ operator\&lt;()\l+ operator==()\l&#45; isCorrect()\l}" alt="" coords="5,160,140,311"/><area shape="rect" id="node3" href="classIpv6.html" title="{Ipv6\n|&#45; addressNumbers\l|+ Ipv6()\l+ getAddress()\l&#45; isCorrect()\l&#45; toNumbers()\l}" alt="" coords="165,175,293,296"/></map>
 </div>
 <div class="dynheader">
 Diagram współpracy dla Ip:</div>
 <div class="dyncontent">
 <div class="center"><img src="classIp__coll__graph.png" border="0" usemap="#Ip_coll__map" alt="Collaboration graph"/></div>
 <map name="Ip_coll__map" id="Ip_coll__map">
-<area shape="rect" id="node2" title="STL class. " alt="" coords="29,147,109,224"/><area shape="rect" id="node3" title="STL class. " alt="" coords="5,5,132,97"/></map>
+</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr class="memitem:ac0e705b6b213389821f87318a1c6a60b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIp.html#ac0e705b6b213389821f87318a1c6a60b">Ip</a> (const std::string &amp;<a class="el" href="classIp.html#a761972a6675d552a770f54d1c162a4b3">address</a>)</td></tr>
-<tr class="memdesc:ac0e705b6b213389821f87318a1c6a60b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#ac0e705b6b213389821f87318a1c6a60b">Więcej...</a><br/></td></tr>
-<tr class="separator:ac0e705b6b213389821f87318a1c6a60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1b04c5638f7ec50b5d4667c6e1a099"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIp.html#abc1b04c5638f7ec50b5d4667c6e1a099">Ip</a> ()</td></tr>
+<tr class="memdesc:abc1b04c5638f7ec50b5d4667c6e1a099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#abc1b04c5638f7ec50b5d4667c6e1a099">Więcej...</a><br/></td></tr>
+<tr class="separator:abc1b04c5638f7ec50b5d4667c6e1a099"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ee51aedb2afd092cfc9ae9295505440"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIp.html#a4ee51aedb2afd092cfc9ae9295505440">~Ip</a> ()</td></tr>
 <tr class="separator:a4ee51aedb2afd092cfc9ae9295505440"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bba1bd3c40bfb3e92433b1f02c3e3e0"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIp.html#a2bba1bd3c40bfb3e92433b1f02c3e3e0">getAddress</a> () const </td></tr>
-<tr class="memdesc:a2bba1bd3c40bfb3e92433b1f02c3e3e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda zwracająca przechowywany adres IP jako ciąg znaków.  <a href="#a2bba1bd3c40bfb3e92433b1f02c3e3e0">Więcej...</a><br/></td></tr>
-<tr class="separator:a2bba1bd3c40bfb3e92433b1f02c3e3e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Metody chronione</h2></td></tr>
-<tr class="memitem:ad9df63aaaaeea55ab5077cf7d37d2c29"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIp.html#ad9df63aaaaeea55ab5077cf7d37d2c29">isCorrect</a> (const std::string &amp;<a class="el" href="classIp.html#a761972a6675d552a770f54d1c162a4b3">address</a>) const =0</td></tr>
-<tr class="memdesc:ad9df63aaaaeea55ab5077cf7d37d2c29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda sprawdzająca poprawność otrzymanego adresu.  <a href="#ad9df63aaaaeea55ab5077cf7d37d2c29">Więcej...</a><br/></td></tr>
-<tr class="separator:ad9df63aaaaeea55ab5077cf7d37d2c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Atrybuty chronione</h2></td></tr>
-<tr class="memitem:a761972a6675d552a770f54d1c162a4b3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIp.html#a761972a6675d552a770f54d1c162a4b3">address</a></td></tr>
-<tr class="separator:a761972a6675d552a770f54d1c162a4b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95d7c3ee756627faa620ba82cb386397"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIp.html#a95d7c3ee756627faa620ba82cb386397">getAddress</a> () const =0</td></tr>
+<tr class="memdesc:a95d7c3ee756627faa620ba82cb386397"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda zwracająca przechowywany adres IP jako ciąg znaków.  <a href="#a95d7c3ee756627faa620ba82cb386397">Więcej...</a><br/></td></tr>
+<tr class="separator:a95d7c3ee756627faa620ba82cb386397"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. </p>
 
-<p>Definicja w linii <a class="el" href="Ip_8hpp_source.html#l00020">20</a> pliku <a class="el" href="Ip_8hpp_source.html">Ip.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Ip_8hpp_source.html#l00023">23</a> pliku <a class="el" href="Ip_8hpp_source.html">Ip.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
-<a class="anchor" id="ac0e705b6b213389821f87318a1c6a60b"></a>
+<a class="anchor" id="abc1b04c5638f7ec50b5d4667c6e1a099"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">Ip::Ip </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>address</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -185,12 +171,12 @@ Atrybuty chronione</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Wyjątki</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classbadIpException.html">badIpException</a></td><td>Błędny adres IP </td></tr>
+    <tr><td class="paramname">badIpException</td><td>Błędny adres IP </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definicja w linii <a class="el" href="Ip_8cpp_source.html#l00011">11</a> pliku <a class="el" href="Ip_8cpp_source.html">Ip.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Ip_8cpp_source.html#l00021">21</a> pliku <a class="el" href="Ip_8cpp_source.html">Ip.cpp</a>.</p>
 
 </div>
 </div>
@@ -215,86 +201,36 @@ Atrybuty chronione</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Ip_8cpp_source.html#l00016">16</a> pliku <a class="el" href="Ip_8cpp_source.html">Ip.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Ip_8cpp_source.html#l00022">22</a> pliku <a class="el" href="Ip_8cpp_source.html">Ip.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
-<a class="anchor" id="a2bba1bd3c40bfb3e92433b1f02c3e3e0"></a>
+<a class="anchor" id="a95d7c3ee756627faa620ba82cb386397"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string &amp; Ip::getAddress </td>
+          <td class="memname">virtual std::string Ip::getAddress </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Metoda zwracająca przechowywany adres IP jako ciąg znaków. </p>
 <dl class="section return"><dt>Zwraca</dt><dd>Adres IP </dd></dl>
 
-<p>Definicja w linii <a class="el" href="Ip_8cpp_source.html#l00021">21</a> pliku <a class="el" href="Ip_8cpp_source.html">Ip.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad9df63aaaaeea55ab5077cf7d37d2c29"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool Ip::isCorrect </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>address</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Metoda sprawdzająca poprawność otrzymanego adresu. </p>
-<dl class="params"><dt>Parametry</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">Adres</td><td>IP w postaci ciągu znaków </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Zwraca</dt><dd>Czy jest poprawny </dd></dl>
-
-<p>Implementowany w <a class="el" href="classIpv6.html#a70806739f9d5cf9c7e6992434c32f34b">Ipv6</a> i <a class="el" href="classIpv4.html#abd695f37c49a0bba781d86b7978d6642">Ipv4</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
-<a class="anchor" id="a761972a6675d552a770f54d1c162a4b3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string Ip::address</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definicja w linii <a class="el" href="Ip_8hpp_source.html#l00039">39</a> pliku <a class="el" href="Ip_8hpp_source.html">Ip.hpp</a>.</p>
+<p>Implementowany w <a class="el" href="classIpv6.html#a6fcd6db61d1a06ccc268c8f8780e6803">Ipv6</a> i <a class="el" href="classIpv4.html#aed31825f0569c3c27632e4b97a25270d">Ipv4</a>.</p>
 
 </div>
 </div>
@@ -308,7 +244,7 @@ Atrybuty chronione</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classIp.html">Ip</a></li>
-    <li class="footer">Wygenerowano Śr, 16 gru 2015 17:50:26 dla LOTC programem
+    <li class="footer">Wygenerowano So, 26 gru 2015 11:53:42 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

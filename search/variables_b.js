@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['removed',['removed',['../classSlave.html#a4c5de67567bbc7859765e6a2e9b9cf38',1,'Slave']]],
-  ['requestanswered',['requestAnswered',['../classConsoleClient.html#acdf9519188b2cc3d0dc370b077ecaa2d',1,'ConsoleClient']]],
-  ['revision',['REVISION',['../namespaceAutoVersion.html#ae2d1fcdc67a4319c421677ebe1ef4d09',1,'AutoVersion']]]
+  ['pasta',['pasta',['../pasta_8h.html#a405e234407f7b0a7498c2b1d41cc47ad',1,'pasta.h']]],
+  ['port',['PORT',['../Socket_8hpp.html#a732dec0ff237041537a9b46a40de8a59',1,'PORT():&#160;Socket.hpp'],['../wireshark_2test_01protocol_2application_2client_8cpp.html#a11717c934f77ad5167dac5d28562d85a',1,'PORT():&#160;client.cpp'],['../wireshark_2test_01protocol_2application_2server_8cpp.html#a11717c934f77ad5167dac5d28562d85a',1,'PORT():&#160;server.cpp']]]
 ];

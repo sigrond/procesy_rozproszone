@@ -1,15 +1,4 @@
 var searchData=
 [
-  ['_7eadminserver',['~AdminServer',['../classAdminServer.html#ae00d7eaa6769aec515dbc06590424fdd',1,'AdminServer']]],
-  ['_7eagentserver',['~AgentServer',['../classAgentServer.html#afb8fd8d61568af65a604af199a9f3afc',1,'AgentServer']]],
-  ['_7eblockingqueue',['~BlockingQueue',['../classBlockingQueue.html#aaea1ce4feac499ba162b9baeeccca12e',1,'BlockingQueue']]],
-  ['_7econnection',['~Connection',['../classConnection.html#a2e4352edf667bea83001569e9da8a24d',1,'Connection']]],
-  ['_7econtroller',['~Controller',['../classController.html#a0ab87934c4f7a266cfdb86e0f36bc1b5',1,'Controller']]],
-  ['_7eevent',['~Event',['../classEvent.html#a7704ec01ce91e673885792054214b3d2',1,'Event']]],
-  ['_7eip',['~Ip',['../classIp.html#a4ee51aedb2afd092cfc9ae9295505440',1,'Ip']]],
-  ['_7emessage',['~Message',['../classmessage_1_1Message.html#a3f7275462831f787a861271687bcad67',1,'message::Message']]],
-  ['_7eslave',['~Slave',['../classSlave.html#a99d0908d38f846fae1e7417acf78796b',1,'Slave']]],
-  ['_7etask',['~Task',['../classTask.html#a3ecf499ea35fb4a96853969a1e1cbbce',1,'Task']]],
-  ['_7etestmessage',['~TestMessage',['../classTestMessage.html#a59602e46b7fe3d1e3ec5d8aec34869aa',1,'TestMessage']]],
-  ['_7eteststrategy',['~TestStrategy',['../classTestStrategy.html#a98338668da08d0448b767bb38acce8ba',1,'TestStrategy']]]
+  ['what',['what',['../classBadIpException.html#a510d7c6030130d65fe71c2db748066c9',1,'BadIpException::what()'],['../classSockEx.html#aff1ceda26ef22a8a8aff420e232599ac',1,'SockEx::what()'],['../classBindSockEx.html#ab35176d3ff3c39648a94c51e54adad6d',1,'BindSockEx::what()'],['../classAcceptSockEx.html#a0141c5451e5d6fe9b2e8506c1a180b23',1,'AcceptSockEx::what()'],['../classCreateSockEx.html#a39a8e97460789a17509adbd416e9128f',1,'CreateSockEx::what()'],['../classListenSockEx.html#a5522b2ceba3d20252f2f734d5e9fe9bd',1,'ListenSockEx::what()'],['../classConnectSockEx.html#a9dc151c6df86e563013705904ec57d82',1,'ConnectSockEx::what()'],['../structAdminServerException.html#a1907196856d89a1f351667d71f1eb331',1,'AdminServerException::what()'],['../structAgentServerException.html#a8dca75a0aff10a301e8be2a5e4ff2489',1,'AgentServerException::what()'],['../structControllerException.html#a0b23d4e452b48e4a296b44cbaabe4f53',1,'ControllerException::what()']]]
 ];

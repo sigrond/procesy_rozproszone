@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('classmessage_1_1retMessage.html','');}
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Definicje typów</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Przyjaciele</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Strony</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('classmessage_1_1retMessage.html','');}
 
 <div class="header">
   <div class="summary">
-<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pub-methods">Metody publiczne</a> &#124;
 <a href="classmessage_1_1retMessage-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
 <div class="title">Dokumentacja klasy message::retMessage</div>  </div>
@@ -130,8 +130,8 @@ Diagram współpracy dla message::retMessage:</div>
 <area shape="rect" id="node2" href="classmessage_1_1Message.html" title="{message::Message\n|&#45; code\l|+ Message()\l+ ~Message()\l+ getCode()\l+ getCategory()\l+ getState()\l+ getSubcategory()\l&#45; checkMessage()\l}" alt="" coords="13,5,149,171"/></map>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Metody prywatne</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
 <tr class="memitem:a0355ba2f4dc076e6a6798d24b8db3313"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1retMessage.html#a0355ba2f4dc076e6a6798d24b8db3313">retMessage</a> (<a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063">State</a> state, unsigned char exitStatus, unsigned long taskId, std::string filename, const std::ifstream &amp;file)</td></tr>
 <tr class="separator:a0355ba2f4dc076e6a6798d24b8db3313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2b4d8ba9403a6d87614a240d55995d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1retMessage.html#aa2b4d8ba9403a6d87614a240d55995d8">retMessage</a> (<a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063">State</a> state)</td></tr>
@@ -144,12 +144,9 @@ Metody prywatne</h2></td></tr>
 <tr class="separator:ad0346caab7f3622cef12e2e376d12dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54e85b55eb859063ef9490ff795eb383"><td class="memItemLeft" align="right" valign="top">std::ofstream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1retMessage.html#a54e85b55eb859063ef9490ff795eb383">getFile</a> ()</td></tr>
 <tr class="separator:a54e85b55eb859063ef9490ff795eb383"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Dodatkowe Dziedziczone Składowe</h2></td></tr>
 <tr class="inherit_header pub_methods_classmessage_1_1Message"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmessage_1_1Message')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="classmessage_1_1Message.html">message::Message</a></td></tr>
-<tr class="memitem:a4fc4f717b634e66070366cb7722d7761 inherit pub_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a4fc4f717b634e66070366cb7722d7761">Message</a> ()</td></tr>
-<tr class="separator:a4fc4f717b634e66070366cb7722d7761 inherit pub_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40eed0cc59f5cf5844dff8d1f300b01d inherit pub_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a40eed0cc59f5cf5844dff8d1f300b01d">Message</a> (<a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3">Category</a> category)</td></tr>
+<tr class="separator:a40eed0cc59f5cf5844dff8d1f300b01d inherit pub_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f7275462831f787a861271687bcad67 inherit pub_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a3f7275462831f787a861271687bcad67">~Message</a> ()</td></tr>
 <tr class="separator:a3f7275462831f787a861271687bcad67 inherit pub_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4dc034eaa8566016e8d20bb0411756f inherit pub_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#ae4dc034eaa8566016e8d20bb0411756f">getCode</a> () const </td></tr>
@@ -163,14 +160,11 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock">
-<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00113">113</a> pliku <a class="el" href="application_2protocol_2Message_8hpp_source.html">application/protocol/Message.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00117">117</a> pliku <a class="el" href="application_2protocol_2Message_8hpp_source.html">application/protocol/Message.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a class="anchor" id="a0355ba2f4dc076e6a6798d24b8db3313"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">retMessage::retMessage </td>
@@ -208,23 +202,37 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00155">155</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00159">159</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00012">message::Message::Message()</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3afb902bc4807c307b9309f2b528b96f2b">message::RET</a> i <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00159">retMessage()</a>.</p>
+
+<p>Odwołania w <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00159">retMessage()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmessage_1_1retMessage_a0355ba2f4dc076e6a6798d24b8db3313_cgraph.png" border="0" usemap="#classmessage_1_1retMessage_a0355ba2f4dc076e6a6798d24b8db3313_cgraph" alt=""/></div>
+<map name="classmessage_1_1retMessage_a0355ba2f4dc076e6a6798d24b8db3313_cgraph" id="classmessage_1_1retMessage_a0355ba2f4dc076e6a6798d24b8db3313_cgraph">
+<area shape="rect" id="node2" href="classmessage_1_1Message.html#a40eed0cc59f5cf5844dff8d1f300b01d" title="message::Message::Message" alt="" coords="204,37,401,63"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmessage_1_1retMessage_a0355ba2f4dc076e6a6798d24b8db3313_icgraph.png" border="0" usemap="#classmessage_1_1retMessage_a0355ba2f4dc076e6a6798d24b8db3313_icgraph" alt=""/></div>
+<map name="classmessage_1_1retMessage_a0355ba2f4dc076e6a6798d24b8db3313_icgraph" id="classmessage_1_1retMessage_a0355ba2f4dc076e6a6798d24b8db3313_icgraph">
+</map>
+</div>
+</p>
 
 </div>
 </div>
 <a class="anchor" id="aa2b4d8ba9403a6d87614a240d55995d8"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">retMessage::retMessage </td>
@@ -234,14 +242,20 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00164">164</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00168">168</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00012">message::Message::Message()</a> i <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3afb902bc4807c307b9309f2b528b96f2b">message::RET</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmessage_1_1retMessage_aa2b4d8ba9403a6d87614a240d55995d8_cgraph.png" border="0" usemap="#classmessage_1_1retMessage_aa2b4d8ba9403a6d87614a240d55995d8_cgraph" alt=""/></div>
+<map name="classmessage_1_1retMessage_aa2b4d8ba9403a6d87614a240d55995d8_cgraph" id="classmessage_1_1retMessage_aa2b4d8ba9403a6d87614a240d55995d8_cgraph">
+<area shape="rect" id="node2" href="classmessage_1_1Message.html#a40eed0cc59f5cf5844dff8d1f300b01d" title="message::Message::Message" alt="" coords="204,13,401,39"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -249,9 +263,6 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 <a class="anchor" id="abbb2353a2315272dbd083c3019198951"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">unsigned char retMessage::getExitStatus </td>
@@ -260,23 +271,15 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00169">169</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00173">173</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="a54e85b55eb859063ef9490ff795eb383"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::ofstream &amp; retMessage::getFile </td>
@@ -285,23 +288,15 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00184">184</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00188">188</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="ad0346caab7f3622cef12e2e376d12dca"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::string retMessage::getFilename </td>
@@ -310,23 +305,15 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00179">179</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00183">183</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="a2f896507cb32357cf5f76c15db9d2d64"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">unsigned long retMessage::getTaskId </td>
@@ -335,14 +322,9 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00174">174</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00178">178</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
 
 </div>
 </div>
@@ -356,7 +338,7 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemessage.html">message</a></li><li class="navelem"><a class="el" href="classmessage_1_1retMessage.html">retMessage</a></li>
-    <li class="footer">Wygenerowano Śr, 16 gru 2015 17:50:28 dla LOTC programem
+    <li class="footer">Wygenerowano So, 26 gru 2015 11:53:44 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

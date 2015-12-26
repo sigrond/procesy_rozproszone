@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['projekt_20wstępny_2etex',['Projekt Wstępny.tex',['../Projekt_01Wst_xC4_x99pny_8tex.html',1,'']]]
+  ['messagecodes_2ehpp',['MessageCodes.hpp',['../MessageCodes_8hpp.html',1,'']]],
+  ['model_2ecpp',['Model.cpp',['../Model_8cpp.html',1,'']]],
+  ['model_2ehpp',['Model.hpp',['../Model_8hpp.html',1,'']]]
 ];

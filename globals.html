@@ -86,8 +86,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
   </div>
   <div id="navrow4" class="tabs3">
     <ul class="tablist">
+      <li><a href="#index_a"><span>a</span></a></li>
       <li><a href="#index_b"><span>b</span></a></li>
       <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_d"><span>d</span></a></li>
       <li><a href="#index_e"><span>e</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
@@ -118,7 +120,7 @@ $(document).ready(function(){initNavTree('globals.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Definicje typów</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Przyjaciele</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Strony</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -130,10 +132,20 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <div class="contents">
 <div class="textblock">Tutaj znajduje się lista wszystkich składowych plików wraz z odnośnikami do plików, do których one należą:</div>
 
+<h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>awaitConnections()
+: <a class="el" href="ConnectionManager_8cpp.html#a0356e21a4b8c9cb057224466de84606d">ConnectionManager.cpp</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
+<li>BACKLOG
+: <a class="el" href="Socket_8hpp.html#ab47eb7ff95bcca1ea53e476a54a25d6e">Socket.hpp</a>
+</li>
 <li>BOOST_AUTO_TEST_CASE()
 : <a class="el" href="BlockingQueueTests_8cpp.html#a3c0e6032c63ed013740bc646dbd259a2">BlockingQueueTests.cpp</a>
-, <a class="el" href="ControllerTests_8cpp.html#a50b914cba86dd710e0c1831394261b9b">ControllerTests.cpp</a>
+, <a class="el" href="ControllerTests_8cpp.html#a45c7d89fbe3968a972f9861649e0f129">ControllerTests.cpp</a>
 </li>
 <li>BOOST_TEST_DYN_LINK
 : <a class="el" href="BlockingQueueTests_8cpp.html#a139f00d2466d591f60b8d6a73c8273f1">BlockingQueueTests.cpp</a>
@@ -147,7 +159,7 @@ $(document).ready(function(){initNavTree('globals.html','');});
 : <a class="el" href="ServerUnitTests_8cpp.html#a6b2a3852db8bb19ab6909bac01859985">ServerUnitTests.cpp</a>
 </li>
 <li>BUF_SIZE
-: <a class="el" href="client_8cpp.html#a36bc189fb5890a73e1e00d53972cb90c">client.cpp</a>
+: <a class="el" href="wireshark_2test_01protocol_2application_2client_8cpp.html#a36bc189fb5890a73e1e00d53972cb90c">wireshark/test protocol/application/client.cpp</a>
 , <a class="el" href="wireshark_2test_01protocol_2application_2server_8cpp.html#a36bc189fb5890a73e1e00d53972cb90c">wireshark/test protocol/application/server.cpp</a>
 </li>
 </ul>
@@ -156,6 +168,13 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
 <li>checkMessage()
 : <a class="el" href="ChangesLog_8txt.html#ab59b589752edc8a728d9c87d21ca6a26">ChangesLog.txt</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>DBG
+: <a class="el" href="debug_8h.html#a32adf79142f0a426b5e782fb7cd4cad3">debug.h</a>
 </li>
 </ul>
 
@@ -169,7 +188,7 @@ $(document).ready(function(){initNavTree('globals.html','');});
 
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
 <li>LOCALHOST
-: <a class="el" href="client_8cpp.html#a50a1ff9b14472f3823f4050567c45241">client.cpp</a>
+: <a class="el" href="wireshark_2test_01protocol_2application_2client_8cpp.html#a50a1ff9b14472f3823f4050567c45241">wireshark/test protocol/application/client.cpp</a>
 </li>
 <li>log
 : <a class="el" href="ChangesLog_8txt.html#a383e5f42197548f27454a63c3ca4bf12">ChangesLog.txt</a>
@@ -181,9 +200,11 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>main()
 : <a class="el" href="Agent_8cpp.html#af78beb4a0d33807a778c4dd88e28f164">Agent.cpp</a>
 , <a class="el" href="Console_8cpp.html#af78beb4a0d33807a778c4dd88e28f164">Console.cpp</a>
-, <a class="el" href="client_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">client.cpp</a>
-, <a class="el" href="wireshark_2test_01protocol_2application_2server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">wireshark/test protocol/application/server.cpp</a>
+, <a class="el" href="application_2protocol_2client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">application/protocol/client.cpp</a>
+, <a class="el" href="application_2protocol_2server_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">application/protocol/server.cpp</a>
 , <a class="el" href="application_2server_2server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164">application/server/server.cpp</a>
+, <a class="el" href="wireshark_2test_01protocol_2application_2client_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">wireshark/test protocol/application/client.cpp</a>
+, <a class="el" href="wireshark_2test_01protocol_2application_2server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">wireshark/test protocol/application/server.cpp</a>
 </li>
 <li>Message
 : <a class="el" href="ChangesLog_8txt.html#a271e3367e3ba639743c5767271a58d12">ChangesLog.txt</a>
@@ -201,8 +222,12 @@ $(document).ready(function(){initNavTree('globals.html','');});
 
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>pasta
+: <a class="el" href="pasta_8h.html#a405e234407f7b0a7498c2b1d41cc47ad">pasta.h</a>
+</li>
 <li>PORT
-: <a class="el" href="client_8cpp.html#a11717c934f77ad5167dac5d28562d85a">client.cpp</a>
+: <a class="el" href="Socket_8hpp.html#a732dec0ff237041537a9b46a40de8a59">Socket.hpp</a>
+, <a class="el" href="wireshark_2test_01protocol_2application_2client_8cpp.html#a11717c934f77ad5167dac5d28562d85a">wireshark/test protocol/application/client.cpp</a>
 , <a class="el" href="wireshark_2test_01protocol_2application_2server_8cpp.html#a11717c934f77ad5167dac5d28562d85a">wireshark/test protocol/application/server.cpp</a>
 </li>
 <li>pushFn()
@@ -224,6 +249,9 @@ $(document).ready(function(){initNavTree('globals.html','');});
 </li>
 <li>RC_FILEVERSION_STRING
 : <a class="el" href="version_8h.html#a4763e81d3c29ec0fab79225d3ec3f1a2">version.h</a>
+</li>
+<li>roll()
+: <a class="el" href="pasta_8h.html#a81c58b95729b7d5c9dc4b87cb342d96e">pasta.h</a>
 </li>
 <li>run()
 : <a class="el" href="ConsoleServer_8cpp.html#a13a43e6d814de94978c515cb084873b1">ConsoleServer.cpp</a>
@@ -248,7 +276,7 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Wygenerowano Śr, 16 gru 2015 17:50:32 dla LOTC programem
+    <li class="footer">Wygenerowano So, 26 gru 2015 11:53:47 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

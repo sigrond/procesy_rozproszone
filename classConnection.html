@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('classConnection.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Definicje typów</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Przyjaciele</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Strony</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('classConnection.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
 <a href="classConnection-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
 <div class="title">Dokumentacja klasy Connection</div>  </div>
@@ -122,6 +123,8 @@ $(document).ready(function(){initNavTree('classConnection.html','');});
 Diagram współpracy dla Connection:</div>
 <div class="dyncontent">
 <div class="center"><img src="classConnection__coll__graph.png" border="0" usemap="#Connection_coll__map" alt="Collaboration graph"/></div>
+<map name="Connection_coll__map" id="Connection_coll__map">
+<area shape="rect" id="node2" href="classSocket.html" title="{Socket\n|# sockfd\l|+ Socket()\l+ Socket()\l+ ~Socket()\l+ connect()\l+ bind()\l+ listen()\l+ accept()\l+ recv()\l+ send()\l+ getIp()\l+ close()\l}" alt="" coords="5,5,96,229"/><area shape="rect" id="node3" href="classIp.html" title="Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. " alt="" coords="121,64,229,171"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -132,15 +135,28 @@ Metody publiczne</h2></td></tr>
 <tr class="memitem:a7a702a352caba4f520e2f8df00144355"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnection.html#a7a702a352caba4f520e2f8df00144355">Connection</a> (const <a class="el" href="classIpv6.html">Ipv6</a> &amp;address=<a class="el" href="classIpv6.html">Ipv6</a>())</td></tr>
 <tr class="memdesc:a7a702a352caba4f520e2f8df00144355"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor połączeń po IPv6.  <a href="#a7a702a352caba4f520e2f8df00144355">Więcej...</a><br/></td></tr>
 <tr class="separator:a7a702a352caba4f520e2f8df00144355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affda888392bebd09786862c2d39acce8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnection.html#affda888392bebd09786862c2d39acce8">Connection</a> (int <a class="el" href="classConnection.html#a4bf787fc71e664c6b23d41d303d2a655">socket</a>)</td></tr>
+<tr class="separator:affda888392bebd09786862c2d39acce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e4352edf667bea83001569e9da8a24d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnection.html#a2e4352edf667bea83001569e9da8a24d">~Connection</a> ()</td></tr>
 <tr class="memdesc:a2e4352edf667bea83001569e9da8a24d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor.  <a href="#a2e4352edf667bea83001569e9da8a24d">Więcej...</a><br/></td></tr>
 <tr class="separator:a2e4352edf667bea83001569e9da8a24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ed690ca4a6ccd7032c123f38907ff4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnection.html#a5ed690ca4a6ccd7032c123f38907ff4b">send</a> (<a class="el" href="classmessage_1_1Message.html">message::Message</a> &amp;message)</td></tr>
-<tr class="memdesc:a5ed690ca4a6ccd7032c123f38907ff4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcja wysyłająca komunikat.  <a href="#a5ed690ca4a6ccd7032c123f38907ff4b">Więcej...</a><br/></td></tr>
-<tr class="separator:a5ed690ca4a6ccd7032c123f38907ff4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af94d1dc8ff2e11a4a5d934347d3556b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmessage_1_1Message.html">message::Message</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnection.html#af94d1dc8ff2e11a4a5d934347d3556b4">receive</a> ()</td></tr>
-<tr class="memdesc:af94d1dc8ff2e11a4a5d934347d3556b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja oczekująca na komunikat od zdalnego hosta.  <a href="#af94d1dc8ff2e11a4a5d934347d3556b4">Więcej...</a><br/></td></tr>
-<tr class="separator:af94d1dc8ff2e11a4a5d934347d3556b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8abd34010a78efd01e2af9aa7fa92fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnection.html#ac8abd34010a78efd01e2af9aa7fa92fd">send</a> (const <a class="el" href="classmessage_1_1Message.html">message::Message</a> &amp;message)</td></tr>
+<tr class="memdesc:ac8abd34010a78efd01e2af9aa7fa92fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcja wysyłająca komunikat.  <a href="#ac8abd34010a78efd01e2af9aa7fa92fd">Więcej...</a><br/></td></tr>
+<tr class="separator:ac8abd34010a78efd01e2af9aa7fa92fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfb3ea3730d4b194dda2646d4eac4572"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnection.html#adfb3ea3730d4b194dda2646d4eac4572">receive</a> (<a class="el" href="classmessage_1_1Message.html">message::Message</a> *const message)</td></tr>
+<tr class="memdesc:adfb3ea3730d4b194dda2646d4eac4572"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja oczekująca na komunikat od zdalnego hosta.  <a href="#adfb3ea3730d4b194dda2646d4eac4572">Więcej...</a><br/></td></tr>
+<tr class="separator:adfb3ea3730d4b194dda2646d4eac4572"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a507e05db5d5bb71b625c609b5cbfeeab"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnection.html#a507e05db5d5bb71b625c609b5cbfeeab">getCounter</a> ()</td></tr>
+<tr class="separator:a507e05db5d5bb71b625c609b5cbfeeab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:af35d1eb54f2af5a9abcabd3a9dad7287"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIp.html">Ip</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnection.html#af35d1eb54f2af5a9abcabd3a9dad7287">ip</a></td></tr>
+<tr class="separator:af35d1eb54f2af5a9abcabd3a9dad7287"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a2aec40fe257a2d79dbad1dc1f32120"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnection.html#a0a2aec40fe257a2d79dbad1dc1f32120">counter</a></td></tr>
+<tr class="separator:a0a2aec40fe257a2d79dbad1dc1f32120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bf787fc71e664c6b23d41d303d2a655"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSocket.html">Socket</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnection.html#a4bf787fc71e664c6b23d41d303d2a655">socket</a></td></tr>
+<tr class="separator:a4bf787fc71e664c6b23d41d303d2a655"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Klasa realizująca połączenie LOTC. </p>
@@ -148,7 +164,7 @@ Metody publiczne</h2></td></tr>
 <dl class="section date"><dt>Data</dt><dd>06.12.2015</dd></dl>
 <dl class="section author"><dt>Autor</dt><dd>Andrzej Roguski </dd></dl>
 
-<p>Definicja w linii <a class="el" href="Connection_8hpp_source.html#l00032">32</a> pliku <a class="el" href="Connection_8hpp_source.html">Connection.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Connection_8hpp_source.html#l00035">35</a> pliku <a class="el" href="Connection_8hpp_source.html">Connection.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a class="anchor" id="a978d2cc58e5e7a65f6662e7747644325"></a>
 <div class="memitem">
@@ -172,16 +188,27 @@ Metody publiczne</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definicja w linii <a class="el" href="Connection_8cpp_source.html#l00011">11</a> pliku <a class="el" href="Connection_8cpp_source.html">Connection.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Connection_8cpp_source.html#l00026">26</a> pliku <a class="el" href="Connection_8cpp_source.html">Connection.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="AdminServer_8cpp_source.html#l00034">AdminServer::AdminServer()</a>.</p>
+<p>Odwołuje się do <a class="el" href="Socket_8cpp_source.html#l00028">Socket::connect()</a>, <a class="el" href="Connection_8hpp_source.html#l00073">counter</a>, <a class="el" href="Connection_8hpp_source.html#l00075">socket</a> i <a class="el" href="Socket_8cpp_source.html#l00055">SocketIp4::SocketIp4()</a>.</p>
+
+<p>Odwołania w <a class="el" href="AdminServer_8cpp_source.html#l00034">AdminServer::AdminServer()</a> i <a class="el" href="ConnectionManager_8cpp_source.html#l00091">ConnectionManager::send()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classConnection_a978d2cc58e5e7a65f6662e7747644325_cgraph.png" border="0" usemap="#classConnection_a978d2cc58e5e7a65f6662e7747644325_cgraph" alt=""/></div>
+<map name="classConnection_a978d2cc58e5e7a65f6662e7747644325_cgraph" id="classConnection_a978d2cc58e5e7a65f6662e7747644325_cgraph">
+<area shape="rect" id="node2" href="classSocket.html#a1722aa9af2ec480b999e6bb664a1b925" title="Socket::connect" alt="" coords="228,5,345,32"/><area shape="rect" id="node3" href="classSocketIp4.html#ac4c36d9316126981322f016ab02b8ae6" title="SocketIp4::SocketIp4" alt="" coords="213,80,360,107"/></map>
+</div>
+</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classConnection_a978d2cc58e5e7a65f6662e7747644325_icgraph.png" border="0" usemap="#classConnection_a978d2cc58e5e7a65f6662e7747644325_icgraph" alt=""/></div>
 <map name="classConnection_a978d2cc58e5e7a65f6662e7747644325_icgraph" id="classConnection_a978d2cc58e5e7a65f6662e7747644325_icgraph">
-<area shape="rect" id="node2" href="classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2" title="Konstruktor bez podania adresu administratora. Oznacza to, że czekamy na pierwsze zapytanie z konsoli..." alt="" coords="213,5,389,32"/><area shape="rect" id="node3" href="application_2server_2server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="437,5,488,32"/></map>
+<area shape="rect" id="node2" href="classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2" title="Konstruktor bez podania adresu administratora. Oznacza to, że czekamy na pierwsze zapytanie z konsoli..." alt="" coords="213,5,389,32"/><area shape="rect" id="node4" href="classConnectionManager.html#addf9fe1fde3177c3e1ec7af11a6f9235" title="ConnectionManager::send" alt="" coords="215,56,388,83"/><area shape="rect" id="node3" href="application_2server_2server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="437,5,488,32"/><area shape="rect" id="node5" href="application_2protocol_2client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="437,56,488,83"/></map>
 </div>
 </p>
 
@@ -209,7 +236,49 @@ Oto graf wywoływań tej funkcji:</div>
   </dd>
 </dl>
 
-<p>Definicja w linii <a class="el" href="Connection_8cpp_source.html#l00016">16</a> pliku <a class="el" href="Connection_8cpp_source.html">Connection.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Connection_8cpp_source.html#l00041">41</a> pliku <a class="el" href="Connection_8cpp_source.html">Connection.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="Connection_8hpp_source.html#l00073">counter</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="affda888392bebd09786862c2d39acce8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Connection::Connection </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>socket</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="Connection_8cpp_source.html#l00046">46</a> pliku <a class="el" href="Connection_8cpp_source.html">Connection.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="Connection_8hpp_source.html#l00073">counter</a>, <a class="el" href="Connection_8hpp_source.html#l00075">socket</a> i <a class="el" href="Socket_8cpp_source.html#l00068">SocketIp4::SocketIp4()</a>.</p>
+
+<p>Odwołania w <a class="el" href="ConnectionManager_8cpp_source.html#l00016">awaitConnections()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classConnection_affda888392bebd09786862c2d39acce8_cgraph.png" border="0" usemap="#classConnection_affda888392bebd09786862c2d39acce8_cgraph" alt=""/></div>
+<map name="classConnection_affda888392bebd09786862c2d39acce8_cgraph" id="classConnection_affda888392bebd09786862c2d39acce8_cgraph">
+<area shape="rect" id="node2" href="classSocketIp4.html#ad23f394d563556b512bdc653f76348f8" title="SocketIp4::SocketIp4" alt="" coords="213,5,360,32"/><area shape="rect" id="node3" href="classSocket.html#ab999f4a1ead13959bfd7aa89c72a6ca5" title="Socket::Socket" alt="" coords="408,5,520,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classConnection_affda888392bebd09786862c2d39acce8_icgraph.png" border="0" usemap="#classConnection_affda888392bebd09786862c2d39acce8_icgraph" alt=""/></div>
+<map name="classConnection_affda888392bebd09786862c2d39acce8_icgraph" id="classConnection_affda888392bebd09786862c2d39acce8_icgraph">
+<area shape="rect" id="node2" href="ConnectionManager_8cpp.html#a0356e21a4b8c9cb057224466de84606d" title="awaitConnections" alt="" coords="213,5,337,32"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -228,19 +297,52 @@ Oto graf wywoływań tej funkcji:</div>
 
 <p>Destruktor. </p>
 
-<p>Definicja w linii <a class="el" href="Connection_8cpp_source.html#l00021">21</a> pliku <a class="el" href="Connection_8cpp_source.html">Connection.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Connection_8cpp_source.html#l00052">52</a> pliku <a class="el" href="Connection_8cpp_source.html">Connection.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="Connection_8hpp_source.html#l00075">socket</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
-<a class="anchor" id="af94d1dc8ff2e11a4a5d934347d3556b4"></a>
+<a class="anchor" id="a507e05db5d5bb71b625c609b5cbfeeab"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classmessage_1_1Message.html">message::Message</a> * Connection::receive </td>
+          <td class="memname">char Connection::getCounter </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="Connection_8cpp_source.html#l00093">93</a> pliku <a class="el" href="Connection_8cpp_source.html">Connection.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="Connection_8hpp_source.html#l00073">counter</a>.</p>
+
+<p>Odwołania w <a class="el" href="ConnectionManager_8cpp_source.html#l00123">ConnectionManager::receive()</a> i <a class="el" href="ConnectionManager_8cpp_source.html#l00091">ConnectionManager::send()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classConnection_a507e05db5d5bb71b625c609b5cbfeeab_icgraph.png" border="0" usemap="#classConnection_a507e05db5d5bb71b625c609b5cbfeeab_icgraph" alt=""/></div>
+<map name="classConnection_a507e05db5d5bb71b625c609b5cbfeeab_icgraph" id="classConnection_a507e05db5d5bb71b625c609b5cbfeeab_icgraph">
+<area shape="rect" id="node2" href="classConnectionManager.html#a1c91ab050474e9b380be98c8aaf2f95d" title="ConnectionManager::\lreceive" alt="" coords="226,5,371,47"/><area shape="rect" id="node4" href="classConnectionManager.html#addf9fe1fde3177c3e1ec7af11a6f9235" title="ConnectionManager::send" alt="" coords="212,71,385,98"/><area shape="rect" id="node3" href="application_2protocol_2client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="433,42,484,69"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="adfb3ea3730d4b194dda2646d4eac4572"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Connection::receive </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmessage_1_1Message.html">message::Message</a> *const&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -249,29 +351,40 @@ Oto graf wywoływań tej funkcji:</div>
 <p>Funkcja oczekująca na komunikat od zdalnego hosta. </p>
 <dl class="section return"><dt>Zwraca</dt><dd>Wskaźnik na obiekt Message utworzony na podstawie danych otrzymanych ze zdalnego hosta </dd></dl>
 
-<p>Definicja w linii <a class="el" href="Connection_8cpp_source.html#l00031">31</a> pliku <a class="el" href="Connection_8cpp_source.html">Connection.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Connection_8cpp_source.html#l00073">73</a> pliku <a class="el" href="Connection_8cpp_source.html">Connection.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00067">AgentServer::listen()</a> i <a class="el" href="AdminServer_8cpp_source.html#l00075">AdminServer::listen()</a>.</p>
+<p>Odwołuje się do <a class="el" href="Socket_8cpp_source.html#l00046">Socket::close()</a>, <a class="el" href="Connection_8hpp_source.html#l00073">counter</a>, <a class="el" href="Socket_8cpp_source.html#l00031">Socket::recv()</a> i <a class="el" href="Connection_8hpp_source.html#l00075">socket</a>.</p>
+
+<p>Odwołania w <a class="el" href="ConnectionManager_8cpp_source.html#l00123">ConnectionManager::receive()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classConnection_adfb3ea3730d4b194dda2646d4eac4572_cgraph.png" border="0" usemap="#classConnection_adfb3ea3730d4b194dda2646d4eac4572_cgraph" alt=""/></div>
+<map name="classConnection_adfb3ea3730d4b194dda2646d4eac4572_cgraph" id="classConnection_adfb3ea3730d4b194dda2646d4eac4572_cgraph">
+<area shape="rect" id="node2" href="classSocket.html#aef06605c6725958004116983f1a2051f" title="Socket::close" alt="" coords="188,5,291,32"/><area shape="rect" id="node3" href="classSocket.html#a6817b8ad1ae209f740f303dc8cbc6ed8" title="Socket::recv" alt="" coords="192,56,287,83"/></map>
+</div>
+</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
-<div class="center"><img src="classConnection_af94d1dc8ff2e11a4a5d934347d3556b4_icgraph.png" border="0" usemap="#classConnection_af94d1dc8ff2e11a4a5d934347d3556b4_icgraph" alt=""/></div>
-<map name="classConnection_af94d1dc8ff2e11a4a5d934347d3556b4_icgraph" id="classConnection_af94d1dc8ff2e11a4a5d934347d3556b4_icgraph">
-<area shape="rect" id="node2" href="classAgentServer.html#a001e979f72cf3d360d424cea0df70165" title="AgentServer::listen" alt="" coords="190,5,321,32"/><area shape="rect" id="node3" href="classAdminServer.html#a2c3c374cb8653d62a373735cf316d4e4" title="Metoda nasłuchująca na połączenie z konsoli administratora. Odbiera wiadomość i wrzuca w zdarzeniu do..." alt="" coords="188,56,323,83"/><area shape="rect" id="node4" href="classAdminServer.html#ad843107448ab68ee4d0eb00d3dd60fec" title="Metoda odpowiada za wewnętrzne życie AdminServer&#39;a. Należy raczej oczekiwać, że będzie się zawieszała..." alt="" coords="371,56,500,83"/></map>
+<div class="center"><img src="classConnection_adfb3ea3730d4b194dda2646d4eac4572_icgraph.png" border="0" usemap="#classConnection_adfb3ea3730d4b194dda2646d4eac4572_icgraph" alt=""/></div>
+<map name="classConnection_adfb3ea3730d4b194dda2646d4eac4572_icgraph" id="classConnection_adfb3ea3730d4b194dda2646d4eac4572_icgraph">
+<area shape="rect" id="node2" href="classConnectionManager.html#a1c91ab050474e9b380be98c8aaf2f95d" title="ConnectionManager::\lreceive" alt="" coords="188,5,333,47"/><area shape="rect" id="node3" href="application_2protocol_2client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="381,13,432,39"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a5ed690ca4a6ccd7032c123f38907ff4b"></a>
+<a class="anchor" id="ac8abd34010a78efd01e2af9aa7fa92fd"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void Connection::send </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classmessage_1_1Message.html">message::Message</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classmessage_1_1Message.html">message::Message</a> &amp;&#160;</td>
           <td class="paramname"><em>message</em></td><td>)</td>
           <td></td>
         </tr>
@@ -286,18 +399,100 @@ Oto graf wywoływań tej funkcji:</div>
   </dd>
 </dl>
 
-<p>Definicja w linii <a class="el" href="Connection_8cpp_source.html#l00026">26</a> pliku <a class="el" href="Connection_8cpp_source.html">Connection.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Connection_8cpp_source.html#l00058">58</a> pliku <a class="el" href="Connection_8cpp_source.html">Connection.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00062">AgentServer::connect()</a> i <a class="el" href="AdminServer_8cpp_source.html#l00085">AdminServer::connect()</a>.</p>
+<p>Odwołuje się do <a class="el" href="Socket_8cpp_source.html#l00046">Socket::close()</a>, <a class="el" href="Connection_8hpp_source.html#l00073">counter</a>, <a class="el" href="pasta_8h_source.html#l00005">pasta</a>, <a class="el" href="pasta_8h_source.html#l00055">roll()</a>, <a class="el" href="Socket_8cpp_source.html#l00030">Socket::send()</a> i <a class="el" href="Connection_8hpp_source.html#l00075">socket</a>.</p>
+
+<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00062">AgentServer::connect()</a>, <a class="el" href="AdminServer_8cpp_source.html#l00085">AdminServer::connect()</a> i <a class="el" href="ConnectionManager_8cpp_source.html#l00091">ConnectionManager::send()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classConnection_ac8abd34010a78efd01e2af9aa7fa92fd_cgraph.png" border="0" usemap="#classConnection_ac8abd34010a78efd01e2af9aa7fa92fd_cgraph" alt=""/></div>
+<map name="classConnection_ac8abd34010a78efd01e2af9aa7fa92fd_cgraph" id="classConnection_ac8abd34010a78efd01e2af9aa7fa92fd_cgraph">
+<area shape="rect" id="node2" href="classSocket.html#aef06605c6725958004116983f1a2051f" title="Socket::close" alt="" coords="176,5,279,32"/><area shape="rect" id="node3" href="pasta_8h.html#a81c58b95729b7d5c9dc4b87cb342d96e" title="roll" alt="" coords="208,56,247,83"/><area shape="rect" id="node4" href="classSocket.html#afe708d0a437f0b966fef606b2a2af2b0" title="Socket::send" alt="" coords="178,107,277,133"/></map>
+</div>
+</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
-<div class="center"><img src="classConnection_a5ed690ca4a6ccd7032c123f38907ff4b_icgraph.png" border="0" usemap="#classConnection_a5ed690ca4a6ccd7032c123f38907ff4b_icgraph" alt=""/></div>
-<map name="classConnection_a5ed690ca4a6ccd7032c123f38907ff4b_icgraph" id="classConnection_a5ed690ca4a6ccd7032c123f38907ff4b_icgraph">
-<area shape="rect" id="node2" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd" title="AgentServer::connect" alt="" coords="177,5,324,32"/><area shape="rect" id="node3" href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec" title="Metoda łącząca się z konsolą administratora. Wysyła wiadomość. " alt="" coords="176,56,325,83"/></map>
+<div class="center"><img src="classConnection_ac8abd34010a78efd01e2af9aa7fa92fd_icgraph.png" border="0" usemap="#classConnection_ac8abd34010a78efd01e2af9aa7fa92fd_icgraph" alt=""/></div>
+<map name="classConnection_ac8abd34010a78efd01e2af9aa7fa92fd_icgraph" id="classConnection_ac8abd34010a78efd01e2af9aa7fa92fd_icgraph">
+<area shape="rect" id="node2" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd" title="AgentServer::connect" alt="" coords="189,5,336,32"/><area shape="rect" id="node3" href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec" title="Metoda łącząca się z konsolą administratora. Wysyła wiadomość. " alt="" coords="188,56,337,83"/><area shape="rect" id="node4" href="classConnectionManager.html#addf9fe1fde3177c3e1ec7af11a6f9235" title="ConnectionManager::send" alt="" coords="176,107,349,133"/><area shape="rect" id="node5" href="application_2protocol_2client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="397,107,448,133"/></map>
 </div>
 </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="a0a2aec40fe257a2d79dbad1dc1f32120"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char Connection::counter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="Connection_8hpp_source.html#l00073">73</a> pliku <a class="el" href="Connection_8hpp_source.html">Connection.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="Connection_8cpp_source.html#l00026">Connection()</a>, <a class="el" href="Connection_8cpp_source.html#l00093">getCounter()</a>, <a class="el" href="Connection_8cpp_source.html#l00073">receive()</a> i <a class="el" href="Connection_8cpp_source.html#l00058">send()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af35d1eb54f2af5a9abcabd3a9dad7287"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIp.html">Ip</a>* Connection::ip</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="Connection_8hpp_source.html#l00071">71</a> pliku <a class="el" href="Connection_8hpp_source.html">Connection.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4bf787fc71e664c6b23d41d303d2a655"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSocket.html">Socket</a>* Connection::socket</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="Connection_8hpp_source.html#l00075">75</a> pliku <a class="el" href="Connection_8hpp_source.html">Connection.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="Connection_8cpp_source.html#l00026">Connection()</a>, <a class="el" href="Connection_8cpp_source.html#l00073">receive()</a>, <a class="el" href="Connection_8cpp_source.html#l00058">send()</a> i <a class="el" href="Connection_8cpp_source.html#l00052">~Connection()</a>.</p>
 
 </div>
 </div>
@@ -311,7 +506,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classConnection.html">Connection</a></li>
-    <li class="footer">Wygenerowano Śr, 16 gru 2015 17:50:25 dla LOTC programem
+    <li class="footer">Wygenerowano So, 26 gru 2015 11:53:41 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

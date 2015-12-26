@@ -1,14 +1,8 @@
 var searchData=
 [
-  ['protokół_20komunikacyjny_20serwer_2dagent',['Protokół komunikacyjny serwer-agent',['../md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_application_protocol_readme.html',1,'']]],
-  ['plugin_20do_20wiresharka',['Plugin do Wiresharka',['../md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_wireshark_test_protocol_plugin_readme.html',1,'']]],
-  ['ping',['PING',['../namespacemessage.html#ae332e93affac4506495c232e3f8a2be3ae07ff41a486c27c095a15898dcca34d1',1,'message']]],
-  ['pingmessage',['pingMessage',['../classmessage_1_1pingMessage.html',1,'message']]],
-  ['pingmessage',['pingMessage',['../classmessage_1_1pingMessage.html#a64422605fdf518316e1aae5344bc984e',1,'message::pingMessage']]],
-  ['pop_5ffront',['pop_front',['../classBlockingQueue.html#a33e18f760365430cee38721dfd0abf5e',1,'BlockingQueue']]],
-  ['port',['PORT',['../client_8cpp.html#a11717c934f77ad5167dac5d28562d85a',1,'PORT():&#160;client.cpp'],['../wireshark_2test_01protocol_2application_2server_8cpp.html#a11717c934f77ad5167dac5d28562d85a',1,'PORT():&#160;server.cpp']]],
-  ['projekt_20wstępny_2etex',['Projekt Wstępny.tex',['../Projekt_01Wst_xC4_x99pny_8tex.html',1,'']]],
-  ['push_5fback',['push_back',['../classBlockingQueue.html#aba9a92a9e6a732cd720c609d7e706c47',1,'BlockingQueue']]],
-  ['pushfn',['pushFn',['../BlockingQueueTests_8cpp.html#a78695f41d420d63810400efadf86af03',1,'BlockingQueueTests.cpp']]],
-  ['pushtestevents',['pushTestEvents',['../classModel.html#ac9ee04aadbcefc4957321d5f0ad60c5e',1,'Model']]]
+  ['objectid',['ObjectID',['../classTestStrategy.html#a36c1baec8840ffdeaa645e63b95f7c3d',1,'TestStrategy']]],
+  ['ok',['OK',['../namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063ae0aa021e21dddbd6d8cecec71e9cf564',1,'message']]],
+  ['operator_3c',['operator&lt;',['../classIpv4.html#a3e64a1d8fe588db524439a500f1ca968',1,'Ipv4']]],
+  ['operator_3d',['operator=',['../classConnectionManager.html#aa6cee798f07cca234543b510491e5248',1,'ConnectionManager']]],
+  ['operator_3d_3d',['operator==',['../classIpv4.html#ac8604d4a8438d8346b1cfd09feb3ab05',1,'Ipv4']]]
 ];

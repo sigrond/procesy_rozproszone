@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>LOTC: Dokumentacja pliku client.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">LOTC
+   &#160;<span id="projectnumber">https://github.com/sigrond/procesy_rozproszone</span>
+   </div>
+   <div id="projectbrief">Low Orbit Task Cannon</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('application_2protocol_2client_8cpp.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Przestrzenie nazw</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Definicje typów</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Przyjaciele</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Definicje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku application/protocol/client.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a>&quot;</code><br/>
+<code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla application/protocol/client.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="application_2protocol_2client_8cpp__incl.png" border="0" usemap="#client_8cpp" alt=""/></div>
+<map name="client_8cpp" id="client_8cpp">
+<area shape="rect" id="node2" href="ConnectionManager_8hpp.html" title="ConnectionManager.hpp" alt="" coords="487,80,649,107"/><area shape="rect" id="node6" href="application_2protocol_2Message_8hpp.html" title="Message.hpp" alt="" coords="314,229,414,256"/><area shape="rect" id="node11" href="Ip_8hpp.html" title="Ip.hpp" alt="" coords="423,304,481,331"/><area shape="rect" id="node16" href="Connection_8hpp.html" title="Connection.hpp" alt="" coords="377,155,489,181"/><area shape="rect" id="node17" href="Socket_8hpp.html" title="Socket.hpp" alt="" coords="636,229,724,256"/><area shape="rect" id="node10" href="MessageCodes_8hpp.html" title="MessageCodes.hpp" alt="" coords="181,304,318,331"/><area shape="rect" id="node22" href="SocketException_8hpp.html" title="SocketException.hpp" alt="" coords="1027,304,1173,331"/></map>
+</div>
+</div>
+<p><a href="application_2protocol_2client_8cpp_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="application_2protocol_2client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a class="anchor" id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="application_2protocol_2client_8cpp_source.html#l00009">9</a> pliku <a class="el" href="application_2protocol_2client_8cpp_source.html">application/protocol/client.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="ConnectionManager_8hpp_source.html#l00085">ConnectionManager::connectionGuards</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00062">ConnectionManager::getInstance()</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00199">message::pingMessage::pingMessage()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00123">ConnectionManager::receive()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00161">ConnectionManager::remove()</a>, <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063ace4e1a7286ff585e08bf30898cf6b3eb">message::REQ</a> i <a class="el" href="ConnectionManager_8cpp_source.html#l00091">ConnectionManager::send()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="application_2protocol_2client_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.png" border="0" usemap="#application_2protocol_2client_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" alt=""/></div>
+<map name="application_2protocol_2client_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" id="application_2protocol_2client_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph">
+<area shape="rect" id="node2" href="classConnectionManager.html#a32b75e2534c2de565fc316ff47109352" title="ConnectionManager::\lgetInstance" alt="" coords="118,5,263,47"/><area shape="rect" id="node3" href="classmessage_1_1pingMessage.html#a64422605fdf518316e1aae5344bc984e" title="message::pingMessage\l::pingMessage" alt="" coords="111,71,271,112"/><area shape="rect" id="node5" href="classConnectionManager.html#a1c91ab050474e9b380be98c8aaf2f95d" title="ConnectionManager::\lreceive" alt="" coords="118,136,263,177"/><area shape="rect" id="node10" href="classConnectionManager.html#a7b700d5c5fac3da35c97ac6532c66c61" title="ConnectionManager::\lremove" alt="" coords="118,201,263,243"/><area shape="rect" id="node11" href="classConnectionManager.html#addf9fe1fde3177c3e1ec7af11a6f9235" title="ConnectionManager::send" alt="" coords="104,267,277,294"/><area shape="rect" id="node4" href="classmessage_1_1Message.html#a40eed0cc59f5cf5844dff8d1f300b01d" title="message::Message::Message" alt="" coords="325,78,523,105"/><area shape="rect" id="node6" href="classConnection.html#adfb3ea3730d4b194dda2646d4eac4572" title="Funkcja oczekująca na komunikat od zdalnego hosta. " alt="" coords="357,143,491,170"/><area shape="rect" id="node9" href="classConnection.html#a507e05db5d5bb71b625c609b5cbfeeab" title="Connection::getCounter" alt="" coords="345,199,503,226"/><area shape="rect" id="node7" href="classSocket.html#a6817b8ad1ae209f740f303dc8cbc6ed8" title="Socket::recv" alt="" coords="597,126,691,153"/><area shape="rect" id="node8" href="classSocket.html#aef06605c6725958004116983f1a2051f" title="Socket::close" alt="" coords="593,177,695,203"/><area shape="rect" id="node12" href="classConnection.html#a978d2cc58e5e7a65f6662e7747644325" title="Konstruktor połączeń po IPv4. " alt="" coords="344,353,504,379"/><area shape="rect" id="node15" href="classConnection.html#ac8abd34010a78efd01e2af9aa7fa92fd" title="Funcja wysyłająca komunikat. " alt="" coords="363,261,485,287"/><area shape="rect" id="node13" href="classSocketIp4.html#ac4c36d9316126981322f016ab02b8ae6" title="SocketIp4::SocketIp4" alt="" coords="571,353,717,379"/><area shape="rect" id="node14" href="classSocket.html#a1722aa9af2ec480b999e6bb664a1b925" title="Socket::connect" alt="" coords="585,403,703,430"/><area shape="rect" id="node16" href="pasta_8h.html#a81c58b95729b7d5c9dc4b87cb342d96e" title="roll" alt="" coords="625,227,663,254"/><area shape="rect" id="node17" href="classSocket.html#afe708d0a437f0b966fef606b2a2af2b0" title="Socket::send" alt="" coords="595,278,693,305"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_75eb1ee5d767627a9a18a84e7e34c1ab.html">protocol</a></li><li class="navelem"><a class="el" href="application_2protocol_2client_8cpp.html">client.cpp</a></li>
+    <li class="footer">Wygenerowano So, 26 gru 2015 11:53:39 dla LOTC programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>
