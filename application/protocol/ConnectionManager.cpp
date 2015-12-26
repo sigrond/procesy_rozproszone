@@ -29,7 +29,7 @@ void awaitConnections( ConnectionManager * conMan )
                 
                 conMan->map4Mutex.lock();
 
-                        Connection * connection = conMan->map4[ip];
+                        Connection * & connection = conMan->map4[ip];
 
                         if( connection == nullptr )
                         {
@@ -127,7 +127,7 @@ void ConnectionManager::receive( const Ipv4 & ip, message::Message * const msg )
         {
                 std::unique_lock<std::mutex> lock(map4Mutex);
 
-                connection  = map4[ip];
+                connection = map4[ip];
 
                 if( connection == nullptr )
                 {
@@ -135,7 +135,9 @@ void ConnectionManager::receive( const Ipv4 & ip, message::Message * const msg )
                         
                         std::condition_variable & conVar = receiveGuards[ip];
 
-                        conVar.wait(lock);                        
+                        conVar.wait(lock);
+
+                        connection = map4[ip];
                 }
         }
 
