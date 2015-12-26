@@ -2,7 +2,21 @@
 
 [TIN] System komunikacji dla zarządzania rozproszonymi procesami.
 
-## Ogloszenia duszpasterskie
+## Dokumentacja Doxygen
+Skompilowana dokumentacja znajduje się branch'u gh-pages.
+Jest to specjalny branch github'a który jest związany ze stroną github'a.
+Stronę z dokumentacją można oglądać pod adresem:
+http://sigrond.github.io/procesy_rozproszone/
+
+Plik konfiguracyjny Doxygen'a (Doxyfile) znajduje się w:
+procesy_rozproszone\documentation\doxygen
+W tej samej lokalizacji może znajdować się katalog html zawierający skompilowaną
+dokumentację Doxygen'a, jednak jest on w głównym branch'u ignorowany, żeby
+w repozytorium nie trzymać razem kodu i kompilatu, który potrafi zrobić się duży
+i skutecznie uprzykszyć życie przy wykonywaniu push i pull. Katalog html jest
+głównym katalogiem branch'u gh-pages.
+
+## Ogłoszenia duszpasterskie
 Od tego momentu zalecam żeby dla każdego większego fragmentu pracy stworzyć lub znaleźć odpowiednie issue i dodać je do odpowiedniego milestone'a (ewentualnie takiego utworzyć). Pociąga to też za sobą dodawanie w wiadomościach commitów odnośnika do issue czyli #nr_issue lub jeśli commit zawiera rozwiązanie danego issue to close #nr_issue.
 https://help.github.com/articles/closing-issues-via-commit-messages/
 
@@ -29,7 +43,7 @@ Niniejszym proponuje nastepujace kamienie milowe:
 
 ## Formaty plików
 
-Nie używajcie formatów kompresujących, których GitHub nie ogarnia. Jeśli trzeba coś zapisać tekstem, używajcie zwykłych plików tekstowych lub najlepiej plików markdown, takich jak ten. Raz, że łatwiej i szybciej można się do nich dobrać, a dwa, przy kolejnych commitach łatwo prześledzić zmiany wewnątrz plików. // AR 
+Nie używajcie formatów kompresujących, których GitHub nie ogarnia. Jeśli trzeba coś zapisać tekstem, używajcie zwykłych plików tekstowych lub najlepiej plików markdown, takich jak ten. Raz, że łatwiej i szybciej można się do nich dobrać, a dwa, przy kolejnych commitach łatwo prześledzić zmiany wewnątrz plików. // AR
 
 ## Typy całkowite
 
@@ -53,7 +67,7 @@ channel: #tin_projekt
 
 ````
 |- application
-|  |- client 
+|  |- client
 |  |- console
 |  |- protocol
 |  |- server
