@@ -122,12 +122,9 @@ void ConnectionManager::receive( const Ipv4 & ip, message::Message * const msg )
 {
         DBG("ConMan::receive( " << ip.getAddress() << " )")
         
-        Connection * connection;
-       
-        {
-                std::unique_lock<std::mutex> lock(map4Mutex);
+        std::unique_lock<std::mutex> lock(map4Mutex);
 
-                connection = map4[ip];
+                Connection * & connection = map4[ip];
 
                 if( connection == nullptr )
                 {
@@ -139,7 +136,8 @@ void ConnectionManager::receive( const Ipv4 & ip, message::Message * const msg )
 
                         connection = map4[ip];
                 }
-        }
+
+        lock.unlock(); 
 
         connGuardsMutex.lock();
         connectionGuards[ ip ].lock();  
