@@ -1,6 +1,3 @@
-// banalny serwer
-// przyjmuje trzy "komunikaty"
-
 #include "ConnectionManager.hpp"
 
 #include <string>

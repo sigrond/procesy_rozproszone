@@ -58,4 +58,23 @@ receive() - jeśli z danym adresem IP nie ma otwartego połączenia, metoda ta c
 remove() - usuwa adres IP (i powiązane polączenie) z mapy
 send() i receive() automatycznie dodają nowy adres IP do mapy, jeśli nie znajdą w niej klucza odpowiadającego argumentowi wywołania. Nie ma potrzeby (ani możliwości :^) ) wcześniejszego zgłaszania adresów.
 
+# Testowanie
 
+By odpalić obecnie dostępny test (server.cpp i client.cpp) potrzebne są dwa komputery z możliwością połączenia po sieci. Nie da się odpalić serwera i klienta na jednej maszynie, gdyż obie aplikacje próbują nasłuchiwać na porcie 55555.
+
+Obie aplikacje przyjmują jako argument adres IP drugiej maszyny (w postaci A.B.C.D), na przykład:
+
+Na maszynie o adresie 10.10.10.10
+````shell
+./server 10.10.10.11
+````
+
+Na maszynie o adresie 10.10.10.11
+````shell
+./client 10.10.10.10
+````
+
+Sugeruję do testowania kompilować aplikacje z flagą DEBUG:
+````shell
+make debug
+````

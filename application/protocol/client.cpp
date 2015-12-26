@@ -1,6 +1,3 @@
-// Banalny klient testowy
-// sprawdza działanie zamykania i otwierania nowych połączeń
-
 #include "ConnectionManager.hpp"
 
 #include <string>
