@@ -42,8 +42,6 @@ void awaitConnections( ConnectionManager * conMan )
 
                                         conVar.notify_one();
 
-                                        delete &conVar;
-
                                         conMan->receiveGuards.erase( ip );
                                 }
                                 catch( std::out_of_range e)
