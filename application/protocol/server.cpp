@@ -23,35 +23,42 @@ int main( int argc, char** argv)
 
                 // ISHYGDDT
 
+
+                std::thread t[13];
+
                 // rrraz
-                std::thread ( [=] {mietek->receive( ip, msg1 ); } );
+                t[0] = std::thread ( [=] {mietek->receive( ip, msg1 ); } );
                 
-                std::thread ( [=] {mietek->send( ip, *msg2 ); } );
+                t[1] = std::thread ( [=] {mietek->send( ip, *msg2 ); } );
 
-                std::thread ( [=] {mietek->receive( ip, msg1 ); } );
+                t[2] = std::thread ( [=] {mietek->receive( ip, msg1 ); } );
 
-                std::thread ( [=] {mietek->send( ip, *msg2 ); } );
+                t[3] = std::thread ( [=] {mietek->send( ip, *msg2 ); } );
 
                 // dwa
-                std::thread ( [=] {mietek->receive( ip, msg1 ); } );
+                t[4] = std::thread ( [=] {mietek->receive( ip, msg1 ); } );
                 
-                std::thread ( [=] {mietek->send( ip, *msg2 ); } );
+                t[5] = std::thread ( [=] {mietek->send( ip, *msg2 ); } );
 
-                std::thread ( [=] {mietek->receive( ip, msg1 ); } );
+                t[6] = std::thread ( [=] {mietek->receive( ip, msg1 ); } );
 
-                std::thread ( [=] {mietek->send( ip, *msg2 ); } );
+                t[7] = std::thread ( [=] {mietek->send( ip, *msg2 ); } );
 
                 // usuwamy
-                std::thread ( [=] {mietek->remove( ip ); } );
+                t[8] = std::thread ( [=] {mietek->remove( ip ); } );
 
                 // rrraz
-                std::thread ( [=] {mietek->receive( ip, msg1 ); } );
+                t[9] = std::thread ( [=] {mietek->receive( ip, msg1 ); } );
                 
-                std::thread ( [=] {mietek->send( ip, *msg2 ); } );
+                t[10] = std::thread ( [=] {mietek->send( ip, *msg2 ); } );
 
-                std::thread ( [=] {mietek->receive( ip, msg1 ); } );
+                t[11] = std::thread ( [=] {mietek->receive( ip, msg1 ); } );
                 
-                std::thread ( [=] {mietek->send( ip, *msg2 ); } );
+                t[12] = std::thread ( [=] {mietek->send( ip, *msg2 ); } );
+
+                for(int i = 0; i<13; i++ )
+                        t[i].join();
+
         }
         else
         {
