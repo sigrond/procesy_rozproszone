@@ -1,9 +1,10 @@
 #include "ConnectionManager.hpp"
 
 #include <string>
-using namespace message;
-
+#include <thread>
 #include <iostream>
+
+using namespace message;
 
 int main( int argc, char** argv)
 {
@@ -19,35 +20,38 @@ int main( int argc, char** argv)
 
                 getchar();
 
+
+                // ISHYGDDT
+
                 // rrraz
-                mietek->receive( ip, msg1 );
+                std::thread ( [=] {mietek->receive( ip, msg1 ); } );
+                
+                std::thread ( [=] {mietek->send( ip, *msg2 ); } );
 
-                mietek->send( ip, *msg2 );
+                std::thread ( [=] {mietek->receive( ip, msg1 ); } );
 
-                mietek->receive( ip, msg1 );
-
-                mietek->send( ip, *msg2 );
+                std::thread ( [=] {mietek->send( ip, *msg2 ); } );
 
                 // dwa
-                mietek->receive( ip, msg1 );
+                std::thread ( [=] {mietek->receive( ip, msg1 ); } );
+                
+                std::thread ( [=] {mietek->send( ip, *msg2 ); } );
 
-                mietek->send( ip, *msg2 );
+                std::thread ( [=] {mietek->receive( ip, msg1 ); } );
 
-                mietek->receive( ip, msg1 );
-
-                mietek->send( ip, *msg2 );
+                std::thread ( [=] {mietek->send( ip, *msg2 ); } );
 
                 // usuwamy
-                mietek->remove( ip );
+                std::thread ( [=] {mietek->remove( ip ); } );
 
                 // rrraz
-                mietek->receive( ip, msg1 );
+                std::thread ( [=] {mietek->receive( ip, msg1 ); } );
+                
+                std::thread ( [=] {mietek->send( ip, *msg2 ); } );
 
-                mietek->send( ip, *msg2 );
-
-                mietek->receive( ip, msg1 );
-
-                mietek->send( ip, *msg2 );
+                std::thread ( [=] {mietek->receive( ip, msg1 ); } );
+                
+                std::thread ( [=] {mietek->send( ip, *msg2 ); } );
         }
         else
         {
