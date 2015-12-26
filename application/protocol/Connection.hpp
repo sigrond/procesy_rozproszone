@@ -15,6 +15,8 @@
 #ifndef CONNECTION_HPP
 #define CONNECTION_HPP
 
+#include <mutex>
+
 #include "Ip.hpp"
 #include "Message.hpp"
 #include "Socket.hpp"
@@ -64,7 +66,7 @@ public:
          */
         void receive ( message::Message * const message );
 
-        char getCounter() const;
+        char getCounter();
 private:
         Ip * ip;
 

@@ -65,7 +65,7 @@ int main( int argc, char** argv)
                         std::cout.flush();
                 }
 
-                std::cout << std::endl << " Połączono." << std::endl;
+                std::cout << std::endl << "Połączono." << std::endl;
 
                 usleep(500*1000);
 

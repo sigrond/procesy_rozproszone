@@ -80,14 +80,17 @@ private:
         ConnectionManager& operator=( const ConnectionManager & );
         ~ConnectionManager();
 
-        std::map<Ipv4, Connection*> map4;
-        std::map<Ipv4, std::condition_variable *> map4Guards;
+        std::map<Ipv4, Connection *> map4;
+        std::map<Ipv4, std::condition_variable> receiveGuards;
+        std::map<Ipv4, std::mutex> connectionGuards;
+        
 
         Socket * listeningSocket;
 
         friend void awaitConnections( ConnectionManager * conMan );
 
         std::mutex map4Mutex;
+        std::mutex connGuardsMutex;
 
         // Soon™
         // std::map<Ipv6, Connection*> map6;

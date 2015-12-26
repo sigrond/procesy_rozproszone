@@ -58,31 +58,39 @@ Connection::~Connection ()
 void Connection::send ( const message::Message & message )
 {
         DBG("Conn::send()")
-        int i = roll(); 
 
-        socket->send( pasta[i], sizeof( pasta[i] ) / sizeof( char ) );
+        if( counter < 4 )
+        {
+                int i = roll(); 
 
-        if( ++counter == 4)
+                socket->send( pasta[i], sizeof( pasta[i] ) / sizeof( char ) );
+        }
+
+        if( ++counter > 3 )
                 socket->close();
 }
 
 void Connection::receive ( message::Message * const message )
 {
         DBG("Conn::rec()")
-        char delicious_pasta[2000];
+        
+        if( counter < 4 )
+        {
+                char delicious_pasta[2000];
 
-        memset( delicious_pasta, 0, sizeof( delicious_pasta ));
-      
-        socket->recv( delicious_pasta, sizeof( delicious_pasta ) / sizeof( char ) );
-        std::string pastaStr( delicious_pasta );
+                memset( delicious_pasta, 0, sizeof( delicious_pasta ));
+              
+                socket->recv( delicious_pasta, sizeof( delicious_pasta ) / sizeof( char ) );
+                std::string pastaStr( delicious_pasta );
 
-        std::cout << "Received delicious pasta:" << std::endl << std::endl << pastaStr << std::endl << std::endl;
+                std::cout << "Received delicious pasta:" << std::endl << std::endl << pastaStr << std::endl << std::endl;
+        }
 
-        if( ++counter == 4)
+        if( ++counter > 3 )
                 socket->close();
 }
 
-char Connection::getCounter() const
-{
+char Connection::getCounter()
+{        
         return counter;
 }

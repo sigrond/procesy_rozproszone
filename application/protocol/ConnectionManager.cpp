@@ -29,22 +29,22 @@ void awaitConnections( ConnectionManager * conMan )
                 
                 conMan->map4Mutex.lock();
 
-                        Connection ** connection = &(conMan->map4[ip]);
+                        Connection * connection = conMan->map4[ip];
 
-                        if( *connection == nullptr )
+                        if( connection == nullptr )
                         {
                                 DBG("awaitConnections(): connection not found, new connection")
-                                *connection = new Connection( socket );
+                                connection = new Connection( socket );
 
                                 try
                                 {
-                                        std::condition_variable * conVar = conMan->map4Guards.at( ip );
+                                        std::condition_variable & conVar = conMan->receiveGuards.at( ip );
 
-                                        conVar->notify_one();
+                                        conVar.notify_one();
 
-                                        delete conVar;
+                                        delete &conVar;
 
-                                        conMan->map4Guards.erase( ip );
+                                        conMan->receiveGuards.erase( ip );
                                 }
                                 catch( std::out_of_range e)
                                 {
@@ -92,58 +92,70 @@ void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg )
 {
         DBG("ConMan::send( " << ip.getAddress() << " )")
 
-        map4Mutex.lock();
-        
-                Connection ** connection = &map4[ip];
+        map4Mutex.lock();        
+                Connection * connection = map4[ip];
 
-                if( *connection == nullptr )
+                if( connection == nullptr )
                 {
                         DBG("ConMan::send() connection not found, new connection")
-                        *connection = new Connection( ip );
+                        connection = new Connection( ip );
                 }
 
         map4Mutex.unlock();
-        
-        (*connection)->send(msg);
 
-        if( (*connection)->getCounter() == 4 )
         {
-                delete (*connection);
-                *connection = nullptr;
+                std::unique_lock<std::mutex> lock( connGuardsMutex );
+                connectionGuards[ ip ].lock();  
         }
+
+        connection->send(msg);
+
+        if( connection->getCounter() > 3 )
+        {
+                delete connection;
+                connection = nullptr;
+        }
+
+        std::unique_lock<std::mutex> lock( connGuardsMutex );
+        connectionGuards[ ip ].unlock();
 }
 
 void ConnectionManager::receive( const Ipv4 & ip, message::Message * const msg )
 {
         DBG("ConMan::receive( " << ip.getAddress() << " )")
         
-        Connection ** connection;
+        Connection * connection;
        
         {
                 std::unique_lock<std::mutex> lock(map4Mutex);
 
-                connection  = &map4[ip];
+                connection  = map4[ip];
 
-                if( *connection == nullptr )
+                if( connection == nullptr )
                 {
                         DBG("ConMan::rec() connection not found, waiting for new connection")
                         
-                        std::condition_variable ** conVar = &map4Guards[ip];
-                        
-                        *conVar = new std::condition_variable();
+                        std::condition_variable & conVar = receiveGuards[ip];
 
-                        (*conVar)->wait(lock);                        
+                        conVar.wait(lock);                        
                 }
         }
 
-        (*connection)->receive(msg);
+        connGuardsMutex.lock();
+        connectionGuards[ ip ].lock();  
+        connGuardsMutex.unlock();
 
-        if( (*connection)->getCounter() == 4 )
+        connection->receive(msg);
+
+        if( connection->getCounter() > 3 )
         {
-                delete (*connection);
-                *connection = nullptr;
+                delete connection;
+                connection = nullptr;
         }
 
+        connGuardsMutex.lock();
+        connectionGuards[ ip ].unlock();
+        connGuardsMutex.unlock();
 }
 
 void ConnectionManager::remove( const Ipv4 & ip )
@@ -156,8 +168,16 @@ void ConnectionManager::remove( const Ipv4 & ip )
                 {
                         Connection * connection = map4.at( ip );
 
+                        connGuardsMutex.lock();
+                        connectionGuards[ ip ].lock();  
+                        connGuardsMutex.unlock();
+                        
                         if( connection != nullptr )
                                 delete connection;
+        
+                        connGuardsMutex.lock();
+                        connectionGuards[ ip ].unlock();
+                        connGuardsMutex.unlock();
 
                         map4.erase( ip );
                 }
@@ -167,6 +187,10 @@ void ConnectionManager::remove( const Ipv4 & ip )
                 }
 
         map4Mutex.unlock();
+
+        connGuardsMutex.lock();
+                connectionGuards.erase(ip);
+        connGuardsMutex.unlock();
 }
 
 void ConnectionManager::send( const Ipv6 & ip, const message::Message & msg )

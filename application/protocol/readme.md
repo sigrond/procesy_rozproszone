@@ -6,9 +6,11 @@ Prosty wrapper obiektowy dla socketów unixowych.
 
 #### Klasa Ip i dziedziczące
 
-Bardzo drobna klasa, przechowuje adres IP w postaci stringa przetrawialnego dla socketów unixowych. Generalnie zadaniem tej klasy jest sprawdzenie podczas wywołania konstruktora, czy podany adres jest poprawny.
+Bardzo drobna klasa, przechowuje adres Ip w postaci stringa przetrawialnego dla socketów unixowych. Generalnie zadaniem tej klasy jest sprawdzenie podczas wywołania konstruktora, czy podany adres jest poprawny.
 
-Samo istnienie obiektu IP gwarantuje, że przechowywany w nim adres jest prawidłowy. Ponadto w prezencie dostajemy kontrolę typów, przeciążanie funkcji w zależności od wersji adresu i ochronę stringa przed modyfikacją.
+Samo istnienie obiektu Ip gwarantuje, że przechowywany w nim adres jest prawidłowy. Ponadto w prezencie dostajemy kontrolę typów, przeciążanie funkcji w zależności od wersji adresu i ochronę stringa przed modyfikacją.
+
+Klasy Ip udostępniają operator porównania (mniejszy niż), ale służy on jedynie do ustalenia **jakiegokolwiek** porządku w zbiorze adresów, co jest potrzebne w strukturach uporządkowanych typu map. Porównanie adresów Ip zwraca wynik porównania ich zapisów bitowych z sieciowym porządkiem bajtów. Nie mam pojęcia jak to się ma do "naturalnego" porządku typu 10.10.10.10 < 10.10.10.11, więc sugeruję nie używać tego operatora.
 
 #### Klasa Message
 
@@ -36,18 +38,24 @@ Nawiązanie połączenia oznacza utworzenie u hosta zasocjowanego gniazda, wykor
 
 #### Klasa Connection
 
-**UWAGA! Pliki klasy Connection na chwilę obecną zawierają wersję testową nieaktualnego, zarzuconego rozwiązania.**
-
-Klasa Connection reprezentuje pojedyncze, nawiązane, otwarte połączenie. Obiekty tej klasy posiadają wskazanie na jeden zasocjowany socket związany z tym połączeniem. Poza realizacją komunikacji w obrębie swojego połączenia, klasa ta dba również o zachowanie odpowiedniej kolejności wysyłania komunikatów. Dla przykładu próba wysłania pod rząd dwóch komunikatów REQ zakończy się zgloszeniem wyjątku.
+Klasa Connection reprezentuje pojedyncze, nawiązane połączenie. Obiekty tej klasy posiadają wskazanie na jeden zasocjowany socket związany z tym połączeniem. Poza realizacją komunikacji w obrębie swojego połączenia, klasa ta dba również o zachowanie odpowiedniej kolejności wysyłania komunikatów. Dla przykładu próba wysłania pod rząd dwóch komunikatów REQ zakończy się zgloszeniem wyjątku.
 
 Czas życia obiektów Connection odpowiada czasowi trwania połączenia.
 
 #### Klasa ConnectionManager
 
-**Klasa jeszcze nie narodzona**
+"Centrum dowodzenia" połączeniami. Singleton, przechowuje gniazdo nasłuchujące na porcie 55555, zarządza przyjmowaniem i nawiazywaniem połączeń. Każde połączenie trzymane jest w mapie z IP jako kluczem. Z danym hostem nie można nawiązać więcej niż jednego połączenia jednocześnie.
 
-"Centrum dowodzenia" połączeniami. Singleton, przechowuje gniazdo nasłuchujące na porcie 55555, zarządza przyjmowaniem i nawiazywaniem połączeń, a także odpowiada za zarządzanie wątkami (jedno połączenie = jeden wątek). Pilnuje też, by z danym hostem nie nawiązać więcej niż jednego połączeni jednocześnie.
-
-Klasa ta wystawia całość interfejsu mudułu komunikacyjnego protokołu LOTC. Nie ma potrzeby tworzenia własnych obiektów Socket lub Connection.
+ConnectionManager wystawia całość interfejsu modułu komunikacyjnego protokołu LOTC. Nie ma potrzeby tworzenia własnych obiektów Socket lub Connection.
 
 Obiekt tej klasy jest monitorem i gwarantuje bezpieczny dostęp współbieżny.
+
+**Uwagi co do metod:**
+
+send() - jeśli z danym adresem IP nie ma otwartego połączenia, jest ono automatycznie tworzone.  
+receive() - jeśli z danym adresem IP nie ma otwartego połączenia, metoda ta czeka na utworzenie połączenia poprzez funkcję nasłuchującą.
+
+remove() - usuwa adres IP (i powiązane polączenie) z mapy
+send() i receive() automatycznie dodają nowy adres IP do mapy, jeśli nie znajdą w niej klucza odpowiadającego argumentowi wywołania. Nie ma potrzeby (ani możliwości :^) ) wcześniejszego zgłaszania adresów.
+
+
