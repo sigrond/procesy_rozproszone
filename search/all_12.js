@@ -18,7 +18,7 @@ var searchData=
   ['terminarz_2emd',['Terminarz.md',['../Terminarz_8md.html',1,'']]],
   ['test',['Test',['../Event_8hpp.html#a2628ea8d12e8b2563c32f05dc7fff6faa0c1982bd20a911687e4a2b59a1517f93',1,'Event.hpp']]],
   ['testmessage',['TestMessage',['../classTestMessage.html',1,'TestMessage'],['../classTestMessage.html#a787425f9d91935aeebb64faec0ed2324',1,'TestMessage::TestMessage()']]],
-  ['teststrategy',['TestStrategy',['../classTestStrategy.html',1,'TestStrategy'],['../classTestStrategy.html#ad548a651d02444b6af74638418ac137d',1,'TestStrategy::TestStrategy()']]],
+  ['teststrategy',['TestStrategy',['../classTestStrategy.html',1,'TestStrategy'],['../classTestStrategy.html#ad548a651d02444b6af74638418ac137d',1,'TestStrategy::TestStrategy()'],['../classTestStrategy.html#ab4ebb25e4c9771f1f5ddb3bedb81b4b3',1,'TestStrategy::TestStrategy(void *v)']]],
   ['tonumbers',['toNumbers',['../classIpv6.html#a2fac2b701be4dd350fe031da1f38b721',1,'Ipv6']]],
   ['triggershutdown',['triggerShutDown',['../classAdminServer.html#ae254f9e5cf045c7efbef7dce4c55dd62',1,'AdminServer::triggerShutDown()'],['../classController.html#a516427a8bb2fc0e0f46f94c318dd1610',1,'Controller::triggerShutDown()']]],
   ['type',['type',['../classEvent.html#ac721e4f34b3b9a1ae302165412221724',1,'Event']]]

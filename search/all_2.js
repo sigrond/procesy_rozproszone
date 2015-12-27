@@ -26,7 +26,7 @@ var searchData=
   ['consoleserver',['ConsoleServer',['../classConsoleServer.html',1,'']]],
   ['consoleserver_2ecpp',['ConsoleServer.cpp',['../ConsoleServer_8cpp.html',1,'']]],
   ['consoleserver_2ehpp',['ConsoleServer.hpp',['../ConsoleServer_8hpp.html',1,'']]],
-  ['controller',['Controller',['../classController.html',1,'Controller'],['../classController.html#a95c56822d667e94b031451729ce069a9',1,'Controller::Controller()'],['../classModel.html#a830195401b77e9b56009e4bac37ae6f3',1,'Model::controller()']]],
+  ['controller',['Controller',['../classController.html',1,'Controller'],['../classController.html#a95c56822d667e94b031451729ce069a9',1,'Controller::Controller()'],['../classStrategy.html#aa21b85fd8c90091840c6c51899693d2f',1,'Strategy::controller()'],['../classModel.html#a830195401b77e9b56009e4bac37ae6f3',1,'Model::controller()']]],
   ['controller_2ecpp',['Controller.cpp',['../Controller_8cpp.html',1,'']]],
   ['controller_2ehpp',['Controller.hpp',['../Controller_8hpp.html',1,'']]],
   ['controllerexception',['ControllerException',['../structControllerException.html',1,'ControllerException'],['../structControllerException.html#a0774acacdc442aeb037940a59e44c274',1,'ControllerException::ControllerException()']]],

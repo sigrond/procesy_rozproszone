@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('classStrategy.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pub-attribs">Atrybuty publiczne</a> &#124;
 <a href="classStrategy-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
 <div class="title">Dokumentacja klasy Strategy<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -123,24 +124,102 @@ Diagram dziedziczenia dla Strategy</div>
 <div class="dyncontent">
 <div class="center"><img src="classStrategy__inherit__graph.png" border="0" usemap="#Strategy_inherit__map" alt="Inheritance graph"/></div>
 <map name="Strategy_inherit__map" id="Strategy_inherit__map">
-<area shape="rect" id="node2" href="classAddAgentStrategy.html" title="{AddAgentStrategy\n||+ doJob()\l}" alt="" coords="5,160,133,237"/><area shape="rect" id="node3" href="classMessageFromAdminStrategy.html" title="Strategia przetwarzania i obsługi wiadomości od administratora. " alt="" coords="158,160,349,237"/><area shape="rect" id="node4" href="classMessageFromAgentStrategy.html" title="{MessageFromAgentStrategy\n||+ doJob()\l}" alt="" coords="373,160,561,237"/><area shape="rect" id="node5" href="classShutDownStrategy.html" title="Strategia kończenia pracy serwera. " alt="" coords="585,160,716,237"/><area shape="rect" id="node6" href="classTestStrategy.html" title="Testowa klasa strategii. Ma służyć jako zaślepka do brakujących klas strategii, oraz ewentualnie jako..." alt="" coords="741,131,865,267"/></map>
+<area shape="rect" id="node2" href="classAddAgentStrategy.html" title="{AddAgentStrategy\n||+ doJob()\l}" alt="" coords="5,197,133,274"/><area shape="rect" id="node3" href="classMessageFromAdminStrategy.html" title="Strategia przetwarzania i obsługi wiadomości od administratora. " alt="" coords="158,197,349,274"/><area shape="rect" id="node4" href="classMessageFromAgentStrategy.html" title="{MessageFromAgentStrategy\n||+ doJob()\l}" alt="" coords="373,197,561,274"/><area shape="rect" id="node5" href="classShutDownStrategy.html" title="Strategia kończenia pracy serwera. " alt="" coords="585,197,716,274"/><area shape="rect" id="node6" href="classTestStrategy.html" title="Testowa klasa strategii. Ma służyć jako zaślepka do brakujących klas strategii, oraz ewentualnie jako..." alt="" coords="741,160,865,311"/></map>
 </div>
 <div class="dynheader">
 Diagram współpracy dla Strategy:</div>
 <div class="dyncontent">
 <div class="center"><img src="classStrategy__coll__graph.png" border="0" usemap="#Strategy_coll__map" alt="Collaboration graph"/></div>
+<map name="Strategy_coll__map" id="Strategy_coll__map">
+</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
+<tr class="memitem:a2021a15bbc4f0d13f7b92f8933db2235"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStrategy.html#a2021a15bbc4f0d13f7b92f8933db2235">Strategy</a> ()</td></tr>
+<tr class="separator:a2021a15bbc4f0d13f7b92f8933db2235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2870e41ac77f36da35e5bc1e0b3de31f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStrategy.html#a2870e41ac77f36da35e5bc1e0b3de31f">Strategy</a> (void *c)</td></tr>
+<tr class="separator:a2870e41ac77f36da35e5bc1e0b3de31f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac620d54307f0355d930c6150259ae27a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStrategy.html#ac620d54307f0355d930c6150259ae27a">doJob</a> (void *data)=0</td></tr>
 <tr class="separator:ac620d54307f0355d930c6150259ae27a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Atrybuty publiczne</h2></td></tr>
+<tr class="memitem:aa21b85fd8c90091840c6c51899693d2f"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStrategy.html#aa21b85fd8c90091840c6c51899693d2f">controller</a></td></tr>
+<tr class="separator:aa21b85fd8c90091840c6c51899693d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Wirtualna klasa strategii obsługi zdarzenia. Klasę należy zkonkretyzować dziedzicząc po niej np. AdminServerStrategy. </p>
 
-<p>Definicja w linii <a class="el" href="Strategy_8hpp_source.html#l00012">12</a> pliku <a class="el" href="Strategy_8hpp_source.html">Strategy.hpp</a>.</p>
-</div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<p>Definicja w linii <a class="el" href="Strategy_8hpp_source.html#l00014">14</a> pliku <a class="el" href="Strategy_8hpp_source.html">Strategy.hpp</a>.</p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="a2021a15bbc4f0d13f7b92f8933db2235"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Strategy::Strategy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="Strategy_8hpp_source.html#l00018">18</a> pliku <a class="el" href="Strategy_8hpp_source.html">Strategy.hpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="Strategy_8hpp_source.html#l00017">controller</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2870e41ac77f36da35e5bc1e0b3de31f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Strategy::Strategy </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="Strategy_8hpp_source.html#l00024">24</a> pliku <a class="el" href="Strategy_8hpp_source.html">Strategy.hpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="Strategy_8hpp_source.html#l00017">controller</a>.</p>
+
+<p>Odwołania w <a class="el" href="Strategies_8hpp_source.html#l00031">TestStrategy::TestStrategy()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classStrategy_a2870e41ac77f36da35e5bc1e0b3de31f_icgraph.png" border="0" usemap="#classStrategy_a2870e41ac77f36da35e5bc1e0b3de31f_icgraph" alt=""/></div>
+<map name="classStrategy_a2870e41ac77f36da35e5bc1e0b3de31f_icgraph" id="classStrategy_a2870e41ac77f36da35e5bc1e0b3de31f_icgraph">
+<area shape="rect" id="node2" href="classTestStrategy.html#ad548a651d02444b6af74638418ac137d" title="TestStrategy::TestStrategy" alt="" coords="181,5,360,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
 <a class="anchor" id="ac620d54307f0355d930c6150259ae27a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -168,6 +247,23 @@ Metody publiczne</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="aa21b85fd8c90091840c6c51899693d2f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* Strategy::controller</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="Strategy_8hpp_source.html#l00017">17</a> pliku <a class="el" href="Strategy_8hpp_source.html">Strategy.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="Strategy_8hpp_source.html#l00018">Strategy()</a>.</p>
+
+</div>
+</div>
 <hr/>Dokumentacja dla tej klasy została wygenerowana z pliku:<ul>
 <li><a class="el" href="Strategy_8hpp_source.html">Strategy.hpp</a></li>
 </ul>
@@ -177,7 +273,7 @@ Metody publiczne</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classStrategy.html">Strategy</a></li>
-    <li class="footer">Wygenerowano N, 27 gru 2015 16:47:27 dla LOTC programem
+    <li class="footer">Wygenerowano N, 27 gru 2015 23:40:41 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

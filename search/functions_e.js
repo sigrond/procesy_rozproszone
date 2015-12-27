@@ -7,6 +7,7 @@ var searchData=
   ['setblockingqueue',['setBlockingQueue',['../classAdminServer.html#a3ecf7c2747f0413d3d58f7a9f4dd7ae2',1,'AdminServer::setBlockingQueue()'],['../classAgentServer.html#ab79904b49f1f80c51b9bfdbde2596d00',1,'AgentServer::setBlockingQueue()'],['../classModel.html#a61cb5a5695ff5a6555ceaec02b2a16b9',1,'Model::setBlockingQueue()']]],
   ['setcontroller',['setController',['../classModel.html#a8e8771cbc09afdf630f4ca833d29b809',1,'Model']]],
   ['setlastcontact',['setLastContact',['../classSlave.html#a27056b83637658ce11e6db3d97d7d703',1,'Slave::setLastContact()'],['../classSlave.html#a94f84a326af17b5fbe5ec4f42e6ca189',1,'Slave::setLastContact(time_t val)']]],
+  ['setlistening',['setListening',['../classSlave.html#ab482a5086b54df697818928f942e1d8b',1,'Slave']]],
   ['setmodel',['setModel',['../classController.html#a5f9d5a3fc40dd23ecf4b493f22ce94f0',1,'Controller']]],
   ['setslaveip',['setSlaveIP',['../classSlave.html#a3332d82ea84ddc81a69cb8a030a46319',1,'Slave']]],
   ['setstate',['setState',['../classSlave.html#a7733aa198c2281b760030cd62915cab8',1,'Slave']]],
@@ -17,5 +18,6 @@ var searchData=
   ['socketip4',['SocketIp4',['../classSocketIp4.html#ac4c36d9316126981322f016ab02b8ae6',1,'SocketIp4::SocketIp4(const Ipv4 &amp;ip)'],['../classSocketIp4.html#ad23f394d563556b512bdc653f76348f8',1,'SocketIp4::SocketIp4(int msgsock)']]],
   ['socketip6',['SocketIp6',['../classSocketIp6.html#a96482d1a74a32fe7ce1a5f1c24d6c1ec',1,'SocketIp6']]],
   ['start',['start',['../classAgentClient.html#af0e975638976932e9ab31c654843717e',1,'AgentClient::start()'],['../classConsoleClient.html#a416302ce226015ef7bdf6eef49ec6aa4',1,'ConsoleClient::start()'],['../classAdminServer.html#ad843107448ab68ee4d0eb00d3dd60fec',1,'AdminServer::start()'],['../classAgentServer.html#aec3723633cda932f432249930ea81694',1,'AgentServer::start()'],['../classController.html#ad535ad74055e645b7f44b7feeb4e82a8',1,'Controller::start()']]],
+  ['strategy',['Strategy',['../classStrategy.html#a2021a15bbc4f0d13f7b92f8933db2235',1,'Strategy::Strategy()'],['../classStrategy.html#a2870e41ac77f36da35e5bc1e0b3de31f',1,'Strategy::Strategy(void *c)']]],
   ['synmessage',['synMessage',['../classmessage_1_1synMessage.html#adc773263592bfcd5ae421c8a476b7461',1,'message::synMessage']]]
 ];
