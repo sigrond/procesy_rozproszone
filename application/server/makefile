@@ -2,7 +2,7 @@ CXX = g++
 FILES = server.cpp Controller.cpp AdminServer.cpp AgentServer.cpp Model.cpp Slave.cpp Task.cpp ../protocol/Message.cpp ../protocol/Ip.cpp ../protocol/Connection.cpp ../protocol/ConnectionManager.cpp ../protocol/Socket.cpp ../protocol/SocketException.cpp
 CFLAGS = -std=c++11 -Wall -pthread
 LFLAGS = -lpthread
-DFLAGS = -g -O0 -D_DEBUG
+DFLAGS = -g -O0 -D_DEBUG -DDEBUG
 OBJECTS = $(FILES:.cpp=.o)
 
 Debug: $(FILES)

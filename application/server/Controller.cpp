@@ -4,8 +4,8 @@
  *
  */
 
-#include "Controller.hpp"
 #include "Strategies.hpp"
+#include "Controller.hpp"
 #include "Event.hpp"
 #include <iostream>
 #include <exception>
@@ -128,11 +128,11 @@ void Controller::fillStrategyMap()
 	{
 		throw ControllerException("strategyMap==nullptr");
 	}
-	strategyMap->insert(std::pair<EventType,Strategy*>(Test,new TestStrategy()));
-	strategyMap->insert(std::pair<EventType,Strategy*>(SHUT_DOWN,new ShutDownStrategy()));
-	strategyMap->insert(std::pair<EventType,Strategy*>(MESSAGE_FROM_ADMIN_SERVER,new MessageFromAdminStrategy()));
-	strategyMap->insert(std::pair<EventType,Strategy*>(MESSAGE_FROM_AGENT_SERVER,new MessageFromAgentStrategy()));
-	strategyMap->insert(std::pair<EventType,Strategy*>(ADD_AGENT,new AddAgentStrategy()));
+	strategyMap->insert(std::pair<EventType,Strategy*>(Test,new TestStrategy(this)));
+	strategyMap->insert(std::pair<EventType,Strategy*>(SHUT_DOWN,new ShutDownStrategy(this)));
+	strategyMap->insert(std::pair<EventType,Strategy*>(MESSAGE_FROM_ADMIN_SERVER,new MessageFromAdminStrategy(this)));
+	strategyMap->insert(std::pair<EventType,Strategy*>(MESSAGE_FROM_AGENT_SERVER,new MessageFromAgentStrategy(this)));
+	strategyMap->insert(std::pair<EventType,Strategy*>(ADD_AGENT,new AddAgentStrategy(this)));
 	/**< \todo wstawić więcej strategii, ustalić w którym pliku powinny znajdować się strategie i je napisać */
 }
 

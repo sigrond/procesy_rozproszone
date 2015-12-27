@@ -28,7 +28,11 @@
 class TestStrategy : public Strategy
 {
 public:
-	TestStrategy() : ObjectID(createdObjects)
+	TestStrategy() : Strategy(nullptr), ObjectID(createdObjects)
+	{
+		createdObjects++;
+	}
+	TestStrategy(void* v) : Strategy(v), ObjectID(createdObjects)
 	{
 		createdObjects++;
 	}
@@ -54,6 +58,7 @@ private:
 class ShutDownStrategy : public Strategy
 {
 public:
+	using Strategy::Strategy;
     /** \brief metoda zamykająca serwer
      * \param data Controller* niech strategia wie jaki serwer zamknąc,
      * przez podanie wskaźnika na serwer do zamknięcia
@@ -72,6 +77,7 @@ public:
 class MessageFromAdminStrategy : public Strategy
 {
 public:
+	using Strategy::Strategy;
     /** \brief obsługa wiadomości od admina
      *
      * \param data message::Message*
@@ -111,6 +117,7 @@ public:
 class MessageFromAgentStrategy : public Strategy
 {
 public:
+	using Strategy::Strategy;
     /** \brief obsługa wiadomości od agenta
      *
      * \param data message::Message*
@@ -150,6 +157,7 @@ public:
 class AddAgentStrategy : public Strategy
 {
 public:
+	using Strategy::Strategy;
     /** \brief obsługa dodania agenta
      *
      * \param data message::Message*
