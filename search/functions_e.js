@@ -5,7 +5,6 @@ var searchData=
   ['setadminserver',['setAdminServer',['../classController.html#ad75c2e9788ecb8dba44650747076fe92',1,'Controller']]],
   ['setagentserver',['setAgentServer',['../classController.html#a84a816695c11ec17be45fc5def82c892',1,'Controller']]],
   ['setblockingqueue',['setBlockingQueue',['../classAdminServer.html#a3ecf7c2747f0413d3d58f7a9f4dd7ae2',1,'AdminServer::setBlockingQueue()'],['../classAgentServer.html#ab79904b49f1f80c51b9bfdbde2596d00',1,'AgentServer::setBlockingQueue()'],['../classModel.html#a61cb5a5695ff5a6555ceaec02b2a16b9',1,'Model::setBlockingQueue()']]],
-  ['setconnection',['setConnection',['../classSlave.html#a92d88c64b3de64989a97d0775c5bc07d',1,'Slave']]],
   ['setcontroller',['setController',['../classModel.html#a8e8771cbc09afdf630f4ca833d29b809',1,'Model']]],
   ['setlastcontact',['setLastContact',['../classSlave.html#a27056b83637658ce11e6db3d97d7d703',1,'Slave::setLastContact()'],['../classSlave.html#a94f84a326af17b5fbe5ec4f42e6ca189',1,'Slave::setLastContact(time_t val)']]],
   ['setmodel',['setModel',['../classController.html#a5f9d5a3fc40dd23ecf4b493f22ce94f0',1,'Controller']]],

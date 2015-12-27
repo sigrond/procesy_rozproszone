@@ -124,7 +124,7 @@ Diagram współpracy dla Slave:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSlave__coll__graph.png" border="0" usemap="#Slave_coll__map" alt="Collaboration graph"/></div>
 <map name="Slave_coll__map" id="Slave_coll__map">
-<area shape="rect" id="node2" href="classTask.html" title="Klasa odpowiadająca za przechowywanie informacji o zadaniu. " alt="" coords="5,329,84,421"/><area shape="rect" id="node3" href="classIp.html" title="Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. " alt="" coords="83,64,191,171"/><area shape="rect" id="node4" href="classConnection.html" title="Klasa realizująca połączenie LOTC. " alt="" coords="206,292,321,457"/><area shape="rect" id="node5" href="classSocket.html" title="{Socket\n|# sockfd\l|+ Socket()\l+ Socket()\l+ ~Socket()\l+ connect()\l+ bind()\l+ listen()\l+ accept()\l+ recv()\l+ send()\l+ getIp()\l+ close()\l}" alt="" coords="218,5,309,229"/></map>
+<area shape="rect" id="node2" href="classTask.html" title="Klasa odpowiadająca za przechowywanie informacji o zadaniu. " alt="" coords="241,763,319,855"/><area shape="rect" id="node3" href="classIp.html" title="Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. " alt="" coords="250,64,358,171"/><area shape="rect" id="node7" href="classIpv4.html" title="{Ipv4\n|&#45; address\l|+ Ipv4()\l+ getAddress()\l+ getAddressNum()\l+ operator\&lt;()\l+ operator==()\l&#45; isCorrect()\l}" alt="" coords="237,299,371,450"/><area shape="rect" id="node8" href="classConnection.html" title="Klasa realizująca połączenie LOTC. " alt="" coords="79,292,193,457"/><area shape="rect" id="node4" href="classConnectionManager.html" title="{ConnectionManager\n|&#45; map4Mutex\l&#45; connGuardsMutex\l|+ send()\l+ send()\l+ receive()\l+ receive()\l+ remove()\l+ remove()\l+ getInstance()\l&#45; ConnectionManager()\l&#45; ConnectionManager()\l&#45; operator=()\l&#45; ~ConnectionManager()\l}" alt="" coords="343,689,505,928"/><area shape="rect" id="node5" href="classSocket.html" title="{Socket\n|# sockfd\l|+ Socket()\l+ Socket()\l+ ~Socket()\l+ connect()\l+ bind()\l+ listen()\l+ accept()\l+ recv()\l+ send()\l+ getIp()\l+ close()\l}" alt="" coords="5,5,96,229"/><area shape="rect" id="node9" title="STL class. " alt="" coords="627,336,749,413"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -145,10 +145,6 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:aaa43497446e919ca73c564541af806bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7733aa198c2281b760030cd62915cab8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlave.html#a7733aa198c2281b760030cd62915cab8">setState</a> (int val)</td></tr>
 <tr class="separator:a7733aa198c2281b760030cd62915cab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a828d48eb753fb4fc45ec9c593f60f5fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConnection.html">Connection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlave.html#a828d48eb753fb4fc45ec9c593f60f5fb">getConnection</a> ()</td></tr>
-<tr class="separator:a828d48eb753fb4fc45ec9c593f60f5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92d88c64b3de64989a97d0775c5bc07d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlave.html#a92d88c64b3de64989a97d0775c5bc07d">setConnection</a> (<a class="el" href="classConnection.html">Connection</a> *val)</td></tr>
-<tr class="separator:a92d88c64b3de64989a97d0775c5bc07d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ea374477a37c09c2663c3d674e01c87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTask.html">Task</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlave.html#a0ea374477a37c09c2663c3d674e01c87">getTask</a> ()</td></tr>
 <tr class="separator:a0ea374477a37c09c2663c3d674e01c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac80dabc88a0b32745527fc3d5c5f76c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlave.html#ac80dabc88a0b32745527fc3d5c5f76c8">setTask</a> (<a class="el" href="classTask.html">Task</a> *val)</td></tr>
@@ -162,9 +158,8 @@ Atrybuty prywatne</h2></td></tr>
 <tr class="separator:a76c76dd7826c70d58071e1d45b561613"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad805a5c152d6fc50231a5859fb94c228"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlave.html#ad805a5c152d6fc50231a5859fb94c228">state</a></td></tr>
 <tr class="separator:ad805a5c152d6fc50231a5859fb94c228"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca025f5ce065f75a797d8a4ad859e408"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConnection.html">Connection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlave.html#aca025f5ce065f75a797d8a4ad859e408">connection</a></td></tr>
-<tr class="memdesc:aca025f5ce065f75a797d8a4ad859e408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Member variable "connection".  <a href="#aca025f5ce065f75a797d8a4ad859e408">Więcej...</a><br/></td></tr>
-<tr class="separator:aca025f5ce065f75a797d8a4ad859e408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afed47dcd87362e3c56de2213e63074e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConnectionManager.html">ConnectionManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlave.html#afed47dcd87362e3c56de2213e63074e8">connectionManager</a></td></tr>
+<tr class="separator:afed47dcd87362e3c56de2213e63074e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37f03302910768cddadafa3857caaa8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTask.html">Task</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlave.html#a37f03302910768cddadafa3857caaa8e">task</a></td></tr>
 <tr class="separator:a37f03302910768cddadafa3857caaa8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c5de67567bbc7859765e6a2e9b9cf38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlave.html#a4c5de67567bbc7859765e6a2e9b9cf38">removed</a></td></tr>
@@ -192,7 +187,7 @@ Atrybuty prywatne</h2></td></tr>
 
 <p>Definicja w linii <a class="el" href="Slave_8cpp_source.html#l00009">9</a> pliku <a class="el" href="Slave_8cpp_source.html">Slave.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Slave_8hpp_source.html#l00020">connection</a>, <a class="el" href="Slave_8hpp_source.html#l00022">removed</a>, <a class="el" href="Slave_8cpp_source.html#l00009">Slave()</a>, <a class="el" href="Slave_8hpp_source.html#l00017">slaveIP</a>, <a class="el" href="Slave_8hpp_source.html#l00019">state</a> i <a class="el" href="Slave_8hpp_source.html#l00021">task</a>.</p>
+<p>Odwołuje się do <a class="el" href="ConnectionManager_8hpp_source.html#l00085">ConnectionManager::connectionGuards</a>, <a class="el" href="Slave_8hpp_source.html#l00020">connectionManager</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00060">ConnectionManager::getInstance()</a>, <a class="el" href="Slave_8hpp_source.html#l00022">removed</a>, <a class="el" href="Slave_8cpp_source.html#l00009">Slave()</a>, <a class="el" href="Slave_8hpp_source.html#l00017">slaveIP</a>, <a class="el" href="Slave_8hpp_source.html#l00019">state</a> i <a class="el" href="Slave_8hpp_source.html#l00021">task</a>.</p>
 
 <p>Odwołania w <a class="el" href="Slave_8cpp_source.html#l00009">Slave()</a>.</p>
 
@@ -200,6 +195,8 @@ Atrybuty prywatne</h2></td></tr>
 Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSlave_a4a5fa6347b8a8504212fb9647fc5d21e_cgraph.png" border="0" usemap="#classSlave_a4a5fa6347b8a8504212fb9647fc5d21e_cgraph" alt=""/></div>
+<map name="classSlave_a4a5fa6347b8a8504212fb9647fc5d21e_cgraph" id="classSlave_a4a5fa6347b8a8504212fb9647fc5d21e_cgraph">
+<area shape="rect" id="node2" href="classConnectionManager.html#a32b75e2534c2de565fc316ff47109352" title="ConnectionManager::\lgetInstance" alt="" coords="145,22,291,63"/></map>
 </div>
 </p>
 
@@ -231,46 +228,6 @@ Oto graf wywoływań tej funkcji:</div>
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
-<a class="anchor" id="a828d48eb753fb4fc45ec9c593f60f5fb"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classConnection.html">Connection</a>* Slave::getConnection </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Access connection </p>
-<dl class="section return"><dt>Zwraca</dt><dd>The current value of connection </dd></dl>
-
-<p>Definicja w linii <a class="el" href="Slave_8hpp_source.html#l00058">58</a> pliku <a class="el" href="Slave_8hpp_source.html">Slave.hpp</a>.</p>
-
-<p>Odwołuje się do <a class="el" href="Slave_8hpp_source.html#l00020">connection</a>.</p>
-
-<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00062">AgentServer::connect()</a>.</p>
-
-<p><div class="dynheader">
-Oto graf wywoływań tej funkcji:</div>
-<div class="dyncontent">
-<div class="center"><img src="classSlave_a828d48eb753fb4fc45ec9c593f60f5fb_icgraph.png" border="0" usemap="#classSlave_a828d48eb753fb4fc45ec9c593f60f5fb_icgraph" alt=""/></div>
-<map name="classSlave_a828d48eb753fb4fc45ec9c593f60f5fb_icgraph" id="classSlave_a828d48eb753fb4fc45ec9c593f60f5fb_icgraph">
-<area shape="rect" id="node2" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd" title="AgentServer::connect" alt="" coords="197,5,344,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
 <a class="anchor" id="a70be968ad67b89b3998bf73bd93e19f7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -297,6 +254,17 @@ Oto graf wywoływań tej funkcji:</div>
 <p>Definicja w linii <a class="el" href="Slave_8hpp_source.html#l00034">34</a> pliku <a class="el" href="Slave_8hpp_source.html">Slave.hpp</a>.</p>
 
 <p>Odwołuje się do <a class="el" href="Slave_8hpp_source.html#l00017">slaveIP</a>.</p>
+
+<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00069">AgentServer::connect()</a> i <a class="el" href="AgentServer_8cpp_source.html#l00074">AgentServer::listen()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSlave_a70be968ad67b89b3998bf73bd93e19f7_icgraph.png" border="0" usemap="#classSlave_a70be968ad67b89b3998bf73bd93e19f7_icgraph" alt=""/></div>
+<map name="classSlave_a70be968ad67b89b3998bf73bd93e19f7_icgraph" id="classSlave_a70be968ad67b89b3998bf73bd93e19f7_icgraph">
+<area shape="rect" id="node2" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd" title="AgentServer::connect" alt="" coords="176,5,323,32"/><area shape="rect" id="node3" href="classAgentServer.html#a001e979f72cf3d360d424cea0df70165" title="AgentServer::listen" alt="" coords="184,56,315,83"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -349,47 +317,12 @@ Oto graf wywoływań tej funkcji:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Access task </p>
-<dl class="section return"><dt>Zwraca</dt><dd>The current value of task </dd></dl>
+<p>Access connection </p>
+<dl class="section return"><dt>Zwraca</dt><dd>The current value of connection </dd></dl>
 
-<p>Definicja w linii <a class="el" href="Slave_8hpp_source.html#l00066">66</a> pliku <a class="el" href="Slave_8hpp_source.html">Slave.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Slave_8hpp_source.html#l00058">58</a> pliku <a class="el" href="Slave_8hpp_source.html">Slave.hpp</a>.</p>
 
 <p>Odwołuje się do <a class="el" href="Slave_8hpp_source.html#l00021">task</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a92d88c64b3de64989a97d0775c5bc07d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Slave::setConnection </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classConnection.html">Connection</a> *&#160;</td>
-          <td class="paramname"><em>val</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Set connection </p>
-<dl class="params"><dt>Parametry</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">val</td><td>New value to set </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definicja w linii <a class="el" href="Slave_8hpp_source.html#l00062">62</a> pliku <a class="el" href="Slave_8hpp_source.html">Slave.hpp</a>.</p>
-
-<p>Odwołuje się do <a class="el" href="Slave_8hpp_source.html#l00020">connection</a>.</p>
 
 </div>
 </div>
@@ -552,14 +485,14 @@ Oto graf wywoływań tej funkcji:</div>
   </dd>
 </dl>
 
-<p>Definicja w linii <a class="el" href="Slave_8hpp_source.html#l00070">70</a> pliku <a class="el" href="Slave_8hpp_source.html">Slave.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Slave_8hpp_source.html#l00062">62</a> pliku <a class="el" href="Slave_8hpp_source.html">Slave.hpp</a>.</p>
 
 <p>Odwołuje się do <a class="el" href="Slave_8hpp_source.html#l00021">task</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
-<a class="anchor" id="aca025f5ce065f75a797d8a4ad859e408"></a>
+<a class="anchor" id="afed47dcd87362e3c56de2213e63074e8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -567,7 +500,7 @@ Oto graf wywoływań tej funkcji:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classConnection.html">Connection</a>* Slave::connection</td>
+          <td class="memname"><a class="el" href="classConnectionManager.html">ConnectionManager</a>* Slave::connectionManager</td>
         </tr>
       </table>
   </td>
@@ -577,11 +510,9 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Member variable "connection". </p>
-
 <p>Definicja w linii <a class="el" href="Slave_8hpp_source.html#l00020">20</a> pliku <a class="el" href="Slave_8hpp_source.html">Slave.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Slave_8hpp_source.html#l00058">getConnection()</a>, <a class="el" href="Slave_8hpp_source.html#l00062">setConnection()</a> i <a class="el" href="Slave_8cpp_source.html#l00009">Slave()</a>.</p>
+<p>Odwołania w <a class="el" href="Slave_8cpp_source.html#l00009">Slave()</a>.</p>
 
 </div>
 </div>
@@ -704,7 +635,7 @@ Oto graf wywoływań tej funkcji:</div>
 
 <p>Definicja w linii <a class="el" href="Slave_8hpp_source.html#l00021">21</a> pliku <a class="el" href="Slave_8hpp_source.html">Slave.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Slave_8hpp_source.html#l00066">getTask()</a>, <a class="el" href="Slave_8hpp_source.html#l00070">setTask()</a> i <a class="el" href="Slave_8cpp_source.html#l00009">Slave()</a>.</p>
+<p>Odwołania w <a class="el" href="Slave_8hpp_source.html#l00058">getTask()</a>, <a class="el" href="Slave_8hpp_source.html#l00062">setTask()</a> i <a class="el" href="Slave_8cpp_source.html#l00009">Slave()</a>.</p>
 
 </div>
 </div>
@@ -718,7 +649,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classSlave.html">Slave</a></li>
-    <li class="footer">Wygenerowano So, 26 gru 2015 11:53:43 dla LOTC programem
+    <li class="footer">Wygenerowano N, 27 gru 2015 16:47:26 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

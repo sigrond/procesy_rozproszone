@@ -14,6 +14,7 @@ var hierarchy =
       [ "AgentServerException", "structAgentServerException.html", null ],
       [ "BadIpException", "classBadIpException.html", null ],
       [ "ControllerException", "structControllerException.html", null ],
+      [ "ModelException", "structModelException.html", null ],
       [ "SockEx", "classSockEx.html", [
         [ "AcceptSockEx", "classAcceptSockEx.html", null ],
         [ "BindSockEx", "classBindSockEx.html", null ],
@@ -47,6 +48,7 @@ var hierarchy =
       [ "SocketIp6", "classSocketIp6.html", null ]
     ] ],
     [ "Strategy", "classStrategy.html", [
+      [ "AddAgentStrategy", "classAddAgentStrategy.html", null ],
       [ "MessageFromAdminStrategy", "classMessageFromAdminStrategy.html", null ],
       [ "MessageFromAgentStrategy", "classMessageFromAgentStrategy.html", null ],
       [ "ShutDownStrategy", "classShutDownStrategy.html", null ],

@@ -1,6 +1,7 @@
 var classModel =
 [
     [ "Model", "classModel.html#ae3b375de5f6df4faf74a95d64748e048", null ],
+    [ "pushAddAgent", "classModel.html#a290de9af6cb1f25c6ec6c4c2be77606f", null ],
     [ "pushTestEvents", "classModel.html#ac9ee04aadbcefc4957321d5f0ad60c5e", null ],
     [ "setBlockingQueue", "classModel.html#a61cb5a5695ff5a6555ceaec02b2a16b9", null ],
     [ "setController", "classModel.html#a8e8771cbc09afdf630f4ca833d29b809", null ],

@@ -77,7 +77,9 @@ var files =
       [ "TestMessage", "classTestMessage.html", "classTestMessage" ]
     ] ],
     [ "MessageCodes.hpp", "MessageCodes_8hpp.html", "MessageCodes_8hpp" ],
-    [ "Model.cpp", "Model_8cpp.html", null ],
+    [ "Model.cpp", "Model_8cpp.html", [
+      [ "ModelException", "structModelException.html", "structModelException" ]
+    ] ],
     [ "Model.hpp", "Model_8hpp.html", [
       [ "Model", "classModel.html", "classModel" ]
     ] ],
@@ -106,7 +108,8 @@ var files =
       [ "TestStrategy", "classTestStrategy.html", "classTestStrategy" ],
       [ "ShutDownStrategy", "classShutDownStrategy.html", "classShutDownStrategy" ],
       [ "MessageFromAdminStrategy", "classMessageFromAdminStrategy.html", "classMessageFromAdminStrategy" ],
-      [ "MessageFromAgentStrategy", "classMessageFromAgentStrategy.html", "classMessageFromAgentStrategy" ]
+      [ "MessageFromAgentStrategy", "classMessageFromAgentStrategy.html", "classMessageFromAgentStrategy" ],
+      [ "AddAgentStrategy", "classAddAgentStrategy.html", "classAddAgentStrategy" ]
     ] ],
     [ "Strategy.hpp", "Strategy_8hpp.html", [
       [ "Strategy", "classStrategy.html", "classStrategy" ]

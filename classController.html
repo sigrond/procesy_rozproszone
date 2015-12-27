@@ -111,6 +111,7 @@ $(document).ready(function(){initNavTree('classController.html','');});
 <a href="#pub-attribs">Atrybuty publiczne</a> &#124;
 <a href="#pri-methods">Metody prywatne</a> &#124;
 <a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="#friends">Przyjaciele</a> &#124;
 <a href="classController-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
 <div class="title">Dokumentacja klasy Controller</div>  </div>
@@ -126,7 +127,7 @@ Diagram współpracy dla Controller:</div>
 <div class="dyncontent">
 <div class="center"><img src="classController__coll__graph.png" border="0" usemap="#Controller_coll__map" alt="Collaboration graph"/></div>
 <map name="Controller_coll__map" id="Controller_coll__map">
-<area shape="rect" id="node2" href="classBlockingQueue.html" title="{BlockingQueue\&lt; Event * \&gt;\n|&#45; m\l&#45; c\l|+ BlockingQueue()\l+ ~BlockingQueue()\l+ push_back()\l+ pop_front()\l}" alt="" coords="144,913,319,1049"/><area shape="rect" id="node7" href="classModel.html" title="klasa modelu " alt="" coords="157,1141,305,1263"/><area shape="rect" id="node12" href="classAgentServer.html" title="klasa serwera agenta " alt="" coords="329,1112,477,1292"/><area shape="rect" id="node20" href="classAdminServer.html" title="Klasa serwera administratora. Należy się spodziewać raczej asynchronicznego działania. " alt="" coords="745,1112,893,1292"/><area shape="rect" id="node3" title="STL class. " alt="" coords="5,678,153,755"/><area shape="rect" id="node6" title="STL class. " alt="" coords="169,336,283,413"/><area shape="rect" id="node10" title="STL class. " alt="" coords="308,336,429,413"/><area shape="rect" id="node19" title="STL class. " alt="" coords="564,481,677,559"/><area shape="rect" id="node5" href="classBlockingQueue.html" title="Kolejka blokująca. Dziedziczy po queue. Żeby nie ryzykować użycia niezabezpieczonych wątkowo dziedzic..." alt="" coords="178,641,319,792"/><area shape="rect" id="node9" href="classStrategy.html" title="Wirtualna klasa strategii obsługi zdarzenia. Klasę należy zkonkretyzować dziedzicząc po niej np..." alt="" coords="453,336,529,413"/><area shape="rect" id="node14" href="classSlave.html" title="Klasa odpowiedzialna za przechowywanie informacji o agencie. " alt="" coords="714,583,845,851"/><area shape="rect" id="node15" href="classTask.html" title="Klasa odpowiadająca za przechowywanie informacji o zadaniu. " alt="" coords="772,329,851,421"/><area shape="rect" id="node16" href="classIp.html" title="Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. " alt="" coords="768,64,876,171"/><area shape="rect" id="node17" href="classConnection.html" title="Klasa realizująca połączenie LOTC. " alt="" coords="875,292,990,457"/><area shape="rect" id="node18" href="classSocket.html" title="{Socket\n|# sockfd\l|+ Socket()\l+ Socket()\l+ ~Socket()\l+ connect()\l+ bind()\l+ listen()\l+ accept()\l+ recv()\l+ send()\l+ getIp()\l+ close()\l}" alt="" coords="901,5,991,229"/></map>
+<area shape="rect" id="node2" href="classBlockingQueue.html" title="{BlockingQueue\&lt; Event * \&gt;\n|&#45; m\l&#45; c\l|+ BlockingQueue()\l+ ~BlockingQueue()\l+ push_back()\l+ pop_front()\l}" alt="" coords="1253,847,1427,983"/><area shape="rect" id="node7" href="classModel.html" title="klasa modelu " alt="" coords="1285,1360,1433,1496"/><area shape="rect" id="node12" href="classAgentServer.html" title="klasa serwera agenta " alt="" coords="775,1660,923,1840"/><area shape="rect" id="node25" href="classAdminServer.html" title="Klasa serwera administratora. Należy się spodziewać raczej asynchronicznego działania. " alt="" coords="894,1127,1042,1307"/><area shape="rect" id="node3" title="STL class. " alt="" coords="1435,619,1583,697"/><area shape="rect" id="node6" title="STL class. " alt="" coords="1489,336,1604,413"/><area shape="rect" id="node10" title="STL class. " alt="" coords="926,336,1047,413"/><area shape="rect" id="node24" title="STL class. " alt="" coords="1301,481,1414,559"/><area shape="rect" id="node5" href="classBlockingQueue.html" title="Kolejka blokująca. Dziedziczy po queue. Żeby nie ryzykować użycia niezabezpieczonych wątkowo dziedzic..." alt="" coords="1269,583,1411,733"/><area shape="rect" id="node9" href="classStrategy.html" title="Wirtualna klasa strategii obsługi zdarzenia. Klasę należy zkonkretyzować dziedzicząc po niej np..." alt="" coords="1389,336,1465,413"/><area shape="rect" id="node14" href="classSlave.html" title="Klasa odpowiedzialna za przechowywanie informacji o agencie. " alt="" coords="599,1097,729,1336"/><area shape="rect" id="node15" href="classTask.html" title="Klasa odpowiadająca za przechowywanie informacji o zadaniu. " alt="" coords="686,869,765,961"/><area shape="rect" id="node16" href="classIp.html" title="Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. " alt="" coords="483,64,591,171"/><area shape="rect" id="node20" href="classIpv4.html" title="{Ipv4\n|&#45; address\l|+ Ipv4()\l+ getAddress()\l+ getAddressNum()\l+ operator\&lt;()\l+ operator==()\l&#45; isCorrect()\l}" alt="" coords="399,299,534,450"/><area shape="rect" id="node21" href="classConnection.html" title="Klasa realizująca połączenie LOTC. " alt="" coords="260,292,375,457"/><area shape="rect" id="node17" href="classConnectionManager.html" title="{ConnectionManager\n|&#45; map4Mutex\l&#45; connGuardsMutex\l|+ send()\l+ send()\l+ receive()\l+ receive()\l+ remove()\l+ remove()\l+ getInstance()\l&#45; ConnectionManager()\l&#45; ConnectionManager()\l&#45; operator=()\l&#45; ~ConnectionManager()\l}" alt="" coords="382,796,543,1035"/><area shape="rect" id="node18" href="classSocket.html" title="{Socket\n|# sockfd\l|+ Socket()\l+ Socket()\l+ ~Socket()\l+ connect()\l+ bind()\l+ listen()\l+ accept()\l+ recv()\l+ send()\l+ getIp()\l+ close()\l}" alt="" coords="71,5,161,229"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -176,6 +177,11 @@ Atrybuty prywatne</h2></td></tr>
 <tr class="separator:acaeb01295f0462900ad0421149b87a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab67686706e7df70a768c111193e5f0eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classController.html#ab67686706e7df70a768c111193e5f0eb">shutDownServer</a></td></tr>
 <tr class="separator:ab67686706e7df70a768c111193e5f0eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Przyjaciele</h2></td></tr>
+<tr class="memitem:a7b60a1ac92fa8023a6b5588523d1559a"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classController.html#a7b60a1ac92fa8023a6b5588523d1559a">AddAgentStrategy</a></td></tr>
+<tr class="separator:a7b60a1ac92fa8023a6b5588523d1559a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>klasa kontrolera </p>
@@ -197,7 +203,7 @@ Atrybuty prywatne</h2></td></tr>
 
 <p>Definicja w linii <a class="el" href="Controller_8cpp_source.html#l00016">16</a> pliku <a class="el" href="Controller_8cpp_source.html">Controller.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Controller_8hpp_source.html#l00041">adminServer</a>, <a class="el" href="Controller_8hpp_source.html#l00042">agentServer</a>, <a class="el" href="Controller_8hpp_source.html#l00033">alive</a>, <a class="el" href="Controller_8hpp_source.html#l00044">blockingQueue</a>, <a class="el" href="Controller_8cpp_source.html#l00016">Controller()</a>, <a class="el" href="Controller_8hpp_source.html#l00043">model</a> i <a class="el" href="Controller_8hpp_source.html#l00051">shutDownServer</a>.</p>
+<p>Odwołuje się do <a class="el" href="Controller_8hpp_source.html#l00042">adminServer</a>, <a class="el" href="Controller_8hpp_source.html#l00043">agentServer</a>, <a class="el" href="Controller_8hpp_source.html#l00033">alive</a>, <a class="el" href="Controller_8hpp_source.html#l00045">blockingQueue</a>, <a class="el" href="Controller_8cpp_source.html#l00016">Controller()</a>, <a class="el" href="Controller_8hpp_source.html#l00044">model</a> i <a class="el" href="Controller_8hpp_source.html#l00052">shutDownServer</a>.</p>
 
 <p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00016">Controller()</a> i <a class="el" href="application_2server_2server_8cpp_source.html#l00023">main()</a>.</p>
 
@@ -234,7 +240,7 @@ Oto graf wywoływań tej funkcji:</div>
 
 <p>Definicja w linii <a class="el" href="Controller_8cpp_source.html#l00030">30</a> pliku <a class="el" href="Controller_8cpp_source.html">Controller.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Controller_8hpp_source.html#l00041">adminServer</a>, <a class="el" href="Controller_8hpp_source.html#l00042">agentServer</a>, <a class="el" href="Controller_8hpp_source.html#l00044">blockingQueue</a> i <a class="el" href="Controller_8hpp_source.html#l00043">model</a>.</p>
+<p>Odwołuje się do <a class="el" href="Controller_8hpp_source.html#l00042">adminServer</a>, <a class="el" href="Controller_8hpp_source.html#l00043">agentServer</a>, <a class="el" href="Controller_8hpp_source.html#l00045">blockingQueue</a> i <a class="el" href="Controller_8hpp_source.html#l00044">model</a>.</p>
 
 </div>
 </div>
@@ -269,7 +275,7 @@ Oto graf wywoływań tej funkcji:</div>
   </dd>
 </dl>
 <p>&lt;</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Do zrobienia:</a></b></dt><dd>wstawić więcej strategii, ustalić w którym pliku powinny znajdować się strategie i je napisać </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Do zrobienia:</a></b></dt><dd>wstawić więcej strategii, ustalić w którym pliku powinny znajdować się strategie i je napisać </dd></dl>
 
 <p>Definicja w linii <a class="el" href="Controller_8cpp_source.html#l00125">125</a> pliku <a class="el" href="Controller_8cpp_source.html">Controller.cpp</a>.</p>
 
@@ -300,9 +306,9 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Controller_8cpp_source.html#l00154">154</a> pliku <a class="el" href="Controller_8cpp_source.html">Controller.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Controller_8cpp_source.html#l00155">155</a> pliku <a class="el" href="Controller_8cpp_source.html">Controller.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Controller_8hpp_source.html#l00041">adminServer</a>.</p>
+<p>Odwołuje się do <a class="el" href="Controller_8hpp_source.html#l00042">adminServer</a>.</p>
 
 <p>Odwołania w <a class="el" href="application_2server_2server_8cpp_source.html#l00023">main()</a>.</p>
 
@@ -331,9 +337,9 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Controller_8cpp_source.html#l00159">159</a> pliku <a class="el" href="Controller_8cpp_source.html">Controller.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Controller_8cpp_source.html#l00160">160</a> pliku <a class="el" href="Controller_8cpp_source.html">Controller.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Controller_8hpp_source.html#l00042">agentServer</a>.</p>
+<p>Odwołuje się do <a class="el" href="Controller_8hpp_source.html#l00043">agentServer</a>.</p>
 
 <p>Odwołania w <a class="el" href="application_2server_2server_8cpp_source.html#l00023">main()</a>.</p>
 
@@ -362,9 +368,9 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Controller_8cpp_source.html#l00164">164</a> pliku <a class="el" href="Controller_8cpp_source.html">Controller.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Controller_8cpp_source.html#l00165">165</a> pliku <a class="el" href="Controller_8cpp_source.html">Controller.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Controller_8hpp_source.html#l00043">model</a>.</p>
+<p>Odwołuje się do <a class="el" href="Controller_8hpp_source.html#l00044">model</a>.</p>
 
 <p>Odwołania w <a class="el" href="application_2server_2server_8cpp_source.html#l00023">main()</a>.</p>
 
@@ -401,9 +407,9 @@ Oto graf wywoływań tej funkcji:</div>
   </dd>
 </dl>
 
-<p>Definicja w linii <a class="el" href="Controller_8cpp_source.html#l00169">169</a> pliku <a class="el" href="Controller_8cpp_source.html">Controller.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Controller_8cpp_source.html#l00170">170</a> pliku <a class="el" href="Controller_8cpp_source.html">Controller.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Controller_8hpp_source.html#l00041">adminServer</a>, <a class="el" href="Controller_8hpp_source.html#l00042">agentServer</a>, <a class="el" href="Controller_8hpp_source.html#l00044">blockingQueue</a>, <a class="el" href="Controller_8hpp_source.html#l00043">model</a>, <a class="el" href="BlockingQueue_8hpp_source.html#l00035">BlockingQueue&lt; T &gt;::q</a>, <a class="el" href="Model_8cpp_source.html#l00016">Model::setBlockingQueue()</a>, <a class="el" href="AgentServer_8cpp_source.html#l00074">AgentServer::setBlockingQueue()</a>, <a class="el" href="AdminServer_8cpp_source.html#l00090">AdminServer::setBlockingQueue()</a> i <a class="el" href="Model_8cpp_source.html#l00021">Model::setController()</a>.</p>
+<p>Odwołuje się do <a class="el" href="Controller_8hpp_source.html#l00042">adminServer</a>, <a class="el" href="Controller_8hpp_source.html#l00043">agentServer</a>, <a class="el" href="Controller_8hpp_source.html#l00045">blockingQueue</a>, <a class="el" href="Controller_8hpp_source.html#l00044">model</a>, <a class="el" href="BlockingQueue_8hpp_source.html#l00035">BlockingQueue&lt; T &gt;::q</a>, <a class="el" href="Model_8cpp_source.html#l00044">Model::setBlockingQueue()</a>, <a class="el" href="AgentServer_8cpp_source.html#l00082">AgentServer::setBlockingQueue()</a>, <a class="el" href="AdminServer_8cpp_source.html#l00089">AdminServer::setBlockingQueue()</a> i <a class="el" href="Model_8cpp_source.html#l00049">Model::setController()</a>.</p>
 
 <p>Odwołania w <a class="el" href="application_2server_2server_8cpp_source.html#l00023">main()</a>.</p>
 
@@ -450,11 +456,11 @@ Oto graf wywoływań tej funkcji:</div>
 </dl>
 <p>&lt; jeśli chcielibyśmy wielokrotnie zamykać i uruchamiać srwer</p>
 <p>&lt;</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Do zrobienia:</a></b></dt><dd>uruchomić adminServer i agentServer, timery w modelu i inne </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Do zrobienia:</a></b></dt><dd>uruchomić adminServer i agentServer, timery w modelu i inne </dd></dl>
 
 <p>Definicja w linii <a class="el" href="Controller_8cpp_source.html#l00081">81</a> pliku <a class="el" href="Controller_8cpp_source.html">Controller.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Controller_8hpp_source.html#l00041">adminServer</a>, <a class="el" href="Controller_8hpp_source.html#l00042">agentServer</a>, <a class="el" href="Controller_8hpp_source.html#l00033">alive</a>, <a class="el" href="Controller_8hpp_source.html#l00044">blockingQueue</a>, <a class="el" href="Controller_8cpp_source.html#l00125">fillStrategyMap()</a>, <a class="el" href="Controller_8hpp_source.html#l00043">model</a>, <a class="el" href="BlockingQueue_8cpp_source.html#l00036">BlockingQueue&lt; T &gt;::pop_front()</a> i <a class="el" href="Controller_8hpp_source.html#l00051">shutDownServer</a>.</p>
+<p>Odwołuje się do <a class="el" href="Controller_8hpp_source.html#l00042">adminServer</a>, <a class="el" href="Controller_8hpp_source.html#l00043">agentServer</a>, <a class="el" href="Controller_8hpp_source.html#l00033">alive</a>, <a class="el" href="Controller_8hpp_source.html#l00045">blockingQueue</a>, <a class="el" href="Controller_8cpp_source.html#l00125">fillStrategyMap()</a>, <a class="el" href="Controller_8hpp_source.html#l00044">model</a>, <a class="el" href="BlockingQueue_8cpp_source.html#l00036">BlockingQueue&lt; T &gt;::pop_front()</a> i <a class="el" href="Controller_8hpp_source.html#l00052">shutDownServer</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
@@ -482,11 +488,11 @@ Oto graf wywołań dla tej funkcji:</div>
 
 <p>Metoda ustawia zmienną prywatną shutDownServer na zamykanie serwera. Użycie metody poza strategią obsługi zadań może prowadzić do zakleszcznia! Metoda nie potrafi samodzielnie zamknąć serwera, bo nie przerywa oczekiwania na metodzie BlockingQueue::popfront() i nie przerwie pętli przetważania, dopuki wątek oczekuje na pojawienie się elementu w kolejce. EDIT: Już powinna sobie dać radę z kolejką blokującą. </p>
 
-<p>Definicja w linii <a class="el" href="Controller_8cpp_source.html#l00145">145</a> pliku <a class="el" href="Controller_8cpp_source.html">Controller.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Controller_8cpp_source.html#l00146">146</a> pliku <a class="el" href="Controller_8cpp_source.html">Controller.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Controller_8hpp_source.html#l00044">blockingQueue</a>, <a class="el" href="Event_8hpp_source.html#l00035">Event::Event()</a>, <a class="el" href="BlockingQueue_8cpp_source.html#l00027">BlockingQueue&lt; T &gt;::push_back()</a>, <a class="el" href="Event_8hpp_source.html#l00014">SHUT_DOWN</a> i <a class="el" href="Controller_8hpp_source.html#l00051">shutDownServer</a>.</p>
+<p>Odwołuje się do <a class="el" href="Controller_8hpp_source.html#l00045">blockingQueue</a>, <a class="el" href="Event_8hpp_source.html#l00036">Event::Event()</a>, <a class="el" href="BlockingQueue_8cpp_source.html#l00027">BlockingQueue&lt; T &gt;::push_back()</a>, <a class="el" href="Event_8hpp_source.html#l00014">SHUT_DOWN</a> i <a class="el" href="Controller_8hpp_source.html#l00052">shutDownServer</a>.</p>
 
-<p>Odwołania w <a class="el" href="Strategies_8hpp_source.html#l00060">ShutDownStrategy::doJob()</a>.</p>
+<p>Odwołania w <a class="el" href="Strategies_8hpp_source.html#l00063">ShutDownStrategy::doJob()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
@@ -505,6 +511,29 @@ Oto graf wywoływań tej funkcji:</div>
 <area shape="rect" id="node2" href="classShutDownStrategy.html#aeeee49a347dbfe9c1b861f9dc22fe1b3" title="metoda zamykająca serwer " alt="" coords="233,5,405,32"/></map>
 </div>
 </p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja przyjaciół i funkcji związanych</h2>
+<a class="anchor" id="a7b60a1ac92fa8023a6b5588523d1559a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classAddAgentStrategy.html">AddAgentStrategy</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="Controller_8hpp_source.html#l00041">41</a> pliku <a class="el" href="Controller_8hpp_source.html">Controller.hpp</a>.</p>
 
 </div>
 </div>
@@ -527,9 +556,9 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Controller_8hpp_source.html#l00041">41</a> pliku <a class="el" href="Controller_8hpp_source.html">Controller.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Controller_8hpp_source.html#l00042">42</a> pliku <a class="el" href="Controller_8hpp_source.html">Controller.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00016">Controller()</a>, <a class="el" href="Controller_8cpp_source.html#l00154">setAdminServer()</a>, <a class="el" href="Controller_8cpp_source.html#l00169">setup()</a>, <a class="el" href="Controller_8cpp_source.html#l00081">start()</a> i <a class="el" href="Controller_8cpp_source.html#l00030">~Controller()</a>.</p>
+<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00016">Controller()</a>, <a class="el" href="Controller_8cpp_source.html#l00155">setAdminServer()</a>, <a class="el" href="Controller_8cpp_source.html#l00170">setup()</a>, <a class="el" href="Controller_8cpp_source.html#l00081">start()</a> i <a class="el" href="Controller_8cpp_source.html#l00030">~Controller()</a>.</p>
 
 </div>
 </div>
@@ -551,9 +580,9 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Controller_8hpp_source.html#l00042">42</a> pliku <a class="el" href="Controller_8hpp_source.html">Controller.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Controller_8hpp_source.html#l00043">43</a> pliku <a class="el" href="Controller_8hpp_source.html">Controller.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00016">Controller()</a>, <a class="el" href="Controller_8cpp_source.html#l00159">setAgentServer()</a>, <a class="el" href="Controller_8cpp_source.html#l00169">setup()</a>, <a class="el" href="Controller_8cpp_source.html#l00081">start()</a> i <a class="el" href="Controller_8cpp_source.html#l00030">~Controller()</a>.</p>
+<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00016">Controller()</a>, <a class="el" href="Controller_8cpp_source.html#l00160">setAgentServer()</a>, <a class="el" href="Controller_8cpp_source.html#l00170">setup()</a>, <a class="el" href="Controller_8cpp_source.html#l00081">start()</a> i <a class="el" href="Controller_8cpp_source.html#l00030">~Controller()</a>.</p>
 
 </div>
 </div>
@@ -592,9 +621,9 @@ Oto graf wywoływań tej funkcji:</div>
 </div><div class="memdoc">
 <p>kolejka blokująca na której pojawiają się zdarzenia do obsłużenia </p>
 
-<p>Definicja w linii <a class="el" href="Controller_8hpp_source.html#l00044">44</a> pliku <a class="el" href="Controller_8hpp_source.html">Controller.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Controller_8hpp_source.html#l00045">45</a> pliku <a class="el" href="Controller_8hpp_source.html">Controller.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00016">Controller()</a>, <a class="el" href="Controller_8cpp_source.html#l00169">setup()</a>, <a class="el" href="Controller_8cpp_source.html#l00081">start()</a>, <a class="el" href="Controller_8cpp_source.html#l00145">triggerShutDown()</a> i <a class="el" href="Controller_8cpp_source.html#l00030">~Controller()</a>.</p>
+<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00016">Controller()</a>, <a class="el" href="Controller_8cpp_source.html#l00170">setup()</a>, <a class="el" href="Controller_8cpp_source.html#l00081">start()</a>, <a class="el" href="Controller_8cpp_source.html#l00146">triggerShutDown()</a> i <a class="el" href="Controller_8cpp_source.html#l00030">~Controller()</a>.</p>
 
 </div>
 </div>
@@ -616,9 +645,9 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Controller_8hpp_source.html#l00043">43</a> pliku <a class="el" href="Controller_8hpp_source.html">Controller.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Controller_8hpp_source.html#l00044">44</a> pliku <a class="el" href="Controller_8hpp_source.html">Controller.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00016">Controller()</a>, <a class="el" href="Controller_8cpp_source.html#l00164">setModel()</a>, <a class="el" href="Controller_8cpp_source.html#l00169">setup()</a>, <a class="el" href="Controller_8cpp_source.html#l00081">start()</a> i <a class="el" href="Controller_8cpp_source.html#l00030">~Controller()</a>.</p>
+<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00016">Controller()</a>, <a class="el" href="Controller_8cpp_source.html#l00165">setModel()</a>, <a class="el" href="Controller_8cpp_source.html#l00170">setup()</a>, <a class="el" href="Controller_8cpp_source.html#l00081">start()</a> i <a class="el" href="Controller_8cpp_source.html#l00030">~Controller()</a>.</p>
 
 </div>
 </div>
@@ -640,9 +669,9 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Controller_8hpp_source.html#l00051">51</a> pliku <a class="el" href="Controller_8hpp_source.html">Controller.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Controller_8hpp_source.html#l00052">52</a> pliku <a class="el" href="Controller_8hpp_source.html">Controller.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00016">Controller()</a>, <a class="el" href="Controller_8cpp_source.html#l00081">start()</a> i <a class="el" href="Controller_8cpp_source.html#l00145">triggerShutDown()</a>.</p>
+<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00016">Controller()</a>, <a class="el" href="Controller_8cpp_source.html#l00081">start()</a> i <a class="el" href="Controller_8cpp_source.html#l00146">triggerShutDown()</a>.</p>
 
 </div>
 </div>
@@ -665,9 +694,9 @@ Oto graf wywoływań tej funkcji:</div>
 </div><div class="memdoc">
 <p>mapa strategii pozwalająca zdecydować jak obsłużyć dany typ zdarzenia </p>
 
-<p>Definicja w linii <a class="el" href="Controller_8hpp_source.html#l00045">45</a> pliku <a class="el" href="Controller_8hpp_source.html">Controller.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Controller_8hpp_source.html#l00046">46</a> pliku <a class="el" href="Controller_8hpp_source.html">Controller.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Strategies_8hpp_source.html#l00060">ShutDownStrategy::doJob()</a> i <a class="el" href="application_2server_2server_8cpp_source.html#l00023">main()</a>.</p>
+<p>Odwołania w <a class="el" href="Strategies_8hpp_source.html#l00063">ShutDownStrategy::doJob()</a> i <a class="el" href="application_2server_2server_8cpp_source.html#l00023">main()</a>.</p>
 
 </div>
 </div>
@@ -681,7 +710,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classController.html">Controller</a></li>
-    <li class="footer">Wygenerowano So, 26 gru 2015 11:53:42 dla LOTC programem
+    <li class="footer">Wygenerowano N, 27 gru 2015 16:47:24 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

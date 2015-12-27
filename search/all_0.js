@@ -4,6 +4,8 @@ var searchData=
   ['acceptsockex',['AcceptSockEx',['../classAcceptSockEx.html',1,'AcceptSockEx'],['../classAcceptSockEx.html#a0c5bc1b55979935f5c72cb64c5543884',1,'AcceptSockEx::AcceptSockEx()']]],
   ['ack',['ACK',['../namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063a0fc437bc317835cad5faafc12a83fad5',1,'message']]],
   ['add',['ADD',['../classTestMessage.html#af8a868ce511495fe4020f7a5b380112ca167e1fd3adc4950b75c6f93ef2dabbb0',1,'TestMessage']]],
+  ['add_5fagent',['ADD_AGENT',['../Event_8hpp.html#a2628ea8d12e8b2563c32f05dc7fff6faa87b42512151fcd5551a4ba619cde2c79',1,'Event.hpp']]],
+  ['addagentstrategy',['AddAgentStrategy',['../classAddAgentStrategy.html',1,'AddAgentStrategy'],['../classController.html#a7b60a1ac92fa8023a6b5588523d1559a',1,'Controller::AddAgentStrategy()']]],
   ['address',['address',['../classIpv4.html#a3b23c000faa4dd3f1101709ce48b3139',1,'Ipv4']]],
   ['addressnumbers',['addressNumbers',['../classIpv6.html#ab382a20b835bda75cf3f14ade110a963',1,'Ipv6']]],
   ['addslave',['addSlave',['../classAgentServer.html#a57d551fc559b7800a697a84e2a8e4cf7',1,'AgentServer']]],
@@ -24,12 +26,12 @@ var searchData=
   ['autoversion',['AutoVersion',['../namespaceAutoVersion.html',1,'']]],
   ['awaitconnections',['awaitConnections',['../classConnectionManager.html#a0356e21a4b8c9cb057224466de84606d',1,'ConnectionManager::awaitConnections()'],['../ConnectionManager_8cpp.html#a0356e21a4b8c9cb057224466de84606d',1,'awaitConnections():&#160;ConnectionManager.cpp']]],
   ['client_2ecpp',['client.cpp',['../application_2protocol_2client_8cpp.html',1,'']]],
-  ['makefile',['makefile',['../application_2protocol_2makefile.html',1,'']]],
   ['makefile',['makefile',['../application_2server_2makefile.html',1,'']]],
+  ['makefile',['makefile',['../application_2protocol_2makefile.html',1,'']]],
   ['aplikacja_20testowa_20dla_20pluginu',['Aplikacja testowa dla pluginu',['../md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_wireshark_test_protocol_application_readme.html',1,'']]],
   ['message_2ecpp',['Message.cpp',['../application_2protocol_2Message_8cpp.html',1,'']]],
   ['message_2ehpp',['Message.hpp',['../application_2protocol_2Message_8hpp.html',1,'']]],
   ['readme_2emd',['readme.md',['../application_2protocol_2readme_8md.html',1,'']]],
-  ['server_2ecpp',['server.cpp',['../application_2protocol_2server_8cpp.html',1,'']]],
-  ['server_2ecpp',['server.cpp',['../application_2server_2server_8cpp.html',1,'']]]
+  ['server_2ecpp',['server.cpp',['../application_2server_2server_8cpp.html',1,'']]],
+  ['server_2ecpp',['server.cpp',['../application_2protocol_2server_8cpp.html',1,'']]]
 ];

@@ -8,7 +8,6 @@ var searchData=
   ['setadminserver',['setAdminServer',['../classController.html#ad75c2e9788ecb8dba44650747076fe92',1,'Controller']]],
   ['setagentserver',['setAgentServer',['../classController.html#a84a816695c11ec17be45fc5def82c892',1,'Controller']]],
   ['setblockingqueue',['setBlockingQueue',['../classAdminServer.html#a3ecf7c2747f0413d3d58f7a9f4dd7ae2',1,'AdminServer::setBlockingQueue()'],['../classAgentServer.html#ab79904b49f1f80c51b9bfdbde2596d00',1,'AgentServer::setBlockingQueue()'],['../classModel.html#a61cb5a5695ff5a6555ceaec02b2a16b9',1,'Model::setBlockingQueue()']]],
-  ['setconnection',['setConnection',['../classSlave.html#a92d88c64b3de64989a97d0775c5bc07d',1,'Slave']]],
   ['setcontroller',['setController',['../classModel.html#a8e8771cbc09afdf630f4ca833d29b809',1,'Model']]],
   ['setlastcontact',['setLastContact',['../classSlave.html#a27056b83637658ce11e6db3d97d7d703',1,'Slave::setLastContact()'],['../classSlave.html#a94f84a326af17b5fbe5ec4f42e6ca189',1,'Slave::setLastContact(time_t val)']]],
   ['setmodel',['setModel',['../classController.html#a5f9d5a3fc40dd23ecf4b493f22ce94f0',1,'Controller']]],
@@ -25,7 +24,7 @@ var searchData=
   ['slave_2ehpp',['Slave.hpp',['../Slave_8hpp.html',1,'']]],
   ['slaveip',['slaveIP',['../classSlave.html#a19d385860a1b9743db1374e0cdf2e9f2',1,'Slave']]],
   ['slaves',['slaves',['../classAgentServer.html#a3b8ec30077d0b9dec0d855bd5f54f706',1,'AgentServer']]],
-  ['socket',['Socket',['../classSocket.html',1,'Socket'],['../classConnection.html#a4bf787fc71e664c6b23d41d303d2a655',1,'Connection::socket()'],['../classSocket.html#a7c3256c4fc6e2c603df73201049fae5a',1,'Socket::Socket()'],['../classSocket.html#ab999f4a1ead13959bfd7aa89c72a6ca5',1,'Socket::Socket(int msgsock)']]],
+  ['socket',['Socket',['../classSocket.html',1,'Socket'],['../classSocket.html#a7c3256c4fc6e2c603df73201049fae5a',1,'Socket::Socket()'],['../classSocket.html#ab999f4a1ead13959bfd7aa89c72a6ca5',1,'Socket::Socket(int msgsock)'],['../classConnection.html#a4bf787fc71e664c6b23d41d303d2a655',1,'Connection::socket()']]],
   ['socket_2ecpp',['Socket.cpp',['../Socket_8cpp.html',1,'']]],
   ['socket_2ehpp',['Socket.hpp',['../Socket_8hpp.html',1,'']]],
   ['socketexception_2ecpp',['SocketException.cpp',['../SocketException_8cpp.html',1,'']]],
@@ -45,6 +44,6 @@ var searchData=
   ['styl_20kodu_2emd',['Styl kodu.md',['../Styl_01kodu_8md.html',1,'']]],
   ['subtract',['SUBTRACT',['../classTestMessage.html#af8a868ce511495fe4020f7a5b380112ca289340a4b7b8933b2cd55d14f1b9a152',1,'TestMessage']]],
   ['syn',['SYN',['../namespacemessage.html#ae332e93affac4506495c232e3f8a2be3abab6eed0f7cd8bd721e728003b63b54d',1,'message']]],
-  ['synmessage',['synMessage',['../classmessage_1_1synMessage.html#adc773263592bfcd5ae421c8a476b7461',1,'message::synMessage']]],
-  ['synmessage',['synMessage',['../classmessage_1_1synMessage.html',1,'message']]]
+  ['synmessage',['synMessage',['../classmessage_1_1synMessage.html',1,'message']]],
+  ['synmessage',['synMessage',['../classmessage_1_1synMessage.html#adc773263592bfcd5ae421c8a476b7461',1,'message::synMessage']]]
 ];

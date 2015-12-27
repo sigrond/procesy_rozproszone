@@ -10,6 +10,6 @@ var classAdminServer =
     [ "triggerShutDown", "classAdminServer.html#ae254f9e5cf045c7efbef7dce4c55dd62", null ],
     [ "adminIP", "classAdminServer.html#a7d89296fe6c6bdcfcc77b457eff1373c", null ],
     [ "blockingQueue", "classAdminServer.html#ae24954d3a143d3b37722da223e848e72", null ],
-    [ "connection", "classAdminServer.html#ad430393c63d11556becdb0c00ccbfa9b", null ],
+    [ "connectionManager", "classAdminServer.html#ab41bb42d5b01b6297822ebdbd40859c2", null ],
     [ "shutDown", "classAdminServer.html#aaad5d3a003688fc71db31d99b7d78922", null ]
 ];

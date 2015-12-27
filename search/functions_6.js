@@ -6,7 +6,6 @@ var searchData=
   ['getagentcount',['getAgentCount',['../classmessage_1_1hostMessage.html#aef834cfaeec0159a84670ca182670952',1,'message::hostMessage']]],
   ['getcategory',['getCategory',['../classmessage_1_1Message.html#a215855b0a3796c7ed9fd042b448afe63',1,'message::Message']]],
   ['getcode',['getCode',['../classmessage_1_1Message.html#ae4dc034eaa8566016e8d20bb0411756f',1,'message::Message']]],
-  ['getconnection',['getConnection',['../classSlave.html#a828d48eb753fb4fc45ec9c593f60f5fb',1,'Slave']]],
   ['getcounter',['getCounter',['../classConnection.html#a507e05db5d5bb71b625c609b5cbfeeab',1,'Connection']]],
   ['geterrcode',['getErrCode',['../classmessage_1_1errMessage.html#aa81bce66e3a8e0a76a51c6eb7d14a112',1,'message::errMessage']]],
   ['getexitstatus',['getExitStatus',['../classmessage_1_1retMessage.html#abbb2353a2315272dbd083c3019198951',1,'message::retMessage']]],

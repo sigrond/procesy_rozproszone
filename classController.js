@@ -9,6 +9,7 @@ var classController =
     [ "setup", "classController.html#aaff2c0ac01c4d7a6b78718ac8a411c4b", null ],
     [ "start", "classController.html#ad535ad74055e645b7f44b7feeb4e82a8", null ],
     [ "triggerShutDown", "classController.html#a516427a8bb2fc0e0f46f94c318dd1610", null ],
+    [ "AddAgentStrategy", "classController.html#a7b60a1ac92fa8023a6b5588523d1559a", null ],
     [ "adminServer", "classController.html#af1305e49e37ef9f953b135deeddbb19b", null ],
     [ "agentServer", "classController.html#a42c2a5b45f23919302f600b4b4fb274b", null ],
     [ "alive", "classController.html#aeedf99dd08a7258db654fb7603eaa4ee", null ],
