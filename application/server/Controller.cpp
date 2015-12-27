@@ -13,6 +13,8 @@
 #include <cstdlib>
 #include <thread>
 
+using namespace std;
+
 Controller::Controller() :
 	alive(0),
 	adminServer(nullptr),
@@ -105,6 +107,8 @@ void Controller::start()
 	fillStrategyMap();
 
 	std::thread adminServerThread(&AdminServer::start,adminServer);
+	thread agentServerThread(&AgentServer::start,agentServer);
+
 	/**< \todo uruchomić adminServer i agentServer, timery w modelu i inne */
 
 	//pętla przetwarzania komunikatów / zdarzeń

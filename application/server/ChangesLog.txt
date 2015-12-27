@@ -1,4 +1,11 @@
 27 December 2015
+   released version 0.1.29 of server
+
+     Change log:
+        -Added: AgentServer::start
+        -Added: warunkowe wznawianie petli zlecania zadań nasłuchiwania
+
+27 December 2015
    released version 0.1.28 of server
 
      Change log:

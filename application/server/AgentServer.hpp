@@ -11,6 +11,8 @@
 #include "Slave.hpp"
 #include "../protocol/ConnectionManager.hpp"
 #include <vector>
+#include <mutex>
+#include <condition_variable>
 
 /** \brief klasa serwera agenta
  */
@@ -30,4 +32,7 @@ private:
     std::vector<Slave*>* slaves;
     bool shutDown;
     ConnectionManager* connectionManager;
+    std::mutex slavesMutex;/**< w niektórych momentach chciałbym wiedzieć ile mam agentów */
+    std::mutex allListeningMutex;
+    std::condition_variable allListeningCondition;
 };

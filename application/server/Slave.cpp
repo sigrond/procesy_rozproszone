@@ -12,7 +12,9 @@ Slave::Slave(Ip &ip) :
 	state(0),
 	connectionManager(nullptr),
 	task(nullptr),
-	removed(false)
+	removed(false),
+	listening(false),
+	slaveThread(nullptr)
 {
 	connectionManager=ConnectionManager::getInstance();
 }
@@ -21,3 +23,30 @@ Slave::~Slave()
 {
 	//dtor
 }
+
+void Slave::setListening(bool b)
+{
+	listeningMutex.lock();
+	listening=b;
+	listeningMutex.unlock();
+}
+bool Slave::getListening()
+{
+	bool b=false;
+	listeningMutex.lock();
+	b=listening;
+	listeningMutex.unlock();
+	return b;
+}
+
+
+
+
+
+
+
+
+
+
+
+

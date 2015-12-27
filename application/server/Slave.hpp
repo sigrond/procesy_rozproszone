@@ -8,6 +8,8 @@
 
 #include "Task.hpp"
 #include "../protocol/ConnectionManager.hpp"
+#include <mutex>
+#include <thread>
 
 /** \brief Klasa odpowiedzialna za przechowywanie informacji o agencie.
  */
@@ -20,6 +22,7 @@ private:
 	ConnectionManager* connectionManager;
 	Task* task;/**< wskaźnik na aktualne zadanie */
 	bool removed;/**< czy dostaliśmy polecenie usuniecia agenta */
+	bool listening;
 public:
 	/** Default constructor */
 	Slave(Ip &ip);
@@ -60,5 +63,9 @@ public:
 	 * \param val New value to set
 	 */
 	void setTask(Task* val) { task = val; }
+	std::mutex listeningMutex;/**< to chyba znowu moja kolejna fanaberia */
+	void setListening(bool);
+	bool getListening();
+	std::thread* slaveThread;
 protected:
 };
