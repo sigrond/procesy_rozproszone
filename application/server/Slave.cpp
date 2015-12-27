@@ -10,11 +10,11 @@ Slave::Slave(Ip &ip) :
 	slaveIP(&ip),
 	lastContact(0),
 	state(0),
-	connection(nullptr),
+	connectionManager(nullptr),
 	task(nullptr),
 	removed(false)
 {
-	//ctor
+	connectionManager=ConnectionManager::getInstance();
 }
 
 Slave::~Slave()

@@ -9,7 +9,7 @@
 #include "BlockingQueue.hpp"
 #include "Event.hpp"
 #include "Slave.hpp"
-#include "../protocol/Connection.hpp"
+#include "../protocol/ConnectionManager.hpp"
 #include <vector>
 
 /** \brief klasa serwera agenta
@@ -29,4 +29,5 @@ private:
     BlockingQueue<Event*>* blockingQueue;
     std::vector<Slave*>* slaves;
     bool shutDown;
+    ConnectionManager* connectionManager;
 };

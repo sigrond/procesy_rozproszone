@@ -38,6 +38,7 @@ public:
      */
     void setup();
 private:
+	friend class AddAgentStrategy;
     AdminServer* adminServer;
     AgentServer* agentServer;
     Model* model;

@@ -132,6 +132,7 @@ void Controller::fillStrategyMap()
 	strategyMap->insert(std::pair<EventType,Strategy*>(SHUT_DOWN,new ShutDownStrategy()));
 	strategyMap->insert(std::pair<EventType,Strategy*>(MESSAGE_FROM_ADMIN_SERVER,new MessageFromAdminStrategy()));
 	strategyMap->insert(std::pair<EventType,Strategy*>(MESSAGE_FROM_AGENT_SERVER,new MessageFromAgentStrategy()));
+	strategyMap->insert(std::pair<EventType,Strategy*>(ADD_AGENT,new AddAgentStrategy()));
 	/**< \todo wstawić więcej strategii, ustalić w którym pliku powinny znajdować się strategie i je napisać */
 }
 

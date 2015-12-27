@@ -1,3 +1,76 @@
+27 December 2015
+   released version 0.1.27 of server
+
+     Change log:
+        -Added: w AddAgentStrategy addSlave
+
+27 December 2015
+   released version 0.1.26 of server
+
+     Change log:
+        -Added: zdarzenie add agent
+
+27 December 2015
+   released version 0.1.25 of server
+
+     Change log:
+        -Added: wczytywanie adresu ip agenta
+
+27 December 2015
+   released version 0.1.24 of server
+
+     Change log:
+        -Updated: lepszy makefile
+
+27 December 2015
+   released version 0.1.23 of server
+
+     Change log:
+        -Added: adres admina jako argument
+
+27 December 2015
+   released version 0.1.22 of server
+
+     Change log:
+        -Added: ustawienie adresu admina
+
+27 December 2015
+   released version 0.1.21 of server
+
+     Change log:
+        -Added: #include <cerrno>
+
+27 December 2015
+   released version 0.1.20 of server
+
+     Change log:
+        -Added: makefile Socket.cpp & SocketException.cpp
+
+27 December 2015
+   released version 0.1.19 of server
+
+     Change log:
+        -Added: do makefile dodany ConnectionManager.cpp
+        -Fixed: static_cast<Ipv4> na static_cast<Ipv4*>
+
+27 December 2015
+   released version 0.1.18 of server
+
+     Change log:
+        -Fixed: rzutowanie w stylu c z Ip na Ipv4 zmienione na static_cast 
+
+27 December 2015
+   released version 0.1.17 of server
+
+     Change log:
+        -Updated: zmiana z Connection na ConnectionManager
+
+27 December 2015
+   released version 0.1.16 of server
+
+     Change log:
+        -Added: dodawanie agenta z terminala
+
 16 December 2015
    released version 0.1.15 of server
 

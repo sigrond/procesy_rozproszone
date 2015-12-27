@@ -8,7 +8,7 @@
 
 #include "BlockingQueue.hpp"
 #include "Event.hpp"
-#include "../protocol/Connection.hpp"
+#include "../protocol/ConnectionManager.hpp"
 /**< \todo potrzebne implementacje Connection */
 
 /** \brief Klasa serwera administratora.
@@ -52,7 +52,7 @@ public:
     void triggerShutDown();
 private:
     BlockingQueue<Event*>* blockingQueue;
-    Connection* connection;
+    ConnectionManager* connectionManager;
     Ip* adminIP;/**< opcjonalne IP admina */
     bool shutDown;/**< przełącznik do kończenia pracy AdminServer'a */
 };

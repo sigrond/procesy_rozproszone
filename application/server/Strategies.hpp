@@ -13,9 +13,12 @@
 #include "Strategy.hpp"
 #include "Controller.hpp"
 #include "../protocol/Message.hpp"
+#include "../protocol/Ip.hpp"
+#include "AgentServer.hpp"
 #include <iostream>
 #include <string>
 #include <thread>
+#include <utility>
 
 
 /** \brief Testowa klasa strategii.
@@ -141,6 +144,26 @@ public:
 		default:
 			clog<<"Nieznana kategoria wiadomości od agenta: "<<category<<endl;
 		}
+	}
+};
+
+class AddAgentStrategy : public Strategy
+{
+public:
+    /** \brief obsługa dodania agenta
+     *
+     * \param data message::Message*
+     * \return virtual void
+     *
+     */
+	virtual void doJob(void* data) override
+	{
+		using namespace std;
+        cout<<"strategia AddAgent..."<<endl;
+        AgentServer* as=((Controller*)((pair<void*,void*>*)data)->second)->agentServer;
+        Ipv4 ip=*(Ipv4*)((pair<void*,void*>*)data)->first;
+        as->addSlave(ip);
+        delete data;
 	}
 };
 

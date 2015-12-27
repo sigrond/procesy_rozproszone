@@ -26,16 +26,28 @@ int main(int argi, char* argv[])
     {
         cout<<"Witamy w serwerze LOTC!"<<endl;
         Controller* controller=new Controller();/**< kontroler jest sercem serwera, o architekturze zbliżonej do modelu MVC */
-        controller->setAdminServer(new AdminServer());/** AdminServer i AgentServer można traktować jak swego rodzaju widoki MVC */
+        //controller->setAdminServer(new AdminServer());/** AdminServer i AgentServer można traktować jak swego rodzaju widoki MVC */
+        Ipv4* adminIP=nullptr;
+        if(argi>1)
+		{
+			adminIP=new Ipv4(string(argv[1]));
+		}
+		else
+		{
+			adminIP=new Ipv4("127.0.0.1");
+		}
+        controller->setAdminServer(new AdminServer(*static_cast<Ip*>(adminIP)));
         controller->setAgentServer(new AgentServer());
-        controller->setModel(new Model());
+        Model* model=new Model();
+        controller->setModel(model);
         controller->setup();
         thread controllerThread(&Controller::start,controller);
         /** \todo wymyslić jakieś zgrabne zamknięcie oczekiwania na opcjonalne polecenia,
          * albo zrezygnować z takiej możliwości.
          */
         string s;
-        while(cin>>s)
+        string ss;
+        while(getline(cin,s))
         {
             if(s.compare("exit")==0)
             {
@@ -44,6 +56,20 @@ int main(int argi, char* argv[])
                 /** \todo wstawić jakiś zgrabny przełącznik do kończenia wątka kontrolera */
                 break;
             }
+            else if(s.find("add")==0)
+			{
+				cout<<s<<endl;
+				unsigned int i=s.find("agent");
+				cout<<i<<endl;
+				if(i!=string::npos && s.size()>10)
+				{
+					ss=s.substr(10);
+					cout<<ss<<endl;
+					Ipv4 ip=Ipv4(ss);/**< \todo sprawdzanie poprawności adresu */
+					cout<<"Dodawanie agenta: "<<ip.getAddress()<<endl;
+					model->pushAddAgent(ip);
+				}
+			}
         }
         if(controllerThread.joinable())
 		{

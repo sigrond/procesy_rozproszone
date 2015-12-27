@@ -7,7 +7,7 @@
 #pragma once
 
 #include "Task.hpp"
-#include "../protocol/Connection.hpp"
+#include "../protocol/ConnectionManager.hpp"
 
 /** \brief Klasa odpowiedzialna za przechowywanie informacji o agencie.
  */
@@ -17,7 +17,7 @@ private:
 	Ip* slaveIP;/**< adres agenta */
 	time_t lastContact;/**< kiedy ostatnio agent odpowiedział */
 	int state;/**< stan agenta */
-	Connection* connection; //!< Member variable "connection"
+	ConnectionManager* connectionManager;
 	Task* task;/**< wskaźnik na aktualne zadanie */
 	bool removed;/**< czy dostaliśmy polecenie usuniecia agenta */
 public:
@@ -54,14 +54,6 @@ public:
 	void setState(int val) { state = val; }
 	/** Access connection
 	 * \return The current value of connection
-	 */
-	Connection* getConnection() { return connection; }
-	/** Set connection
-	 * \param val New value to set
-	 */
-	void setConnection(Connection* val) { connection = val; }
-	/** Access task
-	 * \return The current value of task
 	 */
 	Task* getTask() { return task; }
 	/** Set task

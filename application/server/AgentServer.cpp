@@ -9,6 +9,8 @@
 #include <iostream>
 #include <thread>
 
+using namespace std;
+
 /** \brief Klasa opakowująca exception dla AgentServer
  */
 struct AgentServerException : std::exception
@@ -35,8 +37,13 @@ public:
 AgentServer::AgentServer() :
 	blockingQueue(nullptr),
 	slaves(nullptr),
-	shutDown(false)
+	shutDown(false),
+	connectionManager(nullptr)
 {
+	#ifdef _DEBUG
+	cout<<"AgentServer::AgentServer()"<<endl;
+	#endif // _DEBUG
+	connectionManager=ConnectionManager::getInstance();
 	slaves=new std::vector<Slave*>();
 }
 
@@ -61,13 +68,14 @@ AgentServer::~AgentServer()
 
 void AgentServer::connect(Slave* who, message::Message* m)
 {
-	who->getConnection()->send(*m);/**< \todo dodać jakiś zabezpieczeń bo groźnie to wygląda */
+	connectionManager->send(*static_cast<Ipv4*>(who->getSlaveIP()),*m);/**< \todo dodać jakiś zabezpieczeń bo groźnie to wygląda */
 }
 
 void AgentServer::listen(Slave* who)
 {
 	message::Message* m=nullptr;
-	m=who->getConnection()->receive();
+	//m=who->getConnection()->receive();
+	connectionManager->receive(*static_cast<Ipv4*>(who->getSlaveIP()),m);
 	blockingQueue->push_back(new Event(MESSAGE_FROM_AGENT_SERVER,m));
 }
 

@@ -33,27 +33,25 @@ public:
 
 AdminServer::AdminServer() :
 	blockingQueue(nullptr),
-	connection(nullptr),
+	connectionManager(nullptr),
 	adminIP(nullptr),
 	shutDown(false)
 {
 	#ifdef _DEBUG
 	std::clog<<"AdminServer::AdminServer()\n";
 	#endif // _DEBUG
-	//connection=new Connection();
-	/**< \todo chciałbym móc zrobić tak^ */
-	connection=new Connection(Ipv4());/**< \todo Klasa connection powinna sobie jakoś poradzić z otwarciem połączenia w trybie serwera jeśli nie znamy adresu admina */
+	connectionManager=ConnectionManager::getInstance();
 }
 
 AdminServer::AdminServer(Ip &ip) :
 	blockingQueue(nullptr),
-	connection(nullptr),
+	connectionManager(nullptr),
 	adminIP(nullptr)
 {
 	#ifdef _DEBUG
 	std::clog<<"AdminServer::AdminServer(Ip &ip)\n";
 	#endif // _DEBUG
-	connection=new Connection((Ipv4&)ip);/**< \todo z tym to już koniecznie klasa Connection powinna sobie jakoś radzić */
+	connectionManager=ConnectionManager::getInstance();
 	adminIP=&ip;
 }
 
@@ -62,10 +60,10 @@ AdminServer::~AdminServer()
 	#ifdef _DEBUG
 	std::clog<<"AdminServer::~AdminServer()\n";
 	#endif // _DEBUG
-	if(connection!=nullptr)
+	/*if(connection!=nullptr)
 	{
 		delete connection;
-	}
+	}*/
 	if(adminIP!=nullptr)
 	{
 		delete adminIP;
@@ -78,13 +76,14 @@ void AdminServer::listen()
 	std::clog<<"AdminServer::listen()\n";
 	#endif // _DEBUG
 	message::Message* m=nullptr;
-	m=connection->receive();
+	//m=connection->receive();
+	connectionManager->receive(*static_cast<Ipv4*>(adminIP),m);/**< \todo co się stanie jak nie znamy adresu admina? */
 	blockingQueue->push_back(new Event(MESSAGE_FROM_ADMIN_SERVER,m));
 }
 
 void AdminServer::connect(message::Message* m)
 {
-	connection->send(*m);
+	connectionManager->send(*static_cast<Ipv4*>(adminIP),*m);
 }
 
 void AdminServer::setBlockingQueue(BlockingQueue<Event*>* q)

@@ -14,7 +14,8 @@ enum EventType
     SHUT_DOWN,
     MESSAGE_FROM_ADMIN_SERVER,
     MESSAGE_FROM_AGENT_SERVER,
-    MESSAGE_FROM_MODEL
+    MESSAGE_FROM_MODEL,
+    ADD_AGENT/**< ułatwiam sobie życie, bo utonę w metodach */
 };
 
 /** \brief Klasa reprezentująca zdarzenie.
