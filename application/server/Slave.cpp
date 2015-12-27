@@ -21,7 +21,10 @@ Slave::Slave(Ip &ip) :
 
 Slave::~Slave()
 {
-	//dtor
+	if(slaveThread!=nullptr)
+	{
+		delete slaveThread;
+	}
 }
 
 void Slave::setListening(bool b)

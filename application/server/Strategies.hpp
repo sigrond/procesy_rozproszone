@@ -171,7 +171,7 @@ public:
         AgentServer* as=((Controller*)((pair<void*,void*>*)data)->second)->agentServer;
         Ipv4 ip=*(Ipv4*)((pair<void*,void*>*)data)->first;
         as->addSlave(ip);
-        delete data;
+        delete (pair<void*,void*>*)data;
 	}
 };
 

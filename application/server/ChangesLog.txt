@@ -1,4 +1,29 @@
 27 December 2015
+   released version 0.1.33 of server
+
+     Change log:
+        -Added: sprawdzanie slaves->empty()
+        -Added: zawieszanie na slaves->empty()
+
+27 December 2015
+   released version 0.1.32 of server
+
+     Change log:
+        -Fixed: wyeliminowałem zakleszczenie na slavesMutex
+
+27 December 2015
+   released version 0.1.31 of server
+
+     Change log:
+        -Added: allListeningMutexLock.unlock()
+
+27 December 2015
+   released version 0.1.30 of server
+
+     Change log:
+        -Added: chamski debug
+
+27 December 2015
    released version 0.1.29 of server
 
      Change log:

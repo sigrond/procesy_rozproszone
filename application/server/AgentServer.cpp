@@ -74,11 +74,17 @@ void AgentServer::connect(Slave* who, message::Message* m)
 
 void AgentServer::listen(Slave* who)
 {
+	#ifdef _DEBUG
+	cout<<"AgentServer::listen(Slave* who)"<<endl;
+	#endif // _DEBUG
 	message::Message* m=nullptr;
 	//m=who->getConnection()->receive();
 	while(!shutDown)
 	{
 		connectionManager->receive(*static_cast<Ipv4*>(who->getSlaveIP()),m);
+		#ifdef _DEBUG
+		cout<<"AgentServer::listen odebrano: "<<m<<endl;
+		#endif // _DEBUG
 		blockingQueue->push_back(new Event(MESSAGE_FROM_AGENT_SERVER,m));
 	}
 	who->setListening(false);
@@ -89,8 +95,17 @@ void AgentServer::setBlockingQueue(BlockingQueue<Event*>* q)
 	blockingQueue=q;
 }
 
+/** \brief dodajemy ip agenta do wektora slaves i dajemy znać jeśli jakiś wątek czekał na to
+ *
+ * \param ip Ip&
+ * \return void
+ *
+ */
 void AgentServer::addSlave(Ip &ip)
 {
+	#ifdef _DEBUG
+	cout<<"AgentServer::addSlave(Ip &ip)"<<endl;
+	#endif // _DEBUG
 	if(slaves==nullptr)
 	{
 		throw AgentServerException("slaves==nullptr");
@@ -99,9 +114,15 @@ void AgentServer::addSlave(Ip &ip)
 	slaves->push_back(new Slave(ip));
 	slavesMutex.unlock();
 	unique_lock<mutex> allListeningMutexLock(allListeningMutex);
-	allListeningCondition.notify_all();//zgłaszamy, że już nie wszystkie agenty słuchają
+	allListeningMutexLock.unlock();
+	allListeningCondition.notify_one();//zgłaszamy, że już nie wszystkie agenty słuchają
 }
 
+/** \brief teraz zrezygnowałem z wykożystania tej funkcji na rzecz AgentServer::start()
+ *
+ * \return void
+ *
+ */
 void AgentServer::listenToAll()/**< \todo dobrze przemyśleć jak ma działać */
 {
 	std::thread* t;/**< \todo ? wątki tutaj potrzebne? */
@@ -113,6 +134,9 @@ void AgentServer::listenToAll()/**< \todo dobrze przemyśleć jak ma działać *
 
 void AgentServer::start()
 {
+	#ifdef _DEBUG
+	cout<<"AgentServer::start()"<<endl;
+	#endif // _DEBUG
 	//chcemy słuchać na wszystkie agenty w osobnych wątkach
 	thread* t=nullptr;
     slavesMutex.lock();
@@ -129,7 +153,23 @@ void AgentServer::start()
 	bool listenSlave=false;
 	while(!shutDown)//pętla zlecania zadań nasłuchiwania
 	{
+		#ifdef _DEBUG
+		cout<<"pętla nasłuchiwania agentów i: "<<i<<"listen slave: "<<listenSlave<<endl;
+		#endif // _DEBUG
 		slavesMutex.lock();
+		if(slaves->empty())
+		{
+			unique_lock<mutex> allListeningMutexLock(allListeningMutex);
+			while(slaves->empty())
+			{
+				#ifdef _DEBUG
+				cout<<"slaves->empty()"<<endl;
+				#endif // _DEBUG
+				slavesMutex.unlock();
+				allListeningCondition.wait(allListeningMutexLock);
+				slavesMutex.lock();
+			}
+		}
 		if(i>=slaves->size())
 		{
 			i=0;
@@ -144,8 +184,18 @@ void AgentServer::start()
 			listenSlave=false;
 			if(allListening)
 			{
+				#ifdef _DEBUG
+				cout<<"allListeningCondition.wait(allListeningMutexLock)"<<endl;
+				#endif // _DEBUG
+				slavesMutex.unlock();
 				unique_lock<mutex> allListeningMutexLock(allListeningMutex);
 				allListeningCondition.wait(allListeningMutexLock);//niech sobie torchę zaczeka, aż pojawi sie nie słuchający agent
+				#ifdef _DEBUG
+				cout<<"koniec allListeningCondition.wait"<<endl;
+				#endif // _DEBUG
+				i=0;
+				continue;
+				slavesMutex.lock();
 			}
 		}
 		slavesMutex.unlock();
@@ -155,6 +205,9 @@ void AgentServer::start()
 			slaves->at(i)->setListening(true);
 			t=new thread(&AgentServer::listen,this,slaves->at(i));
 			slaves->at(i)->slaveThread=t;
+			#ifdef _DEBUG
+			cout<<"dodany wątek agenta IP: "<<slaves->at(i)->getSlaveIP()->getAddress()<<endl;
+			#endif // _DEBUG
 		}
 		i++;
 	}
