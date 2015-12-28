@@ -12,6 +12,9 @@
 #include <string>
 #include <cstdlib>
 #include <thread>
+#include <mutex>
+#include <condition_variable>
+#include <chrono>
 
 using namespace std;
 
@@ -108,6 +111,7 @@ void Controller::start()
 
 	std::thread adminServerThread(&AdminServer::start,adminServer);
 	thread agentServerThread(&AgentServer::start,agentServer);
+	thread pingAdminThread(&Model::pingAdmin,model);
 
 	/**< \todo uruchomić adminServer i agentServer, timery w modelu i inne */
 
@@ -124,6 +128,28 @@ void Controller::start()
 		//if(a==0) break;
 	}
 	alive--;
+	mutex mtx;/**< strzelba na mrówki */
+	std::unique_lock<std::mutex> lck(mtx);/**< just for fun */
+	//lck.lock();
+	condition_variable c;/**< bo mikro-slip działa źle */
+	cout<<"terminate threads in: 10, ";
+	cout.flush();
+	//lck.unlock();
+	for(int i=9;i>=0;i--)
+	{
+		c.wait_for(lck ,chrono::seconds(1));/**< KABOOM! */
+		//lck.lock();
+		cout<<i<<", ";
+		cout.flush();
+		//lck.unlock();
+	}
+	cout<<endl<<"terminate"<<endl;
+	pingAdminThread.join();/**< ten join powinien się udać */
+	cout<<"pingAdminThread.join()"<<endl;
+	adminServerThread.~thread();/**< zdychaj gnido! */
+	agentServerThread.~thread();/**< tu program nie dojdzie */
+	cout<<"terminated?"<<endl;
+
 }
 
 void Controller::fillStrategyMap()
@@ -137,6 +163,8 @@ void Controller::fillStrategyMap()
 	strategyMap->insert(std::pair<EventType,Strategy*>(MESSAGE_FROM_ADMIN_SERVER,new MessageFromAdminStrategy(this)));
 	strategyMap->insert(std::pair<EventType,Strategy*>(MESSAGE_FROM_AGENT_SERVER,new MessageFromAgentStrategy(this)));
 	strategyMap->insert(std::pair<EventType,Strategy*>(ADD_AGENT,new AddAgentStrategy(this)));
+	strategyMap->insert(std::pair<EventType,Strategy*>(PING_ADMIN,new PingAdminStrategy(this)));
+
 	/**< \todo wstawić więcej strategii, ustalić w którym pliku powinny znajdować się strategie i je napisać */
 }
 
@@ -152,7 +180,16 @@ void Controller::triggerShutDown()
 	shutDownServer=true;
 	if(blockingQueue!=nullptr)
 	{
+		//dodatkowy komunikat, żeby odblokować kolejkę
 		blockingQueue->push_back(new Event(SHUT_DOWN,this));
+	}
+	if(model!=nullptr)
+	{
+		model->triggerShutDown();
+	}
+	if(adminServer!=nullptr)
+	{
+		adminServer->triggerShutDown();
 	}
 }
 

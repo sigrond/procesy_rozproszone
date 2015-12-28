@@ -9,6 +9,8 @@
 #include "BlockingQueue.hpp"
 #include "Event.hpp"
 #include "../protocol/Ip.hpp"
+#include <mutex>
+#include <condition_variable>
 
 /** \brief klasa modelu
  */
@@ -20,8 +22,14 @@ public:
     void pushTestEvents();
     void setController(void* c);
     void pushAddAgent(Ipv4& ip);
+    void pingAdmin();/**< pingowanie okresowo i na ewentualne żądanie */
+    void pingSlaves();
+    void triggerShutDown();
 private:
     BlockingQueue<Event*>* blockingQueue;
 	void* controller;
+	bool shutDown;
+	std::mutex adminPingMutex;
+	std::condition_variable adminPingCond;
 };
 

@@ -27,5 +27,6 @@ public:
 		std::cout<<"Strategy(Controller* c)"<<std::endl;
 		#endif // _DEBUG
 	};
+	/**< w sumie mozna było użyć operator(), było by to chyba bardziej intuicyjne */
     virtual void doJob(void* data) = 0;/**< sposób realizacji danej strategii */
 };

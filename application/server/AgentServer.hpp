@@ -27,6 +27,7 @@ public:
     void addSlave(Ip &ip);
     void listenToAll();
     void start();
+    void triggerShutDown();
 private:
     BlockingQueue<Event*>* blockingQueue;
     std::vector<Slave*>* slaves;

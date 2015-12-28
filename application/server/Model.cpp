@@ -10,6 +10,9 @@
 #include "../protocol/Ip.hpp"
 #include <exception>
 #include <utility>
+#include <mutex>
+#include <condition_variable>
+#include <chrono>
 
 using namespace std;
 
@@ -36,7 +39,10 @@ public:
 	}
 };
 
-Model::Model()
+Model::Model() :
+	blockingQueue(nullptr),
+	controller(nullptr),
+	shutDown(false)
 {
 
 }
@@ -76,6 +82,27 @@ void Model::pushAddAgent(Ipv4& ip)
 	pair<void*,void*>* p=nullptr;
 	p=new pair<void*,void*>((void*)&ip,(void*)controller);
 	blockingQueue->push_back(new Event(ADD_AGENT,p));
+}
+
+void Model::pingAdmin()
+{
+	shutDown=false;
+	std::unique_lock<std::mutex> lck(adminPingMutex);
+    while(!shutDown)
+	{
+		adminPingCond.wait_for(lck ,chrono::seconds(10));
+        blockingQueue->push_back(new Event(PING_ADMIN,nullptr));
+	}
+}
+
+void Model::pingSlaves()
+{
+
+}
+
+void Model::triggerShutDown()
+{
+	shutDown=true;
 }
 
 

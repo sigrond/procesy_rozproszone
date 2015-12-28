@@ -134,6 +134,7 @@ void AgentServer::listenToAll()/**< \todo dobrze przemyśleć jak ma działać *
 
 void AgentServer::start()
 {
+	shutDown=false;
 	#ifdef _DEBUG
 	cout<<"AgentServer::start()"<<endl;
 	#endif // _DEBUG
@@ -213,7 +214,10 @@ void AgentServer::start()
 	}
 }
 
-
+void AgentServer::triggerShutDown()
+{
+	shutDown=true;
+}
 
 
 

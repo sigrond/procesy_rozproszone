@@ -175,6 +175,28 @@ public:
 	}
 };
 
+
+class PingAdminStrategy : public Strategy
+{
+public:
+	using Strategy::Strategy;
+    /** \brief obsługa dodania agenta
+     *
+     * \param data message::Message*
+     * \return virtual void
+     *
+     */
+	virtual void doJob(void* data) override
+	{
+		using namespace std;
+		using namespace message;
+        cout<<"strategia PingAdmin..."<<endl;
+        Message * msg2 = new pingMessage( State::REQ );
+        ((Controller*)controller)->adminServer->connect(msg2);
+	}
+};
+
+
 /**< \todo Napisać więcej strategii, jak już będzie wiadomo co mają robić */
 
 

@@ -38,7 +38,9 @@ public:
      */
     void setup();
 private:
+	friend class Strategy;
 	friend class AddAgentStrategy;
+	friend class PingAdminStrategy;
     AdminServer* adminServer;
     AgentServer* agentServer;
     Model* model;
