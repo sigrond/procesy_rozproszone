@@ -8,6 +8,7 @@ var classAgentServer =
     [ "listenToAll", "classAgentServer.html#a75068a7f83936d0171b46d5dcb99a7b4", null ],
     [ "setBlockingQueue", "classAgentServer.html#ab79904b49f1f80c51b9bfdbde2596d00", null ],
     [ "start", "classAgentServer.html#aec3723633cda932f432249930ea81694", null ],
+    [ "triggerShutDown", "classAgentServer.html#af9454749c9381756b720f7364e003d0f", null ],
     [ "allListeningCondition", "classAgentServer.html#a15cae4e1e67c26c2b77a866d92535442", null ],
     [ "allListeningMutex", "classAgentServer.html#a034af561ed42ec609242526b1cf9b767", null ],
     [ "blockingQueue", "classAgentServer.html#a69fbec9452ad2056d585a517f3a36faa", null ],

@@ -29,6 +29,7 @@ var annotated =
     [ "MessageFromAgentStrategy", "classMessageFromAgentStrategy.html", "classMessageFromAgentStrategy" ],
     [ "Model", "classModel.html", "classModel" ],
     [ "ModelException", "structModelException.html", "structModelException" ],
+    [ "PingAdminStrategy", "classPingAdminStrategy.html", "classPingAdminStrategy" ],
     [ "ShutDownStrategy", "classShutDownStrategy.html", "classShutDownStrategy" ],
     [ "Slave", "classSlave.html", "classSlave" ],
     [ "Socket", "classSocket.html", "classSocket" ],
