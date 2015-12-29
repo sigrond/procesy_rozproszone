@@ -64,7 +64,18 @@ AgentServer::~AgentServer()
 			}
 		}
 		delete slaves;
+		slaves=nullptr;
 	}
+	if(blockingQueue!=nullptr)
+	{
+		delete blockingQueue;
+		blockingQueue=nullptr;
+	}
+/*	if(connectionManager!=nullptr)
+	{
+		delete connectionManager;
+		connectionManager=nullptr;
+	}*/
 }
 
 void AgentServer::connect(Slave* who, message::Message* m)
@@ -217,8 +228,31 @@ void AgentServer::start()
 void AgentServer::triggerShutDown()
 {
 	shutDown=true;
+	slavesMutex.lock();
+	for(unsigned int i=0;i<slaves->size();i++)
+	{
+		slavesMutex.unlock();
+		#ifdef _DEBUG
+		cout<<"próbuję usunąć agenta: "<<slaves->at(i)->getSlaveIP()->getAddress()<< "z ConnectionManager..."<<endl;
+		#endif // _DEBUG
+		connectionManager->remove(*(Ipv4*)slaves->at(i)->getSlaveIP());
+		#ifdef _DEBUG
+		cout<<"udało się usunąć agenta: "<<slaves->at(i)->getSlaveIP()->getAddress()<< "z ConnectionManager!"<<endl;
+		#endif // _DEBUG
+		slavesMutex.lock();
+	}
+	slavesMutex.unlock();
 }
 
+void AgentServer::sendToAll(message::Message* m)
+{
+    slavesMutex.lock();
+    for(unsigned int i=0;i<slaves->size();i++)
+	{
+		connect(slaves->at(i),m);
+	}
+    slavesMutex.unlock();
+}
 
 
 

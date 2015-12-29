@@ -1,3 +1,9 @@
+29 December 2015
+   released version 0.1.40 of server
+
+     Change log:
+        -Added: ping slaves
+
 28 December 2015
    released version 0.1.39 of server
 

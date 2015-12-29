@@ -180,7 +180,7 @@ class PingAdminStrategy : public Strategy
 {
 public:
 	using Strategy::Strategy;
-    /** \brief obsługa dodania agenta
+    /** \brief obsługa pingowania admina
      *
      * \param data message::Message*
      * \return virtual void
@@ -193,6 +193,26 @@ public:
         cout<<"strategia PingAdmin..."<<endl;
         Message * msg2 = new pingMessage( State::REQ );
         ((Controller*)controller)->adminServer->connect(msg2);
+	}
+};
+
+class PingSlavesStrategy : public Strategy
+{
+public:
+	using Strategy::Strategy;
+    /** \brief obsługa pingowania agenta
+     *
+     * \param data message::Message*
+     * \return virtual void
+     *
+     */
+	virtual void doJob(void* data) override
+	{
+		using namespace std;
+		using namespace message;
+        cout<<"strategia PingSlaves..."<<endl;
+        Message * msg2 = new pingMessage( State::REQ );
+        ((Controller*)controller)->agentServer->sendToAll(msg2);
 	}
 };
 

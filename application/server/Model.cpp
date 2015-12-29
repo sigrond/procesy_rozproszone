@@ -95,9 +95,20 @@ void Model::pingAdmin()
 	}
 }
 
+/** \brief metoda zlecająca odpytanie agentów
+ * na chwilę obecną nie rozdzielam odpytywania agentów
+ * \return void
+ *
+ */
 void Model::pingSlaves()
 {
-
+	shutDown=false;
+	std::unique_lock<std::mutex> lck(slavesPingMutex);
+    while(!shutDown)
+	{
+		slavesPingCond.wait_for(lck ,chrono::seconds(11));
+        blockingQueue->push_back(new Event(PING_SLAVES,nullptr));
+	}
 }
 
 void Model::triggerShutDown()

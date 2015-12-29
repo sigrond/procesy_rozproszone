@@ -41,22 +41,27 @@ Controller::~Controller()
 	if(adminServer!=nullptr)
 	{
 		delete adminServer;
+		adminServer=nullptr;
 	}
 	if(agentServer!=nullptr)
 	{
 		delete agentServer;
+		agentServer=nullptr;
 	}
 	if(blockingQueue!=nullptr)
 	{
 		delete blockingQueue;
+		blockingQueue=nullptr;
 	}
 	if(strategyMap!=nullptr)
 	{
 		delete strategyMap;
+		strategyMap=nullptr;
 	}
 	if(model!=nullptr)
 	{
 		delete model;
+		model=nullptr;
 	}
 }
 
@@ -109,9 +114,10 @@ void Controller::start()
 	strategyMap=new std::map<EventType,Strategy*>;
 	fillStrategyMap();
 
-	std::thread adminServerThread(&AdminServer::start,adminServer);
+	thread adminServerThread(&AdminServer::start,adminServer);
 	thread agentServerThread(&AgentServer::start,agentServer);
 	thread pingAdminThread(&Model::pingAdmin,model);
+	thread pingSlavesThread(&Model::pingSlaves,model);
 
 	/**< \todo uruchomić adminServer i agentServer, timery w modelu i inne */
 
@@ -146,8 +152,13 @@ void Controller::start()
 	cout<<endl<<"terminate"<<endl;
 	pingAdminThread.join();/**< ten join powinien się udać */
 	cout<<"pingAdminThread.join()"<<endl;
+	//throw ControllerException("zamykamy budę!");
 	adminServerThread.~thread();/**< zdychaj gnido! */
-	agentServerThread.~thread();/**< tu program nie dojdzie */
+	adminServerThread.join();
+	cout<<"adminServerThread.join()"<<endl;
+	agentServerThread.join();
+	cout<<"agentServerThread.join()"<<endl;
+	//agentServerThread.~thread();/**< tu program nie dojdzie */
 	cout<<"terminated?"<<endl;
 
 }
@@ -164,6 +175,7 @@ void Controller::fillStrategyMap()
 	strategyMap->insert(std::pair<EventType,Strategy*>(MESSAGE_FROM_AGENT_SERVER,new MessageFromAgentStrategy(this)));
 	strategyMap->insert(std::pair<EventType,Strategy*>(ADD_AGENT,new AddAgentStrategy(this)));
 	strategyMap->insert(std::pair<EventType,Strategy*>(PING_ADMIN,new PingAdminStrategy(this)));
+	strategyMap->insert(std::pair<EventType,Strategy*>(PING_SLAVES,new PingSlavesStrategy(this)));
 
 	/**< \todo wstawić więcej strategii, ustalić w którym pliku powinny znajdować się strategie i je napisać */
 }

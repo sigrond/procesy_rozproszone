@@ -28,6 +28,7 @@ public:
     void listenToAll();
     void start();
     void triggerShutDown();
+    void sendToAll(message::Message* m);
 private:
     BlockingQueue<Event*>* blockingQueue;
     std::vector<Slave*>* slaves;

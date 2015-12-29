@@ -8,6 +8,8 @@
 #include <exception>
 #include <iostream>
 
+using namespace std;
+
 /** \brief Klasa opakowująca exception dla AdminServer
  */
 struct AdminServerException : std::exception
@@ -67,6 +69,17 @@ AdminServer::~AdminServer()
 	if(adminIP!=nullptr)
 	{
 		delete adminIP;
+		adminIP=nullptr;
+	}
+/*	if(connectionManager!=nullptr)
+	{
+		delete connectionManager;
+		connectionManager=nullptr;
+	}*/
+	if(blockingQueue!=nullptr)
+	{
+		delete blockingQueue;
+		blockingQueue=nullptr;
 	}
 }
 
@@ -93,6 +106,9 @@ void AdminServer::setBlockingQueue(BlockingQueue<Event*>* q)
 
 void AdminServer::start()
 {
+	#ifdef _DEBUG
+	cout<<"AdminServer::start()"<<endl;
+	#endif // _DEBUG
 	/**< \todo sprawdzenia i wyjątki */
 	shutDown=false;
     while(!shutDown)
@@ -104,6 +120,14 @@ void AdminServer::start()
 void AdminServer::triggerShutDown()
 {
 	shutDown=true;
+	#ifdef _DEBUG
+	cout<<"próbuję usunąć ip admina z ConnectionManager..."<<endl;
+	#endif // _DEBUG
+	connectionManager->remove(*(Ipv4*)adminIP);/**< ciekawe czy potrafi usunąć otwarte połączenie */
+	/**< wydaje mi się, że zablokuje się, bo jest zalockowany mutex na recive */
+	#ifdef _DEBUG
+	cout<<"udało się usunąć ip admina z ConnectionManager!"<<endl;
+	#endif // _DEBUG
 }
 
 

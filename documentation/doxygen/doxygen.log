@@ -50,8 +50,8 @@ error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/makefile:1
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/makefile:1:5: error: use of undeclared identifier 'g' [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/makefile:23:18: error: expected ';' after top level declarator [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:1:1: error: expected unqualified-id [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:160:52: error: expected unqualified-id [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:162:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:196:52: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:198:1: error: expected unqualified-id [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int] [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:7: error: use of undeclared identifier 'g' [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:19:3: error: invalid preprocessing directive [clang]
@@ -118,8 +118,8 @@ error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Connection
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Socket.hpp:13:10: fatal error: 'sys/types.h' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/SocketException.hpp:13:10: fatal error: 'string' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:1:1: error: expected unqualified-id [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:160:52: error: expected unqualified-id [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:162:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:196:52: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:198:1: error: expected unqualified-id [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/makefile:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int] [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/makefile:1:5: error: use of undeclared identifier 'g' [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/makefile:23:18: error: expected ';' after top level declarator [clang]
@@ -169,18 +169,18 @@ D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AgentServer.cpp:22:
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:25: warning: argument 'T' of command @param is not found in the argument list of BlockingQueue< T >::push_back(const T &element)
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:25: warning: The following parameters of BlockingQueue::push_back(const T &element) are not documented:
   parameter 'element'
-D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Controller.cpp:67: warning: argument 'std' of command @param is not found in the argument list of ControllerException::ControllerException(std::string s)
-D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Controller.cpp:67: warning: argument 'string' of command @param is not found in the argument list of ControllerException::ControllerException(std::string s)
-D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Controller.cpp:67: warning: The following parameters of ControllerException::ControllerException(std::string s) are not documented:
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Controller.cpp:70: warning: argument 'std' of command @param is not found in the argument list of ControllerException::ControllerException(std::string s)
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Controller.cpp:70: warning: argument 'string' of command @param is not found in the argument list of ControllerException::ControllerException(std::string s)
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Controller.cpp:70: warning: The following parameters of ControllerException::ControllerException(std::string s) are not documented:
   parameter 's'
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:27: warning: argument 'address' of command @param is not found in the argument list of Ip::Ip()
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:44: warning: Found unknown command `\bref'
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:71: warning: argument 'porównywany' of command @param is not found in the argument list of Ipv4::operator<(const Ipv4 &that) const
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:71: warning: The following parameters of Ipv4::operator<(const Ipv4 &that) const are not documented:
   parameter 'that'
-D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Model.cpp:23: warning: argument 'std' of command @param is not found in the argument list of ModelException::ModelException(std::string s)
-D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Model.cpp:23: warning: argument 'string' of command @param is not found in the argument list of ModelException::ModelException(std::string s)
-D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Model.cpp:23: warning: The following parameters of ModelException::ModelException(std::string s) are not documented:
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Model.cpp:26: warning: argument 'std' of command @param is not found in the argument list of ModelException::ModelException(std::string s)
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Model.cpp:26: warning: argument 'string' of command @param is not found in the argument list of ModelException::ModelException(std::string s)
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Model.cpp:26: warning: The following parameters of ModelException::ModelException(std::string s) are not documented:
   parameter 's'
 D:/Moje dokumenty/TIN/procesy_rozproszone/README.md:12: warning: Found unknown command `\documentation'
 D:/Moje dokumenty/TIN/procesy_rozproszone/README.md:12: warning: Found unknown command `\doxygen'

@@ -31,5 +31,7 @@ private:
 	bool shutDown;
 	std::mutex adminPingMutex;
 	std::condition_variable adminPingCond;
+	std::mutex slavesPingMutex;
+	std::condition_variable slavesPingCond;
 };
 

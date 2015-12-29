@@ -41,6 +41,7 @@ private:
 	friend class Strategy;
 	friend class AddAgentStrategy;
 	friend class PingAdminStrategy;
+	friend class PingSlavesStrategy;
     AdminServer* adminServer;
     AgentServer* agentServer;
     Model* model;
