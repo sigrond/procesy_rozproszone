@@ -13,6 +13,7 @@ var searchData=
   ['setslaveip',['setSlaveIP',['../classSlave.html#a3332d82ea84ddc81a69cb8a030a46319',1,'Slave']]],
   ['setstate',['setState',['../classSlave.html#a7733aa198c2281b760030cd62915cab8',1,'Slave']]],
   ['settask',['setTask',['../classSlave.html#ac80dabc88a0b32745527fc3d5c5f76c8',1,'Slave']]],
+  ['settaskfinished',['setTaskFinished',['../classAgentServer.html#a14c0ad3b1a17a161c659fea1710b030c',1,'AgentServer']]],
   ['setup',['setup',['../classController.html#aaff2c0ac01c4d7a6b78718ac8a411c4b',1,'Controller']]],
   ['slave',['Slave',['../classSlave.html#a4a5fa6347b8a8504212fb9647fc5d21e',1,'Slave']]],
   ['socket',['Socket',['../classSocket.html#a7c3256c4fc6e2c603df73201049fae5a',1,'Socket::Socket()'],['../classSocket.html#ab999f4a1ead13959bfd7aa89c72a6ca5',1,'Socket::Socket(int msgsock)']]],

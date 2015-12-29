@@ -126,21 +126,22 @@ $(document).ready(function(){initNavTree('classAgentServer.html','');});
   <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#a75068a7f83936d0171b46d5dcb99a7b4">listenToAll</a>()</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classAgentServer.html#a962a98aa505eb47f0adc3e59c66cd461">sendToAll</a>(message::Message *m)</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#ab79904b49f1f80c51b9bfdbde2596d00">setBlockingQueue</a>(BlockingQueue&lt; Event * &gt; *)</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classAgentServer.html#a998eef5867d468c1023604ed25f9143f">shutDown</a></td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#a3b8ec30077d0b9dec0d855bd5f54f706">slaves</a></td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classAgentServer.html#af5357792b902b9894e02afcd388b9bd5">slavesMutex</a></td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#aec3723633cda932f432249930ea81694">start</a>()</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classAgentServer.html#adc4f968c94d4973c8dcb44784a6aae1b">tasks</a></td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#af9454749c9381756b720f7364e003d0f">triggerShutDown</a>()</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classAgentServer.html#a71223544c86014abf73ec7b978968fc0">waitForTaskCondition</a></td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#aaa47ca3b1032a3dc901a4e994cb4b37e">waitForTaskMutex</a></td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classAgentServer.html#afb8fd8d61568af65a604af199a9f3afc">~AgentServer</a>()</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classAgentServer.html#a14c0ad3b1a17a161c659fea1710b030c">setTaskFinished</a>(unsigned long taskID)</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#a998eef5867d468c1023604ed25f9143f">shutDown</a></td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classAgentServer.html#a3b8ec30077d0b9dec0d855bd5f54f706">slaves</a></td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#af5357792b902b9894e02afcd388b9bd5">slavesMutex</a></td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classAgentServer.html#aec3723633cda932f432249930ea81694">start</a>()</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#adc4f968c94d4973c8dcb44784a6aae1b">tasks</a></td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classAgentServer.html#af9454749c9381756b720f7364e003d0f">triggerShutDown</a>()</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#a71223544c86014abf73ec7b978968fc0">waitForTaskCondition</a></td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classAgentServer.html#aaa47ca3b1032a3dc901a4e994cb4b37e">waitForTaskMutex</a></td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#afb8fd8d61568af65a604af199a9f3afc">~AgentServer</a>()</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Wygenerowano Wt, 29 gru 2015 18:30:07 dla LOTC programem
+    <li class="footer">Wygenerowano Wt, 29 gru 2015 20:50:33 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

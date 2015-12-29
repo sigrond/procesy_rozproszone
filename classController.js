@@ -11,6 +11,8 @@ var classController =
     [ "triggerShutDown", "classController.html#a516427a8bb2fc0e0f46f94c318dd1610", null ],
     [ "AddAgentStrategy", "classController.html#a7b60a1ac92fa8023a6b5588523d1559a", null ],
     [ "AddTaskStrategy", "classController.html#a270677775098cdc4b8837965b1cd2b88", null ],
+    [ "MessageFromAdminStrategy", "classController.html#a489a10c44547f01674f7a670f7fe3b1c", null ],
+    [ "MessageFromAgentStrategy", "classController.html#a08b2043a6f1fb5c2b1295c120a105701", null ],
     [ "PingAdminStrategy", "classController.html#a7c992b2f181be0a5de5f59dde02cd123", null ],
     [ "PingSlavesStrategy", "classController.html#ac74637f499f3dbdc9fe1f17f752f7e2b", null ],
     [ "Strategy", "classController.html#a715e3530b1793ba3c387459982c6a94e", null ],

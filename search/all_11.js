@@ -16,6 +16,7 @@ var searchData=
   ['setslaveip',['setSlaveIP',['../classSlave.html#a3332d82ea84ddc81a69cb8a030a46319',1,'Slave']]],
   ['setstate',['setState',['../classSlave.html#a7733aa198c2281b760030cd62915cab8',1,'Slave']]],
   ['settask',['setTask',['../classSlave.html#ac80dabc88a0b32745527fc3d5c5f76c8',1,'Slave']]],
+  ['settaskfinished',['setTaskFinished',['../classAgentServer.html#a14c0ad3b1a17a161c659fea1710b030c',1,'AgentServer']]],
   ['setup',['setup',['../classController.html#aaff2c0ac01c4d7a6b78718ac8a411c4b',1,'Controller']]],
   ['shut_5fdown',['SHUT_DOWN',['../Event_8hpp.html#a2628ea8d12e8b2563c32f05dc7fff6faa589c3ad647ceca3400a4bead6acdd94b',1,'Event.hpp']]],
   ['shutdown',['shutDown',['../classAdminServer.html#aaad5d3a003688fc71db31d99b7d78922',1,'AdminServer::shutDown()'],['../classAgentServer.html#a998eef5867d468c1023604ed25f9143f',1,'AgentServer::shutDown()'],['../classModel.html#a85354b9b623f9b4785b0e915bc33ed42',1,'Model::shutDown()']]],

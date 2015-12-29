@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pingadminstrategy',['PingAdminStrategy',['../classController.html#a7c992b2f181be0a5de5f59dde02cd123',1,'Controller']]],
-  ['pingslavesstrategy',['PingSlavesStrategy',['../classController.html#ac74637f499f3dbdc9fe1f17f752f7e2b',1,'Controller']]]
+  ['messagefromadminstrategy',['MessageFromAdminStrategy',['../classController.html#a489a10c44547f01674f7a670f7fe3b1c',1,'Controller']]],
+  ['messagefromagentstrategy',['MessageFromAgentStrategy',['../classController.html#a08b2043a6f1fb5c2b1295c120a105701',1,'Controller']]]
 ];
