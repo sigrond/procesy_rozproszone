@@ -52,6 +52,7 @@ var hierarchy =
       [ "MessageFromAdminStrategy", "classMessageFromAdminStrategy.html", null ],
       [ "MessageFromAgentStrategy", "classMessageFromAgentStrategy.html", null ],
       [ "PingAdminStrategy", "classPingAdminStrategy.html", null ],
+      [ "PingSlavesStrategy", "classPingSlavesStrategy.html", null ],
       [ "ShutDownStrategy", "classShutDownStrategy.html", null ],
       [ "TestStrategy", "classTestStrategy.html", null ]
     ] ],

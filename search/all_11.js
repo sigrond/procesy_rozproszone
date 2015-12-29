@@ -4,6 +4,7 @@ var searchData=
   ['saddr',['saddr',['../classSocketIp4.html#ad6827e206b93d7c007c1d23e8071caf7',1,'SocketIp4::saddr()'],['../classSocketIp6.html#a5b234db3b75fabf599f2d60f68670efe',1,'SocketIp6::saddr()']]],
   ['send',['send',['../classAgentClient.html#ab79b29db3558100968db3ed531a23a06',1,'AgentClient::send()'],['../classConnectionManager.html#addf9fe1fde3177c3e1ec7af11a6f9235',1,'ConnectionManager::send(const Ipv4 &amp;ip, const message::Message &amp;msg)'],['../classConnectionManager.html#a3f31fdc2f299b8bd68fd43746973b9da',1,'ConnectionManager::send(const Ipv6 &amp;ip, const message::Message &amp;msg)'],['../classConnection.html#ac8abd34010a78efd01e2af9aa7fa92fd',1,'Connection::send()'],['../classSocket.html#afe708d0a437f0b966fef606b2a2af2b0',1,'Socket::send()'],['../classSocketIp4.html#a9816ce4c69916b3472708975f056ef02',1,'SocketIp4::send()'],['../classTestMessage.html#aae1b4b880bdc6b1a6a62621cabf784b6',1,'TestMessage::send()']]],
   ['sendcommand',['sendCommand',['../classConsoleClient.html#ab7f55eaf0fdee145bc6761d194c5d242',1,'ConsoleClient']]],
+  ['sendtoall',['sendToAll',['../classAgentServer.html#a962a98aa505eb47f0adc3e59c66cd461',1,'AgentServer']]],
   ['serverunittests_2ecpp',['ServerUnitTests.cpp',['../ServerUnitTests_8cpp.html',1,'']]],
   ['setadminserver',['setAdminServer',['../classController.html#ad75c2e9788ecb8dba44650747076fe92',1,'Controller']]],
   ['setagentserver',['setAgentServer',['../classController.html#a84a816695c11ec17be45fc5def82c892',1,'Controller']]],
@@ -26,6 +27,8 @@ var searchData=
   ['slaveip',['slaveIP',['../classSlave.html#a19d385860a1b9743db1374e0cdf2e9f2',1,'Slave']]],
   ['slaves',['slaves',['../classAgentServer.html#a3b8ec30077d0b9dec0d855bd5f54f706',1,'AgentServer']]],
   ['slavesmutex',['slavesMutex',['../classAgentServer.html#af5357792b902b9894e02afcd388b9bd5',1,'AgentServer']]],
+  ['slavespingcond',['slavesPingCond',['../classModel.html#afc8795c30c4042a377ceab0b9b24da1e',1,'Model']]],
+  ['slavespingmutex',['slavesPingMutex',['../classModel.html#acd71bdf18dfbd1ce7035fe60e8562861',1,'Model']]],
   ['slavethread',['slaveThread',['../classSlave.html#aab6e876c5a47bbe247a2f825aad81e8f',1,'Slave']]],
   ['socket',['Socket',['../classSocket.html',1,'Socket'],['../classSocket.html#a7c3256c4fc6e2c603df73201049fae5a',1,'Socket::Socket()'],['../classSocket.html#ab999f4a1ead13959bfd7aa89c72a6ca5',1,'Socket::Socket(int msgsock)'],['../classConnection.html#a4bf787fc71e664c6b23d41d303d2a655',1,'Connection::socket()']]],
   ['socket_2ecpp',['Socket.cpp',['../Socket_8cpp.html',1,'']]],
@@ -47,6 +50,6 @@ var searchData=
   ['styl_20kodu_2emd',['Styl kodu.md',['../Styl_01kodu_8md.html',1,'']]],
   ['subtract',['SUBTRACT',['../classTestMessage.html#af8a868ce511495fe4020f7a5b380112ca289340a4b7b8933b2cd55d14f1b9a152',1,'TestMessage']]],
   ['syn',['SYN',['../namespacemessage.html#ae332e93affac4506495c232e3f8a2be3abab6eed0f7cd8bd721e728003b63b54d',1,'message']]],
-  ['synmessage',['synMessage',['../classmessage_1_1synMessage.html#adc773263592bfcd5ae421c8a476b7461',1,'message::synMessage']]],
-  ['synmessage',['synMessage',['../classmessage_1_1synMessage.html',1,'message']]]
+  ['synmessage',['synMessage',['../classmessage_1_1synMessage.html',1,'message']]],
+  ['synmessage',['synMessage',['../classmessage_1_1synMessage.html#adc773263592bfcd5ae421c8a476b7461',1,'message::synMessage']]]
 ];

@@ -6,6 +6,7 @@ var classAgentServer =
     [ "connect", "classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd", null ],
     [ "listen", "classAgentServer.html#a001e979f72cf3d360d424cea0df70165", null ],
     [ "listenToAll", "classAgentServer.html#a75068a7f83936d0171b46d5dcb99a7b4", null ],
+    [ "sendToAll", "classAgentServer.html#a962a98aa505eb47f0adc3e59c66cd461", null ],
     [ "setBlockingQueue", "classAgentServer.html#ab79904b49f1f80c51b9bfdbde2596d00", null ],
     [ "start", "classAgentServer.html#aec3723633cda932f432249930ea81694", null ],
     [ "triggerShutDown", "classAgentServer.html#af9454749c9381756b720f7364e003d0f", null ],

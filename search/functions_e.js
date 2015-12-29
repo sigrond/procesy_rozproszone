@@ -2,6 +2,7 @@ var searchData=
 [
   ['send',['send',['../classAgentClient.html#ab79b29db3558100968db3ed531a23a06',1,'AgentClient::send()'],['../classConnectionManager.html#addf9fe1fde3177c3e1ec7af11a6f9235',1,'ConnectionManager::send(const Ipv4 &amp;ip, const message::Message &amp;msg)'],['../classConnectionManager.html#a3f31fdc2f299b8bd68fd43746973b9da',1,'ConnectionManager::send(const Ipv6 &amp;ip, const message::Message &amp;msg)'],['../classConnection.html#ac8abd34010a78efd01e2af9aa7fa92fd',1,'Connection::send()'],['../classSocket.html#afe708d0a437f0b966fef606b2a2af2b0',1,'Socket::send()'],['../classSocketIp4.html#a9816ce4c69916b3472708975f056ef02',1,'SocketIp4::send()'],['../classTestMessage.html#aae1b4b880bdc6b1a6a62621cabf784b6',1,'TestMessage::send()']]],
   ['sendcommand',['sendCommand',['../classConsoleClient.html#ab7f55eaf0fdee145bc6761d194c5d242',1,'ConsoleClient']]],
+  ['sendtoall',['sendToAll',['../classAgentServer.html#a962a98aa505eb47f0adc3e59c66cd461',1,'AgentServer']]],
   ['setadminserver',['setAdminServer',['../classController.html#ad75c2e9788ecb8dba44650747076fe92',1,'Controller']]],
   ['setagentserver',['setAgentServer',['../classController.html#a84a816695c11ec17be45fc5def82c892',1,'Controller']]],
   ['setblockingqueue',['setBlockingQueue',['../classAdminServer.html#a3ecf7c2747f0413d3d58f7a9f4dd7ae2',1,'AdminServer::setBlockingQueue()'],['../classAgentServer.html#ab79904b49f1f80c51b9bfdbde2596d00',1,'AgentServer::setBlockingQueue()'],['../classModel.html#a61cb5a5695ff5a6555ceaec02b2a16b9',1,'Model::setBlockingQueue()']]],

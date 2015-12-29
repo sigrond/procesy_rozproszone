@@ -110,7 +110,8 @@ var files =
       [ "MessageFromAdminStrategy", "classMessageFromAdminStrategy.html", "classMessageFromAdminStrategy" ],
       [ "MessageFromAgentStrategy", "classMessageFromAgentStrategy.html", "classMessageFromAgentStrategy" ],
       [ "AddAgentStrategy", "classAddAgentStrategy.html", "classAddAgentStrategy" ],
-      [ "PingAdminStrategy", "classPingAdminStrategy.html", "classPingAdminStrategy" ]
+      [ "PingAdminStrategy", "classPingAdminStrategy.html", "classPingAdminStrategy" ],
+      [ "PingSlavesStrategy", "classPingSlavesStrategy.html", "classPingSlavesStrategy" ]
     ] ],
     [ "Strategy.hpp", "Strategy_8hpp.html", [
       [ "Strategy", "classStrategy.html", "classStrategy" ]

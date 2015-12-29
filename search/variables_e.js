@@ -6,6 +6,8 @@ var searchData=
   ['slaveip',['slaveIP',['../classSlave.html#a19d385860a1b9743db1374e0cdf2e9f2',1,'Slave']]],
   ['slaves',['slaves',['../classAgentServer.html#a3b8ec30077d0b9dec0d855bd5f54f706',1,'AgentServer']]],
   ['slavesmutex',['slavesMutex',['../classAgentServer.html#af5357792b902b9894e02afcd388b9bd5',1,'AgentServer']]],
+  ['slavespingcond',['slavesPingCond',['../classModel.html#afc8795c30c4042a377ceab0b9b24da1e',1,'Model']]],
+  ['slavespingmutex',['slavesPingMutex',['../classModel.html#acd71bdf18dfbd1ce7035fe60e8562861',1,'Model']]],
   ['slavethread',['slaveThread',['../classSlave.html#aab6e876c5a47bbe247a2f825aad81e8f',1,'Slave']]],
   ['socket',['socket',['../classConnection.html#a4bf787fc71e664c6b23d41d303d2a655',1,'Connection']]],
   ['sockfd',['sockfd',['../classSocket.html#a7870cb67ff277faa02663927f685e537',1,'Socket']]],

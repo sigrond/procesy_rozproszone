@@ -11,6 +11,7 @@ var searchData=
   ['pingmessage',['pingMessage',['../classmessage_1_1pingMessage.html',1,'message']]],
   ['pingmessage',['pingMessage',['../classmessage_1_1pingMessage.html#a64422605fdf518316e1aae5344bc984e',1,'message::pingMessage']]],
   ['pingslaves',['pingSlaves',['../classModel.html#a826190f531cd61ae141c48313a85ad91',1,'Model']]],
+  ['pingslavesstrategy',['PingSlavesStrategy',['../classPingSlavesStrategy.html',1,'PingSlavesStrategy'],['../classController.html#ac74637f499f3dbdc9fe1f17f752f7e2b',1,'Controller::PingSlavesStrategy()']]],
   ['pop_5ffront',['pop_front',['../classBlockingQueue.html#a33e18f760365430cee38721dfd0abf5e',1,'BlockingQueue']]],
   ['port',['PORT',['../Socket_8hpp.html#a732dec0ff237041537a9b46a40de8a59',1,'PORT():&#160;Socket.hpp'],['../wireshark_2test_01protocol_2application_2client_8cpp.html#a11717c934f77ad5167dac5d28562d85a',1,'PORT():&#160;client.cpp'],['../wireshark_2test_01protocol_2application_2server_8cpp.html#a11717c934f77ad5167dac5d28562d85a',1,'PORT():&#160;server.cpp']]],
   ['projekt_20wstępny_2etex',['Projekt Wstępny.tex',['../Projekt_01Wst_xC4_x99pny_8tex.html',1,'']]],

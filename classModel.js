@@ -12,5 +12,7 @@ var classModel =
     [ "adminPingMutex", "classModel.html#aa639b2ea5b9d554d79acd043d606d0a1", null ],
     [ "blockingQueue", "classModel.html#a2f76e69b1d641863d5cff716b37783f4", null ],
     [ "controller", "classModel.html#a830195401b77e9b56009e4bac37ae6f3", null ],
-    [ "shutDown", "classModel.html#a85354b9b623f9b4785b0e915bc33ed42", null ]
+    [ "shutDown", "classModel.html#a85354b9b623f9b4785b0e915bc33ed42", null ],
+    [ "slavesPingCond", "classModel.html#afc8795c30c4042a377ceab0b9b24da1e", null ],
+    [ "slavesPingMutex", "classModel.html#acd71bdf18dfbd1ce7035fe60e8562861", null ]
 ];

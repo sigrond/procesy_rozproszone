@@ -30,6 +30,7 @@ var annotated =
     [ "Model", "classModel.html", "classModel" ],
     [ "ModelException", "structModelException.html", "structModelException" ],
     [ "PingAdminStrategy", "classPingAdminStrategy.html", "classPingAdminStrategy" ],
+    [ "PingSlavesStrategy", "classPingSlavesStrategy.html", "classPingSlavesStrategy" ],
     [ "ShutDownStrategy", "classShutDownStrategy.html", "classShutDownStrategy" ],
     [ "Slave", "classSlave.html", "classSlave" ],
     [ "Socket", "classSocket.html", "classSocket" ],
