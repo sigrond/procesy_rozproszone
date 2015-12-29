@@ -1,4 +1,10 @@
 29 December 2015
+   released version 0.1.44 of server
+
+     Change log:
+        -Added: odsyłanie wiadomości do admina
+
+29 December 2015
    released version 0.1.43 of server
 
      Change log:

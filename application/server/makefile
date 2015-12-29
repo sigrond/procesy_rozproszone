@@ -9,7 +9,7 @@ OBJECTS = $(FILES:.cpp=.o)
 #	$(CXX) $(DFLAGS) $(CFLAGS) $(LFLAGS) -o bin/Debug/server $(FILES)
 
 Debug: $(FILES:%.cpp=%.o)
-	$(CXX) $(DFLAGS) $(CPPFLAGS) $(LFLAGS) -MD -MP -o bin/Debug/server $^
+	$(CXX) $(DFLAGS) $(CPPFLAGS) $(LFLAGS) -MMD -MP -o bin/Debug/server $^
 
 -include $(FILES:%.cpp=%.d)
 

@@ -178,9 +178,9 @@ public:
 		fileMessage* fm;
 		retMessage* rm;
 		unsigned char exitStatus;
-		unsigned long taskId;
+		unsigned long taskID;
 		string name;
-		fstream file;
+		ofstream file;
 		switch(category)/**< \todo obsługa kategorii */
 		{
 		case (int)Category::HOST:
@@ -203,7 +203,8 @@ public:
 			break;
 		case (int)Category::FILE:
 			fm=(fileMessage*)data;
-			/**< \todo chyba odesłać do administratora */
+			// chyba odesłać do administratora
+			((Controller*)controller)->adminServer->connect((Message*)data);
 			break;
 		case (int)Category::RET:
 			//odbieranie wyników zadań
@@ -211,13 +212,13 @@ public:
 			/**< \todo włąściwie to całą tą wiadomość można wysłać adminowi i tylko zaznaczyć, zadanie jako wykonane */
 			exitStatus=rm->getExitStatus();//to chyba tylko obchodzi administratora
 			/**< \todo odesłać status zakończenia do admina */
-			taskId=rm->getTaskId();
+			taskID=rm->getTaskId();
 			//zaznaczamy zadanie jako wykonane
 			((Controller*)controller)->agentServer->setTaskFinished(taskID);
 			name=rm->getFilename();
-			file=rm->getFile();
+			//file=rm->getFile();
 			//odsyłamy wiadomość
-			/**< \todo odesłać wiadomość do admina */
+			((Controller*)controller)->adminServer->connect((Message*)data);
 			break;
 		case (int)Category::SYN:
 			break;
