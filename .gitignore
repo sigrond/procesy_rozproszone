@@ -35,3 +35,7 @@
 *.md5
 \documentation\doxygen\html
 /documentation/doxygen/html
+
+# Dependencies
+*.d
+
