@@ -32,6 +32,7 @@ public:
     void triggerShutDown();
     void sendToAll(message::Message* m);
     void addTask(Task* task);
+    void setTaskFinished(unsigned long taskID);
 private:
     BlockingQueue<Event*>* blockingQueue;
     std::vector<Slave*>* slaves;

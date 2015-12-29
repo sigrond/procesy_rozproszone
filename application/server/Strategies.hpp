@@ -20,6 +20,7 @@
 #include <string>
 #include <thread>
 #include <utility>
+#include <fstream>
 
 
 /** \brief Testowa klasa strategii.
@@ -93,6 +94,10 @@ public:
 		hostMessage* hm;
 		unsigned int hostsNumber;
 		std::vector<Ip>* agentIPs;
+		taskMessage* tm;
+		fileMessage* fm;
+		string name;
+		fstream file;
 		category=((Message*)data)->getCategory();
 		switch(category)/**< \todo obsługa kategorii */
 		{
@@ -109,12 +114,35 @@ public:
 					((Controller*)controller)->blockingQueue->push_back(new Event(ADD_AGENT,&agentIPs->at(i)));
 				}
 			}
+			/**< \todo usuwanie agentów */
+			/**< \todo sprawdzanie stanu agentów */
 			break;
 		case (int)Category::TASK:
+			//zlecenie wykonania zadania
+			tm=(taskMessage*)data;
+			subCategory=tm->getSubcategory();
+			//dodanie zadania
+			if(subCategory==(unsigned char)TaskSub::T_ADD)
+			{
+				/**< \todo znaleźć plik i dodać do zadań */
+			}
+			//uruchomienie zadania
+			else if(subCategory==(unsigned char)TaskSub::T_RUN)
+			{
+
+			}
+			/**< \todo pozostałe podkategorie task */
 			break;
 		case (int)Category::DEP:
 			break;
 		case (int)Category::FILE:
+			fm=(fileMessage*)data;
+			/**< \todo zapisać plik na dysku */
+			//tutaj raczej nie znamy id zadania, bo dopiero na podstawie tego pliku go utworzymy dodając zadanie
+			name=fm->getFilename();
+			file.open(name.c_str());/**< \todo za mało wiadomości o niekompletnej klasie fileMessage */
+
+			/**< \todo trzeba ustalić co dokładnie może zrobić administrator */
 			break;
 		case (int)Category::RET:
 			break;
@@ -144,19 +172,52 @@ public:
 	{
 		using namespace std;
 		using namespace message;
-		unsigned char category;
+		unsigned char category, subCategory;
 		category=((Message*)data)->getCategory();
+		taskMessage* tm;
+		fileMessage* fm;
+		retMessage* rm;
+		unsigned char exitStatus;
+		unsigned long taskId;
+		string name;
+		fstream file;
 		switch(category)/**< \todo obsługa kategorii */
 		{
 		case (int)Category::HOST:
 			break;
 		case (int)Category::TASK:
+			//odbieranie komunikatów od agentów
+			tm=(taskMessage*)data;
+			subCategory=tm->getSubcategory();
+			//zadanie gotowe do przetwarzania
+			if(subCategory==(unsigned char)TaskSub::T_OK)
+			{
+				/**< \todo wysłać task run */
+			}
+			else if(subCategory==(unsigned char)TaskSub::T_NOK)
+			{
+				/**< \todo yyy, nic nie robić? */
+			}
 			break;
 		case (int)Category::DEP:
 			break;
 		case (int)Category::FILE:
+			fm=(fileMessage*)data;
+			/**< \todo chyba odesłać do administratora */
 			break;
 		case (int)Category::RET:
+			//odbieranie wyników zadań
+			rm=(retMessage*)data;
+			/**< \todo włąściwie to całą tą wiadomość można wysłać adminowi i tylko zaznaczyć, zadanie jako wykonane */
+			exitStatus=rm->getExitStatus();//to chyba tylko obchodzi administratora
+			/**< \todo odesłać status zakończenia do admina */
+			taskId=rm->getTaskId();
+			//zaznaczamy zadanie jako wykonane
+			((Controller*)controller)->agentServer->setTaskFinished(taskID);
+			name=rm->getFilename();
+			file=rm->getFile();
+			//odsyłamy wiadomość
+			/**< \todo odesłać wiadomość do admina */
 			break;
 		case (int)Category::SYN:
 			break;

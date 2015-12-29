@@ -97,6 +97,11 @@ void AgentServer::listen(Slave* who)
 		cout<<"AgentServer::listen odebrano: "<<m<<endl;
 		#endif // _DEBUG
 		blockingQueue->push_back(new Event(MESSAGE_FROM_AGENT_SERVER,m));
+		//jeśli przyszło coś od agenta i nie wykonyuje on zadania, to można przydzielić mu zadanie
+		if(who->getTask()==nullptr)
+		{
+			who->ready=true;
+		}
 	}
 	who->setListening(false);
 }
@@ -307,7 +312,7 @@ void AgentServer::distributeTasks()
 			#ifdef _DEBUG
 			cout<<"próbuję rozdysponować zadania do agentów i: "<<i<<" ..."<<endl;
 			#endif // _DEBUG
-            if(slaves->at(i)->ready)
+            if(slaves->at(i)->ready)/**< \todo zaznaczać agenta jako ready kiedy coś odpowie */
 			{
 				if(it==tasks.end())
 				{
@@ -355,7 +360,36 @@ void AgentServer::distributeTasks()
 
 }
 
+void AgentServer::setTaskFinished(unsigned long taskID)
+{
+	for(unsigned int i=0;i<slaves->size();i++)
+	{
+		if(slaves->at(i)->getTask()->taskID==taskID)
+		{
+			slaves->at(i)->getTask()->done=true;
+			slaves->at(i)->getTask()->underExecution=false;
+			slaves->at(i)->setTask(nullptr);
+			slaves->at(i)->ready=true;
+			unique_lock<mutex> allListeningMutexLock(allListeningMutex);
+			allListeningMutexLock.unlock();
+			allListeningCondition.notify_one();//odnowić nasłuchiwanie
+		}
+	}
+	/*std::multiset<Task*,cmp>::iterator it;
+	for(it=tasks.begin();!tasks.empty() && it!=tasks.end();it++)
+	{
+		if((*it)->taskID==taskID)
+		{
+			(*it)->done=true;
+			(*it)->underExecution=false;
+			break;
+		}
+	}*/
 
+	unique_lock<mutex> waitForTaskMutexLock(waitForTaskMutex);
+    waitForTaskMutexLock.unlock();
+    waitForTaskCondition.notify_one();//przydzielić następne zadania
+}
 
 
 
