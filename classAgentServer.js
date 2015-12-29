@@ -1,9 +1,12 @@
 var classAgentServer =
 [
+    [ "cmp", "structAgentServer_1_1cmp.html", "structAgentServer_1_1cmp" ],
     [ "AgentServer", "classAgentServer.html#ae00b5d7d78d9786b11a396246710a621", null ],
     [ "~AgentServer", "classAgentServer.html#afb8fd8d61568af65a604af199a9f3afc", null ],
     [ "addSlave", "classAgentServer.html#a57d551fc559b7800a697a84e2a8e4cf7", null ],
+    [ "addTask", "classAgentServer.html#ae7b89b5da7cd9e7a1aa21093be7ed2e5", null ],
     [ "connect", "classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd", null ],
+    [ "distributeTasks", "classAgentServer.html#a8f9a076ca22b4025d0ac5ba08c82c858", null ],
     [ "listen", "classAgentServer.html#a001e979f72cf3d360d424cea0df70165", null ],
     [ "listenToAll", "classAgentServer.html#a75068a7f83936d0171b46d5dcb99a7b4", null ],
     [ "sendToAll", "classAgentServer.html#a962a98aa505eb47f0adc3e59c66cd461", null ],
@@ -16,5 +19,8 @@ var classAgentServer =
     [ "connectionManager", "classAgentServer.html#a88defc2eaaefc2cbfe8cbfdc70d50080", null ],
     [ "shutDown", "classAgentServer.html#a998eef5867d468c1023604ed25f9143f", null ],
     [ "slaves", "classAgentServer.html#a3b8ec30077d0b9dec0d855bd5f54f706", null ],
-    [ "slavesMutex", "classAgentServer.html#af5357792b902b9894e02afcd388b9bd5", null ]
+    [ "slavesMutex", "classAgentServer.html#af5357792b902b9894e02afcd388b9bd5", null ],
+    [ "tasks", "classAgentServer.html#adc4f968c94d4973c8dcb44784a6aae1b", null ],
+    [ "waitForTaskCondition", "classAgentServer.html#a71223544c86014abf73ec7b978968fc0", null ],
+    [ "waitForTaskMutex", "classAgentServer.html#aaa47ca3b1032a3dc901a4e994cb4b37e", null ]
 ];

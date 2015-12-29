@@ -30,7 +30,7 @@ var searchData=
   ['slavespingcond',['slavesPingCond',['../classModel.html#afc8795c30c4042a377ceab0b9b24da1e',1,'Model']]],
   ['slavespingmutex',['slavesPingMutex',['../classModel.html#acd71bdf18dfbd1ce7035fe60e8562861',1,'Model']]],
   ['slavethread',['slaveThread',['../classSlave.html#aab6e876c5a47bbe247a2f825aad81e8f',1,'Slave']]],
-  ['socket',['Socket',['../classSocket.html',1,'Socket'],['../classSocket.html#a7c3256c4fc6e2c603df73201049fae5a',1,'Socket::Socket()'],['../classSocket.html#ab999f4a1ead13959bfd7aa89c72a6ca5',1,'Socket::Socket(int msgsock)'],['../classConnection.html#a4bf787fc71e664c6b23d41d303d2a655',1,'Connection::socket()']]],
+  ['socket',['Socket',['../classSocket.html',1,'Socket'],['../classConnection.html#a4bf787fc71e664c6b23d41d303d2a655',1,'Connection::socket()'],['../classSocket.html#a7c3256c4fc6e2c603df73201049fae5a',1,'Socket::Socket()'],['../classSocket.html#ab999f4a1ead13959bfd7aa89c72a6ca5',1,'Socket::Socket(int msgsock)']]],
   ['socket_2ecpp',['Socket.cpp',['../Socket_8cpp.html',1,'']]],
   ['socket_2ehpp',['Socket.hpp',['../Socket_8hpp.html',1,'']]],
   ['socketexception_2ecpp',['SocketException.cpp',['../SocketException_8cpp.html',1,'']]],

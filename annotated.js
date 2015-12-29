@@ -4,6 +4,7 @@ var annotated =
     [ "message", "namespacemessage.html", "namespacemessage" ],
     [ "AcceptSockEx", "classAcceptSockEx.html", "classAcceptSockEx" ],
     [ "AddAgentStrategy", "classAddAgentStrategy.html", "classAddAgentStrategy" ],
+    [ "AddTaskStrategy", "classAddTaskStrategy.html", "classAddTaskStrategy" ],
     [ "AdminServer", "classAdminServer.html", "classAdminServer" ],
     [ "AdminServerException", "structAdminServerException.html", "structAdminServerException" ],
     [ "AgentClient", "classAgentClient.html", "classAgentClient" ],

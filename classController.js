@@ -10,6 +10,7 @@ var classController =
     [ "start", "classController.html#ad535ad74055e645b7f44b7feeb4e82a8", null ],
     [ "triggerShutDown", "classController.html#a516427a8bb2fc0e0f46f94c318dd1610", null ],
     [ "AddAgentStrategy", "classController.html#a7b60a1ac92fa8023a6b5588523d1559a", null ],
+    [ "AddTaskStrategy", "classController.html#a270677775098cdc4b8837965b1cd2b88", null ],
     [ "PingAdminStrategy", "classController.html#a7c992b2f181be0a5de5f59dde02cd123", null ],
     [ "PingSlavesStrategy", "classController.html#ac74637f499f3dbdc9fe1f17f752f7e2b", null ],
     [ "Strategy", "classController.html#a715e3530b1793ba3c387459982c6a94e", null ],

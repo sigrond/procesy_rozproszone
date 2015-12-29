@@ -146,6 +146,8 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:a826190f531cd61ae141c48313a85ad91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd5afe58ddcc59ce2ad5445aef3a6d27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#abd5afe58ddcc59ce2ad5445aef3a6d27">triggerShutDown</a> ()</td></tr>
 <tr class="separator:abd5afe58ddcc59ce2ad5445aef3a6d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a160b44b67ed3c952b28bbea0582463f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classModel.html#a160b44b67ed3c952b28bbea0582463f2">addTask</a> (std::string s)</td></tr>
+<tr class="separator:a160b44b67ed3c952b28bbea0582463f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
@@ -167,7 +169,7 @@ Atrybuty prywatne</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>klasa modelu </p>
 
-<p>Definicja w linii <a class="el" href="Model_8hpp_source.html#l00017">17</a> pliku <a class="el" href="Model_8hpp_source.html">Model.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Model_8hpp_source.html#l00019">19</a> pliku <a class="el" href="Model_8hpp_source.html">Model.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a class="anchor" id="ae3b375de5f6df4faf74a95d64748e048"></a>
 <div class="memitem">
@@ -184,7 +186,7 @@ Atrybuty prywatne</h2></td></tr>
 
 <p>Definicja w linii <a class="el" href="Model_8cpp_source.html#l00042">42</a> pliku <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Model_8hpp_source.html#l00029">blockingQueue</a>, <a class="el" href="Model_8hpp_source.html#l00030">controller</a> i <a class="el" href="Model_8hpp_source.html#l00031">shutDown</a>.</p>
+<p>Odwołuje się do <a class="el" href="Model_8hpp_source.html#l00032">blockingQueue</a>, <a class="el" href="Model_8hpp_source.html#l00033">controller</a> i <a class="el" href="Model_8hpp_source.html#l00034">shutDown</a>.</p>
 
 <p>Odwołania w <a class="el" href="application_2server_2server_8cpp_source.html#l00023">main()</a>.</p>
 
@@ -200,6 +202,35 @@ Oto graf wywoływań tej funkcji:</div>
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a160b44b67ed3c952b28bbea0582463f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Model::addTask </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="Model_8cpp_source.html#l00119">119</a> pliku <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="Event_8hpp_source.html#l00021">ADD_TASK</a>, <a class="el" href="Model_8hpp_source.html#l00032">blockingQueue</a>, <a class="el" href="Event_8hpp_source.html#l00039">Event::Event()</a> i <a class="el" href="BlockingQueue_8cpp_source.html#l00027">BlockingQueue&lt; T &gt;::push_back()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classModel_a160b44b67ed3c952b28bbea0582463f2_cgraph.png" border="0" usemap="#classModel_a160b44b67ed3c952b28bbea0582463f2_cgraph" alt=""/></div>
+<map name="classModel_a160b44b67ed3c952b28bbea0582463f2_cgraph" id="classModel_a160b44b67ed3c952b28bbea0582463f2_cgraph">
+<area shape="rect" id="node2" href="classEvent.html#aa3df04d79205b62ea6d8171b36b7c6a6" title="Event::Event" alt="" coords="211,5,306,32"/><area shape="rect" id="node3" href="classBlockingQueue.html#aba9a92a9e6a732cd720c609d7e706c47" title="Dodanie niepodzielnie elementu na koniec kolejki. " alt="" coords="168,56,349,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a0ff8ce83743a023063d79cc7bcd1c0d3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -216,7 +247,7 @@ Oto graf wywoływań tej funkcji:</div>
 
 <p>Definicja w linii <a class="el" href="Model_8cpp_source.html#l00087">87</a> pliku <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Model_8hpp_source.html#l00029">blockingQueue</a>, <a class="el" href="Event_8hpp_source.html#l00038">Event::Event()</a>, <a class="el" href="Event_8hpp_source.html#l00019">PING_ADMIN</a>, <a class="el" href="BlockingQueue_8cpp_source.html#l00027">BlockingQueue&lt; T &gt;::push_back()</a> i <a class="el" href="Model_8hpp_source.html#l00031">shutDown</a>.</p>
+<p>Odwołuje się do <a class="el" href="Model_8hpp_source.html#l00032">blockingQueue</a>, <a class="el" href="Event_8hpp_source.html#l00039">Event::Event()</a>, <a class="el" href="Event_8hpp_source.html#l00019">PING_ADMIN</a>, <a class="el" href="BlockingQueue_8cpp_source.html#l00027">BlockingQueue&lt; T &gt;::push_back()</a> i <a class="el" href="Model_8hpp_source.html#l00034">shutDown</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
@@ -247,7 +278,7 @@ Oto graf wywołań dla tej funkcji:</div>
 
 <p>Definicja w linii <a class="el" href="Model_8cpp_source.html#l00103">103</a> pliku <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Model_8hpp_source.html#l00029">blockingQueue</a>, <a class="el" href="Event_8hpp_source.html#l00038">Event::Event()</a>, <a class="el" href="Event_8hpp_source.html#l00020">PING_SLAVES</a>, <a class="el" href="BlockingQueue_8cpp_source.html#l00027">BlockingQueue&lt; T &gt;::push_back()</a> i <a class="el" href="Model_8hpp_source.html#l00031">shutDown</a>.</p>
+<p>Odwołuje się do <a class="el" href="Model_8hpp_source.html#l00032">blockingQueue</a>, <a class="el" href="Event_8hpp_source.html#l00039">Event::Event()</a>, <a class="el" href="Event_8hpp_source.html#l00020">PING_SLAVES</a>, <a class="el" href="BlockingQueue_8cpp_source.html#l00027">BlockingQueue&lt; T &gt;::push_back()</a> i <a class="el" href="Model_8hpp_source.html#l00034">shutDown</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
@@ -276,7 +307,7 @@ Oto graf wywołań dla tej funkcji:</div>
 
 <p>Definicja w linii <a class="el" href="Model_8cpp_source.html#l00072">72</a> pliku <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Model_8hpp_source.html#l00029">blockingQueue</a> i <a class="el" href="Model_8hpp_source.html#l00030">controller</a>.</p>
+<p>Odwołuje się do <a class="el" href="Model_8hpp_source.html#l00032">blockingQueue</a> i <a class="el" href="Model_8hpp_source.html#l00033">controller</a>.</p>
 
 </div>
 </div>
@@ -295,7 +326,7 @@ Oto graf wywołań dla tej funkcji:</div>
 
 <p>Definicja w linii <a class="el" href="Model_8cpp_source.html#l00060">60</a> pliku <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Model_8hpp_source.html#l00029">blockingQueue</a>, <a class="el" href="Model_8hpp_source.html#l00030">controller</a>, <a class="el" href="Event_8hpp_source.html#l00034">Event::Event()</a>, <a class="el" href="BlockingQueue_8cpp_source.html#l00027">BlockingQueue&lt; T &gt;::push_back()</a>, <a class="el" href="Event_8hpp_source.html#l00014">SHUT_DOWN</a> i <a class="el" href="Event_8hpp_source.html#l00013">Test</a>.</p>
+<p>Odwołuje się do <a class="el" href="Model_8hpp_source.html#l00032">blockingQueue</a>, <a class="el" href="Model_8hpp_source.html#l00033">controller</a>, <a class="el" href="Event_8hpp_source.html#l00035">Event::Event()</a>, <a class="el" href="BlockingQueue_8cpp_source.html#l00027">BlockingQueue&lt; T &gt;::push_back()</a>, <a class="el" href="Event_8hpp_source.html#l00014">SHUT_DOWN</a> i <a class="el" href="Event_8hpp_source.html#l00013">Test</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
@@ -324,9 +355,9 @@ Oto graf wywołań dla tej funkcji:</div>
 
 <p>Definicja w linii <a class="el" href="Model_8cpp_source.html#l00050">50</a> pliku <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Model_8hpp_source.html#l00029">blockingQueue</a>.</p>
+<p>Odwołuje się do <a class="el" href="Model_8hpp_source.html#l00032">blockingQueue</a>.</p>
 
-<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00223">Controller::setup()</a>.</p>
+<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00224">Controller::setup()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -355,9 +386,9 @@ Oto graf wywoływań tej funkcji:</div>
 
 <p>Definicja w linii <a class="el" href="Model_8cpp_source.html#l00055">55</a> pliku <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Model_8hpp_source.html#l00030">controller</a>.</p>
+<p>Odwołuje się do <a class="el" href="Model_8hpp_source.html#l00033">controller</a>.</p>
 
-<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00223">Controller::setup()</a>.</p>
+<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00224">Controller::setup()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -385,9 +416,9 @@ Oto graf wywoływań tej funkcji:</div>
 
 <p>Definicja w linii <a class="el" href="Model_8cpp_source.html#l00114">114</a> pliku <a class="el" href="Model_8cpp_source.html">Model.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Model_8hpp_source.html#l00031">shutDown</a>.</p>
+<p>Odwołuje się do <a class="el" href="Model_8hpp_source.html#l00034">shutDown</a>.</p>
 
-<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00190">Controller::triggerShutDown()</a>.</p>
+<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00191">Controller::triggerShutDown()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -419,7 +450,7 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Model_8hpp_source.html#l00033">33</a> pliku <a class="el" href="Model_8hpp_source.html">Model.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Model_8hpp_source.html#l00036">36</a> pliku <a class="el" href="Model_8hpp_source.html">Model.hpp</a>.</p>
 
 </div>
 </div>
@@ -441,7 +472,7 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Model_8hpp_source.html#l00032">32</a> pliku <a class="el" href="Model_8hpp_source.html">Model.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Model_8hpp_source.html#l00035">35</a> pliku <a class="el" href="Model_8hpp_source.html">Model.hpp</a>.</p>
 
 </div>
 </div>
@@ -463,9 +494,9 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Model_8hpp_source.html#l00029">29</a> pliku <a class="el" href="Model_8hpp_source.html">Model.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Model_8hpp_source.html#l00032">32</a> pliku <a class="el" href="Model_8hpp_source.html">Model.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Model_8cpp_source.html#l00042">Model()</a>, <a class="el" href="Model_8cpp_source.html#l00087">pingAdmin()</a>, <a class="el" href="Model_8cpp_source.html#l00103">pingSlaves()</a>, <a class="el" href="Model_8cpp_source.html#l00072">pushAddAgent()</a>, <a class="el" href="Model_8cpp_source.html#l00060">pushTestEvents()</a> i <a class="el" href="Model_8cpp_source.html#l00050">setBlockingQueue()</a>.</p>
+<p>Odwołania w <a class="el" href="Model_8cpp_source.html#l00119">addTask()</a>, <a class="el" href="Model_8cpp_source.html#l00042">Model()</a>, <a class="el" href="Model_8cpp_source.html#l00087">pingAdmin()</a>, <a class="el" href="Model_8cpp_source.html#l00103">pingSlaves()</a>, <a class="el" href="Model_8cpp_source.html#l00072">pushAddAgent()</a>, <a class="el" href="Model_8cpp_source.html#l00060">pushTestEvents()</a> i <a class="el" href="Model_8cpp_source.html#l00050">setBlockingQueue()</a>.</p>
 
 </div>
 </div>
@@ -487,7 +518,7 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Model_8hpp_source.html#l00030">30</a> pliku <a class="el" href="Model_8hpp_source.html">Model.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Model_8hpp_source.html#l00033">33</a> pliku <a class="el" href="Model_8hpp_source.html">Model.hpp</a>.</p>
 
 <p>Odwołania w <a class="el" href="Model_8cpp_source.html#l00042">Model()</a>, <a class="el" href="Model_8cpp_source.html#l00072">pushAddAgent()</a>, <a class="el" href="Model_8cpp_source.html#l00060">pushTestEvents()</a> i <a class="el" href="Model_8cpp_source.html#l00055">setController()</a>.</p>
 
@@ -511,7 +542,7 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Model_8hpp_source.html#l00031">31</a> pliku <a class="el" href="Model_8hpp_source.html">Model.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Model_8hpp_source.html#l00034">34</a> pliku <a class="el" href="Model_8hpp_source.html">Model.hpp</a>.</p>
 
 <p>Odwołania w <a class="el" href="Model_8cpp_source.html#l00042">Model()</a>, <a class="el" href="Model_8cpp_source.html#l00087">pingAdmin()</a>, <a class="el" href="Model_8cpp_source.html#l00103">pingSlaves()</a> i <a class="el" href="Model_8cpp_source.html#l00114">triggerShutDown()</a>.</p>
 
@@ -535,7 +566,7 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Model_8hpp_source.html#l00035">35</a> pliku <a class="el" href="Model_8hpp_source.html">Model.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Model_8hpp_source.html#l00038">38</a> pliku <a class="el" href="Model_8hpp_source.html">Model.hpp</a>.</p>
 
 </div>
 </div>
@@ -557,7 +588,7 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Model_8hpp_source.html#l00034">34</a> pliku <a class="el" href="Model_8hpp_source.html">Model.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Model_8hpp_source.html#l00037">37</a> pliku <a class="el" href="Model_8hpp_source.html">Model.hpp</a>.</p>
 
 </div>
 </div>
@@ -571,7 +602,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classModel.html">Model</a></li>
-    <li class="footer">Wygenerowano Wt, 29 gru 2015 13:36:34 dla LOTC programem
+    <li class="footer">Wygenerowano Wt, 29 gru 2015 18:30:09 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

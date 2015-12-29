@@ -3,6 +3,7 @@ var hierarchy =
     [ "AdminServer", "classAdminServer.html", null ],
     [ "AgentClient", "classAgentClient.html", null ],
     [ "AgentServer", "classAgentServer.html", null ],
+    [ "AgentServer::cmp", "structAgentServer_1_1cmp.html", null ],
     [ "Connection", "classConnection.html", null ],
     [ "ConnectionManager", "classConnectionManager.html", null ],
     [ "ConsoleClient", "classConsoleClient.html", null ],
@@ -49,6 +50,7 @@ var hierarchy =
     ] ],
     [ "Strategy", "classStrategy.html", [
       [ "AddAgentStrategy", "classAddAgentStrategy.html", null ],
+      [ "AddTaskStrategy", "classAddTaskStrategy.html", null ],
       [ "MessageFromAdminStrategy", "classMessageFromAdminStrategy.html", null ],
       [ "MessageFromAgentStrategy", "classMessageFromAgentStrategy.html", null ],
       [ "PingAdminStrategy", "classPingAdminStrategy.html", null ],

@@ -14,7 +14,7 @@ var searchData=
   ['messagefromadminstrategy',['MessageFromAdminStrategy',['../classMessageFromAdminStrategy.html',1,'']]],
   ['messagefromagentstrategy',['MessageFromAgentStrategy',['../classMessageFromAgentStrategy.html',1,'']]],
   ['minor',['MINOR',['../namespaceAutoVersion.html#a2c324b304c1d4c4d273f848c50679eb4',1,'AutoVersion']]],
-  ['model',['Model',['../classModel.html',1,'Model'],['../classModel.html#ae3b375de5f6df4faf74a95d64748e048',1,'Model::Model()'],['../classController.html#a6f6ea54052742d3940adfcfce885bae9',1,'Controller::model()']]],
+  ['model',['Model',['../classModel.html',1,'Model'],['../classController.html#a6f6ea54052742d3940adfcfce885bae9',1,'Controller::model()'],['../classModel.html#ae3b375de5f6df4faf74a95d64748e048',1,'Model::Model()']]],
   ['model_2ecpp',['Model.cpp',['../Model_8cpp.html',1,'']]],
   ['model_2ehpp',['Model.hpp',['../Model_8hpp.html',1,'']]],
   ['modelexception',['ModelException',['../structModelException.html',1,'ModelException'],['../structModelException.html#a24f980e089b8bcf691c6547c7f82a868',1,'ModelException::ModelException()']]],

@@ -16,6 +16,7 @@ var classSlave =
     [ "lastContact", "classSlave.html#a76c76dd7826c70d58071e1d45b561613", null ],
     [ "listening", "classSlave.html#a83df23c64373eafc486aab85a162dd4c", null ],
     [ "listeningMutex", "classSlave.html#adbf6ffd7b4e5b923baf91470e208dabd", null ],
+    [ "ready", "classSlave.html#aa26098c3eeb285130e719ab94ecc9722", null ],
     [ "removed", "classSlave.html#a4c5de67567bbc7859765e6a2e9b9cf38", null ],
     [ "slaveIP", "classSlave.html#a19d385860a1b9743db1374e0cdf2e9f2", null ],
     [ "slaveThread", "classSlave.html#aab6e876c5a47bbe247a2f825aad81e8f", null ],

@@ -1,6 +1,7 @@
 var classModel =
 [
     [ "Model", "classModel.html#ae3b375de5f6df4faf74a95d64748e048", null ],
+    [ "addTask", "classModel.html#a160b44b67ed3c952b28bbea0582463f2", null ],
     [ "pingAdmin", "classModel.html#a0ff8ce83743a023063d79cc7bcd1c0d3", null ],
     [ "pingSlaves", "classModel.html#a826190f531cd61ae141c48313a85ad91", null ],
     [ "pushAddAgent", "classModel.html#a290de9af6cb1f25c6ec6c4c2be77606f", null ],

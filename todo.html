@@ -111,10 +111,10 @@ $(document).ready(function(){initNavTree('todo.html','');});
 <dd>sprawdzenia i wyjątki  </dd>
 <dt><a class="anchor" id="_todo000007"></a>Składowa <a class="el" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd">AgentServer::connect</a>  (<a class="el" href="classSlave.html" title="Klasa odpowiedzialna za przechowywanie informacji o agencie. ">Slave</a> *who, <a class="el" href="classmessage_1_1Message.html">message::Message</a> *m)</dt>
 <dd>dodać jakiś zabezpieczeń bo groźnie to wygląda  </dd>
+<dt><a class="anchor" id="_todo000009"></a>Składowa <a class="el" href="classAgentServer.html#a8f9a076ca22b4025d0ac5ba08c82c858">AgentServer::distributeTasks</a>  ()</dt>
+<dd>potrzebny mechanizm do stwierdzania, czy nie trzeba uznać, że zadanie się nie wykona tak jak to było zlecone i trzeba je zlecić innemu agentowi  </dd>
 <dt><a class="anchor" id="_todo000008"></a>Składowa <a class="el" href="classAgentServer.html#a75068a7f83936d0171b46d5dcb99a7b4">AgentServer::listenToAll</a>  ()</dt>
-<dd><p class="startdd">? wątki tutaj potrzebne? </p>
-<p class="enddd">jakiś if, bo jak się doda nowy to co  </p>
-</dd>
+<dd>jakiś if, bo jak się doda nowy to co  </dd>
 <dt><a class="anchor" id="_todo000006"></a>Składowa <a class="el" href="classAgentServer.html#afb8fd8d61568af65a604af199a9f3afc">AgentServer::~AgentServer</a>  ()</dt>
 <dd>testy jednostkowe! :)  </dd>
 <dt><a class="anchor" id="_todo000011"></a>Składowa <a class="el" href="classController.html#ada4383b0c385d09c6e82158e91449948">Controller::fillStrategyMap</a>  ()</dt>
@@ -131,14 +131,16 @@ $(document).ready(function(){initNavTree('todo.html','');});
 <dt><a class="anchor" id="_todo000013"></a>Składowa <a class="el" href="classMessageFromAdminStrategy.html#a2dd7b3ccf27bb7b9f5e10b1e7e4ee096">MessageFromAdminStrategy::doJob</a>  (void *data) override</dt>
 <dd>obsługa kategorii  </dd>
 <dt><a class="anchor" id="_todo000014"></a>Składowa <a class="el" href="classMessageFromAgentStrategy.html#a0819348e6119a2360845ebb1d71c6b09">MessageFromAgentStrategy::doJob</a>  (void *data) override</dt>
-<dd>obsługa kategorii </dd>
+<dd>obsługa kategorii  </dd>
+<dt><a class="anchor" id="_todo000018"></a>Składowa <a class="el" href="classTask.html#a1f50dd92e8aaa93f77df95c6b6ab3849">Task::Task</a>  (std::string s)</dt>
+<dd>jakoś sparsować czas, jeśli bedzie podany po nazwie </dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Wygenerowano Wt, 29 gru 2015 13:36:29 dla LOTC programem
+    <li class="footer">Wygenerowano Wt, 29 gru 2015 18:30:06 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

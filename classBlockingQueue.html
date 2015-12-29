@@ -264,14 +264,14 @@ template&lt;class T&gt; </div>
 
 <p>Definicja w linii <a class="el" href="BlockingQueue_8cpp_source.html#l00027">27</a> pliku <a class="el" href="BlockingQueue_8cpp_source.html">BlockingQueue.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00086">AgentServer::listen()</a>, <a class="el" href="AdminServer_8cpp_source.html#l00086">AdminServer::listen()</a>, <a class="el" href="Model_8cpp_source.html#l00087">Model::pingAdmin()</a>, <a class="el" href="Model_8cpp_source.html#l00103">Model::pingSlaves()</a>, <a class="el" href="Model_8cpp_source.html#l00060">Model::pushTestEvents()</a> i <a class="el" href="Controller_8cpp_source.html#l00190">Controller::triggerShutDown()</a>.</p>
+<p>Odwołania w <a class="el" href="Model_8cpp_source.html#l00119">Model::addTask()</a>, <a class="el" href="AgentServer_8cpp_source.html#l00086">AgentServer::listen()</a>, <a class="el" href="AdminServer_8cpp_source.html#l00086">AdminServer::listen()</a>, <a class="el" href="Model_8cpp_source.html#l00087">Model::pingAdmin()</a>, <a class="el" href="Model_8cpp_source.html#l00103">Model::pingSlaves()</a>, <a class="el" href="Model_8cpp_source.html#l00060">Model::pushTestEvents()</a> i <a class="el" href="Controller_8cpp_source.html#l00191">Controller::triggerShutDown()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBlockingQueue_aba9a92a9e6a732cd720c609d7e706c47_icgraph.png" border="0" usemap="#classBlockingQueue_aba9a92a9e6a732cd720c609d7e706c47_icgraph" alt=""/></div>
 <map name="classBlockingQueue_aba9a92a9e6a732cd720c609d7e706c47_icgraph" id="classBlockingQueue_aba9a92a9e6a732cd720c609d7e706c47_icgraph">
-<area shape="rect" id="node2" href="classAgentServer.html#a001e979f72cf3d360d424cea0df70165" title="AgentServer::listen" alt="" coords="259,5,390,32"/><area shape="rect" id="node3" href="classAdminServer.html#a2c3c374cb8653d62a373735cf316d4e4" title="Metoda nasłuchująca na połączenie z konsoli administratora. Odbiera wiadomość i wrzuca w zdarzeniu do..." alt="" coords="257,56,392,83"/><area shape="rect" id="node5" href="classModel.html#a0ff8ce83743a023063d79cc7bcd1c0d3" title="Model::pingAdmin" alt="" coords="261,107,388,133"/><area shape="rect" id="node6" href="classModel.html#a826190f531cd61ae141c48313a85ad91" title="metoda zlecająca odpytanie agentów na chwilę obecną nie rozdzielam odpytywania agentów ..." alt="" coords="261,157,388,184"/><area shape="rect" id="node7" href="classModel.html#ac9ee04aadbcefc4957321d5f0ad60c5e" title="Model::pushTestEvents" alt="" coords="246,208,403,235"/><area shape="rect" id="node8" href="classController.html#a516427a8bb2fc0e0f46f94c318dd1610" title="Metoda ustawia zmienną prywatną shutDownServer na zamykanie serwera. Użycie metody poza strategią obs..." alt="" coords="235,259,415,285"/><area shape="rect" id="node4" href="classAdminServer.html#ad843107448ab68ee4d0eb00d3dd60fec" title="Metoda odpowiada za wewnętrzne życie AdminServer&#39;a. Należy raczej oczekiwać, że będzie się zawieszała..." alt="" coords="484,56,613,83"/><area shape="rect" id="node9" href="classShutDownStrategy.html#aeeee49a347dbfe9c1b861f9dc22fe1b3" title="metoda zamykająca serwer " alt="" coords="463,259,635,285"/></map>
+<area shape="rect" id="node2" href="classModel.html#a160b44b67ed3c952b28bbea0582463f2" title="Model::addTask" alt="" coords="267,5,382,32"/><area shape="rect" id="node3" href="classAgentServer.html#a001e979f72cf3d360d424cea0df70165" title="AgentServer::listen" alt="" coords="259,56,390,83"/><area shape="rect" id="node4" href="classAdminServer.html#a2c3c374cb8653d62a373735cf316d4e4" title="Metoda nasłuchująca na połączenie z konsoli administratora. Odbiera wiadomość i wrzuca w zdarzeniu do..." alt="" coords="257,107,392,133"/><area shape="rect" id="node6" href="classModel.html#a0ff8ce83743a023063d79cc7bcd1c0d3" title="Model::pingAdmin" alt="" coords="261,157,388,184"/><area shape="rect" id="node7" href="classModel.html#a826190f531cd61ae141c48313a85ad91" title="metoda zlecająca odpytanie agentów na chwilę obecną nie rozdzielam odpytywania agentów ..." alt="" coords="261,208,388,235"/><area shape="rect" id="node8" href="classModel.html#ac9ee04aadbcefc4957321d5f0ad60c5e" title="Model::pushTestEvents" alt="" coords="246,259,403,285"/><area shape="rect" id="node9" href="classController.html#a516427a8bb2fc0e0f46f94c318dd1610" title="Metoda ustawia zmienną prywatną shutDownServer na zamykanie serwera. Użycie metody poza strategią obs..." alt="" coords="235,309,415,336"/><area shape="rect" id="node5" href="classAdminServer.html#ad843107448ab68ee4d0eb00d3dd60fec" title="Metoda odpowiada za wewnętrzne życie AdminServer&#39;a. Należy raczej oczekiwać, że będzie się zawieszała..." alt="" coords="484,107,613,133"/><area shape="rect" id="node10" href="classShutDownStrategy.html#aeeee49a347dbfe9c1b861f9dc22fe1b3" title="metoda zamykająca serwer " alt="" coords="463,309,635,336"/></map>
 </div>
 </p>
 
@@ -351,7 +351,7 @@ template&lt;class T&gt; </div>
 
 <p>Definicja w linii <a class="el" href="BlockingQueue_8hpp_source.html#l00035">35</a> pliku <a class="el" href="BlockingQueue_8hpp_source.html">BlockingQueue.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00223">Controller::setup()</a>.</p>
+<p>Odwołania w <a class="el" href="Controller_8cpp_source.html#l00224">Controller::setup()</a>.</p>
 
 </div>
 </div>
@@ -365,7 +365,7 @@ template&lt;class T&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classBlockingQueue.html">BlockingQueue</a></li>
-    <li class="footer">Wygenerowano Wt, 29 gru 2015 13:36:30 dla LOTC programem
+    <li class="footer">Wygenerowano Wt, 29 gru 2015 18:30:07 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

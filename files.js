@@ -15,7 +15,8 @@ var files =
       [ "AgentServerException", "structAgentServerException.html", "structAgentServerException" ]
     ] ],
     [ "AgentServer.hpp", "AgentServer_8hpp.html", [
-      [ "AgentServer", "classAgentServer.html", "classAgentServer" ]
+      [ "AgentServer", "classAgentServer.html", "classAgentServer" ],
+      [ "cmp", "structAgentServer_1_1cmp.html", "structAgentServer_1_1cmp" ]
     ] ],
     [ "BlockingQueue.cpp", "BlockingQueue_8cpp.html", null ],
     [ "BlockingQueue.hpp", "BlockingQueue_8hpp.html", [
@@ -111,7 +112,8 @@ var files =
       [ "MessageFromAgentStrategy", "classMessageFromAgentStrategy.html", "classMessageFromAgentStrategy" ],
       [ "AddAgentStrategy", "classAddAgentStrategy.html", "classAddAgentStrategy" ],
       [ "PingAdminStrategy", "classPingAdminStrategy.html", "classPingAdminStrategy" ],
-      [ "PingSlavesStrategy", "classPingSlavesStrategy.html", "classPingSlavesStrategy" ]
+      [ "PingSlavesStrategy", "classPingSlavesStrategy.html", "classPingSlavesStrategy" ],
+      [ "AddTaskStrategy", "classAddTaskStrategy.html", "classAddTaskStrategy" ]
     ] ],
     [ "Strategy.hpp", "Strategy_8hpp.html", [
       [ "Strategy", "classStrategy.html", "classStrategy" ]
