@@ -204,6 +204,10 @@ void Controller::triggerShutDown()
 	{
 		adminServer->triggerShutDown();
 	}
+	if(agentServer!=nullptr)
+	{
+		agentServer->triggerShutDown();
+	}
 }
 
 void Controller::setAdminServer(AdminServer* s)

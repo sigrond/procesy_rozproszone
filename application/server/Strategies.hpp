@@ -89,11 +89,26 @@ public:
 	{
 		using namespace std;
 		using namespace message;
-		unsigned char category;
+		unsigned char category, subCategory;
+		hostMessage* hm;
+		unsigned int hostsNumber;
+		std::vector<Ip>* agentIPs;
 		category=((Message*)data)->getCategory();
 		switch(category)/**< \todo obsługa kategorii */
 		{
 		case (int)Category::HOST:
+			//dodawanie agenta
+			hm=(hostMessage*)data;
+			subCategory=hm->getSubcategory();
+            hostsNumber=hm->getAgentCount();
+            agentIPs=&hm->getAddresses();
+			if(subCategory==(unsigned char)HostSub::H_ADD)
+			{
+				for(unsigned int i=0;i<hostsNumber;i++)
+				{
+					((Controller*)controller)->blockingQueue->push_back(new Event(ADD_AGENT,&agentIPs->at(i)));
+				}
+			}
 			break;
 		case (int)Category::TASK:
 			break;
@@ -169,10 +184,12 @@ public:
 	{
 		using namespace std;
         cout<<"strategia AddAgent..."<<endl;
-        AgentServer* as=((Controller*)((pair<void*,void*>*)data)->second)->agentServer;
-        Ipv4 ip=*(Ipv4*)((pair<void*,void*>*)data)->first;
+        //AgentServer* as=((Controller*)((pair<void*,void*>*)data)->second)->agentServer;
+        AgentServer* as=((Controller*)controller)->agentServer;
+        //Ipv4 ip=*(Ipv4*)((pair<void*,void*>*)data)->first;
+        Ipv4 ip=*(Ipv4*)data;
         as->addSlave(ip);
-        delete (pair<void*,void*>*)data;
+        //delete (pair<void*,void*>*)data;
 	}
 };
 

@@ -234,6 +234,9 @@ void AgentServer::start()
 
 void AgentServer::triggerShutDown()
 {
+	#ifdef _DEBUG
+	cout<<"AgentServer::triggerShutDown()"<<endl;
+	#endif // _DEBUG
 	shutDown=true;
 	slavesMutex.lock();
 	for(unsigned int i=0;i<slaves->size();i++)
