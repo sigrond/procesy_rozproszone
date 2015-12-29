@@ -17,7 +17,8 @@ enum EventType
     MESSAGE_FROM_MODEL,
     ADD_AGENT,/**< ułatwiam sobie życie, bo utonę w metodach */
     PING_ADMIN,
-    PING_SLAVES
+    PING_SLAVES,
+    ADD_TASK
 };
 
 /** \brief Klasa reprezentująca zdarzenie.

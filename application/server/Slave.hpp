@@ -67,5 +67,6 @@ public:
 	void setListening(bool);
 	bool getListening();
 	std::thread* slaveThread;
+	bool ready;/**< gotowość na zadanie */
 protected:
 };

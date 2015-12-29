@@ -15,6 +15,7 @@
 #include "../protocol/Message.hpp"
 #include "../protocol/Ip.hpp"
 #include "AgentServer.hpp"
+#include "Task.hpp"
 #include <iostream>
 #include <string>
 #include <thread>
@@ -213,6 +214,24 @@ public:
         cout<<"strategia PingSlaves..."<<endl;
         Message * msg2 = new pingMessage( State::REQ );
         ((Controller*)controller)->agentServer->sendToAll(msg2);
+	}
+};
+
+class AddTaskStrategy : public Strategy
+{
+public:
+	using Strategy::Strategy;
+    /** \brief obsługa dodania zadania
+     *
+     * \param data message::Message*
+     * \return virtual void
+     *
+     */
+	virtual void doJob(void* data) override
+	{
+		using namespace std;
+        cout<<"strategia AddTask..."<<endl;
+		((Controller*)controller)->agentServer->addTask((Task*)data);
 	}
 };
 

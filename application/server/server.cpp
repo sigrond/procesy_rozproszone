@@ -68,6 +68,17 @@ int main(int argi, char* argv[])
 					Ipv4 ip=Ipv4(ss);/**< \todo sprawdzanie poprawności adresu */
 					cout<<"Dodawanie agenta: "<<ip.getAddress()<<endl;
 					model->pushAddAgent(ip);
+					continue;
+				}
+				i=s.find("task");
+				cout<<i<<endl;
+				if(i!=string::npos && s.size()>9)
+				{
+					ss=s.substr(9);
+					cout<<ss<<endl;
+					cout<<"Dodawanie zadania: "<<ss<<endl;
+					model->addTask(ss);
+					continue;
 				}
 			}
         }

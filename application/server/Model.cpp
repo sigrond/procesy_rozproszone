@@ -116,6 +116,12 @@ void Model::triggerShutDown()
 	shutDown=true;
 }
 
+void Model::addTask(string s)
+{
+	Task* task=new Task(s);
+	blockingQueue->push_back(new Event(ADD_TASK,task));
+}
+
 
 
 
