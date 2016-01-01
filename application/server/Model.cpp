@@ -69,7 +69,7 @@ void Model::pushTestEvents()
 	blockingQueue->push_back(new Event(SHUT_DOWN,controller));
 }
 
-void Model::pushAddAgent(Ipv4& ip)
+void Model::pushAddAgent(Ipv4* ip)
 {
 	if(blockingQueue==nullptr)
 	{
@@ -81,7 +81,7 @@ void Model::pushAddAgent(Ipv4& ip)
 	}
 	//pair<void*,void*>* p=nullptr;
 	//p=new pair<void*,void*>((void*)&ip,(void*)controller);
-	blockingQueue->push_back(new Event(ADD_AGENT,(void*)&ip));
+	blockingQueue->push_back(new Event(ADD_AGENT,(void*)ip));
 }
 
 void Model::pingAdmin()

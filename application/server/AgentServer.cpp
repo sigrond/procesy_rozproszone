@@ -92,6 +92,9 @@ void AgentServer::listen(Slave* who)
 	//m=who->getConnection()->receive();
 	while(!shutDown)
 	{
+		#ifdef _DEBUG
+		cout<<"nasłuchiwanie agenta IP: "<<((Ipv4*)who->getSlaveIP())->getAddress()<<endl;
+		#endif // _DEBUG
 		connectionManager->receive(*static_cast<Ipv4*>(who->getSlaveIP()),m);
 		#ifdef _DEBUG
 		cout<<"AgentServer::listen odebrano: "<<m<<endl;
@@ -117,10 +120,10 @@ void AgentServer::setBlockingQueue(BlockingQueue<Event*>* q)
  * \return void
  *
  */
-void AgentServer::addSlave(Ip &ip)
+void AgentServer::addSlave(Ip* ip)
 {
 	#ifdef _DEBUG
-	cout<<"AgentServer::addSlave(Ip &ip)"<<endl;
+	cout<<"AgentServer::addSlave(Ip* ip)"<<endl;
 	#endif // _DEBUG
 	if(slaves==nullptr)
 	{
@@ -128,6 +131,9 @@ void AgentServer::addSlave(Ip &ip)
 	}
 	slavesMutex.lock();
 	slaves->push_back(new Slave(ip));
+	#ifdef _DEBUG
+	cout<<"Dodany agent ip: "<<((Ipv4*)slaves->back()->getSlaveIP())->getAddress()<<endl;
+	#endif // _DEBUG
 	slavesMutex.unlock();
 	unique_lock<mutex> allListeningMutexLock(allListeningMutex);
 	allListeningMutexLock.unlock();
@@ -136,6 +142,9 @@ void AgentServer::addSlave(Ip &ip)
 	unique_lock<mutex> waitForTaskMutexLock(waitForTaskMutex);
     waitForTaskMutexLock.unlock();
     waitForTaskCondition.notify_one();//zgłaszamy, że może można przydzielić zadanie
+    #ifdef _DEBUG
+    cout<<"koniec AgentServer::addSlave(Ip* ip)"<<endl;
+    #endif // _DEBUG
 }
 
 /** \brief teraz zrezygnowałem z wykożystania tej funkcji na rzecz AgentServer::start()
@@ -158,6 +167,10 @@ void AgentServer::start()
 	#ifdef _DEBUG
 	cout<<"AgentServer::start()"<<endl;
 	#endif // _DEBUG
+	if(slaves==nullptr)
+	{
+		throw AgentServerException("slaves==nullptr");
+	}
 	//chcemy słuchać na wszystkie agenty w osobnych wątkach
 	thread* t=nullptr;
     slavesMutex.lock();
@@ -196,6 +209,9 @@ void AgentServer::start()
 		}
 		if(i>=slaves->size())
 		{
+			#ifdef _DEBUG
+			cout<<"slaves->size(): "<<slaves->size()<<endl;
+			#endif // _DEBUG
 			i=0;
 			if(listenSlave)
 			{

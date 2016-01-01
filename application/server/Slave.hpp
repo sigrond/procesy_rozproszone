@@ -25,7 +25,7 @@ private:
 	bool listening;
 public:
 	/** Default constructor */
-	Slave(Ip &ip);
+	Slave(Ip *ip);
 	/** Default destructor */
 	~Slave();
 	/** Te setery i geterry zostały tu umieszczone automatycznie.

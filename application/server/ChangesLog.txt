@@ -1,3 +1,9 @@
+02 January 2016
+   released version 0.1.45 of server
+
+     Change log:
+        -Fixed: naprawiłem błąd naruszenia pamięci dla adresu IP agenta
+
 29 December 2015
    released version 0.1.44 of server
 

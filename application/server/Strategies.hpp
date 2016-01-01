@@ -249,7 +249,7 @@ public:
         //AgentServer* as=((Controller*)((pair<void*,void*>*)data)->second)->agentServer;
         AgentServer* as=((Controller*)controller)->agentServer;
         //Ipv4 ip=*(Ipv4*)((pair<void*,void*>*)data)->first;
-        Ipv4 ip=*(Ipv4*)data;
+        Ipv4* ip=(Ipv4*)data;
         as->addSlave(ip);
         //delete (pair<void*,void*>*)data;
 	}
