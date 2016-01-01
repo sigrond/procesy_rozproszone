@@ -2,8 +2,20 @@
 
 #include <string>
 using namespace message;
-
+#include <thread>
 #include <iostream>
+
+void communication ( ConnectionManager * cm, Ipv4 * ip, Message * msg1, Message * msg2)
+{	
+	cm->receive( *ip, msg1 );
+
+	cm->send( *ip, *msg2 );
+
+	cm->receive( *ip, msg1 );
+
+	cm->send( *ip, *msg2 );
+
+}
 
 int main( int argc, char** argv)
 {
@@ -17,37 +29,20 @@ int main( int argc, char** argv)
 
                 Ipv4 ip = Ipv4( std::string(argv[1]) );
 
+		Ipv4 ip1 = Ipv4("10.10.10.10");
+		Ipv4 ip2 = Ipv4("10.10.10.11");
+		Ipv4 ip3 = Ipv4("10.10.10.12");
+		Ipv4 ip4 = Ipv4("10.10.10.13");
+		Ipv4 ip5 = Ipv4("10.10.10.14");
+
+		std::thread t1 (communication, mietek, &ip1, msg1, msg2);
+		std::thread t2 (communication, mietek, &ip2, msg1, msg2);
+		std::thread t3 (communication, mietek, &ip3, msg1, msg2);
+		std::thread t4 (communication, mietek, &ip4, msg1, msg2);
+		std::thread t5 (communication, mietek, &ip5, msg1, msg2);
+
                 getchar();
 
-                // rrraz
-                mietek->receive( ip, msg1 );
-
-                mietek->send( ip, *msg2 );
-
-                mietek->receive( ip, msg1 );
-
-                mietek->send( ip, *msg2 );
-
-                // dwa
-                mietek->receive( ip, msg1 );
-
-                mietek->send( ip, *msg2 );
-
-                mietek->receive( ip, msg1 );
-
-                mietek->send( ip, *msg2 );
-
-                // usuwamy
-                mietek->remove( ip );
-
-                // rrraz
-                mietek->receive( ip, msg1 );
-
-                mietek->send( ip, *msg2 );
-
-                mietek->receive( ip, msg1 );
-
-                mietek->send( ip, *msg2 );
         }
         else
         {
