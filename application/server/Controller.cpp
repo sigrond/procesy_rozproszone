@@ -176,6 +176,7 @@ void Controller::fillStrategyMap()
 	strategyMap->insert(std::pair<EventType,Strategy*>(ADD_AGENT,new AddAgentStrategy(this)));
 	strategyMap->insert(std::pair<EventType,Strategy*>(PING_ADMIN,new PingAdminStrategy(this)));
 	strategyMap->insert(std::pair<EventType,Strategy*>(PING_SLAVES,new PingSlavesStrategy(this)));
+	strategyMap->insert(std::pair<EventType,Strategy*>(ADD_TASK,new AddTaskStrategy(this)));
 
 	/**< \todo wstawić więcej strategii, ustalić w którym pliku powinny znajdować się strategie i je napisać */
 }
@@ -202,6 +203,10 @@ void Controller::triggerShutDown()
 	if(adminServer!=nullptr)
 	{
 		adminServer->triggerShutDown();
+	}
+	if(agentServer!=nullptr)
+	{
+		agentServer->triggerShutDown();
 	}
 }
 

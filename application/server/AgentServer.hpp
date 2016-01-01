@@ -9,10 +9,12 @@
 #include "BlockingQueue.hpp"
 #include "Event.hpp"
 #include "Slave.hpp"
+#include "Task.hpp"
 #include "../protocol/ConnectionManager.hpp"
 #include <vector>
 #include <mutex>
 #include <condition_variable>
+#include <set>
 
 /** \brief klasa serwera agenta
  */
@@ -29,6 +31,8 @@ public:
     void start();
     void triggerShutDown();
     void sendToAll(message::Message* m);
+    void addTask(Task* task);
+    void setTaskFinished(unsigned long taskID);
 private:
     BlockingQueue<Event*>* blockingQueue;
     std::vector<Slave*>* slaves;
@@ -37,4 +41,12 @@ private:
     std::mutex slavesMutex;/**< w niektórych momentach chciałbym wiedzieć ile mam agentów */
     std::mutex allListeningMutex;
     std::condition_variable allListeningCondition;
+    struct cmp
+    {
+    	bool operator()(Task* a, Task* b);
+    };/**< niestety szablony nie lubią się z wyrażeniami lambda */;
+    std::multiset<Task*,cmp> tasks;
+    void distributeTasks();/**< metoda rozdzielająca zadania */
+    std::mutex waitForTaskMutex;
+    std::condition_variable waitForTaskCondition;
 };

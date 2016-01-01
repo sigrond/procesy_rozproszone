@@ -97,6 +97,11 @@ void AgentServer::listen(Slave* who)
 		cout<<"AgentServer::listen odebrano: "<<m<<endl;
 		#endif // _DEBUG
 		blockingQueue->push_back(new Event(MESSAGE_FROM_AGENT_SERVER,m));
+		//jeśli przyszło coś od agenta i nie wykonyuje on zadania, to można przydzielić mu zadanie
+		if(who->getTask()==nullptr)
+		{
+			who->ready=true;
+		}
 	}
 	who->setListening(false);
 }
@@ -127,6 +132,10 @@ void AgentServer::addSlave(Ip &ip)
 	unique_lock<mutex> allListeningMutexLock(allListeningMutex);
 	allListeningMutexLock.unlock();
 	allListeningCondition.notify_one();//zgłaszamy, że już nie wszystkie agenty słuchają
+
+	unique_lock<mutex> waitForTaskMutexLock(waitForTaskMutex);
+    waitForTaskMutexLock.unlock();
+    waitForTaskCondition.notify_one();//zgłaszamy, że może można przydzielić zadanie
 }
 
 /** \brief teraz zrezygnowałem z wykożystania tej funkcji na rzecz AgentServer::start()
@@ -136,7 +145,7 @@ void AgentServer::addSlave(Ip &ip)
  */
 void AgentServer::listenToAll()/**< \todo dobrze przemyśleć jak ma działać */
 {
-	std::thread* t;/**< \todo ? wątki tutaj potrzebne? */
+	//std::thread* t;/**< \todo ? wątki tutaj potrzebne? */
 	for(unsigned int i=0;i<slaves->size();i++)
 	{
 		listen(slaves->at(i));/**< \todo jakiś if, bo jak się doda nowy to co */
@@ -159,6 +168,9 @@ void AgentServer::start()
 		slaves->at(i)->slaveThread=t;
 	}
 	slavesMutex.unlock();
+
+	thread distributeTasksThread(&AgentServer::distributeTasks,this);
+
 	//jeśli pojawi się nie słuchający agent, to niech słucha
 	unsigned int i=0;
 	bool allListening=false;
@@ -227,6 +239,9 @@ void AgentServer::start()
 
 void AgentServer::triggerShutDown()
 {
+	#ifdef _DEBUG
+	cout<<"AgentServer::triggerShutDown()"<<endl;
+	#endif // _DEBUG
 	shutDown=true;
 	slavesMutex.lock();
 	for(unsigned int i=0;i<slaves->size();i++)
@@ -254,9 +269,127 @@ void AgentServer::sendToAll(message::Message* m)
     slavesMutex.unlock();
 }
 
+void AgentServer::addTask(Task* task)
+{
+    #ifdef _DEBUG
+    cout<<"AgentServer::addTask(Task* task)"<<endl;
+    #endif // _DEBUG
+    unique_lock<mutex> waitForTaskMutexLock(waitForTaskMutex);
+    tasks.insert(task);
+    waitForTaskMutexLock.unlock();
+    waitForTaskCondition.notify_one();
+    #ifdef _DEBUG
+    cout<<"waitForTaskCondition.notify_one()"<<endl;
+    #endif // _DEBUG
+}
 
+bool AgentServer::cmp::operator()(Task* a, Task* b)
+{
+	return a->when<b->when;
+}
 
+void AgentServer::distributeTasks()
+{
+	unique_lock<mutex> waitForTaskMutexLock(waitForTaskMutex);
+	std::multiset<Task*,cmp>::iterator it;
+	while(!shutDown)
+	{
+		while(tasks.empty())
+		{
+			#ifdef _DEBUG
+			cout<<"czekam na zadanie..."<<endl;
+			#endif // _DEBUG
+			waitForTaskCondition.wait(waitForTaskMutexLock);
+			#ifdef _DEBUG
+			cout<<"pojawiło się zadanie..."<<endl;
+			#endif // _DEBUG
+		}
+		slavesMutex.lock();
+		it=tasks.begin();
+		for(unsigned int i=0;i<slaves->size();i++)
+		{
+			slavesMutex.unlock();
+			#ifdef _DEBUG
+			cout<<"próbuję rozdysponować zadania do agentów i: "<<i<<" ..."<<endl;
+			#endif // _DEBUG
+            if(slaves->at(i)->ready)/**< \todo zaznaczać agenta jako ready kiedy coś odpowie */
+			{
+				if(it==tasks.end())
+				{
+					it=tasks.begin();
+				}
+				//usuwam zadania wykonane
+				while(!tasks.empty() && it!=tasks.end() && (*it)->done)
+				{
+					tasks.erase(it);
+					it=tasks.begin();
+				}
+				if(tasks.empty())
+				{
+					break;
+				}
+				//pomijam zadania wykonywane, dopóki ich los nie zostanie jakoś rozstrzygnięty
+				/**< \todo potrzebny mechanizm do stwierdzania, czy nie trzeba uznać, że zadanie się nie wykona tak jak to było zlecone i trzeba je zlecić innemu agentowi */
+				while(!tasks.empty() && it!=tasks.end() && (*it)->underExecution)
+				{
+					it++;
+				}
+				slaves->at(i)->setTask(*it);
+				(*it)->underExecution=true;
+				message::Message* m=new message::fileMessage(message::State::REQ,true,(*it)->taskID,(*it)->name,(*it)->file);
+				connect(slaves->at(i),m);
+				message::Message* m2=new message::taskMessage(message::TaskSub::T_ADD,message::State::REQ,true,1,(*it)->taskID,(*it)->when);
+				connect(slaves->at(i),m2);
+				it++;
 
+			}
+			slavesMutex.lock();
+		}
+		#ifdef _DEBUG
+		cout<<"próba rozdzielenia zadań do agentów zakończona.."<<endl;
+		#endif // _DEBUG
+		slavesMutex.unlock();
+		#ifdef _DEBUG
+		cout<<"begin waitForTaskCondition.wait_for(waitForTaskMutexLock,chrono::seconds(5))"<<endl;
+		#endif // _DEBUG
+		waitForTaskCondition.wait_for(waitForTaskMutexLock,chrono::seconds(5));
+		#ifdef _DEBUG
+		cout<<"end waitForTaskCondition.wait_for(waitForTaskMutexLock,chrono::seconds(5))"<<endl;
+		#endif // _DEBUG
+	}
+
+}
+
+void AgentServer::setTaskFinished(unsigned long taskID)
+{
+	for(unsigned int i=0;i<slaves->size();i++)
+	{
+		if(slaves->at(i)->getTask()->taskID==taskID)
+		{
+			slaves->at(i)->getTask()->done=true;
+			slaves->at(i)->getTask()->underExecution=false;
+			slaves->at(i)->setTask(nullptr);
+			slaves->at(i)->ready=true;
+			unique_lock<mutex> allListeningMutexLock(allListeningMutex);
+			allListeningMutexLock.unlock();
+			allListeningCondition.notify_one();//odnowić nasłuchiwanie
+		}
+	}
+	/*std::multiset<Task*,cmp>::iterator it;
+	for(it=tasks.begin();!tasks.empty() && it!=tasks.end();it++)
+	{
+		if((*it)->taskID==taskID)
+		{
+			(*it)->done=true;
+			(*it)->underExecution=false;
+			break;
+		}
+	}*/
+
+	unique_lock<mutex> waitForTaskMutexLock(waitForTaskMutex);
+    waitForTaskMutexLock.unlock();
+    waitForTaskCondition.notify_one();//przydzielić następne zadania
+}
 
 
 

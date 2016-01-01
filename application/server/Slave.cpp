@@ -14,7 +14,8 @@ Slave::Slave(Ip &ip) :
 	task(nullptr),
 	removed(false),
 	listening(false),
-	slaveThread(nullptr)
+	slaveThread(nullptr),
+	ready(false)
 {
 	connectionManager=ConnectionManager::getInstance();
 }
