@@ -53,6 +53,8 @@ public:
          */
         Ipv4 ( const std::string & address = "0.0.0.0" );
 
+	Ipv4 ( const Ipv4 & that );
+
         /**
          * \brief  Zwraca adres IPv4 w konwencji A.B.C.D
          *
@@ -82,8 +84,12 @@ public:
 
         bool operator==( const Ipv4 & that ) const;
 
+        Ipv4 & operator=( const Ipv4 & that );
+
 private:
         bool isCorrect ( const std::string & str ) const;
+
+	std::string addrStr;
 
         in_addr address;
 };

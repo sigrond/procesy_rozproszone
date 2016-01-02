@@ -25,12 +25,18 @@ Ip::~Ip(){}
 // ------------------------------------------------------
 // Ipv4
 // ------------------------------------------------------
-Ipv4::Ipv4 ( const std::string & str )
+Ipv4::Ipv4 ( const std::string & str ) : addrStr(str)
 {
         if( ! isCorrect( str ) )
                 throw BadIpException();
 
         inet_aton( str.c_str(), &address );
+}
+
+Ipv4::Ipv4 ( const Ipv4 & that )
+{
+	addrStr = that.getAddress();
+	inet_aton( addrStr.c_str(), &address);
 }
 
 bool Ipv4::isCorrect ( const std::string & str ) const
@@ -44,9 +50,7 @@ bool Ipv4::isCorrect ( const std::string & str ) const
 
 std::string Ipv4::getAddress() const
 {
-        char * addr = inet_ntoa( address );
-
-        return std::string( addr );
+        return addrStr;
 }
 
 unsigned long Ipv4::getAddressNum() const
@@ -63,6 +67,13 @@ bool Ipv4::operator<( const Ipv4 & that ) const
 bool Ipv4::operator==( const Ipv4 & that ) const
 {
         return getAddressNum() == that.getAddressNum();
+}
+
+Ipv4 & Ipv4::operator=( const Ipv4 & that )
+{
+	addrStr = that.getAddress();
+	inet_aton( addrStr.c_str(), &address);
+	return *this;
 }
 
 // ------------------------------------------------------

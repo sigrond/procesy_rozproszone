@@ -29,6 +29,21 @@ int main( int argc, char** argv)
 
                 Ipv4 ip = Ipv4( std::string(argv[1]) );
 
+		Ipv4 ocDonutSteal = Ipv4("1.2.3.4");
+		Ipv4 copy = Ipv4( ocDonutSteal );
+
+		std::cout << "1.2.3.4? " << ocDonutSteal.getAddress() << std::endl;
+		std::cout << "1.2.3.4? " << copy.getAddress() << std::endl;
+
+		Ipv4 change = Ipv4("5.6.7.8");
+		ocDonutSteal = change;
+		change = copy;
+
+		std::cout << "5.6.7.8? " << ocDonutSteal.getAddress() << std::endl;
+		std::cout << "1.2.3.4? " << change.getAddress() << std::endl;
+	
+		getchar();
+
 		Ipv4 ip1 = Ipv4("10.10.10.10");
 		Ipv4 ip2 = Ipv4("10.10.10.11");
 		Ipv4 ip3 = Ipv4("10.10.10.12");

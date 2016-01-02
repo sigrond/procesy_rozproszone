@@ -18,6 +18,6 @@ client: client.o $(OBJS)
 	$(CMD)
 
 clean:
-	rm -f $(OBJS)
+	rm -f *.o
 
 .PHONY: all clean
