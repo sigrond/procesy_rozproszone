@@ -119,6 +119,9 @@ void AdminServer::start()
 
 void AdminServer::triggerShutDown()
 {
+	#ifdef _DEBUG
+	cout<<"AdminServer::triggerShutDown()"<<endl;
+	#endif // _DEBUG
 	shutDown=true;
 	#ifdef _DEBUG
 	cout<<"próbuję usunąć ip admina z ConnectionManager..."<<endl;

@@ -23,7 +23,7 @@ public:
     void setBlockingQueue(BlockingQueue<Event*>*);
     void pushTestEvents();
     void setController(void* c);
-    void pushAddAgent(Ipv4& ip);
+    void pushAddAgent(Ipv4* ip);
     void pingAdmin();/**< pingowanie okresowo i na ewentualne żądanie */
     void pingSlaves();
     void triggerShutDown();

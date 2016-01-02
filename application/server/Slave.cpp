@@ -6,8 +6,8 @@
 
 #include "Slave.hpp"
 
-Slave::Slave(Ip &ip) :
-	slaveIP(&ip),
+Slave::Slave(Ip* ip) :
+	slaveIP(ip),
 	lastContact(0),
 	state(0),
 	connectionManager(nullptr),

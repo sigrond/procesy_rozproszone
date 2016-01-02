@@ -1,15 +1,16 @@
 CXX = g++
 FILES = server.cpp Controller.cpp AdminServer.cpp AgentServer.cpp Model.cpp Slave.cpp Task.cpp ../protocol/Message.cpp ../protocol/Ip.cpp ../protocol/Connection.cpp ../protocol/ConnectionManager.cpp ../protocol/Socket.cpp ../protocol/SocketException.cpp
 LFLAGS = -lpthread
-DFLAGS = -g -O0 -D_DEBUG -DDEBUG
-CPPFLAGS = -std=c++11 -Wall -pthread $(DFLAGS)
+DFLAGS = -g -Og -D_DEBUG -DDEBUG
+CPPFLAGS = -std=c++11 -Wall -pthread
 OBJECTS = $(FILES:.cpp=.o)
 
 #Debug: $(FILES)
 #	$(CXX) $(DFLAGS) $(CFLAGS) $(LFLAGS) -o bin/Debug/server $(FILES)
 
+Debug: CPPFLAGS+=$(DFLAGS)
 Debug: $(FILES:%.cpp=%.o)
-	$(CXX) $(DFLAGS) $(CPPFLAGS) $(LFLAGS) -MMD -MP -o bin/Debug/server $^
+	$(CXX) $(CPPFLAGS) $(LFLAGS) -MMD -MP -o bin/Debug/server $^
 
 -include $(FILES:%.cpp=%.d)
 
