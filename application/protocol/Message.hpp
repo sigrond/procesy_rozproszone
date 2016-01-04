@@ -56,13 +56,17 @@ namespace message
         class hostMessage : public Message
         {
         public:
-                hostMessage ( HostSub sub, State state, const std::vector<Ip> & addresses );
+                hostMessage ( HostSub sub, State state, const std::vector<Ipv4> & addresses );
 
                 hostMessage ( State state );
 
                 unsigned short getAgentCount() const;
 
-                std::vector<Ip> & getAddresses() const;
+                std::vector<Ipv4> & getAddresses();
+		private:
+			HostSub sub;
+			State state;
+			std::vector<Ipv4> addresses;
         };
 
         class taskMessage : public Message

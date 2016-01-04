@@ -44,25 +44,30 @@ unsigned char Message::getSubcategory() const
 	return 0;
 }
 
-hostMessage::hostMessage( HostSub sub, State state, const std::vector<Ip> & addresses ) : Message::Message( Category::HOST )
+hostMessage::hostMessage( HostSub su, State st, const std::vector<Ipv4> & addr ) :
+	Message::Message( Category::HOST ),
+	sub(su),
+	state(st),
+	addresses(addr)
 {
 
 }
 
-hostMessage::hostMessage( State state ) : Message::Message( Category::HOST )
+hostMessage::hostMessage( State s ) :
+	Message::Message( Category::HOST ),
+	state(s)
 {
 
 }
 
 unsigned short hostMessage::getAgentCount() const
 {
-	return 0;
+	return addresses.size();
 }
 
-std::vector<Ip> & hostMessage::getAddresses() const
+std::vector<Ipv4> & hostMessage::getAddresses()
 {
-	std::vector<Ip> v;
-	return v;
+	return addresses;
 }
 
 taskMessage::taskMessage( TaskSub sub,

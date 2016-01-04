@@ -93,7 +93,7 @@ public:
 		unsigned char category, subCategory;
 		hostMessage* hm;
 		unsigned int hostsNumber;
-		std::vector<Ip>* agentIPs;
+		std::vector<Ipv4>* agentIPs;
 		taskMessage* tm;
 		fileMessage* fm;
 		string name;
