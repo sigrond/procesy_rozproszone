@@ -130,7 +130,7 @@ namespace message
         class retMessage : public Message
         {
         public:
-                retMessage ( State state, unsigned char exitStatus, unsigned long taskId, std::string filename, const std::ifstream & file );
+                retMessage ( State state, unsigned char exitStatus, unsigned long taskId, std::string filename);
 
                 retMessage ( State state );
 
@@ -140,7 +140,13 @@ namespace message
 
                 std::string getFilename();
 
-                std::ofstream & getFile();
+                std::fstream & getFile();
+		private:
+			State state;
+			unsigned char exitStatus;
+			unsigned long taskId;
+			std::string name;
+			std::fstream file;
         };
 
         class synMessage : public Message

@@ -173,39 +173,44 @@ std::fstream & fileMessage::getFile()
 	return file;
 }
 
-retMessage::retMessage( State state,
+retMessage::retMessage( State s,
 					unsigned char exitStatus,
-					unsigned long taskId,
-					std::string filename,
-					const std::ifstream & file ) : Message::Message( Category::RET )
+					unsigned long tId,
+					std::string filename) :
+						Message::Message( Category::RET ),
+						state(s),
+						taskId(tId),
+						name(filename)
 {
 
 }
 
-retMessage::retMessage ( State state ) : Message::Message( Category::RET )
+retMessage::retMessage ( State s ) :
+	Message::Message( Category::RET ),
+	state(s)
 {
 
 }
 
 unsigned char retMessage::getExitStatus()
 {
-	return 0;
+	return exitStatus;
 }
 
 unsigned long retMessage::getTaskId()
 {
-
+	return taskId;
 }
 
 std::string retMessage::getFilename()
 {
-	return std::string();
+	return name;
 }
 
-std::ofstream & retMessage::getFile()
+std::fstream & retMessage::getFile()
 {
-	std::ofstream o("file",std::ofstream::out);
-	return o;
+	file.open(name.c_str(),std::fstream::out);
+	return file;
 }
 
 synMessage::synMessage ( State state ) : Message::Message( Category::SYN )
