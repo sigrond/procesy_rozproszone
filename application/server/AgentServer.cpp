@@ -80,7 +80,10 @@ AgentServer::~AgentServer()
 
 void AgentServer::connect(Slave* who, message::Message* m)
 {
-	connectionManager->send(*static_cast<Ipv4*>(who->getSlaveIP()),*m);/**< \todo dodać jakiś zabezpieczeń bo groźnie to wygląda */
+	#ifdef _DEBUG
+	cout<<"wysyłam do agenta na port: "<<who->port<<endl;
+	#endif // _DEBUG
+	connectionManager->send(*static_cast<Ipv4*>(who->getSlaveIP()),*m,who->port);/**< \todo dodać jakiś zabezpieczeń bo groźnie to wygląda */
 }
 
 void AgentServer::listen(Slave* who)
@@ -120,7 +123,7 @@ void AgentServer::setBlockingQueue(BlockingQueue<Event*>* q)
  * \return void
  *
  */
-void AgentServer::addSlave(Ip* ip)
+void AgentServer::addSlave(Ip* ip, unsigned short portNo)
 {
 	#ifdef _DEBUG
 	cout<<"AgentServer::addSlave(Ip* ip)"<<endl;
@@ -130,7 +133,7 @@ void AgentServer::addSlave(Ip* ip)
 		throw AgentServerException("slaves==nullptr");
 	}
 	slavesMutex.lock();
-	slaves->push_back(new Slave(ip));
+	slaves->push_back(new Slave(ip, portNo));
 	#ifdef _DEBUG
 	cout<<"Dodany agent ip: "<<((Ipv4*)slaves->back()->getSlaveIP())->getAddress()<<endl;
 	#endif // _DEBUG

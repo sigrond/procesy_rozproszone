@@ -42,7 +42,7 @@ public:
 	{
 		deletedObjects++;
 	}
-	virtual void doJob(void* data, void* who=nullptr) override
+	virtual void doJob(void* data, void* who=nullptr,unsigned short port=0) override
 	{
 		std::clog<<"TestStrategy, ObjectID: "<<ObjectID
 		//		<<", createdObjects: "<<createdObjects
@@ -67,7 +67,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data, void* who=nullptr) override
+	virtual void doJob(void* data, void* who=nullptr,unsigned short port=0) override
 	{
 		std::cout<<"Zamykanie serwera...\n";
 		((Controller*)data)->triggerShutDown();
@@ -86,7 +86,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data, void* who=nullptr) override
+	virtual void doJob(void* data, void* who=nullptr,unsigned short port=0) override
 	{
 		using namespace std;
 		using namespace message;
@@ -190,7 +190,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data, void* who=nullptr) override
+	virtual void doJob(void* data, void* who=nullptr,unsigned short port=0) override
 	{
 		using namespace std;
 		using namespace message;
@@ -286,7 +286,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data, void* who=nullptr) override
+	virtual void doJob(void* data, void* who=nullptr,unsigned short port=0) override
 	{
 		using namespace std;
         cout<<"strategia AddAgent..."<<endl;
@@ -294,7 +294,17 @@ public:
         AgentServer* as=((Controller*)controller)->agentServer;
         //Ipv4 ip=*(Ipv4*)((pair<void*,void*>*)data)->first;
         Ipv4* ip=(Ipv4*)data;
-        as->addSlave(ip);
+        if(port==0)
+		{
+			as->addSlave(ip);
+		}
+		else
+		{
+			#ifdef _DEBUG
+			cout<<"AgentServer add Slave strategy port: "<<port<<endl;
+			#endif // _DEBUG
+			as->addSlave(ip,port);
+		}
         //delete (pair<void*,void*>*)data;
 	}
 };
@@ -310,7 +320,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data, void* who=nullptr) override
+	virtual void doJob(void* data, void* who=nullptr,unsigned short port=0) override
 	{
 		using namespace std;
 		using namespace message;
@@ -330,7 +340,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data, void* who=nullptr) override
+	virtual void doJob(void* data, void* who=nullptr,unsigned short port=0) override
 	{
 		using namespace std;
 		using namespace message;
@@ -350,7 +360,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data, void* who=nullptr) override
+	virtual void doJob(void* data, void* who=nullptr,unsigned short port=0) override
 	{
 		using namespace std;
         cout<<"strategia AddTask..."<<endl;

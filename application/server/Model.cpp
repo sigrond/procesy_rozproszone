@@ -81,7 +81,7 @@ void Model::pushAddAgent(Ipv4* ip, unsigned short port)
 	}
 	//pair<void*,void*>* p=nullptr;
 	//p=new pair<void*,void*>((void*)&ip,(void*)controller);
-	blockingQueue->push_back(new Event(ADD_AGENT,(void*)ip));
+	blockingQueue->push_back(new Event(ADD_AGENT,(void*)ip,port));
 }
 
 void Model::pingAdmin()
