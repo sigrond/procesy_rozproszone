@@ -35,7 +35,9 @@ namespace message
         class Message
         {
         public:
-		Message(Category category);
+		Message( Category category );
+
+		Message( Category category, unsigned long bufferSize );
 
                 virtual ~Message();
 
@@ -47,10 +49,18 @@ namespace message
 
                 unsigned char getSubcategory() const;
 
-        private:
+		char * getBuffer() const;
+
+		unsigned long getBufferSize() const;
+
+        protected:
                 virtual bool checkMessage () const; //= 0; TYLKO TYMCZASOWO, BO JEST TO SZYBSZE NIŻ PISANIE METODY DLA 8 PODKLAS
 
                 unsigned char code;
+
+		char * buffer;
+
+		unsigned long bufferSize;
         };
 
         class hostMessage : public Message
@@ -157,14 +167,18 @@ namespace message
         {
         public:
                 synMessage ( State state );
+
+		synMessage ( char * buffer, unsigned long bufferSize );
         };
 
         class pingMessage : public Message
         {
         public:
                 pingMessage ( State state );
-		private:
-			State state;
+
+		pingMessage ( char * buffer, unsigned long bufferSize );
+	private:
+		State state;
         };
 
         class errMessage : public Message

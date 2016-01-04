@@ -17,9 +17,11 @@
 
 #include "debug.h"
 
-Socket::Socket() {}
+Socket::Socket( unsigned short port ) : port(port)
+{
+}
 
-Socket::Socket( int msgsock ) : sockfd( msgsock )
+Socket::Socket( int msgsock, unsigned short port ) : sockfd( msgsock ), port(port)
 {
 }
 
@@ -52,7 +54,7 @@ int Socket::close()
 
 
 
-SocketIp4::SocketIp4( const Ipv4 & ip ) : ip(ip)
+SocketIp4::SocketIp4( const Ipv4 & ip, unsigned short port ) : Socket( port ), ip(ip)
 {
         DBG("SocketIp4( " << ip.getAddress() << " )")
 
@@ -62,10 +64,10 @@ SocketIp4::SocketIp4( const Ipv4 & ip ) : ip(ip)
 
         saddr.sin_addr.s_addr = ip.getAddressNum();
 
-        saddr.sin_port = htons( PORT );
+        saddr.sin_port = htons( port );
 }
 
-SocketIp4::SocketIp4( int msgsock ) : Socket( msgsock )
+SocketIp4::SocketIp4( int msgsock ) : Socket( msgsock, 0 )
 {
         DBG("SocketIp4( " << msgsock << " )")
 }
@@ -116,6 +118,7 @@ int SocketIp4::recv( char * buffer, int bufferSize )
         DBG("SocketIp4::recv()")
 
         int bytesRec;
+	unsigned bytesTotal = 0;
 
         while( bufferSize > 0 )
         {
@@ -129,9 +132,10 @@ int SocketIp4::recv( char * buffer, int bufferSize )
 
                 buffer += bytesRec;
                 bufferSize -= bytesRec;
+		bytesTotal += bytesRec;
         }
 
-        return bytesRec; 
+        return bytesTotal; 
 }
 
 int SocketIp4::send( char * buffer, int bufferSize )

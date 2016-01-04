@@ -57,16 +57,16 @@ void awaitConnections( ConnectionManager * conMan )
 
 // tak, to działa i jest bezpieczne wątkowo (Magic Statics)
 // C++11 takie piękne
-ConnectionManager * ConnectionManager::getInstance()
+ConnectionManager * ConnectionManager::getInstance( unsigned short listenPort )
 {
-        static ConnectionManager instance;
+        static ConnectionManager instance = ConnectionManager( listenPort );
         return &instance;  
 }
 
-ConnectionManager::ConnectionManager()
+ConnectionManager::ConnectionManager( unsigned short listenPort )
 {
         DBG("ConnectionManager()")
-        listeningSocket = new SocketIp4( Ipv4() );
+        listeningSocket = new SocketIp4( Ipv4(), listenPort );
 
         try
         {
@@ -86,7 +86,7 @@ ConnectionManager::~ConnectionManager()
         DBG("~ConnectionManager()")
 }
 
-void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg )
+void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg, unsigned short port )
 {
         DBG("ConMan::send( " << ip.getAddress() << " )")
 
@@ -96,7 +96,7 @@ void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg )
                 if( connection == nullptr )
                 {
                         DBG("ConMan::send() connection not found, new connection")
-                        connection = new Connection( ip );
+                        connection = new Connection( ip, port );
                 }
 
         map4Mutex.unlock();
@@ -191,7 +191,7 @@ void ConnectionManager::remove( const Ipv4 & ip )
         connGuardsMutex.unlock();
 }
 
-void ConnectionManager::send( const Ipv6 & ip, const message::Message & msg )
+void ConnectionManager::send( const Ipv6 & ip, const message::Message & msg, unsigned short port )
 {
 
 }

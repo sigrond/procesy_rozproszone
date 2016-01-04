@@ -10,14 +10,23 @@
 using namespace message;
 using namespace std;
 
+//---------------
+// Message
+//---------------
 Message::Message( Category category ) : code( (unsigned char) category )
+{
+
+}
+
+Message::Message( Category category, unsigned long bufferSize ) : code( (unsigned char) category ), bufferSize( bufferSize )
 {
 
 }
 
 Message::~Message()
 {
-
+	if( buffer )
+		delete [] buffer;
 }
 
 
@@ -55,6 +64,18 @@ unsigned char Message::getSubcategory() const
 {
 	return code&0x1C;
 }
+
+char * Message::getBuffer() const
+{
+	return buffer;
+}
+
+unsigned long Message::getBufferSize() const
+{
+	return bufferSize;
+}
+
+
 
 hostMessage::hostMessage( HostSub su, State st, const std::vector<Ipv4> & addr ) :
 	Message::Message( Category::HOST ),
@@ -230,17 +251,54 @@ std::fstream & retMessage::getFile()
 	return file;
 }
 
+
+
+
+//---------------
+// SynMessage
+//---------------
 synMessage::synMessage ( State state ) : Message::Message( Category::SYN )
 {
+	code += (unsigned char)state;
 
+	buffer = new char [1];
+
+	buffer[0] = code;
+
+	bufferSize = 1;	
 }
 
-pingMessage::pingMessage ( State s ) :
-	Message::Message( Category::PING ),
-	state(s)
+synMessage::synMessage ( char * buffer, unsigned long bufferSize ) : Message::Message( Category::SYN, bufferSize )
 {
+	this->buffer = new char [ bufferSize ];
 
+	for( unsigned long i = 0; i < bufferSize; ++i )
+		this->buffer[i] = buffer[i];	
 }
+
+
+//---------------
+// PingMessage
+//---------------
+pingMessage::pingMessage ( State state ) : Message::Message( Category::PING )
+{
+	code += (unsigned char)state;
+
+	buffer = new char [1];
+
+	buffer[0] = code; 
+}
+
+pingMessage::pingMessage ( char * buffer, unsigned long bufferSize ) : Message::Message( Category::PING, bufferSize )
+{
+	this->buffer = new char [ bufferSize ];
+
+	for( unsigned long i = 0; i < bufferSize; ++i )
+		this->buffer[i] = buffer[i];	
+}
+
+
+
 
 errMessage::errMessage ( ErrSub sub, State state, unsigned char errCode ) : Message::Message( Category::ERR )
 {

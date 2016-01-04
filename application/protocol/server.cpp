@@ -5,15 +5,20 @@ using namespace message;
 #include <thread>
 #include <iostream>
 
-void communication ( ConnectionManager * cm, Ipv4 * ip, Message * msg1, Message * msg2)
-{	
+void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
+{	 
+	Message * msg1 = nullptr;
+
+        Message * msg2 = new synMessage( State::REQ );
+        Message * msg3 = new synMessage( State::ACK );
+
+	cm->send( *ip, *msg2, port + 55555 );
+
+	cm->receive( *ip, msg1 );
+	
 	cm->receive( *ip, msg1 );
 
-	cm->send( *ip, *msg2 );
-
-	cm->receive( *ip, msg1 );
-
-	cm->send( *ip, *msg2 );
+	cm->send( *ip, *msg2, port + 55555 );
 
 }
 
@@ -22,42 +27,26 @@ int main( int argc, char** argv)
 
         if(argc > 1)
         {
-                ConnectionManager * mietek = ConnectionManager::getInstance();
-                Message * msg1 = nullptr;
+		unsigned agents = std::stoi( std::string( argv[1] ));
 
-                Message * msg2 = new pingMessage( State::REQ );
+                ConnectionManager * mietek = ConnectionManager::getInstance( 55555 );
 
-                Ipv4 ip = Ipv4( std::string(argv[1]) );
+                Ipv4 ip = Ipv4("127.0.0.1");
 
-		Ipv4 ocDonutSteal = Ipv4("1.2.3.4");
-		Ipv4 copy = Ipv4( ocDonutSteal );
-
-		std::cout << "1.2.3.4? " << ocDonutSteal.getAddress() << std::endl;
-		std::cout << "1.2.3.4? " << copy.getAddress() << std::endl;
-
-		Ipv4 change = Ipv4("5.6.7.8");
-		ocDonutSteal = change;
-		change = copy;
-
-		std::cout << "5.6.7.8? " << ocDonutSteal.getAddress() << std::endl;
-		std::cout << "1.2.3.4? " << change.getAddress() << std::endl;
-	
 		getchar();
 
-		Ipv4 ip1 = Ipv4("10.10.10.10");
-		Ipv4 ip2 = Ipv4("10.10.10.11");
-		Ipv4 ip3 = Ipv4("10.10.10.12");
-		Ipv4 ip4 = Ipv4("10.10.10.13");
-		Ipv4 ip5 = Ipv4("10.10.10.14");
+		std::thread * t[agents];
 
-		std::thread t1 (communication, mietek, &ip1, msg1, msg2);
-		std::thread t2 (communication, mietek, &ip2, msg1, msg2);
-		std::thread t3 (communication, mietek, &ip3, msg1, msg2);
-		std::thread t4 (communication, mietek, &ip4, msg1, msg2);
-		std::thread t5 (communication, mietek, &ip5, msg1, msg2);
+		for(unsigned i = 0; i < agents; ++i )
+			t[i] = new std::thread (communication, mietek, &ip, i+1 );
 
                 getchar();
 
+		for(unsigned i = 0; i < agents; ++i )
+		{
+			t[i]->join();
+			delete t[i];
+		}
         }
         else
         {
