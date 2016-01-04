@@ -114,6 +114,7 @@ namespace message
                 std::fstream & getFile();
 		private:
 			std::fstream file;
+			std::string name;
         };
 
         class retMessage : public Message

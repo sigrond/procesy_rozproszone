@@ -8,6 +8,7 @@
 #include "Message.hpp"
 
 using namespace message;
+using namespace std;
 
 Message::Message( Category category ) : code( (unsigned char) category )
 {
@@ -19,7 +20,7 @@ Message::~Message()
 
 }
 
-        
+
                                                         bool Message::checkMessage() const {}
 
 
@@ -147,13 +148,13 @@ unsigned long fileMessage::getTaskId()
 
 std::string fileMessage::getFilename()
 {
-	return std::string();
+	return name;
 }
 
-std::ofstream & fileMessage::getFile()
+std::fstream & fileMessage::getFile()
 {
-	std::ofstream o("file",std::ofstream::out);
-	return o;
+	file.open(name.c_str(),std::fstream::out);
+	return file;
 }
 
 retMessage::retMessage( State state,
