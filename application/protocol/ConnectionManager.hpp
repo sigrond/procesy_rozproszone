@@ -30,21 +30,21 @@ public:
          * \brief   Zwraca referencję do obiektu ConnectionManager. Jesli taki nie istnieje, tworzy go.
          * \return  Referencja do obiektu ConnectionManager
          */
-        static ConnectionManager * getInstance();
+        static ConnectionManager * getInstance( unsigned short listenPort );
 
         /*
          * \brief           Wysyła komunikat msg do hosta o wskazanym adresie IPv4
          * \param[in]  ip   Adres na który ma być wyslana wiadomość
          * \param[in]  msg  Wiadomość do wysłania
          */
-        void send( const Ipv4 & ip, const message::Message & msg );
+        void send( const Ipv4 & ip, const message::Message & msg, unsigned short port );
 
         /*
          * \brief           Wysyła komunikat msg do hosta o wskazanym adresie IPv6
          * \param[in]  ip   Adres na który ma być wyslana wiadomość
          * \param[in]  msg  Wiadomość do wysłania
          */
-        void send( const Ipv6 & ip, const message::Message & msg );
+        void send( const Ipv6 & ip, const message::Message & msg, unsigned short port );
         
         /* 
          * \brief           Czeka na wiadomość od hosta o wskazanym adresie IPv4
@@ -75,7 +75,7 @@ public:
         typedef std::map<Ipv4, Connection*>::iterator iterator4;
         typedef std::map<Ipv6, Connection*>::iterator iterator6;
 private:
-        ConnectionManager();
+        ConnectionManager( unsigned short listenPort );
         ConnectionManager( const ConnectionManager & );
         ConnectionManager& operator=( const ConnectionManager & );
         ~ConnectionManager();

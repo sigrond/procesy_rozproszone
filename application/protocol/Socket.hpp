@@ -31,9 +31,9 @@ const unsigned short BACKLOG = 256;
 class Socket
 {
 public:
-        Socket();
+        Socket( unsigned short port );
 
-        Socket( int msgsock );
+        Socket( int msgsock, unsigned short port );
 
         virtual ~Socket();
 
@@ -52,12 +52,14 @@ public:
 
 protected:
         int sockfd;
+
+	unsigned short port;
 };
 
 class SocketIp4 : public Socket
 {
 public:
-        SocketIp4( const Ipv4 & ip );
+        SocketIp4( const Ipv4 & ip, unsigned short port );
 
         SocketIp4( int msgsock );
 

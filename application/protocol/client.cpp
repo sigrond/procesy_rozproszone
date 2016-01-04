@@ -1,55 +1,47 @@
 #include "ConnectionManager.hpp"
 
 #include <string>
-
+using namespace message;
+#include <thread>
 #include <iostream>
 
-using namespace message;
+void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
+{	 
+	Message * msg1 = nullptr;
+
+        Message * msg2 = new synMessage( State::ACK );
+        Message * msg3 = new synMessage( State::OK );
+
+
+	cm->receive( *ip, msg1 );
+
+	cm->send( *ip, *msg2, port + 55555 );
+
+	cm->send( *ip, *msg2, port + 55555 );
+
+	cm->receive( *ip, msg1 );
+}
 
 int main( int argc, char** argv)
 {
 
         if(argc > 1)
         {
-                ConnectionManager * mietek = ConnectionManager::getInstance();
-                Message * msg1 = nullptr;
+		unsigned n = std::stoi( std::string( argv[1] ));
 
-                Message * msg2 = new pingMessage( State::REQ );
+                ConnectionManager * mietek = ConnectionManager::getInstance( 55555 + n );
 
-                Ipv4 ip = Ipv4( std::string(argv[1]) );
+                Ipv4 ip = Ipv4("127.0.0.1");
+
+		getchar();
+
+		std::thread * tq;
+
+		std::thread t (communication, mietek, &ip, 55555 );
 
                 getchar();
 
-                // rrraz
-                mietek->send( ip, *msg2 );
-
-                mietek->receive( ip, msg1 );
-
-                mietek->send( ip, *msg2 );
-
-                mietek->receive( ip, msg1 );
-
-                // dwa
-                mietek->send( ip, *msg2 );
-
-                mietek->receive( ip, msg1 );
-
-                mietek->send( ip, *msg2 );
-
-                mietek->receive( ip, msg1 );
-
-                // usuwamy
-                mietek->remove( ip );
-
-                // rrraz
-                mietek->send( ip, *msg2 );
-
-                mietek->receive( ip, msg1 );
-
-                mietek->send( ip, *msg2 );
-                
-                mietek->receive( ip, msg1 );
-
+		t.join();
         }
         else
         {
@@ -83,5 +75,6 @@ int main( int argc, char** argv)
                 std::cout << "To cię nauczy nie zapominać o argumentach, nędzny śmiertelniku." << std::endl;
 
         }
+        
         return 0;
 }

@@ -39,7 +39,7 @@ public:
          * \brief      Konstruktor połączeń po IPv4
          * \param[in]  address Referencja do obiektu zawierającego adres IPv4 hosta docelowego (domyślnie - localhost) 
          */
-        Connection ( const Ipv4 & address = Ipv4() );
+        Connection ( const Ipv4 & address = Ipv4(), unsigned short port = 55555 );
 
         /**
          * \brief      Konstruktor połączeń po IPv6
@@ -64,7 +64,7 @@ public:
          * \brief      Funkcja oczekująca na komunikat od zdalnego hosta
          * \return     Wskaźnik na obiekt Message utworzony na podstawie danych otrzymanych ze zdalnego hosta 
          */
-        void receive ( message::Message * const message );
+        void receive ( message::Message * message );
 
         char getCounter();
 private:
