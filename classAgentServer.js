@@ -3,7 +3,7 @@ var classAgentServer =
     [ "cmp", "structAgentServer_1_1cmp.html", "structAgentServer_1_1cmp" ],
     [ "AgentServer", "classAgentServer.html#ae00b5d7d78d9786b11a396246710a621", null ],
     [ "~AgentServer", "classAgentServer.html#afb8fd8d61568af65a604af199a9f3afc", null ],
-    [ "addSlave", "classAgentServer.html#a3b5b09bd050d9addf0f20d6bb1b008fb", null ],
+    [ "addSlave", "classAgentServer.html#a23db47434dd7a20ce4ead917eae1c3ea", null ],
     [ "addTask", "classAgentServer.html#ae7b89b5da7cd9e7a1aa21093be7ed2e5", null ],
     [ "connect", "classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd", null ],
     [ "distributeTasks", "classAgentServer.html#a8f9a076ca22b4025d0ac5ba08c82c858", null ],

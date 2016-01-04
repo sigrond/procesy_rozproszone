@@ -11,7 +11,7 @@ var searchData=
   ['addresses',['addresses',['../classmessage_1_1hostMessage.html#a87a2d8566ae21be5431f9e42fb8efbb8',1,'message::hostMessage']]],
   ['addressnumbers',['addressNumbers',['../classIpv6.html#ab382a20b835bda75cf3f14ade110a963',1,'Ipv6']]],
   ['addrstr',['addrStr',['../classIpv4.html#a9cf6a8826fef842e0bf65e56468bba23',1,'Ipv4']]],
-  ['addslave',['addSlave',['../classAgentServer.html#a3b5b09bd050d9addf0f20d6bb1b008fb',1,'AgentServer']]],
+  ['addslave',['addSlave',['../classAgentServer.html#a23db47434dd7a20ce4ead917eae1c3ea',1,'AgentServer']]],
   ['addtask',['addTask',['../classAgentServer.html#ae7b89b5da7cd9e7a1aa21093be7ed2e5',1,'AgentServer::addTask()'],['../classModel.html#a160b44b67ed3c952b28bbea0582463f2',1,'Model::addTask()']]],
   ['addtaskstrategy',['AddTaskStrategy',['../classAddTaskStrategy.html',1,'AddTaskStrategy'],['../classController.html#a270677775098cdc4b8837965b1cd2b88',1,'Controller::AddTaskStrategy()']]],
   ['adminip',['adminIP',['../classAdminServer.html#a7d89296fe6c6bdcfcc77b457eff1373c',1,'AdminServer']]],

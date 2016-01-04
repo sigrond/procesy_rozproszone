@@ -131,8 +131,8 @@ Diagram współpracy dla Slave:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr class="memitem:ac78fa9b0728d92c5d8060ecb827197b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlave.html#ac78fa9b0728d92c5d8060ecb827197b8">Slave</a> (<a class="el" href="classIp.html">Ip</a> *ip)</td></tr>
-<tr class="separator:ac78fa9b0728d92c5d8060ecb827197b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a298f9ea1a508f269d9a3fea3eee0d245"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlave.html#a298f9ea1a508f269d9a3fea3eee0d245">Slave</a> (<a class="el" href="classIp.html">Ip</a> *ip, unsigned short portNo=55555)</td></tr>
+<tr class="separator:a298f9ea1a508f269d9a3fea3eee0d245"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99d0908d38f846fae1e7417acf78796b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlave.html#a99d0908d38f846fae1e7417acf78796b">~Slave</a> ()</td></tr>
 <tr class="separator:a99d0908d38f846fae1e7417acf78796b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70be968ad67b89b3998bf73bd93e19f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIp.html">Ip</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlave.html#a70be968ad67b89b3998bf73bd93e19f7">getSlaveIP</a> ()</td></tr>
@@ -164,6 +164,8 @@ Atrybuty publiczne</h2></td></tr>
 <tr class="separator:aab6e876c5a47bbe247a2f825aad81e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa26098c3eeb285130e719ab94ecc9722"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlave.html#aa26098c3eeb285130e719ab94ecc9722">ready</a></td></tr>
 <tr class="separator:aa26098c3eeb285130e719ab94ecc9722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae677dcbb8852495d6b8c2e7af8e014a7"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSlave.html#ae677dcbb8852495d6b8c2e7af8e014a7">port</a></td></tr>
+<tr class="separator:ae677dcbb8852495d6b8c2e7af8e014a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
@@ -187,7 +189,7 @@ Atrybuty prywatne</h2></td></tr>
 
 <p>Definicja w linii <a class="el" href="Slave_8hpp_source.html#l00016">16</a> pliku <a class="el" href="Slave_8hpp_source.html">Slave.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
-<a class="anchor" id="ac78fa9b0728d92c5d8060ecb827197b8"></a>
+<a class="anchor" id="a298f9ea1a508f269d9a3fea3eee0d245"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -195,8 +197,18 @@ Atrybuty prywatne</h2></td></tr>
           <td class="memname">Slave::Slave </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classIp.html">Ip</a> *&#160;</td>
-          <td class="paramname"><em>ip</em></td><td>)</td>
+          <td class="paramname"><em>ip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>portNo</em> = <code>55555</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -204,15 +216,15 @@ Atrybuty prywatne</h2></td></tr>
 
 <p>Definicja w linii <a class="el" href="Slave_8cpp_source.html#l00009">9</a> pliku <a class="el" href="Slave_8cpp_source.html">Slave.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="ConnectionManager_8hpp_source.html#l00085">ConnectionManager::connectionGuards</a>, <a class="el" href="Slave_8hpp_source.html#l00022">connectionManager</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00060">ConnectionManager::getInstance()</a>, <a class="el" href="Slave_8hpp_source.html#l00025">listening</a>, <a class="el" href="Slave_8hpp_source.html#l00070">ready</a>, <a class="el" href="Slave_8hpp_source.html#l00024">removed</a>, <a class="el" href="Slave_8cpp_source.html#l00009">Slave()</a>, <a class="el" href="Slave_8hpp_source.html#l00019">slaveIP</a>, <a class="el" href="Slave_8hpp_source.html#l00021">state</a> i <a class="el" href="Slave_8hpp_source.html#l00023">task</a>.</p>
+<p>Odwołuje się do <a class="el" href="ConnectionManager_8hpp_source.html#l00085">ConnectionManager::connectionGuards</a>, <a class="el" href="Slave_8hpp_source.html#l00022">connectionManager</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00060">ConnectionManager::getInstance()</a>, <a class="el" href="Slave_8hpp_source.html#l00025">listening</a>, <a class="el" href="Slave_8hpp_source.html#l00071">port</a>, <a class="el" href="Slave_8hpp_source.html#l00070">ready</a>, <a class="el" href="Slave_8hpp_source.html#l00024">removed</a>, <a class="el" href="Slave_8cpp_source.html#l00009">Slave()</a>, <a class="el" href="Slave_8hpp_source.html#l00019">slaveIP</a>, <a class="el" href="Slave_8hpp_source.html#l00021">state</a> i <a class="el" href="Slave_8hpp_source.html#l00023">task</a>.</p>
 
 <p>Odwołania w <a class="el" href="Slave_8cpp_source.html#l00009">Slave()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
-<div class="center"><img src="classSlave_ac78fa9b0728d92c5d8060ecb827197b8_cgraph.png" border="0" usemap="#classSlave_ac78fa9b0728d92c5d8060ecb827197b8_cgraph" alt=""/></div>
-<map name="classSlave_ac78fa9b0728d92c5d8060ecb827197b8_cgraph" id="classSlave_ac78fa9b0728d92c5d8060ecb827197b8_cgraph">
+<div class="center"><img src="classSlave_a298f9ea1a508f269d9a3fea3eee0d245_cgraph.png" border="0" usemap="#classSlave_a298f9ea1a508f269d9a3fea3eee0d245_cgraph" alt=""/></div>
+<map name="classSlave_a298f9ea1a508f269d9a3fea3eee0d245_cgraph" id="classSlave_a298f9ea1a508f269d9a3fea3eee0d245_cgraph">
 <area shape="rect" id="node2" href="classConnectionManager.html#a38f4c092a52fd80c19d613fafad832b9" title="ConnectionManager::\lgetInstance" alt="" coords="145,23,291,65"/><area shape="rect" id="node3" href="classConnectionManager.html#acddf7b9dd1fa9319ffba80b4ecf2e5e5" title="ConnectionManager::\lConnectionManager" alt="" coords="339,23,484,65"/><area shape="rect" id="node4" href="classSocket.html#abda54549284a0626998e833bfead9f11" title="Socket::bind" alt="" coords="536,5,631,32"/><area shape="rect" id="node5" href="classSocket.html#a34374a7d9ae416f8593bea924ab2099b" title="Socket::listen" alt="" coords="532,56,635,83"/><area shape="rect" id="node6" href="classListenSockEx.html#a50566d24bd66b5d44d14fcff13b602c3" title="ListenSockEx::ListenSockEx" alt="" coords="683,56,875,83"/></map>
 </div>
 </p>
@@ -220,8 +232,8 @@ Oto graf wywołań dla tej funkcji:</div>
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
-<div class="center"><img src="classSlave_ac78fa9b0728d92c5d8060ecb827197b8_icgraph.png" border="0" usemap="#classSlave_ac78fa9b0728d92c5d8060ecb827197b8_icgraph" alt=""/></div>
-<map name="classSlave_ac78fa9b0728d92c5d8060ecb827197b8_icgraph" id="classSlave_ac78fa9b0728d92c5d8060ecb827197b8_icgraph">
+<div class="center"><img src="classSlave_a298f9ea1a508f269d9a3fea3eee0d245_icgraph.png" border="0" usemap="#classSlave_a298f9ea1a508f269d9a3fea3eee0d245_icgraph" alt=""/></div>
+<map name="classSlave_a298f9ea1a508f269d9a3fea3eee0d245_icgraph" id="classSlave_a298f9ea1a508f269d9a3fea3eee0d245_icgraph">
 </map>
 </div>
 </p>
@@ -242,7 +254,7 @@ Oto graf wywoływań tej funkcji:</div>
 </div><div class="memdoc">
 <p>Default destructor </p>
 
-<p>Definicja w linii <a class="el" href="Slave_8cpp_source.html#l00023">23</a> pliku <a class="el" href="Slave_8cpp_source.html">Slave.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Slave_8cpp_source.html#l00024">24</a> pliku <a class="el" href="Slave_8cpp_source.html">Slave.cpp</a>.</p>
 
 </div>
 </div>
@@ -260,7 +272,7 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Slave_8cpp_source.html#l00037">37</a> pliku <a class="el" href="Slave_8cpp_source.html">Slave.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Slave_8cpp_source.html#l00038">38</a> pliku <a class="el" href="Slave_8cpp_source.html">Slave.cpp</a>.</p>
 
 <p>Odwołuje się do <a class="el" href="Slave_8hpp_source.html#l00025">listening</a>.</p>
 
@@ -293,14 +305,14 @@ Oto graf wywoływań tej funkcji:</div>
 
 <p>Odwołuje się do <a class="el" href="Slave_8hpp_source.html#l00019">slaveIP</a>.</p>
 
-<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00081">AgentServer::connect()</a> i <a class="el" href="AgentServer_8cpp_source.html#l00086">AgentServer::listen()</a>.</p>
+<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00081">AgentServer::connect()</a> i <a class="el" href="AgentServer_8cpp_source.html#l00089">AgentServer::listen()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSlave_a70be968ad67b89b3998bf73bd93e19f7_icgraph.png" border="0" usemap="#classSlave_a70be968ad67b89b3998bf73bd93e19f7_icgraph" alt=""/></div>
 <map name="classSlave_a70be968ad67b89b3998bf73bd93e19f7_icgraph" id="classSlave_a70be968ad67b89b3998bf73bd93e19f7_icgraph">
-<area shape="rect" id="node2" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd" title="AgentServer::connect" alt="" coords="176,13,323,39"/><area shape="rect" id="node4" href="classAgentServer.html#a001e979f72cf3d360d424cea0df70165" title="AgentServer::listen" alt="" coords="184,63,315,90"/><area shape="rect" id="node3" href="classMessageFromAgentStrategy.html#a6243e9b9b092ec637b60d0777cad2951" title="obsługa wiadomości od agenta " alt="" coords="371,5,559,47"/></map>
+<area shape="rect" id="node2" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd" title="AgentServer::connect" alt="" coords="176,13,323,39"/><area shape="rect" id="node4" href="classAgentServer.html#a001e979f72cf3d360d424cea0df70165" title="AgentServer::listen" alt="" coords="184,63,315,90"/><area shape="rect" id="node3" href="classMessageFromAgentStrategy.html#a7109a9ef64b2245661dbe0897dd10db3" title="obsługa wiadomości od agenta " alt="" coords="371,5,559,47"/></map>
 </div>
 </p>
 
@@ -362,7 +374,7 @@ Oto graf wywoływań tej funkcji:</div>
 
 <p>Odwołuje się do <a class="el" href="Slave_8hpp_source.html#l00023">task</a>.</p>
 
-<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00086">AgentServer::listen()</a>.</p>
+<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00089">AgentServer::listen()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -449,11 +461,11 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Slave_8cpp_source.html#l00031">31</a> pliku <a class="el" href="Slave_8cpp_source.html">Slave.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Slave_8cpp_source.html#l00032">32</a> pliku <a class="el" href="Slave_8cpp_source.html">Slave.cpp</a>.</p>
 
 <p>Odwołuje się do <a class="el" href="Slave_8hpp_source.html#l00025">listening</a>.</p>
 
-<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00086">AgentServer::listen()</a>.</p>
+<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00089">AgentServer::listen()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -639,7 +651,7 @@ Oto graf wywoływań tej funkcji:</div>
 
 <p>Definicja w linii <a class="el" href="Slave_8hpp_source.html#l00025">25</a> pliku <a class="el" href="Slave_8hpp_source.html">Slave.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Slave_8cpp_source.html#l00037">getListening()</a>, <a class="el" href="Slave_8cpp_source.html#l00031">setListening()</a> i <a class="el" href="Slave_8cpp_source.html#l00009">Slave()</a>.</p>
+<p>Odwołania w <a class="el" href="Slave_8cpp_source.html#l00038">getListening()</a>, <a class="el" href="Slave_8cpp_source.html#l00032">setListening()</a> i <a class="el" href="Slave_8cpp_source.html#l00009">Slave()</a>.</p>
 
 </div>
 </div>
@@ -658,6 +670,23 @@ Oto graf wywoływań tej funkcji:</div>
 
 </div>
 </div>
+<a class="anchor" id="ae677dcbb8852495d6b8c2e7af8e014a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short Slave::port</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>numer portu na którym nasłuchuje agent </p>
+
+<p>Definicja w linii <a class="el" href="Slave_8hpp_source.html#l00071">71</a> pliku <a class="el" href="Slave_8hpp_source.html">Slave.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00081">AgentServer::connect()</a> i <a class="el" href="Slave_8cpp_source.html#l00009">Slave()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aa26098c3eeb285130e719ab94ecc9722"></a>
 <div class="memitem">
 <div class="memproto">
@@ -671,7 +700,7 @@ Oto graf wywoływań tej funkcji:</div>
 
 <p>Definicja w linii <a class="el" href="Slave_8hpp_source.html#l00070">70</a> pliku <a class="el" href="Slave_8hpp_source.html">Slave.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00086">AgentServer::listen()</a> i <a class="el" href="Slave_8cpp_source.html#l00009">Slave()</a>.</p>
+<p>Odwołania w <a class="el" href="AgentServer_8cpp_source.html#l00089">AgentServer::listen()</a> i <a class="el" href="Slave_8cpp_source.html#l00009">Slave()</a>.</p>
 
 </div>
 </div>
@@ -799,7 +828,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classSlave.html">Slave</a></li>
-    <li class="footer">Wygenerowano Pn, 4 sty 2016 21:19:58 dla LOTC programem
+    <li class="footer">Wygenerowano Pn, 4 sty 2016 22:01:04 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

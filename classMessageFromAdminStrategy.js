@@ -1,4 +1,4 @@
 var classMessageFromAdminStrategy =
 [
-    [ "doJob", "classMessageFromAdminStrategy.html#ab69bc997a053e137ed35a365c4b467c9", null ]
+    [ "doJob", "classMessageFromAdminStrategy.html#ad549a2e03f2ccf7737639861af154c36", null ]
 ];

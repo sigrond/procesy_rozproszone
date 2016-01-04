@@ -15,7 +15,7 @@ var searchData=
   ['settask',['setTask',['../classSlave.html#ac80dabc88a0b32745527fc3d5c5f76c8',1,'Slave']]],
   ['settaskfinished',['setTaskFinished',['../classAgentServer.html#a14c0ad3b1a17a161c659fea1710b030c',1,'AgentServer']]],
   ['setup',['setup',['../classController.html#aaff2c0ac01c4d7a6b78718ac8a411c4b',1,'Controller']]],
-  ['slave',['Slave',['../classSlave.html#ac78fa9b0728d92c5d8060ecb827197b8',1,'Slave']]],
+  ['slave',['Slave',['../classSlave.html#a298f9ea1a508f269d9a3fea3eee0d245',1,'Slave']]],
   ['socket',['Socket',['../classSocket.html#a2c55b94d9f5256b3297b67f9fb0f1428',1,'Socket::Socket(unsigned short port)'],['../classSocket.html#aaf04a8c18d38ee0d3dceb24931e352e7',1,'Socket::Socket(int msgsock, unsigned short port)']]],
   ['socketip4',['SocketIp4',['../classSocketIp4.html#a430c59c57f709f3d163dafbe7397d7f5',1,'SocketIp4::SocketIp4(const Ipv4 &amp;ip, unsigned short port)'],['../classSocketIp4.html#ad23f394d563556b512bdc653f76348f8',1,'SocketIp4::SocketIp4(int msgsock)']]],
   ['socketip6',['SocketIp6',['../classSocketIp6.html#a96482d1a74a32fe7ce1a5f1c24d6c1ec',1,'SocketIp6']]],

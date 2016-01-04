@@ -23,7 +23,7 @@ var searchData=
   ['shutdown',['shutDown',['../classAgentClient.html#aa8af04642a8d7b0a8a2724eb9986df4b',1,'AgentClient::shutDown()'],['../classAdminServer.html#aaad5d3a003688fc71db31d99b7d78922',1,'AdminServer::shutDown()'],['../classAgentServer.html#a998eef5867d468c1023604ed25f9143f',1,'AgentServer::shutDown()'],['../classModel.html#a85354b9b623f9b4785b0e915bc33ed42',1,'Model::shutDown()']]],
   ['shutdownserver',['shutDownServer',['../classController.html#ab67686706e7df70a768c111193e5f0eb',1,'Controller']]],
   ['shutdownstrategy',['ShutDownStrategy',['../classShutDownStrategy.html',1,'']]],
-  ['slave',['Slave',['../classSlave.html',1,'Slave'],['../classSlave.html#ac78fa9b0728d92c5d8060ecb827197b8',1,'Slave::Slave()']]],
+  ['slave',['Slave',['../classSlave.html',1,'Slave'],['../classSlave.html#a298f9ea1a508f269d9a3fea3eee0d245',1,'Slave::Slave()']]],
   ['slave_2ecpp',['Slave.cpp',['../Slave_8cpp.html',1,'']]],
   ['slave_2ehpp',['Slave.hpp',['../Slave_8hpp.html',1,'']]],
   ['slaveip',['slaveIP',['../classSlave.html#a19d385860a1b9743db1374e0cdf2e9f2',1,'Slave']]],

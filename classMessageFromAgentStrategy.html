@@ -133,9 +133,9 @@ Diagram współpracy dla MessageFromAgentStrategy:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr class="memitem:a6243e9b9b092ec637b60d0777cad2951"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMessageFromAgentStrategy.html#a6243e9b9b092ec637b60d0777cad2951">doJob</a> (void *data, void *who=nullptr) override</td></tr>
-<tr class="memdesc:a6243e9b9b092ec637b60d0777cad2951"><td class="mdescLeft">&#160;</td><td class="mdescRight">obsługa wiadomości od agenta  <a href="#a6243e9b9b092ec637b60d0777cad2951">Więcej...</a><br/></td></tr>
-<tr class="separator:a6243e9b9b092ec637b60d0777cad2951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7109a9ef64b2245661dbe0897dd10db3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMessageFromAgentStrategy.html#a7109a9ef64b2245661dbe0897dd10db3">doJob</a> (void *data, void *who=nullptr, unsigned short port=0) override</td></tr>
+<tr class="memdesc:a7109a9ef64b2245661dbe0897dd10db3"><td class="mdescLeft">&#160;</td><td class="mdescRight">obsługa wiadomości od agenta  <a href="#a7109a9ef64b2245661dbe0897dd10db3">Więcej...</a><br/></td></tr>
+<tr class="separator:a7109a9ef64b2245661dbe0897dd10db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStrategy"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStrategy')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="classStrategy.html">Strategy</a></td></tr>
 <tr class="memitem:a2021a15bbc4f0d13f7b92f8933db2235 inherit pub_methods_classStrategy"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStrategy.html#a2021a15bbc4f0d13f7b92f8933db2235">Strategy</a> ()</td></tr>
 <tr class="separator:a2021a15bbc4f0d13f7b92f8933db2235 inherit pub_methods_classStrategy"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,7 +152,7 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 <div class="textblock">
 <p>Definicja w linii <a class="el" href="Strategies_8hpp_source.html#l00183">183</a> pliku <a class="el" href="Strategies_8hpp_source.html">Strategies.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
-<a class="anchor" id="a6243e9b9b092ec637b60d0777cad2951"></a>
+<a class="anchor" id="a7109a9ef64b2245661dbe0897dd10db3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -169,7 +169,13 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>who</em> = <code>nullptr</code>&#160;</td>
+          <td class="paramname"><em>who</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>port</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -193,27 +199,27 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Zwraca</dt><dd>virtual void </dd></dl>
 <p>&lt;</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000020">Do zrobienia:</a></b></dt><dd>obsługa kategorii </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000021">Do zrobienia:</a></b></dt><dd>obsługa kategorii </dd></dl>
 <p>&lt;</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000021">Do zrobienia:</a></b></dt><dd>wysłać task run </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000022">Do zrobienia:</a></b></dt><dd>wysłać task run </dd></dl>
 <p>&lt;</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000022">Do zrobienia:</a></b></dt><dd>yyy, nic nie robić? </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000023">Do zrobienia:</a></b></dt><dd>yyy, nic nie robić? </dd></dl>
 <p>&lt;</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000023">Do zrobienia:</a></b></dt><dd>włąściwie to całą tą wiadomość można wysłać adminowi i tylko zaznaczyć, zadanie jako wykonane </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000024">Do zrobienia:</a></b></dt><dd>włąściwie to całą tą wiadomość można wysłać adminowi i tylko zaznaczyć, zadanie jako wykonane </dd></dl>
 <p>&lt;</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000024">Do zrobienia:</a></b></dt><dd>odesłać status zakończenia do admina </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000025">Do zrobienia:</a></b></dt><dd>odesłać status zakończenia do admina </dd></dl>
 
-<p>Implementuje <a class="el" href="classStrategy.html#a7359fe130f1fc156213e006fbb2b994c">Strategy</a>.</p>
+<p>Implementuje <a class="el" href="classStrategy.html#aa4abd0f386620e80343f272391848343">Strategy</a>.</p>
 
 <p>Definicja w linii <a class="el" href="Strategies_8hpp_source.html#l00193">193</a> pliku <a class="el" href="Strategies_8hpp_source.html">Strategies.hpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063a0fc437bc317835cad5faafc12a83fad5">message::ACK</a>, <a class="el" href="Controller_8hpp_source.html#l00048">Controller::adminServer</a>, <a class="el" href="Controller_8hpp_source.html#l00049">Controller::agentServer</a>, <a class="el" href="AgentServer_8cpp_source.html#l00081">AgentServer::connect()</a>, <a class="el" href="AdminServer_8cpp_source.html#l00097">AdminServer::connect()</a>, <a class="el" href="Strategy_8hpp_source.html#l00017">Strategy::controller</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3aa72ec9c8e41b0dcd5b470268ce40202a">message::DEP</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3acd22bad976363fdd1bfbf6759fede482">message::ERR</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3a9fc5887c030f7a3e19821ebec457e719">message::FILE</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00053">message::Message::getCategory()</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00233">message::retMessage::getExitStatus()</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00058">message::Message::getState()</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00063">message::Message::getSubcategory()</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00238">message::retMessage::getTaskId()</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3ab9361011891280a44d85b967739cc6a5">message::HOST</a>, <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063ae0aa021e21dddbd6d8cecec71e9cf564">message::OK</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3ae07ff41a486c27c095a15898dcca34d1">message::PING</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00283">message::pingMessage::pingMessage()</a>, <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063ace4e1a7286ff585e08bf30898cf6b3eb">message::REQ</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3afb902bc4807c307b9309f2b528b96f2b">message::RET</a>, <a class="el" href="AgentServer_8cpp_source.html#l00379">AgentServer::setTaskFinished()</a>, <a class="el" href="Controller_8hpp_source.html#l00052">Controller::strategyMap</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3abab6eed0f7cd8bd721e728003b63b54d">message::SYN</a>, <a class="el" href="namespacemessage.html#ae05e95c0044ad6377fd7a731f10d1281adf24789f586a6c93696fa05b09f9dbb5">message::T_NOK</a>, <a class="el" href="namespacemessage.html#ae05e95c0044ad6377fd7a731f10d1281a5de3532491c36645ee0dd45a265d3e3f">message::T_OK</a> i <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3a0ed9b001ca1cd2667302a9be876ede9d">message::TASK</a>.</p>
+<p>Odwołuje się do <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063a0fc437bc317835cad5faafc12a83fad5">message::ACK</a>, <a class="el" href="Controller_8hpp_source.html#l00048">Controller::adminServer</a>, <a class="el" href="Controller_8hpp_source.html#l00049">Controller::agentServer</a>, <a class="el" href="AgentServer_8cpp_source.html#l00081">AgentServer::connect()</a>, <a class="el" href="AdminServer_8cpp_source.html#l00097">AdminServer::connect()</a>, <a class="el" href="Strategy_8hpp_source.html#l00017">Strategy::controller</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3aa72ec9c8e41b0dcd5b470268ce40202a">message::DEP</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3acd22bad976363fdd1bfbf6759fede482">message::ERR</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3a9fc5887c030f7a3e19821ebec457e719">message::FILE</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00053">message::Message::getCategory()</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00233">message::retMessage::getExitStatus()</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00058">message::Message::getState()</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00063">message::Message::getSubcategory()</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00238">message::retMessage::getTaskId()</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3ab9361011891280a44d85b967739cc6a5">message::HOST</a>, <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063ae0aa021e21dddbd6d8cecec71e9cf564">message::OK</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3ae07ff41a486c27c095a15898dcca34d1">message::PING</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00283">message::pingMessage::pingMessage()</a>, <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063ace4e1a7286ff585e08bf30898cf6b3eb">message::REQ</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3afb902bc4807c307b9309f2b528b96f2b">message::RET</a>, <a class="el" href="AgentServer_8cpp_source.html#l00382">AgentServer::setTaskFinished()</a>, <a class="el" href="Controller_8hpp_source.html#l00052">Controller::strategyMap</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3abab6eed0f7cd8bd721e728003b63b54d">message::SYN</a>, <a class="el" href="namespacemessage.html#ae05e95c0044ad6377fd7a731f10d1281adf24789f586a6c93696fa05b09f9dbb5">message::T_NOK</a>, <a class="el" href="namespacemessage.html#ae05e95c0044ad6377fd7a731f10d1281a5de3532491c36645ee0dd45a265d3e3f">message::T_OK</a> i <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3a0ed9b001ca1cd2667302a9be876ede9d">message::TASK</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
-<div class="center"><img src="classMessageFromAgentStrategy_a6243e9b9b092ec637b60d0777cad2951_cgraph.png" border="0" usemap="#classMessageFromAgentStrategy_a6243e9b9b092ec637b60d0777cad2951_cgraph" alt=""/></div>
-<map name="classMessageFromAgentStrategy_a6243e9b9b092ec637b60d0777cad2951_cgraph" id="classMessageFromAgentStrategy_a6243e9b9b092ec637b60d0777cad2951_cgraph">
+<div class="center"><img src="classMessageFromAgentStrategy_a7109a9ef64b2245661dbe0897dd10db3_cgraph.png" border="0" usemap="#classMessageFromAgentStrategy_a7109a9ef64b2245661dbe0897dd10db3_cgraph" alt=""/></div>
+<map name="classMessageFromAgentStrategy_a7109a9ef64b2245661dbe0897dd10db3_cgraph" id="classMessageFromAgentStrategy_a7109a9ef64b2245661dbe0897dd10db3_cgraph">
 <area shape="rect" id="node2" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd" title="AgentServer::connect" alt="" coords="285,80,432,107"/><area shape="rect" id="node15" href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec" title="Metoda łącząca się z konsolą administratora. Wysyła wiadomość. " alt="" coords="284,131,433,157"/><area shape="rect" id="node16" href="classmessage_1_1Message.html#a215855b0a3796c7ed9fd042b448afe63" title="message::Message::getCategory" alt="" coords="251,181,466,208"/><area shape="rect" id="node17" href="classmessage_1_1retMessage.html#abbb2353a2315272dbd083c3019198951" title="message::retMessage\l::getExitStatus" alt="" coords="283,233,434,274"/><area shape="rect" id="node18" href="classmessage_1_1Message.html#af1312b3bd5b5074c1781188375878991" title="message::Message::getState" alt="" coords="262,299,455,325"/><area shape="rect" id="node19" href="classmessage_1_1Message.html#a3aaaba96ea3393e7a351fefbd4517f67" title="message::Message::getSubcategory" alt="" coords="241,349,476,376"/><area shape="rect" id="node20" href="classmessage_1_1retMessage.html#a2f896507cb32357cf5f76c15db9d2d64" title="message::retMessage\l::getTaskId" alt="" coords="283,401,434,442"/><area shape="rect" id="node21" href="classmessage_1_1pingMessage.html#a64422605fdf518316e1aae5344bc984e" title="message::pingMessage\l::pingMessage" alt="" coords="279,466,439,507"/><area shape="rect" id="node23" href="classAgentServer.html#a14c0ad3b1a17a161c659fea1710b030c" title="AgentServer::setTaskFinished" alt="" coords="261,532,456,559"/><area shape="rect" id="node3" href="classSlave.html#a70be968ad67b89b3998bf73bd93e19f7" title="Slave::getSlaveIP" alt="" coords="561,80,684,107"/><area shape="rect" id="node4" href="classConnectionManager.html#a314bdb20e3fb92c2567dfac2da975618" title="ConnectionManager::send" alt="" coords="536,131,709,157"/><area shape="rect" id="node5" href="classConnection.html#af14371773ccb34761a175769a24a4eec" title="Konstruktor połączeń po IPv4. " alt="" coords="769,80,929,107"/><area shape="rect" id="node9" href="classConnection.html#a507e05db5d5bb71b625c609b5cbfeeab" title="Connection::getCounter" alt="" coords="770,131,929,157"/><area shape="rect" id="node10" href="classConnection.html#ac8abd34010a78efd01e2af9aa7fa92fd" title="Funcja wysyłająca komunikat. " alt="" coords="788,181,911,208"/><area shape="rect" id="node6" href="classSocket.html#a1722aa9af2ec480b999e6bb664a1b925" title="Socket::connect" alt="" coords="1029,5,1147,32"/><area shape="rect" id="node7" href="classSocketIp4.html#a430c59c57f709f3d163dafbe7397d7f5" title="SocketIp4::SocketIp4" alt="" coords="1015,80,1161,107"/><area shape="rect" id="node8" href="classSocket.html#a2c55b94d9f5256b3297b67f9fb0f1428" title="Socket::Socket" alt="" coords="1247,80,1359,107"/><area shape="rect" id="node11" href="classSocket.html#aef06605c6725958004116983f1a2051f" title="Socket::close" alt="" coords="1037,131,1139,157"/><area shape="rect" id="node12" href="classmessage_1_1Message.html#a0c1b1b5cee06ee3b5396f7b8037b0805" title="message::Message::getBuffer" alt="" coords="991,181,1185,208"/><area shape="rect" id="node13" href="classmessage_1_1Message.html#aec368ada6258d54639f00eeb6c601eb1" title="message::Message::getBufferSize" alt="" coords="977,232,1199,259"/><area shape="rect" id="node14" href="classSocket.html#afe708d0a437f0b966fef606b2a2af2b0" title="Socket::send" alt="" coords="1039,283,1137,309"/><area shape="rect" id="node22" href="classmessage_1_1Message.html#a40eed0cc59f5cf5844dff8d1f300b01d" title="message::Message::Message" alt="" coords="524,473,721,500"/></map>
 </div>
 </p>
@@ -229,7 +235,7 @@ Oto graf wywołań dla tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classMessageFromAgentStrategy.html">MessageFromAgentStrategy</a></li>
-    <li class="footer">Wygenerowano Pn, 4 sty 2016 21:19:57 dla LOTC programem
+    <li class="footer">Wygenerowano Pn, 4 sty 2016 22:01:04 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

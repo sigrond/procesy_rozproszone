@@ -1,4 +1,4 @@
 var classShutDownStrategy =
 [
-    [ "doJob", "classShutDownStrategy.html#a0bfdb71be67dd75da1ffd145753428cc", null ]
+    [ "doJob", "classShutDownStrategy.html#ae2efcd0fc4f100fc50f7ddfb0f0dcba5", null ]
 ];

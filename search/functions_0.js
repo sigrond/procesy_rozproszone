@@ -2,7 +2,7 @@ var searchData=
 [
   ['accept',['accept',['../classSocket.html#a795d6b116c1996c280947981549d4ffe',1,'Socket::accept()'],['../classSocketIp4.html#ae3fc6c667edd538d9501a513f128ddd9',1,'SocketIp4::accept()']]],
   ['acceptsockex',['AcceptSockEx',['../classAcceptSockEx.html#a0c5bc1b55979935f5c72cb64c5543884',1,'AcceptSockEx']]],
-  ['addslave',['addSlave',['../classAgentServer.html#a3b5b09bd050d9addf0f20d6bb1b008fb',1,'AgentServer']]],
+  ['addslave',['addSlave',['../classAgentServer.html#a23db47434dd7a20ce4ead917eae1c3ea',1,'AgentServer']]],
   ['addtask',['addTask',['../classAgentServer.html#ae7b89b5da7cd9e7a1aa21093be7ed2e5',1,'AgentServer::addTask()'],['../classModel.html#a160b44b67ed3c952b28bbea0582463f2',1,'Model::addTask()']]],
   ['adminserver',['AdminServer',['../classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2',1,'AdminServer::AdminServer()'],['../classAdminServer.html#aceeccda640d50e75d295b661771caf5d',1,'AdminServer::AdminServer(Ip &amp;ip)']]],
   ['adminserverexception',['AdminServerException',['../structAdminServerException.html#a240bc86f99ea847d1b0ad27da9b4a587',1,'AdminServerException']]],

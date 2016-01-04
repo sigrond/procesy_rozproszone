@@ -1,4 +1,4 @@
 var classAddTaskStrategy =
 [
-    [ "doJob", "classAddTaskStrategy.html#afefd4ecb2ca0afbfe8358e9319ea20a5", null ]
+    [ "doJob", "classAddTaskStrategy.html#a8834d10995cb9081e933cc984a7416d6", null ]
 ];
