@@ -21,7 +21,19 @@ Message::~Message()
 }
 
 
-                                                        bool Message::checkMessage() const {}
+bool Message::checkMessage() const
+{
+	if(getCategory()<=7 && getSubcategory()<=7 && getState()<=3)
+	{
+		if(getCategory()>message::Category::HOST)
+		{
+			if(getSubcategory()>2)
+				return false;
+		}
+	}
+	/**< \todo uzupełnić sprawdzanie kodów, ale to mało ważne */
+	return (getCategory()<=7 && getSubcategory()<=7 && getState()<=3)?true:false;
+}
 
 
 unsigned char Message::getCode() const
