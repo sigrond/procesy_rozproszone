@@ -26,7 +26,7 @@ public:
     void listen(Slave* who);/**< metoda nasłuchująca na połączenie z agentów. może być zrealizowana przez fork-server */
     void connect(Slave* who, message::Message* m);/**< metoda łącząca się z agentem */
     void setBlockingQueue(BlockingQueue<Event*>*);
-    void addSlave(Ip* ip);
+    void addSlave(Ip* ip, unsigned short portNo=55555);
     void listenToAll();
     void start();
     void triggerShutDown();

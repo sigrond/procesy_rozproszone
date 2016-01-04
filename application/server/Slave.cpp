@@ -6,7 +6,7 @@
 
 #include "Slave.hpp"
 
-Slave::Slave(Ip* ip) :
+Slave::Slave(Ip* ip, unsigned short portNo) :
 	slaveIP(ip),
 	lastContact(0),
 	state(0),
@@ -15,7 +15,8 @@ Slave::Slave(Ip* ip) :
 	removed(false),
 	listening(false),
 	slaveThread(nullptr),
-	ready(false)
+	ready(false),
+	port(portNo)
 {
 	connectionManager=ConnectionManager::getInstance();
 }
