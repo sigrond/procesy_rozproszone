@@ -28,15 +28,19 @@ enum EventType
 class Event
 {
 public:
-    Event() : type(Test), data(nullptr)
+    Event() : type(Test), data(nullptr), who(nullptr)
     {
 
     }
-    Event(EventType t) : type(t), data(nullptr)
+    Event(EventType t) : type(t), data(nullptr), who(nullptr)
     {
 
     }
-    Event(EventType t, void* d) : type(t), data(d)
+    Event(EventType t, void* d) : type(t), data(d), who(nullptr)
+    {
+
+    }
+    Event(EventType t, void* d, void* w) : type(t), data(d), who(w)
     {
 
     }
@@ -48,4 +52,5 @@ public:
     }
     EventType type;/**< typ zdarzenia pozwala wybrać właściwą metodę do jego obsługi */
     void* data;/**< dane niezbednę do zrealizowania metody obsługującej zdarzenie */
+    void* who;/**< dodatkowe opcjonalne pole mówiące od kogo jest Event */
 };
