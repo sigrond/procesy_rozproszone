@@ -99,6 +99,7 @@ public:
 		pingMessage* pm;
 		string name;
 		fstream file;
+		Task* task;
 		category=((Message*)data)->getCategory();
 		switch(category)/**< \todo obsługa kategorii */
 		{
@@ -126,6 +127,10 @@ public:
 			if(subCategory==(unsigned char)TaskSub::T_ADD)
 			{
 				/**< \todo znaleźć plik i dodać do zadań */
+				task=new Task();
+				task->taskID=tm->getTaskId();/**< sory, ale admin musi podać task ID */
+				task->when=tm->getTimestamp();
+				((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
 			}
 			//uruchomienie zadania
 			else if(subCategory==(unsigned char)TaskSub::T_RUN)
