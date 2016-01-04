@@ -3,7 +3,6 @@
  * \brief Glowny plik konsoli administratora, watek klienta,
  */
 
-#include "ConsoleServer.hpp"
 #include "ConsoleClient.hpp"
 
 using namespace std;

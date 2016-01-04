@@ -11,10 +11,10 @@ ConsoleClient::ConsoleClient()
 
 void ConsoleClient::start()
 {
-    while (!connected)
+    /*while (!connected)
     {
         connected = connect();
-    }
+    }*/
 
     int command = readCommand();
 
@@ -27,35 +27,28 @@ bool ConsoleClient::connect()
 
 int ConsoleClient::readCommand()
 {
+    string arg[3];
+    command_t command;
+
+    //czytanie wprowadzonej linii do argumentow w arg[]
     string s;
     while (getline(cin, s))
     {
-        if(s.compare("exit")==0)
-        {
-            cout<<"Wylaczam konsole administratora...\n";
-            break;
-        }
-        else
-        {
-            stringstream ss;
-            ss<<s;
-            while(1)
-            {
-                s.clear();
-                ss>>s;
+        stringstream ss;
+        ss<<s;
 
-                if (s.compare("connect"))
-                {
-                    command = 1;
-                }
+        for (int i=0; i<3; ++i)
+        {
+            s.clear();
+            ss>>s;
 
-                cout<<s;
-                if(s.length()==0)
-                    break;
-            }
+            cout<<s;
+            if(s.length()==0)
+                break;
+
         }
     }
-    return
+    return 0;
 }
 
 void ConsoleClient::sendCommand()

@@ -5,8 +5,6 @@
 #include <string>
 #include <sstream>
 
-#include "ConsoleServer.hpp"
-
 class ConsoleClient
 {
 public:
@@ -18,17 +16,25 @@ public:
     /*funkcja inicjujaca polaczenie i prace klienta*/
     void start();
 
+    /*typ wyliczeniowy dla czytanych z konsoli polecen*/
+    enum command_t
+    {
+        CON, /*connect*/
+        ADD, /*add task*/
+        przyklad2
+    };
+
 private:
     /*czy otrzymano odpowiedz od serwera*/
     bool requestAnswered;
 
+    /*czyta komendy wpisywane do konsoli*/
+    int readCommand();
+
     /*ustanawia polaczenie z serwerem*/
     bool connect();
 
-    /*czyta komendy wpisywane z klawiatury*/
-    int readCommand();
-
-    /*wysyla polecenie do serwera i czeka na odpowiedx*/
+    /*wysyla polecenie do serwera i czeka na odpowiedz*/
     void sendCommand();
 
     /*sprawdza poprawnosc odpowiedzi od serwera*/
