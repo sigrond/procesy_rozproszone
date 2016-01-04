@@ -39,3 +39,5 @@
 # Dependencies
 *.d
 
+application/client/lotc_console/lotc_console.cbp
+application/client/lotc_console/lotc_console.layout

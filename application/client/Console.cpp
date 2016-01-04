@@ -1,6 +1,6 @@
 /** \file console.cpp
  * \author Kacper Stachyra
- * \brief Glowny plik konsoli administratora, watek klienta; uruchamia klient i serwer dla komunikatów.
+ * \brief Glowny plik konsoli administratora, watek klienta,
  */
 
 #include "ConsoleServer.hpp"
