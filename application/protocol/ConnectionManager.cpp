@@ -65,7 +65,7 @@ ConnectionManager * ConnectionManager::getInstance( unsigned short listenPort )
 
 ConnectionManager::ConnectionManager( unsigned short listenPort )
 {
-        DBG("ConnectionManager()")
+        DBG("ConnectionManager( " << listenPort << " )")
         listeningSocket = new SocketIp4( Ipv4(), listenPort );
 
         try
@@ -88,7 +88,7 @@ ConnectionManager::~ConnectionManager()
 
 void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg, unsigned short port )
 {
-        DBG("ConMan::send( " << ip.getAddress() << " )")
+        DBG("ConMan::send( " << ip.getAddress() << ", " << port << " )")
 
         map4Mutex.lock();        
                 Connection * & connection = map4[ip];

@@ -22,9 +22,6 @@
 
 #include "pasta.h"
 
-// papa, 128 mega ramu
-const unsigned long BUF_SIZE = 128 * 1024 * 1024;
-
 Connection::Connection ( const Ipv4 & address, unsigned short port ) : counter(0)
 {
         DBG("Connection( " << address.getAddress() <<" )")       
@@ -84,14 +81,13 @@ void Connection::receive ( message::Message * message )
         
         if( counter < 4 )
         {
-		// jestem pewien, że da się sprytniej
-		char * buffer = new char [ BUF_SIZE ];
+		char * code = new char [ 1 ];
 
-		memset( buffer, 0, sizeof( buffer ) );
+		memset( code, 0, sizeof( code ) );
 
-		unsigned long received = socket->recv( buffer, sizeof( buffer ) / sizeof ( char ) );
+		unsigned long received = socket->recv( code, 1 );
 
-		switch( (message::Category)( buffer[0] & 0xE0 ) )
+		switch( (message::Category)( code[0] & 0xE0 ) )
 		{
 			case message::Category::HOST:
 				break;
@@ -104,7 +100,7 @@ void Connection::receive ( message::Message * message )
 			case message::Category::RET:
 				break;
 			case message::Category::SYN:
-				message = new message::synMessage( buffer, received );
+				message = new message::synMessage( code, received );
 				break;
 			case message::Category::PING:
 				break;
@@ -112,7 +108,7 @@ void Connection::receive ( message::Message * message )
 				break;
 		};
 
-		delete buffer;
+		delete code;
 
                 //char delicious_pasta[2000];
 
