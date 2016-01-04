@@ -122,6 +122,7 @@ int SocketIp4::recv( char * buffer, int bufferSize )
 
         while( bufferSize > 0 )
         {
+		DBG("bufSize: " << bufferSize )
                 bytesRec = ::read(sockfd, buffer, bufferSize);
                 
                 if (bytesRec == 0)
