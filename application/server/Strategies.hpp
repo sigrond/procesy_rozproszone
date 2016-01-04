@@ -96,6 +96,7 @@ public:
 		std::vector<Ipv4>* agentIPs;
 		taskMessage* tm;
 		fileMessage* fm;
+		pingMessage* pm;
 		string name;
 		fstream file;
 		category=((Message*)data)->getCategory();
@@ -149,6 +150,27 @@ public:
 		case (int)Category::SYN:
 			break;
 		case (int)Category::PING:
+			pm=(pingMessage*)data;
+			if(pm->getState()==(unsigned char)message::State::REQ)
+			{
+				((Controller*)controller)->adminServer->connect(new pingMessage(message::State::ACK));
+			}
+			else if(pm->getState()==(unsigned char)message::State::ACK)
+			{
+				((Controller*)controller)->adminServer->connect(new pingMessage(message::State::OK));
+			}
+			else if(pm->getState()==(unsigned char)message::State::OK)
+			{
+				#ifdef _DEBUG
+				cout<<"konsola administratora pomyślnie nas odpingowała"<<endl;
+				#endif // _DEBUG
+			}
+			else
+			{
+				#ifdef _DEBUG
+				cout<<"coś z pingowaniem poszło nie tak najpewniej ERR"<<endl;
+				#endif
+			}
 			break;
 		case (int)Category::ERR:
 			break;
@@ -177,6 +199,7 @@ public:
 		taskMessage* tm;
 		fileMessage* fm;
 		retMessage* rm;
+		pingMessage* pm;
 		unsigned char exitStatus;
 		unsigned long taskID;
 		string name;
@@ -223,6 +246,27 @@ public:
 		case (int)Category::SYN:
 			break;
 		case (int)Category::PING:
+			pm=(pingMessage*)data;
+			if(pm->getState()==(unsigned char)message::State::REQ)
+			{
+				//((Controller*)controller)->agentServer->connect()
+			}
+			else if(pm->getState()==(unsigned char)message::State::ACK)
+			{
+				//((Controller*)controller)->adminServer->connect(new pingMessage(message::State::OK));
+			}
+			else if(pm->getState()==(unsigned char)message::State::OK)
+			{
+				#ifdef _DEBUG
+				cout<<"agent pomyślnie nas odpingowała"<<endl;
+				#endif // _DEBUG
+			}
+			else
+			{
+				#ifdef _DEBUG
+				cout<<"coś z pingowaniem poszło nie tak najpewniej ERR"<<endl;
+				#endif
+			}
 			break;
 		case (int)Category::ERR:
 			break;
