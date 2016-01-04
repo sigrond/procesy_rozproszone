@@ -99,7 +99,7 @@ void AgentServer::listen(Slave* who)
 		#ifdef _DEBUG
 		cout<<"AgentServer::listen odebrano: "<<m<<endl;
 		#endif // _DEBUG
-		blockingQueue->push_back(new Event(MESSAGE_FROM_AGENT_SERVER,m));
+		blockingQueue->push_back(new Event(MESSAGE_FROM_AGENT_SERVER,m,who));
 		//jeśli przyszło coś od agenta i nie wykonyuje on zadania, to można przydzielić mu zadanie
 		if(who->getTask()==nullptr)
 		{

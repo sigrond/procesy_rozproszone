@@ -127,7 +127,7 @@ void Controller::start()
 	{
 		e=blockingQueue->pop_front();
 		std::cout<<this<<" "<<e->data<<std::endl;
-		strategyMap->at(e->type)->doJob(e->data);
+		strategyMap->at(e->type)->doJob(e->data,e->who);
 		delete e;
 		//int a;
 		//std::cin>>a;

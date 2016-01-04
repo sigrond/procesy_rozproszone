@@ -42,7 +42,7 @@ public:
 	{
 		deletedObjects++;
 	}
-	virtual void doJob(void* data) override
+	virtual void doJob(void* data, void* who=nullptr) override
 	{
 		std::clog<<"TestStrategy, ObjectID: "<<ObjectID
 		//		<<", createdObjects: "<<createdObjects
@@ -67,7 +67,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data) override
+	virtual void doJob(void* data, void* who=nullptr) override
 	{
 		std::cout<<"Zamykanie serwera...\n";
 		((Controller*)data)->triggerShutDown();
@@ -86,7 +86,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data) override
+	virtual void doJob(void* data, void* who=nullptr) override
 	{
 		using namespace std;
 		using namespace message;
@@ -190,7 +190,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data) override
+	virtual void doJob(void* data, void* who=nullptr) override
 	{
 		using namespace std;
 		using namespace message;
@@ -249,11 +249,11 @@ public:
 			pm=(pingMessage*)data;
 			if(pm->getState()==(unsigned char)message::State::REQ)
 			{
-				//((Controller*)controller)->agentServer->connect()
+				((Controller*)controller)->agentServer->connect((Slave*)who,new pingMessage(message::State::ACK));
 			}
 			else if(pm->getState()==(unsigned char)message::State::ACK)
 			{
-				//((Controller*)controller)->adminServer->connect(new pingMessage(message::State::OK));
+				((Controller*)controller)->agentServer->connect((Slave*)who,new pingMessage(message::State::OK));
 			}
 			else if(pm->getState()==(unsigned char)message::State::OK)
 			{
@@ -286,7 +286,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data) override
+	virtual void doJob(void* data, void* who=nullptr) override
 	{
 		using namespace std;
         cout<<"strategia AddAgent..."<<endl;
@@ -310,7 +310,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data) override
+	virtual void doJob(void* data, void* who=nullptr) override
 	{
 		using namespace std;
 		using namespace message;
@@ -330,7 +330,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data) override
+	virtual void doJob(void* data, void* who=nullptr) override
 	{
 		using namespace std;
 		using namespace message;
@@ -350,7 +350,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data) override
+	virtual void doJob(void* data, void* who=nullptr) override
 	{
 		using namespace std;
         cout<<"strategia AddTask..."<<endl;
