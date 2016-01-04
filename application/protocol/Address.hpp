@@ -19,22 +19,28 @@ public:
 	unsigned short getPort() const;
 
 protected:
-	const unsigned short port;
+	unsigned short port;
 };
 
 class AddressIpv4 : public Address
 {
+public:
 	AddressIpv4( Ipv4 ip, unsigned short port );
 
 	Ipv4 getIp() const;
 
+	bool operator<( const AddressIpv4 & that ) const;
+
+	AddressIpv4& operator=( const AddressIpv4 & that ); 
+
 private:
-	const Ipv4 ip;
+	Ipv4 ip;
 };
 
 
 class AddressIpv6 : public Address
 {
+public:
 	AddressIpv6( Ipv6 ip, unsigned short port );
 
 	Ipv6 getIp() const;

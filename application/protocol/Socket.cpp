@@ -27,11 +27,13 @@ Socket::Socket( int msgsock, unsigned short port ) : sockfd( msgsock ), port(por
 
 Socket::~Socket() {}
 int Socket::bind() {}
-int Socket::connect() {}
+int Socket::connect(){}
+int Socket::connect( unsigned short clientPort ) {}
 int Socket::accept() {}
 int Socket::send( char*, int ) {}
 int Socket::recv( char*, int ) {}
 Ipv4 Socket::getIp() {}
+unsigned short Socket::getPort() const {}
 
 int Socket::listen()
 {
@@ -50,7 +52,6 @@ int Socket::close()
         shutdown( sockfd, 2 );
         return ::close( sockfd );
 }
-
 
 
 
@@ -90,6 +91,26 @@ int SocketIp4::bind()
 int SocketIp4::connect()
 {
         DBG("SocketIp4::connect()")
+
+        int ret = ::connect( sockfd, (struct sockaddr *) &saddr, sizeof( saddr ) );
+
+        if( ret != 0 )
+                throw ConnectSockEx();
+
+        return ret;
+}
+
+int SocketIp4::connect( unsigned short clientPort )
+{
+        DBG("SocketIp4::connect( " << clientPort << " )")
+
+	sockaddr_in tmp = saddr;
+
+	saddr.sin_port = htons( clientPort );
+
+	bind();
+
+	saddr = tmp;
 
         int ret = ::connect( sockfd, (struct sockaddr *) &saddr, sizeof( saddr ) );
 
@@ -166,4 +187,9 @@ int SocketIp4::send( char * buffer, int bufferSize )
 Ipv4 SocketIp4::getIp()
 {
         return Ipv4( inet_ntoa( saddr.sin_addr ) );
+}
+
+unsigned short SocketIp4::getPort() const
+{
+	return ntohs(saddr.sin_port);
 }

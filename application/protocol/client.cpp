@@ -9,17 +9,17 @@ void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
 {	 
 	Message * msg1 = nullptr;
 
-        Message * msg2 = new synMessage( State::ACK );
-        Message * msg3 = new synMessage( State::OK );
-
-
-	cm->receive( *ip, msg1 );
+        Message * msg2 = new synMessage( State::REQ );
+        Message * msg3 = new synMessage( State::ACK );
 
 	cm->send( *ip, *msg2, port + 55555 );
 
+	cm->receive( *ip, msg1, port + 55555 );
+	
+	cm->receive( *ip, msg1, port + 55555 );
+
 	cm->send( *ip, *msg2, port + 55555 );
 
-	cm->receive( *ip, msg1 );
 }
 
 int main( int argc, char** argv)
@@ -37,7 +37,7 @@ int main( int argc, char** argv)
 
 		std::thread * tq;
 
-		std::thread t (communication, mietek, &ip, 55555 );
+		std::thread t (communication, mietek, &ip, 0 );
 
                 getchar();
 

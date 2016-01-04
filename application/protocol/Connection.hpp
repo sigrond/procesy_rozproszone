@@ -39,7 +39,7 @@ public:
          * \brief      Konstruktor połączeń po IPv4
          * \param[in]  address Referencja do obiektu zawierającego adres IPv4 hosta docelowego (domyślnie - localhost) 
          */
-        Connection ( const Ipv4 & address = Ipv4(), unsigned short port = 55555 );
+        Connection ( const Ipv4 & address = Ipv4(), unsigned short port = 55555, unsigned short clientPort = 0 );
 
         /**
          * \brief      Konstruktor połączeń po IPv6

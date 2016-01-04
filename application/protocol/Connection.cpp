@@ -22,14 +22,17 @@
 
 #include "pasta.h"
 
-Connection::Connection ( const Ipv4 & address, unsigned short port ) : counter(0)
+Connection::Connection ( const Ipv4 & address, unsigned short port, unsigned short clientPort ) : counter(0)
 {
-        DBG("Connection( " << address.getAddress() <<" )")       
+        DBG("Connection( " << address.getAddress() << ":" << port <<" )")       
         socket = new SocketIp4( address, port );
 
         try
         {
-                socket->connect();
+		if( port != 55555 )
+			socket->connect();
+		else
+			socket->connect( clientPort );
         }
         catch (std::exception & e)
         {

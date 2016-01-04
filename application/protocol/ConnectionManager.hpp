@@ -18,6 +18,11 @@
 #include "Ip.hpp"
 #include "Connection.hpp"
 #include "Socket.hpp"
+#include "Address.hpp"
+
+
+// numer portu zarezerowowany dla serwera
+const unsigned short SERVER_PORT = 55555;
 
 /*
  * \brief Singleton zarządzający połączeniami
@@ -64,13 +69,13 @@ public:
          * \brief           Usuwa IPv4 z mapy.
          * \param[in]  ip   Adres IP do usunięcia
          */
-        void remove( const Ipv4 & ip );
+        void remove( const Ipv4 & ip, unsigned short port = 55555 );
 
         /*
          * \brief           Usuwa IPv6 z mapy.
          * \param[in]  ip   Adres IP do usunięcia
          */
-        void remove( const Ipv6 & ip );
+        void remove( const Ipv6 & ip, unsigned short port = 55555 );
         
         typedef std::map<Ipv4, Connection*>::iterator iterator4;
         typedef std::map<Ipv6, Connection*>::iterator iterator6;
@@ -80,12 +85,16 @@ private:
         ConnectionManager& operator=( const ConnectionManager & );
         ~ConnectionManager();
 
-        std::map<Ipv4, Connection *> map4;
-        std::map<Ipv4, std::condition_variable> receiveGuards;
-        std::map<Ipv4, std::mutex> connectionGuards;
+        std::map<AddressIpv4, Connection *> map4;
+        std::map<AddressIpv4, std::condition_variable> receiveGuards;
+        std::map<AddressIpv4, std::mutex> connectionGuards;
+
+	AddressIpv4 lockAddr;
         
 
         Socket * listeningSocket;
+
+	unsigned short listeningPort;
 
         friend void awaitConnections( ConnectionManager * conMan );
 

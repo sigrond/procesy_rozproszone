@@ -4,7 +4,7 @@ LFLAGS=-lboost_system -lpthread
 
 CMD=$(CXX) $(CXXFLAGS) $(LFLAGS) $^ -o $@
 
-OBJS = ConnectionManager.o Connection.o Socket.o SocketException.o Message.o Ip.o
+OBJS = ConnectionManager.o Connection.o Socket.o SocketException.o Message.o Ip.o Address.o
 
 all: server client
 

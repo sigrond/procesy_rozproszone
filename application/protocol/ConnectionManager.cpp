@@ -24,25 +24,43 @@ void awaitConnections( ConnectionManager * conMan )
                 socket = conMan->listeningSocket->accept();
 
                 Ipv4 ip = conMan->listeningSocket->getIp();
+
+		unsigned short port = conMan->listeningSocket->getPort();
                 
-                DBG("accepted " << conMan->listeningSocket->getIp().getAddress() )
+                DBG("accepted " << conMan->listeningSocket->getIp().getAddress() << ":" << port )
                 
                 conMan->map4Mutex.lock();
 
-                        Connection * & connection = conMan->map4[ip];
+			AddressIpv4 addr = AddressIpv4( ip, port + 10000 );
+		
+			Connection ** connection;	
 
-                        if( connection == nullptr )
+			if( conMan->listeningPort == SERVER_PORT )
+				connection = &conMan->map4[ addr ];
+			else
+				connection = &conMan->map4[ conMan -> lockAddr ];
+
+                        if( *connection == nullptr )
                         {
                                 DBG("awaitConnections(): connection not found, new connection")
-                                connection = new Connection( socket );
+                                *connection = new Connection( socket );
 
                                 try
                                 {
-                                        std::condition_variable & conVar = conMan->receiveGuards.at( ip );
+					std::condition_variable * conVar;
 
-                                        conVar.notify_one();
+					if( conMan->listeningPort == SERVER_PORT )
+						conVar = & conMan->receiveGuards.at( addr );
+					else
+						conVar = & conMan->receiveGuards.at( conMan -> lockAddr );
 
-                                        conMan->receiveGuards.erase( ip );
+                                        conVar->notify_one();
+
+					if( conMan->listeningPort == SERVER_PORT )
+						conMan->receiveGuards.erase( addr );
+					else
+						conMan->receiveGuards.erase( conMan -> lockAddr );
+
                                 }
                                 catch( std::out_of_range e)
                                 {
@@ -63,7 +81,7 @@ ConnectionManager * ConnectionManager::getInstance( unsigned short listenPort )
         return &instance;  
 }
 
-ConnectionManager::ConnectionManager( unsigned short listenPort )
+ConnectionManager::ConnectionManager( unsigned short listenPort ) : listeningPort(listenPort), lockAddr( AddressIpv4(Ipv4(), 0) )
 {
         DBG("ConnectionManager( " << listenPort << " )")
         listeningSocket = new SocketIp4( Ipv4(), listenPort );
@@ -90,20 +108,22 @@ void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg, uns
 {
         DBG("ConMan::send( " << ip.getAddress() << ", " << port << " )")
 
-        map4Mutex.lock();        
-                Connection * & connection = map4[ip];
+        map4Mutex.lock();
+		AddressIpv4 addr = AddressIpv4( ip, port );
+
+                Connection * & connection = map4[ addr ];
 
                 if( connection == nullptr )
                 {
                         DBG("ConMan::send() connection not found, new connection")
-                        connection = new Connection( ip, port );
+                        connection = new Connection( ip, port, listeningPort - 10000 );
                 }
 
         map4Mutex.unlock();
 
         {
                 std::unique_lock<std::mutex> lock( connGuardsMutex );
-                connectionGuards[ ip ].lock();  
+                connectionGuards[ addr ].lock();  
         }
 
         connection->send(msg);
@@ -115,32 +135,36 @@ void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg, uns
         }
 
         std::unique_lock<std::mutex> lock( connGuardsMutex );
-        connectionGuards[ ip ].unlock();
+        connectionGuards[ addr ].unlock();
 }
 
 void ConnectionManager::receive( const Ipv4 & ip, message::Message * const msg, unsigned short port )
 {
-        DBG("ConMan::receive( " << ip.getAddress() << " )")
+        DBG("ConMan::receive( " << ip.getAddress() << ", " << port << " )")
         
         std::unique_lock<std::mutex> lock(map4Mutex);
 
-                Connection * & connection = map4[ip];
+		AddressIpv4 addr = AddressIpv4( ip, port );
+
+                Connection * & connection = map4[ addr ];
 
                 if( connection == nullptr )
                 {
                         DBG("ConMan::rec() connection not found, waiting for new connection")
-                        
-                        std::condition_variable & conVar = receiveGuards[ip];
+                       
+			lockAddr = addr;
+
+                        std::condition_variable & conVar = receiveGuards[ addr ];
 
                         conVar.wait(lock);
 
-                        connection = map4[ip];
+                        connection = map4[ addr ];
                 }
 
         lock.unlock(); 
 
         connGuardsMutex.lock();
-        connectionGuards[ ip ].lock();  
+        connectionGuards[ addr ].lock();  
         connGuardsMutex.unlock();
 
         connection->receive(msg);
@@ -152,32 +176,34 @@ void ConnectionManager::receive( const Ipv4 & ip, message::Message * const msg, 
         }
 
         connGuardsMutex.lock();
-        connectionGuards[ ip ].unlock();
+        connectionGuards[ addr ].unlock();
         connGuardsMutex.unlock();
 }
 
-void ConnectionManager::remove( const Ipv4 & ip )
+void ConnectionManager::remove( const Ipv4 & ip, unsigned short port )
 {
-        DBG("ConMan::remove( " << ip.getAddress() << " )")
+        DBG("ConMan::remove( " << ip.getAddress() << ", " << port << " )")
 
         map4Mutex.lock();
-
-                try
+	
+		AddressIpv4 addr = AddressIpv4( ip, port );
+                
+		try
                 {
-                        Connection * connection = map4.at( ip );
+                        Connection * connection = map4.at( addr );
 
                         connGuardsMutex.lock();
-                        connectionGuards[ ip ].lock();  
+                        connectionGuards[ addr ].lock();  
                         connGuardsMutex.unlock();
                         
                         if( connection != nullptr )
                                 delete connection;
         
                         connGuardsMutex.lock();
-                        connectionGuards[ ip ].unlock();
+                        connectionGuards[ addr ].unlock();
                         connGuardsMutex.unlock();
 
-                        map4.erase( ip );
+                        map4.erase( addr );
                 }
                 catch ( std::out_of_range e )
                 {
@@ -187,7 +213,7 @@ void ConnectionManager::remove( const Ipv4 & ip )
         map4Mutex.unlock();
 
         connGuardsMutex.lock();
-                connectionGuards.erase(ip);
+                connectionGuards.erase( addr );
         connGuardsMutex.unlock();
 }
 
@@ -201,7 +227,7 @@ void ConnectionManager::receive( const Ipv6 & ip, message::Message * const msg, 
 
 }
 
-void ConnectionManager::remove( const Ipv6 & ip )
+void ConnectionManager::remove( const Ipv6 & ip, unsigned short port )
 {
 
 }
