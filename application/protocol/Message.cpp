@@ -82,29 +82,31 @@ taskMessage::taskMessage( TaskSub sub,
 
 }
 
-taskMessage::taskMessage( State state ) : Message::Message( Category::TASK )
+taskMessage::taskMessage( State s ) :
+	Message::Message( Category::TASK ),
+	state(s)
 {
 
 }
 
 bool taskMessage::getRespectPriority()
 {
-	return 0;
+	return respectPriority;
 }
 
 unsigned short taskMessage::getPriority() const
 {
-	return 0;
+	return priority;
 }
 
 unsigned long taskMessage::getTaskId() const
 {
-	return 0;
+	return taskId;
 }
 
 std::chrono::steady_clock::time_point & taskMessage::getTimestamp() const
 {
-	std::chrono::steady_clock::time_point t;
+	std::chrono::steady_clock::time_point t(time);
 	return t;
 }
 
