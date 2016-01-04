@@ -120,9 +120,11 @@ namespace message
 
                 std::fstream & getFile();
 		private:
-			std::fstream file;
-			std::string name;
+			State state;
+			bool isMainFile;
 			unsigned long taskId;
+			std::string name;
+			std::fstream file;
         };
 
         class retMessage : public Message

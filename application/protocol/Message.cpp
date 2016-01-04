@@ -131,23 +131,30 @@ std::vector<unsigned long> & depMessage::getTasks()
 	return v;
 }
 
-fileMessage::fileMessage(State state,
-						bool isMainFile,
+fileMessage::fileMessage(State s,
+						bool isMainF,
 						unsigned long tId,
-						std::string filename ) : Message::Message( Category::FILE )
+						std::string filename ) :
+							Message::Message( Category::FILE ),
+							state(s),
+							isMainFile(isMainF),
+							taskId(tId),
+							name(filename)
 {
-	taskId=tId;
-	name=filename;
+	//taskId=tId;
+	//name=filename;
 }
 
-fileMessage::fileMessage ( State state ) : Message::Message( Category::FILE )
+fileMessage::fileMessage ( State s ) :
+	Message::Message( Category::FILE ),
+	state(s)
 {
 
 }
 
 bool fileMessage::getIsMainFile()
 {
-	return 0;
+	return isMainFile;
 }
 
 unsigned long fileMessage::getTaskId()
