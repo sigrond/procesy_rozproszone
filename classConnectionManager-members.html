@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="312348-low-orbit-ion-cannon.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">LOTC
    &#160;<span id="projectnumber">https://github.com/sigrond/procesy_rozproszone</span>
@@ -115,10 +116,10 @@ $(document).ready(function(){initNavTree('classConnectionManager.html','');});
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classConnectionManager.html#a0356e21a4b8c9cb057224466de84606d">awaitConnections</a>(ConnectionManager *conMan)</td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
   <tr><td class="entry"><a class="el" href="classConnectionManager.html#a906971dce9efb1c3e6c895c892ca43cd">connectionGuards</a></td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classConnectionManager.html#a68db2f9138942ef16d50ebd753188410">ConnectionManager</a>()</td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classConnectionManager.html#acddf7b9dd1fa9319ffba80b4ecf2e5e5">ConnectionManager</a>(unsigned short listenPort)</td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="classConnectionManager.html#a9706776193f60e078369d3c35f4a15ed">ConnectionManager</a>(const ConnectionManager &amp;)</td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classConnectionManager.html#a5dfb188523df4d6969d46922be31c9c2">connGuardsMutex</a></td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classConnectionManager.html#a32b75e2534c2de565fc316ff47109352">getInstance</a>()</td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classConnectionManager.html#a38f4c092a52fd80c19d613fafad832b9">getInstance</a>(unsigned short listenPort=55555)</td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classConnectionManager.html#a00d43d6a2fca404564991c47875e6721">iterator4</a> typedef</td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classConnectionManager.html#a22275c1ca6f2fe310e603d6c25f51397">iterator6</a> typedef</td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classConnectionManager.html#aa97586d2acb82c655c12b67105422df7">listeningSocket</a></td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
@@ -130,15 +131,15 @@ $(document).ready(function(){initNavTree('classConnectionManager.html','');});
   <tr class="even"><td class="entry"><a class="el" href="classConnectionManager.html#a0b2fe9d76aa3d6042584c1bda83afb10">receiveGuards</a></td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="classConnectionManager.html#a7b700d5c5fac3da35c97ac6532c66c61">remove</a>(const Ipv4 &amp;ip)</td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classConnectionManager.html#a73a0826a0036c6450fa5572f435e4f95">remove</a>(const Ipv6 &amp;ip)</td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classConnectionManager.html#addf9fe1fde3177c3e1ec7af11a6f9235">send</a>(const Ipv4 &amp;ip, const message::Message &amp;msg)</td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classConnectionManager.html#a3f31fdc2f299b8bd68fd43746973b9da">send</a>(const Ipv6 &amp;ip, const message::Message &amp;msg)</td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classConnectionManager.html#a314bdb20e3fb92c2567dfac2da975618">send</a>(const Ipv4 &amp;ip, const message::Message &amp;msg, unsigned short port=55555)</td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classConnectionManager.html#a7c6865a11cd9a88fd7fad35121f97292">send</a>(const Ipv6 &amp;ip, const message::Message &amp;msg, unsigned short port=55555)</td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classConnectionManager.html#a5c2a49d02244fc399deba3ce6ffe77ac">~ConnectionManager</a>()</td><td class="entry"><a class="el" href="classConnectionManager.html">ConnectionManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Wygenerowano Wt, 29 gru 2015 20:50:35 dla LOTC programem
+    <li class="footer">Wygenerowano Pn, 4 sty 2016 21:19:57 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

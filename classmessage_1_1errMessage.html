@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="312348-low-orbit-ion-cannon.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">LOTC
    &#160;<span id="projectnumber">https://github.com/sigrond/procesy_rozproszone</span>
@@ -120,14 +121,14 @@ Diagram dziedziczenia dla message::errMessage</div>
 <div class="dyncontent">
 <div class="center"><img src="classmessage_1_1errMessage__inherit__graph.png" border="0" usemap="#message_1_1errMessage_inherit__map" alt="Inheritance graph"/></div>
 <map name="message_1_1errMessage_inherit__map" id="message_1_1errMessage_inherit__map">
-<area shape="rect" id="node2" href="classmessage_1_1Message.html" title="{message::Message\n|&#45; code\l|+ Message()\l+ ~Message()\l+ getCode()\l+ getCategory()\l+ getState()\l+ getSubcategory()\l&#45; checkMessage()\l}" alt="" coords="13,5,149,171"/></map>
+<area shape="rect" id="node2" href="classmessage_1_1Message.html" title="{message::Message\n|# code\l# buffer\l# bufferSize\l|+ Message()\l+ Message()\l+ ~Message()\l+ getCode()\l+ getCategory()\l+ getState()\l+ getSubcategory()\l+ getBuffer()\l+ getBufferSize()\l# checkMessage()\l}" alt="" coords="13,5,149,244"/></map>
 </div>
 <div class="dynheader">
 Diagram współpracy dla message::errMessage:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmessage_1_1errMessage__coll__graph.png" border="0" usemap="#message_1_1errMessage_coll__map" alt="Collaboration graph"/></div>
 <map name="message_1_1errMessage_coll__map" id="message_1_1errMessage_coll__map">
-<area shape="rect" id="node2" href="classmessage_1_1Message.html" title="{message::Message\n|&#45; code\l|+ Message()\l+ ~Message()\l+ getCode()\l+ getCategory()\l+ getState()\l+ getSubcategory()\l&#45; checkMessage()\l}" alt="" coords="13,5,149,171"/></map>
+<area shape="rect" id="node2" href="classmessage_1_1Message.html" title="{message::Message\n|# code\l# buffer\l# bufferSize\l|+ Message()\l+ Message()\l+ ~Message()\l+ getCode()\l+ getCategory()\l+ getState()\l+ getSubcategory()\l+ getBuffer()\l+ getBufferSize()\l# checkMessage()\l}" alt="" coords="13,5,149,244"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -141,6 +142,8 @@ Metody publiczne</h2></td></tr>
 <tr class="inherit_header pub_methods_classmessage_1_1Message"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmessage_1_1Message')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="classmessage_1_1Message.html">message::Message</a></td></tr>
 <tr class="memitem:a40eed0cc59f5cf5844dff8d1f300b01d inherit pub_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a40eed0cc59f5cf5844dff8d1f300b01d">Message</a> (<a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3">Category</a> category)</td></tr>
 <tr class="separator:a40eed0cc59f5cf5844dff8d1f300b01d inherit pub_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b97532d722a5d538d1d23339952bc6d inherit pub_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a5b97532d722a5d538d1d23339952bc6d">Message</a> (<a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3">Category</a> category, unsigned long <a class="el" href="classmessage_1_1Message.html#ad110f50cec278cf92a45856351ee1f10">bufferSize</a>)</td></tr>
+<tr class="separator:a5b97532d722a5d538d1d23339952bc6d inherit pub_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f7275462831f787a861271687bcad67 inherit pub_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a3f7275462831f787a861271687bcad67">~Message</a> ()</td></tr>
 <tr class="separator:a3f7275462831f787a861271687bcad67 inherit pub_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4dc034eaa8566016e8d20bb0411756f inherit pub_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#ae4dc034eaa8566016e8d20bb0411756f">getCode</a> () const </td></tr>
@@ -151,10 +154,27 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:af1312b3bd5b5074c1781188375878991 inherit pub_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3aaaba96ea3393e7a351fefbd4517f67 inherit pub_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a3aaaba96ea3393e7a351fefbd4517f67">getSubcategory</a> () const </td></tr>
 <tr class="separator:a3aaaba96ea3393e7a351fefbd4517f67 inherit pub_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c1b1b5cee06ee3b5396f7b8037b0805 inherit pub_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a0c1b1b5cee06ee3b5396f7b8037b0805">getBuffer</a> () const </td></tr>
+<tr class="separator:a0c1b1b5cee06ee3b5396f7b8037b0805 inherit pub_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec368ada6258d54639f00eeb6c601eb1 inherit pub_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#aec368ada6258d54639f00eeb6c601eb1">getBufferSize</a> () const </td></tr>
+<tr class="separator:aec368ada6258d54639f00eeb6c601eb1 inherit pub_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Dodatkowe Dziedziczone Składowe</h2></td></tr>
+<tr class="inherit_header pro_methods_classmessage_1_1Message"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classmessage_1_1Message')"><img src="closed.png" alt="-"/>&#160;Metody chronione dziedziczone z <a class="el" href="classmessage_1_1Message.html">message::Message</a></td></tr>
+<tr class="memitem:a51f92c4860172d5cf1f3284a472dc98e inherit pro_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a51f92c4860172d5cf1f3284a472dc98e">checkMessage</a> () const </td></tr>
+<tr class="separator:a51f92c4860172d5cf1f3284a472dc98e inherit pro_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classmessage_1_1Message"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmessage_1_1Message')"><img src="closed.png" alt="-"/>&#160;Atrybuty chronione dziedziczone z <a class="el" href="classmessage_1_1Message.html">message::Message</a></td></tr>
+<tr class="memitem:a8b778994013f2c28c4cdbaddb5ffb628 inherit pro_attribs_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a8b778994013f2c28c4cdbaddb5ffb628">code</a></td></tr>
+<tr class="separator:a8b778994013f2c28c4cdbaddb5ffb628 inherit pro_attribs_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a257b3e7ea0db35f75a6e2a808ad69553 inherit pro_attribs_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a257b3e7ea0db35f75a6e2a808ad69553">buffer</a></td></tr>
+<tr class="separator:a257b3e7ea0db35f75a6e2a808ad69553 inherit pro_attribs_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad110f50cec278cf92a45856351ee1f10 inherit pro_attribs_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#ad110f50cec278cf92a45856351ee1f10">bufferSize</a></td></tr>
+<tr class="separator:ad110f50cec278cf92a45856351ee1f10 inherit pro_attribs_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock">
-<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00145">145</a> pliku <a class="el" href="application_2protocol_2Message_8hpp_source.html">application/protocol/Message.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00184">184</a> pliku <a class="el" href="application_2protocol_2Message_8hpp_source.html">application/protocol/Message.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a class="anchor" id="ae1acb4a532d8a0d4cfb982f0617357ad"></a>
 <div class="memitem">
@@ -186,9 +206,9 @@ Metody publiczne</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00204">204</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00303">303</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3acd22bad976363fdd1bfbf6759fede482">message::ERR</a> i <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00012">message::Message::Message()</a>.</p>
+<p>Odwołuje się do <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3acd22bad976363fdd1bfbf6759fede482">message::ERR</a> i <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00016">message::Message::Message()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
@@ -215,9 +235,9 @@ Oto graf wywołań dla tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00209">209</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00308">308</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3acd22bad976363fdd1bfbf6759fede482">message::ERR</a> i <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00012">message::Message::Message()</a>.</p>
+<p>Odwołuje się do <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3acd22bad976363fdd1bfbf6759fede482">message::ERR</a> i <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00016">message::Message::Message()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
@@ -244,7 +264,7 @@ Oto graf wywołań dla tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00214">214</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00313">313</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
 
 </div>
 </div>
@@ -258,7 +278,7 @@ Oto graf wywołań dla tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemessage.html">message</a></li><li class="navelem"><a class="el" href="classmessage_1_1errMessage.html">errMessage</a></li>
-    <li class="footer">Wygenerowano Wt, 29 gru 2015 20:50:41 dla LOTC programem
+    <li class="footer">Wygenerowano Pn, 4 sty 2016 21:19:58 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

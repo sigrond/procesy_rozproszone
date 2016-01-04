@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="312348-low-orbit-ion-cannon.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">LOTC
    &#160;<span id="projectnumber">https://github.com/sigrond/procesy_rozproszone</span>
@@ -133,7 +134,7 @@ $(document).ready(function(){initNavTree('Model_8hpp_source.html','');});
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classModel.html#a61cb5a5695ff5a6555ceaec02b2a16b9">setBlockingQueue</a>(<a class="code" href="classBlockingQueue.html#a36cf39573f86b97a30081075a57434d6">BlockingQueue</a>&lt;<a class="code" href="classEvent.html">Event</a>*&gt;*);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classModel.html#ac9ee04aadbcefc4957321d5f0ad60c5e">pushTestEvents</a>();</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classModel.html#a8e8771cbc09afdf630f4ca833d29b809">setController</a>(<span class="keywordtype">void</span>* c);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classModel.html#a290de9af6cb1f25c6ec6c4c2be77606f">pushAddAgent</a>(Ipv4&amp; ip);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classModel.html#a5526490fe1b79ee4a479649f7f7c7edb">pushAddAgent</a>(Ipv4* ip, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port=55555);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classModel.html#a0ff8ce83743a023063d79cc7bcd1c0d3">pingAdmin</a>();<span class="comment">/**&lt; pingowanie okresowo i na ewentualne żądanie */</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classModel.html#a826190f531cd61ae141c48313a85ad91">pingSlaves</a>();</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classModel.html#abd5afe58ddcc59ce2ad5445aef3a6d27">triggerShutDown</a>();</div>
@@ -147,12 +148,12 @@ $(document).ready(function(){initNavTree('Model_8hpp_source.html','');});
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classModel.html#acd71bdf18dfbd1ce7035fe60e8562861">   37</a></span>&#160;        <a class="code" href="classModel.html#acd71bdf18dfbd1ce7035fe60e8562861">std</a>::<a class="code" href="classModel.html#acd71bdf18dfbd1ce7035fe60e8562861">mutex</a> <a class="code" href="classModel.html#acd71bdf18dfbd1ce7035fe60e8562861">slavesPingMutex</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classModel.html#afc8795c30c4042a377ceab0b9b24da1e">   38</a></span>&#160;        <a class="code" href="classModel.html#afc8795c30c4042a377ceab0b9b24da1e">std</a>::<a class="code" href="classModel.html#afc8795c30c4042a377ceab0b9b24da1e">condition_variable</a> <a class="code" href="classModel.html#afc8795c30c4042a377ceab0b9b24da1e">slavesPingCond</a>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+<div class="ttc" id="classModel_html_a5526490fe1b79ee4a479649f7f7c7edb"><div class="ttname"><a href="classModel.html#a5526490fe1b79ee4a479649f7f7c7edb">Model::pushAddAgent</a></div><div class="ttdeci">void pushAddAgent(Ipv4 *ip, unsigned short port=55555)</div><div class="ttdef"><b>Definition:</b> <a href="Model_8cpp_source.html#l00072">Model.cpp:72</a></div></div>
 <div class="ttc" id="classModel_html_a826190f531cd61ae141c48313a85ad91"><div class="ttname"><a href="classModel.html#a826190f531cd61ae141c48313a85ad91">Model::pingSlaves</a></div><div class="ttdeci">void pingSlaves()</div><div class="ttdoc">metoda zlecająca odpytanie agentów na chwilę obecną nie rozdzielam odpytywania agentów ...</div><div class="ttdef"><b>Definition:</b> <a href="Model_8cpp_source.html#l00103">Model.cpp:103</a></div></div>
 <div class="ttc" id="classModel_html_a2f76e69b1d641863d5cff716b37783f4"><div class="ttname"><a href="classModel.html#a2f76e69b1d641863d5cff716b37783f4">Model::blockingQueue</a></div><div class="ttdeci">BlockingQueue&lt; Event * &gt; * blockingQueue</div><div class="ttdef"><b>Definition:</b> <a href="Model_8hpp_source.html#l00032">Model.hpp:32</a></div></div>
 <div class="ttc" id="classModel_html_afc8795c30c4042a377ceab0b9b24da1e"><div class="ttname"><a href="classModel.html#afc8795c30c4042a377ceab0b9b24da1e">Model::slavesPingCond</a></div><div class="ttdeci">std::condition_variable slavesPingCond</div><div class="ttdef"><b>Definition:</b> <a href="Model_8hpp_source.html#l00038">Model.hpp:38</a></div></div>
 <div class="ttc" id="classBlockingQueue_html_a36cf39573f86b97a30081075a57434d6"><div class="ttname"><a href="classBlockingQueue.html#a36cf39573f86b97a30081075a57434d6">BlockingQueue::q</a></div><div class="ttdeci">std::queue&lt; T &gt; q</div><div class="ttdef"><b>Definition:</b> <a href="BlockingQueue_8hpp_source.html#l00035">BlockingQueue.hpp:35</a></div></div>
 <div class="ttc" id="classModel_html_ac9ee04aadbcefc4957321d5f0ad60c5e"><div class="ttname"><a href="classModel.html#ac9ee04aadbcefc4957321d5f0ad60c5e">Model::pushTestEvents</a></div><div class="ttdeci">void pushTestEvents()</div><div class="ttdef"><b>Definition:</b> <a href="Model_8cpp_source.html#l00060">Model.cpp:60</a></div></div>
-<div class="ttc" id="classModel_html_a290de9af6cb1f25c6ec6c4c2be77606f"><div class="ttname"><a href="classModel.html#a290de9af6cb1f25c6ec6c4c2be77606f">Model::pushAddAgent</a></div><div class="ttdeci">void pushAddAgent(Ipv4 &amp;ip)</div><div class="ttdef"><b>Definition:</b> <a href="Model_8cpp_source.html#l00072">Model.cpp:72</a></div></div>
 <div class="ttc" id="classModel_html_aa639b2ea5b9d554d79acd043d606d0a1"><div class="ttname"><a href="classModel.html#aa639b2ea5b9d554d79acd043d606d0a1">Model::adminPingMutex</a></div><div class="ttdeci">std::mutex adminPingMutex</div><div class="ttdef"><b>Definition:</b> <a href="Model_8hpp_source.html#l00035">Model.hpp:35</a></div></div>
 <div class="ttc" id="classModel_html_a85354b9b623f9b4785b0e915bc33ed42"><div class="ttname"><a href="classModel.html#a85354b9b623f9b4785b0e915bc33ed42">Model::shutDown</a></div><div class="ttdeci">bool shutDown</div><div class="ttdef"><b>Definition:</b> <a href="Model_8hpp_source.html#l00034">Model.hpp:34</a></div></div>
 <div class="ttc" id="classModel_html_a8e8771cbc09afdf630f4ca833d29b809"><div class="ttname"><a href="classModel.html#a8e8771cbc09afdf630f4ca833d29b809">Model::setController</a></div><div class="ttdeci">void setController(void *c)</div><div class="ttdef"><b>Definition:</b> <a href="Model_8cpp_source.html#l00055">Model.cpp:55</a></div></div>
@@ -172,7 +173,7 @@ $(document).ready(function(){initNavTree('Model_8hpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_342e7b6bc6a1e66453dad3633c4afb75.html">server</a></li><li class="navelem"><a class="el" href="Model_8hpp.html">Model.hpp</a></li>
-    <li class="footer">Wygenerowano Wt, 29 gru 2015 20:50:21 dla LOTC programem
+    <li class="footer">Wygenerowano Pn, 4 sty 2016 21:19:54 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

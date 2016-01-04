@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="312348-low-orbit-ion-cannon.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">LOTC
    &#160;<span id="projectnumber">https://github.com/sigrond/procesy_rozproszone</span>
@@ -121,12 +122,16 @@ $(document).ready(function(){initNavTree('classAgentClient.html','');});
 Diagram współpracy dla AgentClient:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAgentClient__coll__graph.png" border="0" usemap="#AgentClient_coll__map" alt="Collaboration graph"/></div>
+<map name="AgentClient_coll__map" id="AgentClient_coll__map">
+<area shape="rect" id="node2" href="classIp.html" title="Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. " alt="" coords="774,213,882,319"/><area shape="rect" id="node6" href="classIpv4.html" title="{Ipv4\n|&#45; address\l|+ Ipv4()\l+ Ipv4()\l+ getAddress()\l+ getAddressNum()\l+ operator\&lt;()\l+ operator==()\l+ operator=()\l&#45; isCorrect()\l}" alt="" coords="710,448,845,628"/><area shape="rect" id="node9" href="classConnection.html" title="Klasa realizująca połączenie LOTC. " alt="" coords="80,455,195,621"/><area shape="rect" id="node3" href="classConnectionManager.html" title="{ConnectionManager\n|&#45; map4Mutex\l&#45; connGuardsMutex\l|+ send()\l+ send()\l+ receive()\l+ receive()\l+ remove()\l+ remove()\l+ getInstance()\l&#45; ConnectionManager()\l&#45; ConnectionManager()\l&#45; operator=()\l&#45; ~ConnectionManager()\l}" alt="" coords="370,860,531,1099"/><area shape="rect" id="node4" href="classSocket.html" title="{Socket\n|# sockfd\l# port\l|+ Socket()\l+ Socket()\l+ ~Socket()\l+ connect()\l+ bind()\l+ listen()\l+ accept()\l+ recv()\l+ send()\l+ getIp()\l+ close()\l}" alt="" coords="28,147,119,385"/><area shape="rect" id="node7" title="STL class. " alt="" coords="668,227,748,305"/><area shape="rect" id="node8" title="STL class. " alt="" coords="645,5,771,97"/><area shape="rect" id="node10" title="STL class. " alt="" coords="337,499,458,577"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
 <tr class="memitem:af82fc2e72f38fb7075d0667a18f4e8ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentClient.html#af82fc2e72f38fb7075d0667a18f4e8ba">AgentClient</a> ()</td></tr>
 <tr class="separator:af82fc2e72f38fb7075d0667a18f4e8ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fbebe8ebd0774f9e4280213389ec025"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentClient.html#a7fbebe8ebd0774f9e4280213389ec025">AgentClient</a> (<a class="el" href="classIp.html">Ip</a> &amp;ip)</td></tr>
+<tr class="separator:a7fbebe8ebd0774f9e4280213389ec025"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0e975638976932e9ab31c654843717e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentClient.html#af0e975638976932e9ab31c654843717e">start</a> ()</td></tr>
 <tr class="separator:af0e975638976932e9ab31c654843717e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7809668c0636c9b8e3f00fde43d23c0d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentClient.html#a7809668c0636c9b8e3f00fde43d23c0d">isConnected</a> ()</td></tr>
@@ -138,19 +143,25 @@ Metody publiczne</h2></td></tr>
 Metody prywatne</h2></td></tr>
 <tr class="memitem:aa1f2e65a8c67cc6cf6d9b7d65d662812"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentClient.html#aa1f2e65a8c67cc6cf6d9b7d65d662812">listen</a> ()</td></tr>
 <tr class="separator:aa1f2e65a8c67cc6cf6d9b7d65d662812"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab79b29db3558100968db3ed531a23a06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentClient.html#ab79b29db3558100968db3ed531a23a06">send</a> (void *msg)</td></tr>
-<tr class="separator:ab79b29db3558100968db3ed531a23a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7417cb37d33a126f01e92e07795a9f22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentClient.html#a7417cb37d33a126f01e92e07795a9f22">send</a> (<a class="el" href="classmessage_1_1Message.html">message::Message</a> *msg)</td></tr>
+<tr class="separator:a7417cb37d33a126f01e92e07795a9f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a52438f020977fee32396a51147439063"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConnectionManager.html">ConnectionManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentClient.html#a52438f020977fee32396a51147439063">connectionManager</a></td></tr>
+<tr class="separator:a52438f020977fee32396a51147439063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9de60772e28af821c5866a0ff12f804"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIp.html">Ip</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentClient.html#ae9de60772e28af821c5866a0ff12f804">serverIP</a></td></tr>
+<tr class="separator:ae9de60772e28af821c5866a0ff12f804"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac21b3f2dcaf97cb9e5317193dfc91aeb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentClient.html#ac21b3f2dcaf97cb9e5317193dfc91aeb">connected</a></td></tr>
 <tr class="separator:ac21b3f2dcaf97cb9e5317193dfc91aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0309e41988778487b9765edc2d42753f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentClient.html#a0309e41988778487b9765edc2d42753f">working</a></td></tr>
 <tr class="separator:a0309e41988778487b9765edc2d42753f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8af04642a8d7b0a8a2724eb9986df4b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAgentClient.html#aa8af04642a8d7b0a8a2724eb9986df4b">shutDown</a></td></tr>
+<tr class="separator:aa8af04642a8d7b0a8a2724eb9986df4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock">
-<p>Definicja w linii <a class="el" href="AgentClient_8hpp_source.html#l00009">9</a> pliku <a class="el" href="AgentClient_8hpp_source.html">AgentClient.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentClient_8hpp_source.html#l00010">10</a> pliku <a class="el" href="AgentClient_8hpp_source.html">AgentClient.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a class="anchor" id="af82fc2e72f38fb7075d0667a18f4e8ba"></a>
 <div class="memitem">
@@ -167,15 +178,53 @@ Atrybuty prywatne</h2></td></tr>
 
 <p>Definicja w linii <a class="el" href="AgentClient_8cpp_source.html#l00009">9</a> pliku <a class="el" href="AgentClient_8cpp_source.html">AgentClient.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="AgentClient_8hpp_source.html#l00023">connected</a> i <a class="el" href="AgentClient_8hpp_source.html#l00026">working</a>.</p>
+<p>Odwołuje się do <a class="el" href="AgentClient_8hpp_source.html#l00030">connected</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00085">ConnectionManager::connectionGuards</a>, <a class="el" href="AgentClient_8hpp_source.html#l00024">connectionManager</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00060">ConnectionManager::getInstance()</a>, <a class="el" href="AgentClient_8hpp_source.html#l00027">serverIP</a>, <a class="el" href="AgentClient_8hpp_source.html#l00036">shutDown</a> i <a class="el" href="AgentClient_8hpp_source.html#l00033">working</a>.</p>
 
-<p>Odwołania w <a class="el" href="Agent_8cpp_source.html#l00014">main()</a>.</p>
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAgentClient_af82fc2e72f38fb7075d0667a18f4e8ba_cgraph.png" border="0" usemap="#classAgentClient_af82fc2e72f38fb7075d0667a18f4e8ba_cgraph" alt=""/></div>
+<map name="classAgentClient_af82fc2e72f38fb7075d0667a18f4e8ba_cgraph" id="classAgentClient_af82fc2e72f38fb7075d0667a18f4e8ba_cgraph">
+<area shape="rect" id="node2" href="classConnectionManager.html#a38f4c092a52fd80c19d613fafad832b9" title="ConnectionManager::\lgetInstance" alt="" coords="217,23,363,65"/><area shape="rect" id="node3" href="classConnectionManager.html#acddf7b9dd1fa9319ffba80b4ecf2e5e5" title="ConnectionManager::\lConnectionManager" alt="" coords="411,23,556,65"/><area shape="rect" id="node4" href="classSocket.html#abda54549284a0626998e833bfead9f11" title="Socket::bind" alt="" coords="608,5,703,32"/><area shape="rect" id="node5" href="classSocket.html#a34374a7d9ae416f8593bea924ab2099b" title="Socket::listen" alt="" coords="604,56,707,83"/><area shape="rect" id="node6" href="classListenSockEx.html#a50566d24bd66b5d44d14fcff13b602c3" title="ListenSockEx::ListenSockEx" alt="" coords="755,56,947,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7fbebe8ebd0774f9e4280213389ec025"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AgentClient::AgentClient </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classIp.html">Ip</a> &amp;&#160;</td>
+          <td class="paramname"><em>ip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="AgentClient_8cpp_source.html#l00020">20</a> pliku <a class="el" href="AgentClient_8cpp_source.html">AgentClient.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="AgentClient_8hpp_source.html#l00030">connected</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00085">ConnectionManager::connectionGuards</a>, <a class="el" href="AgentClient_8hpp_source.html#l00024">connectionManager</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00060">ConnectionManager::getInstance()</a>, <a class="el" href="AgentClient_8hpp_source.html#l00027">serverIP</a>, <a class="el" href="AgentClient_8hpp_source.html#l00036">shutDown</a> i <a class="el" href="AgentClient_8hpp_source.html#l00033">working</a>.</p>
+
+<p>Odwołania w <a class="el" href="Agent_8cpp_source.html#l00015">main()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAgentClient_a7fbebe8ebd0774f9e4280213389ec025_cgraph.png" border="0" usemap="#classAgentClient_a7fbebe8ebd0774f9e4280213389ec025_cgraph" alt=""/></div>
+<map name="classAgentClient_a7fbebe8ebd0774f9e4280213389ec025_cgraph" id="classAgentClient_a7fbebe8ebd0774f9e4280213389ec025_cgraph">
+<area shape="rect" id="node2" href="classConnectionManager.html#a38f4c092a52fd80c19d613fafad832b9" title="ConnectionManager::\lgetInstance" alt="" coords="217,23,363,65"/><area shape="rect" id="node3" href="classConnectionManager.html#acddf7b9dd1fa9319ffba80b4ecf2e5e5" title="ConnectionManager::\lConnectionManager" alt="" coords="411,23,556,65"/><area shape="rect" id="node4" href="classSocket.html#abda54549284a0626998e833bfead9f11" title="Socket::bind" alt="" coords="608,5,703,32"/><area shape="rect" id="node5" href="classSocket.html#a34374a7d9ae416f8593bea924ab2099b" title="Socket::listen" alt="" coords="604,56,707,83"/><area shape="rect" id="node6" href="classListenSockEx.html#a50566d24bd66b5d44d14fcff13b602c3" title="ListenSockEx::ListenSockEx" alt="" coords="755,56,947,83"/></map>
+</div>
+</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAgentClient_af82fc2e72f38fb7075d0667a18f4e8ba_icgraph.png" border="0" usemap="#classAgentClient_af82fc2e72f38fb7075d0667a18f4e8ba_icgraph" alt=""/></div>
-<map name="classAgentClient_af82fc2e72f38fb7075d0667a18f4e8ba_icgraph" id="classAgentClient_af82fc2e72f38fb7075d0667a18f4e8ba_icgraph">
+<div class="center"><img src="classAgentClient_a7fbebe8ebd0774f9e4280213389ec025_icgraph.png" border="0" usemap="#classAgentClient_a7fbebe8ebd0774f9e4280213389ec025_icgraph" alt=""/></div>
+<map name="classAgentClient_a7fbebe8ebd0774f9e4280213389ec025_icgraph" id="classAgentClient_a7fbebe8ebd0774f9e4280213389ec025_icgraph">
 <area shape="rect" id="node2" href="Agent_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="217,5,268,32"/></map>
 </div>
 </p>
@@ -196,9 +245,9 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="AgentClient_8cpp_source.html#l00031">31</a> pliku <a class="el" href="AgentClient_8cpp_source.html">AgentClient.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentClient_8cpp_source.html#l00050">50</a> pliku <a class="el" href="AgentClient_8cpp_source.html">AgentClient.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="AgentClient_8hpp_source.html#l00023">connected</a>.</p>
+<p>Odwołuje się do <a class="el" href="AgentClient_8hpp_source.html#l00030">connected</a>.</p>
 
 </div>
 </div>
@@ -215,9 +264,9 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="AgentClient_8cpp_source.html#l00035">35</a> pliku <a class="el" href="AgentClient_8cpp_source.html">AgentClient.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentClient_8cpp_source.html#l00054">54</a> pliku <a class="el" href="AgentClient_8cpp_source.html">AgentClient.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="AgentClient_8hpp_source.html#l00026">working</a>.</p>
+<p>Odwołuje się do <a class="el" href="AgentClient_8hpp_source.html#l00033">working</a>.</p>
 
 </div>
 </div>
@@ -241,13 +290,25 @@ Oto graf wywoływań tej funkcji:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>metoda nas�uchuj�ca na komunikaty z serwera </p>
+<p>metoda nasłuchująca na komunikaty z serwera </p>
+<p>TO DO rozszyfrowac wiadomosc </p>
 
-<p>Definicja w linii <a class="el" href="AgentClient_8cpp_source.html#l00022">22</a> pliku <a class="el" href="AgentClient_8cpp_source.html">AgentClient.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentClient_8cpp_source.html#l00038">38</a> pliku <a class="el" href="AgentClient_8cpp_source.html">AgentClient.cpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="AgentClient_8cpp_source.html#l00029">start()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAgentClient_aa1f2e65a8c67cc6cf6d9b7d65d662812_icgraph.png" border="0" usemap="#classAgentClient_aa1f2e65a8c67cc6cf6d9b7d65d662812_icgraph" alt=""/></div>
+<map name="classAgentClient_aa1f2e65a8c67cc6cf6d9b7d65d662812_icgraph" id="classAgentClient_aa1f2e65a8c67cc6cf6d9b7d65d662812_icgraph">
+<area shape="rect" id="node2" href="classAgentClient.html#af0e975638976932e9ab31c654843717e" title="AgentClient::start" alt="" coords="181,5,304,32"/></map>
+</div>
+</p>
 
 </div>
 </div>
-<a class="anchor" id="ab79b29db3558100968db3ed531a23a06"></a>
+<a class="anchor" id="a7417cb37d33a126f01e92e07795a9f22"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -257,7 +318,7 @@ Oto graf wywoływań tej funkcji:</div>
         <tr>
           <td class="memname">void AgentClient::send </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype"><a class="el" href="classmessage_1_1Message.html">message::Message</a> *&#160;</td>
           <td class="paramname"><em>msg</em></td><td>)</td>
           <td></td>
         </tr>
@@ -268,9 +329,9 @@ Oto graf wywoływań tej funkcji:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>metoda wysy�aj�ca komunikat do serwera </p>
+<p>metoda wysyłająca komunikat do serwera </p>
 
-<p>Definicja w linii <a class="el" href="AgentClient_8cpp_source.html#l00026">26</a> pliku <a class="el" href="AgentClient_8cpp_source.html">AgentClient.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentClient_8cpp_source.html#l00045">45</a> pliku <a class="el" href="AgentClient_8cpp_source.html">AgentClient.cpp</a>.</p>
 
 </div>
 </div>
@@ -286,9 +347,20 @@ Oto graf wywoływań tej funkcji:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>metoda inicjalizuje po��czenie z serwerem </p>
+<p>metoda inicjalizuje połączenie z serwerem </p>
 
-<p>Definicja w linii <a class="el" href="AgentClient_8cpp_source.html#l00015">15</a> pliku <a class="el" href="AgentClient_8cpp_source.html">AgentClient.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentClient_8cpp_source.html#l00029">29</a> pliku <a class="el" href="AgentClient_8cpp_source.html">AgentClient.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="AgentClient_8cpp_source.html#l00038">listen()</a> i <a class="el" href="AgentClient_8hpp_source.html#l00036">shutDown</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAgentClient_af0e975638976932e9ab31c654843717e_cgraph.png" border="0" usemap="#classAgentClient_af0e975638976932e9ab31c654843717e_cgraph" alt=""/></div>
+<map name="classAgentClient_af0e975638976932e9ab31c654843717e_cgraph" id="classAgentClient_af0e975638976932e9ab31c654843717e_cgraph">
+<area shape="rect" id="node2" href="classAgentClient.html#aa1f2e65a8c67cc6cf6d9b7d65d662812" title="AgentClient::listen" alt="" coords="176,5,304,32"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -310,11 +382,85 @@ Oto graf wywoływań tej funkcji:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>pole przechowuje informacje czy agent jest po��czony z serwerem </p>
+<p>pole przechowuje informacje czy agent jest połączony z serwerem </p>
 
-<p>Definicja w linii <a class="el" href="AgentClient_8hpp_source.html#l00023">23</a> pliku <a class="el" href="AgentClient_8hpp_source.html">AgentClient.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentClient_8hpp_source.html#l00030">30</a> pliku <a class="el" href="AgentClient_8hpp_source.html">AgentClient.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="AgentClient_8cpp_source.html#l00009">AgentClient()</a> i <a class="el" href="AgentClient_8cpp_source.html#l00031">isConnected()</a>.</p>
+<p>Odwołania w <a class="el" href="AgentClient_8cpp_source.html#l00009">AgentClient()</a> i <a class="el" href="AgentClient_8cpp_source.html#l00050">isConnected()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a52438f020977fee32396a51147439063"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classConnectionManager.html">ConnectionManager</a>* AgentClient::connectionManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="AgentClient_8hpp_source.html#l00024">24</a> pliku <a class="el" href="AgentClient_8hpp_source.html">AgentClient.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="AgentClient_8cpp_source.html#l00009">AgentClient()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae9de60772e28af821c5866a0ff12f804"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIp.html">Ip</a>* AgentClient::serverIP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>IP serwera, do którego łączy się agent </p>
+
+<p>Definicja w linii <a class="el" href="AgentClient_8hpp_source.html#l00027">27</a> pliku <a class="el" href="AgentClient_8hpp_source.html">AgentClient.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="AgentClient_8cpp_source.html#l00009">AgentClient()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa8af04642a8d7b0a8a2724eb9986df4b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AgentClient::shutDown</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>pole przechowuje informacje, czy agent jest zamykany </p>
+
+<p>Definicja w linii <a class="el" href="AgentClient_8hpp_source.html#l00036">36</a> pliku <a class="el" href="AgentClient_8hpp_source.html">AgentClient.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="AgentClient_8cpp_source.html#l00009">AgentClient()</a> i <a class="el" href="AgentClient_8cpp_source.html#l00029">start()</a>.</p>
 
 </div>
 </div>
@@ -337,9 +483,9 @@ Oto graf wywoływań tej funkcji:</div>
 </div><div class="memdoc">
 <p>pole przechowuje informacje czy agent jest w trakcie wykonywania jakiegos zadania </p>
 
-<p>Definicja w linii <a class="el" href="AgentClient_8hpp_source.html#l00026">26</a> pliku <a class="el" href="AgentClient_8hpp_source.html">AgentClient.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="AgentClient_8hpp_source.html#l00033">33</a> pliku <a class="el" href="AgentClient_8hpp_source.html">AgentClient.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="AgentClient_8cpp_source.html#l00009">AgentClient()</a> i <a class="el" href="AgentClient_8cpp_source.html#l00035">isWorking()</a>.</p>
+<p>Odwołania w <a class="el" href="AgentClient_8cpp_source.html#l00009">AgentClient()</a> i <a class="el" href="AgentClient_8cpp_source.html#l00054">isWorking()</a>.</p>
 
 </div>
 </div>
@@ -353,7 +499,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classAgentClient.html">AgentClient</a></li>
-    <li class="footer">Wygenerowano Wt, 29 gru 2015 20:50:31 dla LOTC programem
+    <li class="footer">Wygenerowano Pn, 4 sty 2016 21:19:56 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -4,7 +4,7 @@ var classModel =
     [ "addTask", "classModel.html#a160b44b67ed3c952b28bbea0582463f2", null ],
     [ "pingAdmin", "classModel.html#a0ff8ce83743a023063d79cc7bcd1c0d3", null ],
     [ "pingSlaves", "classModel.html#a826190f531cd61ae141c48313a85ad91", null ],
-    [ "pushAddAgent", "classModel.html#a290de9af6cb1f25c6ec6c4c2be77606f", null ],
+    [ "pushAddAgent", "classModel.html#a5526490fe1b79ee4a479649f7f7c7edb", null ],
     [ "pushTestEvents", "classModel.html#ac9ee04aadbcefc4957321d5f0ad60c5e", null ],
     [ "setBlockingQueue", "classModel.html#a61cb5a5695ff5a6555ceaec02b2a16b9", null ],
     [ "setController", "classModel.html#a8e8771cbc09afdf630f4ca833d29b809", null ],

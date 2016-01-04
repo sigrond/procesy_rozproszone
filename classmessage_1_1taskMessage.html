@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="312348-low-orbit-ion-cannon.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">LOTC
    &#160;<span id="projectnumber">https://github.com/sigrond/procesy_rozproszone</span>
@@ -108,6 +109,7 @@ $(document).ready(function(){initNavTree('classmessage_1_1taskMessage.html','');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
 <a href="classmessage_1_1taskMessage-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
 <div class="title">Dokumentacja klasy message::taskMessage</div>  </div>
@@ -120,21 +122,21 @@ Diagram dziedziczenia dla message::taskMessage</div>
 <div class="dyncontent">
 <div class="center"><img src="classmessage_1_1taskMessage__inherit__graph.png" border="0" usemap="#message_1_1taskMessage_inherit__map" alt="Inheritance graph"/></div>
 <map name="message_1_1taskMessage_inherit__map" id="message_1_1taskMessage_inherit__map">
-<area shape="rect" id="node2" href="classmessage_1_1Message.html" title="{message::Message\n|&#45; code\l|+ Message()\l+ ~Message()\l+ getCode()\l+ getCategory()\l+ getState()\l+ getSubcategory()\l&#45; checkMessage()\l}" alt="" coords="18,5,154,171"/></map>
+<area shape="rect" id="node2" href="classmessage_1_1Message.html" title="{message::Message\n|# code\l# buffer\l# bufferSize\l|+ Message()\l+ Message()\l+ ~Message()\l+ getCode()\l+ getCategory()\l+ getState()\l+ getSubcategory()\l+ getBuffer()\l+ getBufferSize()\l# checkMessage()\l}" alt="" coords="18,5,154,244"/></map>
 </div>
 <div class="dynheader">
 Diagram współpracy dla message::taskMessage:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmessage_1_1taskMessage__coll__graph.png" border="0" usemap="#message_1_1taskMessage_coll__map" alt="Collaboration graph"/></div>
 <map name="message_1_1taskMessage_coll__map" id="message_1_1taskMessage_coll__map">
-<area shape="rect" id="node2" href="classmessage_1_1Message.html" title="{message::Message\n|&#45; code\l|+ Message()\l+ ~Message()\l+ getCode()\l+ getCategory()\l+ getState()\l+ getSubcategory()\l&#45; checkMessage()\l}" alt="" coords="18,5,154,171"/></map>
+<area shape="rect" id="node2" href="classmessage_1_1Message.html" title="{message::Message\n|# code\l# buffer\l# bufferSize\l|+ Message()\l+ Message()\l+ ~Message()\l+ getCode()\l+ getCategory()\l+ getState()\l+ getSubcategory()\l+ getBuffer()\l+ getBufferSize()\l# checkMessage()\l}" alt="" coords="18,5,154,244"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr class="memitem:af926070aeb8d0ed6c00d2c369e79b72b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1taskMessage.html#af926070aeb8d0ed6c00d2c369e79b72b">taskMessage</a> (<a class="el" href="namespacemessage.html#ae05e95c0044ad6377fd7a731f10d1281">TaskSub</a> sub, <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063">State</a> state, bool respectPriority, unsigned short priority, unsigned long taskId, const std::chrono::steady_clock::time_point &amp;timestamp)</td></tr>
+<tr class="memitem:af926070aeb8d0ed6c00d2c369e79b72b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1taskMessage.html#af926070aeb8d0ed6c00d2c369e79b72b">taskMessage</a> (<a class="el" href="namespacemessage.html#ae05e95c0044ad6377fd7a731f10d1281">TaskSub</a> sub, <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063">State</a> <a class="el" href="classmessage_1_1taskMessage.html#aedd56b1438cc8a13607d73f4ea01dcbb">state</a>, bool <a class="el" href="classmessage_1_1taskMessage.html#a108c418a57184894d432ada6f3f1b31c">respectPriority</a>, unsigned short <a class="el" href="classmessage_1_1taskMessage.html#a282892890d97cb33eb04edf835b011b0">priority</a>, unsigned long <a class="el" href="classmessage_1_1taskMessage.html#ad3678516db93fa4c7a80075f3f5af760">taskId</a>, const std::chrono::steady_clock::time_point &amp;timestamp)</td></tr>
 <tr class="separator:af926070aeb8d0ed6c00d2c369e79b72b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a399da02ee7d0bbe2521f3b6f235b52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1taskMessage.html#a9a399da02ee7d0bbe2521f3b6f235b52">taskMessage</a> (<a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063">State</a> state)</td></tr>
+<tr class="memitem:a9a399da02ee7d0bbe2521f3b6f235b52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1taskMessage.html#a9a399da02ee7d0bbe2521f3b6f235b52">taskMessage</a> (<a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063">State</a> <a class="el" href="classmessage_1_1taskMessage.html#aedd56b1438cc8a13607d73f4ea01dcbb">state</a>)</td></tr>
 <tr class="separator:a9a399da02ee7d0bbe2521f3b6f235b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e3b669d1233ad88617730fb7da02f00"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1taskMessage.html#a6e3b669d1233ad88617730fb7da02f00">getRespectPriority</a> ()</td></tr>
 <tr class="separator:a6e3b669d1233ad88617730fb7da02f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,6 +149,8 @@ Metody publiczne</h2></td></tr>
 <tr class="inherit_header pub_methods_classmessage_1_1Message"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmessage_1_1Message')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="classmessage_1_1Message.html">message::Message</a></td></tr>
 <tr class="memitem:a40eed0cc59f5cf5844dff8d1f300b01d inherit pub_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a40eed0cc59f5cf5844dff8d1f300b01d">Message</a> (<a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3">Category</a> category)</td></tr>
 <tr class="separator:a40eed0cc59f5cf5844dff8d1f300b01d inherit pub_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b97532d722a5d538d1d23339952bc6d inherit pub_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a5b97532d722a5d538d1d23339952bc6d">Message</a> (<a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3">Category</a> category, unsigned long <a class="el" href="classmessage_1_1Message.html#ad110f50cec278cf92a45856351ee1f10">bufferSize</a>)</td></tr>
+<tr class="separator:a5b97532d722a5d538d1d23339952bc6d inherit pub_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f7275462831f787a861271687bcad67 inherit pub_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a3f7275462831f787a861271687bcad67">~Message</a> ()</td></tr>
 <tr class="separator:a3f7275462831f787a861271687bcad67 inherit pub_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4dc034eaa8566016e8d20bb0411756f inherit pub_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#ae4dc034eaa8566016e8d20bb0411756f">getCode</a> () const </td></tr>
@@ -157,10 +161,42 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:af1312b3bd5b5074c1781188375878991 inherit pub_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3aaaba96ea3393e7a351fefbd4517f67 inherit pub_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a3aaaba96ea3393e7a351fefbd4517f67">getSubcategory</a> () const </td></tr>
 <tr class="separator:a3aaaba96ea3393e7a351fefbd4517f67 inherit pub_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c1b1b5cee06ee3b5396f7b8037b0805 inherit pub_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a0c1b1b5cee06ee3b5396f7b8037b0805">getBuffer</a> () const </td></tr>
+<tr class="separator:a0c1b1b5cee06ee3b5396f7b8037b0805 inherit pub_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec368ada6258d54639f00eeb6c601eb1 inherit pub_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#aec368ada6258d54639f00eeb6c601eb1">getBufferSize</a> () const </td></tr>
+<tr class="separator:aec368ada6258d54639f00eeb6c601eb1 inherit pub_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:ab75d3ee96d53cbe11ed8e8aec7c27de5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemessage.html#ae05e95c0044ad6377fd7a731f10d1281">TaskSub</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1taskMessage.html#ab75d3ee96d53cbe11ed8e8aec7c27de5">taskSub</a></td></tr>
+<tr class="separator:ab75d3ee96d53cbe11ed8e8aec7c27de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedd56b1438cc8a13607d73f4ea01dcbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1taskMessage.html#aedd56b1438cc8a13607d73f4ea01dcbb">state</a></td></tr>
+<tr class="separator:aedd56b1438cc8a13607d73f4ea01dcbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a108c418a57184894d432ada6f3f1b31c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1taskMessage.html#a108c418a57184894d432ada6f3f1b31c">respectPriority</a></td></tr>
+<tr class="separator:a108c418a57184894d432ada6f3f1b31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a282892890d97cb33eb04edf835b011b0"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1taskMessage.html#a282892890d97cb33eb04edf835b011b0">priority</a></td></tr>
+<tr class="separator:a282892890d97cb33eb04edf835b011b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3678516db93fa4c7a80075f3f5af760"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1taskMessage.html#ad3678516db93fa4c7a80075f3f5af760">taskId</a></td></tr>
+<tr class="separator:ad3678516db93fa4c7a80075f3f5af760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab96eae2d339db723300e7e18e03227ed"><td class="memItemLeft" align="right" valign="top">std::chrono::steady_clock::time_point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1taskMessage.html#ab96eae2d339db723300e7e18e03227ed">time</a></td></tr>
+<tr class="separator:ab96eae2d339db723300e7e18e03227ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Dodatkowe Dziedziczone Składowe</h2></td></tr>
+<tr class="inherit_header pro_methods_classmessage_1_1Message"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classmessage_1_1Message')"><img src="closed.png" alt="-"/>&#160;Metody chronione dziedziczone z <a class="el" href="classmessage_1_1Message.html">message::Message</a></td></tr>
+<tr class="memitem:a51f92c4860172d5cf1f3284a472dc98e inherit pro_methods_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a51f92c4860172d5cf1f3284a472dc98e">checkMessage</a> () const </td></tr>
+<tr class="separator:a51f92c4860172d5cf1f3284a472dc98e inherit pro_methods_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classmessage_1_1Message"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmessage_1_1Message')"><img src="closed.png" alt="-"/>&#160;Atrybuty chronione dziedziczone z <a class="el" href="classmessage_1_1Message.html">message::Message</a></td></tr>
+<tr class="memitem:a8b778994013f2c28c4cdbaddb5ffb628 inherit pro_attribs_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a8b778994013f2c28c4cdbaddb5ffb628">code</a></td></tr>
+<tr class="separator:a8b778994013f2c28c4cdbaddb5ffb628 inherit pro_attribs_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a257b3e7ea0db35f75a6e2a808ad69553 inherit pro_attribs_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#a257b3e7ea0db35f75a6e2a808ad69553">buffer</a></td></tr>
+<tr class="separator:a257b3e7ea0db35f75a6e2a808ad69553 inherit pro_attribs_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad110f50cec278cf92a45856351ee1f10 inherit pro_attribs_classmessage_1_1Message"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmessage_1_1Message.html#ad110f50cec278cf92a45856351ee1f10">bufferSize</a></td></tr>
+<tr class="separator:ad110f50cec278cf92a45856351ee1f10 inherit pro_attribs_classmessage_1_1Message"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock">
-<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00068">68</a> pliku <a class="el" href="application_2protocol_2Message_8hpp_source.html">application/protocol/Message.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00082">82</a> pliku <a class="el" href="application_2protocol_2Message_8hpp_source.html">application/protocol/Message.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a class="anchor" id="af926070aeb8d0ed6c00d2c369e79b72b"></a>
 <div class="memitem">
@@ -210,11 +246,11 @@ Metody publiczne</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00067">67</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00106">106</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00012">message::Message::Message()</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3a0ed9b001ca1cd2667302a9be876ede9d">message::TASK</a> i <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00067">taskMessage()</a>.</p>
+<p>Odwołuje się do <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00016">message::Message::Message()</a>, <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00104">respectPriority</a>, <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00103">state</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3a0ed9b001ca1cd2667302a9be876ede9d">message::TASK</a>, <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00106">taskId</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00106">taskMessage()</a> i <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00102">taskSub</a>.</p>
 
-<p>Odwołania w <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00067">taskMessage()</a>.</p>
+<p>Odwołania w <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00106">taskMessage()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
@@ -248,16 +284,27 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00077">77</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00123">123</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00012">message::Message::Message()</a> i <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3a0ed9b001ca1cd2667302a9be876ede9d">message::TASK</a>.</p>
+<p>Odwołuje się do <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00016">message::Message::Message()</a>, <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00103">state</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3a0ed9b001ca1cd2667302a9be876ede9d">message::TASK</a> i <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00123">taskMessage()</a>.</p>
+
+<p>Odwołania w <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00123">taskMessage()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmessage_1_1taskMessage_a9a399da02ee7d0bbe2521f3b6f235b52_cgraph.png" border="0" usemap="#classmessage_1_1taskMessage_a9a399da02ee7d0bbe2521f3b6f235b52_cgraph" alt=""/></div>
 <map name="classmessage_1_1taskMessage_a9a399da02ee7d0bbe2521f3b6f235b52_cgraph" id="classmessage_1_1taskMessage_a9a399da02ee7d0bbe2521f3b6f235b52_cgraph">
-<area shape="rect" id="node2" href="classmessage_1_1Message.html#a40eed0cc59f5cf5844dff8d1f300b01d" title="message::Message::Message" alt="" coords="215,13,412,39"/></map>
+<area shape="rect" id="node2" href="classmessage_1_1Message.html#a40eed0cc59f5cf5844dff8d1f300b01d" title="message::Message::Message" alt="" coords="215,37,412,63"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmessage_1_1taskMessage_a9a399da02ee7d0bbe2521f3b6f235b52_icgraph.png" border="0" usemap="#classmessage_1_1taskMessage_a9a399da02ee7d0bbe2521f3b6f235b52_icgraph" alt=""/></div>
+<map name="classmessage_1_1taskMessage_a9a399da02ee7d0bbe2521f3b6f235b52_icgraph" id="classmessage_1_1taskMessage_a9a399da02ee7d0bbe2521f3b6f235b52_icgraph">
+</map>
 </div>
 </p>
 
@@ -277,7 +324,9 @@ Oto graf wywołań dla tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00087">87</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00135">135</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00105">priority</a>.</p>
 
 </div>
 </div>
@@ -294,7 +343,9 @@ Oto graf wywołań dla tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00082">82</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00130">130</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00104">respectPriority</a>.</p>
 
 </div>
 </div>
@@ -311,7 +362,9 @@ Oto graf wywołań dla tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00092">92</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00140">140</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00106">taskId</a>.</p>
 
 </div>
 </div>
@@ -328,7 +381,150 @@ Oto graf wywołań dla tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00097">97</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00145">145</a> pliku <a class="el" href="application_2protocol_2Message_8cpp_source.html">application/protocol/Message.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="a282892890d97cb33eb04edf835b011b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short message::taskMessage::priority</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00105">105</a> pliku <a class="el" href="application_2protocol_2Message_8hpp_source.html">application/protocol/Message.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00135">getPriority()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a108c418a57184894d432ada6f3f1b31c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool message::taskMessage::respectPriority</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00104">104</a> pliku <a class="el" href="application_2protocol_2Message_8hpp_source.html">application/protocol/Message.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00130">getRespectPriority()</a> i <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00106">taskMessage()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aedd56b1438cc8a13607d73f4ea01dcbb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063">State</a> message::taskMessage::state</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00103">103</a> pliku <a class="el" href="application_2protocol_2Message_8hpp_source.html">application/protocol/Message.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00106">taskMessage()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad3678516db93fa4c7a80075f3f5af760"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long message::taskMessage::taskId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00106">106</a> pliku <a class="el" href="application_2protocol_2Message_8hpp_source.html">application/protocol/Message.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00140">getTaskId()</a> i <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00106">taskMessage()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab75d3ee96d53cbe11ed8e8aec7c27de5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemessage.html#ae05e95c0044ad6377fd7a731f10d1281">TaskSub</a> message::taskMessage::taskSub</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00102">102</a> pliku <a class="el" href="application_2protocol_2Message_8hpp_source.html">application/protocol/Message.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00106">taskMessage()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab96eae2d339db723300e7e18e03227ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::chrono::steady_clock::time_point message::taskMessage::time</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="application_2protocol_2Message_8hpp_source.html#l00107">107</a> pliku <a class="el" href="application_2protocol_2Message_8hpp_source.html">application/protocol/Message.hpp</a>.</p>
 
 </div>
 </div>
@@ -342,7 +538,7 @@ Oto graf wywołań dla tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemessage.html">message</a></li><li class="navelem"><a class="el" href="classmessage_1_1taskMessage.html">taskMessage</a></li>
-    <li class="footer">Wygenerowano Wt, 29 gru 2015 20:50:40 dla LOTC programem
+    <li class="footer">Wygenerowano Pn, 4 sty 2016 21:19:58 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -7,7 +7,6 @@ var hierarchy =
     [ "Connection", "classConnection.html", null ],
     [ "ConnectionManager", "classConnectionManager.html", null ],
     [ "ConsoleClient", "classConsoleClient.html", null ],
-    [ "ConsoleServer", "classConsoleServer.html", null ],
     [ "Controller", "classController.html", null ],
     [ "Event", "classEvent.html", null ],
     [ "std::exception", null, [

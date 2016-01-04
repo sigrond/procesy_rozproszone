@@ -17,7 +17,6 @@ var annotated =
     [ "ConnectionManager", "classConnectionManager.html", "classConnectionManager" ],
     [ "ConnectSockEx", "classConnectSockEx.html", "classConnectSockEx" ],
     [ "ConsoleClient", "classConsoleClient.html", "classConsoleClient" ],
-    [ "ConsoleServer", "classConsoleServer.html", "classConsoleServer" ],
     [ "Controller", "classController.html", "classController" ],
     [ "ControllerException", "structControllerException.html", "structControllerException" ],
     [ "CreateSockEx", "classCreateSockEx.html", "classCreateSockEx" ],

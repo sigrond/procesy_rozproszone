@@ -6,7 +6,7 @@ var searchData=
   ['map4',['map4',['../classConnectionManager.html#a9892096a8122ec855a2a825827838dd4',1,'ConnectionManager']]],
   ['map4mutex',['map4Mutex',['../classConnectionManager.html#a11c7d535fdc61b9cb85b7440185fbfa3',1,'ConnectionManager']]],
   ['message',['Message',['../classmessage_1_1Message.html',1,'message']]],
-  ['message',['message',['../namespacemessage.html',1,'message'],['../classmessage_1_1Message.html#a40eed0cc59f5cf5844dff8d1f300b01d',1,'message::Message::Message()'],['../ChangesLog_8txt.html#a271e3367e3ba639743c5767271a58d12',1,'Message():&#160;ChangesLog.txt']]],
+  ['message',['message',['../namespacemessage.html',1,'message'],['../classmessage_1_1Message.html#a40eed0cc59f5cf5844dff8d1f300b01d',1,'message::Message::Message(Category category)'],['../classmessage_1_1Message.html#a5b97532d722a5d538d1d23339952bc6d',1,'message::Message::Message(Category category, unsigned long bufferSize)'],['../ChangesLog_8txt.html#a271e3367e3ba639743c5767271a58d12',1,'Message():&#160;ChangesLog.txt']]],
   ['message_5ffrom_5fadmin_5fserver',['MESSAGE_FROM_ADMIN_SERVER',['../Event_8hpp.html#a2628ea8d12e8b2563c32f05dc7fff6faab01fc07d58ab0e231ce53be6edc84b63',1,'Event.hpp']]],
   ['message_5ffrom_5fagent_5fserver',['MESSAGE_FROM_AGENT_SERVER',['../Event_8hpp.html#a2628ea8d12e8b2563c32f05dc7fff6faa1d6713c175ede381efdb64a02213855f',1,'Event.hpp']]],
   ['message_5ffrom_5fmodel',['MESSAGE_FROM_MODEL',['../Event_8hpp.html#a2628ea8d12e8b2563c32f05dc7fff6faa152f1a21c136f10bfd5469b87a2531a2',1,'Event.hpp']]],

@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="312348-low-orbit-ion-cannon.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">LOTC
    &#160;<span id="projectnumber">https://github.com/sigrond/procesy_rozproszone</span>
@@ -109,59 +110,87 @@ $(document).ready(function(){initNavTree('AgentClient_8cpp_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="AgentClient_8cpp.html">IdÅº do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/** \file AgentClient.cpp</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * \author Eryk Ratyñski</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * \author Eryk RatyÅ„ski</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * \brief implementacja metod dla klasy AgentClient</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="AgentClient_8hpp.html" title="Plik nag³ówkowy klienta dla agenta. ">&quot;AgentClient.hpp&quot;</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="AgentClient_8hpp.html" title="Plik nagÅ‚Ã³wkowy klienta dla agenta. ">&quot;AgentClient.hpp&quot;</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classAgentClient.html#af82fc2e72f38fb7075d0667a18f4e8ba">    9</a></span>&#160;<a class="code" href="classAgentClient.html">AgentClient</a>::<a class="code" href="classAgentClient.html#af82fc2e72f38fb7075d0667a18f4e8ba">AgentClient</a>()</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="classAgentClient.html#ac21b3f2dcaf97cb9e5317193dfc91aeb">connected</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="classAgentClient.html#a0309e41988778487b9765edc2d42753f">working</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;};</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classAgentClient.html#af0e975638976932e9ab31c654843717e">   15</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAgentClient.html">AgentClient</a>::<a class="code" href="classAgentClient.html#af0e975638976932e9ab31c654843717e">start</a>()</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">//inicjalizacja polaczenia z serwerem</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="comment">//this-&gt;listen();</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classAgentClient.html#aa1f2e65a8c67cc6cf6d9b7d65d662812">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAgentClient.html">AgentClient</a>::<a class="code" href="classAgentClient.html#aa1f2e65a8c67cc6cf6d9b7d65d662812">listen</a>()</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classAgentClient.html#ab79b29db3558100968db3ed531a23a06">   26</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAgentClient.html">AgentClient</a>::<a class="code" href="classAgentClient.html#ab79b29db3558100968db3ed531a23a06">send</a>( <span class="keywordtype">void</span>* msg)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="classAgentClient.html#a52438f020977fee32396a51147439063">connectionManager</a> = <a class="code" href="classConnectionManager.html#a906971dce9efb1c3e6c895c892ca43cd">ConnectionManager</a><a class="code" href="classConnectionManager.html#a38f4c092a52fd80c19d613fafad832b9">::</a><a class="code" href="classConnectionManager.html#a38f4c092a52fd80c19d613fafad832b9">getInstance</a><a class="code" href="classConnectionManager.html#a38f4c092a52fd80c19d613fafad832b9">(</a><a class="code" href="classConnectionManager.html#a38f4c092a52fd80c19d613fafad832b9">)</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="classAgentClient.html#ac21b3f2dcaf97cb9e5317193dfc91aeb">connected</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="classAgentClient.html#a0309e41988778487b9765edc2d42753f">working</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="classAgentClient.html#aa8af04642a8d7b0a8a2724eb9986df4b">shutDown</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="classAgentClient.html#ae9de60772e28af821c5866a0ff12f804">serverIP</a> = <span class="keywordtype">nullptr</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classAgentClient.html#a7fbebe8ebd0774f9e4280213389ec025">   20</a></span>&#160;<a class="code" href="classAgentClient.html">AgentClient</a>::<a class="code" href="classAgentClient.html#a7fbebe8ebd0774f9e4280213389ec025">AgentClient</a>(<a class="code" href="classIp.html">Ip</a> &amp;ip)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classAgentClient.html#a52438f020977fee32396a51147439063">connectionManager</a> = <a class="code" href="classConnectionManager.html#a906971dce9efb1c3e6c895c892ca43cd">ConnectionManager</a><a class="code" href="classConnectionManager.html#a38f4c092a52fd80c19d613fafad832b9">::</a><a class="code" href="classConnectionManager.html#a38f4c092a52fd80c19d613fafad832b9">getInstance</a><a class="code" href="classConnectionManager.html#a38f4c092a52fd80c19d613fafad832b9">(</a><a class="code" href="classConnectionManager.html#a38f4c092a52fd80c19d613fafad832b9">)</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="classAgentClient.html#ac21b3f2dcaf97cb9e5317193dfc91aeb">connected</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="classAgentClient.html#a0309e41988778487b9765edc2d42753f">working</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="classAgentClient.html#aa8af04642a8d7b0a8a2724eb9986df4b">shutDown</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="classAgentClient.html#ae9de60772e28af821c5866a0ff12f804">serverIP</a> = &amp;ip;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classAgentClient.html#a7809668c0636c9b8e3f00fde43d23c0d">   31</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classAgentClient.html">AgentClient</a>::<a class="code" href="classAgentClient.html#a7809668c0636c9b8e3f00fde43d23c0d">isConnected</a>()</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAgentClient.html#ac21b3f2dcaf97cb9e5317193dfc91aeb">connected</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classAgentClient.html#a0a7e80d2e1d7d21560682946918ec2f6">   35</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classAgentClient.html">AgentClient</a>::<a class="code" href="classAgentClient.html#a0a7e80d2e1d7d21560682946918ec2f6">isWorking</a>()</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAgentClient.html#a0309e41988778487b9765edc2d42753f">working</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
-<div class="ttc" id="classAgentClient_html_a0a7e80d2e1d7d21560682946918ec2f6"><div class="ttname"><a href="classAgentClient.html#a0a7e80d2e1d7d21560682946918ec2f6">AgentClient::isWorking</a></div><div class="ttdeci">bool isWorking()</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8cpp_source.html#l00035">AgentClient.cpp:35</a></div></div>
-<div class="ttc" id="classAgentClient_html_a0309e41988778487b9765edc2d42753f"><div class="ttname"><a href="classAgentClient.html#a0309e41988778487b9765edc2d42753f">AgentClient::working</a></div><div class="ttdeci">bool working</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8hpp_source.html#l00026">AgentClient.hpp:26</a></div></div>
-<div class="ttc" id="classAgentClient_html"><div class="ttname"><a href="classAgentClient.html">AgentClient</a></div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8hpp_source.html#l00009">AgentClient.hpp:9</a></div></div>
-<div class="ttc" id="classAgentClient_html_ab79b29db3558100968db3ed531a23a06"><div class="ttname"><a href="classAgentClient.html#ab79b29db3558100968db3ed531a23a06">AgentClient::send</a></div><div class="ttdeci">void send(void *msg)</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8cpp_source.html#l00026">AgentClient.cpp:26</a></div></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classAgentClient.html#af0e975638976932e9ab31c654843717e">   29</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAgentClient.html">AgentClient</a>::<a class="code" href="classAgentClient.html#af0e975638976932e9ab31c654843717e">start</a>()</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="comment">//inicjalizacja polaczenia z serwerem</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">while</span>(!<a class="code" href="classAgentClient.html#aa8af04642a8d7b0a8a2724eb9986df4b">shutDown</a>)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;     <span class="keyword">this</span><a class="code" href="classAgentClient.html#aa1f2e65a8c67cc6cf6d9b7d65d662812">-&gt;</a><a class="code" href="classAgentClient.html#aa1f2e65a8c67cc6cf6d9b7d65d662812">listen</a><a class="code" href="classAgentClient.html#aa1f2e65a8c67cc6cf6d9b7d65d662812">(</a><a class="code" href="classAgentClient.html#aa1f2e65a8c67cc6cf6d9b7d65d662812">)</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classAgentClient.html#aa1f2e65a8c67cc6cf6d9b7d65d662812">   38</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAgentClient.html">AgentClient</a>::<a class="code" href="classAgentClient.html#aa1f2e65a8c67cc6cf6d9b7d65d662812">listen</a>()</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="namespacemessage.html">message</a>::<a class="code" href="classmessage_1_1Message.html">Message</a> *msg = <span class="keywordtype">nullptr</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        connectionManager-&gt;receive(*(serverIP), msg);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">/** TO DO  rozszyfrowac wiadomosc */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classAgentClient.html#a7417cb37d33a126f01e92e07795a9f22">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classAgentClient.html">AgentClient</a>::<a class="code" href="classAgentClient.html#a7417cb37d33a126f01e92e07795a9f22">send</a>( <a class="code" href="namespacemessage.html">message</a>::<a class="code" href="classmessage_1_1Message.html">Message</a> *msg)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        connectionManager-&gt;send(*(adminIP), *msg);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classAgentClient.html#a7809668c0636c9b8e3f00fde43d23c0d">   50</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classAgentClient.html">AgentClient</a>::<a class="code" href="classAgentClient.html#a7809668c0636c9b8e3f00fde43d23c0d">isConnected</a>()</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAgentClient.html#ac21b3f2dcaf97cb9e5317193dfc91aeb">connected</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classAgentClient.html#a0a7e80d2e1d7d21560682946918ec2f6">   54</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classAgentClient.html">AgentClient</a>::<a class="code" href="classAgentClient.html#a0a7e80d2e1d7d21560682946918ec2f6">isWorking</a>()</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAgentClient.html#a0309e41988778487b9765edc2d42753f">working</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
+<div class="ttc" id="classAgentClient_html_a0a7e80d2e1d7d21560682946918ec2f6"><div class="ttname"><a href="classAgentClient.html#a0a7e80d2e1d7d21560682946918ec2f6">AgentClient::isWorking</a></div><div class="ttdeci">bool isWorking()</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8cpp_source.html#l00054">AgentClient.cpp:54</a></div></div>
+<div class="ttc" id="classConnectionManager_html_a38f4c092a52fd80c19d613fafad832b9"><div class="ttname"><a href="classConnectionManager.html#a38f4c092a52fd80c19d613fafad832b9">ConnectionManager::getInstance</a></div><div class="ttdeci">static ConnectionManager * getInstance(unsigned short listenPort=55555)</div><div class="ttdef"><b>Definition:</b> <a href="ConnectionManager_8cpp_source.html#l00060">ConnectionManager.cpp:60</a></div></div>
+<div class="ttc" id="classAgentClient_html_a0309e41988778487b9765edc2d42753f"><div class="ttname"><a href="classAgentClient.html#a0309e41988778487b9765edc2d42753f">AgentClient::working</a></div><div class="ttdeci">bool working</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8hpp_source.html#l00033">AgentClient.hpp:33</a></div></div>
+<div class="ttc" id="namespacemessage_html"><div class="ttname"><a href="namespacemessage.html">message</a></div><div class="ttdef"><b>Definition:</b> <a href="application_2protocol_2Message_8hpp_source.html#l00032">application/protocol/Message.hpp:32</a></div></div>
+<div class="ttc" id="classAgentClient_html_aa8af04642a8d7b0a8a2724eb9986df4b"><div class="ttname"><a href="classAgentClient.html#aa8af04642a8d7b0a8a2724eb9986df4b">AgentClient::shutDown</a></div><div class="ttdeci">bool shutDown</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8hpp_source.html#l00036">AgentClient.hpp:36</a></div></div>
+<div class="ttc" id="classConnectionManager_html_a906971dce9efb1c3e6c895c892ca43cd"><div class="ttname"><a href="classConnectionManager.html#a906971dce9efb1c3e6c895c892ca43cd">ConnectionManager::connectionGuards</a></div><div class="ttdeci">std::map&lt; Ipv4, std::mutex &gt; connectionGuards</div><div class="ttdef"><b>Definition:</b> <a href="ConnectionManager_8hpp_source.html#l00085">ConnectionManager.hpp:85</a></div></div>
+<div class="ttc" id="classAgentClient_html"><div class="ttname"><a href="classAgentClient.html">AgentClient</a></div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8hpp_source.html#l00010">AgentClient.hpp:10</a></div></div>
+<div class="ttc" id="classAgentClient_html_ae9de60772e28af821c5866a0ff12f804"><div class="ttname"><a href="classAgentClient.html#ae9de60772e28af821c5866a0ff12f804">AgentClient::serverIP</a></div><div class="ttdeci">Ip * serverIP</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8hpp_source.html#l00027">AgentClient.hpp:27</a></div></div>
+<div class="ttc" id="classmessage_1_1Message_html"><div class="ttname"><a href="classmessage_1_1Message.html">message::Message</a></div><div class="ttdef"><b>Definition:</b> <a href="application_2protocol_2Message_8hpp_source.html#l00035">application/protocol/Message.hpp:35</a></div></div>
+<div class="ttc" id="classAgentClient_html_a7417cb37d33a126f01e92e07795a9f22"><div class="ttname"><a href="classAgentClient.html#a7417cb37d33a126f01e92e07795a9f22">AgentClient::send</a></div><div class="ttdeci">void send(message::Message *msg)</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8cpp_source.html#l00045">AgentClient.cpp:45</a></div></div>
+<div class="ttc" id="classAgentClient_html_a52438f020977fee32396a51147439063"><div class="ttname"><a href="classAgentClient.html#a52438f020977fee32396a51147439063">AgentClient::connectionManager</a></div><div class="ttdeci">ConnectionManager * connectionManager</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8hpp_source.html#l00024">AgentClient.hpp:24</a></div></div>
+<div class="ttc" id="classIp_html"><div class="ttname"><a href="classIp.html">Ip</a></div><div class="ttdoc">Abstrakcyjna klasa bazowa dla klas opakuwujÄ…cych IPv4 i IPv6. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8hpp_source.html#l00023">Ip.hpp:23</a></div></div>
+<div class="ttc" id="classAgentClient_html_a7fbebe8ebd0774f9e4280213389ec025"><div class="ttname"><a href="classAgentClient.html#a7fbebe8ebd0774f9e4280213389ec025">AgentClient::AgentClient</a></div><div class="ttdeci">AgentClient(Ip &amp;ip)</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8cpp_source.html#l00020">AgentClient.cpp:20</a></div></div>
 <div class="ttc" id="classAgentClient_html_af82fc2e72f38fb7075d0667a18f4e8ba"><div class="ttname"><a href="classAgentClient.html#af82fc2e72f38fb7075d0667a18f4e8ba">AgentClient::AgentClient</a></div><div class="ttdeci">AgentClient()</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8cpp_source.html#l00009">AgentClient.cpp:9</a></div></div>
-<div class="ttc" id="classAgentClient_html_ac21b3f2dcaf97cb9e5317193dfc91aeb"><div class="ttname"><a href="classAgentClient.html#ac21b3f2dcaf97cb9e5317193dfc91aeb">AgentClient::connected</a></div><div class="ttdeci">bool connected</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8hpp_source.html#l00023">AgentClient.hpp:23</a></div></div>
-<div class="ttc" id="classAgentClient_html_a7809668c0636c9b8e3f00fde43d23c0d"><div class="ttname"><a href="classAgentClient.html#a7809668c0636c9b8e3f00fde43d23c0d">AgentClient::isConnected</a></div><div class="ttdeci">bool isConnected()</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8cpp_source.html#l00031">AgentClient.cpp:31</a></div></div>
-<div class="ttc" id="classAgentClient_html_af0e975638976932e9ab31c654843717e"><div class="ttname"><a href="classAgentClient.html#af0e975638976932e9ab31c654843717e">AgentClient::start</a></div><div class="ttdeci">void start()</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8cpp_source.html#l00015">AgentClient.cpp:15</a></div></div>
-<div class="ttc" id="classAgentClient_html_aa1f2e65a8c67cc6cf6d9b7d65d662812"><div class="ttname"><a href="classAgentClient.html#aa1f2e65a8c67cc6cf6d9b7d65d662812">AgentClient::listen</a></div><div class="ttdeci">void listen()</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8cpp_source.html#l00022">AgentClient.cpp:22</a></div></div>
+<div class="ttc" id="classAgentClient_html_ac21b3f2dcaf97cb9e5317193dfc91aeb"><div class="ttname"><a href="classAgentClient.html#ac21b3f2dcaf97cb9e5317193dfc91aeb">AgentClient::connected</a></div><div class="ttdeci">bool connected</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8hpp_source.html#l00030">AgentClient.hpp:30</a></div></div>
+<div class="ttc" id="classAgentClient_html_a7809668c0636c9b8e3f00fde43d23c0d"><div class="ttname"><a href="classAgentClient.html#a7809668c0636c9b8e3f00fde43d23c0d">AgentClient::isConnected</a></div><div class="ttdeci">bool isConnected()</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8cpp_source.html#l00050">AgentClient.cpp:50</a></div></div>
+<div class="ttc" id="classAgentClient_html_af0e975638976932e9ab31c654843717e"><div class="ttname"><a href="classAgentClient.html#af0e975638976932e9ab31c654843717e">AgentClient::start</a></div><div class="ttdeci">void start()</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8cpp_source.html#l00029">AgentClient.cpp:29</a></div></div>
+<div class="ttc" id="classAgentClient_html_aa1f2e65a8c67cc6cf6d9b7d65d662812"><div class="ttname"><a href="classAgentClient.html#aa1f2e65a8c67cc6cf6d9b7d65d662812">AgentClient::listen</a></div><div class="ttdeci">void listen()</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8cpp_source.html#l00038">AgentClient.cpp:38</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_6d76cf45829c3b3bce8b59b13f5eef91.html">agent</a></li><li class="navelem"><a class="el" href="AgentClient_8cpp.html">AgentClient.cpp</a></li>
-    <li class="footer">Wygenerowano Wt, 29 gru 2015 20:50:20 dla LOTC programem
+    <li class="footer">Wygenerowano Pn, 4 sty 2016 21:19:53 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -8,8 +8,10 @@ var searchData=
   ['add_5ftask',['ADD_TASK',['../Event_8hpp.html#a2628ea8d12e8b2563c32f05dc7fff6faa9bacc3399955d3ab88fce5d8fa06faf6',1,'Event.hpp']]],
   ['addagentstrategy',['AddAgentStrategy',['../classAddAgentStrategy.html',1,'AddAgentStrategy'],['../classController.html#a7b60a1ac92fa8023a6b5588523d1559a',1,'Controller::AddAgentStrategy()']]],
   ['address',['address',['../classIpv4.html#a3b23c000faa4dd3f1101709ce48b3139',1,'Ipv4']]],
+  ['addresses',['addresses',['../classmessage_1_1hostMessage.html#a87a2d8566ae21be5431f9e42fb8efbb8',1,'message::hostMessage']]],
   ['addressnumbers',['addressNumbers',['../classIpv6.html#ab382a20b835bda75cf3f14ade110a963',1,'Ipv6']]],
-  ['addslave',['addSlave',['../classAgentServer.html#a57d551fc559b7800a697a84e2a8e4cf7',1,'AgentServer']]],
+  ['addrstr',['addrStr',['../classIpv4.html#a9cf6a8826fef842e0bf65e56468bba23',1,'Ipv4']]],
+  ['addslave',['addSlave',['../classAgentServer.html#a3b5b09bd050d9addf0f20d6bb1b008fb',1,'AgentServer']]],
   ['addtask',['addTask',['../classAgentServer.html#ae7b89b5da7cd9e7a1aa21093be7ed2e5',1,'AgentServer::addTask()'],['../classModel.html#a160b44b67ed3c952b28bbea0582463f2',1,'Model::addTask()']]],
   ['addtaskstrategy',['AddTaskStrategy',['../classAddTaskStrategy.html',1,'AddTaskStrategy'],['../classController.html#a270677775098cdc4b8837965b1cd2b88',1,'Controller::AddTaskStrategy()']]],
   ['adminip',['adminIP',['../classAdminServer.html#a7d89296fe6c6bdcfcc77b457eff1373c',1,'AdminServer']]],
@@ -20,7 +22,7 @@ var searchData=
   ['adminserver_2ehpp',['AdminServer.hpp',['../AdminServer_8hpp.html',1,'']]],
   ['adminserverexception',['AdminServerException',['../structAdminServerException.html',1,'AdminServerException'],['../structAdminServerException.html#a240bc86f99ea847d1b0ad27da9b4a587',1,'AdminServerException::AdminServerException()']]],
   ['agent_2ecpp',['Agent.cpp',['../Agent_8cpp.html',1,'']]],
-  ['agentclient',['AgentClient',['../classAgentClient.html',1,'AgentClient'],['../classAgentClient.html#af82fc2e72f38fb7075d0667a18f4e8ba',1,'AgentClient::AgentClient()']]],
+  ['agentclient',['AgentClient',['../classAgentClient.html',1,'AgentClient'],['../classAgentClient.html#af82fc2e72f38fb7075d0667a18f4e8ba',1,'AgentClient::AgentClient()'],['../classAgentClient.html#a7fbebe8ebd0774f9e4280213389ec025',1,'AgentClient::AgentClient(Ip &amp;ip)']]],
   ['agentclient_2ecpp',['AgentClient.cpp',['../AgentClient_8cpp.html',1,'']]],
   ['agentclient_2ehpp',['AgentClient.hpp',['../AgentClient_8hpp.html',1,'']]],
   ['agentserver',['AgentServer',['../classAgentServer.html',1,'AgentServer'],['../classController.html#a42c2a5b45f23919302f600b4b4fb274b',1,'Controller::agentServer()'],['../classAgentServer.html#ae00b5d7d78d9786b11a396246710a621',1,'AgentServer::AgentServer()']]],
@@ -39,6 +41,6 @@ var searchData=
   ['message_2ecpp',['Message.cpp',['../application_2protocol_2Message_8cpp.html',1,'']]],
   ['message_2ehpp',['Message.hpp',['../application_2protocol_2Message_8hpp.html',1,'']]],
   ['readme_2emd',['readme.md',['../application_2protocol_2readme_8md.html',1,'']]],
-  ['server_2ecpp',['server.cpp',['../application_2server_2server_8cpp.html',1,'']]],
-  ['server_2ecpp',['server.cpp',['../application_2protocol_2server_8cpp.html',1,'']]]
+  ['server_2ecpp',['server.cpp',['../application_2protocol_2server_8cpp.html',1,'']]],
+  ['server_2ecpp',['server.cpp',['../application_2server_2server_8cpp.html',1,'']]]
 ];

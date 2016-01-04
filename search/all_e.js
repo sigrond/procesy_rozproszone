@@ -9,14 +9,15 @@ var searchData=
   ['pingadmin',['pingAdmin',['../classModel.html#a0ff8ce83743a023063d79cc7bcd1c0d3',1,'Model']]],
   ['pingadminstrategy',['PingAdminStrategy',['../classPingAdminStrategy.html',1,'PingAdminStrategy'],['../classController.html#a7c992b2f181be0a5de5f59dde02cd123',1,'Controller::PingAdminStrategy()']]],
   ['pingmessage',['pingMessage',['../classmessage_1_1pingMessage.html',1,'message']]],
-  ['pingmessage',['pingMessage',['../classmessage_1_1pingMessage.html#a64422605fdf518316e1aae5344bc984e',1,'message::pingMessage']]],
+  ['pingmessage',['pingMessage',['../classmessage_1_1pingMessage.html#a64422605fdf518316e1aae5344bc984e',1,'message::pingMessage::pingMessage(State state)'],['../classmessage_1_1pingMessage.html#afaff4398fa7ecb13f8e8f612d41b49f2',1,'message::pingMessage::pingMessage(char *buffer, unsigned long bufferSize)']]],
   ['pingslaves',['pingSlaves',['../classModel.html#a826190f531cd61ae141c48313a85ad91',1,'Model']]],
   ['pingslavesstrategy',['PingSlavesStrategy',['../classPingSlavesStrategy.html',1,'PingSlavesStrategy'],['../classController.html#ac74637f499f3dbdc9fe1f17f752f7e2b',1,'Controller::PingSlavesStrategy()']]],
   ['pop_5ffront',['pop_front',['../classBlockingQueue.html#a33e18f760365430cee38721dfd0abf5e',1,'BlockingQueue']]],
-  ['port',['PORT',['../Socket_8hpp.html#a732dec0ff237041537a9b46a40de8a59',1,'PORT():&#160;Socket.hpp'],['../wireshark_2test_01protocol_2application_2client_8cpp.html#a11717c934f77ad5167dac5d28562d85a',1,'PORT():&#160;client.cpp'],['../wireshark_2test_01protocol_2application_2server_8cpp.html#a11717c934f77ad5167dac5d28562d85a',1,'PORT():&#160;server.cpp']]],
+  ['port',['port',['../classSocket.html#a07e25fed1979f1aa9cb257aa756a2946',1,'Socket::port()'],['../Socket_8hpp.html#a732dec0ff237041537a9b46a40de8a59',1,'PORT():&#160;Socket.hpp'],['../wireshark_2test_01protocol_2application_2client_8cpp.html#a11717c934f77ad5167dac5d28562d85a',1,'PORT():&#160;client.cpp'],['../wireshark_2test_01protocol_2application_2server_8cpp.html#a11717c934f77ad5167dac5d28562d85a',1,'PORT():&#160;server.cpp']]],
+  ['priority',['priority',['../classmessage_1_1taskMessage.html#a282892890d97cb33eb04edf835b011b0',1,'message::taskMessage']]],
   ['projekt_20wstępny_2etex',['Projekt Wstępny.tex',['../Projekt_01Wst_xC4_x99pny_8tex.html',1,'']]],
   ['push_5fback',['push_back',['../classBlockingQueue.html#aba9a92a9e6a732cd720c609d7e706c47',1,'BlockingQueue']]],
-  ['pushaddagent',['pushAddAgent',['../classModel.html#a290de9af6cb1f25c6ec6c4c2be77606f',1,'Model']]],
+  ['pushaddagent',['pushAddAgent',['../classModel.html#a5526490fe1b79ee4a479649f7f7c7edb',1,'Model']]],
   ['pushfn',['pushFn',['../BlockingQueueTests_8cpp.html#a78695f41d420d63810400efadf86af03',1,'BlockingQueueTests.cpp']]],
   ['pushtestevents',['pushTestEvents',['../classModel.html#ac9ee04aadbcefc4957321d5f0ad60c5e',1,'Model']]]
 ];

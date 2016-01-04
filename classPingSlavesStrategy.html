@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="312348-low-orbit-ion-cannon.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">LOTC
    &#160;<span id="projectnumber">https://github.com/sigrond/procesy_rozproszone</span>
@@ -132,9 +133,9 @@ Diagram współpracy dla PingSlavesStrategy:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr class="memitem:a17fef6127463ce8a0850c390c3c82fe4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPingSlavesStrategy.html#a17fef6127463ce8a0850c390c3c82fe4">doJob</a> (void *data) override</td></tr>
-<tr class="memdesc:a17fef6127463ce8a0850c390c3c82fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">obsługa pingowania agenta  <a href="#a17fef6127463ce8a0850c390c3c82fe4">Więcej...</a><br/></td></tr>
-<tr class="separator:a17fef6127463ce8a0850c390c3c82fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a240a8762db352ccc823fa020979e5460"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPingSlavesStrategy.html#a240a8762db352ccc823fa020979e5460">doJob</a> (void *data, void *who=nullptr) override</td></tr>
+<tr class="memdesc:a240a8762db352ccc823fa020979e5460"><td class="mdescLeft">&#160;</td><td class="mdescRight">obsługa pingowania agenta  <a href="#a240a8762db352ccc823fa020979e5460">Więcej...</a><br/></td></tr>
+<tr class="separator:a240a8762db352ccc823fa020979e5460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStrategy"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStrategy')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="classStrategy.html">Strategy</a></td></tr>
 <tr class="memitem:a2021a15bbc4f0d13f7b92f8933db2235 inherit pub_methods_classStrategy"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStrategy.html#a2021a15bbc4f0d13f7b92f8933db2235">Strategy</a> ()</td></tr>
 <tr class="separator:a2021a15bbc4f0d13f7b92f8933db2235 inherit pub_methods_classStrategy"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,9 +150,9 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock">
-<p>Definicja w linii <a class="el" href="Strategies_8hpp_source.html#l00278">278</a> pliku <a class="el" href="Strategies_8hpp_source.html">Strategies.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Strategies_8hpp_source.html#l00323">323</a> pliku <a class="el" href="Strategies_8hpp_source.html">Strategies.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
-<a class="anchor" id="a17fef6127463ce8a0850c390c3c82fe4"></a>
+<a class="anchor" id="a240a8762db352ccc823fa020979e5460"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -162,8 +163,18 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
           <td class="memname">virtual void PingSlavesStrategy::doJob </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>who</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -182,17 +193,17 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Zwraca</dt><dd>virtual void </dd></dl>
 
-<p>Implementuje <a class="el" href="classStrategy.html#ac620d54307f0355d930c6150259ae27a">Strategy</a>.</p>
+<p>Implementuje <a class="el" href="classStrategy.html#a7359fe130f1fc156213e006fbb2b994c">Strategy</a>.</p>
 
-<p>Definicja w linii <a class="el" href="Strategies_8hpp_source.html#l00288">288</a> pliku <a class="el" href="Strategies_8hpp_source.html">Strategies.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Strategies_8hpp_source.html#l00333">333</a> pliku <a class="el" href="Strategies_8hpp_source.html">Strategies.hpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Controller_8hpp_source.html#l00049">Controller::agentServer</a>, <a class="el" href="Strategy_8hpp_source.html#l00017">Strategy::controller</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00199">message::pingMessage::pingMessage()</a>, <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063ace4e1a7286ff585e08bf30898cf6b3eb">message::REQ</a>, <a class="el" href="AgentServer_8cpp_source.html#l00262">AgentServer::sendToAll()</a> i <a class="el" href="Controller_8hpp_source.html#l00052">Controller::strategyMap</a>.</p>
+<p>Odwołuje się do <a class="el" href="Controller_8hpp_source.html#l00049">Controller::agentServer</a>, <a class="el" href="Strategy_8hpp_source.html#l00017">Strategy::controller</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00283">message::pingMessage::pingMessage()</a>, <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063ace4e1a7286ff585e08bf30898cf6b3eb">message::REQ</a>, <a class="el" href="AgentServer_8cpp_source.html#l00278">AgentServer::sendToAll()</a> i <a class="el" href="Controller_8hpp_source.html#l00052">Controller::strategyMap</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
-<div class="center"><img src="classPingSlavesStrategy_a17fef6127463ce8a0850c390c3c82fe4_cgraph.png" border="0" usemap="#classPingSlavesStrategy_a17fef6127463ce8a0850c390c3c82fe4_cgraph" alt=""/></div>
-<map name="classPingSlavesStrategy_a17fef6127463ce8a0850c390c3c82fe4_cgraph" id="classPingSlavesStrategy_a17fef6127463ce8a0850c390c3c82fe4_cgraph">
+<div class="center"><img src="classPingSlavesStrategy_a240a8762db352ccc823fa020979e5460_cgraph.png" border="0" usemap="#classPingSlavesStrategy_a240a8762db352ccc823fa020979e5460_cgraph" alt=""/></div>
+<map name="classPingSlavesStrategy_a240a8762db352ccc823fa020979e5460_cgraph" id="classPingSlavesStrategy_a240a8762db352ccc823fa020979e5460_cgraph">
 <area shape="rect" id="node2" href="classmessage_1_1pingMessage.html#a64422605fdf518316e1aae5344bc984e" title="message::pingMessage\l::pingMessage" alt="" coords="188,5,348,47"/><area shape="rect" id="node4" href="classAgentServer.html#a962a98aa505eb47f0adc3e59c66cd461" title="AgentServer::sendToAll" alt="" coords="189,71,347,98"/><area shape="rect" id="node3" href="classmessage_1_1Message.html#a40eed0cc59f5cf5844dff8d1f300b01d" title="message::Message::Message" alt="" coords="396,13,593,39"/></map>
 </div>
 </p>
@@ -208,7 +219,7 @@ Oto graf wywołań dla tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classPingSlavesStrategy.html">PingSlavesStrategy</a></li>
-    <li class="footer">Wygenerowano Wt, 29 gru 2015 20:50:38 dla LOTC programem
+    <li class="footer">Wygenerowano Pn, 4 sty 2016 21:19:57 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

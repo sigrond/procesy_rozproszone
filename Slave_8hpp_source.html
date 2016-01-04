@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="312348-low-orbit-ion-cannon.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">LOTC
    &#160;<span id="projectnumber">https://github.com/sigrond/procesy_rozproszone</span>
@@ -135,7 +136,7 @@ $(document).ready(function(){initNavTree('Slave_8hpp_source.html','');});
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classSlave.html#a83df23c64373eafc486aab85a162dd4c">   25</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classSlave.html#a83df23c64373eafc486aab85a162dd4c">listening</a>;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">/** Default constructor */</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classSlave.html#a4a5fa6347b8a8504212fb9647fc5d21e">Slave</a>(<a class="code" href="classIp.html">Ip</a> &amp;ip);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classSlave.html#ac78fa9b0728d92c5d8060ecb827197b8">Slave</a>(<a class="code" href="classIp.html">Ip</a> *ip);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">/** Default destructor */</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        ~<a class="code" href="classSlave.html#a99d0908d38f846fae1e7417acf78796b">Slave</a>();</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="comment">/** Te setery i geterry zostały tu umieszczone automatycznie.</span></div>
@@ -182,7 +183,6 @@ $(document).ready(function(){initNavTree('Slave_8hpp_source.html','');});
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
 <div class="ttc" id="classSlave_html_aab6e876c5a47bbe247a2f825aad81e8f"><div class="ttname"><a href="classSlave.html#aab6e876c5a47bbe247a2f825aad81e8f">Slave::slaveThread</a></div><div class="ttdeci">std::thread * slaveThread</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8hpp_source.html#l00069">Slave.hpp:69</a></div></div>
 <div class="ttc" id="classSlave_html_a94f84a326af17b5fbe5ec4f42e6ca189"><div class="ttname"><a href="classSlave.html#a94f84a326af17b5fbe5ec4f42e6ca189">Slave::setLastContact</a></div><div class="ttdeci">void setLastContact(time_t val)</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8hpp_source.html#l00049">Slave.hpp:49</a></div></div>
-<div class="ttc" id="classSlave_html_a4a5fa6347b8a8504212fb9647fc5d21e"><div class="ttname"><a href="classSlave.html#a4a5fa6347b8a8504212fb9647fc5d21e">Slave::Slave</a></div><div class="ttdeci">Slave(Ip &amp;ip)</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8cpp_source.html#l00009">Slave.cpp:9</a></div></div>
 <div class="ttc" id="classSlave_html_a27056b83637658ce11e6db3d97d7d703"><div class="ttname"><a href="classSlave.html#a27056b83637658ce11e6db3d97d7d703">Slave::setLastContact</a></div><div class="ttdeci">time_t setLastContact()</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8hpp_source.html#l00045">Slave.hpp:45</a></div></div>
 <div class="ttc" id="classSlave_html_a4c5de67567bbc7859765e6a2e9b9cf38"><div class="ttname"><a href="classSlave.html#a4c5de67567bbc7859765e6a2e9b9cf38">Slave::removed</a></div><div class="ttdeci">bool removed</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8hpp_source.html#l00024">Slave.hpp:24</a></div></div>
 <div class="ttc" id="classConnectionManager_html_a906971dce9efb1c3e6c895c892ca43cd"><div class="ttname"><a href="classConnectionManager.html#a906971dce9efb1c3e6c895c892ca43cd">ConnectionManager::connectionGuards</a></div><div class="ttdeci">std::map&lt; Ipv4, std::mutex &gt; connectionGuards</div><div class="ttdef"><b>Definition:</b> <a href="ConnectionManager_8hpp_source.html#l00085">ConnectionManager.hpp:85</a></div></div>
@@ -199,6 +199,7 @@ $(document).ready(function(){initNavTree('Slave_8hpp_source.html','');});
 <div class="ttc" id="classSlave_html_a19d385860a1b9743db1374e0cdf2e9f2"><div class="ttname"><a href="classSlave.html#a19d385860a1b9743db1374e0cdf2e9f2">Slave::slaveIP</a></div><div class="ttdeci">Ip * slaveIP</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8hpp_source.html#l00019">Slave.hpp:19</a></div></div>
 <div class="ttc" id="classSlave_html_a99d0908d38f846fae1e7417acf78796b"><div class="ttname"><a href="classSlave.html#a99d0908d38f846fae1e7417acf78796b">Slave::~Slave</a></div><div class="ttdeci">~Slave()</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8cpp_source.html#l00023">Slave.cpp:23</a></div></div>
 <div class="ttc" id="classSlave_html_ac80dabc88a0b32745527fc3d5c5f76c8"><div class="ttname"><a href="classSlave.html#ac80dabc88a0b32745527fc3d5c5f76c8">Slave::setTask</a></div><div class="ttdeci">void setTask(Task *val)</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8hpp_source.html#l00065">Slave.hpp:65</a></div></div>
+<div class="ttc" id="classSlave_html_ac78fa9b0728d92c5d8060ecb827197b8"><div class="ttname"><a href="classSlave.html#ac78fa9b0728d92c5d8060ecb827197b8">Slave::Slave</a></div><div class="ttdeci">Slave(Ip *ip)</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8cpp_source.html#l00009">Slave.cpp:9</a></div></div>
 <div class="ttc" id="classSlave_html_ab482a5086b54df697818928f942e1d8b"><div class="ttname"><a href="classSlave.html#ab482a5086b54df697818928f942e1d8b">Slave::setListening</a></div><div class="ttdeci">void setListening(bool)</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8cpp_source.html#l00031">Slave.cpp:31</a></div></div>
 <div class="ttc" id="classSlave_html"><div class="ttname"><a href="classSlave.html">Slave</a></div><div class="ttdoc">Klasa odpowiedzialna za przechowywanie informacji o agencie. </div><div class="ttdef"><b>Definition:</b> <a href="Slave_8hpp_source.html#l00016">Slave.hpp:16</a></div></div>
 <div class="ttc" id="classSlave_html_aaa43497446e919ca73c564541af806bf"><div class="ttname"><a href="classSlave.html#aaa43497446e919ca73c564541af806bf">Slave::getState</a></div><div class="ttdeci">int getState()</div><div class="ttdef"><b>Definition:</b> <a href="Slave_8hpp_source.html#l00053">Slave.hpp:53</a></div></div>
@@ -212,7 +213,7 @@ $(document).ready(function(){initNavTree('Slave_8hpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_342e7b6bc6a1e66453dad3633c4afb75.html">server</a></li><li class="navelem"><a class="el" href="Slave_8hpp.html">Slave.hpp</a></li>
-    <li class="footer">Wygenerowano Wt, 29 gru 2015 20:50:20 dla LOTC programem
+    <li class="footer">Wygenerowano Pn, 4 sty 2016 21:19:53 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

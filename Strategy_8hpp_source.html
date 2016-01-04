@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="312348-low-orbit-ion-cannon.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">LOTC
    &#160;<span id="projectnumber">https://github.com/sigrond/procesy_rozproszone</span>
@@ -138,11 +139,11 @@ $(document).ready(function(){initNavTree('Strategy_8hpp_source.html','');});
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                #endif <span class="comment">// _DEBUG</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        };</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">/**&lt; w sumie mozna było użyć operator(), było by to chyba bardziej intuicyjne */</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classStrategy.html#ac620d54307f0355d930c6150259ae27a">doJob</a>(<span class="keywordtype">void</span>* data) = 0;<span class="comment">/**&lt; sposób realizacji danej strategii */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classStrategy.html#a7359fe130f1fc156213e006fbb2b994c">doJob</a>(<span class="keywordtype">void</span>* data, <span class="keywordtype">void</span>* who=<span class="keywordtype">nullptr</span>) = 0;<span class="comment">/**&lt; sposób realizacji danej strategii */</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
 <div class="ttc" id="classStrategy_html"><div class="ttname"><a href="classStrategy.html">Strategy</a></div><div class="ttdoc">Wirtualna klasa strategii obsługi zdarzenia. Klasę należy zkonkretyzować dziedzicząc po niej np...</div><div class="ttdef"><b>Definition:</b> <a href="Strategy_8hpp_source.html#l00014">Strategy.hpp:14</a></div></div>
-<div class="ttc" id="classStrategy_html_ac620d54307f0355d930c6150259ae27a"><div class="ttname"><a href="classStrategy.html#ac620d54307f0355d930c6150259ae27a">Strategy::doJob</a></div><div class="ttdeci">virtual void doJob(void *data)=0</div></div>
 <div class="ttc" id="classStrategy_html_a2021a15bbc4f0d13f7b92f8933db2235"><div class="ttname"><a href="classStrategy.html#a2021a15bbc4f0d13f7b92f8933db2235">Strategy::Strategy</a></div><div class="ttdeci">Strategy()</div><div class="ttdef"><b>Definition:</b> <a href="Strategy_8hpp_source.html#l00018">Strategy.hpp:18</a></div></div>
+<div class="ttc" id="classStrategy_html_a7359fe130f1fc156213e006fbb2b994c"><div class="ttname"><a href="classStrategy.html#a7359fe130f1fc156213e006fbb2b994c">Strategy::doJob</a></div><div class="ttdeci">virtual void doJob(void *data, void *who=nullptr)=0</div></div>
 <div class="ttc" id="classStrategy_html_aa21b85fd8c90091840c6c51899693d2f"><div class="ttname"><a href="classStrategy.html#aa21b85fd8c90091840c6c51899693d2f">Strategy::controller</a></div><div class="ttdeci">void * controller</div><div class="ttdef"><b>Definition:</b> <a href="Strategy_8hpp_source.html#l00017">Strategy.hpp:17</a></div></div>
 <div class="ttc" id="classStrategy_html_a2870e41ac77f36da35e5bc1e0b3de31f"><div class="ttname"><a href="classStrategy.html#a2870e41ac77f36da35e5bc1e0b3de31f">Strategy::Strategy</a></div><div class="ttdeci">Strategy(void *c)</div><div class="ttdef"><b>Definition:</b> <a href="Strategy_8hpp_source.html#l00024">Strategy.hpp:24</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -151,7 +152,7 @@ $(document).ready(function(){initNavTree('Strategy_8hpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_342e7b6bc6a1e66453dad3633c4afb75.html">server</a></li><li class="navelem"><a class="el" href="Strategy_8hpp.html">Strategy.hpp</a></li>
-    <li class="footer">Wygenerowano Wt, 29 gru 2015 20:50:21 dla LOTC programem
+    <li class="footer">Wygenerowano Pn, 4 sty 2016 21:19:53 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="312348-low-orbit-ion-cannon.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">LOTC
    &#160;<span id="projectnumber">https://github.com/sigrond/procesy_rozproszone</span>
@@ -132,9 +133,9 @@ Diagram współpracy dla AddTaskStrategy:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr class="memitem:ac8320476463dfa87e7f1c8c679984361"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAddTaskStrategy.html#ac8320476463dfa87e7f1c8c679984361">doJob</a> (void *data) override</td></tr>
-<tr class="memdesc:ac8320476463dfa87e7f1c8c679984361"><td class="mdescLeft">&#160;</td><td class="mdescRight">obsługa dodania zadania  <a href="#ac8320476463dfa87e7f1c8c679984361">Więcej...</a><br/></td></tr>
-<tr class="separator:ac8320476463dfa87e7f1c8c679984361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afefd4ecb2ca0afbfe8358e9319ea20a5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAddTaskStrategy.html#afefd4ecb2ca0afbfe8358e9319ea20a5">doJob</a> (void *data, void *who=nullptr) override</td></tr>
+<tr class="memdesc:afefd4ecb2ca0afbfe8358e9319ea20a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">obsługa dodania zadania  <a href="#afefd4ecb2ca0afbfe8358e9319ea20a5">Więcej...</a><br/></td></tr>
+<tr class="separator:afefd4ecb2ca0afbfe8358e9319ea20a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStrategy"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStrategy')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="classStrategy.html">Strategy</a></td></tr>
 <tr class="memitem:a2021a15bbc4f0d13f7b92f8933db2235 inherit pub_methods_classStrategy"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStrategy.html#a2021a15bbc4f0d13f7b92f8933db2235">Strategy</a> ()</td></tr>
 <tr class="separator:a2021a15bbc4f0d13f7b92f8933db2235 inherit pub_methods_classStrategy"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,9 +151,9 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Do zrobienia:</a></b></dt><dd>Napisać więcej strategii, jak już będzie wiadomo co mają robić </dd></dl>
 
-<p>Definicja w linii <a class="el" href="Strategies_8hpp_source.html#l00298">298</a> pliku <a class="el" href="Strategies_8hpp_source.html">Strategies.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Strategies_8hpp_source.html#l00343">343</a> pliku <a class="el" href="Strategies_8hpp_source.html">Strategies.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
-<a class="anchor" id="ac8320476463dfa87e7f1c8c679984361"></a>
+<a class="anchor" id="afefd4ecb2ca0afbfe8358e9319ea20a5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -163,8 +164,18 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
           <td class="memname">virtual void AddTaskStrategy::doJob </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>who</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -183,17 +194,17 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Zwraca</dt><dd>virtual void </dd></dl>
 
-<p>Implementuje <a class="el" href="classStrategy.html#ac620d54307f0355d930c6150259ae27a">Strategy</a>.</p>
+<p>Implementuje <a class="el" href="classStrategy.html#a7359fe130f1fc156213e006fbb2b994c">Strategy</a>.</p>
 
-<p>Definicja w linii <a class="el" href="Strategies_8hpp_source.html#l00308">308</a> pliku <a class="el" href="Strategies_8hpp_source.html">Strategies.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Strategies_8hpp_source.html#l00353">353</a> pliku <a class="el" href="Strategies_8hpp_source.html">Strategies.hpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="AgentServer_8cpp_source.html#l00272">AgentServer::addTask()</a>, <a class="el" href="Controller_8hpp_source.html#l00049">Controller::agentServer</a>, <a class="el" href="Strategy_8hpp_source.html#l00017">Strategy::controller</a> i <a class="el" href="Controller_8hpp_source.html#l00052">Controller::strategyMap</a>.</p>
+<p>Odwołuje się do <a class="el" href="AgentServer_8cpp_source.html#l00288">AgentServer::addTask()</a>, <a class="el" href="Controller_8hpp_source.html#l00049">Controller::agentServer</a>, <a class="el" href="Strategy_8hpp_source.html#l00017">Strategy::controller</a> i <a class="el" href="Controller_8hpp_source.html#l00052">Controller::strategyMap</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
-<div class="center"><img src="classAddTaskStrategy_ac8320476463dfa87e7f1c8c679984361_cgraph.png" border="0" usemap="#classAddTaskStrategy_ac8320476463dfa87e7f1c8c679984361_cgraph" alt=""/></div>
-<map name="classAddTaskStrategy_ac8320476463dfa87e7f1c8c679984361_cgraph" id="classAddTaskStrategy_ac8320476463dfa87e7f1c8c679984361_cgraph">
+<div class="center"><img src="classAddTaskStrategy_afefd4ecb2ca0afbfe8358e9319ea20a5_cgraph.png" border="0" usemap="#classAddTaskStrategy_afefd4ecb2ca0afbfe8358e9319ea20a5_cgraph" alt=""/></div>
+<map name="classAddTaskStrategy_afefd4ecb2ca0afbfe8358e9319ea20a5_cgraph" id="classAddTaskStrategy_afefd4ecb2ca0afbfe8358e9319ea20a5_cgraph">
 <area shape="rect" id="node2" href="classAgentServer.html#ae7b89b5da7cd9e7a1aa21093be7ed2e5" title="AgentServer::addTask" alt="" coords="217,5,367,32"/></map>
 </div>
 </p>
@@ -209,7 +220,7 @@ Oto graf wywołań dla tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classAddTaskStrategy.html">AddTaskStrategy</a></li>
-    <li class="footer">Wygenerowano Wt, 29 gru 2015 20:50:30 dla LOTC programem
+    <li class="footer">Wygenerowano Pn, 4 sty 2016 21:19:56 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

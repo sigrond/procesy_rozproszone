@@ -1,6 +1,6 @@
 var classSlave =
 [
-    [ "Slave", "classSlave.html#a4a5fa6347b8a8504212fb9647fc5d21e", null ],
+    [ "Slave", "classSlave.html#ac78fa9b0728d92c5d8060ecb827197b8", null ],
     [ "~Slave", "classSlave.html#a99d0908d38f846fae1e7417acf78796b", null ],
     [ "getListening", "classSlave.html#a3b8e69286869a8536d592c781d7605eb", null ],
     [ "getSlaveIP", "classSlave.html#a70be968ad67b89b3998bf73bd93e19f7", null ],

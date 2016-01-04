@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="312348-low-orbit-ion-cannon.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">LOTC
    &#160;<span id="projectnumber">https://github.com/sigrond/procesy_rozproszone</span>
@@ -113,24 +114,36 @@ $(document).ready(function(){initNavTree('classmessage_1_1fileMessage.html','');
 
 <p>To jest kompletna lista składowych dla <a class="el" href="classmessage_1_1fileMessage.html">message::fileMessage</a>, uwzględniająca wszystkie dziedziczone składowe.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html#ab6356bb840386791e881a48ac2cfe1ff">fileMessage</a>(State state, bool isMainFile, unsigned long taskId, std::string filename, const std::ifstream &amp;file)</td><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html">message::fileMessage</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html#afa5104e19ac382222b0bb7231c13699d">fileMessage</a>(State state)</td><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html">message::fileMessage</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classmessage_1_1Message.html#a215855b0a3796c7ed9fd042b448afe63">getCategory</a>() const </td><td class="entry"><a class="el" href="classmessage_1_1Message.html">message::Message</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classmessage_1_1Message.html#ae4dc034eaa8566016e8d20bb0411756f">getCode</a>() const </td><td class="entry"><a class="el" href="classmessage_1_1Message.html">message::Message</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html#a9b5009f08bea6f69d53d8a726775dd11">getFile</a>()</td><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html">message::fileMessage</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html#af404c312b19ca984a2e46709fc883a4a">getFilename</a>()</td><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html">message::fileMessage</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html#aebe5501dc0bb2688bf784eb8dbe3ec54">getIsMainFile</a>()</td><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html">message::fileMessage</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classmessage_1_1Message.html#af1312b3bd5b5074c1781188375878991">getState</a>() const </td><td class="entry"><a class="el" href="classmessage_1_1Message.html">message::Message</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classmessage_1_1Message.html#a3aaaba96ea3393e7a351fefbd4517f67">getSubcategory</a>() const </td><td class="entry"><a class="el" href="classmessage_1_1Message.html">message::Message</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html#a5149271fa6be7e855fb688172714291b">getTaskId</a>()</td><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html">message::fileMessage</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmessage_1_1Message.html#a257b3e7ea0db35f75a6e2a808ad69553">buffer</a></td><td class="entry"><a class="el" href="classmessage_1_1Message.html">message::Message</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classmessage_1_1Message.html#ad110f50cec278cf92a45856351ee1f10">bufferSize</a></td><td class="entry"><a class="el" href="classmessage_1_1Message.html">message::Message</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmessage_1_1Message.html#a51f92c4860172d5cf1f3284a472dc98e">checkMessage</a>() const </td><td class="entry"><a class="el" href="classmessage_1_1Message.html">message::Message</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classmessage_1_1Message.html#a8b778994013f2c28c4cdbaddb5ffb628">code</a></td><td class="entry"><a class="el" href="classmessage_1_1Message.html">message::Message</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html#a682514956474377ee57e9b4d33330f58">file</a></td><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html">message::fileMessage</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html#ad9ae953c8a29a3bc2543fca6289d1f2a">fileMessage</a>(State state, bool isMainFile, unsigned long taskId, std::string filename)</td><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html">message::fileMessage</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html#afa5104e19ac382222b0bb7231c13699d">fileMessage</a>(State state)</td><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html">message::fileMessage</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classmessage_1_1Message.html#a0c1b1b5cee06ee3b5396f7b8037b0805">getBuffer</a>() const </td><td class="entry"><a class="el" href="classmessage_1_1Message.html">message::Message</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmessage_1_1Message.html#aec368ada6258d54639f00eeb6c601eb1">getBufferSize</a>() const </td><td class="entry"><a class="el" href="classmessage_1_1Message.html">message::Message</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classmessage_1_1Message.html#a215855b0a3796c7ed9fd042b448afe63">getCategory</a>() const </td><td class="entry"><a class="el" href="classmessage_1_1Message.html">message::Message</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmessage_1_1Message.html#ae4dc034eaa8566016e8d20bb0411756f">getCode</a>() const </td><td class="entry"><a class="el" href="classmessage_1_1Message.html">message::Message</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html#ad141965ac5447647cf19d026f284ee71">getFile</a>()</td><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html">message::fileMessage</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html#af404c312b19ca984a2e46709fc883a4a">getFilename</a>()</td><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html">message::fileMessage</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html#aebe5501dc0bb2688bf784eb8dbe3ec54">getIsMainFile</a>()</td><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html">message::fileMessage</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmessage_1_1Message.html#af1312b3bd5b5074c1781188375878991">getState</a>() const </td><td class="entry"><a class="el" href="classmessage_1_1Message.html">message::Message</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classmessage_1_1Message.html#a3aaaba96ea3393e7a351fefbd4517f67">getSubcategory</a>() const </td><td class="entry"><a class="el" href="classmessage_1_1Message.html">message::Message</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html#a5149271fa6be7e855fb688172714291b">getTaskId</a>()</td><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html">message::fileMessage</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html#ae56576486b99b6057e68ec24db80c22d">isMainFile</a></td><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html">message::fileMessage</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classmessage_1_1Message.html#a40eed0cc59f5cf5844dff8d1f300b01d">Message</a>(Category category)</td><td class="entry"><a class="el" href="classmessage_1_1Message.html">message::Message</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classmessage_1_1Message.html#a5b97532d722a5d538d1d23339952bc6d">Message</a>(Category category, unsigned long bufferSize)</td><td class="entry"><a class="el" href="classmessage_1_1Message.html">message::Message</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html#a78a614002bcc06f164a026e97c880089">name</a></td><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html">message::fileMessage</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html#a73ca3a7f6fd7bbe247e206b6c665b303">state</a></td><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html">message::fileMessage</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html#a4103789c3bffab22f66ce5223aab1f0f">taskId</a></td><td class="entry"><a class="el" href="classmessage_1_1fileMessage.html">message::fileMessage</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="classmessage_1_1Message.html#a3f7275462831f787a861271687bcad67">~Message</a>()</td><td class="entry"><a class="el" href="classmessage_1_1Message.html">message::Message</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Wygenerowano Wt, 29 gru 2015 20:50:41 dla LOTC programem
+    <li class="footer">Wygenerowano Pn, 4 sty 2016 21:19:58 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

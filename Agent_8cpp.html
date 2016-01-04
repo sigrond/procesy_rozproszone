@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="312348-low-orbit-ion-cannon.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">LOTC
    &#160;<span id="projectnumber">https://github.com/sigrond/procesy_rozproszone</span>
@@ -111,9 +112,10 @@ $(document).ready(function(){initNavTree('Agent_8cpp.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Plik g丑wny dla agenta.  
+<p>Plik g艂贸wny dla agenta.  
 <a href="#details">Wi臋cej...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="AgentClient_8hpp_source.html">AgentClient.hpp</a>&quot;</code><br/>
+<code>#include &lt;thread&gt;</code><br/>
 <code>#include &lt;iostream&gt;</code><br/>
 <code>#include &lt;string&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
@@ -121,7 +123,7 @@ Wykres zale偶no艣ci za艂膮czania dla Agent.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="Agent_8cpp__incl.png" border="0" usemap="#Agent_8cpp" alt=""/></div>
 <map name="Agent_8cpp" id="Agent_8cpp">
-<area shape="rect" id="node2" href="AgentClient_8hpp.html" title="Plik nag丑wkowy klienta dla agenta. " alt="" coords="5,80,120,107"/></map>
+<area shape="rect" id="node2" href="AgentClient_8hpp.html" title="Plik nag艂贸wkowy klienta dla agenta. " alt="" coords="769,80,884,107"/><area shape="rect" id="node3" href="ConnectionManager_8hpp.html" title="../protocol/ConnectionManager.hpp" alt="" coords="456,155,680,181"/><area shape="rect" id="node7" href="application_2protocol_2Message_8hpp.html" title="Message.hpp" alt="" coords="314,304,414,331"/><area shape="rect" id="node12" href="Ip_8hpp.html" title="Ip.hpp" alt="" coords="423,379,481,405"/><area shape="rect" id="node17" href="Connection_8hpp.html" title="Connection.hpp" alt="" coords="377,229,489,256"/><area shape="rect" id="node18" href="Socket_8hpp.html" title="Socket.hpp" alt="" coords="636,304,724,331"/><area shape="rect" id="node11" href="MessageCodes_8hpp.html" title="MessageCodes.hpp" alt="" coords="181,379,318,405"/><area shape="rect" id="node23" href="SocketException_8hpp.html" title="SocketException.hpp" alt="" coords="1027,379,1173,405"/></map>
 </div>
 </div>
 <p><a href="Agent_8cpp_source.html">Id藕 do kodu 藕r贸d艂owego tego pliku.</a></p>
@@ -132,8 +134,8 @@ Funkcje</h2></td></tr>
 <tr class="separator:af78beb4a0d33807a778c4dd88e28f164"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczeg贸艂owy</h2>
-<div class="textblock"><p>Plik g丑wny dla agenta. </p>
-<dl class="section author"><dt>Autor</dt><dd>Eryk Raty駍ki </dd></dl>
+<div class="textblock"><p>Plik g艂贸wny dla agenta. </p>
+<dl class="section author"><dt>Autor</dt><dd>Eryk Raty艅ski </dd></dl>
 
 <p>Definicja w pliku <a class="el" href="Agent_8cpp_source.html">Agent.cpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja funkcji</h2>
@@ -160,17 +162,18 @@ Funkcje</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>dokonczyc pobranie adresu </p>
 
-<p>Definicja w linii <a class="el" href="Agent_8cpp_source.html#l00014">14</a> pliku <a class="el" href="Agent_8cpp_source.html">Agent.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Agent_8cpp_source.html#l00015">15</a> pliku <a class="el" href="Agent_8cpp_source.html">Agent.cpp</a>.</p>
 
-<p>Odwo艂uje si臋 do <a class="el" href="AgentClient_8cpp_source.html#l00009">AgentClient::AgentClient()</a>.</p>
+<p>Odwo艂uje si臋 do <a class="el" href="AgentClient_8cpp_source.html#l00020">AgentClient::AgentClient()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywo艂a艅 dla tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="Agent_8cpp_af78beb4a0d33807a778c4dd88e28f164_cgraph.png" border="0" usemap="#Agent_8cpp_af78beb4a0d33807a778c4dd88e28f164_cgraph" alt=""/></div>
 <map name="Agent_8cpp_af78beb4a0d33807a778c4dd88e28f164_cgraph" id="Agent_8cpp_af78beb4a0d33807a778c4dd88e28f164_cgraph">
-<area shape="rect" id="node2" href="classAgentClient.html#af82fc2e72f38fb7075d0667a18f4e8ba" title="AgentClient::AgentClient" alt="" coords="104,5,268,32"/></map>
+<area shape="rect" id="node2" href="classAgentClient.html#a7fbebe8ebd0774f9e4280213389ec025" title="AgentClient::AgentClient" alt="" coords="104,31,268,57"/><area shape="rect" id="node3" href="classConnectionManager.html#a38f4c092a52fd80c19d613fafad832b9" title="ConnectionManager::\lgetInstance" alt="" coords="316,23,461,65"/><area shape="rect" id="node4" href="classConnectionManager.html#acddf7b9dd1fa9319ffba80b4ecf2e5e5" title="ConnectionManager::\lConnectionManager" alt="" coords="509,23,655,65"/><area shape="rect" id="node5" href="classSocket.html#abda54549284a0626998e833bfead9f11" title="Socket::bind" alt="" coords="707,5,801,32"/><area shape="rect" id="node6" href="classSocket.html#a34374a7d9ae416f8593bea924ab2099b" title="Socket::listen" alt="" coords="703,56,805,83"/><area shape="rect" id="node7" href="classListenSockEx.html#a50566d24bd66b5d44d14fcff13b602c3" title="ListenSockEx::ListenSockEx" alt="" coords="853,56,1045,83"/></map>
 </div>
 </p>
 
@@ -182,7 +185,7 @@ Oto graf wywo艂a艅 dla tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_6d76cf45829c3b3bce8b59b13f5eef91.html">agent</a></li><li class="navelem"><a class="el" href="Agent_8cpp.html">Agent.cpp</a></li>
-    <li class="footer">Wygenerowano Wt, 29 gru 2015 20:50:23 dla LOTC programem
+    <li class="footer">Wygenerowano Pn, 4 sty 2016 21:19:55 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

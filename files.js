@@ -38,10 +38,6 @@ var files =
     [ "ConsoleClient.hpp", "ConsoleClient_8hpp.html", [
       [ "ConsoleClient", "classConsoleClient.html", "classConsoleClient" ]
     ] ],
-    [ "ConsoleServer.cpp", "ConsoleServer_8cpp.html", "ConsoleServer_8cpp" ],
-    [ "ConsoleServer.hpp", "ConsoleServer_8hpp.html", [
-      [ "ConsoleServer", "classConsoleServer.html", "classConsoleServer" ]
-    ] ],
     [ "Controller.cpp", "Controller_8cpp.html", [
       [ "ControllerException", "structControllerException.html", "structControllerException" ]
     ] ],

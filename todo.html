@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="312348-low-orbit-ion-cannon.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">LOTC
    &#160;<span id="projectnumber">https://github.com/sigrond/procesy_rozproszone</span>
@@ -125,12 +126,12 @@ $(document).ready(function(){initNavTree('todo.html','');});
 <dd>uruchomić adminServer i agentServer, timery w modelu i inne  </dd>
 <dt><a class="anchor" id="_todo000001"></a>Plik <a class="el" href="Ip_8cpp.html">Ip.cpp</a>  </dt>
 <dd>IPv6 </dd>
-<dt><a class="anchor" id="_todo000027"></a>Składowa <a class="el" href="application_2server_2server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164">main</a>  (int argi, char *argv[])</dt>
+<dt><a class="anchor" id="_todo000025"></a>Składowa <a class="el" href="application_2server_2server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164">main</a>  (int argi, char *argv[])</dt>
 <dd><p class="startdd">wymyslić jakieś zgrabne zamknięcie oczekiwania na opcjonalne polecenia, albo zrezygnować z takiej możliwości. </p>
 <p>wstawić jakiś zgrabny przełącznik do kończenia wątka kontrolera </p>
 <p class="enddd">sprawdzanie poprawności adresu  </p>
 </dd>
-<dt><a class="anchor" id="_todo000014"></a>Składowa <a class="el" href="classMessageFromAdminStrategy.html#a2dd7b3ccf27bb7b9f5e10b1e7e4ee096">MessageFromAdminStrategy::doJob</a>  (void *data) override</dt>
+<dt><a class="anchor" id="_todo000014"></a>Składowa <a class="el" href="classMessageFromAdminStrategy.html#ab69bc997a053e137ed35a365c4b467c9">MessageFromAdminStrategy::doJob</a>  (void *data, void *who=nullptr) override</dt>
 <dd><p class="startdd">obsługa kategorii </p>
 <p>sprawdzanie stanu agentów </p>
 <p>znaleźć plik i dodać do zadań </p>
@@ -138,16 +139,14 @@ $(document).ready(function(){initNavTree('todo.html','');});
 <p>za mało wiadomości o niekompletnej klasie fileMessage </p>
 <p class="enddd">trzeba ustalić co dokładnie może zrobić administrator  </p>
 </dd>
-<dt><a class="anchor" id="_todo000020"></a>Składowa <a class="el" href="classMessageFromAgentStrategy.html#a0819348e6119a2360845ebb1d71c6b09">MessageFromAgentStrategy::doJob</a>  (void *data) override</dt>
+<dt><a class="anchor" id="_todo000020"></a>Składowa <a class="el" href="classMessageFromAgentStrategy.html#a6243e9b9b092ec637b60d0777cad2951">MessageFromAgentStrategy::doJob</a>  (void *data, void *who=nullptr) override</dt>
 <dd><p class="startdd">obsługa kategorii </p>
 <p>wysłać task run </p>
 <p>yyy, nic nie robić? </p>
-<p>chyba odesłać do administratora </p>
 <p>włąściwie to całą tą wiadomość można wysłać adminowi i tylko zaznaczyć, zadanie jako wykonane </p>
-<p>odesłać status zakończenia do admina </p>
-<p class="enddd">odesłać wiadomość do admina  </p>
+<p class="enddd">odesłać status zakończenia do admina  </p>
 </dd>
-<dt><a class="anchor" id="_todo000030"></a>Składowa <a class="el" href="classTask.html#a1f50dd92e8aaa93f77df95c6b6ab3849">Task::Task</a>  (std::string s)</dt>
+<dt><a class="anchor" id="_todo000028"></a>Składowa <a class="el" href="classTask.html#a1f50dd92e8aaa93f77df95c6b6ab3849">Task::Task</a>  (std::string s)</dt>
 <dd>jakoś sparsować czas, jeśli bedzie podany po nazwie </dd>
 </dl>
 </div></div><!-- contents -->
@@ -155,7 +154,7 @@ $(document).ready(function(){initNavTree('todo.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Wygenerowano Wt, 29 gru 2015 20:50:29 dla LOTC programem
+    <li class="footer">Wygenerowano Pn, 4 sty 2016 21:19:56 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
