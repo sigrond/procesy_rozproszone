@@ -218,7 +218,9 @@ synMessage::synMessage ( State state ) : Message::Message( Category::SYN )
 
 }
 
-pingMessage::pingMessage ( State state ) : Message::Message( Category::PING )
+pingMessage::pingMessage ( State s ) :
+	Message::Message( Category::PING ),
+	state(s)
 {
 
 }

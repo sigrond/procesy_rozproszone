@@ -159,6 +159,8 @@ namespace message
         {
         public:
                 pingMessage ( State state );
+		private:
+			State state;
         };
 
         class errMessage : public Message
