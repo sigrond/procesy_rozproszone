@@ -101,7 +101,7 @@ namespace message
         class fileMessage : public Message
         {
         public:
-                fileMessage ( State state, bool isMainFile, unsigned long taskId, std::string filename, const std::ifstream & file );
+                fileMessage ( State state, bool isMainFile, unsigned long taskId, std::string filename );
 
                 fileMessage ( State state );
 
@@ -115,6 +115,7 @@ namespace message
 		private:
 			std::fstream file;
 			std::string name;
+			unsigned long taskId;
         };
 
         class retMessage : public Message

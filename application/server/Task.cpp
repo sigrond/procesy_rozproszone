@@ -24,7 +24,7 @@ Task::Task(string s) : Task()
 	/**< \todo jakoś sparsować czas, jeśli bedzie podany po nazwie */
 	name=s;
 	when=chrono::steady_clock::now();
-	file.open(name.c_str(), std::ifstream::in);
+	//file.open(name.c_str(), std::fstream::in);
 }
 
 Task::~Task()

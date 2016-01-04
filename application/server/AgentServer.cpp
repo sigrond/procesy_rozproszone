@@ -352,7 +352,7 @@ void AgentServer::distributeTasks()
 				}
 				slaves->at(i)->setTask(*it);
 				(*it)->underExecution=true;
-				message::Message* m=new message::fileMessage(message::State::REQ,true,(*it)->taskID,(*it)->name,(*it)->file);
+				message::Message* m=new message::fileMessage(message::State::REQ,true,(*it)->taskID,(*it)->name);
 				connect(slaves->at(i),m);
 				message::Message* m2=new message::taskMessage(message::TaskSub::T_ADD,message::State::REQ,true,1,(*it)->taskID,(*it)->when);
 				connect(slaves->at(i),m2);

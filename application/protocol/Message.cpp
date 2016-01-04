@@ -124,11 +124,11 @@ std::vector<unsigned long> & depMessage::getTasks()
 
 fileMessage::fileMessage(State state,
 						bool isMainFile,
-						unsigned long taskId,
-						std::string filename,
-						const std::ifstream & file ) : Message::Message( Category::FILE )
+						unsigned long tId,
+						std::string filename ) : Message::Message( Category::FILE )
 {
-
+	taskId=tId;
+	name=filename;
 }
 
 fileMessage::fileMessage ( State state ) : Message::Message( Category::FILE )
@@ -143,7 +143,7 @@ bool fileMessage::getIsMainFile()
 
 unsigned long fileMessage::getTaskId()
 {
-	return 0;
+	return taskId;
 }
 
 std::string fileMessage::getFilename()

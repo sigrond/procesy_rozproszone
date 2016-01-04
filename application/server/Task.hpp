@@ -27,7 +27,7 @@ public:
 	bool underExecution;/**< zadanie w trakcie wykonywania, lub zlecone agentowi */
 	unsigned long taskID;
 	static unsigned long taskCounter;
-	std::ifstream file;
+	std::fstream file;
 protected:
 private:
 };
