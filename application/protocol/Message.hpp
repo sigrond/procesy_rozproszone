@@ -84,6 +84,13 @@ namespace message
                 unsigned long getTaskId() const;
 
                 std::chrono::steady_clock::time_point & getTimestamp() const;
+		private:
+			TaskSub taskSub;
+			State state;
+			bool respectPriority;
+			unsigned short priority;
+			unsigned long taskId;
+			std::chrono::steady_clock::time_point time;
         };
 
         class depMessage : public Message

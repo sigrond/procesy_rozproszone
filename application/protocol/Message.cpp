@@ -66,11 +66,18 @@ std::vector<Ip> & hostMessage::getAddresses() const
 }
 
 taskMessage::taskMessage( TaskSub sub,
-						State state,
-						bool respectPriority,
+						State s,
+						bool rPriority,
 						unsigned short priority,
-						unsigned long taskId,
-						const std::chrono::steady_clock::time_point & timestamp ) : Message::Message( Category::TASK )
+						unsigned long tId,
+						const std::chrono::steady_clock::time_point & timestamp ) :
+							 Message::Message( Category::TASK ),
+							 taskSub(sub),
+							 state(s),
+							 respectPriority(rPriority),
+							 taskId(tId),
+							 time(timestamp)
+
 {
 
 }
