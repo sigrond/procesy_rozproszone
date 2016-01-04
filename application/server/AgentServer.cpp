@@ -294,7 +294,10 @@ void AgentServer::addTask(Task* task)
     cout<<"AgentServer::addTask(Task* task)"<<endl;
     #endif // _DEBUG
     unique_lock<mutex> waitForTaskMutexLock(waitForTaskMutex);
-    tasks.insert(task);
+    if(tasks.find(task)==tasks.end())
+    {
+    	tasks.insert(task);
+    }
     waitForTaskMutexLock.unlock();
     waitForTaskCondition.notify_one();
     #ifdef _DEBUG
@@ -355,15 +358,22 @@ void AgentServer::distributeTasks()
 				}
 				slaves->at(i)->setTask(*it);
 				(*it)->underExecution=true;
+				//plik zawsze wysyłamy, jeśli tylko się pojawi
 				if((*it)->name.size()>0)
 				{
 					message::Message* m=new message::fileMessage(message::State::REQ,true,(*it)->taskID,(*it)->name);
 					connect(slaves->at(i),m);
 				}
-				message::Message* m2=new message::taskMessage(message::TaskSub::T_ADD,message::State::REQ,true,1,(*it)->taskID,(*it)->when);
-				connect(slaves->at(i),m2);
-				message::Message* m3=new message::taskMessage(message::TaskSub::T_RUN,message::State::REQ,true,1,(*it)->taskID,(*it)->when);
-				connect(slaves->at(i),m2);
+				if((*it)->taskState==TaskState::TASK_ADDED)
+				{
+					message::Message* m2=new message::taskMessage(message::TaskSub::T_ADD,message::State::REQ,true,1,(*it)->taskID,(*it)->when);
+					connect(slaves->at(i),m2);
+				}
+				if((*it)->taskState==TaskState::RUN)
+				{
+					message::Message* m3=new message::taskMessage(message::TaskSub::T_RUN,message::State::REQ,true,1,(*it)->taskID,(*it)->when);
+					connect(slaves->at(i),m3);
+				}
 				it++;
 
 			}

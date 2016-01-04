@@ -119,6 +119,11 @@ void Model::triggerShutDown()
 void Model::addTask(string s)
 {
 	Task* task=new Task(s);
+	task->taskState=TaskState::FILE_ADDED;
+	blockingQueue->push_back(new Event(ADD_TASK,task));
+	task->taskState=TaskState::TASK_ADDED;
+	blockingQueue->push_back(new Event(ADD_TASK,task));
+	task->taskState=TaskState::RUN;
 	blockingQueue->push_back(new Event(ADD_TASK,task));
 }
 
