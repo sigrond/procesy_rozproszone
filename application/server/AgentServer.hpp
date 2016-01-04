@@ -33,6 +33,11 @@ public:
     void sendToAll(message::Message* m);
     void addTask(Task* task);
     void setTaskFinished(unsigned long taskID);
+    /** \brief Zwraca wskaźnik do zadania z listy zadań o szukanym ID.
+     * \param taskID unsigned long
+     * \return Task* Jeśli nie znajdzie takiego zadania, to zwraca nullptr.
+     */
+    Task* getTaskByID(unsigned long taskID);
 private:
     BlockingQueue<Event*>* blockingQueue;
     std::vector<Slave*>* slaves;

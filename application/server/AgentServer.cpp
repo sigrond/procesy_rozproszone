@@ -355,9 +355,14 @@ void AgentServer::distributeTasks()
 				}
 				slaves->at(i)->setTask(*it);
 				(*it)->underExecution=true;
-				message::Message* m=new message::fileMessage(message::State::REQ,true,(*it)->taskID,(*it)->name);
-				connect(slaves->at(i),m);
+				if((*it)->name.size()>0)
+				{
+					message::Message* m=new message::fileMessage(message::State::REQ,true,(*it)->taskID,(*it)->name);
+					connect(slaves->at(i),m);
+				}
 				message::Message* m2=new message::taskMessage(message::TaskSub::T_ADD,message::State::REQ,true,1,(*it)->taskID,(*it)->when);
+				connect(slaves->at(i),m2);
+				message::Message* m3=new message::taskMessage(message::TaskSub::T_RUN,message::State::REQ,true,1,(*it)->taskID,(*it)->when);
 				connect(slaves->at(i),m2);
 				it++;
 
@@ -410,7 +415,19 @@ void AgentServer::setTaskFinished(unsigned long taskID)
     waitForTaskCondition.notify_one();//przydzielić następne zadania
 }
 
-
+Task* AgentServer::getTaskByID(unsigned long taskID)
+{
+	std::multiset<Task*,cmp>::iterator it;
+	for(it=tasks.begin();!tasks.empty() && it!=tasks.end();it++)
+	{
+		if((*it)->taskID==taskID)
+		{
+			return (*it);
+			break;
+		}
+	}
+	return nullptr;
+}
 
 
 
