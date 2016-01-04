@@ -69,7 +69,7 @@ void Model::pushTestEvents()
 	blockingQueue->push_back(new Event(SHUT_DOWN,controller));
 }
 
-void Model::pushAddAgent(Ipv4* ip)
+void Model::pushAddAgent(Ipv4* ip, unsigned short port)
 {
 	if(blockingQueue==nullptr)
 	{

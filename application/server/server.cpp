@@ -14,6 +14,7 @@
 #include <iostream>
 #include <string>
 #include <exception>
+#include <cstdlib>
 
 using namespace std;
 
@@ -65,10 +66,24 @@ int main(int argi, char* argv[])
 				{
 					ss=s.substr(10);
 					cout<<ss<<endl;
-					Ipv4* ip=new Ipv4(ss);/**< dalej opiekunem tego adresu zostaje slave i nikt inny nie powinnien wywołać destruktora */
-					/**< \todo sprawdzanie poprawności adresu */
-					cout<<"Dodawanie agenta: "<<ip->getAddress()<<endl;
-					model->pushAddAgent(ip);
+					unsigned int j=ss.find(" ");
+					if(j!=string::npos)
+					{
+						string iP=ss.substr(0,j);
+						Ipv4* ip=new Ipv4(iP);
+						string port=ss.substr(j);
+						cout<<"Dodawanie agenta: "<<ip->getAddress()<<endl;
+						int portt=strtol(port.c_str(),nullptr,10);
+						cout<<"port agenta: "<<portt<<endl;
+						model->pushAddAgent(ip,portt);
+					}
+					else
+					{
+						Ipv4* ip=new Ipv4(ss);/**< dalej opiekunem tego adresu zostaje slave i nikt inny nie powinnien wywołać destruktora */
+						/**< \todo sprawdzanie poprawności adresu */
+						cout<<"Dodawanie agenta: "<<ip->getAddress()<<endl;
+						model->pushAddAgent(ip);
+					}
 					continue;
 				}
 				i=s.find("task");

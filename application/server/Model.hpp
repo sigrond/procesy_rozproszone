@@ -23,7 +23,7 @@ public:
     void setBlockingQueue(BlockingQueue<Event*>*);
     void pushTestEvents();
     void setController(void* c);
-    void pushAddAgent(Ipv4* ip);
+    void pushAddAgent(Ipv4* ip, unsigned short port=55555);
     void pingAdmin();/**< pingowanie okresowo i na ewentualne żądanie */
     void pingSlaves();
     void triggerShutDown();
