@@ -5,8 +5,12 @@ using namespace message;
 #include <thread>
 #include <iostream>
 
-void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
-{	 
+#include "debug.h"
+
+void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port )
+{
+	DBG(port)	
+
 	Message * msg1 = nullptr;
 
         Message * msg2 = new synMessage( State::REQ );

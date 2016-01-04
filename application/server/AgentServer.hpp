@@ -26,13 +26,18 @@ public:
     void listen(Slave* who);/**< metoda nasłuchująca na połączenie z agentów. może być zrealizowana przez fork-server */
     void connect(Slave* who, message::Message* m);/**< metoda łącząca się z agentem */
     void setBlockingQueue(BlockingQueue<Event*>*);
-    void addSlave(Ip* ip);
+    void addSlave(Ip* ip, unsigned short portNo=55555);
     void listenToAll();
     void start();
     void triggerShutDown();
     void sendToAll(message::Message* m);
     void addTask(Task* task);
     void setTaskFinished(unsigned long taskID);
+    /** \brief Zwraca wskaźnik do zadania z listy zadań o szukanym ID.
+     * \param taskID unsigned long
+     * \return Task* Jeśli nie znajdzie takiego zadania, to zwraca nullptr.
+     */
+    Task* getTaskByID(unsigned long taskID);
 private:
     BlockingQueue<Event*>* blockingQueue;
     std::vector<Slave*>* slaves;

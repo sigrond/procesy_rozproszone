@@ -30,35 +30,35 @@ public:
          * \brief   Zwraca referencję do obiektu ConnectionManager. Jesli taki nie istnieje, tworzy go.
          * \return  Referencja do obiektu ConnectionManager
          */
-        static ConnectionManager * getInstance( unsigned short listenPort );
+        static ConnectionManager * getInstance( unsigned short listenPort = 55555 );
 
         /*
          * \brief           Wysyła komunikat msg do hosta o wskazanym adresie IPv4
          * \param[in]  ip   Adres na który ma być wyslana wiadomość
          * \param[in]  msg  Wiadomość do wysłania
          */
-        void send( const Ipv4 & ip, const message::Message & msg, unsigned short port );
+        void send( const Ipv4 & ip, const message::Message & msg, unsigned short port = 55555 );
 
         /*
          * \brief           Wysyła komunikat msg do hosta o wskazanym adresie IPv6
          * \param[in]  ip   Adres na który ma być wyslana wiadomość
          * \param[in]  msg  Wiadomość do wysłania
          */
-        void send( const Ipv6 & ip, const message::Message & msg, unsigned short port );
+        void send( const Ipv6 & ip, const message::Message & msg, unsigned short port = 55555 );
         
         /* 
          * \brief           Czeka na wiadomość od hosta o wskazanym adresie IPv4
          * \param[in]  ip   Adres z którego ma przyjść wiadomość
          * \param[out] msg  Wskaźnik do oczekiwanej wiadomości
          */ 
-        void receive( const Ipv4 & ip, message::Message * const msg );
+        void receive( const Ipv4 & ip, message::Message * const msg, unsigned short port = 55555 );
 
         /* 
          * \brief           Czeka na wiadomość od hosta o wskazanym adresie IPv6
          * \param[in]  ip   Adres z którego ma przyjść wiadomość
          * \param[out] msg  Wskaźnik do oczekiwanej wiadomości
          */ 
-        void receive( const Ipv6 & ip, message::Message * const msg );
+        void receive( const Ipv6 & ip, message::Message * const msg, unsigned short port = 55555 );
         
         /*
          * \brief           Usuwa IPv4 z mapy.

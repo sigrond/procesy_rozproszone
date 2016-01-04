@@ -42,7 +42,7 @@ public:
 	{
 		deletedObjects++;
 	}
-	virtual void doJob(void* data) override
+	virtual void doJob(void* data, void* who=nullptr,unsigned short port=0) override
 	{
 		std::clog<<"TestStrategy, ObjectID: "<<ObjectID
 		//		<<", createdObjects: "<<createdObjects
@@ -67,7 +67,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data) override
+	virtual void doJob(void* data, void* who=nullptr,unsigned short port=0) override
 	{
 		std::cout<<"Zamykanie serwera...\n";
 		((Controller*)data)->triggerShutDown();
@@ -86,7 +86,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data) override
+	virtual void doJob(void* data, void* who=nullptr,unsigned short port=0) override
 	{
 		using namespace std;
 		using namespace message;
@@ -99,6 +99,7 @@ public:
 		pingMessage* pm;
 		string name;
 		fstream file;
+		Task* task;
 		category=((Message*)data)->getCategory();
 		switch(category)/**< \todo obsługa kategorii */
 		{
@@ -126,11 +127,28 @@ public:
 			if(subCategory==(unsigned char)TaskSub::T_ADD)
 			{
 				/**< \todo znaleźć plik i dodać do zadań */
+				task=((Controller*)controller)->agentServer->getTaskByID(tm->getTaskId());
+				if(task==nullptr)
+				{
+					task=new Task();
+				}
+				task->taskState=TaskState::TASK_ADDED;
+				task->taskID=tm->getTaskId();/**< sory, ale admin musi podać task ID */
+				task->when=tm->getTimestamp();
+				((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
 			}
 			//uruchomienie zadania
 			else if(subCategory==(unsigned char)TaskSub::T_RUN)
 			{
-
+				task=((Controller*)controller)->agentServer->getTaskByID(tm->getTaskId());
+				if(task==nullptr)
+				{
+					task=new Task();
+				}
+				task->taskState=TaskState::RUN;
+				task->taskID=tm->getTaskId();/**< sory, ale admin musi podać task ID */
+				task->when=tm->getTimestamp();
+				((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
 			}
 			/**< \todo pozostałe podkategorie task */
 			break;
@@ -142,6 +160,15 @@ public:
 			//tutaj raczej nie znamy id zadania, bo dopiero na podstawie tego pliku go utworzymy dodając zadanie
 			name=fm->getFilename();
 			file.open(name.c_str());/**< \todo za mało wiadomości o niekompletnej klasie fileMessage */
+			task=((Controller*)controller)->agentServer->getTaskByID(fm->getTaskId());
+			if(task==nullptr)
+			{
+				task=new Task();
+			}
+			task->taskState=TaskState::FILE_ADDED;
+			task->taskID=fm->getTaskId();/**< sory, ale admin musi podać task ID */
+			//task->when=tm->getTimestamp();
+			((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
 
 			/**< \todo trzeba ustalić co dokładnie może zrobić administrator */
 			break;
@@ -190,7 +217,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data) override
+	virtual void doJob(void* data, void* who=nullptr,unsigned short port=0) override
 	{
 		using namespace std;
 		using namespace message;
@@ -249,11 +276,11 @@ public:
 			pm=(pingMessage*)data;
 			if(pm->getState()==(unsigned char)message::State::REQ)
 			{
-				//((Controller*)controller)->agentServer->connect()
+				((Controller*)controller)->agentServer->connect((Slave*)who,new pingMessage(message::State::ACK));
 			}
 			else if(pm->getState()==(unsigned char)message::State::ACK)
 			{
-				//((Controller*)controller)->adminServer->connect(new pingMessage(message::State::OK));
+				((Controller*)controller)->agentServer->connect((Slave*)who,new pingMessage(message::State::OK));
 			}
 			else if(pm->getState()==(unsigned char)message::State::OK)
 			{
@@ -286,7 +313,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data) override
+	virtual void doJob(void* data, void* who=nullptr,unsigned short port=0) override
 	{
 		using namespace std;
         cout<<"strategia AddAgent..."<<endl;
@@ -294,7 +321,17 @@ public:
         AgentServer* as=((Controller*)controller)->agentServer;
         //Ipv4 ip=*(Ipv4*)((pair<void*,void*>*)data)->first;
         Ipv4* ip=(Ipv4*)data;
-        as->addSlave(ip);
+        if(port==0)
+		{
+			as->addSlave(ip);
+		}
+		else
+		{
+			#ifdef _DEBUG
+			cout<<"AgentServer add Slave strategy port: "<<port<<endl;
+			#endif // _DEBUG
+			as->addSlave(ip,port);
+		}
         //delete (pair<void*,void*>*)data;
 	}
 };
@@ -310,7 +347,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data) override
+	virtual void doJob(void* data, void* who=nullptr,unsigned short port=0) override
 	{
 		using namespace std;
 		using namespace message;
@@ -330,7 +367,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data) override
+	virtual void doJob(void* data, void* who=nullptr,unsigned short port=0) override
 	{
 		using namespace std;
 		using namespace message;
@@ -350,7 +387,7 @@ public:
      * \return virtual void
      *
      */
-	virtual void doJob(void* data) override
+	virtual void doJob(void* data, void* who=nullptr,unsigned short port=0) override
 	{
 		using namespace std;
         cout<<"strategia AddTask..."<<endl;

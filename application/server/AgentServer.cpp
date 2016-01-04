@@ -80,7 +80,10 @@ AgentServer::~AgentServer()
 
 void AgentServer::connect(Slave* who, message::Message* m)
 {
-	connectionManager->send(*static_cast<Ipv4*>(who->getSlaveIP()),*m);/**< \todo dodać jakiś zabezpieczeń bo groźnie to wygląda */
+	#ifdef _DEBUG
+	cout<<"wysyłam do agenta na port: "<<who->port<<endl;
+	#endif // _DEBUG
+	connectionManager->send(*static_cast<Ipv4*>(who->getSlaveIP()),*m,who->port);/**< \todo dodać jakiś zabezpieczeń bo groźnie to wygląda */
 }
 
 void AgentServer::listen(Slave* who)
@@ -99,7 +102,7 @@ void AgentServer::listen(Slave* who)
 		#ifdef _DEBUG
 		cout<<"AgentServer::listen odebrano: "<<m<<endl;
 		#endif // _DEBUG
-		blockingQueue->push_back(new Event(MESSAGE_FROM_AGENT_SERVER,m));
+		blockingQueue->push_back(new Event(MESSAGE_FROM_AGENT_SERVER,m,who));
 		//jeśli przyszło coś od agenta i nie wykonyuje on zadania, to można przydzielić mu zadanie
 		if(who->getTask()==nullptr)
 		{
@@ -120,7 +123,7 @@ void AgentServer::setBlockingQueue(BlockingQueue<Event*>* q)
  * \return void
  *
  */
-void AgentServer::addSlave(Ip* ip)
+void AgentServer::addSlave(Ip* ip, unsigned short portNo)
 {
 	#ifdef _DEBUG
 	cout<<"AgentServer::addSlave(Ip* ip)"<<endl;
@@ -130,7 +133,7 @@ void AgentServer::addSlave(Ip* ip)
 		throw AgentServerException("slaves==nullptr");
 	}
 	slavesMutex.lock();
-	slaves->push_back(new Slave(ip));
+	slaves->push_back(new Slave(ip, portNo));
 	#ifdef _DEBUG
 	cout<<"Dodany agent ip: "<<((Ipv4*)slaves->back()->getSlaveIP())->getAddress()<<endl;
 	#endif // _DEBUG
@@ -291,7 +294,10 @@ void AgentServer::addTask(Task* task)
     cout<<"AgentServer::addTask(Task* task)"<<endl;
     #endif // _DEBUG
     unique_lock<mutex> waitForTaskMutexLock(waitForTaskMutex);
-    tasks.insert(task);
+    if(tasks.find(task)==tasks.end())
+    {
+    	tasks.insert(task);
+    }
     waitForTaskMutexLock.unlock();
     waitForTaskCondition.notify_one();
     #ifdef _DEBUG
@@ -352,10 +358,22 @@ void AgentServer::distributeTasks()
 				}
 				slaves->at(i)->setTask(*it);
 				(*it)->underExecution=true;
-				message::Message* m=new message::fileMessage(message::State::REQ,true,(*it)->taskID,(*it)->name);
-				connect(slaves->at(i),m);
-				message::Message* m2=new message::taskMessage(message::TaskSub::T_ADD,message::State::REQ,true,1,(*it)->taskID,(*it)->when);
-				connect(slaves->at(i),m2);
+				//plik zawsze wysyłamy, jeśli tylko się pojawi
+				if((*it)->name.size()>0)
+				{
+					message::Message* m=new message::fileMessage(message::State::REQ,true,(*it)->taskID,(*it)->name);
+					connect(slaves->at(i),m);
+				}
+				if((*it)->taskState==TaskState::TASK_ADDED)
+				{
+					message::Message* m2=new message::taskMessage(message::TaskSub::T_ADD,message::State::REQ,true,1,(*it)->taskID,(*it)->when);
+					connect(slaves->at(i),m2);
+				}
+				if((*it)->taskState==TaskState::RUN)
+				{
+					message::Message* m3=new message::taskMessage(message::TaskSub::T_RUN,message::State::REQ,true,1,(*it)->taskID,(*it)->when);
+					connect(slaves->at(i),m3);
+				}
 				it++;
 
 			}
@@ -407,7 +425,19 @@ void AgentServer::setTaskFinished(unsigned long taskID)
     waitForTaskCondition.notify_one();//przydzielić następne zadania
 }
 
-
+Task* AgentServer::getTaskByID(unsigned long taskID)
+{
+	std::multiset<Task*,cmp>::iterator it;
+	for(it=tasks.begin();!tasks.empty() && it!=tasks.end();it++)
+	{
+		if((*it)->taskID==taskID)
+		{
+			return (*it);
+			break;
+		}
+	}
+	return nullptr;
+}
 
 
 

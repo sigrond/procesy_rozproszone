@@ -51,7 +51,7 @@ PROJECT_BRIEF          = "Low Orbit Task Cannon"
 # and the maximum width should not exceed 200 pixels. Doxygen will copy the logo
 # to the output directory.
 
-PROJECT_LOGO           = 
+PROJECT_LOGO           = "D:/Moje dokumenty/TIN/procesy_rozproszone/documentation/doxygen/312348-low-orbit-ion-cannon.jpg"
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is

@@ -18,11 +18,11 @@ Task::Task() : done(false), underExecution(false), taskID(taskCounter)
 
 Task::Task(string s) : Task()
 {
+	name=s;
 	#ifdef _DEBUG
 	cout<<"Task::Task(string s) name: "<<name<<endl;
 	#endif // _DEBUG
 	/**< \todo jakoś sparsować czas, jeśli bedzie podany po nazwie */
-	name=s;
 	when=chrono::steady_clock::now();
 	//file.open(name.c_str(), std::fstream::in);
 }

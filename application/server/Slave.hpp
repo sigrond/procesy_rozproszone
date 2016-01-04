@@ -25,7 +25,7 @@ private:
 	bool listening;
 public:
 	/** Default constructor */
-	Slave(Ip *ip);
+	Slave(Ip *ip, unsigned short portNo=55555);
 	/** Default destructor */
 	~Slave();
 	/** Te setery i geterry zostały tu umieszczone automatycznie.
@@ -68,5 +68,6 @@ public:
 	bool getListening();
 	std::thread* slaveThread;
 	bool ready;/**< gotowość na zadanie */
+	unsigned short port;/**< numer portu na którym nasłuchuje agent */
 protected:
 };

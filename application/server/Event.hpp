@@ -28,18 +28,27 @@ enum EventType
 class Event
 {
 public:
-    Event() : type(Test), data(nullptr)
+    Event() : type(Test), data(nullptr), who(nullptr), port(0)
     {
 
     }
-    Event(EventType t) : type(t), data(nullptr)
+    Event(EventType t) : type(t), data(nullptr), who(nullptr), port(0)
     {
 
     }
-    Event(EventType t, void* d) : type(t), data(d)
+    Event(EventType t, void* d) : type(t), data(d), who(nullptr), port(0)
     {
 
     }
+    Event(EventType t, void* d, void* w) : type(t), data(d), who(w), port(0)
+    {
+
+    }
+    Event(EventType t, void* d, unsigned short portNo) : type(t), data(d), who(nullptr), port(portNo)
+    {
+
+    }
+    /**< \todo teoretycznie who i port należało by upchnąć w data, ale zostało za mało czasu, a tak duże zmiany wywołają ogromną ilość nowych błędów */
     ~Event()
     {
 		#ifdef _DEBUG
@@ -48,4 +57,6 @@ public:
     }
     EventType type;/**< typ zdarzenia pozwala wybrać właściwą metodę do jego obsługi */
     void* data;/**< dane niezbednę do zrealizowania metody obsługującej zdarzenie */
+    void* who;/**< dodatkowe opcjonalne pole mówiące od kogo jest Event */
+    unsigned short port;/**< opcjonalny przekazywany numer portu */
 };

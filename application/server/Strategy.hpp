@@ -28,5 +28,5 @@ public:
 		#endif // _DEBUG
 	};
 	/**< w sumie mozna było użyć operator(), było by to chyba bardziej intuicyjne */
-    virtual void doJob(void* data) = 0;/**< sposób realizacji danej strategii */
+    virtual void doJob(void* data, void* who=nullptr,unsigned short port=0) = 0;/**< sposób realizacji danej strategii */
 };

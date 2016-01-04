@@ -69,7 +69,7 @@ void Model::pushTestEvents()
 	blockingQueue->push_back(new Event(SHUT_DOWN,controller));
 }
 
-void Model::pushAddAgent(Ipv4* ip)
+void Model::pushAddAgent(Ipv4* ip, unsigned short port)
 {
 	if(blockingQueue==nullptr)
 	{
@@ -81,7 +81,7 @@ void Model::pushAddAgent(Ipv4* ip)
 	}
 	//pair<void*,void*>* p=nullptr;
 	//p=new pair<void*,void*>((void*)&ip,(void*)controller);
-	blockingQueue->push_back(new Event(ADD_AGENT,(void*)ip));
+	blockingQueue->push_back(new Event(ADD_AGENT,(void*)ip,port));
 }
 
 void Model::pingAdmin()
@@ -119,6 +119,11 @@ void Model::triggerShutDown()
 void Model::addTask(string s)
 {
 	Task* task=new Task(s);
+	task->taskState=TaskState::FILE_ADDED;
+	blockingQueue->push_back(new Event(ADD_TASK,task));
+	task->taskState=TaskState::TASK_ADDED;
+	blockingQueue->push_back(new Event(ADD_TASK,task));
+	task->taskState=TaskState::RUN;
 	blockingQueue->push_back(new Event(ADD_TASK,task));
 }
 

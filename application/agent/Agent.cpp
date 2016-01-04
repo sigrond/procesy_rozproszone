@@ -1,11 +1,12 @@
 /** \file Agent.cpp
- * \author Eryk RatyÒski
- * \brief Plik g≥Ûwny dla agenta
+ * \author Eryk Raty≈Ñski
+ * \brief Plik g≈Ç√≥wny dla agenta
  */
 
 #include "AgentClient.hpp"
+//#include "../protocol/Ip.hpp"
 
-//#include <thread>
+#include <thread>
 #include <iostream>
 #include <string>
 
@@ -13,7 +14,19 @@ using namespace std;
 
 int main(int argi, char* argv[])
 {
-	AgentClient* agentClient = new AgentClient();
+	Ipv4 * serverIP;
+    if(argi == 1)/**dokonczyc pobranie adresu*/
+    {
+
+        serverIP = new Ipv4(string(argv[1]));
+    }
+    else
+    {
+        serverIP = new Ipv4("127.0.0.1");
+    }
+
+
+	AgentClient* agentClient = new AgentClient( *static_cast<Ip*>(serverIP));
 	//thread clientThread(agentClient->start());
 
 	string s;
