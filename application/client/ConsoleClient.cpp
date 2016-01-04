@@ -11,18 +11,22 @@ ConsoleClient::ConsoleClient()
 
 void ConsoleClient::start()
 {
-    /*tymczasowe*/
-    readCommand();
+    while (!connected)
+    {
+        connected = connect();
+    }
+
+    int command = readCommand();
+
 }
 
-int ConsoleClient::connect()
+bool ConsoleClient::connect()
 {
-    /*polaczenie do serwera i wszystko inne, moze cos zwracac*/
+
 }
 
-void ConsoleClient::readCommand()
+int ConsoleClient::readCommand()
 {
-    /*tymczasowe*/
     string s;
     while (getline(cin, s))
     {
@@ -39,12 +43,19 @@ void ConsoleClient::readCommand()
             {
                 s.clear();
                 ss>>s;
+
+                if (s.compare("connect"))
+                {
+                    command = 1;
+                }
+
                 cout<<s;
                 if(s.length()==0)
                     break;
             }
         }
     }
+    return
 }
 
 void ConsoleClient::sendCommand()

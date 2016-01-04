@@ -23,10 +23,10 @@ private:
     bool requestAnswered;
 
     /*ustanawia polaczenie z serwerem*/
-    int connect();
+    bool connect();
 
     /*czyta komendy wpisywane z klawiatury*/
-    void readCommand();
+    int readCommand();
 
     /*wysyla polecenie do serwera i czeka na odpowiedx*/
     void sendCommand();
