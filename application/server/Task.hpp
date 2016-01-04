@@ -10,6 +10,16 @@
 #include <chrono>
 #include <fstream>
 
+namespace TaskState
+{
+	enum TaskState
+	{
+		FILE_ADDED,/**< został dodany plik zadania, ale nie było polecenia dodania zadania */
+		TASK_ADDED,/**< było polecenie dodania zadania */
+		RUN,/**< było polecenie wykonania zadania */
+	};
+}
+
 /** \brief Klasa odpowiadająca za przechowywanie informacji o zadaniu.
  */
 class Task
@@ -28,6 +38,7 @@ public:
 	unsigned long taskID;
 	static unsigned long taskCounter;
 	std::fstream file;
+	TaskState::TaskState taskState;
 protected:
 private:
 };

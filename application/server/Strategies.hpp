@@ -127,7 +127,12 @@ public:
 			if(subCategory==(unsigned char)TaskSub::T_ADD)
 			{
 				/**< \todo znaleźć plik i dodać do zadań */
-				task=new Task();
+				task=((Controller*)controller)->agentServer->getTaskByID(tm->getTaskId());
+				if(task==nullptr)
+				{
+					task=new Task();
+				}
+				task->taskState=TaskState::TASK_ADDED;
 				task->taskID=tm->getTaskId();/**< sory, ale admin musi podać task ID */
 				task->when=tm->getTimestamp();
 				((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
@@ -135,7 +140,15 @@ public:
 			//uruchomienie zadania
 			else if(subCategory==(unsigned char)TaskSub::T_RUN)
 			{
-
+				task=((Controller*)controller)->agentServer->getTaskByID(tm->getTaskId());
+				if(task==nullptr)
+				{
+					task=new Task();
+				}
+				task->taskState=TaskState::RUN;
+				task->taskID=tm->getTaskId();/**< sory, ale admin musi podać task ID */
+				task->when=tm->getTimestamp();
+				((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
 			}
 			/**< \todo pozostałe podkategorie task */
 			break;
@@ -147,6 +160,15 @@ public:
 			//tutaj raczej nie znamy id zadania, bo dopiero na podstawie tego pliku go utworzymy dodając zadanie
 			name=fm->getFilename();
 			file.open(name.c_str());/**< \todo za mało wiadomości o niekompletnej klasie fileMessage */
+			task=((Controller*)controller)->agentServer->getTaskByID(fm->getTaskId());
+			if(task==nullptr)
+			{
+				task=new Task();
+			}
+			task->taskState=TaskState::FILE_ADDED;
+			task->taskID=fm->getTaskId();/**< sory, ale admin musi podać task ID */
+			//task->when=tm->getTimestamp();
+			((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
 
 			/**< \todo trzeba ustalić co dokładnie może zrobić administrator */
 			break;
