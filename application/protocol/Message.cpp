@@ -31,17 +31,17 @@ unsigned char Message::getCode() const
 
 unsigned char Message::getCategory() const
 {
-	return 0;
+	return code&0xE0;
 }
 
 unsigned char Message::getState() const
 {
-	return 0;
+	return code&0x3;
 }
 
 unsigned char Message::getSubcategory() const
 {
-	return 0;
+	return code&0x1C;
 }
 
 hostMessage::hostMessage( HostSub su, State st, const std::vector<Ipv4> & addr ) :

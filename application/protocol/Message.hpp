@@ -6,7 +6,7 @@
  * \version  0.3
  * \date     07.12.2015
  *
- * \author   Andrzej Roguski
+ * \authors   Andrzej Roguski, Tomasz Jakubczyk
  *
  * \todo     wyjątki
  * \todo     komantarze dokumentayjne
