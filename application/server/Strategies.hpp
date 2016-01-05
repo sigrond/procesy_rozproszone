@@ -161,35 +161,60 @@ public:
 		case (int)Category::TASK:
 			//zlecenie wykonania zadania
 			tm=(taskMessage*)data;
-			subCategory=tm->getSubcategory();
-			//dodanie zadania
-			if(subCategory==(unsigned char)TaskSub::T_ADD)
+			state=tm->getState();
+			if(state==(unsigned char)message::State::REQ)
 			{
-				/**< \todo znaleźć plik i dodać do zadań */
-				task=((Controller*)controller)->agentServer->getTaskByID(tm->getTaskId());
-				if(task==nullptr)
+				subCategory=tm->getSubcategory();
+				//dodanie zadania
+				if(subCategory==(unsigned char)TaskSub::T_ADD)
 				{
-					task=new Task();
+					/**< \todo znaleźć plik i dodać do zadań */
+					task=((Controller*)controller)->agentServer->getTaskByID(tm->getTaskId());
+					if(task==nullptr)
+					{
+						task=new Task();
+					}
+					task->taskState=TaskState::TASK_ADDED;
+					task->taskID=tm->getTaskId();/**< sory, ale admin musi podać task ID */
+					task->when=tm->getTimestamp();
+					((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
 				}
-				task->taskState=TaskState::TASK_ADDED;
-				task->taskID=tm->getTaskId();/**< sory, ale admin musi podać task ID */
-				task->when=tm->getTimestamp();
-				((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
+				//uruchomienie zadania
+				else if(subCategory==(unsigned char)TaskSub::T_RUN)
+				{
+					task=((Controller*)controller)->agentServer->getTaskByID(tm->getTaskId());
+					if(task==nullptr)
+					{
+						task=new Task();
+					}
+					task->taskState=TaskState::RUN;
+					task->taskID=tm->getTaskId();/**< sory, ale admin musi podać task ID */
+					task->when=tm->getTimestamp();
+					((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
+				}
+				/**< \todo pozostałe podkategorie task */
+				//odsyłamy potwierdzenie
+				((Controller*)controller)->adminServer->connect(new taskMessage(message::State::ACK));
 			}
-			//uruchomienie zadania
-			else if(subCategory==(unsigned char)TaskSub::T_RUN)
+			else if(state==(unsigned char)message::State::ACK)
 			{
-				task=((Controller*)controller)->agentServer->getTaskByID(tm->getTaskId());
-				if(task==nullptr)
-				{
-					task=new Task();
-				}
-				task->taskState=TaskState::RUN;
-				task->taskID=tm->getTaskId();/**< sory, ale admin musi podać task ID */
-				task->when=tm->getTimestamp();
-				((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
+				#ifdef _DEBUG
+				cout<<"warinig: TASK ACK od admina"<<endl;
+				#endif // _DEBUG
+				((Controller*)controller)->adminServer->connect(new taskMessage(message::State::OK));
 			}
-			/**< \todo pozostałe podkategorie task */
+			else if(state==(unsigned char)message::State::OK)
+			{
+				#ifdef _DEBUG
+				cout<<"poprawnie zakończono wymianę wiadomości HOST z adminem"<<endl;
+				#endif // _DEBUG
+			}
+			else
+			{
+				#ifdef _DEBUG
+				cout<<"przy wymianie wiadomości HOST z adminem ERR, albo gożej"<<endl;
+				#endif // _DEBUG
+			}
 			break;
 		case (int)Category::DEP:
 			break;
