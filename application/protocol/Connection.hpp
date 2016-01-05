@@ -73,5 +73,7 @@ private:
         char counter;
 
         Socket * socket;
+
+	void recDep ( message::Message * & message );
 };
 #endif // CONNECTION_HPP

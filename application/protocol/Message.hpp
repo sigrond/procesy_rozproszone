@@ -109,16 +109,24 @@ namespace message
 			std::chrono::steady_clock::time_point time;
         };
 
+	//------------------------------
+	// depMessage
+	//------------------------------
         class depMessage : public Message
         {
         public:
                 depMessage ( State state, std::vector<unsigned long> & tasks );
+
+		depMessage ( char * buffer, unsigned long bufferSize );
 
                 depMessage ( State state );
 
                 unsigned short getTaskCount();
 
                 std::vector<unsigned long> & getTasks();
+	
+	private:
+		std::vector<unsigned long> tasks;
         };
 
         class fileMessage : public Message

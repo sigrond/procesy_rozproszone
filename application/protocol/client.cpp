@@ -9,8 +9,13 @@ void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
 {	 
 	Message * msg1 = nullptr;
 
-        Message * msg2 = new pingMessage( State::REQ );
-        Message * msg3 = new pingMessage( State::ACK );
+	std::vector<unsigned long> v (3);
+	v[0] = 666;
+	v[1] = 42;
+	v[2] = 88;
+
+        Message * msg2 = new depMessage( State::REQ, v );
+        Message * msg3 = new depMessage( State::ACK );
 
 	cm->send( *ip, *msg2, port + 55555 );
 

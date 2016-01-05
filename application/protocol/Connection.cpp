@@ -78,6 +78,41 @@ void Connection::send ( const message::Message & message )
                 socket->close();
 }
 
+void Connection::recDep ( message::Message * & message )
+{
+	char * buf = new char [ 3 ];
+	memset( buf, 0, sizeof( buf ) );
+	socket->recv( buf, 3 );
+
+	unsigned tasksSize = 0;
+
+	tasksSize += (unsigned)buf[1];
+	tasksSize += (unsigned)buf[2] << 8;
+
+	DBG( "Connection::recDep() taskSize == " << tasksSize )
+
+	delete [] buf;
+
+	char * buffer = new char [tasksSize * 4];
+	memset( buffer, 0, sizeof(buffer) );
+	socket->recv( buffer, tasksSize * 4 );
+	
+	std::vector<unsigned long> tasks (tasksSize, 0);
+
+	for( unsigned i = 0; i < tasksSize; ++i )
+	{
+		tasks[i] += (unsigned long)buffer[ i * 4     ];
+		tasks[i] += (unsigned long)buffer[ i * 4 + 1 ] << 8;
+		tasks[i] += (unsigned long)buffer[ i * 4 + 2 ] << 16;
+		tasks[i] += (unsigned long)buffer[ i * 4 + 3 ] << 24;
+	}
+
+	message = new message::depMessage( message::State::REQ, tasks );
+
+	delete [] buffer;
+
+}
+
 void Connection::receive ( message::Message * & message )
 {
         DBG("Conn::rec()")
@@ -90,32 +125,71 @@ void Connection::receive ( message::Message * & message )
 
 		unsigned long received = socket->recv( code, 1 );
 
-		switch( (message::Category)( (int)code[0] & 0xE0 ) )
+		switch( (message::Category)( (unsigned)code[0] & 0xE0 ) )
 		{
 			case message::Category::HOST:
+				if( (unsigned)code[0] & 0x03 == 0x00 )
+				{
+
+				}
+				else
+					message = new message::hostMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
+
 				break;
 
 			case message::Category::TASK:
+				if( (unsigned)code[0] & 0x03 == 0x00 )
+				{
+
+				}
+				else
+					message = new message::taskMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
+
 				break;
 
 			case message::Category::DEP:
+				if( ((unsigned)code[0] & 0x03) == 0x00 )
+					recDep( message );
+				else
+					message = new message::depMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
 				break;
 
 			case message::Category::FILE:
+				if( (unsigned)code[0] & 0x03 == 0x00 )
+				{
+
+				}
+				else
+					message = new message::fileMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
+
 				break;
 
 			case message::Category::RET:
+				if( (unsigned)code[0] & 0x03 == 0x00 )
+				{
+
+				}
+				else
+					message = new message::depMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
+
 				break;
 
 			case message::Category::SYN:
-				message = new message::synMessage( code, received );
+				message = new message::synMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
 				break;
 
 			case message::Category::PING:
-				message = new message::pingMessage( code, received );
+				message = new message::pingMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
 				break;
 
 			case message::Category::ERR:
+				if( (unsigned)code[0] & 0x03 == 0x00 )
+				{
+
+				}
+				else
+					message = new message::depMessage( code, received );
+
 				break;
 
 			default:

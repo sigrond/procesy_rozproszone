@@ -11,8 +11,8 @@ void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port )
 {
 	Message * msg1 = nullptr;
 
-        Message * msg2 = new pingMessage( State::ACK );
-        Message * msg3 = new pingMessage( State::OK );
+        Message * msg2 = new depMessage( State::ACK );
+        Message * msg3 = new depMessage( State::OK );
 
 
 	cm->receive( *ip, msg1, port + 55555 );
@@ -43,8 +43,6 @@ int main( int argc, char** argv)
                 ConnectionManager * mietek = ConnectionManager::getInstance( 55555 );
 
                 Ipv4 ip = Ipv4("127.0.0.1");
-
-		getchar();
 
 		std::thread * t[agents];
 

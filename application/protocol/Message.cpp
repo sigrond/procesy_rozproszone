@@ -8,6 +8,7 @@
 #include <iostream>
 
 #include "Message.hpp"
+#include "debug.h"
 
 using namespace message;
 using namespace std;
@@ -81,7 +82,7 @@ void Message::print() const
 {
 	if( buffer )
 		for( unsigned long i = 0; i < bufferSize; ++i )
-			std::cout << std::hex << ( (int)buffer[i] & 0xFF );
+			std::cout << std::hex << ( (unsigned)buffer[i] & 0xFF );
 	else
 		std::cout << "buffer == nullptr";
 	std::cout << std::endl;
@@ -169,39 +170,92 @@ std::chrono::steady_clock::time_point & taskMessage::getTimestamp() const
 //------------------------------
 // depMessage
 //------------------------------
-depMessage::depMessage ( State state, std::vector<unsigned long> & tasks ) : Message::Message( Category::DEP )
+depMessage::depMessage ( State state, std::vector<unsigned long> & tasks ) : Message::Message( Category::DEP ), tasks(tasks)
 {
+	code += (unsigned char)state;
 
+	unsigned tasksSize = tasks.size();
+
+	bufferSize = 4 * (tasksSize + 1);
+
+	buffer = new char [tasksSize];
+
+	buffer[0] = code;
+	buffer[1] = 0;
+	buffer[2] = tasksSize & 0x00FF;
+	buffer[3] = ( tasksSize >> 8 ) & 0x00FF;
+
+	for( unsigned i = 0; i < tasksSize; ++i )
+	{
+		DBG("vector: " << tasks[i])	
+		buffer[ (i + 1) * 4     ] =   tasks[i]         & 0x00FF;
+		buffer[ (i + 1) * 4 + 1 ] = ( tasks[i] >> 8  ) & 0x00FF;
+		buffer[ (i + 1) * 4 + 2 ] = ( tasks[i] >> 16 ) & 0x00FF;
+		buffer[ (i + 1) * 4 + 3 ] = ( tasks[i] >> 24 ) & 0x00FF;
+	}
 }
 
 depMessage::depMessage ( State state ) : Message::Message( Category::DEP )
 {
+	code += (unsigned char)state;
 
+	buffer = new char [1];
+
+	buffer[0] = code;
+
+	bufferSize = 1;
+}
+
+depMessage::depMessage ( char * buff, unsigned long bufferSize ) : Message::Message( Category::DEP, bufferSize )
+{
+	buffer = new char [bufferSize];
+
+	this->bufferSize = bufferSize;
+
+	for( unsigned long i = 0; i < bufferSize; i++ )
+		buffer[i] = buff[i];
+
+	code = buffer[0];
+
+	unsigned tasksSize = 0;
+	
+	tasksSize += (unsigned)buffer[3];
+
+	tasksSize += (unsigned)buffer[4] << 8;
+
+	tasks = std::vector<unsigned long> (tasksSize, 0);
+
+	for( unsigned i = 0; i < tasksSize; ++i )
+	{
+		tasks[i] += (unsigned long)buffer[ (i + 1) * 4     ];
+		tasks[i] += (unsigned long)buffer[ (i + 1) * 4 + 1 ] << 8;
+		tasks[i] += (unsigned long)buffer[ (i + 1) * 4 + 2 ] << 16;
+		tasks[i] += (unsigned long)buffer[ (i + 1) * 4 + 3 ] << 24;
+	}
 }
 
 unsigned short depMessage::getTaskCount()
 {
-	return 0;
+	return tasks.size();
 }
 
 std::vector<unsigned long> & depMessage::getTasks()
 {
-	std::vector<unsigned long> v;
-	return v;
+	return tasks;
 }
 
 //------------------------------
 // fileMessage
 //------------------------------
 fileMessage::fileMessage(State s,
-						bool isMainF,
-						unsigned long tId,
-						std::string filename ) :
-							Message::Message( Category::FILE ),
-							state(s),
-							isMainFile(isMainF),
-							taskId(tId),
-							name(filename)
+                         bool isMainF,
+                         unsigned long tId,
+                         std::string filename ) :
+	Message::Message( Category::FILE ),
+	state(s),
+	isMainFile(isMainF),
+	taskId(tId),
+	name(filename)
 {
 	//taskId=tId;
 	//name=filename;
@@ -245,13 +299,13 @@ std::fstream & fileMessage::getFile()
 // retMessage
 //------------------------------
 retMessage::retMessage( State s,
-					unsigned char exitStatus,
-					unsigned long tId,
-					std::string filename) :
-						Message::Message( Category::RET ),
-						state(s),
-						taskId(tId),
-						name(filename)
+                        unsigned char exitStatus,
+                        unsigned long tId,
+                        std::string filename) :
+	Message::Message( Category::RET ),
+	state(s),
+	taskId(tId),
+	name(filename)
 {
 
 }
@@ -307,6 +361,8 @@ synMessage::synMessage ( char * buffer, unsigned long bufferSize ) : Message::Me
 
 	for( unsigned long i = 0; i < bufferSize; ++i )
 		this->buffer[i] = buffer[i];
+
+	code = buffer[0];
 }
 
 
@@ -330,6 +386,8 @@ pingMessage::pingMessage ( char * buffer, unsigned long bufferSize ) : Message::
 
 	for( unsigned long i = 0; i < bufferSize; ++i )
 		this->buffer[i] = buffer[i];
+
+	code = buffer[0];
 }
 
 
