@@ -1,9 +1,17 @@
+/** \file ConsoleClient.hpp
+ * \authors Tomasz Jakubczyk, Kacper Stachyra
+ * \brief plik nagłówkowy klasy ConsoleClient
+ *
+ */
+
 #ifndef ConsoleClient_hpp
 #define ConsoleClient_hpp
 
 #include <iostream>
 #include <string>
 #include <sstream>
+
+#include "../protocol/ConnectionManager.hpp"
 
 using namespace std;
 
@@ -35,13 +43,16 @@ private:
     int readCommand(string* arg);
 
     /*ustanawia polaczenie z serwerem*/
-    bool connect();
+    bool connect(Ipv4* ip);
+    //bool connect();
 
     /*wysyla polecenie do serwera i czeka na odpowiedz*/
     void sendCommand();
 
     /*sprawdza poprawnosc odpowiedzi od serwera*/
     void checkAnswer();
+
+    ConnectionManager* connectionManager;
 };
 
 #endif

@@ -1,14 +1,24 @@
+/** \file ConsoleClient.cpp
+ * \authors Tomasz Jakubczyk, Kacper Stachyra
+ * \brief Implementacje metod klasy ConsoleClient
+ *
+ */
+
+
 #include "ConsoleClient.hpp"
+
 
 //maksymalna liczna polecenia + argumentow
 #define ARGS 3
 
 using namespace std;
+using namespace message;
 
 ConsoleClient::ConsoleClient()
 {
     connected = 0;
     requestAnswered = 1;
+    connectionManager=ConnectionManager::getInstance(50000);
 }
 
 void ConsoleClient::start()
@@ -29,7 +39,12 @@ void ConsoleClient::start()
             try
             {
                 Ipv4 serverip = Ipv4(arg[1]);
-                connected = connect(serverip);
+                //connected = connect(serverip);
+                pingMessage* m1=new pingMessage(message::State::REQ);
+                Message* m2=nullptr;
+                connectionManager->send(serverip,*m1);
+				connectionManager->receive(serverip,m2);
+				connected=true;
                 if (connected == 1) cout<<"Pomyslnie polaczono z serwerem";
             }
             catch(BadIpException)
