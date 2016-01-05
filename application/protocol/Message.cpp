@@ -106,17 +106,39 @@ void Message::print() const
 //------------------------------
 // hostMessage
 //------------------------------
-hostMessage::hostMessage( HostSub su, State st, const std::vector<Ipv4> & addr ) :
+hostMessage::hostMessage( HostSub sub, State state, const std::vector<Ipv4> & addr ) :
 	Message::Message( Category::HOST ),
-	sub(su),
-	state(st),
+	sub(sub),
+	state(state),
 	addresses(addr)
 {
+	code += (unsigned char)state;
 
+	unsigned addrSize = addr.size();
+
+	bufferSize = 4 * ( addrSize + 1);
+
+	buffer = new char [addrSize];
+
+	buffer[0] = code;
+	buffer[1] = 0x00;
+	buffer[2] = addrSize & 0x00FF;
+	buffer[3] = ( addrSize >> 8 ) & 0x00FF;
+
+	unsigned long a;
+
+	for( unsigned i = 0; i < addrSize; ++i )
+	{
+		a = addr[i].getAddressNum();
+		buffer[ (i + 1) * 4     ] =   a         & 0x00FF;
+		buffer[ (i + 1) * 4 + 1 ] = ( a >> 8  ) & 0x00FF;
+		buffer[ (i + 1) * 4 + 2 ] = ( a >> 16 ) & 0x00FF;
+		buffer[ (i + 1) * 4 + 3 ] = ( a >> 24 ) & 0x00FF;
+	}
 }
 
 hostMessage::hostMessage( State s ) :
-	Message::Message( Category::HOST ),
+	Message::Message( Category::HOST, s ),
 	state(s)
 {
 

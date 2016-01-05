@@ -136,6 +136,54 @@ void Connection::recErr ( message::Message * & message, char code )
 }
 void Connection::recHost ( message::Message * & message, char code )
 {
+	char * buf = new char [ 3 ];
+	memset( buf, 0, sizeof( buf ) );
+	socket->recv( buf, 3 );
+	
+	bool ipv6 = true;
+
+	if( (unsigned char)buf[0] == 0x00 )
+		ipv6 = false;
+
+	unsigned addrSize = 0;
+
+	addrSize += (unsigned)buf[1];
+	addrSize += (unsigned)buf[2] << 8;
+
+	delete [] buf;
+
+	if( ipv6 )
+	{
+		;
+	}
+	else
+	{
+		char * buffer = new char [ addrSize * 4];
+
+		memset( buffer, 0, sizeof(buffer) );
+
+		socket->recv( buffer, addrSize * 4 );
+		
+		std::vector<Ipv4> addr (addrSize);
+
+		in_addr ip;
+
+		for( unsigned i = 0; i < addrSize; ++i )
+		{
+			ip.s_addr = 0;
+			ip.s_addr += (unsigned long)buffer[ i * 4     ];
+			ip.s_addr += (unsigned long)buffer[ i * 4 + 1 ] << 8;
+			ip.s_addr += (unsigned long)buffer[ i * 4 + 2 ] << 16;
+			ip.s_addr += (unsigned long)buffer[ i * 4 + 3 ] << 24;
+
+			addr[i] = Ipv4( inet_ntoa( ip ) );
+		}
+
+		unsigned char sub = (unsigned char)code & 0x1C;
+		message = new message::hostMessage( (message::HostSub)sub, message::State::REQ, addr );
+
+		delete [] buffer;
+	}
 
 }
 void Connection::recRet ( message::Message * & message )

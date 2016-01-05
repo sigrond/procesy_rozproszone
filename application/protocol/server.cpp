@@ -13,14 +13,20 @@ void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port )
 {
 	Message * msg1 = nullptr;
 
-        Message * msg2 = new errMessage( State::ACK );
-        Message * msg3 = new errMessage( State::OK );
+        Message * msg2 = new hostMessage( State::ACK );
+        Message * msg3 = new hostMessage( State::OK );
 
 
 	cm->receive( *ip, msg1, port + 55555 );
 
 	if( msg1 )
+	{
 		msg1->print();
+		std::vector<Ipv4> v = static_cast<message::hostMessage*>(msg1) -> getAddresses();
+
+		for(Ipv4 i : v)
+			DBG( "IP: " << i.getAddress() );
+	}
 
 	cm->send( *ip, *msg2, port + 55555 );
 

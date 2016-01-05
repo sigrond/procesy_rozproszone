@@ -10,8 +10,15 @@ void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
 {
 	Message * msg1 = nullptr;
 
-        Message * msg2 = new errMessage( ErrSub::E_OTH, State::REQ, 7 );
-        Message * msg3 = new errMessage( State::ACK );
+	std::vector<Ipv4> v (4);
+
+	v[0] = Ipv4( "1.1.1.1" );
+	v[1] = Ipv4( "2.2.2.2" );
+	v[2] = Ipv4( "3.3.3.3" );
+	v[3] = Ipv4( "4.4.4.4" );
+
+        Message * msg2 = new hostMessage( HostSub::H_RM, State::REQ, v );
+        Message * msg3 = new hostMessage( State::ACK );
 
 	cm->send( *ip, *msg2, port + 55555 );
 
