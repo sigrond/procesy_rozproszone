@@ -53,6 +53,8 @@ namespace message
 
 		unsigned long getBufferSize() const;
 
+		void print() const;
+
         protected:
                 virtual bool checkMessage () const; //= 0; TYLKO TYMCZASOWO, BO JEST TO SZYBSZE NIŻ PISANIE METODY DLA 8 PODKLAS
 

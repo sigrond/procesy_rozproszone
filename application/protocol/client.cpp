@@ -9,16 +9,26 @@ void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
 {	 
 	Message * msg1 = nullptr;
 
-        Message * msg2 = new synMessage( State::REQ );
-        Message * msg3 = new synMessage( State::ACK );
+        Message * msg2 = new pingMessage( State::REQ );
+        Message * msg3 = new pingMessage( State::ACK );
 
 	cm->send( *ip, *msg2, port + 55555 );
+
+	msg2->print();
 
 	cm->receive( *ip, msg1, port + 55555 );
 	
+	if( msg1 )
+		msg1->print();
+
 	cm->receive( *ip, msg1, port + 55555 );
 
-	cm->send( *ip, *msg2, port + 55555 );
+	if( msg1 )
+		msg1->print();
+
+	cm->send( *ip, *msg3, port + 55555 );
+
+	msg3->print();
 
 }
 
