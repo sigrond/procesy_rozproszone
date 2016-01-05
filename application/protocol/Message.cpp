@@ -26,15 +26,17 @@ Message::Message( Category category, unsigned long bufferSize ) : code( (unsigne
 
 }
 
-Message::Message( Category category, State state ) : code( (unsigned char) category )
+Message::Message( Category category, State state ) : code( (unsigned char) category + (unsigned char) state )
 {
-	code += (unsigned char)state;
-
 	buffer = new char [1];
 
 	buffer[0] = code;
 
 	bufferSize = 1;
+
+	
+	std::cout << "CODE" << std::hex << (unsigned)code << std::endl;
+	std::cout << std::dec;
 }
 
 Message::~Message()
@@ -150,9 +152,15 @@ taskMessage::taskMessage( TaskSub sub,
 	code += (unsigned char)s;
 	code += (unsigned char)sub;
 
+	std::cout << "CODE" << std::hex << (unsigned)code << std::endl;
+	std::cout << std::dec;
+
+	bufferSize = 12;
+
 	buffer = new char [ 12 ];
 
 	buffer[0] = code;
+
 	if( rPriority )
 		buffer[1] = 0x80;
 	else
@@ -177,10 +185,12 @@ taskMessage::taskMessage( TaskSub sub,
 }
 
 taskMessage::taskMessage( State s ) :
-	Message::Message( Category::TASK, state ),
+	Message::Message( Category::TASK, s ),
 	state(s)
 {
 
+	std::cout << "CODE" << std::hex << (unsigned)code << std::endl;
+	std::cout << std::dec;
 }
 
 bool taskMessage::getRespectPriority()

@@ -103,10 +103,10 @@ void Connection::recTask ( message::Message * & message, char code )
 
 	unsigned long l = 0;
 
-	l += (unsigned long)buffer[3];
-	l += (unsigned long)buffer[4] << 8;
-	l += (unsigned long)buffer[5] << 16;
-	l += (unsigned long)buffer[6] << 24;
+	l += (unsigned long)buffer[7];
+	l += (unsigned long)buffer[8] << 8;
+	l += (unsigned long)buffer[9] << 16;
+	l += (unsigned long)buffer[10] << 24;
 
 	std::chrono::steady_clock::duration d (l);
 
@@ -178,6 +178,10 @@ void Connection::receive ( message::Message * & message )
 
 		unsigned long received = socket->recv( code, 1 );
 
+		
+		std::cout << "code[0] = " << std::hex << (unsigned)code[0] << std::endl;
+		std::cout << std::dec;
+
 		switch( (message::Category)( (unsigned)code[0] & 0xE0 ) )
 		{
 			case message::Category::HOST:
@@ -191,8 +195,9 @@ void Connection::receive ( message::Message * & message )
 				break;
 
 			case message::Category::TASK:
-				if( (unsigned)code[0] & 0x03 == 0x00 )
+				if( ((unsigned)code[0] & 0x03) == 0x00 )
 				{
+					DBG("REC")
 					recTask( message, code[0] );
 				}
 				else

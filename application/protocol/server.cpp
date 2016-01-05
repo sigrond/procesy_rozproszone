@@ -13,19 +13,14 @@ void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port )
 {
 	Message * msg1 = nullptr;
 
-        Message * msg2 = new depMessage( State::ACK );
-        Message * msg3 = new depMessage( State::OK );
+        Message * msg2 = new taskMessage( State::ACK );
+        Message * msg3 = new taskMessage( State::OK );
 
 
 	cm->receive( *ip, msg1, port + 55555 );
 
 	if( msg1 )
-	{
 		msg1->print();
-		std::vector<unsigned long> v = static_cast<message::depMessage*>(msg1)->getTasks();
-		for(unsigned i = 0; i < static_cast<message::depMessage*>(msg1) -> getTaskCount(); ++i)
-			DBG("Dep " << i << ": " << v[i]);
-	}
 
 	cm->send( *ip, *msg2, port + 55555 );
 
