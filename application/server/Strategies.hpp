@@ -96,6 +96,7 @@ public:
 		std::vector<Ipv4>* agentIPs;
 		taskMessage* tm;
 		fileMessage* fm;
+		retMessage* rm;
 		pingMessage* pm;
 		string name;
 		fstream file;
@@ -264,6 +265,34 @@ public:
 			}
 			break;
 		case (int)Category::RET:
+			rm=(retMessage*)data;
+			state=rm->getState();
+			if(state==(unsigned char)message::State::REQ)
+			{
+				#ifdef _DEBUG
+				cout<<"admin chyba nie powinien nam zwracać RET REQ"<<endl;
+				#endif // _DEBUG
+				((Controller*)controller)->adminServer->connect(new retMessage(message::State::ACK));
+			}
+			else if(state==(unsigned char)message::State::ACK)
+			{
+				#ifdef _DEBUG
+				cout<<"admin potwierdził otrzymanie wyników"<<endl;
+				#endif // _DEBUG
+				((Controller*)controller)->adminServer->connect(new retMessage(message::State::OK));
+			}
+			else if(state==(unsigned char)message::State::OK)
+			{
+				#ifdef _DBUG
+				cout<<"odsyłamy adminowi RET OK, chyba coś nie tak"<<endl;
+				#endif // _DBUG
+			}
+			else
+			{
+				#ifdef _DEBUG
+				cout<<"przy wymianie wiadomości RET z adminem ERR, albo gożej"<<endl;
+				#endif // _DEBUG
+			}
 			break;
 		case (int)Category::SYN:
 			break;
