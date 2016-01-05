@@ -187,7 +187,6 @@ depMessage::depMessage ( State state, std::vector<unsigned long> & tasks ) : Mes
 
 	for( unsigned i = 0; i < tasksSize; ++i )
 	{
-		DBG("vector: " << tasks[i])	
 		buffer[ (i + 1) * 4     ] =   tasks[i]         & 0x00FF;
 		buffer[ (i + 1) * 4 + 1 ] = ( tasks[i] >> 8  ) & 0x00FF;
 		buffer[ (i + 1) * 4 + 2 ] = ( tasks[i] >> 16 ) & 0x00FF;

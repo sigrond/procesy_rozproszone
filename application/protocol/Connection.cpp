@@ -89,8 +89,6 @@ void Connection::recDep ( message::Message * & message )
 	tasksSize += (unsigned)buf[1];
 	tasksSize += (unsigned)buf[2] << 8;
 
-	DBG( "Connection::recDep() taskSize == " << tasksSize )
-
 	delete [] buf;
 
 	char * buffer = new char [tasksSize * 4];
