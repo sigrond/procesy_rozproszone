@@ -25,6 +25,25 @@ int main(int argi, char* argv[])
 {
     try
     {
+    	if(argi>1)
+		{
+			for(int i=1;i<argi;i++)
+			{
+				string sc(argv[i]);
+				if(sc.find("-h")!=string::npos)
+				{
+					cout<<"Serwer LOTC help"<<endl;
+					cout<<"Argumenty uruchamiania:"<<endl;
+					cout<<"-h wyświetla pomoc"<<endl;
+					cout<<"Jeśli jako pierwszy argument podany jest adres IP, to jest to adres zdalnej konsoli administra. w przeciwnym przypadku konsola administratora powinna być na 127.0.0.1"<<endl<<endl;
+					cout<<"Podczas pracy serwera obsługiwane są następujące polecenia:"<<endl;
+					cout<<"add agent wymagany_adres_ip opcjonalny_numer portu	-	dodanie adresu agenta"<<endl;
+					cout<<"add task nazwa_pliku_lub_polecenia	-	zlecenie zadania"<<endl;
+					cout<<"exit	-	polecenie zamykania serwera, przynajmniej próbujemy zrobić to po dobroci, choć szanse są marne"<<endl<<endl;
+					return 0;
+				}
+			}
+		}
         cout<<"Witamy w serwerze LOTC!"<<endl;
         Controller* controller=new Controller();/**< kontroler jest sercem serwera, o architekturze zbliżonej do modelu MVC */
         //controller->setAdminServer(new AdminServer());/** AdminServer i AgentServer można traktować jak swego rodzaju widoki MVC */

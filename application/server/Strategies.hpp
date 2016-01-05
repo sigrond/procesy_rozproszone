@@ -96,6 +96,7 @@ public:
 		std::vector<Ipv4>* agentIPs;
 		taskMessage* tm;
 		fileMessage* fm;
+		retMessage* rm;
 		pingMessage* pm;
 		string name;
 		fstream file;
@@ -264,8 +265,39 @@ public:
 			}
 			break;
 		case (int)Category::RET:
+			rm=(retMessage*)data;
+			state=rm->getState();
+			if(state==(unsigned char)message::State::REQ)
+			{
+				#ifdef _DEBUG
+				cout<<"admin chyba nie powinien nam zwracać RET REQ"<<endl;
+				#endif // _DEBUG
+				((Controller*)controller)->adminServer->connect(new retMessage(message::State::ACK));
+			}
+			else if(state==(unsigned char)message::State::ACK)
+			{
+				#ifdef _DEBUG
+				cout<<"admin potwierdził otrzymanie wyników"<<endl;
+				#endif // _DEBUG
+				((Controller*)controller)->adminServer->connect(new retMessage(message::State::OK));
+			}
+			else if(state==(unsigned char)message::State::OK)
+			{
+				#ifdef _DBUG
+				cout<<"odsyłamy adminowi RET OK, chyba coś nie tak"<<endl;
+				#endif // _DBUG
+			}
+			else
+			{
+				#ifdef _DEBUG
+				cout<<"przy wymianie wiadomości RET z adminem ERR, albo gożej"<<endl;
+				#endif // _DEBUG
+			}
 			break;
 		case (int)Category::SYN:
+			#ifdef _DEBUG
+			cout<<" wiadomość SYN jest nie obsługiwana"<<endl;
+			#endif // _DEBUG
 			break;
 		case (int)Category::PING:
 			pm=(pingMessage*)data;
@@ -291,6 +323,9 @@ public:
 			}
 			break;
 		case (int)Category::ERR:
+			#ifdef _DEBUG
+			cout<<"wiadomość ERR od admina!"<<endl;
+			#endif // _DEBUG
 			break;
 		default:
 			clog<<"Nieznana kategoria wiadomości od admina: "<<category<<endl;
@@ -312,7 +347,7 @@ public:
 	{
 		using namespace std;
 		using namespace message;
-		unsigned char category, subCategory;
+		unsigned char category, subCategory, state;
 		category=((Message*)data)->getCategory();
 		taskMessage* tm;
 		fileMessage* fm;
@@ -325,43 +360,155 @@ public:
 		switch(category)/**< \todo obsługa kategorii */
 		{
 		case (int)Category::HOST:
+			#ifdef _DEBUG
+			cout<<"agent chyba nie powinien wymieniać komunikatów HOST z serwerem"<<endl;
+			#endif // _DEBUG
 			break;
 		case (int)Category::TASK:
 			//odbieranie komunikatów od agentów
 			tm=(taskMessage*)data;
-			subCategory=tm->getSubcategory();
-			//zadanie gotowe do przetwarzania
-			if(subCategory==(unsigned char)TaskSub::T_OK)
+			state=tm->getState();
+			if(state==(unsigned char)message::State::REQ)
 			{
-				/**< \todo wysłać task run */
+				subCategory=tm->getSubcategory();
+				//zadanie gotowe do przetwarzania
+				if(subCategory==(unsigned char)TaskSub::T_OK)
+				{
+					/**< \todo wysłać task run */
+				}
+				else if(subCategory==(unsigned char)TaskSub::T_NOK)
+				{
+					/**< \todo yyy, nic nie robić? */
+				}
+				//odsyłamy potwierdzenie
+				if(who==nullptr)
+				{
+					cerr<<"message form agent strategy TASK who==nullptr"<<endl;
+					throw "message form agent strategy TASK who==nullptr";
+				}
+				((Controller*)controller)->agentServer->connect((Slave*)who,new taskMessage(message::State::ACK));
 			}
-			else if(subCategory==(unsigned char)TaskSub::T_NOK)
+			else if(state==(unsigned char)message::State::ACK)
 			{
-				/**< \todo yyy, nic nie robić? */
+				#ifdef _DEBUG
+				cout<<"agent potwierdził otrzymanie zadania"<<endl;
+				#endif // _DEBUG
+				if(who==nullptr)
+				{
+					cerr<<"message form agent strategy TASK who==nullptr"<<endl;
+					throw "message form agent strategy TASK who==nullptr";
+				}
+				((Controller*)controller)->agentServer->connect((Slave*)who,new taskMessage(message::State::OK));
+			}
+			else if(state==(unsigned char)message::State::OK)
+			{
+				#ifdef _DEBUG
+				cout<<"poprawnie zakończono wymianę wiadomości TASK z agentem"<<endl;
+				#endif // _DEBUG
+			}
+			else
+			{
+				#ifdef _DEBUG
+				cout<<"przy wymianie wiadomości TASK z agentem ERR, albo gożej"<<endl;
+				#endif // _DEBUG
 			}
 			break;
 		case (int)Category::DEP:
+			#ifdef _DEBUG
+			cout<<"wiadomość DEP nieobsługiwana"<<endl;
+			#endif // _DEBUG
 			break;
 		case (int)Category::FILE:
 			fm=(fileMessage*)data;
-			// chyba odesłać do administratora
-			((Controller*)controller)->adminServer->connect((Message*)data);
+			state=fm->getState();
+			if(state==(unsigned char)message::State::REQ)
+			{
+				// chyba odesłać do administratora
+				((Controller*)controller)->adminServer->connect((Message*)data);
+				if(who==nullptr)
+				{
+					cerr<<"message form agent strategy FILE who==nullptr"<<endl;
+					throw "message form agent strategy FILE who==nullptr";
+				}
+				((Controller*)controller)->agentServer->connect((Slave*)who,new fileMessage(message::State::OK));
+			}
+			else if(state==(unsigned char)message::State::ACK)
+			{
+				#ifdef _DEBUG
+				cout<<"agent potwierdził otrzymanie pliku"<<endl;
+				#endif // _DEBUG
+				if(who==nullptr)
+				{
+					cerr<<"message form agent strategy FILE who==nullptr"<<endl;
+					throw "message form agent strategy FILE who==nullptr";
+				}
+				((Controller*)controller)->agentServer->connect((Slave*)who,new taskMessage(message::State::OK));
+			}
+			else if(state==(unsigned char)message::State::OK)
+			{
+				#ifdef _DEBUG
+				cout<<"poprawnie zakończono wymianę wiadomości FILE z agentem"<<endl;
+				#endif // _DEBUG
+			}
+			else
+			{
+				#ifdef _DEBUG
+				cout<<"przy wymianie wiadomości FILE z agentem ERR, albo gożej"<<endl;
+				#endif // _DEBUG
+			}
 			break;
 		case (int)Category::RET:
 			//odbieranie wyników zadań
 			rm=(retMessage*)data;
-			/**< \todo włąściwie to całą tą wiadomość można wysłać adminowi i tylko zaznaczyć, zadanie jako wykonane */
-			exitStatus=rm->getExitStatus();//to chyba tylko obchodzi administratora
-			/**< \todo odesłać status zakończenia do admina */
-			taskID=rm->getTaskId();
-			//zaznaczamy zadanie jako wykonane
-			((Controller*)controller)->agentServer->setTaskFinished(taskID);
-			name=rm->getFilename();
-			//file=rm->getFile();
-			//odsyłamy wiadomość
-			((Controller*)controller)->adminServer->connect((Message*)data);
+			state=rm->getState();
+			if(state==(unsigned char)message::State::REQ)
+			{
+				/**< \todo włąściwie to całą tą wiadomość można wysłać adminowi i tylko zaznaczyć, zadanie jako wykonane */
+				exitStatus=rm->getExitStatus();//to chyba tylko obchodzi administratora
+				/**< \todo odesłać status zakończenia do admina */
+				taskID=rm->getTaskId();
+				//zaznaczamy zadanie jako wykonane
+				((Controller*)controller)->agentServer->setTaskFinished(taskID);
+				name=rm->getFilename();
+				//file=rm->getFile();
+				//odsyłamy wiadomość
+				((Controller*)controller)->adminServer->connect((Message*)data);
+				if(who==nullptr)
+				{
+					cerr<<"message form agent strategy RET who==nullptr"<<endl;
+					throw "message form agent strategy RET who==nullptr";
+				}
+				((Controller*)controller)->agentServer->connect((Slave*)who,new retMessage(message::State::OK));
+			}
+			else if(state==(unsigned char)message::State::ACK)
+			{
+				#ifdef _DEBUG
+				cout<<"agent potwierdził otrzymanie pliku"<<endl;
+				#endif // _DEBUG
+				if(who==nullptr)
+				{
+					cerr<<"message form agent strategy RET who==nullptr"<<endl;
+					throw "message form agent strategy RET who==nullptr";
+				}
+				((Controller*)controller)->agentServer->connect((Slave*)who,new retMessage(message::State::OK));
+			}
+			else if(state==(unsigned char)message::State::OK)
+			{
+				#ifdef _DEBUG
+				cout<<"poprawnie zakończono wymianę wiadomości RET z agentem"<<endl;
+				#endif // _DEBUG
+			}
+			else
+			{
+				#ifdef _DEBUG
+				cout<<"przy wymianie wiadomości RET z agentem ERR, albo gożej"<<endl;
+				#endif // _DEBUG
+			}
 			break;
 		case (int)Category::SYN:
+			#ifdef _DEBUG
+			cout<<"wiadomość SYN nieobsługiwana"<<endl;
+			#endif // _DEBUG
 			break;
 		case (int)Category::PING:
 			pm=(pingMessage*)data;
@@ -387,6 +534,9 @@ public:
 			}
 			break;
 		case (int)Category::ERR:
+			#ifdef _DEBUG
+			cout<<"wiadomość ERR od agenta"<<endl;
+			#endif // _DEBUG
 			break;
 		default:
 			clog<<"Nieznana kategoria wiadomości od agenta: "<<category<<endl;
