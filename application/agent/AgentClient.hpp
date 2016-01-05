@@ -6,6 +6,10 @@
 #define AgentClient_hpp
 
 #include "../protocol/ConnectionManager.hpp"
+#include "MessageParser.hpp"
+
+#include <thread>
+#include <iostream>
 
 class AgentClient
 {
@@ -41,6 +45,11 @@ private:
 
 	/** metoda wysyłająca komunikat do serwera */
 	void send( message::Message *msg);
+
+	/**metoda czytająca kod wiadomości, na jego podstawie wywołuje odpowiednie funkcje*/
+	void readMsg (message::Message *msg);
+
+
 };
 
 #endif
