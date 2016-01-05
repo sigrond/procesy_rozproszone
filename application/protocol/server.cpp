@@ -4,6 +4,7 @@
 using namespace message;
 #include <thread>
 #include <iostream>
+#include <cstdlib>
 
 #include "debug.h"
 
@@ -38,7 +39,11 @@ int main( int argc, char** argv)
 {
         if(argc > 1)
         {
-		unsigned agents = std::stoi( std::string( argv[1] ));
+        	#ifdef __CYGWIN__
+        	unsigned agents = strtol(argv[1],0,10);
+        	#else
+			unsigned agents = std::stoi( std::string( argv[1] ));
+        	#endif // __CYGWIN__
 
                 ConnectionManager * mietek = ConnectionManager::getInstance( 55555 );
 
@@ -89,6 +94,6 @@ int main( int argc, char** argv)
                 std::cout << "To cię nauczy nie zapominać o argumentach, nędzny śmiertelniku." << std::endl;
 
         }
-        
+
         return 0;
 }
