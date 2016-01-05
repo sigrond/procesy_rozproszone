@@ -24,7 +24,7 @@ public:
         NC, /*nierozpoznana komenda*/
         CON, /*polacz*/
         ADD, /*nowe zadanie*/
-        EXIT, /*wyjscie*/
+        EXT, /*wyjscie*/
     };
 
 private:

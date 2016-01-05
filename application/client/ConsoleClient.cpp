@@ -1,22 +1,41 @@
 #include "ConsoleClient.hpp"
 
+//maksymalna liczna polecen argumentow
+#define ARGS 3
+
 using namespace std;
 
 ConsoleClient::ConsoleClient()
 {
-    connected = 0; //czy polaczono z serwerem
-    requestAnswered = 1; //czy otrzymano odpowiedz
+    connected = 0;
+    requestAnswered = 1;
 }
 
 void ConsoleClient::start()
 {
-    string arg[3];
+    string arg[ARGS];
 
-    while(connected==0)
+    while(true)
     {
         int command = readCommand(arg);
-        cout<<"komenda przeczytana i jest to "<<command<<"\n";
-        cout<<"argumenty: "<<arg[1]<<"   "<<arg[2]<<"\n";
+
+        if (command == EXT)
+        {
+            cout<<"Wylaczam konsole administratora\n";
+            break;
+        }
+        if (command == CON)
+        {
+            try
+            {
+                Ipv4 serverip = Ipv4(arg[1]);
+                connected = connect(serverip);
+            }
+            catch(BadIpException)
+            {
+                cout<<"Podaj poprawny adres ip serwera\n";
+            }
+        }
     }
 }
 
@@ -33,13 +52,13 @@ int ConsoleClient::readCommand(string* arg)
     ss<<s;
 
     //zerowanie arg[]
-    for (int i=0; i<3; ++i)
+    for (int i=0; i<ARGS; ++i)
     {
         arg[i].clear();
     }
 
     //czytanie argumentow arg[] z wprowadzonej linii
-    for (int i=0; i<3; ++i)
+    for (int i=0; i<ARGS; ++i)
     {
         s.clear();
         ss>>s;
@@ -51,17 +70,15 @@ int ConsoleClient::readCommand(string* arg)
     }
 
     //sprawdzanie wprowadzonej komendy
-    if (arg[0].compare("exit")==0)
-    {
-        cout<<"exituje";
-        command = EXIT;
-    }
-    else if (arg[0].compare("connect")==0)
-    {
-        command = CON;
-    }
+    if (arg[0].compare("exit")==0) command = EXT;
+    else if (arg[0].compare("connect")==0) command = CON;
 
     return command;
+}
+
+bool ConsoleClient::connect(Ipv4* ip)
+{
+
 }
 
 
