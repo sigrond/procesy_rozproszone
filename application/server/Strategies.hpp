@@ -217,6 +217,9 @@ public:
 			}
 			break;
 		case (int)Category::DEP:
+			#ifdef _DEBUG
+			cout<<"Wiadomość DEP - nie obsługiwana"<<endl;
+			#endif // _DEBUG
 			break;
 		case (int)Category::FILE:
 			fm=(fileMessage*)data;
