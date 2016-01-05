@@ -414,11 +414,48 @@ public:
 			}
 			break;
 		case (int)Category::DEP:
+			#ifdef _DEBUG
+			cout<<"wiadomość DEP nieobsługiwana"<<endl;
+			#endif // _DEBUG
 			break;
 		case (int)Category::FILE:
 			fm=(fileMessage*)data;
-			// chyba odesłać do administratora
-			((Controller*)controller)->adminServer->connect((Message*)data);
+			state=fm->getState();
+			if(state==(unsigned char)message::State::REQ)
+			{
+				// chyba odesłać do administratora
+				((Controller*)controller)->adminServer->connect((Message*)data);
+				if(who==nullptr)
+				{
+					cerr<<"message form agent strategy FILE who==nullptr"<<endl;
+					throw "message form agent strategy FILE who==nullptr";
+				}
+				((Controller*)controller)->agentServer->connect((Slave*)who,new fileMessage(message::State::OK));
+			}
+			else if(state==(unsigned char)message::State::ACK)
+			{
+				#ifdef _DEBUG
+				cout<<"agent potwierdził otrzymanie pliku"<<endl;
+				#endif // _DEBUG
+				if(who==nullptr)
+				{
+					cerr<<"message form agent strategy FILE who==nullptr"<<endl;
+					throw "message form agent strategy FILE who==nullptr";
+				}
+				((Controller*)controller)->agentServer->connect((Slave*)who,new taskMessage(message::State::OK));
+			}
+			else if(state==(unsigned char)message::State::OK)
+			{
+				#ifdef _DEBUG
+				cout<<"poprawnie zakończono wymianę wiadomości FILE z agentem"<<endl;
+				#endif // _DEBUG
+			}
+			else
+			{
+				#ifdef _DEBUG
+				cout<<"przy wymianie wiadomości FILE z agentem ERR, albo gożej"<<endl;
+				#endif // _DEBUG
+			}
 			break;
 		case (int)Category::RET:
 			//odbieranie wyników zadań
