@@ -37,7 +37,8 @@ AdminServer::AdminServer() :
 	blockingQueue(nullptr),
 	connectionManager(nullptr),
 	adminIP(nullptr),
-	shutDown(false)
+	shutDown(false),
+	port(50000)
 {
 	#ifdef _DEBUG
 	std::clog<<"AdminServer::AdminServer()\n";
@@ -45,10 +46,11 @@ AdminServer::AdminServer() :
 	connectionManager=ConnectionManager::getInstance();
 }
 
-AdminServer::AdminServer(Ip &ip) :
+AdminServer::AdminServer(Ip &ip, unsigned short adminPort) :
 	blockingQueue(nullptr),
 	connectionManager(nullptr),
-	adminIP(nullptr)
+	adminIP(nullptr),
+	port(adminPort)
 {
 	#ifdef _DEBUG
 	std::clog<<"AdminServer::AdminServer(Ip &ip)\n";
@@ -96,7 +98,7 @@ void AdminServer::listen()
 
 void AdminServer::connect(message::Message* m)
 {
-	connectionManager->send(*static_cast<Ipv4*>(adminIP),*m);
+	connectionManager->send(*static_cast<Ipv4*>(adminIP),*m,port);
 }
 
 void AdminServer::setBlockingQueue(BlockingQueue<Event*>* q)
