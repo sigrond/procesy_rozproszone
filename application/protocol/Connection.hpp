@@ -75,5 +75,10 @@ private:
         Socket * socket;
 
 	void recDep ( message::Message * & message );
+	void recTask ( message::Message * & message, char code );
+	void recFile ( message::Message * & message );
+	void recErr ( message::Message * & message );
+	void recHost ( message::Message * & message );
+	void recRet ( message::Message * & message );
 };
 #endif // CONNECTION_HPP

@@ -78,6 +78,61 @@ void Connection::send ( const message::Message & message )
                 socket->close();
 }
 
+void Connection::recTask ( message::Message * & message, char code )
+{
+	char * buffer = new char [ 11 ];
+	memset( buffer, 0, sizeof( buffer ) );
+	socket->recv( buffer, 11 );
+
+	bool rPriority = true;
+
+	if( (unsigned char)buffer[0] == 0x00 )
+		rPriority = false;
+
+	unsigned short priority = 0;
+
+	priority += (unsigned)buffer[1];
+	priority += (unsigned)buffer[2] << 8;
+	
+	unsigned long taskId = 0;
+
+	taskId += (unsigned long)buffer[3];
+	taskId += (unsigned long)buffer[4] << 8;
+	taskId += (unsigned long)buffer[5] << 16;
+	taskId += (unsigned long)buffer[6] << 24;
+
+	unsigned long l = 0;
+
+	l += (unsigned long)buffer[3];
+	l += (unsigned long)buffer[4] << 8;
+	l += (unsigned long)buffer[5] << 16;
+	l += (unsigned long)buffer[6] << 24;
+
+	std::chrono::steady_clock::duration d (l);
+
+	std::chrono::steady_clock::time_point t(d);
+
+	unsigned char sub = (unsigned char)code & 0x1C;
+
+	message = new message::taskMessage( (message::TaskSub)sub, message::State::REQ, rPriority, priority, taskId, t );
+}
+void Connection::recFile ( message::Message * & message )
+{
+
+}
+void Connection::recErr ( message::Message * & message )
+{
+
+}
+void Connection::recHost ( message::Message * & message )
+{
+
+}
+void Connection::recRet ( message::Message * & message )
+{
+
+}
+
 void Connection::recDep ( message::Message * & message )
 {
 	char * buf = new char [ 3 ];
@@ -128,7 +183,7 @@ void Connection::receive ( message::Message * & message )
 			case message::Category::HOST:
 				if( (unsigned)code[0] & 0x03 == 0x00 )
 				{
-
+					recHost( message );	
 				}
 				else
 					message = new message::hostMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
@@ -138,7 +193,7 @@ void Connection::receive ( message::Message * & message )
 			case message::Category::TASK:
 				if( (unsigned)code[0] & 0x03 == 0x00 )
 				{
-
+					recTask( message, code[0] );
 				}
 				else
 					message = new message::taskMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
@@ -155,7 +210,7 @@ void Connection::receive ( message::Message * & message )
 			case message::Category::FILE:
 				if( (unsigned)code[0] & 0x03 == 0x00 )
 				{
-
+					recFile( message );
 				}
 				else
 					message = new message::fileMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
@@ -165,7 +220,7 @@ void Connection::receive ( message::Message * & message )
 			case message::Category::RET:
 				if( (unsigned)code[0] & 0x03 == 0x00 )
 				{
-
+					recRet( message );
 				}
 				else
 					message = new message::depMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
@@ -183,7 +238,7 @@ void Connection::receive ( message::Message * & message )
 			case message::Category::ERR:
 				if( (unsigned)code[0] & 0x03 == 0x00 )
 				{
-
+					recErr( message );
 				}
 				else
 					message = new message::depMessage( code, received );

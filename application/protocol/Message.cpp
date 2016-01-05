@@ -26,6 +26,17 @@ Message::Message( Category category, unsigned long bufferSize ) : code( (unsigne
 
 }
 
+Message::Message( Category category, State state ) : code( (unsigned char) category )
+{
+	code += (unsigned char)state;
+
+	buffer = new char [1];
+
+	buffer[0] = code;
+
+	bufferSize = 1;
+}
+
 Message::~Message()
 {
 	if( buffer )
@@ -60,7 +71,7 @@ unsigned char Message::getCategory() const
 
 unsigned char Message::getState() const
 {
-	return code&0x3;
+	return code&0x03;
 }
 
 unsigned char Message::getSubcategory() const
@@ -123,8 +134,8 @@ std::vector<Ipv4> & hostMessage::getAddresses()
 // taskMessage
 //------------------------------
 taskMessage::taskMessage( TaskSub sub,
-			  State s,
-			  bool rPriority,
+                          State s,
+                          bool rPriority,
 			  unsigned short priority,
 			  unsigned long tId,
 			  const std::chrono::steady_clock::time_point & timestamp ) :
@@ -136,11 +147,37 @@ taskMessage::taskMessage( TaskSub sub,
 	taskId(tId),
 	time(timestamp)
 {
-	
+	code += (unsigned char)s;
+	code += (unsigned char)sub;
+
+	buffer = new char [ 12 ];
+
+	buffer[0] = code;
+	if( rPriority )
+		buffer[1] = 0x80;
+	else
+		buffer[1] = 0x00;
+
+	buffer[2] =   priority        & 0x00FF;
+	buffer[3] = ( priority >> 8 ) & 0x00FF;
+
+	buffer[4] =   tId         & 0x00FF;
+	buffer[5] = ( tId >> 8 )  & 0x00FF;
+	buffer[6] = ( tId >> 16 ) & 0x00FF;
+	buffer[7] = ( tId >> 24 ) & 0x00FF;
+
+	std::chrono::steady_clock::duration d = timestamp.time_since_epoch();
+
+	unsigned long l = d.count();
+
+	buffer[8]  =   l         & 0x00FF;
+	buffer[9]  = ( l >> 8 )  & 0x00FF;
+	buffer[10] = ( l >> 16 ) & 0x00FF;
+	buffer[11] = ( l >> 24 ) & 0x00FF;
 }
 
 taskMessage::taskMessage( State s ) :
-	Message::Message( Category::TASK ),
+	Message::Message( Category::TASK, state ),
 	state(s)
 {
 
@@ -194,15 +231,8 @@ depMessage::depMessage ( State state, std::vector<unsigned long> & tasks ) : Mes
 	}
 }
 
-depMessage::depMessage ( State state ) : Message::Message( Category::DEP )
+depMessage::depMessage ( State state ) : Message::Message( Category::DEP, state )
 {
-	code += (unsigned char)state;
-
-	buffer = new char [1];
-
-	buffer[0] = code;
-
-	bufferSize = 1;
 }
 
 depMessage::depMessage ( char * buff, unsigned long bufferSize ) : Message::Message( Category::DEP, bufferSize )
@@ -267,7 +297,7 @@ fileMessage::fileMessage(State s,
 }
 
 fileMessage::fileMessage ( State s ) :
-	Message::Message( Category::FILE ),
+	Message::Message( Category::FILE, state ),
 	state(s)
 {
 
@@ -310,7 +340,7 @@ retMessage::retMessage( State s,
 }
 
 retMessage::retMessage ( State s ) :
-	Message::Message( Category::RET ),
+	Message::Message( Category::RET, state ),
 	state(s)
 {
 
@@ -343,7 +373,7 @@ std::fstream & retMessage::getFile()
 //---------------
 // synMessage
 //---------------
-synMessage::synMessage ( State state ) : Message::Message( Category::SYN )
+synMessage::synMessage ( State state ) : Message::Message( Category::SYN, state )
 {
 	code += (unsigned char)state;
 
@@ -368,15 +398,8 @@ synMessage::synMessage ( char * buffer, unsigned long bufferSize ) : Message::Me
 //---------------
 // pingMessage
 //---------------
-pingMessage::pingMessage ( State state ) : Message::Message( Category::PING )
+pingMessage::pingMessage ( State state ) : Message::Message( Category::PING, state )
 {
-	code += (unsigned char)state;
-
-	buffer = new char [1];
-
-	buffer[0] = code;
-
-	bufferSize = 1;
 }
 
 pingMessage::pingMessage ( char * buffer, unsigned long bufferSize ) : Message::Message( Category::PING, bufferSize )
@@ -398,7 +421,7 @@ errMessage::errMessage ( ErrSub sub, State state, unsigned char errCode ) : Mess
 
 }
 
-errMessage::errMessage ( State state ) : Message::Message( Category::ERR )
+errMessage::errMessage ( State state ) : Message::Message( Category::ERR, state )
 {
 
 }

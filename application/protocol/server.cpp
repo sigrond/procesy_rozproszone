@@ -5,6 +5,7 @@ using namespace message;
 #include <thread>
 #include <iostream>
 #include <cstdlib>
+#include <chrono>
 
 #include "debug.h"
 
@@ -42,6 +43,14 @@ void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port )
 
 int main( int argc, char** argv)
 {
+	std::chrono::steady_clock::time_point tp = std::chrono::steady_clock::now();
+
+	std::chrono::steady_clock::duration d = tp.time_since_epoch();
+
+	unsigned long l = d.count();
+
+	std::cout << l << std::endl;
+
         if(argc > 1)
         {
         	#ifdef __CYGWIN__

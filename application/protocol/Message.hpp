@@ -39,6 +39,8 @@ namespace message
 
 		Message( Category category, unsigned long bufferSize );
 
+		Message( Category category, State state );
+
                 virtual ~Message();
 
                 unsigned char getCode() const;
