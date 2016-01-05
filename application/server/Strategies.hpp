@@ -223,21 +223,45 @@ public:
 			break;
 		case (int)Category::FILE:
 			fm=(fileMessage*)data;
-			/**< \todo zapisać plik na dysku */
-			//tutaj raczej nie znamy id zadania, bo dopiero na podstawie tego pliku go utworzymy dodając zadanie
-			name=fm->getFilename();
-			file.open(name.c_str());/**< \todo za mało wiadomości o niekompletnej klasie fileMessage */
-			task=((Controller*)controller)->agentServer->getTaskByID(fm->getTaskId());
-			if(task==nullptr)
+			state=fm->getState();
+			if(state==(unsigned char)message::State::REQ)
 			{
-				task=new Task();
+				/**< \todo zapisać plik na dysku */
+				//tutaj raczej nie znamy id zadania, bo dopiero na podstawie tego pliku go utworzymy dodając zadanie
+				name=fm->getFilename();
+				file.open(name.c_str());/**< \todo za mało wiadomości o niekompletnej klasie fileMessage */
+				task=((Controller*)controller)->agentServer->getTaskByID(fm->getTaskId());
+				if(task==nullptr)
+				{
+					task=new Task();
+				}
+				task->taskState=TaskState::FILE_ADDED;
+				task->taskID=fm->getTaskId();/**< sory, ale admin musi podać task ID */
+				//task->when=tm->getTimestamp();
+				((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
+				/**< \todo trzeba ustalić co dokładnie może zrobić administrator */
+				//odsyłamy potwierdzenie
+				((Controller*)controller)->adminServer->connect(new fileMessage(message::State::ACK));
 			}
-			task->taskState=TaskState::FILE_ADDED;
-			task->taskID=fm->getTaskId();/**< sory, ale admin musi podać task ID */
-			//task->when=tm->getTimestamp();
-			((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
-
-			/**< \todo trzeba ustalić co dokładnie może zrobić administrator */
+			else if(state==(unsigned char)message::State::ACK)
+			{
+				#ifdef _DEBUG
+				cout<<"warinig: FILE ACK od admina"<<endl;
+				#endif // _DEBUG
+				((Controller*)controller)->adminServer->connect(new fileMessage(message::State::OK));
+			}
+			else if(state==(unsigned char)message::State::OK)
+			{
+				#ifdef _DEBUG
+				cout<<"poprawnie zakończono wymianę wiadomości FILE z adminem"<<endl;
+				#endif // _DEBUG
+			}
+			else
+			{
+				#ifdef _DEBUG
+				cout<<"przy wymianie wiadomości FILE z adminem ERR, albo gożej"<<endl;
+				#endif // _DEBUG
+			}
 			break;
 		case (int)Category::RET:
 			break;
