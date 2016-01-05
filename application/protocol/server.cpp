@@ -9,25 +9,31 @@ using namespace message;
 
 void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port )
 {
-	DBG(port)	
-
 	Message * msg1 = nullptr;
 
-        Message * msg2 = new synMessage( State::REQ );
-        Message * msg3 = new synMessage( State::ACK );
+        Message * msg2 = new synMessage( State::ACK );
+        Message * msg3 = new synMessage( State::OK );
+
+
+	cm->receive( *ip, msg1, port + 55555 );
 
 	cm->send( *ip, *msg2, port + 55555 );
 
-	cm->receive( *ip, msg1 );
-	
-	cm->receive( *ip, msg1 );
-
 	cm->send( *ip, *msg2, port + 55555 );
 
+	cm->receive( *ip, msg1, port + 55555 );
 }
 
 int main( int argc, char** argv)
 {
+
+	Ipv4 ipp = Ipv4("0.0.0.0");
+	unsigned short p = 1000;
+
+	AddressIpv4 a = AddressIpv4(ipp, p);
+	AddressIpv4 b = AddressIpv4(ipp, p);
+
+	std::cout << (a < b) << " " << (b < a) << std::endl;
 
         if(argc > 1)
         {

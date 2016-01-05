@@ -38,6 +38,8 @@ public:
         virtual ~Socket();
 
         virtual int connect();
+        
+	virtual int connect( unsigned short clientPort );
 
         virtual int bind();
         int listen();
@@ -47,6 +49,8 @@ public:
         virtual int send( char * buffer, int bufferSize );
 
         virtual Ipv4 getIp();
+
+	virtual unsigned short getPort() const;
 
         int close();
 
@@ -67,13 +71,17 @@ public:
 
         virtual int connect();
 
-        virtual int accept();
+	virtual int connect( unsigned short clientPort );
+
+	virtual int accept();
 
         virtual int recv( char * buffer, int bufferSize );
 
         virtual int send( char * buffer, int bufferSize );
 
         virtual Ipv4 getIp();
+
+	virtual unsigned short getPort() const;
 
 private:
         sockaddr_in saddr;
