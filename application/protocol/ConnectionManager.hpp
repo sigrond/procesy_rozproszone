@@ -56,14 +56,14 @@ public:
          * \param[in]  ip   Adres z którego ma przyjść wiadomość
          * \param[out] msg  Wskaźnik do oczekiwanej wiadomości
          */ 
-        void receive( const Ipv4 & ip, message::Message * const msg, unsigned short port = 55555 );
+        void receive( const Ipv4 & ip, message::Message * & msg, unsigned short port = 55555 );
 
         /* 
          * \brief           Czeka na wiadomość od hosta o wskazanym adresie IPv6
          * \param[in]  ip   Adres z którego ma przyjść wiadomość
          * \param[out] msg  Wskaźnik do oczekiwanej wiadomości
          */ 
-        void receive( const Ipv6 & ip, message::Message * const msg, unsigned short port = 55555 );
+        void receive( const Ipv6 & ip, message::Message * & msg, unsigned short port = 55555 );
         
         /*
          * \brief           Usuwa IPv4 z mapy.

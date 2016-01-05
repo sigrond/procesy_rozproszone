@@ -11,30 +11,31 @@ void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port )
 {
 	Message * msg1 = nullptr;
 
-        Message * msg2 = new synMessage( State::ACK );
-        Message * msg3 = new synMessage( State::OK );
+        Message * msg2 = new pingMessage( State::ACK );
+        Message * msg3 = new pingMessage( State::OK );
 
 
 	cm->receive( *ip, msg1, port + 55555 );
 
-	cm->send( *ip, *msg2, port + 55555 );
+	if( msg1 )
+		msg1->print();
 
 	cm->send( *ip, *msg2, port + 55555 );
+
+	msg2->print();
+
+	cm->send( *ip, *msg3, port + 55555 );
+
+	msg3->print();
 
 	cm->receive( *ip, msg1, port + 55555 );
+
+	if( msg1 )
+		msg1->print();
 }
 
 int main( int argc, char** argv)
 {
-
-	Ipv4 ipp = Ipv4("0.0.0.0");
-	unsigned short p = 1000;
-
-	AddressIpv4 a = AddressIpv4(ipp, p);
-	AddressIpv4 b = AddressIpv4(ipp, p);
-
-	std::cout << (a < b) << " " << (b < a) << std::endl;
-
         if(argc > 1)
         {
 		unsigned agents = std::stoi( std::string( argv[1] ));

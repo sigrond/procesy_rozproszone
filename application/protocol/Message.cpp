@@ -5,14 +5,16 @@
  * \todo Andrzej napisze, a na razie zaślepki.
  */
 
+#include <iostream>
+
 #include "Message.hpp"
 
 using namespace message;
 using namespace std;
 
-//---------------
+//------------------------------
 // Message
-//---------------
+//------------------------------
 Message::Message( Category category ) : code( (unsigned char) category )
 {
 
@@ -75,8 +77,21 @@ unsigned long Message::getBufferSize() const
 	return bufferSize;
 }
 
+void Message::print() const
+{
+	if( buffer )
+		for( unsigned long i = 0; i < bufferSize; ++i )
+			std::cout << std::hex << ( (int)buffer[i] & 0xFF );
+	else
+		std::cout << "buffer == nullptr";
+	std::cout << std::endl;
+	std::cout << std::dec;
+}
 
 
+//------------------------------
+// hostMessage
+//------------------------------
 hostMessage::hostMessage( HostSub su, State st, const std::vector<Ipv4> & addr ) :
 	Message::Message( Category::HOST ),
 	sub(su),
@@ -103,21 +118,24 @@ std::vector<Ipv4> & hostMessage::getAddresses()
 	return addresses;
 }
 
+//------------------------------
+// taskMessage
+//------------------------------
 taskMessage::taskMessage( TaskSub sub,
-						State s,
-						bool rPriority,
-						unsigned short priority,
-						unsigned long tId,
-						const std::chrono::steady_clock::time_point & timestamp ) :
-							 Message::Message( Category::TASK ),
-							 taskSub(sub),
-							 state(s),
-							 respectPriority(rPriority),
-							 taskId(tId),
-							 time(timestamp)
-
+			  State s,
+			  bool rPriority,
+			  unsigned short priority,
+			  unsigned long tId,
+			  const std::chrono::steady_clock::time_point & timestamp ) :
+			
+	Message::Message( Category::TASK ),
+	taskSub(sub),
+	state(s),
+	respectPriority(rPriority),
+	taskId(tId),
+	time(timestamp)
 {
-
+	
 }
 
 taskMessage::taskMessage( State s ) :
@@ -148,6 +166,9 @@ std::chrono::steady_clock::time_point & taskMessage::getTimestamp() const
 	return t;
 }
 
+//------------------------------
+// depMessage
+//------------------------------
 depMessage::depMessage ( State state, std::vector<unsigned long> & tasks ) : Message::Message( Category::DEP )
 {
 
@@ -169,6 +190,9 @@ std::vector<unsigned long> & depMessage::getTasks()
 	return v;
 }
 
+//------------------------------
+// fileMessage
+//------------------------------
 fileMessage::fileMessage(State s,
 						bool isMainF,
 						unsigned long tId,
@@ -217,6 +241,9 @@ std::fstream & fileMessage::getFile()
 	return file;
 }
 
+//------------------------------
+// retMessage
+//------------------------------
 retMessage::retMessage( State s,
 					unsigned char exitStatus,
 					unsigned long tId,
@@ -261,7 +288,7 @@ std::fstream & retMessage::getFile()
 
 
 //---------------
-// SynMessage
+// synMessage
 //---------------
 synMessage::synMessage ( State state ) : Message::Message( Category::SYN )
 {
@@ -284,7 +311,7 @@ synMessage::synMessage ( char * buffer, unsigned long bufferSize ) : Message::Me
 
 
 //---------------
-// PingMessage
+// pingMessage
 //---------------
 pingMessage::pingMessage ( State state ) : Message::Message( Category::PING )
 {
@@ -293,6 +320,8 @@ pingMessage::pingMessage ( State state ) : Message::Message( Category::PING )
 	buffer = new char [1];
 
 	buffer[0] = code;
+
+	bufferSize = 1;
 }
 
 pingMessage::pingMessage ( char * buffer, unsigned long bufferSize ) : Message::Message( Category::PING, bufferSize )
@@ -304,8 +333,9 @@ pingMessage::pingMessage ( char * buffer, unsigned long bufferSize ) : Message::
 }
 
 
-
-
+//------------------------------
+// errMessage
+//------------------------------
 errMessage::errMessage ( ErrSub sub, State state, unsigned char errCode ) : Message::Message( Category::ERR )
 {
 

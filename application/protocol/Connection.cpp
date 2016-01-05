@@ -78,7 +78,7 @@ void Connection::send ( const message::Message & message )
                 socket->close();
 }
 
-void Connection::receive ( message::Message * message )
+void Connection::receive ( message::Message * & message )
 {
         DBG("Conn::rec()")
         
@@ -90,37 +90,40 @@ void Connection::receive ( message::Message * message )
 
 		unsigned long received = socket->recv( code, 1 );
 
-		switch( (message::Category)( code[0] & 0xE0 ) )
+		switch( (message::Category)( (int)code[0] & 0xE0 ) )
 		{
 			case message::Category::HOST:
 				break;
+
 			case message::Category::TASK:
 				break;
+
 			case message::Category::DEP:
 				break;
+
 			case message::Category::FILE:
 				break;
+
 			case message::Category::RET:
 				break;
+
 			case message::Category::SYN:
 				message = new message::synMessage( code, received );
 				break;
+
 			case message::Category::PING:
+				message = new message::pingMessage( code, received );
 				break;
+
 			case message::Category::ERR:
+				break;
+
+			default:
+				DBG("Conn::rec() Nieznana kategoria")
 				break;
 		};
 
 		delete code;
-
-                //char delicious_pasta[2000];
-
-                //memset( delicious_pasta, 0, sizeof( delicious_pasta ));
-              
-                //socket->recv( delicious_pasta, sizeof( delicious_pasta ) / sizeof( char ) );
-                //std::string pastaStr( delicious_pasta );
-
-                //std::cout << "Received delicious pasta:" << std::endl << std::endl << pastaStr << std::endl << std::endl;
         }
 
         if( ++counter > 3 )

@@ -138,7 +138,7 @@ void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg, uns
         connectionGuards[ addr ].unlock();
 }
 
-void ConnectionManager::receive( const Ipv4 & ip, message::Message * const msg, unsigned short port )
+void ConnectionManager::receive( const Ipv4 & ip, message::Message * & msg, unsigned short port )
 {
         DBG("ConMan::receive( " << ip.getAddress() << ", " << port << " )")
         
@@ -222,7 +222,7 @@ void ConnectionManager::send( const Ipv6 & ip, const message::Message & msg, uns
 
 }
 
-void ConnectionManager::receive( const Ipv6 & ip, message::Message * const msg, unsigned short port )
+void ConnectionManager::receive( const Ipv6 & ip, message::Message * & msg, unsigned short port )
 {
 
 }
