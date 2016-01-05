@@ -1,0 +1,123 @@
+# depslib dependency file v1.0
+1452012332 source:/home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/agent/Agent.cpp
+	"AgentClient.hpp"
+	"../protocol/ConnectionManager.hpp"
+	"../protocol/Ip.hpp"
+	<thread>
+	<iostream>
+	<string>
+
+1452012320 /home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/agent/AgentClient.hpp
+	"../protocol/ConnectionManager.hpp"
+	"MessageParser.hpp"
+	<thread>
+	<iostream>
+
+1451952443 /home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/protocol/ConnectionManager.hpp
+	<map>
+	<mutex>
+	<condition_variable>
+	"Message.hpp"
+	"Ip.hpp"
+	"Connection.hpp"
+	"Socket.hpp"
+	"Address.hpp"
+
+1451932713 /home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/protocol/Message.hpp
+	<vector>
+	<chrono>
+	<fstream>
+	"MessageCodes.hpp"
+	"Ip.hpp"
+
+1451516679 /home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/protocol/MessageCodes.hpp
+
+1451917284 /home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/protocol/Ip.hpp
+	<string>
+	<array>
+	<netinet/in.h>
+	<arpa/inet.h>
+
+1451952443 /home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/protocol/Connection.hpp
+	<mutex>
+	"Ip.hpp"
+	"Message.hpp"
+	"Socket.hpp"
+
+1451952443 /home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/protocol/Socket.hpp
+	<sys/types.h>
+	<sys/socket.h>
+	<netdb.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<unistd.h>
+	"Ip.hpp"
+	"SocketException.hpp"
+
+1451516679 /home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/protocol/SocketException.hpp
+	<string>
+
+1451952443 /home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/protocol/Address.hpp
+	"Ip.hpp"
+
+1452012473 /home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/agent/MessageParser.hpp
+	"../protocol/ConnectionManager.hpp"
+	"Command.hpp"
+	<iostream>
+
+1452026832 /home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/agent/Command.hpp
+	"../protocol/ConnectionManager.hpp"
+	<iostream>
+
+1452023921 source:/home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/agent/AgentClient.cpp
+	"AgentClient.hpp"
+
+1452022719 source:/home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/agent/Command.cpp
+	"Command.hpp"
+
+1452012473 source:/home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/agent/MessageParser.cpp
+	"MessageParser.hpp"
+
+1451952443 source:/home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/protocol/Address.cpp
+	"Address.hpp"
+
+1451952443 source:/home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/protocol/Connection.cpp
+	"Connection.hpp"
+	"MessageCodes.hpp"
+	<cstring>
+	<iostream>
+	"debug.h"
+	"pasta.h"
+
+1451516679 /home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/protocol/debug.h
+	<iostream>
+
+1451516679 /home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/protocol/pasta.h
+	<random>
+
+1451952443 source:/home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/protocol/ConnectionManager.cpp
+	<typeinfo>
+	<thread>
+	<iostream>
+	"ConnectionManager.hpp"
+	"debug.h"
+
+1451917284 source:/home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/protocol/Ip.cpp
+	<regex>
+	"Ip.hpp"
+	<iostream>
+
+1451932713 source:/home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/protocol/Message.cpp
+	"Message.hpp"
+
+1451952443 source:/home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/protocol/Socket.cpp
+	"Socket.hpp"
+	<string>
+	<cstring>
+	"debug.h"
+
+1451516679 source:/home/erysman/Pulpit/studia/tin-projekt/procesy_rozproszone/application/protocol/SocketException.cpp
+	"SocketException.hpp"
+	<string.h>
+	<cerrno>
+

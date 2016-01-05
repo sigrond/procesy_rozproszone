@@ -3,15 +3,16 @@
 
 #include "../protocol/ConnectionManager.hpp"
 #include "Command.hpp"
+#include <iostream>
 
-namespace message
-{
+using namespace message;
+
 class MessageParser
 {
 
 
     public:
-    MessageParser(Message *msg);
+    MessageParser(Message * msg);
     ~MessageParser(){}
 
     void parse();
@@ -19,7 +20,7 @@ class MessageParser
     private:
     Message* msg;
 };
-}
+
 
 
 #endif
