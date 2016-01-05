@@ -205,6 +205,12 @@ fileMessage::fileMessage(State s,
 {
 	//taskId=tId;
 	//name=filename;
+	/** \author Tomasz Jakubczyk
+	 * \todo Jeśli jest to wiadomość wysyłana, to powinna otworzyć plik
+	 * o podanej nazwie wczytać i wysłać, a jeśli odebran, to ze swojego
+	 * magicznego bufora zapisać plik pod podana nazwą.
+	 * Może być to rozwiązane prze zsprawdzenie, czy istnieje plik o
+	 * podanej nazwie. */
 }
 
 fileMessage::fileMessage ( State s ) :
@@ -292,7 +298,7 @@ synMessage::synMessage ( State state ) : Message::Message( Category::SYN )
 
 	buffer[0] = code;
 
-	bufferSize = 1;	
+	bufferSize = 1;
 }
 
 synMessage::synMessage ( char * buffer, unsigned long bufferSize ) : Message::Message( Category::SYN, bufferSize )
@@ -300,7 +306,7 @@ synMessage::synMessage ( char * buffer, unsigned long bufferSize ) : Message::Me
 	this->buffer = new char [ bufferSize ];
 
 	for( unsigned long i = 0; i < bufferSize; ++i )
-		this->buffer[i] = buffer[i];	
+		this->buffer[i] = buffer[i];
 }
 
 
@@ -323,7 +329,7 @@ pingMessage::pingMessage ( char * buffer, unsigned long bufferSize ) : Message::
 	this->buffer = new char [ bufferSize ];
 
 	for( unsigned long i = 0; i < bufferSize; ++i )
-		this->buffer[i] = buffer[i];	
+		this->buffer[i] = buffer[i];
 }
 
 

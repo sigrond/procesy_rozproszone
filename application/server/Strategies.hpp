@@ -90,7 +90,7 @@ public:
 	{
 		using namespace std;
 		using namespace message;
-		unsigned char category, subCategory;
+		unsigned char category, subCategory, state;
 		hostMessage* hm;
 		unsigned int hostsNumber;
 		std::vector<Ipv4>* agentIPs;
@@ -106,82 +106,162 @@ public:
 		case (int)Category::HOST:
 			//dodawanie agenta
 			hm=(hostMessage*)data;
-			subCategory=hm->getSubcategory();
-            hostsNumber=hm->getAgentCount();
-            agentIPs=&hm->getAddresses();
-			if(subCategory==(unsigned char)HostSub::H_ADD)
+			state=hm->getState();
+			if(state==(unsigned char)message::State::REQ)
 			{
-				for(unsigned int i=0;i<hostsNumber;i++)
+				subCategory=hm->getSubcategory();
+				hostsNumber=hm->getAgentCount();
+				agentIPs=&hm->getAddresses();
+
+				if(subCategory==(unsigned char)HostSub::H_ADD)
 				{
-					((Controller*)controller)->blockingQueue->push_back(new Event(ADD_AGENT,&agentIPs->at(i)));
+					for(unsigned int i=0;i<hostsNumber;i++)
+					{
+						((Controller*)controller)->blockingQueue->push_back(new Event(ADD_AGENT,&agentIPs->at(i)));
+					}
 				}
-			}
-			/** usuwanie agentów */
-			if(subCategory==(unsigned char)HostSub::H_RM)
-			{
-				for(unsigned int i=0;i<hostsNumber;i++)
+				/** usuwanie agentów */
+				if(subCategory==(unsigned char)HostSub::H_RM)
 				{
-					((Controller*)controller)->agentServer->removeSlaveByIP(&agentIPs->at(i));
+					for(unsigned int i=0;i<hostsNumber;i++)
+					{
+						((Controller*)controller)->agentServer->removeSlaveByIP(&agentIPs->at(i));
+					}
 				}
-			}
-			if(subCategory==(unsigned char)HostSub::H_STATE)
-			{
+				if(subCategory==(unsigned char)HostSub::H_STATE)
+				{
 					((Controller*)controller)->blockingQueue->push_back(new Event(PING_SLAVES,nullptr));
+					/**< \todo sprawdzanie stanu agentów */
+				}
+				//odsyłamy potwierdzenie
+				((Controller*)controller)->adminServer->connect(new hostMessage(message::State::ACK));
 			}
-			/**< \todo sprawdzanie stanu agentów */
+			else if(state==(unsigned char)message::State::ACK)
+			{
+				/**< \todo nie wiem czemu admin miałby nam wysłać host ack */
+				#ifdef _DEBUG
+				cout<<"nie wiem czemu admin miałby nam wysłać host ack"<<endl;
+				#endif // _DEBUG
+				//odsyłamy potwierdzenie
+				((Controller*)controller)->adminServer->connect(new hostMessage(message::State::OK));
+			}
+			else if(state==(unsigned char)message::State::OK)
+			{
+				#ifdef _DEBUG
+				cout<<"poprawnie zakończone przesyłanie HOST od admina"<<endl;
+				#endif // _DEBUG
+			}
+			else
+			{
+				#ifdef _DEBUG
+				cout<<"nieporawnie zakończone przesyłanie HOST od admina. ERR, albo nawet gożej"<<endl;
+				#endif // _DEBUG
+			}
 			break;
 		case (int)Category::TASK:
 			//zlecenie wykonania zadania
 			tm=(taskMessage*)data;
-			subCategory=tm->getSubcategory();
-			//dodanie zadania
-			if(subCategory==(unsigned char)TaskSub::T_ADD)
+			state=tm->getState();
+			if(state==(unsigned char)message::State::REQ)
 			{
-				/**< \todo znaleźć plik i dodać do zadań */
-				task=((Controller*)controller)->agentServer->getTaskByID(tm->getTaskId());
-				if(task==nullptr)
+				subCategory=tm->getSubcategory();
+				//dodanie zadania
+				if(subCategory==(unsigned char)TaskSub::T_ADD)
 				{
-					task=new Task();
+					/**< \todo znaleźć plik i dodać do zadań */
+					task=((Controller*)controller)->agentServer->getTaskByID(tm->getTaskId());
+					if(task==nullptr)
+					{
+						task=new Task();
+					}
+					task->taskState=TaskState::TASK_ADDED;
+					task->taskID=tm->getTaskId();/**< sory, ale admin musi podać task ID */
+					task->when=tm->getTimestamp();
+					((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
 				}
-				task->taskState=TaskState::TASK_ADDED;
-				task->taskID=tm->getTaskId();/**< sory, ale admin musi podać task ID */
-				task->when=tm->getTimestamp();
-				((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
+				//uruchomienie zadania
+				else if(subCategory==(unsigned char)TaskSub::T_RUN)
+				{
+					task=((Controller*)controller)->agentServer->getTaskByID(tm->getTaskId());
+					if(task==nullptr)
+					{
+						task=new Task();
+					}
+					task->taskState=TaskState::RUN;
+					task->taskID=tm->getTaskId();/**< sory, ale admin musi podać task ID */
+					task->when=tm->getTimestamp();
+					((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
+				}
+				/**< \todo pozostałe podkategorie task */
+				//odsyłamy potwierdzenie
+				((Controller*)controller)->adminServer->connect(new taskMessage(message::State::ACK));
 			}
-			//uruchomienie zadania
-			else if(subCategory==(unsigned char)TaskSub::T_RUN)
+			else if(state==(unsigned char)message::State::ACK)
 			{
-				task=((Controller*)controller)->agentServer->getTaskByID(tm->getTaskId());
-				if(task==nullptr)
-				{
-					task=new Task();
-				}
-				task->taskState=TaskState::RUN;
-				task->taskID=tm->getTaskId();/**< sory, ale admin musi podać task ID */
-				task->when=tm->getTimestamp();
-				((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
+				#ifdef _DEBUG
+				cout<<"warinig: TASK ACK od admina"<<endl;
+				#endif // _DEBUG
+				((Controller*)controller)->adminServer->connect(new taskMessage(message::State::OK));
 			}
-			/**< \todo pozostałe podkategorie task */
+			else if(state==(unsigned char)message::State::OK)
+			{
+				#ifdef _DEBUG
+				cout<<"poprawnie zakończono wymianę wiadomości HOST z adminem"<<endl;
+				#endif // _DEBUG
+			}
+			else
+			{
+				#ifdef _DEBUG
+				cout<<"przy wymianie wiadomości HOST z adminem ERR, albo gożej"<<endl;
+				#endif // _DEBUG
+			}
 			break;
 		case (int)Category::DEP:
+			#ifdef _DEBUG
+			cout<<"Wiadomość DEP - nie obsługiwana"<<endl;
+			#endif // _DEBUG
 			break;
 		case (int)Category::FILE:
 			fm=(fileMessage*)data;
-			/**< \todo zapisać plik na dysku */
-			//tutaj raczej nie znamy id zadania, bo dopiero na podstawie tego pliku go utworzymy dodając zadanie
-			name=fm->getFilename();
-			file.open(name.c_str());/**< \todo za mało wiadomości o niekompletnej klasie fileMessage */
-			task=((Controller*)controller)->agentServer->getTaskByID(fm->getTaskId());
-			if(task==nullptr)
+			state=fm->getState();
+			if(state==(unsigned char)message::State::REQ)
 			{
-				task=new Task();
+				/**< \todo zapisać plik na dysku */
+				//tutaj raczej nie znamy id zadania, bo dopiero na podstawie tego pliku go utworzymy dodając zadanie
+				name=fm->getFilename();
+				file.open(name.c_str());/**< \todo za mało wiadomości o niekompletnej klasie fileMessage */
+				task=((Controller*)controller)->agentServer->getTaskByID(fm->getTaskId());
+				if(task==nullptr)
+				{
+					task=new Task();
+				}
+				task->taskState=TaskState::FILE_ADDED;
+				task->taskID=fm->getTaskId();/**< sory, ale admin musi podać task ID */
+				//task->when=tm->getTimestamp();
+				((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
+				/**< \todo trzeba ustalić co dokładnie może zrobić administrator */
+				//odsyłamy potwierdzenie
+				((Controller*)controller)->adminServer->connect(new fileMessage(message::State::ACK));
 			}
-			task->taskState=TaskState::FILE_ADDED;
-			task->taskID=fm->getTaskId();/**< sory, ale admin musi podać task ID */
-			//task->when=tm->getTimestamp();
-			((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
-
-			/**< \todo trzeba ustalić co dokładnie może zrobić administrator */
+			else if(state==(unsigned char)message::State::ACK)
+			{
+				#ifdef _DEBUG
+				cout<<"warinig: FILE ACK od admina"<<endl;
+				#endif // _DEBUG
+				((Controller*)controller)->adminServer->connect(new fileMessage(message::State::OK));
+			}
+			else if(state==(unsigned char)message::State::OK)
+			{
+				#ifdef _DEBUG
+				cout<<"poprawnie zakończono wymianę wiadomości FILE z adminem"<<endl;
+				#endif // _DEBUG
+			}
+			else
+			{
+				#ifdef _DEBUG
+				cout<<"przy wymianie wiadomości FILE z adminem ERR, albo gożej"<<endl;
+				#endif // _DEBUG
+			}
 			break;
 		case (int)Category::RET:
 			break;
