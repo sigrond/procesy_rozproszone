@@ -120,11 +120,21 @@ void Connection::recFile ( message::Message * & message )
 {
 
 }
-void Connection::recErr ( message::Message * & message )
+
+void Connection::recErr ( message::Message * & message, char code )
 {
+	char * buffer = new char [1];
+	memset( buffer, 0, sizeof( buffer ) );
+	socket->recv( buffer, 1 );
+
+	unsigned char errCode = (unsigned char)buffer[1];
+
+	unsigned char sub = (unsigned char)code & 0x1C;
+
+	message = new message::errMessage( (message::ErrSub)sub, message::State::REQ, errCode );
 
 }
-void Connection::recHost ( message::Message * & message )
+void Connection::recHost ( message::Message * & message, char code )
 {
 
 }
@@ -185,9 +195,9 @@ void Connection::receive ( message::Message * & message )
 		switch( (message::Category)( (unsigned)code[0] & 0xE0 ) )
 		{
 			case message::Category::HOST:
-				if( (unsigned)code[0] & 0x03 == 0x00 )
+				if( ((unsigned)code[0] & 0x03) == 0x00 )
 				{
-					recHost( message );	
+					recHost( message, code[0] );	
 				}
 				else
 					message = new message::hostMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
@@ -213,7 +223,7 @@ void Connection::receive ( message::Message * & message )
 				break;
 
 			case message::Category::FILE:
-				if( (unsigned)code[0] & 0x03 == 0x00 )
+				if( ((unsigned)code[0] & 0x03) == 0x00 )
 				{
 					recFile( message );
 				}
@@ -223,7 +233,7 @@ void Connection::receive ( message::Message * & message )
 				break;
 
 			case message::Category::RET:
-				if( (unsigned)code[0] & 0x03 == 0x00 )
+				if( ((unsigned)code[0] & 0x03) == 0x00 )
 				{
 					recRet( message );
 				}
@@ -241,9 +251,9 @@ void Connection::receive ( message::Message * & message )
 				break;
 
 			case message::Category::ERR:
-				if( (unsigned)code[0] & 0x03 == 0x00 )
+				if( ((unsigned)code[0] & 0x03) == 0x00 )
 				{
-					recErr( message );
+					recErr( message, code[0] );
 				}
 				else
 					message = new message::depMessage( code, received );

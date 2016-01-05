@@ -13,8 +13,8 @@ void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port )
 {
 	Message * msg1 = nullptr;
 
-        Message * msg2 = new taskMessage( State::ACK );
-        Message * msg3 = new taskMessage( State::OK );
+        Message * msg2 = new errMessage( State::ACK );
+        Message * msg3 = new errMessage( State::OK );
 
 
 	cm->receive( *ip, msg1, port + 55555 );

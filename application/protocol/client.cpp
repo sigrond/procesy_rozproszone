@@ -10,10 +10,8 @@ void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
 {
 	Message * msg1 = nullptr;
 
-	std::chrono::steady_clock::time_point t = std::chrono::steady_clock::now();
-
-        Message * msg2 = new taskMessage( TaskSub::T_OK, State::REQ, true, 1, 2, t );
-        Message * msg3 = new taskMessage( State::ACK );
+        Message * msg2 = new errMessage( ErrSub::E_OTH, State::REQ, 7 );
+        Message * msg3 = new errMessage( State::ACK );
 
 	cm->send( *ip, *msg2, port + 55555 );
 

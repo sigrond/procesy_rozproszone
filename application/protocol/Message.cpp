@@ -307,7 +307,7 @@ fileMessage::fileMessage(State s,
 }
 
 fileMessage::fileMessage ( State s ) :
-	Message::Message( Category::FILE, state ),
+	Message::Message( Category::FILE, s ),
 	state(s)
 {
 
@@ -350,7 +350,7 @@ retMessage::retMessage( State s,
 }
 
 retMessage::retMessage ( State s ) :
-	Message::Message( Category::RET, state ),
+	Message::Message( Category::RET, s ),
 	state(s)
 {
 
@@ -385,13 +385,6 @@ std::fstream & retMessage::getFile()
 //---------------
 synMessage::synMessage ( State state ) : Message::Message( Category::SYN, state )
 {
-	code += (unsigned char)state;
-
-	buffer = new char [1];
-
-	buffer[0] = code;
-
-	bufferSize = 1;
 }
 
 synMessage::synMessage ( char * buffer, unsigned long bufferSize ) : Message::Message( Category::SYN, bufferSize )
@@ -428,7 +421,15 @@ pingMessage::pingMessage ( char * buffer, unsigned long bufferSize ) : Message::
 //------------------------------
 errMessage::errMessage ( ErrSub sub, State state, unsigned char errCode ) : Message::Message( Category::ERR )
 {
+	code += (unsigned char)state;
+	code += (unsigned char)sub;
 
+	bufferSize = 2;
+
+	buffer = new char [ bufferSize ];
+
+	buffer[0] = code;
+	buffer[1] = errCode;
 }
 
 errMessage::errMessage ( State state ) : Message::Message( Category::ERR, state )
