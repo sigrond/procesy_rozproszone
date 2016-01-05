@@ -4,9 +4,10 @@
 using namespace message;
 #include <thread>
 #include <iostream>
+#include <cstdlib>
 
 void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
-{	 
+{
 	Message * msg1 = nullptr;
 
         Message * msg2 = new pingMessage( State::REQ );
@@ -17,7 +18,7 @@ void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
 	msg2->print();
 
 	cm->receive( *ip, msg1, port + 55555 );
-	
+
 	if( msg1 )
 		msg1->print();
 
@@ -37,7 +38,11 @@ int main( int argc, char** argv)
 
         if(argc > 1)
         {
-		unsigned n = std::stoi( std::string( argv[1] ));
+			#ifdef __CYGWIN__
+        	unsigned n = strtol(argv[1],0,10);
+        	#else
+			unsigned n = std::stoi( std::string( argv[1] ));
+        	#endif // __CYGWIN__
 
                 ConnectionManager * mietek = ConnectionManager::getInstance( 55555 + n );
 
@@ -85,6 +90,6 @@ int main( int argc, char** argv)
                 std::cout << "To cię nauczy nie zapominać o argumentach, nędzny śmiertelniku." << std::endl;
 
         }
-        
+
         return 0;
 }
