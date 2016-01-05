@@ -4,10 +4,11 @@
  */
 
 #include "AgentClient.hpp"
-
+using namespace message;
 
 AgentClient::AgentClient()
 {
+
     connectionManager = ConnectionManager::getInstance();
 	connected = false;
 	working = false;
@@ -38,17 +39,17 @@ void AgentClient::start()
 void AgentClient::listen()
 {
 	message::Message *msg = nullptr;
-	connectionManager->receive(*(serverIP), msg);
+	connectionManager->receive( *((Ipv4*)serverIP), msg);
 	/** TO DO  rozszyfrowac wiadomosc */
 	if (msg != nullptr)
 	{
-        std::thread readMsg(&AgentClient::readMsg, msg);
+        std::thread readM(&AgentClient::readMsg, this, msg);
 
 	}
 };
 void AgentClient::send( message::Message *msg)
 {
-	connectionManager->send(*(adminIP), *msg);
+	connectionManager->send(*((Ipv4*)serverIP), *msg);
 };
 
 void AgentClient::readMsg( message::Message *msg)
@@ -66,5 +67,6 @@ bool AgentClient::isWorking()
 {
 	return working;
 };
+
 
 

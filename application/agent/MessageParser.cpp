@@ -1,8 +1,10 @@
 #include "MessageParser.hpp"
 
+using namespace message;
+
 MessageParser::MessageParser(Message *msg)
 {
-    this.msg = msg;
+    this->msg = msg;
 }
 
 void MessageParser::parse()
@@ -19,17 +21,17 @@ void MessageParser::parse()
         }
         case (int)Category::DEP:
         {
-            DepCommand depCommand(msg);
+            //DepCommand depCommand(msg);
             break;
         }
         case (int)Category::FILE:
         {
-            FileCommand fileCommand(msg);
+            //FileCommand fileCommand(msg);
             break;
         }
         case (int)Category::SYN:
         {
-            SynCommand synCommand(msg);
+            //SynCommand synCommand(msg);
             break;
         }
         case (int)Category::PING:
@@ -41,4 +43,5 @@ void MessageParser::parse()
             std::cout << "default w słiczu" <<std::endl;
     }
 }
+
 

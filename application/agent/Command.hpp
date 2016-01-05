@@ -1,11 +1,17 @@
+#ifndef COMMAND_HPP
+#define COMMAND_HPP
 
-namespace message
-{
+#include "../protocol/ConnectionManager.hpp"
+#include <iostream>
+
+using namespace message;
+
+
 class Command
 {
     public:
-    Task();
-    ~Task();
+    Command(){}
+    ~Command(){}
 
     private:
 
@@ -22,6 +28,12 @@ class SynCommand: public Command
 
 class TaskCommand: public Command
 {
+    public:
+    TaskCommand(Message *msg);
+
+    private:
+
+    taskMessage *tMessage;
 };
 
 class DepCommand: public Command
@@ -30,10 +42,22 @@ class DepCommand: public Command
 
 class FileCommand: public Command
 {
+    public:
+    FileCommand(Message *msg);
 
+    private:
+
+    fileMessage *fMessage;
 };
 
 class PingCommand: public Command
 {
+    public:
+    PingCommand(Message *msg);
+
+    private:
+    pingMessage *pMessage;
 };
-}
+
+
+#endif
