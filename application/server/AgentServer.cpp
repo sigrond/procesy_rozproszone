@@ -265,10 +265,10 @@ void AgentServer::triggerShutDown()
 	slavesMutex.lock();
 	for(unsigned int i=0;i<slaves->size();i++)
 	{
-		slavesMutex.unlock();
 		#ifdef _DEBUG
 		cout<<"próbuję usunąć agenta: "<<slaves->at(i)->getSlaveIP()->getAddress()<< "z ConnectionManager..."<<endl;
 		#endif // _DEBUG
+		slavesMutex.unlock();
 		connectionManager->remove(*(Ipv4*)slaves->at(i)->getSlaveIP());
 		#ifdef _DEBUG
 		cout<<"udało się usunąć agenta: "<<slaves->at(i)->getSlaveIP()->getAddress()<< "z ConnectionManager!"<<endl;
@@ -334,7 +334,7 @@ void AgentServer::distributeTasks()
 			#ifdef _DEBUG
 			cout<<"próbuję rozdysponować zadania do agentów i: "<<i<<" ..."<<endl;
 			#endif // _DEBUG
-            if(slaves->at(i)->ready)/**< \todo zaznaczać agenta jako ready kiedy coś odpowie */
+            if(slaves->at(i)->ready && !slaves->at(i)->removed)/**< \todo zaznaczać agenta jako ready kiedy coś odpowie */
 			{
 				if(it==tasks.end())
 				{
@@ -439,7 +439,27 @@ Task* AgentServer::getTaskByID(unsigned long taskID)
 	return nullptr;
 }
 
-
+void AgentServer::removeSlaveByIP(Ip* ip)
+{
+	slavesMutex.lock();
+	for(unsigned int i=0;i<slaves->size();i++)
+	{
+		if((*(Ipv4*)ip)==*(Ipv4*)slaves->at(i)->getSlaveIP())
+		{
+			slavesMutex.unlock();
+			#ifdef _DEBUG
+			cout<<"próbuję usunąć agenta: "<<slaves->at(i)->getSlaveIP()->getAddress()<< "z ConnectionManager..."<<endl;
+			#endif // _DEBUG
+			slaves->at(i)->removed=true;
+			connectionManager->remove(*(Ipv4*)slaves->at(i)->getSlaveIP());
+			#ifdef _DEBUG
+			cout<<"udało się usunąć agenta: "<<slaves->at(i)->getSlaveIP()->getAddress()<< "z ConnectionManager!"<<endl;
+			#endif // _DEBUG
+			slavesMutex.lock();
+		}
+	}
+	slavesMutex.unlock();
+}
 
 
 

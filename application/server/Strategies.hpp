@@ -116,7 +116,18 @@ public:
 					((Controller*)controller)->blockingQueue->push_back(new Event(ADD_AGENT,&agentIPs->at(i)));
 				}
 			}
-			/**< \todo usuwanie agentów */
+			/** usuwanie agentów */
+			if(subCategory==(unsigned char)HostSub::H_RM)
+			{
+				for(unsigned int i=0;i<hostsNumber;i++)
+				{
+					((Controller*)controller)->agentServer->removeSlaveByIP(&agentIPs->at(i));
+				}
+			}
+			if(subCategory==(unsigned char)HostSub::H_STATE)
+			{
+					((Controller*)controller)->blockingQueue->push_back(new Event(PING_SLAVES,nullptr));
+			}
 			/**< \todo sprawdzanie stanu agentów */
 			break;
 		case (int)Category::TASK:

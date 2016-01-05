@@ -18,7 +18,8 @@ enum EventType
     ADD_AGENT,/**< ułatwiam sobie życie, bo utonę w metodach */
     PING_ADMIN,
     PING_SLAVES,
-    ADD_TASK
+    ADD_TASK,
+    REMOVE_AGENT
 };
 
 /** \brief Klasa reprezentująca zdarzenie.

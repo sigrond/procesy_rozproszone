@@ -38,6 +38,7 @@ public:
      * \return Task* Jeśli nie znajdzie takiego zadania, to zwraca nullptr.
      */
     Task* getTaskByID(unsigned long taskID);
+    void removeSlaveByIP(Ip* ip);
 private:
     BlockingQueue<Event*>* blockingQueue;
     std::vector<Slave*>* slaves;

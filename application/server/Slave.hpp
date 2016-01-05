@@ -21,7 +21,6 @@ private:
 	int state;/**< stan agenta */
 	ConnectionManager* connectionManager;
 	Task* task;/**< wskaźnik na aktualne zadanie */
-	bool removed;/**< czy dostaliśmy polecenie usuniecia agenta */
 	bool listening;
 public:
 	/** Default constructor */
@@ -63,6 +62,7 @@ public:
 	 * \param val New value to set
 	 */
 	void setTask(Task* val) { task = val; }
+	bool removed;/**< czy dostaliśmy polecenie usuniecia agenta */
 	std::mutex listeningMutex;/**< to chyba znowu moja kolejna fanaberia */
 	void setListening(bool);
 	bool getListening();
