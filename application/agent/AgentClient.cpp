@@ -40,12 +40,23 @@ void AgentClient::listen()
 	message::Message *msg = nullptr;
 	connectionManager->receive(*(serverIP), msg);
 	/** TO DO  rozszyfrowac wiadomosc */
+	if (msg != nullptr)
+	{
+        std::thread readMsg(&AgentClient::readMsg, msg);
 
+	}
 };
 void AgentClient::send( message::Message *msg)
 {
 	connectionManager->send(*(adminIP), *msg);
 };
+
+void AgentClient::readMsg( message::Message *msg)
+{
+    MessageParser messageParser(msg);
+    messageParser.parse();
+
+}
 
 bool AgentClient::isConnected()
 {
@@ -55,3 +66,5 @@ bool AgentClient::isWorking()
 {
 	return working;
 };
+
+
