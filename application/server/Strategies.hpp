@@ -347,7 +347,7 @@ public:
 	{
 		using namespace std;
 		using namespace message;
-		unsigned char category, subCategory;
+		unsigned char category, subCategory, state;
 		category=((Message*)data)->getCategory();
 		taskMessage* tm;
 		fileMessage* fm;
@@ -360,19 +360,57 @@ public:
 		switch(category)/**< \todo obsługa kategorii */
 		{
 		case (int)Category::HOST:
+			#ifdef _DEBUG
+			cout<<"agent chyba nie powinien wymieniać komunikatów HOST z serwerem"<<endl;
+			#endif // _DEBUG
 			break;
 		case (int)Category::TASK:
 			//odbieranie komunikatów od agentów
 			tm=(taskMessage*)data;
-			subCategory=tm->getSubcategory();
-			//zadanie gotowe do przetwarzania
-			if(subCategory==(unsigned char)TaskSub::T_OK)
+			state=tm->getState();
+			if(state==(unsigned char)message::State::REQ)
 			{
-				/**< \todo wysłać task run */
+				subCategory=tm->getSubcategory();
+				//zadanie gotowe do przetwarzania
+				if(subCategory==(unsigned char)TaskSub::T_OK)
+				{
+					/**< \todo wysłać task run */
+				}
+				else if(subCategory==(unsigned char)TaskSub::T_NOK)
+				{
+					/**< \todo yyy, nic nie robić? */
+				}
+				//odsyłamy potwierdzenie
+				if(who==nullptr)
+				{
+					cerr<<"message form agent strategy TASK who==nullptr"<<endl;
+					throw "message form agent strategy TASK who==nullptr";
+				}
+				((Controller*)controller)->agentServer->connect((Slave*)who,new taskMessage(message::State::ACK));
 			}
-			else if(subCategory==(unsigned char)TaskSub::T_NOK)
+			else if(state==(unsigned char)message::State::ACK)
 			{
-				/**< \todo yyy, nic nie robić? */
+				#ifdef _DEBUG
+				cout<<"agent potwierdził otrzymanie zadania"<<endl;
+				#endif // _DEBUG
+				if(who==nullptr)
+				{
+					cerr<<"message form agent strategy TASK who==nullptr"<<endl;
+					throw "message form agent strategy TASK who==nullptr";
+				}
+				((Controller*)controller)->agentServer->connect((Slave*)who,new taskMessage(message::State::OK));
+			}
+			else if(state==(unsigned char)message::State::OK)
+			{
+				#ifdef _DEBUG
+				cout<<"poprawnie zakończono wymianę wiadomości TASK z agentem"<<endl;
+				#endif // _DEBUG
+			}
+			else
+			{
+				#ifdef _DEBUG
+				cout<<"przy wymianie wiadomości TASK z agentem ERR, albo gożej"<<endl;
+				#endif // _DEBUG
 			}
 			break;
 		case (int)Category::DEP:
