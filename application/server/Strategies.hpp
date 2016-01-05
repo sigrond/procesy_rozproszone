@@ -460,16 +460,50 @@ public:
 		case (int)Category::RET:
 			//odbieranie wyników zadań
 			rm=(retMessage*)data;
-			/**< \todo włąściwie to całą tą wiadomość można wysłać adminowi i tylko zaznaczyć, zadanie jako wykonane */
-			exitStatus=rm->getExitStatus();//to chyba tylko obchodzi administratora
-			/**< \todo odesłać status zakończenia do admina */
-			taskID=rm->getTaskId();
-			//zaznaczamy zadanie jako wykonane
-			((Controller*)controller)->agentServer->setTaskFinished(taskID);
-			name=rm->getFilename();
-			//file=rm->getFile();
-			//odsyłamy wiadomość
-			((Controller*)controller)->adminServer->connect((Message*)data);
+			state=rm->getState();
+			if(state==(unsigned char)message::State::REQ)
+			{
+				/**< \todo włąściwie to całą tą wiadomość można wysłać adminowi i tylko zaznaczyć, zadanie jako wykonane */
+				exitStatus=rm->getExitStatus();//to chyba tylko obchodzi administratora
+				/**< \todo odesłać status zakończenia do admina */
+				taskID=rm->getTaskId();
+				//zaznaczamy zadanie jako wykonane
+				((Controller*)controller)->agentServer->setTaskFinished(taskID);
+				name=rm->getFilename();
+				//file=rm->getFile();
+				//odsyłamy wiadomość
+				((Controller*)controller)->adminServer->connect((Message*)data);
+				if(who==nullptr)
+				{
+					cerr<<"message form agent strategy RET who==nullptr"<<endl;
+					throw "message form agent strategy RET who==nullptr";
+				}
+				((Controller*)controller)->agentServer->connect((Slave*)who,new retMessage(message::State::OK));
+			}
+			else if(state==(unsigned char)message::State::ACK)
+			{
+				#ifdef _DEBUG
+				cout<<"agent potwierdził otrzymanie pliku"<<endl;
+				#endif // _DEBUG
+				if(who==nullptr)
+				{
+					cerr<<"message form agent strategy RET who==nullptr"<<endl;
+					throw "message form agent strategy RET who==nullptr";
+				}
+				((Controller*)controller)->agentServer->connect((Slave*)who,new retMessage(message::State::OK));
+			}
+			else if(state==(unsigned char)message::State::OK)
+			{
+				#ifdef _DEBUG
+				cout<<"poprawnie zakończono wymianę wiadomości RET z agentem"<<endl;
+				#endif // _DEBUG
+			}
+			else
+			{
+				#ifdef _DEBUG
+				cout<<"przy wymianie wiadomości RET z agentem ERR, albo gożej"<<endl;
+				#endif // _DEBUG
+			}
 			break;
 		case (int)Category::SYN:
 			break;
