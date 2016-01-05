@@ -5,6 +5,8 @@
 #include <string>
 #include <sstream>
 
+using namespace std;
+
 class ConsoleClient
 {
 public:
@@ -19,9 +21,10 @@ public:
     /*typ wyliczeniowy dla czytanych z konsoli polecen*/
     enum command_t
     {
-        CON, /*connect*/
-        ADD, /*add task*/
-        przyklad2
+        NC, /*nierozpoznana komenda*/
+        CON, /*polacz*/
+        ADD, /*nowe zadanie*/
+        EXIT, /*wyjscie*/
     };
 
 private:
@@ -29,7 +32,7 @@ private:
     bool requestAnswered;
 
     /*czyta komendy wpisywane do konsoli*/
-    int readCommand();
+    int readCommand(string* arg);
 
     /*ustanawia polaczenie z serwerem*/
     bool connect();
