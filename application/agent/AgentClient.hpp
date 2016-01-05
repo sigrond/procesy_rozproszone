@@ -11,6 +11,7 @@
 #include <thread>
 #include <iostream>
 
+
 class AgentClient
 {
 public:
@@ -51,5 +52,6 @@ private:
 
 
 };
+
 
 #endif
