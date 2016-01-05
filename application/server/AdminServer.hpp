@@ -27,7 +27,7 @@ public:
      * \param ip Ip& Adres konsoli administratora.
      *
      */
-    AdminServer(Ip &ip);
+    AdminServer(Ip &ip,unsigned short adminPort=50000);
     ~AdminServer();
     /** \brief Metoda nasłuchująca na połączenie z konsoli administratora.
      * Odbiera wiadomość i wrzuca w zdarzeniu do blockingQueue.
@@ -55,4 +55,5 @@ private:
     ConnectionManager* connectionManager;
     Ip* adminIP;/**< opcjonalne IP admina */
     bool shutDown;/**< przełącznik do kończenia pracy AdminServer'a */
+    unsigned short port;/**< port konsoli administratora na który wysyłamy */
 };
