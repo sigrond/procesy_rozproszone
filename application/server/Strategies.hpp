@@ -506,6 +506,9 @@ public:
 			}
 			break;
 		case (int)Category::SYN:
+			#ifdef _DEBUG
+			cout<<"wiadomość SYN nieobsługiwana"<<endl;
+			#endif // _DEBUG
 			break;
 		case (int)Category::PING:
 			pm=(pingMessage*)data;
@@ -531,6 +534,9 @@ public:
 			}
 			break;
 		case (int)Category::ERR:
+			#ifdef _DEBUG
+			cout<<"wiadomość ERR od agenta"<<endl;
+			#endif // _DEBUG
 			break;
 		default:
 			clog<<"Nieznana kategoria wiadomości od agenta: "<<category<<endl;
