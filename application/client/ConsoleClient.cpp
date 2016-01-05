@@ -1,6 +1,6 @@
 #include "ConsoleClient.hpp"
 
-//maksymalna liczna polecen argumentow
+//maksymalna liczna polecenia + argumentow
 #define ARGS 3
 
 using namespace std;
@@ -30,12 +30,29 @@ void ConsoleClient::start()
             {
                 Ipv4 serverip = Ipv4(arg[1]);
                 connected = connect(serverip);
+                if (connected == 1) cout<<"Pomyslnie polaczono z serwerem";
             }
             catch(BadIpException)
             {
                 cout<<"Podaj poprawny adres ip serwera\n";
             }
         }
+        else if (command == ADD)
+        {
+            if (connected)
+            {
+                //przygotowanie do wyslania wiadomosci do serwera
+            }
+            else
+            {
+                cout<<"Brak polaczenia z serwerem\n";
+            }
+        }
+
+
+        //...//
+        sendCommand();
+        checkAnswer();
     }
 }
 
