@@ -176,7 +176,7 @@ int SocketIp4::recv( char * buffer, int bufferSize )
 			if( errno == EAGAIN || errno == EWOULDBLOCK || errno == EINPROGRESS )
 				throw TimeoutEx();
 			else
-				throw std::exception();
+				throw RecSockEx();
 
                 buffer += bytesRec;
                 bufferSize -= bytesRec;
@@ -194,13 +194,13 @@ int SocketIp4::send( char * buffer, int bufferSize )
 
         while( bufferSize > 0 )
         {
-                bytesSent = ::send(sockfd, buffer, bufferSize, 0);
+                bytesSent = ::send(sockfd, buffer, bufferSize, MSG_NOSIGNAL);
                 
                 if (bytesSent == 0)
                         break;
 
                 else if (bytesSent < 0)
-                        break;
+                        throw SendSockEx();
 
                 buffer += bytesSent;
                 bufferSize -= bytesSent;

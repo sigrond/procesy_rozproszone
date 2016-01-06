@@ -83,6 +83,35 @@ const char * ListenSockEx::what() const noexcept
         return error.c_str();
 }
 
+
+SendSockEx::~SendSockEx() {}
+
+SendSockEx::SendSockEx()
+{
+        error = "Listen() error: ";
+        error += strerror( errno );
+}
+
+const char * SendSockEx::what() const noexcept
+{
+        return error.c_str();
+}
+
+
+
+RecSockEx::~RecSockEx() {}
+
+RecSockEx::RecSockEx()
+{
+        error = "Listen() error: ";
+        error += strerror( errno );
+}
+
+const char * RecSockEx::what() const noexcept
+{
+        return error.c_str();
+}
+
 TimeoutEx::~TimeoutEx() {}
 
 TimeoutEx::TimeoutEx()

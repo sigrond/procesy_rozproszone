@@ -84,6 +84,28 @@ private:
         std::string error;
 };
 
+class SendSockEx : public SockEx
+{
+public:
+        SendSockEx();
+        virtual ~SendSockEx();
+        virtual const char* what() const noexcept;
+
+private:
+        std::string error;
+};
+
+class RecSockEx : public SockEx
+{
+public:
+        RecSockEx();
+        virtual ~RecSockEx();
+        virtual const char* what() const noexcept;
+
+private:
+        std::string error;
+};
+
 class TimeoutEx : public SockEx
 {
 public:
