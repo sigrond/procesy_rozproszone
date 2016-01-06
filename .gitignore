@@ -41,3 +41,6 @@
 
 application/client/lotc_console/lotc_console.cbp
 application/client/lotc_console/lotc_console.layout
+
+application/client/bin/Debug/konsola
+application/server/bin/Debug/server
