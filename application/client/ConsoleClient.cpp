@@ -39,13 +39,19 @@ void ConsoleClient::start()
             try
             {
                 Ipv4 serverip = Ipv4(arg[1]);
+            	#ifdef _DEBUG
+            	cout<<"próbuję się połączyć z: "<<serverip.getAddress()<<endl;
+            	#endif // _DEBUG
                 //connected = connect(serverip);
                 pingMessage* m1=new pingMessage(message::State::REQ);
                 Message* m2=nullptr;
                 connectionManager->send(serverip,*m1);
+                #ifdef _DEBUG
+                cout<<"ping do serwera LOTC wysłany"<<endl;
+                #endif // _DEBUG
 				connectionManager->receive(serverip,m2);
 				connected=true;
-                if (connected == 1) cout<<"Pomyslnie polaczono z serwerem";
+                if (connected == true) cout<<"Pomyslnie polaczono z serwerem";
             }
             catch(BadIpException)
             {

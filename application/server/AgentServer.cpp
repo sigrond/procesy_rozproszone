@@ -98,7 +98,24 @@ void AgentServer::listen(Slave* who)
 		#ifdef _DEBUG
 		cout<<"nasłuchiwanie agenta IP: "<<((Ipv4*)who->getSlaveIP())->getAddress()<<endl;
 		#endif // _DEBUG
-		connectionManager->receive(*static_cast<Ipv4*>(who->getSlaveIP()),m);
+		try
+		{
+			connectionManager->receive(*static_cast<Ipv4*>(who->getSlaveIP()),m);
+		}
+		catch(...)
+		{
+			if(who->getTask()==nullptr)
+			{
+				who->ready=false;
+			}
+			else
+			{
+				/**< \todo sprawdzić, czemu był timeout */
+				who->getTask()->underExecution=false;
+				who->getTask()->done=false;
+			}
+			return;
+		}
 		#ifdef _DEBUG
 		cout<<"AgentServer::listen odebrano: "<<m<<endl;
 		#endif // _DEBUG

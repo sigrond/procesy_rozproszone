@@ -38,7 +38,8 @@ AdminServer::AdminServer() :
 	connectionManager(nullptr),
 	adminIP(nullptr),
 	shutDown(false),
-	port(50000)
+	port(50000),
+	state(-1)
 {
 	#ifdef _DEBUG
 	std::clog<<"AdminServer::AdminServer()\n";
@@ -92,13 +93,25 @@ void AdminServer::listen()
 	#endif // _DEBUG
 	message::Message* m=nullptr;
 	//m=connection->receive();
-	connectionManager->receive(*static_cast<Ipv4*>(adminIP),m);/**< \todo co się stanie jak nie znamy adresu admina? */
+	state=0;
+	try
+	{
+		connectionManager->receive(*static_cast<Ipv4*>(adminIP),m);/**< \todo co się stanie jak nie znamy adresu admina? */
+	}
+	catch(...)
+	{
+		return;
+	}
 	blockingQueue->push_back(new Event(MESSAGE_FROM_ADMIN_SERVER,m));
 }
 
 void AdminServer::connect(message::Message* m)
 {
-	connectionManager->send(*static_cast<Ipv4*>(adminIP),*m,port);
+	/*if(state==-1)
+		cout<<"adminserver state -1 najpierw listen"<<endl;
+	if(state==0 || state=1)*/
+		connectionManager->send(*static_cast<Ipv4*>(adminIP),*m,port);
+
 }
 
 void AdminServer::setBlockingQueue(BlockingQueue<Event*>* q)
