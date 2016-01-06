@@ -22,7 +22,7 @@ ConsoleClient::ConsoleClient() : shutDown(false),taskCount(0)
 {
     connected = false;
     requestAnswered = 1;
-    connectionManager=ConnectionManager::getInstance(50000);
+    connectionManager=ConnectionManager::getInstance(55000);
     serverip=Ipv4("127.0.0.1");
 }
 

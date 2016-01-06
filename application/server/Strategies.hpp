@@ -312,7 +312,7 @@ public:
 			else if(pm->getState()==(unsigned char)message::State::ACK)
 			{
 				#ifdef _DEBUG
-				cout<<"konsola administratora odpowiedział na ping ACK"<<endl;
+				cout<<"konsola administratora odpowiedziała na nasze ping ACK"<<endl;
 				#endif // _DEBUG
 				/**< to chyba niepotrzebne */
 				/**< powinien być jeszcze osobny komunikat, szkoda, bo jest ryzyko zapętlenia, jeśli będzie ACK ACK */
