@@ -225,7 +225,17 @@ void ConsoleClient::listenAndRecognize()
 	while(!shutDown)
 	{
 		Message* m=nullptr;
-		connectionManager->receive(serverip,m,55555);
+		try
+		{
+            connectionManager->receive(serverip,m,55555);
+		}
+		catch(...)
+		{
+            #ifdef _DEBUG
+            cout<<"wyjątek z recive, powtarzam"<<endl;
+            #endif // _DEBUG
+            continue;
+		}
 		#ifdef _DEBUG
 		cout<<"ConsoleClient::listenAndRecognize() coś odebrało"<<endl;
 		#endif // _DEBUG
@@ -282,7 +292,17 @@ void ConsoleClient::sendFromQueue()
 		m=q.pop_front();
 		if(!shutDown)
 		{
-			connectionManager->send(serverip,*m,55555);
+            try
+            {
+                connectionManager->send(serverip,*m,55555);
+            }
+            catch(...)
+            {
+                #ifdef _DEBUG
+                cout<<"wyjątek send, powtarzam"<<endl;
+                #endif // _DEBUG
+                continue;
+            }
 			#ifdef _DEBUG
 			cout<<"coś wysłano"<<endl;
 			#endif // _DEBUG
