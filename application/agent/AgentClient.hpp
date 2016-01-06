@@ -50,6 +50,7 @@ private:
 	/**metoda czytająca kod wiadomości, na jego podstawie wywołuje odpowiednie funkcje*/
 	void readMsg (message::Message *msg);
 
+    unsigned short port;
 
 };
 

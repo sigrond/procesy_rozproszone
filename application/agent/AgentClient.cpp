@@ -4,23 +4,25 @@
  */
 
 #include "AgentClient.hpp"
+#include <string>
 using namespace message;
+using namespace std;
 
-AgentClient::AgentClient()
+AgentClient::AgentClient() : port(46000)
 {
 
-    connectionManager = ConnectionManager::getInstance();
+    connectionManager = ConnectionManager::getInstance(port);
 	connected = false;
 	working = false;
 	shutDown = false;
-	serverIP = nullptr;
+	serverIP = new Ipv4(string("127.0.0.1"));
 
 
 };
 
-AgentClient::AgentClient(Ip &ip)
+AgentClient::AgentClient(Ip &ip) : port(46000)
 {
-    connectionManager = ConnectionManager::getInstance();
+    connectionManager = ConnectionManager::getInstance(port);
 	connected = false;
 	working = false;
 	shutDown = false;
@@ -39,7 +41,17 @@ void AgentClient::start()
 void AgentClient::listen()
 {
 	message::Message *msg = nullptr;
-	connectionManager->receive( *((Ipv4*)serverIP), msg);
+	try
+	{
+        connectionManager->receive( *((Ipv4*)serverIP), msg);
+	}
+	catch(...)
+	{
+        #ifdef _DEBUG
+        cout<<"wyjątek recive"<<endl;
+        #endif // _DEBUG
+        return;
+	}
 	/** TO DO  rozszyfrowac wiadomosc */
 	if (msg != nullptr)
 	{
@@ -49,7 +61,21 @@ void AgentClient::listen()
 };
 void AgentClient::send( message::Message *msg)
 {
-	connectionManager->send(*((Ipv4*)serverIP), *msg);
+    bool notSent=true;
+    while(notSent)
+    {
+        try
+        {
+            connectionManager->send(*((Ipv4*)serverIP), *msg);
+            notSent=false;
+        }
+        catch(...)
+        {
+            #ifdef _DEBUG
+            cout<<"wyjątek send"<<endl;
+            #endif // _DEBUG
+        }
+    }
 };
 
 void AgentClient::readMsg( message::Message *msg)
