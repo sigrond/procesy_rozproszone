@@ -18,11 +18,18 @@ void rec ( ConnectionManager * cm, Ipv4 * ip, unsigned port )
 	if( msg1 )
 	{
 		msg1->print();
-		std::vector<Ipv4> v = static_cast<message::hostMessage*>(msg1) -> getAddresses();
-
-		for(Ipv4 i : v)
-			DBG( "IP: " << i.getAddress() );
 	}
+	
+	Message * msg2 = new fileMessage( State::ACK );
+        Message * msg3 = new fileMessage( State::OK );
+
+	cm->send( *ip, *msg2, port + 55555 );
+
+	msg2->print();
+
+	cm->send( *ip, *msg3, port + 55555 );
+
+	msg3->print();
 
 	cm->receive( *ip, msg1, port + 55555 );
 
@@ -69,18 +76,18 @@ int main( int argc, char** argv)
 
 		getchar();
 
-		std::thread * t[agents * 2];
+		std::thread * t[agents];
 
 		for(unsigned i = 0; i < agents; ++i )
 		{
-			t[2 * i] = new std::thread (rec, mietek, &ip, i+1 );
-			getchar();
-			t[2 * i + 1] = new std::thread (send_, mietek, &ip, i+1 );
+			t[i] = new std::thread (rec, mietek, &ip, i+1 );
+			//getchar();
+			//t[2 * i + 1] = new std::thread (send_, mietek, &ip, i+1 );
 		}
 
                 getchar();
 
-		for(unsigned i = 0; i < agents*2; ++i )
+		for(unsigned i = 0; i < agents; ++i )
 		{
 			t[i]->join();
 			delete t[i];

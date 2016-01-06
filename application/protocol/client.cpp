@@ -10,7 +10,15 @@ void rec ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
 {
 	Message * msg1 = nullptr;
 
+        
+	std::string fname = "testfile";
 
+	Message * msg2 = new fileMessage( State::REQ, true, 3, fname );
+        Message * msg3 = new fileMessage( State::ACK );
+
+	cm->send( *ip, *msg2, port + 55555 );
+
+	msg2->print();
 
 	cm->receive( *ip, msg1, port + 55555 );
 
@@ -21,6 +29,10 @@ void rec ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
 
 	if( msg1 )
 		msg1->print();
+
+	cm->send( *ip, *msg3, port + 55555 );
+
+	msg3->print();
 
 
 }
@@ -65,15 +77,15 @@ int main( int argc, char** argv)
 
 		std::thread * tq;
 
-		std::thread t_ (send_, mietek, &ip, 0 );
+		//std::thread t_ (send_, mietek, &ip, 0 );
 
-		getchar();
+		//getchar();
 		std::thread t (rec, mietek, &ip, 0 );
 
                 getchar();
 
 		t.join();
-		t_.join();
+		//t_.join();
         }
         else
         {
