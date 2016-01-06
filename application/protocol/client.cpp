@@ -4,6 +4,7 @@
 using namespace message;
 #include <thread>
 #include <iostream>
+#include <fstream>
 #include <cstdlib>
 
 void rec ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
@@ -11,10 +12,13 @@ void rec ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
 	Message * msg1 = nullptr;
 
         
-	std::string fname = "./testfile";
+	std::string fname = "testfile";
 
-	Message * msg2 = new fileMessage( State::REQ, true, 3, fname );
-        Message * msg3 = new fileMessage( State::ACK );
+	std::ifstream in(fname);
+	
+
+	Message * msg2 = new retMessage( State::REQ, 2, 3, fname );
+        Message * msg3 = new retMessage( State::ACK );
 
 	cm->send( *ip, *msg2, port + 55555 );
 

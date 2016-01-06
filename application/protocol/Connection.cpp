@@ -122,12 +122,6 @@ void Connection::recFile ( message::Message * & message )
 	if( ( buffer[0] & 0x80 ) == 0x00 )
 		isMainF = true;
 
-	DBG((unsigned char)buffer[0])
-	DBG((unsigned char)buffer[1])
-	DBG((unsigned char)buffer[2])
-	DBG((unsigned char)buffer[3])
-	DBG((unsigned char)buffer[4])
-
 	unsigned short checksum = 0;
 	checksum  = (unsigned char)buffer[1];
 	checksum += (unsigned char)buffer[2] << 8;
@@ -159,17 +153,8 @@ void Connection::recFile ( message::Message * & message )
 
 	boost::crc_optimal<16, 0x1021, 0xFFFF, 0, false, false>  crc;
 
-	DBG( "fSize: " << filesize )
-	DBG("namesize:" << (unsigned)fnameSize)
-	
 	for(unsigned long i = 0; i < filesize; ++i )
-	{
-		DBG( fbuf[ fileStart + i ] );
 		crc.process_byte( fbuf[ fileStart + i ] );
-	}
-
-	DBG( "checksum: " << checksum )
-	DBG( "CRC: " << crc() )
 
 	if( checksum != crc() )
 		throw "CRC Fail."; // TODO klasa wyjątku
@@ -253,6 +238,49 @@ void Connection::recHost ( message::Message * & message, char code )
 }
 void Connection::recRet ( message::Message * & message )
 {
+	char * buffer = new char [11];
+	memset( buffer, 0, sizeof( buffer ) );
+	socket->recv( buffer, 11 );
+
+	unsigned char exitStatus = (unsigned char)buffer[0];
+
+	unsigned char fnameSize = (unsigned char)buffer[1];
+
+	unsigned long taskId = 0;
+	taskId += (unsigned long)buffer[3];
+	taskId += (unsigned long)buffer[4] << 8;
+	taskId += (unsigned long)buffer[5] << 16;
+	taskId += (unsigned long)buffer[6] << 24;
+
+	unsigned long filesize = 0;
+	filesize += (unsigned long)buffer[7];
+	filesize += (unsigned long)buffer[8] << 8;
+	filesize += (unsigned long)buffer[9] << 16;
+	filesize += (unsigned long)buffer[10] << 24;
+
+	delete [] buffer;
+
+	char * fbuf = new char [ filesize + fnameSize ];
+	memset( fbuf, 0, sizeof( fbuf ) );
+	socket->recv( fbuf, filesize + fnameSize );
+
+	std::string filename;
+
+	for(unsigned short i = 0; i < fnameSize; ++i )
+		filename.push_back( fbuf[i] );
+	
+	unsigned long fileStart = fnameSize;
+
+	std::ofstream out ( filename );
+	
+	for(unsigned long i = 0; i < filesize; ++i )
+		out << fbuf[ fileStart + i ]; 
+
+	out.close();
+
+	delete [] fbuf;
+
+	message = new message::retMessage( message::State::REQ, exitStatus, taskId, filename );
 
 }
 

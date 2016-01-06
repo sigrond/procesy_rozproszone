@@ -20,8 +20,8 @@ void rec ( ConnectionManager * cm, Ipv4 * ip, unsigned port )
 		msg1->print();
 	}
 	
-	Message * msg2 = new fileMessage( State::ACK );
-        Message * msg3 = new fileMessage( State::OK );
+	Message * msg2 = new retMessage( State::ACK );
+        Message * msg3 = new retMessage( State::OK );
 
 	cm->send( *ip, *msg2, port + 55555 );
 

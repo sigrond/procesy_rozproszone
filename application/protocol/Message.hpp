@@ -173,14 +173,11 @@ namespace message
                 unsigned long getTaskId();
 
                 std::string getFilename();
-
-                std::fstream & getFile();
 		
 	private:
 		unsigned char exitStatus;
 		unsigned long taskId;
 		std::string name;
-		std::fstream file;
         };
 
 //------------------------------
