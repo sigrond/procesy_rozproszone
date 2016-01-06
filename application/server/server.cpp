@@ -9,6 +9,7 @@
 #include "AgentServer.hpp"
 #include "Model.hpp"
 #include "Strategies.hpp"
+#include "version.h"
 
 #include <thread>
 #include <iostream>
@@ -45,6 +46,8 @@ int main(int argi, char* argv[])
 			}
 		}
         cout<<"Witamy w serwerze LOTC!"<<endl;
+        cout<<"build:"<<endl;
+        cout<<AutoVersion::FULLVERSION_STRING<<endl;
         Controller* controller=new Controller();/**< kontroler jest sercem serwera, o architekturze zbliżonej do modelu MVC */
         //controller->setAdminServer(new AdminServer());/** AdminServer i AgentServer można traktować jak swego rodzaju widoki MVC */
         Ipv4* adminIP=nullptr;

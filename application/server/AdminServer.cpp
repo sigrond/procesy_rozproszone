@@ -38,7 +38,7 @@ AdminServer::AdminServer() :
 	connectionManager(nullptr),
 	adminIP(nullptr),
 	shutDown(false),
-	port(50000),
+	port(55000),
 	state(-1)
 {
 	#ifdef _DEBUG
@@ -96,7 +96,7 @@ void AdminServer::listen()
 	state=0;
 	try
 	{
-		connectionManager->receive(*static_cast<Ipv4*>(adminIP),m,50000);/**< \todo co się stanie jak nie znamy adresu admina? */
+		connectionManager->receive(*static_cast<Ipv4*>(adminIP),m,port);/**< \todo co się stanie jak nie znamy adresu admina? */
 		#ifdef _DEBUG
 		cout<<"admin recive się odblokowało"<<endl;
 		#endif // _DEBUG
