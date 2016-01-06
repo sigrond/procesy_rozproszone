@@ -50,6 +50,14 @@ public:
      */
     void start();
     void triggerShutDown();
+    /**
+     *-1 - stan początkowy nie ustawione nasłuchiwanie
+     * 0 - nasłuchiwanie na rozpoczęcie
+     * 1 - odebraliśmy komunikat i wysyłamy ACK
+     * 2 - wysłaliśmy ACK i wysyłamy OK lub ERR
+     * 3 - odbieramy ACK i znów nasłychujemy
+     */
+    int state;
 private:
     BlockingQueue<Event*>* blockingQueue;
     ConnectionManager* connectionManager;
