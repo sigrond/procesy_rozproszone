@@ -3,6 +3,8 @@
 	<FileVersion major="1" minor="6" />
 	<Project>
 		<Option title="konsola" />
+		<Option makefile="makefile" />
+		<Option makefile_is_custom="1" />
 		<Option pch_mode="2" />
 		<Option compiler="cygwin" />
 		<Build>
@@ -19,6 +21,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Console.cpp" />
+		<Unit filename="ConsoleClient.cpp" />
+		<Unit filename="ConsoleClient.hpp" />
+		<Unit filename="makefile" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -10,8 +10,11 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <mutex>
+#include <set>
 
 #include "../protocol/ConnectionManager.hpp"
+#include "../server/BlockingQueue.hpp"
 
 using namespace std;
 
@@ -53,6 +56,18 @@ private:
     void checkAnswer();
 
     ConnectionManager* connectionManager;
+
+    BlockingQueue<message::Message*> q;
+
+    void listenAndRecognize();
+
+    void sendFromQueue();
+
+    bool shutDown;
+
+    bool anyResponse;
+    bool pingAck;
+    Ipv4 serverip;
 };
 
 #endif

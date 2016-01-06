@@ -90,6 +90,9 @@ public:
 	{
 		using namespace std;
 		using namespace message;
+		#ifdef _DEBUG
+		cout<<"MessageFromAdminStrategy"<<endl;
+		#endif // _DEBUG
 		unsigned char category, subCategory, state;
 		hostMessage* hm;
 		unsigned int hostsNumber;
@@ -304,9 +307,15 @@ public:
 			if(pm->getState()==(unsigned char)message::State::REQ)
 			{
 				((Controller*)controller)->adminServer->connect(new pingMessage(message::State::ACK));
+				((Controller*)controller)->adminServer->connect(new pingMessage(message::State::OK));
 			}
 			else if(pm->getState()==(unsigned char)message::State::ACK)
 			{
+				#ifdef _DEBUG
+				cout<<"konsola administratora odpowiedział na ping ACK"<<endl;
+				#endif // _DEBUG
+				/**< to chyba niepotrzebne */
+				/**< powinien być jeszcze osobny komunikat, szkoda, bo jest ryzyko zapętlenia, jeśli będzie ACK ACK */
 				((Controller*)controller)->adminServer->connect(new pingMessage(message::State::OK));
 			}
 			else if(pm->getState()==(unsigned char)message::State::OK)
