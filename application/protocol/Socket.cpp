@@ -14,6 +14,7 @@
 #include "Socket.hpp"
 #include <string>
 #include <cstring>
+#include <cerrno>
 
 #include "debug.h"
 
@@ -23,6 +24,12 @@ Socket::Socket( unsigned short port ) : port(port)
 
 Socket::Socket( int msgsock, unsigned short port ) : sockfd( msgsock ), port(port)
 {
+	struct timeval tv;
+
+	tv.tv_sec = 3;  /* 30 Secs Timeout */
+	tv.tv_usec = 0;  // Not init'ing this can cause strange errors
+
+	setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, (char *)&tv,sizeof(struct timeval));
 }
 
 Socket::~Socket() {}
@@ -49,13 +56,14 @@ int Socket::listen()
 
 int Socket::close()
 {
+	DBG("Socket::close()" )
         shutdown( sockfd, 2 );
         return ::close( sockfd );
 }
 
 
 
-SocketIp4::SocketIp4( const Ipv4 & ip, unsigned short port ) : Socket( port ), ip(ip)
+SocketIp4::SocketIp4( const Ipv4 & ip, unsigned short port, bool accSock ) : Socket( port ), ip(ip)
 {
         DBG("SocketIp4( " << ip.getAddress() << " )")
 
@@ -66,6 +74,13 @@ SocketIp4::SocketIp4( const Ipv4 & ip, unsigned short port ) : Socket( port ), i
         saddr.sin_addr.s_addr = ip.getAddressNum();
 
         saddr.sin_port = htons( port );
+
+	struct timeval tv;
+
+	tv.tv_sec = TIMEOUT;
+	tv.tv_usec = 0;
+
+	setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, (char *)&tv,sizeof(struct timeval));
 }
 
 SocketIp4::SocketIp4( int msgsock ) : Socket( msgsock, 0 )
@@ -129,7 +144,10 @@ int SocketIp4::accept()
         int msgsock = ::accept( sockfd, (struct sockaddr *) &saddr, &addrlen  );
 
         if( msgsock == -1 )
-                throw AcceptSockEx();
+		if( errno == EAGAIN || errno == EWOULDBLOCK || errno == EINPROGRESS )
+			throw TimeoutEx();
+		else
+			throw AcceptSockEx();
 
         return msgsock;
 }
@@ -150,7 +168,10 @@ int SocketIp4::recv( char * buffer, int bufferSize )
                         break;
 
                 else if (bytesRec < 0)
-                        break;
+			if( errno == EAGAIN || errno == EWOULDBLOCK || errno == EINPROGRESS )
+				throw TimeoutEx();
+			else
+				throw std::exception();
 
                 buffer += bytesRec;
                 bufferSize -= bytesRec;

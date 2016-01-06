@@ -82,3 +82,15 @@ const char * ListenSockEx::what() const noexcept
 {
         return error.c_str();
 }
+
+TimeoutEx::~TimeoutEx() {}
+
+TimeoutEx::TimeoutEx()
+{
+	error = "Timeout on receive()";
+}
+
+const char * TimeoutEx::what() const noexcept
+{
+	return error.c_str();
+}

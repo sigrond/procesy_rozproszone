@@ -23,6 +23,7 @@
 
 // numer portu zarezerowowany dla serwera
 const unsigned short SERVER_PORT = 55555;
+const unsigned short PORT_SHIFT  = 10000;
 
 /*
  * \brief Singleton zarządzający połączeniami
@@ -87,7 +88,8 @@ private:
 
         std::map<AddressIpv4, Connection *> map4;
         std::map<AddressIpv4, std::condition_variable> receiveGuards;
-        std::map<AddressIpv4, std::mutex> connectionGuards;
+        std::map<AddressIpv4, std::mutex> connectionGuards4out;
+        std::map<AddressIpv4, std::mutex> connectionGuards4in;
 
 	AddressIpv4 lockAddr;
         

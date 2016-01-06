@@ -74,8 +74,7 @@ void Connection::send ( const message::Message & message )
 		socket->send( message.getBuffer(), message.getBufferSize() );
         }
 
-        if( ++counter > 3 )
-                socket->close();
+	socket->close();
 }
 
 void Connection::recTask ( message::Message * & message, char code )
@@ -314,10 +313,10 @@ void Connection::receive ( message::Message * & message )
 		};
 
 		delete code;
-        }
+	}
 
-        if( ++counter > 3 )
-                socket->close();
+        
+	socket->close();
 }
 
 char Connection::getCounter()

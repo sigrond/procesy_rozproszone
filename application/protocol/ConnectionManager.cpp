@@ -31,7 +31,7 @@ void awaitConnections( ConnectionManager * conMan )
                 
                 conMan->map4Mutex.lock();
 
-			AddressIpv4 addr = AddressIpv4( ip, port + 10000 );
+			AddressIpv4 addr = AddressIpv4( ip, port + PORT_SHIFT );
 		
 			Connection ** connection;	
 
@@ -40,8 +40,6 @@ void awaitConnections( ConnectionManager * conMan )
 			else
 				connection = &conMan->map4[ conMan -> lockAddr ];
 
-                        if( *connection == nullptr )
-                        {
                                 DBG("awaitConnections(): connection not found, new connection")
                                 *connection = new Connection( socket );
 
@@ -66,7 +64,6 @@ void awaitConnections( ConnectionManager * conMan )
                                 {
                                         // nic, po protu nikt nie czeka na wiadomość z adresu IP == ip
                                 }
-                        }
 
                 conMan->map4Mutex.unlock();
         }
@@ -84,7 +81,7 @@ ConnectionManager * ConnectionManager::getInstance( unsigned short listenPort )
 ConnectionManager::ConnectionManager( unsigned short listenPort ) : listeningPort(listenPort), lockAddr( AddressIpv4(Ipv4(), 0) )
 {
         DBG("ConnectionManager( " << listenPort << " )")
-        listeningSocket = new SocketIp4( Ipv4(), listenPort );
+        listeningSocket = new SocketIp4( Ipv4(), listenPort, true );
 
         try
         {
@@ -108,34 +105,19 @@ void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg, uns
 {
         DBG("ConMan::send( " << ip.getAddress() << ", " << port << " )")
 
-        map4Mutex.lock();
-		AddressIpv4 addr = AddressIpv4( ip, port );
+	AddressIpv4 addr = AddressIpv4( ip, port );
 
-                Connection * & connection = map4[ addr ];
-
-                if( connection == nullptr )
-                {
-                        DBG("ConMan::send() connection not found, new connection")
-                        connection = new Connection( ip, port, listeningPort - 10000 );
-                }
-
-        map4Mutex.unlock();
+        Connection connection = Connection( ip, port, listeningPort - PORT_SHIFT );
 
         {
                 std::unique_lock<std::mutex> lock( connGuardsMutex );
-                connectionGuards[ addr ].lock();  
+                connectionGuards4in[ addr ].lock();  
         }
 
-        connection->send(msg);
-
-        if( connection->getCounter() > 3 )
-        {
-                delete connection;
-                connection = nullptr;
-        }
+        connection.send(msg);
 
         std::unique_lock<std::mutex> lock( connGuardsMutex );
-        connectionGuards[ addr ].unlock();
+        connectionGuards4in[ addr ].unlock();
 }
 
 void ConnectionManager::receive( const Ipv4 & ip, message::Message * & msg, unsigned short port )
@@ -164,25 +146,22 @@ void ConnectionManager::receive( const Ipv4 & ip, message::Message * & msg, unsi
         lock.unlock(); 
 
         connGuardsMutex.lock();
-        connectionGuards[ addr ].lock();  
+        connectionGuards4out[ addr ].lock();  
         connGuardsMutex.unlock();
 
         connection->receive(msg);
 
-        if( connection->getCounter() > 3 )
-        {
-                delete connection;
-                connection = nullptr;
-        }
+        delete connection;
+        connection = nullptr;
 
         connGuardsMutex.lock();
-        connectionGuards[ addr ].unlock();
+        connectionGuards4out[ addr ].unlock();
         connGuardsMutex.unlock();
 }
 
 void ConnectionManager::remove( const Ipv4 & ip, unsigned short port )
 {
-        DBG("ConMan::remove( " << ip.getAddress() << ", " << port << " )")
+ /*       DBG("ConMan::remove( " << ip.getAddress() << ", " << port << " )")
 
         map4Mutex.lock();
 	
@@ -214,7 +193,7 @@ void ConnectionManager::remove( const Ipv4 & ip, unsigned short port )
 
         connGuardsMutex.lock();
                 connectionGuards.erase( addr );
-        connGuardsMutex.unlock();
+        connGuardsMutex.unlock();*/
 }
 
 void ConnectionManager::send( const Ipv6 & ip, const message::Message & msg, unsigned short port )

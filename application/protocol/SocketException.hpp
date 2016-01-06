@@ -84,4 +84,14 @@ private:
         std::string error;
 };
 
+class TimeoutEx : public SockEx
+{
+public:
+	TimeoutEx();
+	virtual ~TimeoutEx();
+	virtual const char* what() const noexcept;
+private:
+	std::string error;
+};
+
 #endif // SOCKET_EXCEPTION_HPP

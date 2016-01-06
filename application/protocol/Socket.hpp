@@ -20,13 +20,9 @@
 #include "Ip.hpp"
 #include "SocketException.hpp"
 
-// port z dupy wzięty, bardzo możliwe, że tymczasowy
-// port nasłuchiwania komunikatów
-const unsigned short PORT = 55555; 
-
 const unsigned short BACKLOG = 256;
 
-
+const unsigned short TIMEOUT = 10;
 
 class Socket
 {
@@ -63,7 +59,7 @@ protected:
 class SocketIp4 : public Socket
 {
 public:
-        SocketIp4( const Ipv4 & ip, unsigned short port );
+        SocketIp4( const Ipv4 & ip, unsigned short port, bool accSock = false );
 
         SocketIp4( int msgsock );
 
