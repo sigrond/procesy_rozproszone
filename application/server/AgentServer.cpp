@@ -100,7 +100,13 @@ void AgentServer::listen(Slave* who)
 		#endif // _DEBUG
 		try
 		{
+			#ifdef _DEBUG
+			cout<<"czekamy na agent recive"<<endl;
+			#endif // _DEBUG
 			connectionManager->receive(*static_cast<Ipv4*>(who->getSlaveIP()),m,who->port);
+			#ifdef _DEBUG
+			cout<<"agent recive zakończyło"<<endl;
+			#endif // _DEBUG
 		}
 		catch(...)
 		{
