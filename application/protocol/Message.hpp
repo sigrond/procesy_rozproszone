@@ -67,9 +67,9 @@ namespace message
 		unsigned long bufferSize;
         };
 
-	//------------------------------
-	// hostMessage
-	//------------------------------
+//------------------------------
+// hostMessage
+//------------------------------
         class hostMessage : public Message
         {
         public:
@@ -80,15 +80,14 @@ namespace message
                 unsigned short getAgentCount() const;
 
                 std::vector<Ipv4> & getAddresses();
-		private:
-			HostSub sub;
-			State state;
-			std::vector<Ipv4> addresses;
+	
+	private:
+		std::vector<Ipv4> addresses;
         };
 
-	//------------------------------
-	// taskMessage
-	//------------------------------
+//------------------------------
+// taskMessage
+//------------------------------
         class taskMessage : public Message
         {
         public:
@@ -111,16 +110,15 @@ namespace message
 	
 	private:
 		TaskSub taskSub;
-		State state;
 		bool respectPriority;
 		unsigned short priority;
 		unsigned long taskId;
 		std::chrono::steady_clock::time_point time;
         };
 
-	//------------------------------
-	// depMessage
-	//------------------------------
+//------------------------------
+// depMessage
+//------------------------------
         class depMessage : public Message
         {
         public:
@@ -138,6 +136,9 @@ namespace message
 		std::vector<unsigned long> tasks;
         };
 
+//------------------------------
+// fileMessage
+//------------------------------
         class fileMessage : public Message
         {
         public:
@@ -151,15 +152,15 @@ namespace message
 
                 std::string getFilename();
 
-                std::fstream & getFile();
-		private:
-			State state;
-			bool isMainFile;
-			unsigned long taskId;
-			std::string name;
-			std::fstream file;
+	private:
+		bool isMainFile;
+		unsigned long taskId;
+		std::string name;
         };
 
+//------------------------------
+// retMessage
+//------------------------------
         class retMessage : public Message
         {
         public:
@@ -174,32 +175,37 @@ namespace message
                 std::string getFilename();
 
                 std::fstream & getFile();
-		private:
-			State state;
-			unsigned char exitStatus;
-			unsigned long taskId;
-			std::string name;
-			std::fstream file;
+		
+	private:
+		unsigned char exitStatus;
+		unsigned long taskId;
+		std::string name;
+		std::fstream file;
         };
 
+//------------------------------
+// synMessage
+//------------------------------
         class synMessage : public Message
         {
         public:
                 synMessage ( State state );
 
-		synMessage ( char * buffer, unsigned long bufferSize );
         };
 
+//------------------------------
+// pingMessage
+//------------------------------
         class pingMessage : public Message
         {
         public:
                 pingMessage ( State state );
 
-		pingMessage ( char * buffer, unsigned long bufferSize );
-	private:
-		State state;
         };
 
+//------------------------------
+// errMessage
+//------------------------------
         class errMessage : public Message
         {
         public:
@@ -208,6 +214,9 @@ namespace message
                 errMessage ( State state );
 
                 unsigned char getErrCode () const;
+	
+	private:
+		unsigned char errCode;
         };
 
 }
