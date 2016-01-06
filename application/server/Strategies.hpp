@@ -91,7 +91,7 @@ public:
 		using namespace std;
 		using namespace message;
 		#ifdef _DEBUG
-		cout<<"MessageFromAdminStrategy"<<endl;
+		cout<<"MessageFromAdminStrategy..."<<endl;
 		#endif // _DEBUG
 		unsigned char category, subCategory, state;
 		hostMessage* hm;
@@ -356,6 +356,9 @@ public:
 	{
 		using namespace std;
 		using namespace message;
+		#ifdef _DEBUG
+		cout<<"MessageFromAgentStrategy..."<<endl;
+		#endif // _DEBUG
 		unsigned char category, subCategory, state;
 		category=((Message*)data)->getCategory();
 		taskMessage* tm;

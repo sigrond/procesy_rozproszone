@@ -7,6 +7,7 @@
 
 #include "ConsoleClient.hpp"
 #include <thread>
+#include <chrono>
 
 extern bool demo;
 
@@ -17,9 +18,9 @@ extern bool demo;
 using namespace std;
 using namespace message;
 
-ConsoleClient::ConsoleClient() : shutDown(false)
+ConsoleClient::ConsoleClient() : shutDown(false),taskCount(0)
 {
-    connected = 0;
+    connected = false;
     requestAnswered = 1;
     connectionManager=ConnectionManager::getInstance(50000);
     serverip=Ipv4("127.0.0.1");
@@ -41,6 +42,11 @@ void ConsoleClient::start()
         {
         	command=CON;
         	arg[1]="127.0.0.1";
+        	if(connected)
+			{
+				command=ADD;
+				arg[1]="test";//teoretyczny plik zadania
+			}
         }
         else
 		{
@@ -66,30 +72,23 @@ void ConsoleClient::start()
             	#ifdef _DEBUG
             	cout<<"próbuję się połączyć z: "<<serverip.getAddress()<<endl;
             	#endif // _DEBUG
-                //connected = connect(serverip);
                 anyResponse=false;
                 pingAck=false;
                 pingMessage* m1=new pingMessage(message::State::REQ);
                 Message* m2=nullptr;
                 pingMessage* m3=new pingMessage(message::State::ACK);
                 pingMessage* m4=new pingMessage(message::State::OK);
-                //connectionManager->send(serverip,*m1,55555);
                 q.push_back(m1);
                 #ifdef _DEBUG
                 cout<<"ping do serwera LOTC wysłany"<<endl;
                 #endif // _DEBUG
-				//connectionManager->receive(serverip,m2,55555);
 				while(!anyResponse);
 				if(pingAck)
 				{
 					q.push_back(m4);
 				}
-				//m2->print();
-				//connectionManager->receive(serverip,m2,55555);
-				//m2->print();
-				//connectionManager->send(serverip,*m3,55555);
 				connected=true;
-                if (connected == true) cout<<"Pomyslnie polaczono z serwerem";
+                if (connected == true) cout<<"Pomyslnie polaczono z serwerem\n";
             }
             catch(BadIpException)
             {
@@ -101,6 +100,58 @@ void ConsoleClient::start()
             if (connected)
             {
                 //przygotowanie do wyslania wiadomosci do serwera
+                pingMessage* m1=new pingMessage(message::State::REQ);
+                fileAck=false;
+                fileMessage* fm=new fileMessage(State::REQ,true,++taskCount,arg[1]);
+                #ifdef _DEBUG
+                cout<<"wysyłam plik"<<endl;
+                #endif // _DEBUG
+                q.push_back(fm);
+                unsigned long long stoper=0;
+                while(!fileAck && stoper<=3000000000)
+				{
+					stoper++;
+					if(stoper>2000000000)
+					{
+						stoper=0;
+						#ifdef _DEBUG
+						cout<<"wysyłam dodatkowy ping REQ, bo coś nie widzę odpowiedzi o pliku i powtarzam przesłanie pliku"<<endl;
+						#endif // _DEBUG
+						q.push_back(m1);
+						q.push_back(fm);
+					}
+				}
+                taskAck=false;
+                taskMessage* tm=new taskMessage(TaskSub::T_ADD,State::REQ,false,0,taskCount,chrono::steady_clock::now());
+                #ifdef _DEBUG
+                cout<<"wysyłam zadanie ADD"<<endl;
+                #endif // _DEBUG
+                q.push_back(tm);
+                while(!fileAck && stoper<=3000000000)
+				{
+					stoper++;
+					if(stoper>2000000000)
+					{
+						stoper=0;
+						q.push_back(fm);
+					}
+				}
+                taskAck=false;
+                tm=new taskMessage(TaskSub::T_RUN,State::REQ,false,0,taskCount,chrono::steady_clock::now());
+                #ifdef _DEBUG
+                cout<<"wysyłam zadanie RUN"<<endl;
+                #endif // _DEBUG
+                q.push_back(tm);
+                while(!fileAck && stoper<=3000000000)
+				{
+					stoper++;
+					if(stoper>2000000000)
+					{
+						stoper=0;
+						q.push_back(fm);
+					}
+				}
+                cout<<"zadanie zlecone"<<endl;
             }
             else
             {
@@ -148,6 +199,7 @@ int ConsoleClient::readCommand(string* arg)
     //sprawdzanie wprowadzonej komendy
     if (arg[0].compare("exit")==0) command = EXT;
     else if (arg[0].compare("connect")==0) command = CON;
+    else if(arg[0].compare("add")==0) command = CON;
 
     return command;
 }
@@ -182,13 +234,41 @@ void ConsoleClient::listenAndRecognize()
 		{
 			if(m->getCategory()==(unsigned char)Category::PING)
 			{
+				#ifdef _DEBUG
+				cout<<"odebrane ping REQ, odsyłamy ACK"<<endl;
+				#endif // _DEBUG
 				pingMessage* pm1=new pingMessage(State::ACK);
 				q.push_back(pm1);
+			}
+			if(m->getCategory()==(unsigned char)Category::RET)
+			{
+				cout<<"dostaliśmy wynik zadania"<<endl;
+				m->print();
 			}
 		}
 		else if(m->getState()==(unsigned char)State::ACK)
 		{
+			if(m->getCategory()==(unsigned char)Category::PING)
+			{
+				#ifdef _DEBUG
+				cout<<"odebrane ping ACK"<<endl;
+				#endif // _DEBUG
+			}
 			/**< można by coś odesłać, a le w tej chwile nie ma to sensu */
+			if(m->getCategory()==(unsigned char)Category::FILE)
+			{
+				#ifdef _DEBUG
+				cout<<"odebrane file ACK"<<endl;
+				#endif // _DEBUG
+				fileAck=true;
+			}
+			if(m->getCategory()==(unsigned char)Category::TASK)
+			{
+				#ifdef _DEBUG
+				cout<<"odebrane task ACK"<<endl;
+				#endif // _DEBUG
+				taskAck=true;
+			}
 		}
 		anyResponse=true;
 	}
@@ -203,6 +283,9 @@ void ConsoleClient::sendFromQueue()
 		if(!shutDown)
 		{
 			connectionManager->send(serverip,*m,55555);
+			#ifdef _DEBUG
+			cout<<"coś wysłano"<<endl;
+			#endif // _DEBUG
 		}
 
 	}
