@@ -324,15 +324,20 @@ fileMessage::fileMessage(State s,
 
 	unsigned short fnameSize = filename.size();
 
-	unsigned long fileSize;
+	unsigned long fileSize = 0;
 
-	uint16_t checkSum;
+	unsigned short checkSum;
 
-	std::ifstream in1 ( filename, std::ifstream::ate );
-	fileSize = in1.tellg();
-	in1.close();
+	std::ifstream in ( filename );
+	
+	in.ignore( std::numeric_limits<std::streamsize>::max() );
+	std::streamsize length = in.gcount();
+	in.clear();   //  Since ignore will have set eof.
+	in.seekg( 0, std::ios_base::beg );
 
-	std::ifstream in2 ( filename );
+	fileSize = length;
+
+	DBG("fSize: " << fileSize )
 
 	bufferSize = 12 + fnameSize + fileSize;
 
@@ -362,7 +367,7 @@ fileMessage::fileMessage(State s,
 	for(unsigned short i = 0; i < fnameSize; ++i )
 		buffer[ 12 + i ] = filename[i];
 
-	unsigned long currIndex = 11 + fnameSize; 
+	unsigned long currIndex = 12 + fnameSize; 
 
 	char c;
 
@@ -370,17 +375,23 @@ fileMessage::fileMessage(State s,
 
 	for(unsigned long i = 0; i < fileSize; ++i )
 	{
-		in2 >> c;
+		in.get(c);
+		DBG(c)
 		crc.process_byte (c);
 		buffer[ currIndex + i ] = c;
 	}
 
-	in2.close();
+	in.close();
 
 	checkSum = crc();
 
+	DBG( "CRC: "<<crc() );
+
 	buffer[2] = checkSum & 0x00FF;
 	buffer[3] = ( checkSum >> 8 ) & 0x00FF;
+
+	DBG( "fSize: " << fileSize )
+	DBG("namesize:" << fnameSize)
 }
 
 fileMessage::fileMessage ( State s ) :

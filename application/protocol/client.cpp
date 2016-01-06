@@ -11,7 +11,7 @@ void rec ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
 	Message * msg1 = nullptr;
 
         
-	std::string fname = "testfile";
+	std::string fname = "./testfile";
 
 	Message * msg2 = new fileMessage( State::REQ, true, 3, fname );
         Message * msg3 = new fileMessage( State::ACK );
