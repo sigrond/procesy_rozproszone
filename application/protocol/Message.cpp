@@ -6,6 +6,8 @@
  */
 
 #include <iostream>
+#include <fstream>
+#include <boost/crc.hpp>
 
 #include "Message.hpp"
 #include "debug.h"
@@ -318,6 +320,65 @@ fileMessage::fileMessage(State s,
 	taskId(tId),
 	name(filename)
 {
+	code += (unsigned char)s;
+
+	unsigned short fnameSize = filename.size();
+
+	unsigned long fileSize;
+
+	uint16_t checkSum;
+
+	std::ifstream in1 ( filename, std::ifstream::ate );
+	fileSize = in1.tellg();
+	in1.close();
+
+	std::ifstream in2 ( filename );
+
+	bufferSize = 12 + fnameSize + fileSize;
+
+	buffer = new char [bufferSize];
+
+	buffer[0] = code;
+
+	unsigned char second = fnameSize & 0x7F;
+
+	if( !isMainF )
+		second | 0x80;	
+
+	buffer[1] = second;
+	buffer[2] = 0;
+	buffer[3] = 0;
+
+	buffer[4] =   tId         & 0x00FF;
+	buffer[5] = ( tId >> 8 )  & 0x00FF;
+	buffer[6] = ( tId >> 16 ) & 0x00FF;
+	buffer[7] = ( tId >> 24 ) & 0x00FF;
+
+	buffer[8]  =   fileSize          & 0x00FF;
+	buffer[9]  = ( fileSize  >> 8 )  & 0x00FF;
+	buffer[10] = ( fileSize  >> 16 ) & 0x00FF;
+	buffer[11] = ( fileSize  >> 24 ) & 0x00FF;
+
+	for(unsigned short i = 0; i < fnameSize; ++i )
+		buffer[ 12 + i ] = filename[i];
+
+	unsigned long currIndex = 11 + fnameSize; 
+
+	char c;
+
+	boost::crc_optimal<16, 0x1021, 0xFFFF, 0, false, false>  crc;
+
+	for(unsigned long i = 0; i < fileSize; ++i )
+	{
+		in2 >> c;
+		crc.process_byte (c);
+		buffer[ currIndex + i ] = c;
+	}
+
+	checkSum = crc();
+
+	buffer[2] = checkSum & 0x00FF;
+	buffer[3] = ( checkSum >> 8 ) & 0x00FF;
 	//taskId=tId;
 	//name=filename;
 	/** \author Tomasz Jakubczyk

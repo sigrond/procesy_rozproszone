@@ -63,16 +63,7 @@ void Connection::send ( const message::Message & message )
 {
         DBG("Conn::send()")
 
-        if( counter < 4 )
-        {
-                // int i = roll(); 
-
-                // socket->send( pasta[i], sizeof( pasta[i] ) / sizeof( char ) );
-		
-		
-		
-		socket->send( message.getBuffer(), message.getBufferSize() );
-        }
+	socket->send( message.getBuffer(), message.getBufferSize() );
 
 	socket->close();
 }
