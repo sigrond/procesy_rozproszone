@@ -122,21 +122,27 @@ void Connection::recFile ( message::Message * & message )
 	if( ( buffer[0] & 0x80 ) == 0x00 )
 		isMainF = true;
 
-	uint16_t checksum = 0;
-	checksum += buffer[1];
-	checksum += buffer[2] << 8;
+	DBG((unsigned char)buffer[0])
+	DBG((unsigned char)buffer[1])
+	DBG((unsigned char)buffer[2])
+	DBG((unsigned char)buffer[3])
+	DBG((unsigned char)buffer[4])
+
+	unsigned short checksum = 0;
+	checksum  = (unsigned char)buffer[1];
+	checksum += (unsigned char)buffer[2] << 8;
 
 	unsigned long taskId = 0;
-	taskId += buffer[3];
-	taskId += buffer[4] << 8;
-	taskId += buffer[5] << 16;
-	taskId += buffer[6] << 24;
+	taskId += (unsigned long)buffer[3];
+	taskId += (unsigned long)buffer[4] << 8;
+	taskId += (unsigned long)buffer[5] << 16;
+	taskId += (unsigned long)buffer[6] << 24;
 
 	unsigned long filesize = 0;
-	filesize += buffer[7];
-	filesize += buffer[8] << 8;
-	filesize += buffer[9] << 16;
-	filesize += buffer[10] << 24;
+	filesize += (unsigned long)buffer[7];
+	filesize += (unsigned long)buffer[8] << 8;
+	filesize += (unsigned long)buffer[9] << 16;
+	filesize += (unsigned long)buffer[10] << 24;
 
 	delete [] buffer;
 
@@ -147,14 +153,23 @@ void Connection::recFile ( message::Message * & message )
 	std::string filename;
 
 	for(unsigned short i = 0; i < fnameSize; ++i )
-		filename.push_back( fbuf[ 11 + i ] );
-
-	unsigned long fileStart = 11 + fnameSize;
+		filename.push_back( fbuf[i] );
+	
+	unsigned long fileStart = fnameSize;
 
 	boost::crc_optimal<16, 0x1021, 0xFFFF, 0, false, false>  crc;
 
+	DBG( "fSize: " << filesize )
+	DBG("namesize:" << (unsigned)fnameSize)
+	
 	for(unsigned long i = 0; i < filesize; ++i )
+	{
+		DBG( fbuf[ fileStart + i ] );
 		crc.process_byte( fbuf[ fileStart + i ] );
+	}
+
+	DBG( "checksum: " << checksum )
+	DBG( "CRC: " << crc() )
 
 	if( checksum != crc() )
 		throw "CRC Fail."; // TODO klasa wyjątku
@@ -162,7 +177,7 @@ void Connection::recFile ( message::Message * & message )
 	std::ofstream out ( filename );
 	
 	for(unsigned long i = 0; i < filesize; ++i )
-		out << buffer[ fileStart + i ]; 
+		out << fbuf[ fileStart + i ]; 
 
 	out.close();
 
