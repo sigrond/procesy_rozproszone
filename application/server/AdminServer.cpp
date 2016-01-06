@@ -96,6 +96,9 @@ void AdminServer::listen()
 	state=0;
 	try
 	{
+		#ifdef _DEBUG
+		cout<<"oczekiwanie na admin recive"<<endl;
+		#endif // _DEBUG
 		connectionManager->receive(*static_cast<Ipv4*>(adminIP),m,port);/**< \todo co się stanie jak nie znamy adresu admina? */
 		#ifdef _DEBUG
 		cout<<"admin recive się odblokowało"<<endl;

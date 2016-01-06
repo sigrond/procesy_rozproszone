@@ -311,7 +311,7 @@ public:
 			if(pm->getState()==(unsigned char)message::State::REQ)
 			{
 				((Controller*)controller)->adminServer->connect(new pingMessage(message::State::ACK));
-				((Controller*)controller)->adminServer->connect(new pingMessage(message::State::OK));
+				//((Controller*)controller)->adminServer->connect(new pingMessage(message::State::OK));
 			}
 			else if(pm->getState()==(unsigned char)message::State::ACK)
 			{
@@ -320,7 +320,7 @@ public:
 				#endif // _DEBUG
 				/**< to chyba niepotrzebne */
 				/**< powinien być jeszcze osobny komunikat, szkoda, bo jest ryzyko zapętlenia, jeśli będzie ACK ACK */
-				((Controller*)controller)->adminServer->connect(new pingMessage(message::State::OK));
+				//((Controller*)controller)->adminServer->connect(new pingMessage(message::State::OK));
 			}
 			else if(pm->getState()==(unsigned char)message::State::OK)
 			{
