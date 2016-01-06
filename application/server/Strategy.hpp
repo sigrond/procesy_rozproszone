@@ -17,13 +17,13 @@ public:
 	void* controller;
 	Strategy():controller(nullptr)
 	{
-		#ifdef _DEBUG
+		#ifdef _DEBUG2
 		std::cout<<"Strategy()"<<std::endl;
 		#endif // _DEBUG
 	};
 	Strategy(void* c):controller(c)
 	{
-		#ifdef _DEBUG
+		#ifdef _DEBUG2
 		std::cout<<"Strategy(Controller* c)"<<std::endl;
 		#endif // _DEBUG
 	};

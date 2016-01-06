@@ -213,7 +213,7 @@ void AgentServer::start()
 	bool listenSlave=false;
 	while(!shutDown)//pętla zlecania zadań nasłuchiwania
 	{
-		#ifdef _DEBUG
+		#ifdef _DEBUG2
 		cout<<"pętla nasłuchiwania agentów i: "<<i<<"listen slave: "<<listenSlave<<endl;
 		#endif // _DEBUG
 		slavesMutex.lock();
@@ -222,7 +222,7 @@ void AgentServer::start()
 			unique_lock<mutex> allListeningMutexLock(allListeningMutex);
 			while(slaves->empty())
 			{
-				#ifdef _DEBUG
+				#ifdef _DEBUG2
 				cout<<"slaves->empty()"<<endl;
 				#endif // _DEBUG
 				slavesMutex.unlock();
@@ -232,7 +232,7 @@ void AgentServer::start()
 		}
 		if(i>=slaves->size())
 		{
-			#ifdef _DEBUG
+			#ifdef _DEBUG2
 			cout<<"slaves->size(): "<<slaves->size()<<endl;
 			#endif // _DEBUG
 			i=0;
@@ -247,13 +247,13 @@ void AgentServer::start()
 			listenSlave=false;
 			if(allListening)
 			{
-				#ifdef _DEBUG
+				#ifdef _DEBUG2
 				cout<<"allListeningCondition.wait(allListeningMutexLock)"<<endl;
 				#endif // _DEBUG
 				slavesMutex.unlock();
 				unique_lock<mutex> allListeningMutexLock(allListeningMutex);
 				allListeningCondition.wait(allListeningMutexLock);//niech sobie torchę zaczeka, aż pojawi sie nie słuchający agent
-				#ifdef _DEBUG
+				#ifdef _DEBUG2
 				cout<<"koniec allListeningCondition.wait"<<endl;
 				#endif // _DEBUG
 				i=0;
@@ -268,7 +268,7 @@ void AgentServer::start()
 			slaves->at(i)->setListening(true);
 			t=new thread(&AgentServer::listen,this,slaves->at(i));
 			slaves->at(i)->slaveThread=t;
-			#ifdef _DEBUG
+			#ifdef _DEBUG2
 			cout<<"dodany wątek agenta IP: "<<slaves->at(i)->getSlaveIP()->getAddress()<<endl;
 			#endif // _DEBUG
 		}
@@ -338,11 +338,11 @@ void AgentServer::distributeTasks()
 	{
 		while(tasks.empty())
 		{
-			#ifdef _DEBUG
+			#ifdef _DEBUG2
 			cout<<"czekam na zadanie..."<<endl;
 			#endif // _DEBUG
 			waitForTaskCondition.wait(waitForTaskMutexLock);
-			#ifdef _DEBUG
+			#ifdef _DEBUG2
 			cout<<"pojawiło się zadanie..."<<endl;
 			#endif // _DEBUG
 		}
@@ -351,7 +351,7 @@ void AgentServer::distributeTasks()
 		for(unsigned int i=0;i<slaves->size();i++)
 		{
 			slavesMutex.unlock();
-			#ifdef _DEBUG
+			#ifdef _DEBUG2
 			cout<<"próbuję rozdysponować zadania do agentów i: "<<i<<" ..."<<endl;
 			#endif // _DEBUG
             if(slaves->at(i)->ready && !slaves->at(i)->removed)/**< \todo zaznaczać agenta jako ready kiedy coś odpowie */
@@ -399,15 +399,15 @@ void AgentServer::distributeTasks()
 			}
 			slavesMutex.lock();
 		}
-		#ifdef _DEBUG
+		#ifdef _DEBUG2
 		cout<<"próba rozdzielenia zadań do agentów zakończona.."<<endl;
 		#endif // _DEBUG
 		slavesMutex.unlock();
-		#ifdef _DEBUG
+		#ifdef _DEBUG2
 		cout<<"begin waitForTaskCondition.wait_for(waitForTaskMutexLock,chrono::seconds(5))"<<endl;
 		#endif // _DEBUG
 		waitForTaskCondition.wait_for(waitForTaskMutexLock,chrono::seconds(5));
-		#ifdef _DEBUG
+		#ifdef _DEBUG2
 		cout<<"end waitForTaskCondition.wait_for(waitForTaskMutexLock,chrono::seconds(5))"<<endl;
 		#endif // _DEBUG
 	}

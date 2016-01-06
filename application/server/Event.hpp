@@ -52,7 +52,7 @@ public:
     /**< \todo teoretycznie who i port należało by upchnąć w data, ale zostało za mało czasu, a tak duże zmiany wywołają ogromną ilość nowych błędów */
     ~Event()
     {
-		#ifdef _DEBUG
+		#ifdef _DEBUG2
 		std::cout<<"~Event "<<type<<" "<<data<<"\n";
 		#endif // _DEBUG
     }

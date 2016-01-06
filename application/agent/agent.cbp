@@ -60,6 +60,7 @@
 		<Unit filename="Command.hpp" />
 		<Unit filename="MessageParser.cpp" />
 		<Unit filename="MessageParser.hpp" />
+		<Unit filename="makefile" />
 		<Extensions>
 			<code_completion />
 			<debugger />
