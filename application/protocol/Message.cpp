@@ -499,7 +499,7 @@ std::string retMessage::getFilename()
 //---------------
 synMessage::synMessage ( State state ) : Message::Message( Category::SYN, state )
 {
-	DBG_M( "taskMessage() ACK/OK/NOK" );
+	DBG_M( "synMessage() ACK/OK/NOK" );
 }
 
 
