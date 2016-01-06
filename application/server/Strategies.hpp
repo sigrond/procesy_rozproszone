@@ -195,6 +195,10 @@ public:
 					task->taskID=tm->getTaskId();/**< sory, ale admin musi podać task ID */
 					task->when=tm->getTimestamp();
 					((Controller*)controller)->blockingQueue->push_back(new Event(ADD_TASK,task));
+					#ifdef _DEBUG
+					cout<<"==============================================================================================================================="<<endl;
+					cout<<"==============================================================================================================================="<<endl;
+					#endif // _DEBUG
 				}
 				/**< \todo pozostałe podkategorie task */
 				//odsyłamy potwierdzenie
