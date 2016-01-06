@@ -5,6 +5,8 @@
 
 #include "AgentClient.hpp"
 #include <string>
+#include <thread>
+
 using namespace message;
 using namespace std;
 
@@ -16,7 +18,7 @@ AgentClient::AgentClient() : port(46000)
 	working = false;
 	shutDown = false;
 	serverIP = new Ipv4(string("127.0.0.1"));
-
+    q=new BlockingQueue<message::Message*>;
 
 };
 
@@ -27,11 +29,13 @@ AgentClient::AgentClient(Ip &ip) : port(46000)
 	working = false;
 	shutDown = false;
 	serverIP = &ip;
+	q=new BlockingQueue<message::Message*>;
 }
 
 void AgentClient::start()
 {
 	//inicjalizacja polaczenia z serwerem
+	thread clientThread(&AgentClient::sendFromQueue,this);
     while(!shutDown)
     {
      this->listen();
@@ -80,7 +84,7 @@ void AgentClient::send( message::Message *msg)
 
 void AgentClient::readMsg( message::Message *msg)
 {
-    MessageParser messageParser(msg);
+    MessageParser messageParser(msg,q);
     messageParser.parse();
 
 }
@@ -94,5 +98,16 @@ bool AgentClient::isWorking()
 	return working;
 };
 
-
+void AgentClient::sendFromQueue()
+{
+    #ifdef _DEBUG
+    cout<<"AgentClient::sendFromQueue()"<<endl;
+    #endif // _DEBUG
+    message::Message *msg = nullptr;
+    while(!shutDown)
+    {
+        msg=q->pop_front();
+        AgentClient::send(msg);
+    }
+}
 
