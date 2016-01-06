@@ -72,6 +72,7 @@ void Connection::send ( const message::Message & message )
 
 void Connection::recTask ( message::Message * & message, char code )
 {
+	DBG_M("Conn::recTask() TASK REQ");
 	char * buffer = new char [ 11 ];
 	memset( buffer, 0, sizeof( buffer ) );
 	socket->recv( buffer, 11 );
@@ -111,6 +112,7 @@ void Connection::recTask ( message::Message * & message, char code )
 
 void Connection::recFile ( message::Message * & message )
 {
+	DBG_M("Conn::recFile() FILE REQ");
 	char * buffer = new char [11];
 	memset( buffer, 0, sizeof( buffer ) );
 	socket->recv( buffer, 11 );
@@ -173,6 +175,7 @@ void Connection::recFile ( message::Message * & message )
 
 void Connection::recErr ( message::Message * & message, char code )
 {
+	DBG_M("Conn::recErr() ERR REQ");
 	char * buffer = new char [1];
 	memset( buffer, 0, sizeof( buffer ) );
 	socket->recv( buffer, 1 );
@@ -186,6 +189,7 @@ void Connection::recErr ( message::Message * & message, char code )
 }
 void Connection::recHost ( message::Message * & message, char code )
 {
+	DBG_M("Conn::recHost() HOST REQ");
 	char * buf = new char [ 3 ];
 	memset( buf, 0, sizeof( buf ) );
 	socket->recv( buf, 3 );
@@ -238,6 +242,7 @@ void Connection::recHost ( message::Message * & message, char code )
 }
 void Connection::recRet ( message::Message * & message )
 {
+	DBG_M("Conn::recRet() RET REQ");
 	char * buffer = new char [11];
 	memset( buffer, 0, sizeof( buffer ) );
 	socket->recv( buffer, 11 );
@@ -286,6 +291,7 @@ void Connection::recRet ( message::Message * & message )
 
 void Connection::recDep ( message::Message * & message )
 {
+	DBG_M("Conn::recDep() DEP REQ");
 	char * buf = new char [ 3 ];
 	memset( buf, 0, sizeof( buf ) );
 	socket->recv( buf, 3 );
@@ -342,26 +348,32 @@ void Connection::receive ( message::Message * & message )
 					recHost( message, code[0] );	
 				}
 				else
+				{
+					DBG_M("Conn::rec() HOST ACK/OK/NOK");
 					message = new message::hostMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
-
+				}
 				break;
 
 			case message::Category::TASK:
 				if( ((unsigned)code[0] & 0x03) == 0x00 )
 				{
-					DBG("REC")
+					DBG_M("Conn::rec() TASK ACK/OK/NOK");
 					recTask( message, code[0] );
 				}
 				else
+				{
 					message = new message::taskMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
-
+				}
 				break;
 
 			case message::Category::DEP:
 				if( ((unsigned)code[0] & 0x03) == 0x00 )
 					recDep( message );
 				else
+				{
+					DBG_M("Conn::rec() DEP ACK/OK/NOK");
 					message = new message::depMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
+				}
 				break;
 
 			case message::Category::FILE:
@@ -370,8 +382,10 @@ void Connection::receive ( message::Message * & message )
 					recFile( message );
 				}
 				else
+				{
+					DBG_M("Conn::rec() FILE ACK/OK/NOK");
 					message = new message::fileMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
-
+				}
 				break;
 
 			case message::Category::RET:
@@ -380,15 +394,19 @@ void Connection::receive ( message::Message * & message )
 					recRet( message );
 				}
 				else
+				{
+					DBG_M("Conn::rec() RET ACK/OK/NOK");
 					message = new message::depMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
-
+				}
 				break;
 
 			case message::Category::SYN:
+				DBG_M("Conn::rec() SYN");
 				message = new message::synMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
 				break;
 
 			case message::Category::PING:
+				DBG_M("Conn::rec() SYN");
 				message = new message::pingMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
 				break;
 
@@ -398,8 +416,10 @@ void Connection::receive ( message::Message * & message )
 					recErr( message, code[0] );
 				}
 				else
+				{
+					DBG_M("Conn::rec() ERR ACK/OK/NOK");
 					message = new message::depMessage( code, received );
-
+				}
 				break;
 
 			default:
