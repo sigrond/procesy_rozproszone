@@ -9,13 +9,9 @@ using namespace message;
 
 #include "debug.h"
 
-void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port )
+void rec ( ConnectionManager * cm, Ipv4 * ip, unsigned port )
 {
 	Message * msg1 = nullptr;
-
-        Message * msg2 = new hostMessage( State::ACK );
-        Message * msg3 = new hostMessage( State::OK );
-
 
 	cm->receive( *ip, msg1, port + 55555 );
 
@@ -28,6 +24,18 @@ void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port )
 			DBG( "IP: " << i.getAddress() );
 	}
 
+	cm->receive( *ip, msg1, port + 55555 );
+
+	if( msg1 )
+		msg1->print();
+}
+
+void send_ ( ConnectionManager * cm, Ipv4 * ip, unsigned port )
+{
+
+        Message * msg2 = new hostMessage( State::ACK );
+        Message * msg3 = new hostMessage( State::OK );
+
 	cm->send( *ip, *msg2, port + 55555 );
 
 	msg2->print();
@@ -35,11 +43,6 @@ void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port )
 	cm->send( *ip, *msg3, port + 55555 );
 
 	msg3->print();
-
-	cm->receive( *ip, msg1, port + 55555 );
-
-	if( msg1 )
-		msg1->print();
 }
 
 int main( int argc, char** argv)
@@ -64,14 +67,20 @@ int main( int argc, char** argv)
 
                 Ipv4 ip = Ipv4("127.0.0.1");
 
-		std::thread * t[agents];
+		getchar();
+
+		std::thread * t[agents * 2];
 
 		for(unsigned i = 0; i < agents; ++i )
-			t[i] = new std::thread (communication, mietek, &ip, i+1 );
+		{
+			t[2 * i] = new std::thread (rec, mietek, &ip, i+1 );
+			getchar();
+			t[2 * i + 1] = new std::thread (send_, mietek, &ip, i+1 );
+		}
 
                 getchar();
 
-		for(unsigned i = 0; i < agents; ++i )
+		for(unsigned i = 0; i < agents*2; ++i )
 		{
 			t[i]->join();
 			delete t[i];

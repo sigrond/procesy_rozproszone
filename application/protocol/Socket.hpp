@@ -22,7 +22,7 @@
 
 const unsigned short BACKLOG = 256;
 
-const unsigned short TIMEOUT = 10;
+const unsigned short TIMEOUT = 1000;
 
 class Socket
 {

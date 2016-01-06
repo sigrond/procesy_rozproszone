@@ -6,10 +6,27 @@ using namespace message;
 #include <iostream>
 #include <cstdlib>
 
-void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
+void rec ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
 {
 	Message * msg1 = nullptr;
 
+
+
+	cm->receive( *ip, msg1, port + 55555 );
+
+	if( msg1 )
+		msg1->print();
+
+	cm->receive( *ip, msg1, port + 55555 );
+
+	if( msg1 )
+		msg1->print();
+
+
+}
+
+void send_ ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
+{
 	std::vector<Ipv4> v (4);
 
 	v[0] = Ipv4( "1.1.1.1" );
@@ -24,22 +41,11 @@ void communication ( ConnectionManager * cm, Ipv4 * ip, unsigned port)
 
 	msg2->print();
 
-	cm->receive( *ip, msg1, port + 55555 );
-
-	if( msg1 )
-		msg1->print();
-
-	cm->receive( *ip, msg1, port + 55555 );
-
-	if( msg1 )
-		msg1->print();
-
 	cm->send( *ip, *msg3, port + 55555 );
 
 	msg3->print();
 
 }
-
 int main( int argc, char** argv)
 {
 
@@ -59,11 +65,15 @@ int main( int argc, char** argv)
 
 		std::thread * tq;
 
-		std::thread t (communication, mietek, &ip, 0 );
+		std::thread t_ (send_, mietek, &ip, 0 );
+
+		getchar();
+		std::thread t (rec, mietek, &ip, 0 );
 
                 getchar();
 
 		t.join();
+		t_.join();
         }
         else
         {

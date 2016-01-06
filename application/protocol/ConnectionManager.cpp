@@ -40,8 +40,11 @@ void awaitConnections( ConnectionManager * conMan )
 			else
 				connection = &conMan->map4[ conMan -> lockAddr ];
 
+				DBG( connection )
                                 DBG("awaitConnections(): connection not found, new connection")
                                 *connection = new Connection( socket );
+
+				DBG( connection << ": " << *connection )
 
                                 try
                                 {
@@ -78,7 +81,7 @@ ConnectionManager * ConnectionManager::getInstance( unsigned short listenPort )
         return &instance;  
 }
 
-ConnectionManager::ConnectionManager( unsigned short listenPort ) : listeningPort(listenPort), lockAddr( AddressIpv4(Ipv4(), 0) )
+ConnectionManager::ConnectionManager( unsigned short listenPort ) : listeningPort(listenPort), lockAddr( AddressIpv4(Ipv4( "127.0.0.1" ), 55555) )
 {
         DBG("ConnectionManager( " << listenPort << " )")
         listeningSocket = new SocketIp4( Ipv4(), listenPort, true );
@@ -128,7 +131,13 @@ void ConnectionManager::receive( const Ipv4 & ip, message::Message * & msg, unsi
 
 		AddressIpv4 addr = AddressIpv4( ip, port );
 
+		DBG( (lockAddr < addr || addr < lockAddr) )
+
                 Connection * & connection = map4[ addr ];
+
+		Connection * check = connection;
+
+		DBG( "r1 " << &connection << ": " << connection );
 
                 if( connection == nullptr )
                 {
@@ -141,6 +150,10 @@ void ConnectionManager::receive( const Ipv4 & ip, message::Message * & msg, unsi
                         conVar.wait(lock);
 
                         connection = map4[ addr ];
+
+			check = connection;
+
+			DBG( "r2 " << &connection << ": " << connection );
                 }
 
         lock.unlock(); 
@@ -149,10 +162,11 @@ void ConnectionManager::receive( const Ipv4 & ip, message::Message * & msg, unsi
         connectionGuards4out[ addr ].lock();  
         connGuardsMutex.unlock();
 
-        connection->receive(msg);
+        check->receive(msg);
 
-        delete connection;
-        connection = nullptr;
+        delete check;
+	if(connection == check)
+		connection = nullptr;
 
         connGuardsMutex.lock();
         connectionGuards4out[ addr ].unlock();

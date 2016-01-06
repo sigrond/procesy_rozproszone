@@ -56,8 +56,11 @@ int Socket::listen()
 
 int Socket::close()
 {
-	DBG("Socket::close()" )
+	DBG("Socket::Close()" )
         shutdown( sockfd, 2 );
+
+	usleep(1000);
+
         return ::close( sockfd );
 }
 
