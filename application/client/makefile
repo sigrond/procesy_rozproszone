@@ -1,6 +1,6 @@
 CXX = g++
 FILES = Console.cpp ConsoleClient.cpp ../protocol/Message.cpp ../protocol/Ip.cpp ../protocol/Connection.cpp ../protocol/ConnectionManager.cpp ../protocol/Socket.cpp ../protocol/SocketException.cpp ../protocol/Address.cpp
-LFLAGS = -lpthread
+LFLAGS = -lpthread -lboost_system
 DFLAGS = -g -Og -D_DEBUG -DDEBUG
 CPPFLAGS = -std=c++11 -Wall -pthread -MMD -MP
 OBJECTS = $(FILES:.cpp=.o)

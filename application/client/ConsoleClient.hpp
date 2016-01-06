@@ -67,7 +67,10 @@ private:
 
     bool anyResponse;
     bool pingAck;
+    bool fileAck;
+    bool taskAck;
     Ipv4 serverip;
+    int taskCount;
 };
 
 #endif
