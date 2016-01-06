@@ -10,6 +10,8 @@
 // Poniższy kod został wyprodukowany na (bardzo) szybko, w celach uzyskania JAKIEGOKOLWIEK połączenia
 // Planowo do wigilii przestanie to wyglądać jak program napisany przez absolwenta szkoły wyższej informatyki i zarządzania
 
+#include <fstream>
+#include <boost/crc.hpp>
 
 
 #include "Connection.hpp"
@@ -106,9 +108,67 @@ void Connection::recTask ( message::Message * & message, char code )
 
 	message = new message::taskMessage( (message::TaskSub)sub, message::State::REQ, rPriority, priority, taskId, t );
 }
+
 void Connection::recFile ( message::Message * & message )
 {
+	char * buffer = new char [11];
+	memset( buffer, 0, sizeof( buffer ) );
+	socket->recv( buffer, 11 );
 
+	unsigned char fnameSize = buffer[0] & 0x8F;
+
+	bool isMainF = false;
+
+	if( ( buffer[0] & 0x80 ) == 0x00 )
+		isMainF = true;
+
+	uint16_t checksum = 0;
+	checksum += buffer[1];
+	checksum += buffer[2] << 8;
+
+	unsigned long taskId = 0;
+	taskId += buffer[3];
+	taskId += buffer[4] << 8;
+	taskId += buffer[5] << 16;
+	taskId += buffer[6] << 24;
+
+	unsigned long filesize = 0;
+	filesize += buffer[7];
+	filesize += buffer[8] << 8;
+	filesize += buffer[9] << 16;
+	filesize += buffer[10] << 24;
+
+	delete [] buffer;
+
+	char * fbuf = new char [ filesize + fnameSize ];
+	memset( fbuf, 0, sizeof( fbuf ) );
+	socket->recv( fbuf, filesize + fnameSize );
+
+	std::string filename;
+
+	for(unsigned short i = 0; i < fnameSize; ++i )
+		filename.push_back( fbuf[ 11 + i ] );
+
+	unsigned long fileStart = 11 + fnameSize;
+
+	boost::crc_optimal<16, 0x1021, 0xFFFF, 0, false, false>  crc;
+
+	for(unsigned long i = 0; i < filesize; ++i )
+		crc.process_byte( fbuf[ fileStart + i ] );
+
+	if( checksum != crc() )
+		throw "CRC Fail."; // TODO klasa wyjątku
+
+	std::ofstream out ( filename );
+	
+	for(unsigned long i = 0; i < filesize; ++i )
+		out << buffer[ fileStart + i ]; 
+
+	out.close();
+
+	delete [] fbuf;
+
+	message = new message::fileMessage( message::State::REQ, isMainF, taskId, filename );
 }
 
 void Connection::recErr ( message::Message * & message, char code )
@@ -227,7 +287,8 @@ void Connection::receive ( message::Message * & message )
 		unsigned long received = socket->recv( code, 1 );
 
 		
-		std::cout << "code[0] = " << std::hex << (unsigned)code[0] << std::endl;
+		DBG( "Conn::rec() code[0] = " << std::hex << (unsigned)code[0] );
+		
 		std::cout << std::dec;
 
 		switch( (message::Category)( (unsigned)code[0] & 0xE0 ) )

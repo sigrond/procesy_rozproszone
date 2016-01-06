@@ -375,18 +375,12 @@ fileMessage::fileMessage(State s,
 		buffer[ currIndex + i ] = c;
 	}
 
+	in2.close();
+
 	checkSum = crc();
 
 	buffer[2] = checkSum & 0x00FF;
 	buffer[3] = ( checkSum >> 8 ) & 0x00FF;
-	//taskId=tId;
-	//name=filename;
-	/** \author Tomasz Jakubczyk
-	 * \todo Jeśli jest to wiadomość wysyłana, to powinna otworzyć plik
-	 * o podanej nazwie wczytać i wysłać, a jeśli odebran, to ze swojego
-	 * magicznego bufora zapisać plik pod podana nazwą.
-	 * Może być to rozwiązane prze zsprawdzenie, czy istnieje plik o
-	 * podanej nazwie. */
 }
 
 fileMessage::fileMessage ( State s ) :
