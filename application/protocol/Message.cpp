@@ -232,10 +232,9 @@ unsigned long taskMessage::getTaskId() const
 	return taskId;
 }
 
-std::chrono::steady_clock::time_point & taskMessage::getTimestamp() const
+std::chrono::steady_clock::time_point taskMessage::getTimestamp() const
 {
-	std::chrono::steady_clock::time_point t(time);
-	return t;
+	return time;
 }
 
 //------------------------------

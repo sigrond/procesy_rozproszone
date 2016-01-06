@@ -67,6 +67,9 @@ namespace message
 		unsigned long bufferSize;
         };
 
+	//------------------------------
+	// hostMessage
+	//------------------------------
         class hostMessage : public Message
         {
         public:
@@ -83,6 +86,9 @@ namespace message
 			std::vector<Ipv4> addresses;
         };
 
+	//------------------------------
+	// taskMessage
+	//------------------------------
         class taskMessage : public Message
         {
         public:
@@ -101,14 +107,15 @@ namespace message
 
                 unsigned long getTaskId() const;
 
-                std::chrono::steady_clock::time_point & getTimestamp() const;
-		private:
-			TaskSub taskSub;
-			State state;
-			bool respectPriority;
-			unsigned short priority;
-			unsigned long taskId;
-			std::chrono::steady_clock::time_point time;
+                std::chrono::steady_clock::time_point getTimestamp() const;
+	
+	private:
+		TaskSub taskSub;
+		State state;
+		bool respectPriority;
+		unsigned short priority;
+		unsigned long taskId;
+		std::chrono::steady_clock::time_point time;
         };
 
 	//------------------------------
