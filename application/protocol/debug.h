@@ -10,4 +10,13 @@
 #endif
 
 
+#ifdef DEBUG_M
+        #include <iostream>
+        #define DBG_M(x) std::cout << "DBG: " << x << std::endl;
+        #define DBG(x) //
+#else
+
+        #define DBG_M(x) //
+#endif
+
 #endif // DEBUG_H
