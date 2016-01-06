@@ -116,7 +116,16 @@ void AdminServer::connect(message::Message* m)
 	/*if(state==-1)
 		cout<<"adminserver state -1 najpierw listen"<<endl;
 	if(state==0 || state=1)*/
+	try
+	{
 		connectionManager->send(*static_cast<Ipv4*>(adminIP),*m,port);
+	}
+	catch(...)
+	{
+        #ifdef _DEBUG
+		cout<<"admin send exeption"<<endl;
+		#endif // _DEBUG
+	}
 
 }
 
