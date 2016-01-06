@@ -110,8 +110,6 @@ void Message::print() const
 //------------------------------
 hostMessage::hostMessage( HostSub sub, State state, const std::vector<Ipv4> & addr ) :
 	Message::Message( Category::HOST ),
-	sub(sub),
-	state(state),
 	addresses(addr)
 {
 	code += (unsigned char)state;
@@ -140,8 +138,7 @@ hostMessage::hostMessage( HostSub sub, State state, const std::vector<Ipv4> & ad
 }
 
 hostMessage::hostMessage( State s ) :
-	Message::Message( Category::HOST, s ),
-	state(s)
+	Message::Message( Category::HOST, s )
 {
 
 }
@@ -168,7 +165,6 @@ taskMessage::taskMessage( TaskSub sub,
 			
 	Message::Message( Category::TASK ),
 	taskSub(sub),
-	state(s),
 	respectPriority(rPriority),
 	taskId(tId),
 	time(timestamp)
@@ -209,8 +205,7 @@ taskMessage::taskMessage( TaskSub sub,
 }
 
 taskMessage::taskMessage( State s ) :
-	Message::Message( Category::TASK, s ),
-	state(s)
+	Message::Message( Category::TASK, s )
 {
 
 	std::cout << "CODE" << std::hex << (unsigned)code << std::endl;
@@ -314,7 +309,6 @@ fileMessage::fileMessage(State s,
                          unsigned long tId,
                          std::string filename ) :
 	Message::Message( Category::FILE ),
-	state(s),
 	isMainFile(isMainF),
 	taskId(tId),
 	name(filename)
@@ -394,8 +388,7 @@ fileMessage::fileMessage(State s,
 }
 
 fileMessage::fileMessage ( State s ) :
-	Message::Message( Category::FILE, s ),
-	state(s)
+	Message::Message( Category::FILE, s )
 {
 
 }
@@ -415,11 +408,6 @@ std::string fileMessage::getFilename()
 	return name;
 }
 
-std::fstream & fileMessage::getFile()
-{
-	file.open(name.c_str(),std::fstream::out);
-	return file;
-}
 
 //------------------------------
 // retMessage
@@ -429,7 +417,6 @@ retMessage::retMessage( State s,
                         unsigned long tId,
                         std::string filename) :
 	Message::Message( Category::RET ),
-	state(s),
 	taskId(tId),
 	name(filename)
 {
@@ -437,8 +424,7 @@ retMessage::retMessage( State s,
 }
 
 retMessage::retMessage ( State s ) :
-	Message::Message( Category::RET, s ),
-	state(s)
+	Message::Message( Category::RET, s )
 {
 
 }
@@ -465,23 +451,11 @@ std::fstream & retMessage::getFile()
 }
 
 
-
-
 //---------------
 // synMessage
 //---------------
 synMessage::synMessage ( State state ) : Message::Message( Category::SYN, state )
 {
-}
-
-synMessage::synMessage ( char * buffer, unsigned long bufferSize ) : Message::Message( Category::SYN, bufferSize )
-{
-	this->buffer = new char [ bufferSize ];
-
-	for( unsigned long i = 0; i < bufferSize; ++i )
-		this->buffer[i] = buffer[i];
-
-	code = buffer[0];
 }
 
 
@@ -492,21 +466,11 @@ pingMessage::pingMessage ( State state ) : Message::Message( Category::PING, sta
 {
 }
 
-pingMessage::pingMessage ( char * buffer, unsigned long bufferSize ) : Message::Message( Category::PING, bufferSize )
-{
-	this->buffer = new char [ bufferSize ];
-
-	for( unsigned long i = 0; i < bufferSize; ++i )
-		this->buffer[i] = buffer[i];
-
-	code = buffer[0];
-}
-
 
 //------------------------------
 // errMessage
 //------------------------------
-errMessage::errMessage ( ErrSub sub, State state, unsigned char errCode ) : Message::Message( Category::ERR )
+errMessage::errMessage ( ErrSub sub, State state, unsigned char errCode ) : Message::Message( Category::ERR ), errCode(errCode)
 {
 	code += (unsigned char)state;
 	code += (unsigned char)sub;
@@ -526,7 +490,7 @@ errMessage::errMessage ( State state ) : Message::Message( Category::ERR, state 
 
 unsigned char errMessage::getErrCode () const
 {
-
+	return errCode;
 }
 
 
