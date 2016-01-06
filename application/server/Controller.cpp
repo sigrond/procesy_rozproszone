@@ -126,7 +126,9 @@ void Controller::start()
 	while(!shutDownServer)
 	{
 		e=blockingQueue->pop_front();
+		#ifdef _DEBUG2
 		std::cout<<this<<" "<<e->data<<std::endl;
+		#endif // _DEBUG2
 		strategyMap->at(e->type)->doJob(e->data,e->who,e->port);
 		delete e;
 		//int a;
