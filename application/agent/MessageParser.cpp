@@ -2,7 +2,7 @@
 
 using namespace message;
 
-MessageParser::MessageParser(Message *msg)
+MessageParser::MessageParser(Message *msg,BlockingQueue<message::Message*>* q) : q(q)
 {
     this->msg = msg;
 }
@@ -16,7 +16,7 @@ void MessageParser::parse()
     {
         case (int)Category::TASK:
         {
-            TaskCommand taskCommand(msg);
+            TaskCommand taskCommand(msg,q);
             break;
         }
         case (int)Category::DEP:
@@ -36,7 +36,7 @@ void MessageParser::parse()
         }
         case (int)Category::PING:
         {
-            PingCommand pingCommand(msg);
+            PingCommand pingCommand(msg,q);
             break;
         }
         default:

@@ -6,6 +6,7 @@
 #define AgentClient_hpp
 
 #include "../protocol/ConnectionManager.hpp"
+#include "../server/BlockingQueue.hpp"
 #include "MessageParser.hpp"
 
 #include <thread>
@@ -51,6 +52,10 @@ private:
 	void readMsg (message::Message *msg);
 
     unsigned short port;
+
+    BlockingQueue<message::Message*>* q;
+
+    void sendFromQueue();
 
 };
 

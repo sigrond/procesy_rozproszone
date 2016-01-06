@@ -2,7 +2,7 @@
 
 using namespace message;
 
-TaskCommand::TaskCommand(Message *msg)
+TaskCommand::TaskCommand(Message *msg,BlockingQueue<message::Message*> *q) : Command(q)
 {
     this->tMessage = static_cast<taskMessage*>(msg);
     /**sprawdzam kategorie polecenia */
@@ -75,7 +75,7 @@ TaskCommand::TaskCommand(Message *msg)
 
 }
 
-FileCommand::FileCommand(Message *msg)
+FileCommand::FileCommand(Message *msg,BlockingQueue<message::Message*> *q) : Command(q)
 {
     this->fMessage = static_cast<fileMessage*>(msg);
 
@@ -85,7 +85,7 @@ FileCommand::FileCommand(Message *msg)
 
 
 
-PingCommand::PingCommand(Message *msg)
+PingCommand::PingCommand(Message *msg,BlockingQueue<message::Message*> *q) : Command(q)
 {
     this->pMessage = static_cast<pingMessage*>(msg);
 

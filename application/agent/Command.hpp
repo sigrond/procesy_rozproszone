@@ -2,6 +2,7 @@
 #define COMMAND_HPP
 
 #include "../protocol/ConnectionManager.hpp"
+#include "../server/BlockingQueue.hpp"
 #include <iostream>
 
 using namespace message;
@@ -10,9 +11,11 @@ using namespace message;
 class Command
 {
     public:
-    Command(){}
+    Command(BlockingQueue<message::Message*> *q) : q(q)
+    {}
     ~Command(){}
-
+    protected:
+    BlockingQueue<message::Message*>* q;
     private:
 
 };
@@ -20,7 +23,7 @@ class Command
 class SynCommand: public Command
 {
     public:
-    SynCommand(Message *msg);
+    SynCommand(Message *msg,BlockingQueue<message::Message*> *q);
     private:
 
     synMessage sMessage;
@@ -29,7 +32,7 @@ class SynCommand: public Command
 class TaskCommand: public Command
 {
     public:
-    TaskCommand(Message *msg);
+    TaskCommand(Message *msg,BlockingQueue<message::Message*> *q);
 
     private:
 
@@ -43,7 +46,7 @@ class DepCommand: public Command
 class FileCommand: public Command
 {
     public:
-    FileCommand(Message *msg);
+    FileCommand(Message *msg,BlockingQueue<message::Message*> *q);
 
     private:
 
@@ -53,7 +56,7 @@ class FileCommand: public Command
 class PingCommand: public Command
 {
     public:
-    PingCommand(Message *msg);
+    PingCommand(Message *msg,BlockingQueue<message::Message*> *q);
 
     private:
     pingMessage *pMessage;
