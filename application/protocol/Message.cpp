@@ -37,7 +37,7 @@ Message::Message( Category category, State state ) : code( (unsigned char) categ
 	bufferSize = 1;
 
 	
-	DBG( "Message code = " << std::hex << ( (unsigned)code & 0xE0 ) << " + " << ( (unsigned)code & 0x1C ) << " + " << ( (unsigned)code & 0x03 ) );
+	DBG_M( "Message code = " << std::hex << ( (unsigned)code & 0xE0 ) << " + " << ( (unsigned)code & 0x1C ) << " + " << ( (unsigned)code & 0x03 ) );
 	std::cout << std::dec;
 }
 
@@ -112,7 +112,7 @@ hostMessage::hostMessage( HostSub sub, State state, const std::vector<Ipv4> & ad
 	Message::Message( Category::HOST ),
 	addresses(addr)
 {
-	DBG( "hostMessage() REQ" );
+	DBG_M( "hostMessage() REQ" );
 
 	code += (unsigned char)state;
 
@@ -142,7 +142,7 @@ hostMessage::hostMessage( HostSub sub, State state, const std::vector<Ipv4> & ad
 hostMessage::hostMessage( State s ) :
 	Message::Message( Category::HOST, s )
 {
-	DBG("hostMessage() ACK/OK/NOK")
+	DBG_M("hostMessage() ACK/OK/NOK")
 
 }
 
@@ -172,7 +172,7 @@ taskMessage::taskMessage( TaskSub sub,
 	taskId(tId),
 	time(timestamp)
 {
-	DBG( "taskMessage() REQ" );
+	DBG_M( "taskMessage() REQ" );
 	code += (unsigned char)s;
 	code += (unsigned char)sub;
 
@@ -211,7 +211,7 @@ taskMessage::taskMessage( TaskSub sub,
 taskMessage::taskMessage( State s ) :
 	Message::Message( Category::TASK, s )
 {
-	DBG( "taskMessage() ACK/OK/NOK" );
+	DBG_M( "taskMessage() ACK/OK/NOK" );
 }
 
 bool taskMessage::getRespectPriority()
@@ -239,7 +239,7 @@ std::chrono::steady_clock::time_point taskMessage::getTimestamp() const
 //------------------------------
 depMessage::depMessage ( State state, std::vector<unsigned long> & tasks ) : Message::Message( Category::DEP ), tasks(tasks)
 {
-	DBG( "depMessage() REQ" );
+	DBG_M( "depMessage() REQ" );
 	code += (unsigned char)state;
 
 	unsigned tasksSize = tasks.size();
@@ -264,7 +264,7 @@ depMessage::depMessage ( State state, std::vector<unsigned long> & tasks ) : Mes
 
 depMessage::depMessage ( State state ) : Message::Message( Category::DEP, state )
 {
-	DBG( "depMessage() ACK/OK/NOK" );
+	DBG_M( "depMessage() ACK/OK/NOK" );
 }
 
 depMessage::depMessage ( char * buff, unsigned long bufferSize ) : Message::Message( Category::DEP, bufferSize )
@@ -317,7 +317,7 @@ fileMessage::fileMessage(State s,
 	taskId(tId),
 	name(filename)
 {
-	DBG( "fileMessage() REQ" );
+	DBG_M( "fileMessage() REQ" );
 	code += (unsigned char)s;
 
 	unsigned short fnameSize = filename.size();
@@ -389,7 +389,7 @@ fileMessage::fileMessage ( State s ) :
 	Message::Message( Category::FILE, s )
 {
 
-	DBG( "fileMessage() ACK/OK/NOK" );
+	DBG_M( "fileMessage() ACK/OK/NOK" );
 }
 
 bool fileMessage::getIsMainFile()
@@ -419,7 +419,7 @@ retMessage::retMessage( State s,
 	taskId(tId),
 	name(filename)
 {
-	DBG( "retMessage() REQ" );
+	DBG_M( "retMessage() REQ" );
 	code += (unsigned char)s;
 
 	unsigned short fnameSize = filename.size();
@@ -475,7 +475,7 @@ retMessage::retMessage ( State s ) :
 	Message::Message( Category::RET, s )
 {
 
-	DBG( "retMessage() ACK/OK/NOK" );
+	DBG_M( "retMessage() ACK/OK/NOK" );
 }
 
 unsigned char retMessage::getExitStatus()
@@ -499,7 +499,7 @@ std::string retMessage::getFilename()
 //---------------
 synMessage::synMessage ( State state ) : Message::Message( Category::SYN, state )
 {
-	DBG( "taskMessage() ACK/OK/NOK" );
+	DBG_M( "taskMessage() ACK/OK/NOK" );
 }
 
 
@@ -508,7 +508,7 @@ synMessage::synMessage ( State state ) : Message::Message( Category::SYN, state 
 //---------------
 pingMessage::pingMessage ( State state ) : Message::Message( Category::PING, state )
 {
-	DBG( "taskMessage() ACK/OK/NOK" );
+	DBG_M( "taskMessage() ACK/OK/NOK" );
 }
 
 
@@ -517,7 +517,7 @@ pingMessage::pingMessage ( State state ) : Message::Message( Category::PING, sta
 //------------------------------
 errMessage::errMessage ( ErrSub sub, State state, unsigned char errCode ) : Message::Message( Category::ERR ), errCode(errCode)
 {
-	DBG( "errMessage() REQ" );
+	DBG_M( "errMessage() REQ" );
 	code += (unsigned char)state;
 	code += (unsigned char)sub;
 
@@ -531,7 +531,7 @@ errMessage::errMessage ( ErrSub sub, State state, unsigned char errCode ) : Mess
 
 errMessage::errMessage ( State state ) : Message::Message( Category::ERR, state )
 {
-	DBG( "errMessage() ACK/OK/NOK" );
+	DBG_M( "errMessage() ACK/OK/NOK" );
 }
 
 unsigned char errMessage::getErrCode () const
