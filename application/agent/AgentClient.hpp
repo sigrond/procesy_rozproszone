@@ -2,8 +2,9 @@
  * \author Eryk Ratyński
  * \brief Plik nagłówkowy klienta dla agenta
  */
-#ifndef AgentClient_hpp
-#define AgentClient_hpp
+#ifndef AGENTCLIENT_HPP
+#define AGENTCLIENT_HPP
+
 
 #include "../protocol/ConnectionManager.hpp"
 #include "MessageParser.hpp"
@@ -54,4 +55,4 @@ private:
 };
 
 
-#endif
+#endif //AGENTCLIENT_HPP
