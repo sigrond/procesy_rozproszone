@@ -61,7 +61,7 @@ int Socket::close()
 
 	int c = ::close( sockfd );
 
-	usleep(1000);
+	usleep(10000);
 
         return c;
 }
