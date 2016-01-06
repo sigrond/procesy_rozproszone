@@ -96,10 +96,16 @@ void AdminServer::listen()
 	state=0;
 	try
 	{
-		connectionManager->receive(*static_cast<Ipv4*>(adminIP),m);/**< \todo co się stanie jak nie znamy adresu admina? */
+		connectionManager->receive(*static_cast<Ipv4*>(adminIP),m,50000);/**< \todo co się stanie jak nie znamy adresu admina? */
+		#ifdef _DEBUG
+		cout<<"admin recive się odblokowało"<<endl;
+		#endif // _DEBUG
 	}
 	catch(...)
 	{
+		#ifdef _DEBUG
+		cout<<"admin recive TIMEOUT"<<endl;
+		#endif // _DEBUG
 		return;
 	}
 	blockingQueue->push_back(new Event(MESSAGE_FROM_ADMIN_SERVER,m));

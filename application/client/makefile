@@ -15,6 +15,7 @@ Debug: $(FILES:%.cpp=%.o)
 
 cleanDebug:
 	rm -f bin/Debug/server
+	rm -f bin/Debug/konsola
 	rm -f bin/Debug/*.o
 	rm -f bin/Debug/*.d
 	rm -f *.o

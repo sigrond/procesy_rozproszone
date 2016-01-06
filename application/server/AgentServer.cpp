@@ -100,10 +100,13 @@ void AgentServer::listen(Slave* who)
 		#endif // _DEBUG
 		try
 		{
-			connectionManager->receive(*static_cast<Ipv4*>(who->getSlaveIP()),m);
+			connectionManager->receive(*static_cast<Ipv4*>(who->getSlaveIP()),m,who->port);
 		}
 		catch(...)
 		{
+			#ifdef _DEBUG
+			cout<<"agent recive TIMEOUT"<<endl;
+			#endif // _DEBUG
 			if(who->getTask()==nullptr)
 			{
 				who->ready=false;
@@ -111,8 +114,8 @@ void AgentServer::listen(Slave* who)
 			else
 			{
 				/**< \todo sprawdzić, czemu był timeout */
-				who->getTask()->underExecution=false;
-				who->getTask()->done=false;
+				//who->getTask()->underExecution=false;
+				//who->getTask()->done=false;
 			}
 			return;
 		}

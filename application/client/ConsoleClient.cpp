@@ -6,6 +6,9 @@
 
 
 #include "ConsoleClient.hpp"
+#include <thread>
+
+extern bool demo;
 
 
 //maksymalna liczna polecenia + argumentow
@@ -14,42 +17,77 @@
 using namespace std;
 using namespace message;
 
-ConsoleClient::ConsoleClient()
+ConsoleClient::ConsoleClient() : shutDown(false)
 {
     connected = 0;
     requestAnswered = 1;
     connectionManager=ConnectionManager::getInstance(50000);
+    serverip=Ipv4("127.0.0.1");
 }
 
 void ConsoleClient::start()
 {
+    thread listenAndRecognizeThread(&ConsoleClient::listenAndRecognize,this);
+    thread sendFromQueueThread(&ConsoleClient::sendFromQueue,this);
+
     string arg[ARGS];
 
-    while(true)
+    int command=NC;
+
+    while(!shutDown)
     {
-        int command = readCommand(arg);
+
+        if(demo)
+        {
+        	command=CON;
+        	arg[1]="127.0.0.1";
+        }
+        else
+		{
+			int command = readCommand(arg);
+		}
+
 
         if (command == EXT)
         {
             cout<<"Wylaczam konsole administratora\n";
+            shutDown=true;
+            q.push_back(nullptr);
             break;
         }
         if (command == CON)
         {
+        	#ifdef _DEBUG
+        	cout<<"command == CON"<<endl;
+        	#endif // _DEBUG
             try
             {
-                Ipv4 serverip = Ipv4(arg[1]);
+                serverip = Ipv4(arg[1]);
             	#ifdef _DEBUG
             	cout<<"próbuję się połączyć z: "<<serverip.getAddress()<<endl;
             	#endif // _DEBUG
                 //connected = connect(serverip);
+                anyResponse=false;
+                pingAck=false;
                 pingMessage* m1=new pingMessage(message::State::REQ);
                 Message* m2=nullptr;
-                connectionManager->send(serverip,*m1);
+                pingMessage* m3=new pingMessage(message::State::ACK);
+                pingMessage* m4=new pingMessage(message::State::OK);
+                //connectionManager->send(serverip,*m1,55555);
+                q.push_back(m1);
                 #ifdef _DEBUG
                 cout<<"ping do serwera LOTC wysłany"<<endl;
                 #endif // _DEBUG
-				connectionManager->receive(serverip,m2);
+				//connectionManager->receive(serverip,m2,55555);
+				while(!anyResponse);
+				if(pingAck)
+				{
+					q.push_back(m4);
+				}
+				//m2->print();
+				//connectionManager->receive(serverip,m2,55555);
+				//m2->print();
+				//connectionManager->send(serverip,*m3,55555);
 				connected=true;
                 if (connected == true) cout<<"Pomyslnie polaczono z serwerem";
             }
@@ -129,3 +167,55 @@ void ConsoleClient::checkAnswer()
 {
 
 }
+
+void ConsoleClient::listenAndRecognize()
+{
+	while(!shutDown)
+	{
+		Message* m=nullptr;
+		connectionManager->receive(serverip,m,55555);
+		#ifdef _DEBUG
+		cout<<"ConsoleClient::listenAndRecognize() coś odebrało"<<endl;
+		#endif // _DEBUG
+		m->print();
+		if(m->getState()==(unsigned char)State::REQ)
+		{
+			if(m->getCategory()==(unsigned char)Category::PING)
+			{
+				pingMessage* pm1=new pingMessage(State::ACK);
+				q.push_back(pm1);
+			}
+		}
+		else if(m->getState()==(unsigned char)State::ACK)
+		{
+			/**< można by coś odesłać, a le w tej chwile nie ma to sensu */
+		}
+		anyResponse=true;
+	}
+}
+
+void ConsoleClient::sendFromQueue()
+{
+	while(!shutDown)
+	{
+		Message* m=nullptr;
+		m=q.pop_front();
+		if(!shutDown)
+		{
+			connectionManager->send(serverip,*m,55555);
+		}
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
