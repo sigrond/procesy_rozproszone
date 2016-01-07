@@ -125,6 +125,9 @@ void Controller::start()
 	Event* e=nullptr;
 	while(!shutDownServer)
 	{
+        #ifdef _DEBUG
+		cout<<"blokujemy na e=blockingQueue->pop_front()"<<endl;
+		#endif // _DEBUG
 		e=blockingQueue->pop_front();
 		#ifdef _DEBUG2
 		std::cout<<this<<" "<<e->data<<std::endl;

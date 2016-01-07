@@ -71,6 +71,9 @@ void Model::pushTestEvents()
 
 void Model::pushAddAgent(Ipv4* ip, unsigned short port)
 {
+    #ifdef _DEBUG
+    cout<<"Model::pushAddAgent(Ipv4* ip, unsigned short port)"<<endl;
+    #endif // _DEBUG
 	if(blockingQueue==nullptr)
 	{
 		throw ModelException("brak kolejki");

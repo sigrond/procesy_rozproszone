@@ -610,7 +610,8 @@ public:
 		using namespace message;
         cout<<"strategia PingAdmin..."<<endl;
         Message * msg2 = new pingMessage( State::REQ );
-        ((Controller*)controller)->adminServer->connect(msg2);
+        thread* t=new thread(&AdminServer::connect,((Controller*)controller)->adminServer,msg2);
+        //((Controller*)controller)->adminServer->connect(msg2);
 	}
 };
 
@@ -630,7 +631,8 @@ public:
 		using namespace message;
         cout<<"strategia PingSlaves..."<<endl;
         Message * msg2 = new pingMessage( State::REQ );
-        ((Controller*)controller)->agentServer->sendToAll(msg2);
+        //((Controller*)controller)->agentServer->sendToAll(msg2);
+        thread* t=new thread(&AgentServer::sendToAll,((Controller*)controller)->agentServer,msg2);
 	}
 };
 

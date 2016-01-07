@@ -116,6 +116,9 @@ void AdminServer::listen()
 
 void AdminServer::connect(message::Message* m)
 {
+    #ifdef _DEBUG
+    cout<<"AdminServer::connect(message::Message* m)"<<endl;
+    #endif // _DEBUG
 	/*if(state==-1)
 		cout<<"adminserver state -1 najpierw listen"<<endl;
 	if(state==0 || state=1)*/
