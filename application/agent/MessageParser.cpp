@@ -1,5 +1,7 @@
 #include "MessageParser.hpp"
+#include <iostream>
 
+using namespace std;
 using namespace message;
 
 MessageParser::MessageParser(Message *msg,BlockingQueue<message::Message*>* q) : q(q)
