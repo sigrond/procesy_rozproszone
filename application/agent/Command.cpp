@@ -1,9 +1,13 @@
 #include "Command.hpp"
 
 using namespace message;
+using namespace std;
 
 TaskCommand::TaskCommand(Message *msg,BlockingQueue<message::Message*> *q) : Command(q)
 {
+	#ifdef _DEBUG
+	cout<<"TaskCommand::TaskCommand(Message *msg,BlockingQueue<message::Message*> *q) : Command(q)"<<endl;
+	#endif // _DEBUG
     this->tMessage = static_cast<taskMessage*>(msg);
     /**sprawdzam kategorie polecenia */
     unsigned char subCategory = tMessage->getSubcategory();
@@ -16,6 +20,9 @@ TaskCommand::TaskCommand(Message *msg,BlockingQueue<message::Message*> *q) : Com
         {
             if(msgState == (unsigned char)State::REQ)
             {
+            	#ifdef _DEBUG
+            	cout<<"wiadomość jest TaskSub::T_ADD State::REQ"<<endl;
+            	#endif // _DEBUG
                 //dostalismy nowe zadanie, trzeba je dodac, trzeba wyslac ACK,
                 //po dodaniu zadania wyslac OK lub NOK
                 tm=new taskMessage(TaskSub::T_ADD,State::ACK,tMessage->getRespectPriority(),tMessage->getPriority(),tMessage->getTaskId(),tMessage->getTimestamp());
@@ -31,6 +38,9 @@ TaskCommand::TaskCommand(Message *msg,BlockingQueue<message::Message*> *q) : Com
         {
             if(msgState == (unsigned char)State::REQ)
             {
+            	#ifdef _DEBUG
+            	cout<<"wiadomość jest TaskSub::T_RUN State::REQ"<<endl;
+            	#endif // _DEBUG
                 //dostalismy polecenie uruchomienia zadania, wyslac ACK
                 tm=new taskMessage(TaskSub::T_RUN,State::ACK,tMessage->getRespectPriority(),tMessage->getPriority(),tMessage->getTaskId(),tMessage->getTimestamp());
                 q->push_back(tm);

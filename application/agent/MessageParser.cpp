@@ -9,6 +9,9 @@ MessageParser::MessageParser(Message *msg,BlockingQueue<message::Message*>* q) :
 
 void MessageParser::parse()
 {
+	#ifdef _DEBUG
+	cout<<"MessageParser::parse()"<<endl;
+	#endif // _DEBUG
     unsigned char category, subCategory;
     category = msg->getCategory();
 
@@ -16,6 +19,9 @@ void MessageParser::parse()
     {
         case (int)Category::TASK:
         {
+        	#ifdef _DEBUG
+        	cout<<"odebrana wiadomość  jest Category::TASK"<<endl;
+        	#endif // _DEBUG
             TaskCommand taskCommand(msg,q);
             break;
         }
@@ -36,6 +42,9 @@ void MessageParser::parse()
         }
         case (int)Category::PING:
         {
+        	#ifdef _DEBUG
+        	cout<<"odebrana wiadomość  jest Category::PING"<<endl;
+        	#endif // _DEBUG
             PingCommand pingCommand(msg,q);
             break;
         }
