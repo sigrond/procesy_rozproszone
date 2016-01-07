@@ -1,7 +1,8 @@
 /** \file Task.hpp
  * \author Tomasz Jakubczyk
  * \brief Plik nagłówkowy klasy Task.
- *
+ * \date
+ * Low Orbit Task Cannon
  */
 
 #pragma once

@@ -1,7 +1,8 @@
 /** \file ControllerTests.cpp
  * \author Tomasz Jakubczyk
  * \brief Plik z testami do klasy Controller.
- *
+ * \date
+ * Low Orbit Task Cannon
  */
 
 #define BOOST_TEST_DYN_LINK

@@ -1,7 +1,8 @@
 /** \file Strategy.hpp
  * \author Tomasz Jakubczyk
  * \brief Plik nagłówkowy abstrakcyjnej klasy Strategy.
- *
+ * \date
+ * Low Orbit Task Cannon
  */
 
 #pragma once

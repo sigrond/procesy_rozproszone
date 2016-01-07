@@ -1,7 +1,8 @@
 /** \file AgentServer.hpp
  * \author Tomasz Jakubczyk
  * \brief plik nagłówkowy serwera klienta / agenta
- *
+ * \date
+ * Low Orbit Task Cannon
  */
 
 #pragma once

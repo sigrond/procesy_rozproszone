@@ -1,7 +1,8 @@
 /** \file Model.hpp
  * \author Tomasz Jakubczyk
  * \brief plik nagłówkowy klasy modelu
- *
+ * \date
+ * Low Orbit Task Cannon
  */
 
 #pragma once

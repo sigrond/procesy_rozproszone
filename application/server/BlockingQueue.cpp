@@ -1,7 +1,8 @@
 /** \file BlockingQueue.cpp
  * \author Tomasz Jakubczyk
  * \brief Implementacja metod BlockingQueue
- *
+ * \date
+ * Low Orbit Task Cannon
  */
 
 #include "BlockingQueue.hpp"

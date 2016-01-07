@@ -1,7 +1,8 @@
 /** \file AdminServer.hpp
  * \author Tomasz Jakubczyk
  * \brief plik nagłówkowy klasy serwera administratora
- *
+ * \date
+ * Low Orbit Task Cannon
  */
 
 #pragma once

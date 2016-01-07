@@ -6,6 +6,8 @@
  * Jeśli w puźniejszych fazach projektu okaże się, że jednak klasy strategii się rozrosną,
  * co jest bardzo mało prawdopodobne, to powinno się podzielić ten plik na więcej plików,
  * dla każdej klasy osobny.
+ * \date
+ * Low Orbit Task Cannon
  */
 
 #pragma once

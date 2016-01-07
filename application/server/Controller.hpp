@@ -1,7 +1,8 @@
 /** \file Controller.hpp
  * \author Tomasz Jakubczyk
  * \brief Plik nagłówkowy klasy kontrolera
- *
+ * \date
+ * Low Orbit Task Cannon
  */
 
 #pragma once

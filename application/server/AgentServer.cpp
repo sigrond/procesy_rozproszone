@@ -1,7 +1,8 @@
 /** \file AgentServer.cpp
  * \author Tomasz Jakubczyk
  * \brief plik z implementacjami metod klasy serwera klienta / agenta
- *
+ * \date
+ * Low Orbit Task Cannon
  */
 
 #include "AgentServer.hpp"

@@ -1,7 +1,8 @@
 /** \file Event.hpp
  * \author Tomasz Jakubczyk
  * \brief Plik nagłówkowy klasy Event
- *
+ * \date
+ * Low Orbit Task Cannon
  */
 
 #pragma once

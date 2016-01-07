@@ -1,7 +1,8 @@
 /** \file BlockingQueue.hpp
  * \author Tomasz Jakubczyk
  * \brief plik nagłówkowy klasy kolejki blokującej
- *
+ * \date
+ * Low Orbit Task Cannon
  */
 
 #pragma once

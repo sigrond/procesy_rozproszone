@@ -1,7 +1,8 @@
 /** \file Task.cpp
  * \author Tomasz Jakubczyk
  * \brief Plik z implementacjami metod klasy Task.
- *
+ * \date
+ * Low Orbit Task Cannon
  */
 
 #include "Task.hpp"

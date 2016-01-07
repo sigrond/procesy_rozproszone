@@ -1,7 +1,8 @@
 /** \file BlockingQueueTests.cpp
  * \author Tomasz Jakubczyk
  * \brief Plik z testami do klasy BlockingQueue.
- *
+ * \date
+ * Low Orbit Task Cannon
  */
 
 #define BOOST_TEST_DYN_LINK
