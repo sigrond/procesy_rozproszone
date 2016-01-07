@@ -1,0 +1,44 @@
+Dokumentacja końcowa
+Tomasz Jakubczyk
+5.  Wnioski z wykonanego testowania.
+Niezaprzeczalnie poprawnie działa kolejka blokująca BlockingQueue.
+Jest to bardzo ważny element projektu, gdyż zapewnia niezawodnąsynchronizację
+wątków. Bez tego nie było by szans, żeby coś działało.
+Każdy z modółów, czyli serwer, konsola, agent i protokół, same z siebie wydają się działać
+poprawnie, jednak testowanie wykazało, że moduły te zapałały do siebie gorącą nienawiścia.
+Ponadto wykożystywane komilatory g++ i biblioteki obsługujące standard c++11 i c++14
+wykazują się różnymi dziwnymi zachowaniami. O ile kompilacja i linkowanie przebiega pomyślnie,
+to nie mozna powiedzieć, że wykonanie programów takie jest.
+Na Ubuntu występóje błąd
+*** buffer overflow detected ***: terminated
+wydaje się, że jest to wina bibliotek dystrybucji linuxa.
+Inne problemy występują pod Cygwinem, który teoretycznie powinien być zgodny
+z linuxem. Tam wydaje się, że Istnieją pewne ograniczenia co do otwierania i
+zamykania gniazd. Objawia się to, niemożliwością powtórnego nawiązania połączenia.
+Nie da się też wykluczyć, że powyższe błędy są związane z testowaniem poszególnych,
+modułów aplikacji naraz na jednym komputerze bez ustawionych maszyn wirtualnych.
+Wydaje się, że bibloteki socket nadal są niedopracowane i zawierają błędy.
+Nie mniej udaje się wykonywać porgramy aplikacji LOTC na linux arch, bez wyżej wymienionych błędów.
+Mimo, że prawie od samego początku projektu zaczeliśmy testować protokół aplikacji,
+to i tak pod koniec, okazało się, że w połączeniu z pozostałymi częściami aplikacji
+wszystko nagle przestało działać. Być może było to spowodowane zbyt słabym opisaniem
+metod publicznych klas protokołu. W trakcie integrowania ze sobą modułów wyszły na jaw
+różne nieporozumienia co do działania protokołu. Być może przy protokole powinno
+pracować więcej osób, albo najlepiej wszyscy, ale to by oznaczało wchodzenie sobie w drogę.
+Jeśli jeszcze raz miał bym robić ten projekt, to wstępnie zarządził bym, żeby
+każdy napisał własną obsługę gniazd do przesyłania komunikatów protokołu i
+wtedy dużo łatwiej było by wykrywać błędy, bo wyraźnie były by widoczne wizje
+działania komunikacji sieciowej poszcególnych programistów i dało by się ich
+w porę naprostować.
+Testowanie okazało się też niesamowicie czasochłonne i nieprzyjemne.
+Mimo usilnych starań nie udało się przekonać członków zespołu do napisania
+odpowiedniej liczby testów jednostkowych i postało ich zaledwie kilka.
+Zostało napisanych kilka skryptów tstowych, ale raczej w niczym one nam nie pomogły,
+a próby doprowadzenia ich do działania na niektórych maszynach i systemach
+zajeły sporo czasu.
+Oczywiście niezwykle przydatne okazały się ogromne ilości komunikatów debugowania.
+oraz gdb pozwoliło szybko znaleźć kilka powżnych błędów, ale nie wszystkie.
+Gdb wykazuje się złym zachowaniem, jeśli w programie zwracane są wyjątki,
+które nie mają zakończyć programu.
+Być może powinno się wyznaczyć jedną osobę, która zjmowała by się tylko testowaniem
+tego co inni napisali.
