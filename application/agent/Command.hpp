@@ -1,3 +1,10 @@
+/** \file Command.hpp
+ * \authors Eryk Ratyński, Tomasz Jakubczyk
+ * \brief Plik nagłówkowy klasy Command
+ * \date 5 sty 2015
+ * Low Orbit Task Cannon
+ */
+
 #ifndef COMMAND_HPP
 #define COMMAND_HPP
 

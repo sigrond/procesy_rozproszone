@@ -1,3 +1,10 @@
+/** \file MessageParser.cpp
+ * \authors Eryk Ratyński, Tomasz Jakubczyk
+ * \brief Plik z deklaracją klasy MessageParser
+ * \date 5 sty 2015
+ * Low Orbit Task Cannon
+ */
+
 #ifndef MessageParser_hpp
 #define MessageParser_hpp
 

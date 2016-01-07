@@ -1,7 +1,10 @@
 /** \file Agent.cpp
- * \author Eryk Ratyński
+ * \authors Eryk Ratyński, Tomasz Jakubczyk
  * \brief Plik główny dla agenta
+ * \date 12 gru 2015
+ * Low Orbit Task Cannon
  */
+
 
 #include "AgentClient.hpp"
 #include "../protocol/ConnectionManager.hpp"

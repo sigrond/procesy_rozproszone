@@ -1,6 +1,8 @@
 /** \file AgentClient.cpp
- * \author Eryk Ratyński
+ * \authors Eryk Ratyński, Tomasz Jakubczyk
  * \brief implementacja metod dla klasy AgentClient
+ * \date 12 gru 2015
+ * Low Orbit Task Cannon
  */
 
 #include "AgentClient.hpp"
