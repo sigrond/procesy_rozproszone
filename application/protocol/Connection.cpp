@@ -67,7 +67,7 @@ void Connection::send ( const message::Message & message )
 
 	socket->send( message.getBuffer(), message.getBufferSize() );
 
-	// socket->close();
+	socket->close();
 }
 
 void Connection::recTask ( message::Message * & message, char code )
@@ -431,7 +431,7 @@ void Connection::receive ( message::Message * & message )
 	}
 
         
-	// socket->close();
+	socket->close();
 }
 
 char Connection::getCounter()
