@@ -115,58 +115,63 @@ $(document).ready(function(){initNavTree('Agent_8cpp_source.html','');});
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="AgentClient_8hpp.html" title="Plik nagłówkowy klienta dla agenta. ">&quot;AgentClient.hpp&quot;</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//#include &quot;../protocol/Ip.hpp&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">thread</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">iostream</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using</span> <span class="keyword">namespace</span> std;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="Agent_8cpp.html#af78beb4a0d33807a778c4dd88e28f164">   15</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="wireshark_2test_01protocol_2application_2server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(<span class="keywordtype">int</span> argi, <span class="keywordtype">char</span>* argv[])</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        Ipv4 * serverIP;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span>(argi == 1)<span class="comment">/**dokonczyc pobranie adresu*/</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        serverIP = <span class="keyword">new</span> Ipv4(string(argv[1]));</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        serverIP = <span class="keyword">new</span> Ipv4(<span class="stringliteral">&quot;127.0.0.1&quot;</span>);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="classAgentClient.html">AgentClient</a>* agentClient = <span class="keyword">new</span> <a class="code" href="classAgentClient.html">AgentClient</a><a class="code" href="classAgentClient.html#a7fbebe8ebd0774f9e4280213389ec025">(</a> *<span class="keyword">static_cast</span>&lt;<a class="code" href="classIp.html">Ip</a>*&gt;(serverIP)<a class="code" href="classAgentClient.html#a7fbebe8ebd0774f9e4280213389ec025">)</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">//thread clientThread(agentClient-&gt;start());</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;../protocol/ConnectionManager.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;../protocol/Ip.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">thread</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">iostream</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">string</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using</span> <span class="keyword">namespace</span> std;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="Agent_8cpp.html#af78beb4a0d33807a778c4dd88e28f164">   17</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="wireshark_2test_01protocol_2application_2server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(<span class="keywordtype">int</span> argi, <span class="keywordtype">char</span>* argv[])</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        Ipv4 * serverIP;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span>(argi &gt;=2)<span class="comment">/**dokonczyc pobranie adresu*/</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        serverIP = <span class="keyword">new</span> Ipv4(string(argv[1]) );</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        serverIP = <span class="keyword">new</span> Ipv4(string(<span class="stringliteral">&quot;127.0.0.1&quot;</span>));</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        string s;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">while</span>(cin &gt;&gt; s)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keywordflow">if</span>(s.compare(<span class="stringliteral">&quot;exit&quot;</span>) == 0)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">/*</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">        if(clientThread.joinable())</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">        {</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">        clientThread.join();</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">        }</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">    delete clientThread;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">    deleteagentClient;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">        */</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
-<div class="ttc" id="classAgentClient_html"><div class="ttname"><a href="classAgentClient.html">AgentClient</a></div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8hpp_source.html#l00010">AgentClient.hpp:10</a></div></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classAgentClient.html">AgentClient</a>* agentClient = <span class="keyword">new</span> <a class="code" href="classAgentClient.html">AgentClient</a><a class="code" href="classAgentClient.html#a7fbebe8ebd0774f9e4280213389ec025">(</a> *<span class="keyword">static_cast</span>&lt;<a class="code" href="classIp.html">Ip</a>*&gt;(serverIP)<a class="code" href="classAgentClient.html#a7fbebe8ebd0774f9e4280213389ec025">)</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">//thread adminServerThread(&amp;AdminServer::start,adminServer);</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        thread clientThread(&amp;AgentClient::start,agentClient);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        std::string s;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">while</span>(std::cin &gt;&gt; s)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordflow">if</span>(s.compare(<span class="stringliteral">&quot;exit&quot;</span>) == 0)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">        if(clientThread.joinable())</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">        {</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">        clientThread.join();</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    delete clientThread;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">    deleteagentClient;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="ttc" id="classAgentClient_html"><div class="ttname"><a href="classAgentClient.html">AgentClient</a></div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8hpp_source.html#l00016">AgentClient.hpp:16</a></div></div>
 <div class="ttc" id="wireshark_2test_01protocol_2application_2server_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="wireshark_2test_01protocol_2application_2server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="wireshark_2test_01protocol_2application_2server_8cpp_source.html#l00010">wireshark/test protocol/application/server.cpp:10</a></div></div>
 <div class="ttc" id="classIp_html"><div class="ttname"><a href="classIp.html">Ip</a></div><div class="ttdoc">Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8hpp_source.html#l00023">Ip.hpp:23</a></div></div>
-<div class="ttc" id="classAgentClient_html_a7fbebe8ebd0774f9e4280213389ec025"><div class="ttname"><a href="classAgentClient.html#a7fbebe8ebd0774f9e4280213389ec025">AgentClient::AgentClient</a></div><div class="ttdeci">AgentClient(Ip &amp;ip)</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8cpp_source.html#l00020">AgentClient.cpp:20</a></div></div>
+<div class="ttc" id="classAgentClient_html_a7fbebe8ebd0774f9e4280213389ec025"><div class="ttname"><a href="classAgentClient.html#a7fbebe8ebd0774f9e4280213389ec025">AgentClient::AgentClient</a></div><div class="ttdeci">AgentClient(Ip &amp;ip)</div><div class="ttdef"><b>Definition:</b> <a href="AgentClient_8cpp_source.html#l00025">AgentClient.cpp:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_6d76cf45829c3b3bce8b59b13f5eef91.html">agent</a></li><li class="navelem"><a class="el" href="Agent_8cpp.html">Agent.cpp</a></li>
-    <li class="footer">Wygenerowano Pn, 4 sty 2016 22:01:01 dla LOTC programem
+    <li class="footer">Wygenerowano Cz, 7 sty 2016 17:23:49 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -114,13 +114,19 @@ $(document).ready(function(){initNavTree('classConnection.html','');});
 
 <p>To jest kompletna lista składowych dla <a class="el" href="classConnection.html">Connection</a>, uwzględniająca wszystkie dziedziczone składowe.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classConnection.html#af14371773ccb34761a175769a24a4eec">Connection</a>(const Ipv4 &amp;address=Ipv4(), unsigned short port=55555)</td><td class="entry"><a class="el" href="classConnection.html">Connection</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classConnection.html#ab49c655af4acc49507407a167325fee7">Connection</a>(const Ipv4 &amp;address=Ipv4(), unsigned short port=55555, unsigned short clientPort=0)</td><td class="entry"><a class="el" href="classConnection.html">Connection</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classConnection.html#a7a702a352caba4f520e2f8df00144355">Connection</a>(const Ipv6 &amp;address=Ipv6())</td><td class="entry"><a class="el" href="classConnection.html">Connection</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classConnection.html#affda888392bebd09786862c2d39acce8">Connection</a>(int socket)</td><td class="entry"><a class="el" href="classConnection.html">Connection</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classConnection.html#a0a2aec40fe257a2d79dbad1dc1f32120">counter</a></td><td class="entry"><a class="el" href="classConnection.html">Connection</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classConnection.html#a507e05db5d5bb71b625c609b5cbfeeab">getCounter</a>()</td><td class="entry"><a class="el" href="classConnection.html">Connection</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classConnection.html#af35d1eb54f2af5a9abcabd3a9dad7287">ip</a></td><td class="entry"><a class="el" href="classConnection.html">Connection</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classConnection.html#a8f1350a6e529ea4ae149651d0e12dbf1">receive</a>(message::Message *message)</td><td class="entry"><a class="el" href="classConnection.html">Connection</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classConnection.html#aeb32d06dfe76dbaf772d23fa4536e789">recDep</a>(message::Message *&amp;message)</td><td class="entry"><a class="el" href="classConnection.html">Connection</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classConnection.html#abc2969606fc0934d737c78cddd64ffcf">receive</a>(message::Message *&amp;message)</td><td class="entry"><a class="el" href="classConnection.html">Connection</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classConnection.html#a5e0be3518e85ec27066cb512c636d5fb">recErr</a>(message::Message *&amp;message, char code)</td><td class="entry"><a class="el" href="classConnection.html">Connection</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classConnection.html#a19a12271edf96cd222811ee82176988e">recFile</a>(message::Message *&amp;message)</td><td class="entry"><a class="el" href="classConnection.html">Connection</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classConnection.html#a003ce0ffaf8c0e1c390cf1f3317fce79">recHost</a>(message::Message *&amp;message, char code)</td><td class="entry"><a class="el" href="classConnection.html">Connection</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classConnection.html#a1fb3bbb3d8905999cdb7304a84c254fd">recRet</a>(message::Message *&amp;message)</td><td class="entry"><a class="el" href="classConnection.html">Connection</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classConnection.html#a6a4e873b39006bf7fa50f8df7326acbe">recTask</a>(message::Message *&amp;message, char code)</td><td class="entry"><a class="el" href="classConnection.html">Connection</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="classConnection.html#ac8abd34010a78efd01e2af9aa7fa92fd">send</a>(const message::Message &amp;message)</td><td class="entry"><a class="el" href="classConnection.html">Connection</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classConnection.html#a4bf787fc71e664c6b23d41d303d2a655">socket</a></td><td class="entry"><a class="el" href="classConnection.html">Connection</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="classConnection.html#a2e4352edf667bea83001569e9da8a24d">~Connection</a>()</td><td class="entry"><a class="el" href="classConnection.html">Connection</a></td><td class="entry"></td></tr>
@@ -129,7 +135,7 @@ $(document).ready(function(){initNavTree('classConnection.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Wygenerowano Pn, 4 sty 2016 22:01:03 dla LOTC programem
+    <li class="footer">Wygenerowano Cz, 7 sty 2016 17:23:57 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

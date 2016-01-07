@@ -122,14 +122,14 @@ Diagram dziedziczenia dla SocketIp6</div>
 <div class="dyncontent">
 <div class="center"><img src="classSocketIp6__inherit__graph.png" border="0" usemap="#SocketIp6_inherit__map" alt="Inheritance graph"/></div>
 <map name="SocketIp6_inherit__map" id="SocketIp6_inherit__map">
-<area shape="rect" id="node2" href="classSocket.html" title="{Socket\n|# sockfd\l# port\l|+ Socket()\l+ Socket()\l+ ~Socket()\l+ connect()\l+ bind()\l+ listen()\l+ accept()\l+ recv()\l+ send()\l+ getIp()\l+ close()\l}" alt="" coords="10,5,101,244"/></map>
+<area shape="rect" id="node2" href="classSocket.html" title="{Socket\n|# sockfd\l# port\l|+ Socket()\l+ Socket()\l+ ~Socket()\l+ connect()\l+ connect()\l+ bind()\l+ listen()\l+ accept()\l+ recv()\l+ send()\l+ getIp()\l+ getPort()\l+ close()\l}" alt="" coords="10,5,101,273"/></map>
 </div>
 <div class="dynheader">
 Diagram współpracy dla SocketIp6:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSocketIp6__coll__graph.png" border="0" usemap="#SocketIp6_coll__map" alt="Collaboration graph"/></div>
 <map name="SocketIp6_coll__map" id="SocketIp6_coll__map">
-<area shape="rect" id="node2" href="classSocket.html" title="{Socket\n|# sockfd\l# port\l|+ Socket()\l+ Socket()\l+ ~Socket()\l+ connect()\l+ bind()\l+ listen()\l+ accept()\l+ recv()\l+ send()\l+ getIp()\l+ close()\l}" alt="" coords="10,5,101,244"/></map>
+<area shape="rect" id="node2" href="classSocket.html" title="{Socket\n|# sockfd\l# port\l|+ Socket()\l+ Socket()\l+ ~Socket()\l+ connect()\l+ connect()\l+ bind()\l+ listen()\l+ accept()\l+ recv()\l+ send()\l+ getIp()\l+ getPort()\l+ close()\l}" alt="" coords="10,5,101,273"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -145,6 +145,8 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:aeac4eb6379a543d38ed88977d3b6630a inherit pub_methods_classSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1722aa9af2ec480b999e6bb664a1b925 inherit pub_methods_classSocket"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#a1722aa9af2ec480b999e6bb664a1b925">connect</a> ()</td></tr>
 <tr class="separator:a1722aa9af2ec480b999e6bb664a1b925 inherit pub_methods_classSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76be78eed8ed97aefab6364eced8917c inherit pub_methods_classSocket"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#a76be78eed8ed97aefab6364eced8917c">connect</a> (unsigned short clientPort)</td></tr>
+<tr class="separator:a76be78eed8ed97aefab6364eced8917c inherit pub_methods_classSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abda54549284a0626998e833bfead9f11 inherit pub_methods_classSocket"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#abda54549284a0626998e833bfead9f11">bind</a> ()</td></tr>
 <tr class="separator:abda54549284a0626998e833bfead9f11 inherit pub_methods_classSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34374a7d9ae416f8593bea924ab2099b inherit pub_methods_classSocket"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#a34374a7d9ae416f8593bea924ab2099b">listen</a> ()</td></tr>
@@ -157,6 +159,8 @@ Metody publiczne</h2></td></tr>
 <tr class="separator:afe708d0a437f0b966fef606b2a2af2b0 inherit pub_methods_classSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6eb3127372b827887aa40ed516650543 inherit pub_methods_classSocket"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classIpv4.html">Ipv4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#a6eb3127372b827887aa40ed516650543">getIp</a> ()</td></tr>
 <tr class="separator:a6eb3127372b827887aa40ed516650543 inherit pub_methods_classSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab280bd0188f462f168f795e50a591195 inherit pub_methods_classSocket"><td class="memItemLeft" align="right" valign="top">virtual unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#ab280bd0188f462f168f795e50a591195">getPort</a> () const </td></tr>
+<tr class="separator:ab280bd0188f462f168f795e50a591195 inherit pub_methods_classSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef06605c6725958004116983f1a2051f inherit pub_methods_classSocket"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#aef06605c6725958004116983f1a2051f">close</a> ()</td></tr>
 <tr class="separator:aef06605c6725958004116983f1a2051f inherit pub_methods_classSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -177,7 +181,7 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock">
-<p>Definicja w linii <a class="el" href="Socket_8hpp_source.html#l00084">84</a> pliku <a class="el" href="Socket_8hpp_source.html">Socket.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Socket_8hpp_source.html#l00088">88</a> pliku <a class="el" href="Socket_8hpp_source.html">Socket.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a class="anchor" id="a96482d1a74a32fe7ce1a5f1c24d6c1ec"></a>
 <div class="memitem">
@@ -214,7 +218,7 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Socket_8hpp_source.html#l00091">91</a> pliku <a class="el" href="Socket_8hpp_source.html">Socket.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Socket_8hpp_source.html#l00095">95</a> pliku <a class="el" href="Socket_8hpp_source.html">Socket.hpp</a>.</p>
 
 </div>
 </div>
@@ -236,7 +240,7 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Socket_8hpp_source.html#l00090">90</a> pliku <a class="el" href="Socket_8hpp_source.html">Socket.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Socket_8hpp_source.html#l00094">94</a> pliku <a class="el" href="Socket_8hpp_source.html">Socket.hpp</a>.</p>
 
 </div>
 </div>
@@ -249,7 +253,7 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classSocketIp6.html">SocketIp6</a></li>
-    <li class="footer">Wygenerowano Pn, 4 sty 2016 22:01:04 dla LOTC programem
+    <li class="footer">Wygenerowano Cz, 7 sty 2016 17:24:01 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

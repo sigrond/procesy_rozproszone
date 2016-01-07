@@ -1,6 +1,8 @@
 var searchData=
 [
   ['changeslog_2etxt',['ChangesLog.txt',['../ChangesLog_8txt.html',1,'']]],
+  ['command_2ecpp',['Command.cpp',['../Command_8cpp.html',1,'']]],
+  ['command_2ehpp',['Command.hpp',['../Command_8hpp.html',1,'']]],
   ['connection_2ecpp',['Connection.cpp',['../Connection_8cpp.html',1,'']]],
   ['connection_2ehpp',['Connection.hpp',['../Connection_8hpp.html',1,'']]],
   ['connectionmanager_2ecpp',['ConnectionManager.cpp',['../ConnectionManager_8cpp.html',1,'']]],

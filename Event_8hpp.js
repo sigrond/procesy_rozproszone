@@ -10,6 +10,7 @@ var Event_8hpp =
       [ "ADD_AGENT", "Event_8hpp.html#a2628ea8d12e8b2563c32f05dc7fff6faa87b42512151fcd5551a4ba619cde2c79", null ],
       [ "PING_ADMIN", "Event_8hpp.html#a2628ea8d12e8b2563c32f05dc7fff6faaf12b4cd22736a99f809b577d401bbd4d", null ],
       [ "PING_SLAVES", "Event_8hpp.html#a2628ea8d12e8b2563c32f05dc7fff6faa60d98e99cb50c5d4054eccdd0c40f46e", null ],
-      [ "ADD_TASK", "Event_8hpp.html#a2628ea8d12e8b2563c32f05dc7fff6faa9bacc3399955d3ab88fce5d8fa06faf6", null ]
+      [ "ADD_TASK", "Event_8hpp.html#a2628ea8d12e8b2563c32f05dc7fff6faa9bacc3399955d3ab88fce5d8fa06faf6", null ],
+      [ "REMOVE_AGENT", "Event_8hpp.html#a2628ea8d12e8b2563c32f05dc7fff6faa0487e63633cdee8ae784956abb9b41d0", null ]
     ] ]
 ];

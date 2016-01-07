@@ -1,5 +1,11 @@
 var files =
 [
+    [ "Address.cpp", "Address_8cpp.html", null ],
+    [ "Address.hpp", "Address_8hpp.html", [
+      [ "Address", "classAddress.html", "classAddress" ],
+      [ "AddressIpv4", "classAddressIpv4.html", "classAddressIpv4" ],
+      [ "AddressIpv6", "classAddressIpv6.html", "classAddressIpv6" ]
+    ] ],
     [ "AdminServer.cpp", "AdminServer_8cpp.html", [
       [ "AdminServerException", "structAdminServerException.html", "structAdminServerException" ]
     ] ],
@@ -25,16 +31,23 @@ var files =
     [ "BlockingQueueTests.cpp", "BlockingQueueTests_8cpp.html", "BlockingQueueTests_8cpp" ],
     [ "application/protocol/client.cpp", "application_2protocol_2client_8cpp.html", "application_2protocol_2client_8cpp" ],
     [ "wireshark/test protocol/application/client.cpp", "wireshark_2test_01protocol_2application_2client_8cpp.html", "wireshark_2test_01protocol_2application_2client_8cpp" ],
+    [ "Command.cpp", "Command_8cpp.html", null ],
+    [ "Command.hpp", "Command_8hpp.html", [
+      [ "Command", "classCommand.html", "classCommand" ],
+      [ "SynCommand", "classSynCommand.html", "classSynCommand" ],
+      [ "TaskCommand", "classTaskCommand.html", "classTaskCommand" ],
+      [ "DepCommand", "classDepCommand.html", null ],
+      [ "FileCommand", "classFileCommand.html", "classFileCommand" ],
+      [ "PingCommand", "classPingCommand.html", "classPingCommand" ]
+    ] ],
     [ "Connection.cpp", "Connection_8cpp.html", null ],
     [ "Connection.hpp", "Connection_8hpp.html", [
       [ "Connection", "classConnection.html", "classConnection" ]
     ] ],
     [ "ConnectionManager.cpp", "ConnectionManager_8cpp.html", "ConnectionManager_8cpp" ],
-    [ "ConnectionManager.hpp", "ConnectionManager_8hpp.html", [
-      [ "ConnectionManager", "classConnectionManager.html", "classConnectionManager" ]
-    ] ],
+    [ "ConnectionManager.hpp", "ConnectionManager_8hpp.html", "ConnectionManager_8hpp" ],
     [ "Console.cpp", "Console_8cpp.html", "Console_8cpp" ],
-    [ "ConsoleClient.cpp", "ConsoleClient_8cpp.html", null ],
+    [ "ConsoleClient.cpp", "ConsoleClient_8cpp.html", "ConsoleClient_8cpp" ],
     [ "ConsoleClient.hpp", "ConsoleClient_8hpp.html", [
       [ "ConsoleClient", "classConsoleClient.html", "classConsoleClient" ]
     ] ],
@@ -54,6 +67,8 @@ var files =
       [ "Ipv6", "classIpv6.html", "classIpv6" ],
       [ "BadIpException", "classBadIpException.html", "classBadIpException" ]
     ] ],
+    [ "application/agent/makefile", "application_2agent_2makefile.html", null ],
+    [ "application/client/makefile", "application_2client_2makefile.html", null ],
     [ "application/protocol/makefile", "application_2protocol_2makefile.html", null ],
     [ "application/server/makefile", "application_2server_2makefile.html", null ],
     [ "wireshark/test protocol/application/makefile", "wireshark_2test_01protocol_2application_2makefile.html", null ],
@@ -74,6 +89,10 @@ var files =
       [ "TestMessage", "classTestMessage.html", "classTestMessage" ]
     ] ],
     [ "MessageCodes.hpp", "MessageCodes_8hpp.html", "MessageCodes_8hpp" ],
+    [ "MessageParser.cpp", "MessageParser_8cpp.html", null ],
+    [ "MessageParser.hpp", "MessageParser_8hpp.html", [
+      [ "MessageParser", "classMessageParser.html", "classMessageParser" ]
+    ] ],
     [ "Model.cpp", "Model_8cpp.html", [
       [ "ModelException", "structModelException.html", "structModelException" ]
     ] ],
@@ -99,7 +118,10 @@ var files =
       [ "AcceptSockEx", "classAcceptSockEx.html", "classAcceptSockEx" ],
       [ "CreateSockEx", "classCreateSockEx.html", "classCreateSockEx" ],
       [ "ListenSockEx", "classListenSockEx.html", "classListenSockEx" ],
-      [ "ConnectSockEx", "classConnectSockEx.html", "classConnectSockEx" ]
+      [ "ConnectSockEx", "classConnectSockEx.html", "classConnectSockEx" ],
+      [ "SendSockEx", "classSendSockEx.html", "classSendSockEx" ],
+      [ "RecSockEx", "classRecSockEx.html", "classRecSockEx" ],
+      [ "TimeoutEx", "classTimeoutEx.html", "classTimeoutEx" ]
     ] ],
     [ "Strategies.hpp", "Strategies_8hpp.html", [
       [ "TestStrategy", "classTestStrategy.html", "classTestStrategy" ],
@@ -115,8 +137,6 @@ var files =
       [ "Strategy", "classStrategy.html", "classStrategy" ]
     ] ],
     [ "Task.cpp", "Task_8cpp.html", null ],
-    [ "Task.hpp", "Task_8hpp.html", [
-      [ "Task", "classTask.html", "classTask" ]
-    ] ],
+    [ "Task.hpp", "Task_8hpp.html", "Task_8hpp" ],
     [ "version.h", "version_8h.html", "version_8h" ]
 ];

@@ -115,69 +115,28 @@ $(document).ready(function(){initNavTree('application_2protocol_2client_8cpp.htm
 <code>#include &lt;string&gt;</code><br/>
 <code>#include &lt;thread&gt;</code><br/>
 <code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;fstream&gt;</code><br/>
+<code>#include &lt;cstdlib&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Wykres zależności załączania dla application/protocol/client.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="application_2protocol_2client_8cpp__incl.png" border="0" usemap="#client_8cpp" alt=""/></div>
 <map name="client_8cpp" id="client_8cpp">
-<area shape="rect" id="node2" href="ConnectionManager_8hpp.html" title="ConnectionManager.hpp" alt="" coords="487,80,649,107"/><area shape="rect" id="node6" href="application_2protocol_2Message_8hpp.html" title="Message.hpp" alt="" coords="314,229,414,256"/><area shape="rect" id="node11" href="Ip_8hpp.html" title="Ip.hpp" alt="" coords="423,304,481,331"/><area shape="rect" id="node16" href="Connection_8hpp.html" title="Connection.hpp" alt="" coords="377,155,489,181"/><area shape="rect" id="node17" href="Socket_8hpp.html" title="Socket.hpp" alt="" coords="636,229,724,256"/><area shape="rect" id="node10" href="MessageCodes_8hpp.html" title="MessageCodes.hpp" alt="" coords="181,304,318,331"/><area shape="rect" id="node22" href="SocketException_8hpp.html" title="SocketException.hpp" alt="" coords="1027,304,1173,331"/></map>
+<area shape="rect" id="node2" href="ConnectionManager_8hpp.html" title="ConnectionManager.hpp" alt="" coords="469,80,631,107"/><area shape="rect" id="node6" href="application_2protocol_2Message_8hpp.html" title="Message.hpp" alt="" coords="200,229,300,256"/><area shape="rect" id="node11" href="Ip_8hpp.html" title="Ip.hpp" alt="" coords="424,304,481,331"/><area shape="rect" id="node16" href="Connection_8hpp.html" title="Connection.hpp" alt="" coords="494,155,606,181"/><area shape="rect" id="node17" href="Socket_8hpp.html" title="Socket.hpp" alt="" coords="703,229,791,256"/><area shape="rect" id="node23" href="Address_8hpp.html" title="Plik nagłówkowy klasy Address. " alt="" coords="324,229,419,256"/><area shape="rect" id="node10" href="MessageCodes_8hpp.html" title="MessageCodes.hpp" alt="" coords="181,304,319,331"/><area shape="rect" id="node22" href="SocketException_8hpp.html" title="SocketException.hpp" alt="" coords="1026,304,1173,331"/></map>
 </div>
 </div>
 <p><a href="application_2protocol_2client_8cpp_source.html">Idź do kodu źródłowego tego pliku.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funkcje</h2></td></tr>
-<tr class="memitem:ade3a1e1d732f975e8877b5889083cb85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="application_2protocol_2client_8cpp.html#ade3a1e1d732f975e8877b5889083cb85">communication</a> (<a class="el" href="classConnectionManager.html">ConnectionManager</a> *cm, <a class="el" href="classIpv4.html">Ipv4</a> *ip, unsigned port)</td></tr>
-<tr class="separator:ade3a1e1d732f975e8877b5889083cb85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a07ed6ad76849366c5a5bcc3d1b42ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="application_2protocol_2client_8cpp.html#a3a07ed6ad76849366c5a5bcc3d1b42ca">rec</a> (<a class="el" href="classConnectionManager.html">ConnectionManager</a> *cm, <a class="el" href="classIpv4.html">Ipv4</a> *ip, unsigned port)</td></tr>
+<tr class="separator:a3a07ed6ad76849366c5a5bcc3d1b42ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02512d6914c372c7e321b6ace0d039c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="application_2protocol_2client_8cpp.html#a02512d6914c372c7e321b6ace0d039c3">send_</a> (<a class="el" href="classConnectionManager.html">ConnectionManager</a> *cm, <a class="el" href="classIpv4.html">Ipv4</a> *ip, unsigned port)</td></tr>
+<tr class="separator:a02512d6914c372c7e321b6ace0d039c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="application_2protocol_2client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Dokumentacja funkcji</h2>
-<a class="anchor" id="ade3a1e1d732f975e8877b5889083cb85"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void communication </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classConnectionManager.html">ConnectionManager</a> *&#160;</td>
-          <td class="paramname"><em>cm</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classIpv4.html">Ipv4</a> *&#160;</td>
-          <td class="paramname"><em>ip</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>port</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definicja w linii <a class="el" href="application_2protocol_2client_8cpp_source.html#l00008">8</a> pliku <a class="el" href="application_2protocol_2client_8cpp_source.html">application/protocol/client.cpp</a>.</p>
-
-<p>Odwołuje się do <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063a0fc437bc317835cad5faafc12a83fad5">message::ACK</a>, <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063ae0aa021e21dddbd6d8cecec71e9cf564">message::OK</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00121">ConnectionManager::receive()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00089">ConnectionManager::send()</a> i <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00260">message::synMessage::synMessage()</a>.</p>
-
-<p><div class="dynheader">
-Oto graf wywołań dla tej funkcji:</div>
-<div class="dyncontent">
-<div class="center"><img src="application_2protocol_2client_8cpp_ade3a1e1d732f975e8877b5889083cb85_cgraph.png" border="0" usemap="#application_2protocol_2client_8cpp_ade3a1e1d732f975e8877b5889083cb85_cgraph" alt=""/></div>
-<map name="application_2protocol_2client_8cpp_ade3a1e1d732f975e8877b5889083cb85_cgraph" id="application_2protocol_2client_8cpp_ade3a1e1d732f975e8877b5889083cb85_cgraph">
-<area shape="rect" id="node2" href="classConnectionManager.html#a1c91ab050474e9b380be98c8aaf2f95d" title="ConnectionManager::\lreceive" alt="" coords="178,161,323,202"/><area shape="rect" id="node9" href="classConnectionManager.html#a314bdb20e3fb92c2567dfac2da975618" title="ConnectionManager::send" alt="" coords="164,227,337,253"/><area shape="rect" id="node18" href="classmessage_1_1synMessage.html#adc773263592bfcd5ae421c8a476b7461" title="message::synMessage\l::synMessage" alt="" coords="172,295,329,337"/><area shape="rect" id="node3" href="classConnection.html#a8f1350a6e529ea4ae149651d0e12dbf1" title="Funkcja oczekująca na komunikat od zdalnego hosta. " alt="" coords="417,121,551,148"/><area shape="rect" id="node8" href="classConnection.html#a507e05db5d5bb71b625c609b5cbfeeab" title="Connection::getCounter" alt="" coords="405,172,563,199"/><area shape="rect" id="node4" href="classSocket.html#a6817b8ad1ae209f740f303dc8cbc6ed8" title="Socket::recv" alt="" coords="694,5,789,32"/><area shape="rect" id="node5" href="classmessage_1_1synMessage.html#a8a7c6609d4fb1910697341e07dca5712" title="message::synMessage\l::synMessage" alt="" coords="663,57,820,98"/><area shape="rect" id="node7" href="classSocket.html#aef06605c6725958004116983f1a2051f" title="Socket::close" alt="" coords="690,123,793,149"/><area shape="rect" id="node6" href="classmessage_1_1Message.html#a5b97532d722a5d538d1d23339952bc6d" title="message::Message::Message" alt="" coords="900,64,1097,91"/><area shape="rect" id="node10" href="classConnection.html#af14371773ccb34761a175769a24a4eec" title="Konstruktor połączeń po IPv4. " alt="" coords="404,300,564,327"/><area shape="rect" id="node14" href="classConnection.html#ac8abd34010a78efd01e2af9aa7fa92fd" title="Funcja wysyłająca komunikat. " alt="" coords="423,224,545,251"/><area shape="rect" id="node11" href="classSocketIp4.html#a430c59c57f709f3d163dafbe7397d7f5" title="SocketIp4::SocketIp4" alt="" coords="668,400,815,427"/><area shape="rect" id="node13" href="classSocket.html#a1722aa9af2ec480b999e6bb664a1b925" title="Socket::connect" alt="" coords="683,325,800,352"/><area shape="rect" id="node12" href="classSocket.html#a2c55b94d9f5256b3297b67f9fb0f1428" title="Socket::Socket" alt="" coords="943,400,1055,427"/><area shape="rect" id="node15" href="classSocket.html#afe708d0a437f0b966fef606b2a2af2b0" title="Socket::send" alt="" coords="692,275,791,301"/><area shape="rect" id="node16" href="classmessage_1_1Message.html#a0c1b1b5cee06ee3b5396f7b8037b0805" title="message::Message::getBuffer" alt="" coords="644,173,839,200"/><area shape="rect" id="node17" href="classmessage_1_1Message.html#aec368ada6258d54639f00eeb6c601eb1" title="message::Message::getBufferSize" alt="" coords="631,224,852,251"/><area shape="rect" id="node19" href="classmessage_1_1Message.html#a40eed0cc59f5cf5844dff8d1f300b01d" title="message::Message::Message" alt="" coords="385,351,583,377"/></map>
-</div>
-</p>
-
-</div>
-</div>
 <a class="anchor" id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
 <div class="memitem">
 <div class="memproto">
@@ -202,9 +161,9 @@ Oto graf wywołań dla tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="application_2protocol_2client_8cpp_source.html#l00025">25</a> pliku <a class="el" href="application_2protocol_2client_8cpp_source.html">application/protocol/client.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="application_2protocol_2client_8cpp_source.html#l00065">65</a> pliku <a class="el" href="application_2protocol_2client_8cpp_source.html">application/protocol/client.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="ConnectionManager_8hpp_source.html#l00085">ConnectionManager::connectionGuards</a> i <a class="el" href="ConnectionManager_8cpp_source.html#l00060">ConnectionManager::getInstance()</a>.</p>
+<p>Odwołuje się do <a class="el" href="ConnectionManager_8hpp_source.html#l00092">ConnectionManager::connectionGuards4in</a> i <a class="el" href="ConnectionManager_8cpp_source.html#l00078">ConnectionManager::getInstance()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
@@ -217,13 +176,103 @@ Oto graf wywołań dla tej funkcji:</div>
 
 </div>
 </div>
+<a class="anchor" id="a3a07ed6ad76849366c5a5bcc3d1b42ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classConnectionManager.html">ConnectionManager</a> *&#160;</td>
+          <td class="paramname"><em>cm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classIpv4.html">Ipv4</a> *&#160;</td>
+          <td class="paramname"><em>ip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="application_2protocol_2client_8cpp_source.html#l00010">10</a> pliku <a class="el" href="application_2protocol_2client_8cpp_source.html">application/protocol/client.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063a0fc437bc317835cad5faafc12a83fad5">message::ACK</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00096">message::Message::print()</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00126">ConnectionManager::receive()</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00474">message::retMessage::retMessage()</a> i <a class="el" href="ConnectionManager_8cpp_source.html#l00107">ConnectionManager::send()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="application_2protocol_2client_8cpp_a3a07ed6ad76849366c5a5bcc3d1b42ca_cgraph.png" border="0" usemap="#application_2protocol_2client_8cpp_a3a07ed6ad76849366c5a5bcc3d1b42ca_cgraph" alt=""/></div>
+<map name="application_2protocol_2client_8cpp_a3a07ed6ad76849366c5a5bcc3d1b42ca_cgraph" id="application_2protocol_2client_8cpp_a3a07ed6ad76849366c5a5bcc3d1b42ca_cgraph">
+<area shape="rect" id="node2" href="classmessage_1_1Message.html#a2967b7c13fd34ea7767b6e00076b3e76" title="message::Message::print" alt="" coords="95,672,265,699"/><area shape="rect" id="node3" href="classConnectionManager.html#ac8fcde3746046cf78805935050c7b1c4" title="ConnectionManager::\lreceive" alt="" coords="107,813,253,854"/><area shape="rect" id="node26" href="classmessage_1_1retMessage.html#aa2b4d8ba9403a6d87614a240d55995d8" title="message::retMessage\l::retMessage" alt="" coords="105,747,255,789"/><area shape="rect" id="node27" href="classConnectionManager.html#a314bdb20e3fb92c2567dfac2da975618" title="ConnectionManager::send" alt="" coords="93,1085,267,1112"/><area shape="rect" id="node4" href="classAddressIpv4.html#a6be371faa82391f4f9a50ffda808ab23" title="AddressIpv4::AddressIpv4" alt="" coords="315,1060,485,1087"/><area shape="rect" id="node6" href="classConnection.html#abc2969606fc0934d737c78cddd64ffcf" title="Funkcja oczekująca na komunikat od zdalnego hosta. " alt="" coords="333,639,467,665"/><area shape="rect" id="node5" href="classAddress.html#aa336ded2b0cdbc176fd0e5b841edd80f" title="Address::Address" alt="" coords="581,1060,707,1087"/><area shape="rect" id="node7" href="classSocket.html#a6817b8ad1ae209f740f303dc8cbc6ed8" title="Socket::recv" alt="" coords="854,740,949,767"/><area shape="rect" id="node8" href="classConnection.html#a003ce0ffaf8c0e1c390cf1f3317fce79" title="Connection::recHost" alt="" coords="574,740,714,767"/><area shape="rect" id="node9" href="classmessage_1_1hostMessage.html#a834721cc265340c3a43f01d98da335a8" title="message::hostMessage\l::getAddresses" alt="" coords="563,213,725,254"/><area shape="rect" id="node10" href="classmessage_1_1hostMessage.html#a2278d6edbf6143fa7d41d36a8dbb198b" title="message::hostMessage\l::hostMessage" alt="" coords="563,147,725,189"/><area shape="rect" id="node12" href="classConnection.html#a6a4e873b39006bf7fa50f8df7326acbe" title="Connection::recTask" alt="" coords="573,791,715,817"/><area shape="rect" id="node13" href="classmessage_1_1taskMessage.html#a9a399da02ee7d0bbe2521f3b6f235b52" title="message::taskMessage\l::taskMessage" alt="" coords="563,302,725,343"/><area shape="rect" id="node14" href="classConnection.html#aeb32d06dfe76dbaf772d23fa4536e789" title="Connection::recDep" alt="" coords="576,841,712,868"/><area shape="rect" id="node15" href="classmessage_1_1depMessage.html#adee77a6a02de02e9e1a86e49de4d8081" title="message::depMessage\l::getTasks" alt="" coords="565,943,723,985"/><area shape="rect" id="node16" href="classmessage_1_1depMessage.html#a2200eb95a0951ad9a62e65da31c7cf72" title="message::depMessage\l::depMessage" alt="" coords="565,367,723,409"/><area shape="rect" id="node17" href="classConnection.html#a19a12271edf96cd222811ee82176988e" title="Connection::recFile" alt="" coords="577,588,711,615"/><area shape="rect" id="node18" href="classmessage_1_1fileMessage.html#afa5104e19ac382222b0bb7231c13699d" title="message::fileMessage\l::fileMessage" alt="" coords="568,457,720,498"/><area shape="rect" id="node19" href="classConnection.html#a1fb3bbb3d8905999cdb7304a84c254fd" title="Connection::recRet" alt="" coords="577,639,711,665"/><area shape="rect" id="node20" href="classmessage_1_1synMessage.html#adc773263592bfcd5ae421c8a476b7461" title="message::synMessage\l::synMessage" alt="" coords="565,522,723,563"/><area shape="rect" id="node21" href="classmessage_1_1pingMessage.html#a64422605fdf518316e1aae5344bc984e" title="message::pingMessage\l::pingMessage" alt="" coords="564,58,724,99"/><area shape="rect" id="node22" href="classConnection.html#a5e0be3518e85ec27066cb512c636d5fb" title="Connection::recErr" alt="" coords="579,892,709,919"/><area shape="rect" id="node25" href="classSocket.html#aef06605c6725958004116983f1a2051f" title="Socket::close" alt="" coords="593,1009,695,1036"/><area shape="rect" id="node11" href="classmessage_1_1Message.html#a98fe7755196db9fb190342fdfa813a5c" title="message::Message::Message" alt="" coords="803,309,1000,336"/><area shape="rect" id="node23" href="classmessage_1_1errMessage.html#ae1acb4a532d8a0d4cfb982f0617357ad" title="message::errMessage\l::errMessage" alt="" coords="826,885,977,926"/><area shape="rect" id="node24" href="classmessage_1_1Message.html#a40eed0cc59f5cf5844dff8d1f300b01d" title="message::Message::Message" alt="" coords="1048,892,1245,919"/><area shape="rect" id="node28" href="classConnection.html#ab49c655af4acc49507407a167325fee7" title="Konstruktor połączeń po IPv4. " alt="" coords="320,1263,480,1289"/><area shape="rect" id="node32" href="classConnection.html#ac8abd34010a78efd01e2af9aa7fa92fd" title="Funcja wysyłająca komunikat. " alt="" coords="339,1111,461,1137"/><area shape="rect" id="node29" href="classSocketIp4.html#acd796d1aca24c05c0a20a772f41f79be" title="SocketIp4::SocketIp4" alt="" coords="571,1313,717,1340"/><area shape="rect" id="node31" href="classSocket.html#a1722aa9af2ec480b999e6bb664a1b925" title="Socket::connect" alt="" coords="585,1263,703,1289"/><area shape="rect" id="node30" href="classSocket.html#a2c55b94d9f5256b3297b67f9fb0f1428" title="Socket::Socket" alt="" coords="845,1313,957,1340"/><area shape="rect" id="node33" href="classSocket.html#afe708d0a437f0b966fef606b2a2af2b0" title="Socket::send" alt="" coords="595,1161,693,1188"/><area shape="rect" id="node34" href="classmessage_1_1Message.html#a0c1b1b5cee06ee3b5396f7b8037b0805" title="message::Message::getBuffer" alt="" coords="547,1212,741,1239"/><area shape="rect" id="node35" href="classmessage_1_1Message.html#aec368ada6258d54639f00eeb6c601eb1" title="message::Message::getBufferSize" alt="" coords="533,1111,755,1137"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a02512d6914c372c7e321b6ace0d039c3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void send_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classConnectionManager.html">ConnectionManager</a> *&#160;</td>
+          <td class="paramname"><em>cm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classIpv4.html">Ipv4</a> *&#160;</td>
+          <td class="paramname"><em>ip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="application_2protocol_2client_8cpp_source.html#l00044">44</a> pliku <a class="el" href="application_2protocol_2client_8cpp_source.html">application/protocol/client.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063a0fc437bc317835cad5faafc12a83fad5">message::ACK</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00154">message::hostMessage::getAddresses()</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00142">message::hostMessage::hostMessage()</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00096">message::Message::print()</a> i <a class="el" href="ConnectionManager_8cpp_source.html#l00107">ConnectionManager::send()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="application_2protocol_2client_8cpp_a02512d6914c372c7e321b6ace0d039c3_cgraph.png" border="0" usemap="#application_2protocol_2client_8cpp_a02512d6914c372c7e321b6ace0d039c3_cgraph" alt=""/></div>
+<map name="application_2protocol_2client_8cpp_a02512d6914c372c7e321b6ace0d039c3_cgraph" id="application_2protocol_2client_8cpp_a02512d6914c372c7e321b6ace0d039c3_cgraph">
+<area shape="rect" id="node2" href="classmessage_1_1hostMessage.html#a834721cc265340c3a43f01d98da335a8" title="message::hostMessage\l::getAddresses" alt="" coords="117,5,278,47"/><area shape="rect" id="node3" href="classmessage_1_1hostMessage.html#a2278d6edbf6143fa7d41d36a8dbb198b" title="message::hostMessage\l::hostMessage" alt="" coords="117,95,278,136"/><area shape="rect" id="node5" href="classmessage_1_1Message.html#a2967b7c13fd34ea7767b6e00076b3e76" title="message::Message::print" alt="" coords="113,161,282,187"/><area shape="rect" id="node6" href="classConnectionManager.html#a314bdb20e3fb92c2567dfac2da975618" title="ConnectionManager::send" alt="" coords="111,211,284,238"/><area shape="rect" id="node4" href="classmessage_1_1Message.html#a98fe7755196db9fb190342fdfa813a5c" title="message::Message::Message" alt="" coords="332,102,529,129"/><area shape="rect" id="node7" href="classAddressIpv4.html#a6be371faa82391f4f9a50ffda808ab23" title="AddressIpv4::AddressIpv4" alt="" coords="345,157,516,183"/><area shape="rect" id="node9" href="classConnection.html#ab49c655af4acc49507407a167325fee7" title="Konstruktor połączeń po IPv4. " alt="" coords="351,211,511,238"/><area shape="rect" id="node13" href="classConnection.html#ac8abd34010a78efd01e2af9aa7fa92fd" title="Funcja wysyłająca komunikat. " alt="" coords="369,335,492,362"/><area shape="rect" id="node8" href="classAddress.html#aa336ded2b0cdbc176fd0e5b841edd80f" title="Address::Address" alt="" coords="625,133,751,159"/><area shape="rect" id="node10" href="classSocketIp4.html#acd796d1aca24c05c0a20a772f41f79be" title="SocketIp4::SocketIp4" alt="" coords="615,183,761,210"/><area shape="rect" id="node12" href="classSocket.html#a1722aa9af2ec480b999e6bb664a1b925" title="Socket::connect" alt="" coords="629,234,747,261"/><area shape="rect" id="node11" href="classSocket.html#a2c55b94d9f5256b3297b67f9fb0f1428" title="Socket::Socket" alt="" coords="847,183,959,210"/><area shape="rect" id="node14" href="classSocket.html#afe708d0a437f0b966fef606b2a2af2b0" title="Socket::send" alt="" coords="639,285,737,311"/><area shape="rect" id="node15" href="classmessage_1_1Message.html#a0c1b1b5cee06ee3b5396f7b8037b0805" title="message::Message::getBuffer" alt="" coords="591,335,785,362"/><area shape="rect" id="node16" href="classmessage_1_1Message.html#aec368ada6258d54639f00eeb6c601eb1" title="message::Message::getBufferSize" alt="" coords="577,386,799,413"/><area shape="rect" id="node17" href="classSocket.html#aef06605c6725958004116983f1a2051f" title="Socket::close" alt="" coords="637,437,739,463"/></map>
+</div>
+</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_75eb1ee5d767627a9a18a84e7e34c1ab.html">protocol</a></li><li class="navelem"><a class="el" href="application_2protocol_2client_8cpp.html">client.cpp</a></li>
-    <li class="footer">Wygenerowano Pn, 4 sty 2016 22:01:02 dla LOTC programem
+    <li class="footer">Wygenerowano Cz, 7 sty 2016 17:23:54 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

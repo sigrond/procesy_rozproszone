@@ -152,6 +152,8 @@ Atrybuty publiczne</h2></td></tr>
 <tr class="separator:ad6badd95723fafb97642a21027a3f341"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14c3014ea63d6e84b59673a959274452"><td class="memItemLeft" align="right" valign="top">std::fstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTask.html#a14c3014ea63d6e84b59673a959274452">file</a></td></tr>
 <tr class="separator:a14c3014ea63d6e84b59673a959274452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a594ec5abc1758a6a78a9a2ee28f0e0b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceTaskState.html#ab48730e26eee5c95deb2cccc076cba2c">TaskState::TaskState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTask.html#a594ec5abc1758a6a78a9a2ee28f0e0b1">taskState</a></td></tr>
+<tr class="separator:a594ec5abc1758a6a78a9a2ee28f0e0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Statyczne atrybuty publiczne</h2></td></tr>
@@ -161,7 +163,7 @@ Statyczne atrybuty publiczne</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Klasa odpowiadająca za przechowywanie informacji o zadaniu. </p>
 
-<p>Definicja w linii <a class="el" href="Task_8hpp_source.html#l00015">15</a> pliku <a class="el" href="Task_8hpp_source.html">Task.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Task_8hpp_source.html#l00025">25</a> pliku <a class="el" href="Task_8hpp_source.html">Task.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a class="anchor" id="a0ca53354bdc006762a0fda68c64f7608"></a>
 <div class="memitem">
@@ -179,16 +181,16 @@ Statyczne atrybuty publiczne</h2></td></tr>
 
 <p>Definicja w linii <a class="el" href="Task_8cpp_source.html#l00014">14</a> pliku <a class="el" href="Task_8cpp_source.html">Task.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="Task_8hpp_source.html#l00026">done</a>, <a class="el" href="Task_8hpp_source.html#l00029">taskCounter</a>, <a class="el" href="Task_8hpp_source.html#l00028">taskID</a> i <a class="el" href="Task_8hpp_source.html#l00027">underExecution</a>.</p>
+<p>Odwołuje się do <a class="el" href="Task_8hpp_source.html#l00036">done</a>, <a class="el" href="Task_8hpp_source.html#l00039">taskCounter</a>, <a class="el" href="Task_8hpp_source.html#l00038">taskID</a> i <a class="el" href="Task_8hpp_source.html#l00037">underExecution</a>.</p>
 
-<p>Odwołania w <a class="el" href="Task_8cpp_source.html#l00019">Task()</a>.</p>
+<p>Odwołania w <a class="el" href="Strategies_8hpp_source.html#l00089">MessageFromAdminStrategy::doJob()</a> i <a class="el" href="Task_8cpp_source.html#l00019">Task()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classTask_a0ca53354bdc006762a0fda68c64f7608_icgraph.png" border="0" usemap="#classTask_a0ca53354bdc006762a0fda68c64f7608_icgraph" alt=""/></div>
 <map name="classTask_a0ca53354bdc006762a0fda68c64f7608_icgraph" id="classTask_a0ca53354bdc006762a0fda68c64f7608_icgraph">
-<area shape="rect" id="node2" href="classTask.html#a1f50dd92e8aaa93f77df95c6b6ab3849" title="Task::Task" alt="" coords="140,5,227,32"/></map>
+<area shape="rect" id="node2" href="classMessageFromAdminStrategy.html#ad549a2e03f2ccf7737639861af154c36" title="obsługa wiadomości od admina " alt="" coords="140,5,331,47"/><area shape="rect" id="node3" href="classTask.html#a1f50dd92e8aaa93f77df95c6b6ab3849" title="Task::Task" alt="" coords="192,71,279,98"/></map>
 </div>
 </p>
 
@@ -208,7 +210,7 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 <p>&lt;</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000029">Do zrobienia:</a></b></dt><dd>jakoś sparsować czas, jeśli bedzie podany po nazwie </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000031">Do zrobienia:</a></b></dt><dd>jakoś sparsować czas, jeśli bedzie podany po nazwie </dd></dl>
 
 <p>Definicja w linii <a class="el" href="Task_8cpp_source.html#l00019">19</a> pliku <a class="el" href="Task_8cpp_source.html">Task.cpp</a>.</p>
 
@@ -255,7 +257,7 @@ Oto graf wywołań dla tej funkcji:</div>
 </div><div class="memdoc">
 <p>zadanie wykonane </p>
 
-<p>Definicja w linii <a class="el" href="Task_8hpp_source.html#l00026">26</a> pliku <a class="el" href="Task_8hpp_source.html">Task.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Task_8hpp_source.html#l00036">36</a> pliku <a class="el" href="Task_8hpp_source.html">Task.hpp</a>.</p>
 
 <p>Odwołania w <a class="el" href="Task_8cpp_source.html#l00014">Task()</a>.</p>
 
@@ -271,7 +273,7 @@ Oto graf wywołań dla tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Task_8hpp_source.html#l00030">30</a> pliku <a class="el" href="Task_8hpp_source.html">Task.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Task_8hpp_source.html#l00040">40</a> pliku <a class="el" href="Task_8hpp_source.html">Task.hpp</a>.</p>
 
 </div>
 </div>
@@ -286,7 +288,7 @@ Oto graf wywołań dla tej funkcji:</div>
 </div><div class="memdoc">
 <p>nazwa pliku z zadaniem? </p>
 
-<p>Definicja w linii <a class="el" href="Task_8hpp_source.html#l00023">23</a> pliku <a class="el" href="Task_8hpp_source.html">Task.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Task_8hpp_source.html#l00033">33</a> pliku <a class="el" href="Task_8hpp_source.html">Task.hpp</a>.</p>
 
 </div>
 </div>
@@ -308,7 +310,7 @@ Oto graf wywołań dla tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Task_8hpp_source.html#l00029">29</a> pliku <a class="el" href="Task_8hpp_source.html">Task.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Task_8hpp_source.html#l00039">39</a> pliku <a class="el" href="Task_8hpp_source.html">Task.hpp</a>.</p>
 
 <p>Odwołania w <a class="el" href="Task_8cpp_source.html#l00014">Task()</a>.</p>
 
@@ -324,9 +326,25 @@ Oto graf wywołań dla tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Task_8hpp_source.html#l00028">28</a> pliku <a class="el" href="Task_8hpp_source.html">Task.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Task_8hpp_source.html#l00038">38</a> pliku <a class="el" href="Task_8hpp_source.html">Task.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Task_8cpp_source.html#l00014">Task()</a>.</p>
+<p>Odwołania w <a class="el" href="Strategies_8hpp_source.html#l00089">MessageFromAdminStrategy::doJob()</a> i <a class="el" href="Task_8cpp_source.html#l00014">Task()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a594ec5abc1758a6a78a9a2ee28f0e0b1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceTaskState.html#ab48730e26eee5c95deb2cccc076cba2c">TaskState::TaskState</a> Task::taskState</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="Task_8hpp_source.html#l00041">41</a> pliku <a class="el" href="Task_8hpp_source.html">Task.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="Model_8cpp_source.html#l00122">Model::addTask()</a> i <a class="el" href="Strategies_8hpp_source.html#l00089">MessageFromAdminStrategy::doJob()</a>.</p>
 
 </div>
 </div>
@@ -341,7 +359,7 @@ Oto graf wywołań dla tej funkcji:</div>
 </div><div class="memdoc">
 <p>zadanie w trakcie wykonywania, lub zlecone agentowi </p>
 
-<p>Definicja w linii <a class="el" href="Task_8hpp_source.html#l00027">27</a> pliku <a class="el" href="Task_8hpp_source.html">Task.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Task_8hpp_source.html#l00037">37</a> pliku <a class="el" href="Task_8hpp_source.html">Task.hpp</a>.</p>
 
 <p>Odwołania w <a class="el" href="Task_8cpp_source.html#l00014">Task()</a>.</p>
 
@@ -357,7 +375,7 @@ Oto graf wywołań dla tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Task_8hpp_source.html#l00024">24</a> pliku <a class="el" href="Task_8hpp_source.html">Task.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Task_8hpp_source.html#l00034">34</a> pliku <a class="el" href="Task_8hpp_source.html">Task.hpp</a>.</p>
 
 </div>
 </div>
@@ -371,7 +389,7 @@ Oto graf wywołań dla tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classTask.html">Task</a></li>
-    <li class="footer">Wygenerowano Pn, 4 sty 2016 22:01:04 dla LOTC programem
+    <li class="footer">Wygenerowano Cz, 7 sty 2016 17:24:02 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

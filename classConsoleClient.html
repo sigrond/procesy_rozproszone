@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('classConsoleClient.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Typy publiczne</a> &#124;
 <a href="#pub-methods">Metody publiczne</a> &#124;
 <a href="#pub-attribs">Atrybuty publiczne</a> &#124;
 <a href="#pri-methods">Metody prywatne</a> &#124;
@@ -123,8 +124,23 @@ $(document).ready(function(){initNavTree('classConsoleClient.html','');});
 Diagram współpracy dla ConsoleClient:</div>
 <div class="dyncontent">
 <div class="center"><img src="classConsoleClient__coll__graph.png" border="0" usemap="#ConsoleClient_coll__map" alt="Collaboration graph"/></div>
+<map name="ConsoleClient_coll__map" id="ConsoleClient_coll__map">
+<area shape="rect" id="node2" href="classBlockingQueue.html" title="{BlockingQueue\&lt; message\l::Message * \&gt;\n|&#45; m\l&#45; c\l|+ BlockingQueue()\l+ ~BlockingQueue()\l+ push_back()\l+ pop_front()\l}" alt="" coords="166,1257,341,1407"/><area shape="rect" id="node3" title="STL class. " alt="" coords="179,1007,327,1099"/><area shape="rect" id="node6" title="STL class. " alt="" coords="53,735,168,812"/><area shape="rect" id="node17" title="STL class. " alt="" coords="462,735,583,812"/><area shape="rect" id="node5" href="classBlockingQueue.html" title="Kolejka blokująca. Dziedziczy po queue. Żeby nie ryzykować użycia niezabezpieczonych wątkowo dziedzic..." alt="" coords="5,977,147,1128"/><area shape="rect" id="node7" href="classIpv4.html" title="{Ipv4\n|&#45; address\l|+ Ipv4()\l+ Ipv4()\l+ getAddress()\l+ getAddressNum()\l+ operator\&lt;()\l+ operator==()\l+ operator=()\l&#45; isCorrect()\l}" alt="" coords="705,360,839,540"/><area shape="rect" id="node14" href="classAddressIpv4.html" title="{AddressIpv4\n||+ AddressIpv4()\l+ getIp()\l+ operator\&lt;()\l+ operator=()\l}" alt="" coords="784,713,896,834"/><area shape="rect" id="node8" href="classIp.html" title="Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. " alt="" coords="950,147,1058,253"/><area shape="rect" id="node16" href="classConnection.html" title="Klasa realizująca połączenie LOTC. " alt="" coords="1124,647,1239,900"/><area shape="rect" id="node9" title="STL class. " alt="" coords="732,161,812,239"/><area shape="rect" id="node10" title="STL class. " alt="" coords="709,5,835,97"/><area shape="rect" id="node11" href="classConnectionManager.html" title="{ConnectionManager\n|&#45; listeningPort\l&#45; map4Mutex\l&#45; connGuardsMutex\l|+ send()\l+ send()\l+ receive()\l+ receive()\l+ remove()\l+ remove()\l+ getInstance()\l&#45; ConnectionManager()\l&#45; ConnectionManager()\l&#45; operator=()\l&#45; ~ConnectionManager()\l}" alt="" coords="845,1205,1006,1459"/><area shape="rect" id="node12" href="classSocket.html" title="{Socket\n|# sockfd\l# port\l|+ Socket()\l+ Socket()\l+ ~Socket()\l+ connect()\l+ connect()\l+ bind()\l+ listen()\l+ accept()\l+ recv()\l+ send()\l+ getIp()\l+ getPort()\l+ close()\l}" alt="" coords="1185,316,1276,584"/><area shape="rect" id="node15" href="classAddress.html" title="{Address\n|# port\l|+ Address()\l+ getPort()\l}" alt="" coords="864,404,955,496"/></map>
 </div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Typy publiczne</h2></td></tr>
+<tr class="memitem:ac2ecb65be6f6e8cb2b1bd05258eab81f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#ac2ecb65be6f6e8cb2b1bd05258eab81f">command_t</a> { <br/>
+&#160;&#160;<a class="el" href="classConsoleClient.html#ac2ecb65be6f6e8cb2b1bd05258eab81fa06b5920337b2300201a4a4abc64119d2">NC</a>, 
+<a class="el" href="classConsoleClient.html#ac2ecb65be6f6e8cb2b1bd05258eab81fab88067feb90389da10badeb070f6abd9">CON</a>, 
+<a class="el" href="classConsoleClient.html#ac2ecb65be6f6e8cb2b1bd05258eab81faa2ea9f078338b79ff862ad4a0c356d0b">ADD</a>, 
+<a class="el" href="classConsoleClient.html#ac2ecb65be6f6e8cb2b1bd05258eab81fa4c6d0707630a21760797be50b9d757cc">EXT</a>, 
+<br/>
+&#160;&#160;<a class="el" href="classConsoleClient.html#ac2ecb65be6f6e8cb2b1bd05258eab81fa2966f29fd54a24f393aba51371cf305e">ADD_AGENT</a>
+<br/>
+ }</td></tr>
+<tr class="separator:ac2ecb65be6f6e8cb2b1bd05258eab81f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
 <tr class="memitem:aa23043606363a6d5e39ac4ac53e754fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#aa23043606363a6d5e39ac4ac53e754fa">ConsoleClient</a> ()</td></tr>
@@ -139,24 +155,75 @@ Atrybuty publiczne</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Metody prywatne</h2></td></tr>
-<tr class="memitem:a93de79c61c5621f54494a6bdc3189c4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#a93de79c61c5621f54494a6bdc3189c4f">connect</a> ()</td></tr>
-<tr class="separator:a93de79c61c5621f54494a6bdc3189c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a639d7630dd867b3b36e00370d18c55c1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#a639d7630dd867b3b36e00370d18c55c1">readCommand</a> ()</td></tr>
-<tr class="separator:a639d7630dd867b3b36e00370d18c55c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a141728b15eb46797da690573c54b637b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#a141728b15eb46797da690573c54b637b">readCommand</a> (string *arg)</td></tr>
+<tr class="separator:a141728b15eb46797da690573c54b637b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf4c9570d2bd9e5ab84f14785ac23ccb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#aaf4c9570d2bd9e5ab84f14785ac23ccb">connect</a> (<a class="el" href="classIpv4.html">Ipv4</a> *ip)</td></tr>
+<tr class="separator:aaf4c9570d2bd9e5ab84f14785ac23ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7f55eaf0fdee145bc6761d194c5d242"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#ab7f55eaf0fdee145bc6761d194c5d242">sendCommand</a> ()</td></tr>
 <tr class="separator:ab7f55eaf0fdee145bc6761d194c5d242"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0288f7a786411f41032fa53946fbc82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#af0288f7a786411f41032fa53946fbc82">checkAnswer</a> ()</td></tr>
 <tr class="separator:af0288f7a786411f41032fa53946fbc82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db8dbb8ff8e495c826a9e7894126493"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#a0db8dbb8ff8e495c826a9e7894126493">listenAndRecognize</a> ()</td></tr>
+<tr class="separator:a0db8dbb8ff8e495c826a9e7894126493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5b6a530e90378b0f57668012b6cb17c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#aa5b6a530e90378b0f57668012b6cb17c">sendFromQueue</a> ()</td></tr>
+<tr class="separator:aa5b6a530e90378b0f57668012b6cb17c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
 <tr class="memitem:acdf9519188b2cc3d0dc370b077ecaa2d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#acdf9519188b2cc3d0dc370b077ecaa2d">requestAnswered</a></td></tr>
 <tr class="separator:acdf9519188b2cc3d0dc370b077ecaa2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a0876ecdb6602c8594b2935ae8d3aa2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConnectionManager.html">ConnectionManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#a8a0876ecdb6602c8594b2935ae8d3aa2">connectionManager</a></td></tr>
+<tr class="separator:a8a0876ecdb6602c8594b2935ae8d3aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad937536eec41f9862d6211288c2164a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBlockingQueue.html">BlockingQueue</a>&lt; <a class="el" href="classmessage_1_1Message.html">message::Message</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#ad937536eec41f9862d6211288c2164a2">q</a></td></tr>
+<tr class="separator:ad937536eec41f9862d6211288c2164a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf194b0f440ed6f555669254706578ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#aaf194b0f440ed6f555669254706578ee">shutDown</a></td></tr>
+<tr class="separator:aaf194b0f440ed6f555669254706578ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad45583e1bbf1d074c3e76883d544aead"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#ad45583e1bbf1d074c3e76883d544aead">anyResponse</a></td></tr>
+<tr class="separator:ad45583e1bbf1d074c3e76883d544aead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9f8ec33c1477c5d70e0bce23c58f89e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#aa9f8ec33c1477c5d70e0bce23c58f89e">pingAck</a></td></tr>
+<tr class="separator:aa9f8ec33c1477c5d70e0bce23c58f89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a036e78cbb7ab1e39e6e39ff9985ed91a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#a036e78cbb7ab1e39e6e39ff9985ed91a">fileAck</a></td></tr>
+<tr class="separator:a036e78cbb7ab1e39e6e39ff9985ed91a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45aeb7569a11a3bdbdee54e0ffc990fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#a45aeb7569a11a3bdbdee54e0ffc990fc">taskAck</a></td></tr>
+<tr class="separator:a45aeb7569a11a3bdbdee54e0ffc990fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76bedc92162eef7b21f471227f9139eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#a76bedc92162eef7b21f471227f9139eb">hostAck</a></td></tr>
+<tr class="separator:a76bedc92162eef7b21f471227f9139eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a533a4c722005c4f203c2d227663635f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIpv4.html">Ipv4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#a533a4c722005c4f203c2d227663635f8">serverip</a></td></tr>
+<tr class="separator:a533a4c722005c4f203c2d227663635f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08c90a980c0d14f06f762ea0f4466985"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConsoleClient.html#a08c90a980c0d14f06f762ea0f4466985">taskCount</a></td></tr>
+<tr class="separator:a08c90a980c0d14f06f762ea0f4466985"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock">
-<p>Definicja w linii <a class="el" href="ConsoleClient_8hpp_source.html#l00010">10</a> pliku <a class="el" href="ConsoleClient_8hpp_source.html">ConsoleClient.hpp</a>.</p>
-</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<p>Definicja w linii <a class="el" href="ConsoleClient_8hpp_source.html#l00021">21</a> pliku <a class="el" href="ConsoleClient_8hpp_source.html">ConsoleClient.hpp</a>.</p>
+</div><h2 class="groupheader">Dokumentacja składowych wyliczanych</h2>
+<a class="anchor" id="ac2ecb65be6f6e8cb2b1bd05258eab81f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classConsoleClient.html#ac2ecb65be6f6e8cb2b1bd05258eab81f">ConsoleClient::command_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Wartości wyliczeń</th></tr><tr><td class="fieldname"><em><a class="anchor" id="ac2ecb65be6f6e8cb2b1bd05258eab81fa06b5920337b2300201a4a4abc64119d2"></a>NC</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ac2ecb65be6f6e8cb2b1bd05258eab81fab88067feb90389da10badeb070f6abd9"></a>CON</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ac2ecb65be6f6e8cb2b1bd05258eab81faa2ea9f078338b79ff862ad4a0c356d0b"></a>ADD</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ac2ecb65be6f6e8cb2b1bd05258eab81fa4c6d0707630a21760797be50b9d757cc"></a>EXT</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="ac2ecb65be6f6e8cb2b1bd05258eab81fa2966f29fd54a24f393aba51371cf305e"></a>ADD_AGENT</em>&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definicja w linii <a class="el" href="ConsoleClient_8hpp_source.html#l00033">33</a> pliku <a class="el" href="ConsoleClient_8hpp_source.html">ConsoleClient.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a class="anchor" id="aa23043606363a6d5e39ac4ac53e754fa"></a>
 <div class="memitem">
 <div class="memproto">
@@ -170,11 +237,20 @@ Atrybuty prywatne</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="ConsoleClient_8cpp_source.html#l00005">5</a> pliku <a class="el" href="ConsoleClient_8cpp_source.html">ConsoleClient.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="ConsoleClient_8cpp_source.html#l00021">21</a> pliku <a class="el" href="ConsoleClient_8cpp_source.html">ConsoleClient.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="ConsoleClient_8hpp_source.html#l00016">connected</a> i <a class="el" href="ConsoleClient_8hpp_source.html#l00023">requestAnswered</a>.</p>
+<p>Odwołuje się do <a class="el" href="ConsoleClient_8hpp_source.html#l00027">connected</a>, <a class="el" href="ConnectionManager_8hpp_source.html#l00092">ConnectionManager::connectionGuards4in</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00059">connectionManager</a>, <a class="el" href="ConnectionManager_8cpp_source.html#l00078">ConnectionManager::getInstance()</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00044">requestAnswered</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00067">shutDown</a> i <a class="el" href="ConsoleClient_8hpp_source.html#l00075">taskCount</a>.</p>
 
-<p>Odwołania w <a class="el" href="Console_8cpp_source.html#l00011">main()</a>.</p>
+<p>Odwołania w <a class="el" href="Console_8cpp_source.html#l00012">main()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classConsoleClient_aa23043606363a6d5e39ac4ac53e754fa_cgraph.png" border="0" usemap="#classConsoleClient_aa23043606363a6d5e39ac4ac53e754fa_cgraph" alt=""/></div>
+<map name="classConsoleClient_aa23043606363a6d5e39ac4ac53e754fa_cgraph" id="classConsoleClient_aa23043606363a6d5e39ac4ac53e754fa_cgraph">
+<area shape="rect" id="node2" href="classConnectionManager.html#a38f4c092a52fd80c19d613fafad832b9" title="ConnectionManager::\lgetInstance" alt="" coords="244,23,389,65"/><area shape="rect" id="node3" href="classConnectionManager.html#acddf7b9dd1fa9319ffba80b4ecf2e5e5" title="ConnectionManager::\lConnectionManager" alt="" coords="437,23,583,65"/><area shape="rect" id="node4" href="classSocket.html#abda54549284a0626998e833bfead9f11" title="Socket::bind" alt="" coords="635,5,729,32"/><area shape="rect" id="node5" href="classSocket.html#a34374a7d9ae416f8593bea924ab2099b" title="Socket::listen" alt="" coords="631,56,733,83"/><area shape="rect" id="node6" href="classListenSockEx.html#a50566d24bd66b5d44d14fcff13b602c3" title="ListenSockEx::ListenSockEx" alt="" coords="781,56,973,83"/></map>
+</div>
+</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -209,11 +285,22 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="ConsoleClient_8cpp_source.html#l00066">66</a> pliku <a class="el" href="ConsoleClient_8cpp_source.html">ConsoleClient.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="ConsoleClient_8cpp_source.html#l00266">266</a> pliku <a class="el" href="ConsoleClient_8cpp_source.html">ConsoleClient.cpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="ConsoleClient_8cpp_source.html#l00029">start()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classConsoleClient_af0288f7a786411f41032fa53946fbc82_icgraph.png" border="0" usemap="#classConsoleClient_af0288f7a786411f41032fa53946fbc82_icgraph" alt=""/></div>
+<map name="classConsoleClient_af0288f7a786411f41032fa53946fbc82_icgraph" id="classConsoleClient_af0288f7a786411f41032fa53946fbc82_icgraph">
+<area shape="rect" id="node2" href="classConsoleClient.html#a416302ce226015ef7bdf6eef49ec6aa4" title="ConsoleClient::start" alt="" coords="241,5,377,32"/><area shape="rect" id="node3" href="Console_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="425,5,476,32"/></map>
+</div>
+</p>
 
 </div>
 </div>
-<a class="anchor" id="a93de79c61c5621f54494a6bdc3189c4f"></a>
+<a class="anchor" id="aaf4c9570d2bd9e5ab84f14785ac23ccb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -223,7 +310,8 @@ Oto graf wywoływań tej funkcji:</div>
         <tr>
           <td class="memname">bool ConsoleClient::connect </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classIpv4.html">Ipv4</a> *&#160;</td>
+          <td class="paramname"><em>ip</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -234,22 +322,11 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="ConsoleClient_8cpp_source.html#l00023">23</a> pliku <a class="el" href="ConsoleClient_8cpp_source.html">ConsoleClient.cpp</a>.</p>
-
-<p>Odwołania w <a class="el" href="ConsoleClient_8cpp_source.html#l00012">start()</a>.</p>
-
-<p><div class="dynheader">
-Oto graf wywoływań tej funkcji:</div>
-<div class="dyncontent">
-<div class="center"><img src="classConsoleClient_a93de79c61c5621f54494a6bdc3189c4f_icgraph.png" border="0" usemap="#classConsoleClient_a93de79c61c5621f54494a6bdc3189c4f_icgraph" alt=""/></div>
-<map name="classConsoleClient_a93de79c61c5621f54494a6bdc3189c4f_icgraph" id="classConsoleClient_a93de79c61c5621f54494a6bdc3189c4f_icgraph">
-<area shape="rect" id="node2" href="classConsoleClient.html#a416302ce226015ef7bdf6eef49ec6aa4" title="ConsoleClient::start" alt="" coords="209,5,345,32"/><area shape="rect" id="node3" href="Console_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="393,5,444,32"/></map>
-</div>
-</p>
+<p>Definicja w linii <a class="el" href="ConsoleClient_8cpp_source.html#l00255">255</a> pliku <a class="el" href="ConsoleClient_8cpp_source.html">ConsoleClient.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a639d7630dd867b3b36e00370d18c55c1"></a>
+<a class="anchor" id="a0db8dbb8ff8e495c826a9e7894126493"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -257,7 +334,7 @@ Oto graf wywoływań tej funkcji:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ConsoleClient::readCommand </td>
+          <td class="memname">void ConsoleClient::listenAndRecognize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -270,18 +347,46 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="ConsoleClient_8cpp_source.html#l00028">28</a> pliku <a class="el" href="ConsoleClient_8cpp_source.html">ConsoleClient.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="ConsoleClient_8cpp_source.html#l00271">271</a> pliku <a class="el" href="ConsoleClient_8cpp_source.html">ConsoleClient.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="ConsoleClient_8cpp_source.html#l00012">start()</a>.</p>
+<p>Odwołuje się do <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063a0fc437bc317835cad5faafc12a83fad5">message::ACK</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00069">anyResponse</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3a9fc5887c030f7a3e19821ebec457e719">message::FILE</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00071">fileAck</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00071">message::Message::getCategory()</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00076">message::Message::getState()</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3ab9361011891280a44d85b967739cc6a5">message::HOST</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00073">hostAck</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3ae07ff41a486c27c095a15898dcca34d1">message::PING</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00509">message::pingMessage::pingMessage()</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00096">message::Message::print()</a>, <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063ace4e1a7286ff585e08bf30898cf6b3eb">message::REQ</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3afb902bc4807c307b9309f2b528b96f2b">message::RET</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00067">shutDown</a>, <a class="el" href="namespacemessage.html#ae332e93affac4506495c232e3f8a2be3a0ed9b001ca1cd2667302a9be876ede9d">message::TASK</a> i <a class="el" href="ConsoleClient_8hpp_source.html#l00072">taskAck</a>.</p>
 
 <p><div class="dynheader">
-Oto graf wywoływań tej funkcji:</div>
+Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
-<div class="center"><img src="classConsoleClient_a639d7630dd867b3b36e00370d18c55c1_icgraph.png" border="0" usemap="#classConsoleClient_a639d7630dd867b3b36e00370d18c55c1_icgraph" alt=""/></div>
-<map name="classConsoleClient_a639d7630dd867b3b36e00370d18c55c1_icgraph" id="classConsoleClient_a639d7630dd867b3b36e00370d18c55c1_icgraph">
-<area shape="rect" id="node2" href="classConsoleClient.html#a416302ce226015ef7bdf6eef49ec6aa4" title="ConsoleClient::start" alt="" coords="248,5,384,32"/><area shape="rect" id="node3" href="Console_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="432,5,483,32"/></map>
+<div class="center"><img src="classConsoleClient_a0db8dbb8ff8e495c826a9e7894126493_cgraph.png" border="0" usemap="#classConsoleClient_a0db8dbb8ff8e495c826a9e7894126493_cgraph" alt=""/></div>
+<map name="classConsoleClient_a0db8dbb8ff8e495c826a9e7894126493_cgraph" id="classConsoleClient_a0db8dbb8ff8e495c826a9e7894126493_cgraph">
+<area shape="rect" id="node2" href="classmessage_1_1Message.html#a215855b0a3796c7ed9fd042b448afe63" title="message::Message::getCategory" alt="" coords="217,5,432,32"/><area shape="rect" id="node3" href="classmessage_1_1Message.html#af1312b3bd5b5074c1781188375878991" title="message::Message::getState" alt="" coords="228,56,421,83"/><area shape="rect" id="node4" href="classmessage_1_1pingMessage.html#a64422605fdf518316e1aae5344bc984e" title="message::pingMessage\l::pingMessage" alt="" coords="245,107,405,149"/><area shape="rect" id="node6" href="classmessage_1_1Message.html#a2967b7c13fd34ea7767b6e00076b3e76" title="message::Message::print" alt="" coords="240,173,409,200"/><area shape="rect" id="node5" href="classmessage_1_1Message.html#a98fe7755196db9fb190342fdfa813a5c" title="message::Message::Message" alt="" coords="480,115,677,141"/></map>
 </div>
 </p>
+
+</div>
+</div>
+<a class="anchor" id="a141728b15eb46797da690573c54b637b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ConsoleClient::readCommand </td>
+          <td>(</td>
+          <td class="paramtype">string *&#160;</td>
+          <td class="paramname"><em>arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="ConsoleClient_8cpp_source.html#l00216">216</a> pliku <a class="el" href="ConsoleClient_8cpp_source.html">ConsoleClient.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="ConsoleClient_8hpp_source.html#l00035">NC</a>.</p>
 
 </div>
 </div>
@@ -306,7 +411,45 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="ConsoleClient_8cpp_source.html#l00061">61</a> pliku <a class="el" href="ConsoleClient_8cpp_source.html">ConsoleClient.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="ConsoleClient_8cpp_source.html#l00261">261</a> pliku <a class="el" href="ConsoleClient_8cpp_source.html">ConsoleClient.cpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="ConsoleClient_8cpp_source.html#l00029">start()</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classConsoleClient_ab7f55eaf0fdee145bc6761d194c5d242_icgraph.png" border="0" usemap="#classConsoleClient_ab7f55eaf0fdee145bc6761d194c5d242_icgraph" alt=""/></div>
+<map name="classConsoleClient_ab7f55eaf0fdee145bc6761d194c5d242_icgraph" id="classConsoleClient_ab7f55eaf0fdee145bc6761d194c5d242_icgraph">
+<area shape="rect" id="node2" href="classConsoleClient.html#a416302ce226015ef7bdf6eef49ec6aa4" title="ConsoleClient::start" alt="" coords="251,5,387,32"/><area shape="rect" id="node3" href="Console_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="435,5,485,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa5b6a530e90378b0f57668012b6cb17c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConsoleClient::sendFromQueue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="ConsoleClient_8cpp_source.html#l00342">342</a> pliku <a class="el" href="ConsoleClient_8cpp_source.html">ConsoleClient.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="ConsoleClient_8hpp_source.html#l00067">shutDown</a>.</p>
 
 </div>
 </div>
@@ -323,18 +466,18 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="ConsoleClient_8cpp_source.html#l00012">12</a> pliku <a class="el" href="ConsoleClient_8cpp_source.html">ConsoleClient.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="ConsoleClient_8cpp_source.html#l00029">29</a> pliku <a class="el" href="ConsoleClient_8cpp_source.html">ConsoleClient.cpp</a>.</p>
 
-<p>Odwołuje się do <a class="el" href="ConsoleClient_8cpp_source.html#l00023">connect()</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00016">connected</a> i <a class="el" href="ConsoleClient_8cpp_source.html#l00028">readCommand()</a>.</p>
+<p>Odwołuje się do <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063a0fc437bc317835cad5faafc12a83fad5">message::ACK</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00037">ADD</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00039">ADD_AGENT</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00069">anyResponse</a>, <a class="el" href="ConsoleClient_8cpp_source.html#l00266">checkAnswer()</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00036">CON</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00027">connected</a>, <a class="el" href="Console_8cpp_source.html#l00010">demo</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00038">EXT</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00071">fileAck</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00154">message::hostMessage::getAddresses()</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00073">hostAck</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00035">NC</a>, <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063ae0aa021e21dddbd6d8cecec71e9cf564">message::OK</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00070">pingAck</a>, <a class="el" href="application_2protocol_2Message_8cpp_source.html#l00509">message::pingMessage::pingMessage()</a>, <a class="el" href="namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063ace4e1a7286ff585e08bf30898cf6b3eb">message::REQ</a>, <a class="el" href="ConsoleClient_8cpp_source.html#l00261">sendCommand()</a>, <a class="el" href="ConsoleClient_8hpp_source.html#l00067">shutDown</a> i <a class="el" href="ConsoleClient_8hpp_source.html#l00072">taskAck</a>.</p>
 
-<p>Odwołania w <a class="el" href="Console_8cpp_source.html#l00011">main()</a>.</p>
+<p>Odwołania w <a class="el" href="Console_8cpp_source.html#l00012">main()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classConsoleClient_a416302ce226015ef7bdf6eef49ec6aa4_cgraph.png" border="0" usemap="#classConsoleClient_a416302ce226015ef7bdf6eef49ec6aa4_cgraph" alt=""/></div>
 <map name="classConsoleClient_a416302ce226015ef7bdf6eef49ec6aa4_cgraph" id="classConsoleClient_a416302ce226015ef7bdf6eef49ec6aa4_cgraph">
-<area shape="rect" id="node2" href="classConsoleClient.html#a93de79c61c5621f54494a6bdc3189c4f" title="ConsoleClient::connect" alt="" coords="209,5,365,32"/><area shape="rect" id="node3" href="classConsoleClient.html#a639d7630dd867b3b36e00370d18c55c1" title="ConsoleClient::readCommand" alt="" coords="189,56,384,83"/></map>
+<area shape="rect" id="node2" href="classConsoleClient.html#af0288f7a786411f41032fa53946fbc82" title="ConsoleClient::checkAnswer" alt="" coords="194,5,382,32"/><area shape="rect" id="node3" href="classmessage_1_1hostMessage.html#a834721cc265340c3a43f01d98da335a8" title="message::hostMessage\l::getAddresses" alt="" coords="207,57,369,98"/><area shape="rect" id="node4" href="classmessage_1_1pingMessage.html#a64422605fdf518316e1aae5344bc984e" title="message::pingMessage\l::pingMessage" alt="" coords="208,122,368,163"/><area shape="rect" id="node6" href="classConsoleClient.html#ab7f55eaf0fdee145bc6761d194c5d242" title="ConsoleClient::sendCommand" alt="" coords="189,188,387,215"/><area shape="rect" id="node5" href="classmessage_1_1Message.html#a98fe7755196db9fb190342fdfa813a5c" title="message::Message::Message" alt="" coords="435,129,632,156"/></map>
 </div>
 </p>
 
@@ -350,6 +493,30 @@ Oto graf wywoływań tej funkcji:</div>
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="ad45583e1bbf1d074c3e76883d544aead"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConsoleClient::anyResponse</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="ConsoleClient_8hpp_source.html#l00069">69</a> pliku <a class="el" href="ConsoleClient_8hpp_source.html">ConsoleClient.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="ConsoleClient_8cpp_source.html#l00271">listenAndRecognize()</a> i <a class="el" href="ConsoleClient_8cpp_source.html#l00029">start()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a6ce68373c22fb1da3865f6e260d6b43e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -360,9 +527,127 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="ConsoleClient_8hpp_source.html#l00016">16</a> pliku <a class="el" href="ConsoleClient_8hpp_source.html">ConsoleClient.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="ConsoleClient_8hpp_source.html#l00027">27</a> pliku <a class="el" href="ConsoleClient_8hpp_source.html">ConsoleClient.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="ConsoleClient_8cpp_source.html#l00005">ConsoleClient()</a> i <a class="el" href="ConsoleClient_8cpp_source.html#l00012">start()</a>.</p>
+<p>Odwołania w <a class="el" href="ConsoleClient_8cpp_source.html#l00021">ConsoleClient()</a> i <a class="el" href="ConsoleClient_8cpp_source.html#l00029">start()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8a0876ecdb6602c8594b2935ae8d3aa2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classConnectionManager.html">ConnectionManager</a>* ConsoleClient::connectionManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="ConsoleClient_8hpp_source.html#l00059">59</a> pliku <a class="el" href="ConsoleClient_8hpp_source.html">ConsoleClient.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="ConsoleClient_8cpp_source.html#l00021">ConsoleClient()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a036e78cbb7ab1e39e6e39ff9985ed91a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConsoleClient::fileAck</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="ConsoleClient_8hpp_source.html#l00071">71</a> pliku <a class="el" href="ConsoleClient_8hpp_source.html">ConsoleClient.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="ConsoleClient_8cpp_source.html#l00271">listenAndRecognize()</a> i <a class="el" href="ConsoleClient_8cpp_source.html#l00029">start()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a76bedc92162eef7b21f471227f9139eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConsoleClient::hostAck</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="ConsoleClient_8hpp_source.html#l00073">73</a> pliku <a class="el" href="ConsoleClient_8hpp_source.html">ConsoleClient.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="ConsoleClient_8cpp_source.html#l00271">listenAndRecognize()</a> i <a class="el" href="ConsoleClient_8cpp_source.html#l00029">start()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa9f8ec33c1477c5d70e0bce23c58f89e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConsoleClient::pingAck</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="ConsoleClient_8hpp_source.html#l00070">70</a> pliku <a class="el" href="ConsoleClient_8hpp_source.html">ConsoleClient.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="ConsoleClient_8cpp_source.html#l00029">start()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad937536eec41f9862d6211288c2164a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classBlockingQueue.html">BlockingQueue</a>&lt;<a class="el" href="classmessage_1_1Message.html">message::Message</a>*&gt; ConsoleClient::q</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="ConsoleClient_8hpp_source.html#l00061">61</a> pliku <a class="el" href="ConsoleClient_8hpp_source.html">ConsoleClient.hpp</a>.</p>
 
 </div>
 </div>
@@ -384,9 +669,103 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="ConsoleClient_8hpp_source.html#l00023">23</a> pliku <a class="el" href="ConsoleClient_8hpp_source.html">ConsoleClient.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="ConsoleClient_8hpp_source.html#l00044">44</a> pliku <a class="el" href="ConsoleClient_8hpp_source.html">ConsoleClient.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="ConsoleClient_8cpp_source.html#l00005">ConsoleClient()</a>.</p>
+<p>Odwołania w <a class="el" href="ConsoleClient_8cpp_source.html#l00021">ConsoleClient()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a533a4c722005c4f203c2d227663635f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIpv4.html">Ipv4</a> ConsoleClient::serverip</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="ConsoleClient_8hpp_source.html#l00074">74</a> pliku <a class="el" href="ConsoleClient_8hpp_source.html">ConsoleClient.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaf194b0f440ed6f555669254706578ee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConsoleClient::shutDown</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="ConsoleClient_8hpp_source.html#l00067">67</a> pliku <a class="el" href="ConsoleClient_8hpp_source.html">ConsoleClient.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="ConsoleClient_8cpp_source.html#l00021">ConsoleClient()</a>, <a class="el" href="ConsoleClient_8cpp_source.html#l00271">listenAndRecognize()</a>, <a class="el" href="ConsoleClient_8cpp_source.html#l00342">sendFromQueue()</a> i <a class="el" href="ConsoleClient_8cpp_source.html#l00029">start()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a45aeb7569a11a3bdbdee54e0ffc990fc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConsoleClient::taskAck</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="ConsoleClient_8hpp_source.html#l00072">72</a> pliku <a class="el" href="ConsoleClient_8hpp_source.html">ConsoleClient.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="ConsoleClient_8cpp_source.html#l00271">listenAndRecognize()</a> i <a class="el" href="ConsoleClient_8cpp_source.html#l00029">start()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a08c90a980c0d14f06f762ea0f4466985"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ConsoleClient::taskCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="ConsoleClient_8hpp_source.html#l00075">75</a> pliku <a class="el" href="ConsoleClient_8hpp_source.html">ConsoleClient.hpp</a>.</p>
+
+<p>Odwołania w <a class="el" href="ConsoleClient_8cpp_source.html#l00021">ConsoleClient()</a>.</p>
 
 </div>
 </div>
@@ -400,7 +779,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classConsoleClient.html">ConsoleClient</a></li>
-    <li class="footer">Wygenerowano Pn, 4 sty 2016 22:01:03 dla LOTC programem
+    <li class="footer">Wygenerowano Cz, 7 sty 2016 17:23:58 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ip',['Ip',['../classIp.html',1,'Ip'],['../classIp.html#abc1b04c5638f7ec50b5d4667c6e1a099',1,'Ip::Ip()'],['../classConnection.html#af35d1eb54f2af5a9abcabd3a9dad7287',1,'Connection::ip()'],['../classSocketIp4.html#a52ab30d7a3a1f018c915e6abc204ec52',1,'SocketIp4::ip()']]],
+  ['ip',['Ip',['../classIp.html',1,'Ip'],['../classConnection.html#af35d1eb54f2af5a9abcabd3a9dad7287',1,'Connection::ip()'],['../classSocketIp4.html#a52ab30d7a3a1f018c915e6abc204ec52',1,'SocketIp4::ip()'],['../classAddressIpv4.html#a84c6a6a449ce30b95e421bb285477bd8',1,'AddressIpv4::ip()'],['../classAddressIpv6.html#ad703fc86e4d8387eca65d03890da67c9',1,'AddressIpv6::ip()'],['../classIp.html#abc1b04c5638f7ec50b5d4667c6e1a099',1,'Ip::Ip()']]],
   ['ip_2ecpp',['Ip.cpp',['../Ip_8cpp.html',1,'']]],
   ['ip_2ehpp',['Ip.hpp',['../Ip_8hpp.html',1,'']]],
   ['ipv4',['Ipv4',['../classIpv4.html',1,'Ipv4'],['../classIpv4.html#a4f0a0e5fbf6950c99a2f12d5cef9aead',1,'Ipv4::Ipv4(const std::string &amp;address=&quot;0.0.0.0&quot;)'],['../classIpv4.html#a4950f5b6bf02454faa8ba846851b1476',1,'Ipv4::Ipv4(const Ipv4 &amp;that)']]],

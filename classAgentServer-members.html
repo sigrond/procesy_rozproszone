@@ -114,7 +114,7 @@ $(document).ready(function(){initNavTree('classAgentServer.html','');});
 
 <p>To jest kompletna lista składowych dla <a class="el" href="classAgentServer.html">AgentServer</a>, uwzględniająca wszystkie dziedziczone składowe.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#a23db47434dd7a20ce4ead917eae1c3ea">addSlave</a>(Ip *ip, unsigned short portNo=55555)</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#a6b4a42bc54fdc0f3e744553800701c7e">addSlave</a>(Ip *ip, unsigned short portNo=46000)</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classAgentServer.html#ae7b89b5da7cd9e7a1aa21093be7ed2e5">addTask</a>(Task *task)</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#ae00b5d7d78d9786b11a396246710a621">AgentServer</a>()</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classAgentServer.html#a15cae4e1e67c26c2b77a866d92535442">allListeningCondition</a></td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
@@ -123,8 +123,10 @@ $(document).ready(function(){initNavTree('classAgentServer.html','');});
   <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd">connect</a>(Slave *who, message::Message *m)</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classAgentServer.html#a88defc2eaaefc2cbfe8cbfdc70d50080">connectionManager</a></td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#a8f9a076ca22b4025d0ac5ba08c82c858">distributeTasks</a>()</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classAgentServer.html#a001e979f72cf3d360d424cea0df70165">listen</a>(Slave *who)</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#a75068a7f83936d0171b46d5dcb99a7b4">listenToAll</a>()</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classAgentServer.html#a839c970d4095ff5d3b6eaf7b5e1ebae7">getTaskByID</a>(unsigned long taskID)</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#a001e979f72cf3d360d424cea0df70165">listen</a>(Slave *who)</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classAgentServer.html#a75068a7f83936d0171b46d5dcb99a7b4">listenToAll</a>()</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#a47a393e3034d62eafd83e3a8a5a5512c">removeSlaveByIP</a>(Ip *ip)</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classAgentServer.html#a962a98aa505eb47f0adc3e59c66cd461">sendToAll</a>(message::Message *m)</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classAgentServer.html#ab79904b49f1f80c51b9bfdbde2596d00">setBlockingQueue</a>(BlockingQueue&lt; Event * &gt; *)</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classAgentServer.html#a14c0ad3b1a17a161c659fea1710b030c">setTaskFinished</a>(unsigned long taskID)</td><td class="entry"><a class="el" href="classAgentServer.html">AgentServer</a></td><td class="entry"></td></tr>
@@ -142,7 +144,7 @@ $(document).ready(function(){initNavTree('classAgentServer.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Wygenerowano Pn, 4 sty 2016 22:01:03 dla LOTC programem
+    <li class="footer">Wygenerowano Cz, 7 sty 2016 17:23:57 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
