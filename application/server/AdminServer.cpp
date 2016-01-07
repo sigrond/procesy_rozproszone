@@ -1,7 +1,8 @@
 /** \file AdminServer.cpp
  * \author Tomasz Jakubczyk
  * \brief plik z implementacjami klasy serwera administratora
- *
+ * \date
+ * Low Orbit Task Cannon
  */
 
 #include "AdminServer.hpp"

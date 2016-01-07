@@ -24,13 +24,16 @@ warning: source ..\..\protocol\MessageCodes.hpp is not a readable file or direct
 warning: source ..\AdminServer.hpp is not a readable file or directory... skipping.
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/ConnectionManager.hpp:13:10: fatal error: 'map' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/ConnectionManager.hpp:13:10: fatal error: 'map' file not found [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/Console.cpp:6:10: fatal error: 'ConsoleServer.hpp' file not found [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/ConsoleClient.hpp:4:10: fatal error: 'iostream' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/ConnectionManager.hpp:13:10: fatal error: 'map' file not found [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Connection.hpp:18:10: fatal error: 'mutex' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/ConnectionManager.hpp:13:10: fatal error: 'map' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/ConsoleClient.hpp:10:10: fatal error: 'iostream' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/ConsoleClient.hpp:10:10: fatal error: 'iostream' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:15:10: fatal error: 'string' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/ConnectionManager.hpp:13:10: fatal error: 'map' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Connection.cpp:13:10: fatal error: 'fstream' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/ConnectionManager.cpp:8:10: fatal error: 'typeinfo' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.cpp:12:10: fatal error: 'regex' file not found [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Message.hpp:25:10: fatal error: 'vector' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Message.cpp:8:10: fatal error: 'iostream' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/ConnectionManager.hpp:13:10: fatal error: 'map' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Socket.hpp:13:10: fatal error: 'sys/types.h' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/SocketException.hpp:13:10: fatal error: 'string' file not found [clang]
@@ -48,9 +51,23 @@ error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Task.hpp:9:1
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/client.cpp:1:10: fatal error: 'iostream' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/message.cpp:2:10: fatal error: 'iostream' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/server.cpp:1:10: fatal error: 'iostream' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/agent/makefile:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int] [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/agent/makefile:1:7: error: use of undeclared identifier 'g' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/agent/makefile:21:24: warning: '/*' within block comment [-Wcomment] [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/agent/makefile:24:26: warning: '/*' within block comment [-Wcomment] [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/agent/makefile:25:26: warning: '/*' within block comment [-Wcomment] [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/agent/makefile:20:24: error: unterminated /* comment [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/agent/makefile:20:24: error: expected ';' after top level declarator [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/makefile:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int] [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/makefile:1:7: error: use of undeclared identifier 'g' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/makefile:20:24: warning: '/*' within block comment [-Wcomment] [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/makefile:23:26: warning: '/*' within block comment [-Wcomment] [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/makefile:24:26: warning: '/*' within block comment [-Wcomment] [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/makefile:19:24: error: unterminated /* comment [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/makefile:19:24: error: expected ';' after top level declarator [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/makefile:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int] [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/makefile:1:5: error: use of undeclared identifier 'g' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/makefile:23:18: error: expected ';' after top level declarator [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/makefile:32:18: error: expected ';' after top level declarator [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:1:1: error: expected unqualified-id [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:232:52: error: expected unqualified-id [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:234:1: error: expected unqualified-id [clang]
@@ -100,6 +117,7 @@ D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/server.cpp:1: warni
    D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/server.cpp
    D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/server.cpp
 Please use a more specific name by including a (larger) part of the path!
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:15:10: fatal error: 'string' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/ConnectionManager.hpp:13:10: fatal error: 'map' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/ConnectionManager.hpp:13:10: fatal error: 'map' file not found [clang]
@@ -108,15 +126,17 @@ error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueu
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueueTests.cpp:8:10: fatal error: 'boost/test/unit_test.hpp' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/ConnectionManager.hpp:13:10: fatal error: 'map' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/client.cpp:1:10: fatal error: 'iostream' file not found [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Connection.hpp:18:10: fatal error: 'mutex' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/ConnectionManager.hpp:13:10: fatal error: 'map' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Connection.cpp:13:10: fatal error: 'fstream' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/ConnectionManager.cpp:8:10: fatal error: 'typeinfo' file not found [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/Console.cpp:6:10: fatal error: 'ConsoleServer.hpp' file not found [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/ConsoleClient.hpp:4:10: fatal error: 'iostream' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/ConsoleClient.hpp:10:10: fatal error: 'iostream' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/ConsoleClient.hpp:10:10: fatal error: 'iostream' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Strategy.hpp:9:10: fatal error: 'iostream' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ControllerTests.cpp:8:10: fatal error: 'boost/test/unit_test.hpp' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.cpp:12:10: fatal error: 'regex' file not found [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Message.hpp:25:10: fatal error: 'vector' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Message.cpp:8:10: fatal error: 'iostream' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/application/message.cpp:2:10: fatal error: 'iostream' file not found [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/ConnectionManager.hpp:13:10: fatal error: 'map' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/ConnectionManager.hpp:13:10: fatal error: 'map' file not found [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:9:10: fatal error: 'queue' file not found [clang]
@@ -129,9 +149,23 @@ error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Task.hpp:9:1
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:1:1: error: expected unqualified-id [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:232:52: error: expected unqualified-id [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/ChangesLog.txt:234:1: error: expected unqualified-id [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/agent/makefile:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int] [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/agent/makefile:1:7: error: use of undeclared identifier 'g' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/agent/makefile:21:24: warning: '/*' within block comment [-Wcomment] [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/agent/makefile:24:26: warning: '/*' within block comment [-Wcomment] [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/agent/makefile:25:26: warning: '/*' within block comment [-Wcomment] [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/agent/makefile:20:24: error: unterminated /* comment [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/agent/makefile:20:24: error: expected ';' after top level declarator [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/makefile:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int] [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/makefile:1:7: error: use of undeclared identifier 'g' [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/makefile:20:24: warning: '/*' within block comment [-Wcomment] [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/makefile:23:26: warning: '/*' within block comment [-Wcomment] [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/makefile:24:26: warning: '/*' within block comment [-Wcomment] [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/makefile:19:24: error: unterminated /* comment [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/client/makefile:19:24: error: expected ';' after top level declarator [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/makefile:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int] [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/makefile:1:5: error: use of undeclared identifier 'g' [clang]
-error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/makefile:23:18: error: expected ';' after top level declarator [clang]
+error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/makefile:32:18: error: expected ';' after top level declarator [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int] [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:1:7: error: use of undeclared identifier 'g' [clang]
 error: D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/makefile:8:2: error: invalid preprocessing directive [clang]
@@ -172,17 +206,19 @@ D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/plugin/readme.
 D:/Moje dokumenty/TIN/procesy_rozproszone/wireshark/test protocol/plugin/readme.md:9: warning: Found unknown command `\plugins'
 D:/Moje dokumenty/TIN/procesy_rozproszone/organizacja/Styl kodu.md:28: warning: explicit link request to 'include' could not be resolved
 D:/Moje dokumenty/TIN/procesy_rozproszone/organizacja/Styl kodu.md:98: warning: explicit link request to 'define' could not be resolved
-D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Strategies.hpp:283: warning: The following parameters of AddAgentStrategy::doJob(void *data, void *who=nullptr, unsigned short port=0) are not documented:
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Strategies.hpp:567: warning: The following parameters of AddAgentStrategy::doJob(void *data, void *who=nullptr, unsigned short port=0) are not documented:
   parameter 'who'
   parameter 'port'
-D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Strategies.hpp:357: warning: The following parameters of AddTaskStrategy::doJob(void *data, void *who=nullptr, unsigned short port=0) are not documented:
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Strategies.hpp:643: warning: The following parameters of AddTaskStrategy::doJob(void *data, void *who=nullptr, unsigned short port=0) are not documented:
   parameter 'who'
   parameter 'port'
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.hpp:25: warning: The following parameters of AdminServer::AdminServer(Ip &ip, unsigned short adminPort=55000) are not documented:
+  parameter 'adminPort'
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.cpp:20: warning: argument 'std' of command @param is not found in the argument list of AdminServerException::AdminServerException(std::string s)
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.cpp:20: warning: argument 'string' of command @param is not found in the argument list of AdminServerException::AdminServerException(std::string s)
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AdminServer.cpp:20: warning: The following parameters of AdminServerException::AdminServerException(std::string s) are not documented:
   parameter 's'
-D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AgentServer.cpp:120: warning: The following parameters of AgentServer::addSlave(Ip *ip, unsigned short portNo=55555) are not documented:
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AgentServer.cpp:146: warning: The following parameters of AgentServer::addSlave(Ip *ip, unsigned short portNo=46000) are not documented:
   parameter 'portNo'
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AgentServer.cpp:22: warning: argument 'std' of command @param is not found in the argument list of AgentServerException::AgentServerException(std::string s)
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AgentServer.cpp:22: warning: argument 'string' of command @param is not found in the argument list of AgentServerException::AgentServerException(std::string s)
@@ -191,8 +227,9 @@ D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/AgentServer.cpp:22:
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:25: warning: argument 'T' of command @param is not found in the argument list of BlockingQueue< T >::push_back(const T &element)
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/BlockingQueue.hpp:25: warning: The following parameters of BlockingQueue::push_back(const T &element) are not documented:
   parameter 'element'
-D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Connection.hpp:39: warning: The following parameters of Connection::Connection(const Ipv4 &address=Ipv4(), unsigned short port=55555) are not documented:
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Connection.hpp:39: warning: The following parameters of Connection::Connection(const Ipv4 &address=Ipv4(), unsigned short port=55555, unsigned short clientPort=0) are not documented:
   parameter 'port'
+  parameter 'clientPort'
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Controller.cpp:75: warning: argument 'std' of command @param is not found in the argument list of ControllerException::ControllerException(std::string s)
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Controller.cpp:75: warning: argument 'string' of command @param is not found in the argument list of ControllerException::ControllerException(std::string s)
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Controller.cpp:75: warning: The following parameters of ControllerException::ControllerException(std::string s) are not documented:
@@ -205,17 +242,17 @@ D:/Moje dokumenty/TIN/procesy_rozproszone/application/protocol/Ip.hpp:73: warnin
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Strategies.hpp:83: warning: The following parameters of MessageFromAdminStrategy::doJob(void *data, void *who=nullptr, unsigned short port=0) are not documented:
   parameter 'who'
   parameter 'port'
-D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Strategies.hpp:187: warning: The following parameters of MessageFromAgentStrategy::doJob(void *data, void *who=nullptr, unsigned short port=0) are not documented:
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Strategies.hpp:353: warning: The following parameters of MessageFromAgentStrategy::doJob(void *data, void *who=nullptr, unsigned short port=0) are not documented:
   parameter 'who'
   parameter 'port'
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Model.cpp:26: warning: argument 'std' of command @param is not found in the argument list of ModelException::ModelException(std::string s)
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Model.cpp:26: warning: argument 'string' of command @param is not found in the argument list of ModelException::ModelException(std::string s)
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Model.cpp:26: warning: The following parameters of ModelException::ModelException(std::string s) are not documented:
   parameter 's'
-D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Strategies.hpp:317: warning: The following parameters of PingAdminStrategy::doJob(void *data, void *who=nullptr, unsigned short port=0) are not documented:
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Strategies.hpp:601: warning: The following parameters of PingAdminStrategy::doJob(void *data, void *who=nullptr, unsigned short port=0) are not documented:
   parameter 'who'
   parameter 'port'
-D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Strategies.hpp:337: warning: The following parameters of PingSlavesStrategy::doJob(void *data, void *who=nullptr, unsigned short port=0) are not documented:
+D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Strategies.hpp:622: warning: The following parameters of PingSlavesStrategy::doJob(void *data, void *who=nullptr, unsigned short port=0) are not documented:
   parameter 'who'
   parameter 'port'
 D:/Moje dokumenty/TIN/procesy_rozproszone/application/server/Strategies.hpp:64: warning: The following parameters of ShutDownStrategy::doJob(void *data, void *who=nullptr, unsigned short port=0) are not documented:

@@ -36,11 +36,12 @@ void ConsoleClient::start()
     int command=NC;
     fileAck=false;
     hostAck=false;
+    int licz=0;
 
     while(!shutDown)
     {
 
-        if(demo)
+        if(demo && licz<=3)
         {
         	command=CON;
         	arg[1]="127.0.0.1";
@@ -53,10 +54,15 @@ void ConsoleClient::start()
 			{
 				command=ADD;
 				arg[1]="test";//teoretyczny plik zadania
+				if(licz<3)
+				{
+					licz++;
+				}
 			}
         }
         else
 		{
+			cout<<"Wpisz polecenie."<<endl;
 			int command = readCommand(arg);
 		}
 
@@ -161,7 +167,7 @@ void ConsoleClient::start()
                 cout<<"zadanie zlecone"<<endl;
                 cout<<"==============================================================================================================================="<<endl;
                 cout<<"==============================================================================================================================="<<endl;
-                std::this_thread::sleep_for (std::chrono::milliseconds(50));
+                std::this_thread::sleep_for (std::chrono::milliseconds(1000));
             }
             else
             {
