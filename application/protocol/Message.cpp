@@ -37,7 +37,7 @@ Message::Message( Category category, State state ) : code( (unsigned char) categ
 	bufferSize = 1;
 
 	
-	DBG_M( "Message code = " << std::hex << ( (unsigned)code & 0xE0 ) << " + " << ( (unsigned)code & 0x1C ) << " + " << ( (unsigned)code & 0x03 ) );
+	DBG( "Message code = " << std::hex << ( (unsigned)code & 0xE0 ) << " + " << ( (unsigned)code & 0x1C ) << " + " << ( (unsigned)code & 0x03 ) );
 	std::cout << std::dec;
 }
 

@@ -341,11 +341,11 @@ void Connection::receive ( message::Message * & message )
 		case message::Category::TASK:
 			if( ((unsigned)code[0] & 0x03) == 0x00 )
 			{
-				DBG_M("Conn::rec() TASK ACK/OK/NOK");
 				recTask( message, code[0] );
 			}
 			else
 			{
+				DBG_M("Conn::rec() TASK ACK/OK/NOK");
 				message = new message::taskMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
 			}
 			break;
