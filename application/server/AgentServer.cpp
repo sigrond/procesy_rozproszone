@@ -83,7 +83,24 @@ void AgentServer::connect(Slave* who, message::Message* m)
 	#ifdef _DEBUG
 	cout<<"wysyłam do agenta na port: "<<who->port<<endl;
 	#endif // _DEBUG
-	connectionManager->send(*static_cast<Ipv4*>(who->getSlaveIP()),*m,who->port);/**< \todo dodać jakiś zabezpieczeń bo groźnie to wygląda */
+	bool s=true;
+	while(s)
+	{
+		try
+		{
+			connectionManager->send(*static_cast<Ipv4*>(who->getSlaveIP()),*m,who->port);/**< \todo dodać jakiś zabezpieczeń bo groźnie to wygląda */
+			#ifdef _DEBUG
+			cout<<"wysłaliśmy coś do agenta"<<endl;
+			#endif // _DEBUG
+			s=false;
+		}
+		catch(...)
+		{
+			#ifdef _DEBUG
+			cout<<"agent send exceptin"<<endl;
+			#endif // _DEBUG
+		}
+	}
 }
 
 void AgentServer::listen(Slave* who)
