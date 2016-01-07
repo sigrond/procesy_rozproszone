@@ -85,12 +85,18 @@
 		    Komunikacja między konsolą i serwerem oraz serwerem i klientem odbywa się poprzez protokół LOTC. Wykorzystywany jest do tego moduł implementujący protokół LOTC i wystawiający interfejs komunikacyjny. \\
 		    Z racji potrzeby synchronizacji, serwer oraz klient wykorzystują moduł implementujący niezbędne minimum klienta NTP potrzebne do zapytania serwera NTP o aktualny czas. \\
 		    Program do administracji zadaniami wystawia interfejs niezbędny do zbudowania UI, zarówno w wersji tekstowej jak i graficznej. \\
+
 		    
 		    \begin{figure}[H]
 				\def\svgwidth{\columnwidth}
 				\input{./images/DeploymentDiagram.pdf_tex}
 			\end{figure}
-				
+			    
+        \subsection{Diagramy klas}
+            Diagramy klas głównych pod opisami odpowiednich modułów. \\
+            Pozostałe na \href
+	    {https://github.com/sigrond/procesy_rozproszone}
+	    {\underline{GitHubie projektu}}.			
 	\section{Środowisko sprzętowo-programowe}
 	
 	    \begin{itemize}   
@@ -329,6 +335,11 @@
 			    Kod komunikatu & 8 & \\
 			    Szczegółowy kod błędu & 8 & Tylko błędy obsługi zadań i plików \\
 			\end{tabular}
+			
+		\subsection{Diagram klas}
+		    \begin{figure}[H]
+				\includegraphics[width=\linewidth]{./images/classConnectionManager__coll__graph.png}
+			\end{figure}
     
     \section{Serwer}
 			
@@ -354,7 +365,11 @@
 		
 		\subsection{Komunikacja z konsolą i agentami}
 			Komunikacja z konsolą i agentami odbywać będzie się poprzez protokół LOTC, przy wykorzystaniu modułu dostarczającego interfejs będący nakładką na protokół. \\
-			
+	    
+	    \subsection{Diagram klas}
+		    \begin{figure}[H]
+				\includegraphics[width=\linewidth]{./images/classController__coll__graph.png}
+		    \end{figure}		
     
     \section{Agent (klient LOTC)}
 		\subsection{Opis}
@@ -378,7 +393,10 @@
 				\item Potwierdzenie żywotności 
 			\end{itemize}
 
-    
+    	\subsection{Diagram klas}
+		    \begin{figure}[H]
+				\includegraphics[width=\linewidth]{./images/classAgentClient__coll__graph.png}
+		    \end{figure}
     
     \section{Konsola administratora}
 		\subsection{Opis}
@@ -404,7 +422,12 @@
 		
 		\subsection{Raporty}
 			Konsola administratora, dzięki otrzymywaniu raportów z serwera, w tym raportów cyklicznych, może generować zbiorczy raport z całej pracy systemu (przez określony czas lub do zakończenia pracy) w oddzielnym pliku. Format tych raportów pozostaje do ustalenia (jakie informacje, kiedy, jak często, w jakiej formie to przedstawić).
-    
+			
+    	\subsection{Diagram klas}
+		    \begin{figure}[H]
+				\includegraphics[width=\linewidth]{./images/classConsoleClient__coll__graph.png}
+		    \end{figure}  
+		      
     \section{Przypadki użycia}
         Aby zmniejszyć objętość przypadków użycia, a zwłaszcza scenariuszy alternatywnych, powtarzające się, schematyczne działania zostaną opisane osobno w sposób ogólny.                    
         
@@ -524,8 +547,8 @@
 
 
 
-	\section{Podział prac}
-	
+	\section{Wkład}
+	\subsection{Podział prac}
 	    \begin{tabular}{ l | l }
 		    \textbf{Osoba odpowiedzialna} & \textbf{Zadania} \\
 		    \hline
@@ -533,6 +556,17 @@
 		    Eryk Ratyński  & Agent  \\
 		    Andrzej Roguski  & Protokół, klient NTP, plugin Wireshark, dokumentacja \\
 		    Kacper Stachyra & Konsola administratora \\
-		\end{tabular}  
+		\end{tabular}
+		
+	\subsection{Praca przy zadaniach}
+        \begin{tabular}{ l | l }
+		    \textbf{Osoba} & \textbf{Zadania} \\
+		    \hline
+		    Tomasz Jakubczyk  & Teamleader, serwer, konsola, agent, testowanie  \\
+		    Eryk Ratyński  & Agent  \\
+		    Andrzej Roguski  & Protokół (IPv4), dokumentacja, testowanie \\
+		    Kacper Stachyra & Konsola administratora \\
+		\end{tabular}
+		
 		
 \end{document}
