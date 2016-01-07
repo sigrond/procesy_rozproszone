@@ -86,7 +86,9 @@ SocketIp4::SocketIp4( const Ipv4 & ip, unsigned short port, bool accSock ) : Soc
 	tv.tv_usec = 0;
 
 	setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, (char *)&tv,sizeof(struct timeval));
+
 }
+
 
 SocketIp4::SocketIp4( int msgsock ) : Socket( msgsock, 0 )
 {
