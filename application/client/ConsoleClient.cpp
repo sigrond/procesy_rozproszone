@@ -34,6 +34,8 @@ void ConsoleClient::start()
     string arg[ARGS];
 
     int command=NC;
+    fileAck=false;
+    hostAck=false;
 
     while(!shutDown)
     {
@@ -42,7 +44,12 @@ void ConsoleClient::start()
         {
         	command=CON;
         	arg[1]="127.0.0.1";
-        	if(connected)
+        	if(connected && !hostAck)
+        	{
+                command=ADD_AGENT;
+                arg[1]="127.0.0.1";
+        	}
+        	if(connected && hostAck)
 			{
 				command=ADD;
 				arg[1]="test";//teoretyczny plik zadania
@@ -186,13 +193,13 @@ void ConsoleClient::start()
 					{
 						stoper=0;
 						#ifdef _DEBUG
-						cout<<"wysyłam dodatkowy ping REQ, bo coś nie widzę odpowiedzi o pliku i powtarzam przesłanie pliku"<<endl;
+						cout<<"wysyłam dodatkowy ping REQ, bo coś nie widzę odpowiedzi o ADD HOST i powtarzam przesłanie ADD HOST"<<endl;
 						#endif // _DEBUG
 						q.push_back(m1);
 						q.push_back(hm);
 					}
 				}
-                hostAck=false;
+                //hostAck=false;
             }
             else
             {
@@ -319,6 +326,13 @@ void ConsoleClient::listenAndRecognize()
 				cout<<"odebrane task ACK"<<endl;
 				#endif // _DEBUG
 				taskAck=true;
+			}
+			if(m->getCategory()==(unsigned char)Category::HOST)
+			{
+				#ifdef _DEBUG
+				cout<<"odebrane host ACK"<<endl;
+				#endif // _DEBUG
+				hostAck=true;
 			}
 		}
 		anyResponse=true;
