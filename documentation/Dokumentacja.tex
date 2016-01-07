@@ -21,7 +21,7 @@
 
 \graphicspath{{./images/}}
 
-\title{Low Orbit Task Cannon \\ \large Techniki Internetowe, Projekt}
+\title{Low Orbit Task Cannon \\ \large Techniki Internetowe, Projekt \\ \\ Dokumentacja końcowa}
 \date{\today}
 \author{Tomasz Jakubczyk, Eryk Ratyński, Andrzej Roguski, Kacper Stachyra}
 
@@ -47,7 +47,7 @@
 	    
 	    \subsection{Zadania}
 	    \begin{itemize}
-	        \item Zadania po wprowadzeniu do LOTC nie wymaga modyfikacji
+	        \item Zadania po wprowadzeniu do LOTC nie wymagają modyfikacji
 	        \item Wykonanie zadania wymaga uruchomienia wyłącznie jednego pliku wykonywalnego (może on jednak uruchamiać inne podprogramy)
 	        \item Zadania dają się uruchomić w systemie GNU/Linux bez GUI (w szczególności - bez X Window System)
 	        \item Zadania wykonywane są w trybie wsadowym, tj. nie wymagają interakcji z użytkownikiem
@@ -491,6 +491,38 @@
 
 	\section{Sposób  demonstracji rezultatów}
 		Demonstracja rezultatów będzie się opierała na realizacji wybranych (lub wszystkich) przypadków użycia przy wykorzystaniu napisanego wcześniej skryptu testującego.
+		
+	\section{Wnioski}
+        \subsection{Tomasz Jakubczyk}
+            Niezaprzeczalnie poprawnie działa kolejka blokująca BlockingQueue. Jest to bardzo ważny element projektu, gdyż zapewnia niezawodną synchronizację wątków. Bez tego nie było by szans, żeby coś działało. \\
+            Każdy z modułów, czyli serwer, konsola, agent i protokół, same z siebie wydają się działać poprawnie, jednak testowanie wykazało, że moduły te zapałały do siebie gorącą nienawiścią. \\
+            Ponadto wykorzystywane kompilatory g++ i biblioteki obsługujące standard c++11 i c++14 wykazują się różnymi dziwnymi zachowaniami. O ile kompilacja i linkowanie przebiega pomyślnie, to nie można powiedzieć, że wykonanie programów takie jest. \\
+            Na Ubuntu występuje błąd \\
+            \texttt{ *** buffer overflow detected ***: terminated } \\
+            wydaje się, że jest to wina bibliotek dystrybucji Linuxa. \\
+            Inne problemy występują pod Cygwinem, który teoretycznie powinien być zgodny z Linuxem. Tam wydaje się, że Istnieją pewne ograniczenia co do otwierania i zamykania gniazd. Objawia się to, niemożliwością powtórnego nawiązania połączenia. Nie da się też wykluczyć, że powyższe błędy są związane z testowaniem poszczególnych, modułów aplikacji naraz na jednym komputerze bez ustawionych maszyn wirtualnych. Wydaje się, że biblioteki socket nadal są niedopracowane i zawierają błędy. \\
+            Nie mniej udaje się wykonywać programy aplikacji LOTC na Linux Arch, bez wyżej wymienionych błędów. \\
+            Mimo, że prawie od samego początku projektu zaczęliśmy testować protokół aplikacji, to i tak pod koniec, okazało się, że w połączeniu z pozostałymi częściami aplikacji wszystko nagle przestało działać. Być może było to spowodowane zbyt słabym opisaniem metod publicznych klas protokołu. W trakcie integrowania ze sobą modułów wyszły na jaw różne nieporozumienia co do działania protokołu. Być może przy protokole powinno pracować więcej osób, albo najlepiej wszyscy, ale to by oznaczało wchodzenie sobie w drogę. \\
+            Jeśli jeszcze raz miał bym robić ten projekt, to wstępnie zarządził bym, żeby każdy napisał własną obsługę gniazd do przesyłania komunikatów protokołu i wtedy dużo łatwiej było by wykrywać błędy, bo wyraźnie były by widoczne wizje działania komunikacji sieciowej poszczególnych programistów i dało by się ich w porę naprostować. \\
+            Testowanie okazało się też niesamowicie czasochłonne i nieprzyjemne.\\
+            Mimo usilnych starań nie udało się przekonać członków zespołu do napisania odpowiedniej liczby testów jednostkowych i postało ich zaledwie kilka.\\
+            Zostało napisanych kilka skryptów testowych, ale raczej w niczym one nam nie pomogły, a próby doprowadzenia ich do działania na niektórych maszynach i systemach zajęły sporo czasu. Oczywiście niezwykle przydatne okazały się ogromne ilości komunikatów debugowania oraz GDB pozwoliło szybko znaleźć kilka poważnych błędów, ale nie wszystkie. \\
+            GDB wykazuje się złym zachowaniem, jeśli w programie zwracane są wyjątki, które nie mają zakończyć programu. \\
+            Być może powinno się wyznaczyć jedną osobę, która zajmowała by się tylko testowaniem tego co inni napisali. \\
+            
+        \subsection{Andrzej Roguski}
+            Jeśli miałbym wskazać największe gwoździe w trumnie projektu, byłyby nimi faza projektowania i testowania. \\
+            \\
+            Znaczącym problemem okazała się rzecz prozaiczna - aplikacja docelowo mająca działać na wielu hostach, była testowana na pojedynczej maszynie. \\
+            Aby w ogóle umożliwić uruchomienie na jednym hoście serwera, konsoli i agentów, moduł komunikacyjny musiał poradzić sobie z przetwarzaniem komunikatów nie na podstawie samych adresów IP, ale także i portów. \\
+            Każdy moduł musiał nasłuchiwać na innym porcie. Serwer musiał też po porcie rozpoznawać rozmówców - a ten domyślnie był losowany. Przypisanie konkretnych portów wyjściowych prowadziło do błędów funkcji związanych z socketami, mimo użycia \texttt{SO\_REUSEADDR} - i na tej zasadzie bardzo duża część czasu poświęcona została na walkę z funkcjonalnością niezwiązaną z samym zadaniem, który to czas mógłby zostać wykorzystany na pisanie testów, implementację obsługi IPv6 czy stworzenie modułu Wireshark. \\
+            Co gorsza, z nieznanych nam przyczyn aplikacje inaczej zachowywały się (czyt. działały bądź nie) u różnych osób - mimo środowisk teoretycznie spełniających wymogi dotyczące kompilacji i uruchomienia. \\
+            \\
+            Mam też wrażenie, że wielu problemów można by uniknąć dzięki większej liczbie spotkań projektowych i większej aktywności zespołu przed przystąpieniem do "prac głównych". Jeszcze na etapie integracji pokutowały nieporozumienia odnośnie działania poszczególnych modułów albo głupie przeoczenia oczywiste z perspektywy programisty-odbiorcy danej funkcjonalności. \\
+            \\
+            Na pewno nie pomogła znikoma aktywność aż połowy zespołu - mimo usilnych nalegań teamleadera, połowa(!) modułów powitała nowy rok w stanie niemal dziewiczym, co doprowadziło do panicznego wyścigu z czasem w ostatnim tygodniu przerwy świątecznej. Dodając do tego niezrozumiałe różnice w działaniu aplikacji, pod koniec prac tylko ja miałem możliwość testowania aplikacji, a Tomek dokładną znajomość kodu serwera, konsoli i agenta, co skutkowało tym, że żaden z nas nic sensownego nie mógł w rozsądnym czasie osiągnąć. Pierwotny zamysł przydzielania sił zespołu tam, gdzie jest to potrzebne runął w gruzach.
+
+
 
 	\section{Podział prac}
 	
