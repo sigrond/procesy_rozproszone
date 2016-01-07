@@ -162,7 +162,43 @@ void ConsoleClient::start()
             }
         }
         else if(command == ADD_AGENT)
+        {
+            if (connected)
+            {
+                hostMessage* hm=nullptr;
+                Ipv4* ip=new Ipv4(arg[1]);
+                vector<Ipv4>* a=new vector<Ipv4>;
+                a->push_back(*ip);
+                hm=new hostMessage(HostSub::H_ADD,State::REQ,*a);
 
+                pingMessage* m1=new pingMessage(message::State::REQ);
+                hostAck=false;
+                //fileMessage* fm=new fileMessage(State::REQ,true,++taskCount,arg[1]);
+                #ifdef _DEBUG
+                cout<<"wysyłam namiary hosta"<<endl;
+                #endif // _DEBUG
+                q.push_back(hm);
+                unsigned long long stoper=0;
+                while(!hostAck && stoper<=3000000000)
+				{
+					stoper++;
+					if(stoper>2000000000)
+					{
+						stoper=0;
+						#ifdef _DEBUG
+						cout<<"wysyłam dodatkowy ping REQ, bo coś nie widzę odpowiedzi o pliku i powtarzam przesłanie pliku"<<endl;
+						#endif // _DEBUG
+						q.push_back(m1);
+						q.push_back(hm);
+					}
+				}
+                hostAck=false;
+            }
+            else
+            {
+                cout<<"Brak polaczenia z serwerem\n";
+            }
+        }
 
         //...//
         sendCommand();
