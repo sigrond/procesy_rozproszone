@@ -164,7 +164,7 @@ class BlockingQueue&lt; T &gt;</h3>
 <p>Kolejka blokująca. Dziedziczy po queue. Żeby nie ryzykować użycia niezabezpieczonych wątkowo dziedziczonych metod dziedziczenie po queue jest prywatne. W celu zmniejszenia ryzyka niepoprawności synchronizacji wzorowałem się na implementacjach CONCURRENT QUEUE w internecie. </p>
 <p>Doklejenie implementacji metod rozwiązuje problem z nie obsługiwaniem przez gcc i większość innych kompilatorów dyrektywy export template </p>
 
-<p>Definicja w linii <a class="el" href="BlockingQueue_8hpp_source.html#l00020">20</a> pliku <a class="el" href="BlockingQueue_8hpp_source.html">BlockingQueue.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="BlockingQueue_8hpp_source.html#l00021">21</a> pliku <a class="el" href="BlockingQueue_8hpp_source.html">BlockingQueue.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a class="anchor" id="a42f821a61ba22ba27e6d1a434ab27eb2"></a>
 <div class="memitem">
@@ -181,7 +181,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="BlockingQueue_8cpp_source.html#l00011">11</a> pliku <a class="el" href="BlockingQueue_8cpp_source.html">BlockingQueue.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="BlockingQueue_8cpp_source.html#l00012">12</a> pliku <a class="el" href="BlockingQueue_8cpp_source.html">BlockingQueue.cpp</a>.</p>
 
 </div>
 </div>
@@ -200,7 +200,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="BlockingQueue_8cpp_source.html#l00019">19</a> pliku <a class="el" href="BlockingQueue_8cpp_source.html">BlockingQueue.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="BlockingQueue_8cpp_source.html#l00020">20</a> pliku <a class="el" href="BlockingQueue_8cpp_source.html">BlockingQueue.cpp</a>.</p>
 
 </div>
 </div>
@@ -223,9 +223,9 @@ template&lt;class T &gt; </div>
 <p>Zdejmuje pierwszy element z kolejki niepodzielnie i go zwraca. </p>
 <dl class="section return"><dt>Zwraca</dt><dd>T Zwracany element typu parametrycznego T. </dd></dl>
 
-<p>Definicja w linii <a class="el" href="BlockingQueue_8cpp_source.html#l00036">36</a> pliku <a class="el" href="BlockingQueue_8cpp_source.html">BlockingQueue.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="BlockingQueue_8cpp_source.html#l00037">37</a> pliku <a class="el" href="BlockingQueue_8cpp_source.html">BlockingQueue.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="AgentClient_8cpp_source.html#l00107">AgentClient::sendFromQueue()</a> i <a class="el" href="Controller_8cpp_source.html#l00091">Controller::start()</a>.</p>
+<p>Odwołania w <a class="el" href="AgentClient_8cpp_source.html#l00109">AgentClient::sendFromQueue()</a> i <a class="el" href="Controller_8cpp_source.html#l00092">Controller::start()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -263,9 +263,9 @@ template&lt;class T&gt; </div>
 </dl>
 <dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
 
-<p>Definicja w linii <a class="el" href="BlockingQueue_8cpp_source.html#l00027">27</a> pliku <a class="el" href="BlockingQueue_8cpp_source.html">BlockingQueue.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="BlockingQueue_8cpp_source.html#l00028">28</a> pliku <a class="el" href="BlockingQueue_8cpp_source.html">BlockingQueue.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Model_8cpp_source.html#l00122">Model::addTask()</a>, <a class="el" href="Strategies_8hpp_source.html#l00089">MessageFromAdminStrategy::doJob()</a>, <a class="el" href="AgentServer_8cpp_source.html#l00089">AgentServer::listen()</a>, <a class="el" href="AdminServer_8cpp_source.html#l00089">AdminServer::listen()</a>, <a class="el" href="Model_8cpp_source.html#l00090">Model::pingAdmin()</a>, <a class="el" href="Model_8cpp_source.html#l00106">Model::pingSlaves()</a>, <a class="el" href="Model_8cpp_source.html#l00072">Model::pushAddAgent()</a>, <a class="el" href="Model_8cpp_source.html#l00060">Model::pushTestEvents()</a>, <a class="el" href="Command_8cpp_source.html#l00005">TaskCommand::TaskCommand()</a> i <a class="el" href="Controller_8cpp_source.html#l00196">Controller::triggerShutDown()</a>.</p>
+<p>Odwołania w <a class="el" href="Model_8cpp_source.html#l00123">Model::addTask()</a>, <a class="el" href="Strategies_8hpp_source.html#l00091">MessageFromAdminStrategy::doJob()</a>, <a class="el" href="AgentServer_8cpp_source.html#l00109">AgentServer::listen()</a>, <a class="el" href="AdminServer_8cpp_source.html#l00090">AdminServer::listen()</a>, <a class="el" href="Model_8cpp_source.html#l00091">Model::pingAdmin()</a>, <a class="el" href="Model_8cpp_source.html#l00107">Model::pingSlaves()</a>, <a class="el" href="Model_8cpp_source.html#l00073">Model::pushAddAgent()</a>, <a class="el" href="Model_8cpp_source.html#l00061">Model::pushTestEvents()</a>, <a class="el" href="Command_8cpp_source.html#l00013">TaskCommand::TaskCommand()</a> i <a class="el" href="Controller_8cpp_source.html#l00197">Controller::triggerShutDown()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -300,7 +300,7 @@ template&lt;class T&gt; </div>
 </div><div class="memdoc">
 <p>warunek blokowania </p>
 
-<p>Definicja w linii <a class="el" href="BlockingQueue_8hpp_source.html#l00037">37</a> pliku <a class="el" href="BlockingQueue_8hpp_source.html">BlockingQueue.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="BlockingQueue_8hpp_source.html#l00038">38</a> pliku <a class="el" href="BlockingQueue_8hpp_source.html">BlockingQueue.hpp</a>.</p>
 
 </div>
 </div>
@@ -325,7 +325,7 @@ template&lt;class T&gt; </div>
 </div><div class="memdoc">
 <p>wewnętrzny zamek do kolejki </p>
 
-<p>Definicja w linii <a class="el" href="BlockingQueue_8hpp_source.html#l00036">36</a> pliku <a class="el" href="BlockingQueue_8hpp_source.html">BlockingQueue.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="BlockingQueue_8hpp_source.html#l00037">37</a> pliku <a class="el" href="BlockingQueue_8hpp_source.html">BlockingQueue.hpp</a>.</p>
 
 </div>
 </div>
@@ -350,9 +350,9 @@ template&lt;class T&gt; </div>
 </div><div class="memdoc">
 <p>wewnętrzna kolejka </p>
 
-<p>Definicja w linii <a class="el" href="BlockingQueue_8hpp_source.html#l00035">35</a> pliku <a class="el" href="BlockingQueue_8hpp_source.html">BlockingQueue.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="BlockingQueue_8hpp_source.html#l00036">36</a> pliku <a class="el" href="BlockingQueue_8hpp_source.html">BlockingQueue.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="AgentClient_8cpp_source.html#l00025">AgentClient::AgentClient()</a> i <a class="el" href="Controller_8cpp_source.html#l00233">Controller::setup()</a>.</p>
+<p>Odwołania w <a class="el" href="AgentClient_8cpp_source.html#l00027">AgentClient::AgentClient()</a> i <a class="el" href="Controller_8cpp_source.html#l00234">Controller::setup()</a>.</p>
 
 </div>
 </div>
@@ -366,7 +366,7 @@ template&lt;class T&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classBlockingQueue.html">BlockingQueue</a></li>
-    <li class="footer">Wygenerowano Cz, 7 sty 2016 17:23:57 dla LOTC programem
+    <li class="footer">Wygenerowano Cz, 7 sty 2016 22:10:59 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

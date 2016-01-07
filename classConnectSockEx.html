@@ -116,20 +116,23 @@ $(document).ready(function(){initNavTree('classConnectSockEx.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Wyjątek: nieudane connect()  
+ <a href="classConnectSockEx.html#details">Więcej...</a></p>
+
 <p><code>#include &lt;<a class="el" href="SocketException_8hpp_source.html">SocketException.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Diagram dziedziczenia dla ConnectSockEx</div>
 <div class="dyncontent">
 <div class="center"><img src="classConnectSockEx__inherit__graph.png" border="0" usemap="#ConnectSockEx_inherit__map" alt="Inheritance graph"/></div>
 <map name="ConnectSockEx_inherit__map" id="ConnectSockEx_inherit__map">
-<area shape="rect" id="node2" href="classSockEx.html" title="{SockEx\n||+ what()\l+ ~SockEx()\l}" alt="" coords="29,131,125,223"/><area shape="rect" id="node3" title="STL class. " alt="" coords="25,5,129,83"/></map>
+<area shape="rect" id="node2" href="classSockEx.html" title="Abstrakcyjna klasa bazowa wyjątków związanych z socketami. " alt="" coords="29,131,125,223"/><area shape="rect" id="node3" title="STL class. " alt="" coords="25,5,129,83"/></map>
 </div>
 <div class="dynheader">
 Diagram współpracy dla ConnectSockEx:</div>
 <div class="dyncontent">
 <div class="center"><img src="classConnectSockEx__coll__graph.png" border="0" usemap="#ConnectSockEx_coll__map" alt="Collaboration graph"/></div>
 <map name="ConnectSockEx_coll__map" id="ConnectSockEx_coll__map">
-<area shape="rect" id="node2" href="classSockEx.html" title="{SockEx\n||+ what()\l+ ~SockEx()\l}" alt="" coords="17,147,113,239"/><area shape="rect" id="node3" title="STL class. " alt="" coords="5,13,109,90"/><area shape="rect" id="node4" title="STL class. " alt="" coords="151,154,231,231"/><area shape="rect" id="node5" title="STL class. " alt="" coords="134,5,261,97"/></map>
+<area shape="rect" id="node2" href="classSockEx.html" title="Abstrakcyjna klasa bazowa wyjątków związanych z socketami. " alt="" coords="17,147,113,239"/><area shape="rect" id="node3" title="STL class. " alt="" coords="5,13,109,90"/><area shape="rect" id="node4" title="STL class. " alt="" coords="151,154,231,231"/><area shape="rect" id="node5" title="STL class. " alt="" coords="134,5,261,97"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -139,6 +142,7 @@ Metody publiczne</h2></td></tr>
 <tr class="memitem:a7f1290a918c8bb37bdf3aa08ff6db41e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnectSockEx.html#a7f1290a918c8bb37bdf3aa08ff6db41e">~ConnectSockEx</a> ()</td></tr>
 <tr class="separator:a7f1290a918c8bb37bdf3aa08ff6db41e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dc151c6df86e563013705904ec57d82"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConnectSockEx.html#a9dc151c6df86e563013705904ec57d82">what</a> () const noexcept</td></tr>
+<tr class="memdesc:a9dc151c6df86e563013705904ec57d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca zakończony \0 komunikat o błędzie  <a href="#a9dc151c6df86e563013705904ec57d82">Więcej...</a><br/></td></tr>
 <tr class="separator:a9dc151c6df86e563013705904ec57d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classSockEx"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSockEx')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="classSockEx.html">SockEx</a></td></tr>
 <tr class="memitem:a444ea08d52b18712b9f3f3cdfe27903c inherit pub_methods_classSockEx"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSockEx.html#a444ea08d52b18712b9f3f3cdfe27903c">~SockEx</a> ()</td></tr>
@@ -150,8 +154,9 @@ Atrybuty prywatne</h2></td></tr>
 <tr class="separator:a2913c6c23130f7a909bb5562aaf045c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
-<div class="textblock">
-<p>Definicja w linii <a class="el" href="SocketException_8hpp_source.html#l00076">76</a> pliku <a class="el" href="SocketException_8hpp_source.html">SocketException.hpp</a>.</p>
+<div class="textblock"><p>Wyjątek: nieudane connect() </p>
+
+<p>Definicja w linii <a class="el" href="SocketException_8hpp_source.html#l00107">107</a> pliku <a class="el" href="SocketException_8hpp_source.html">SocketException.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a class="anchor" id="a5c38e58f2f62abcf3720c9b6d8ce6c20"></a>
 <div class="memitem">
@@ -166,16 +171,16 @@ Atrybuty prywatne</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="SocketException_8cpp_source.html#l00047">47</a> pliku <a class="el" href="SocketException_8cpp_source.html">SocketException.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="SocketException_8cpp_source.html#l00050">50</a> pliku <a class="el" href="SocketException_8cpp_source.html">SocketException.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Socket_8cpp_source.html#l00113">SocketIp4::connect()</a>.</p>
+<p>Odwołania w <a class="el" href="Socket_8cpp_source.html#l00109">SocketIp4::connect()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classConnectSockEx_a5c38e58f2f62abcf3720c9b6d8ce6c20_icgraph.png" border="0" usemap="#classConnectSockEx_a5c38e58f2f62abcf3720c9b6d8ce6c20_icgraph" alt=""/></div>
 <map name="classConnectSockEx_a5c38e58f2f62abcf3720c9b6d8ce6c20_icgraph" id="classConnectSockEx_a5c38e58f2f62abcf3720c9b6d8ce6c20_icgraph">
-<area shape="rect" id="node2" href="classSocketIp4.html#a201eb6bf4dae6ba9e92e7609eaa3a8b1" title="SocketIp4::connect" alt="" coords="272,5,407,32"/></map>
+<area shape="rect" id="node2" href="classSocketIp4.html#a201eb6bf4dae6ba9e92e7609eaa3a8b1" title="Łączy z serwerem. " alt="" coords="272,5,407,32"/></map>
 </div>
 </p>
 
@@ -202,7 +207,7 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="SocketException_8cpp_source.html#l00045">45</a> pliku <a class="el" href="SocketException_8cpp_source.html">SocketException.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="SocketException_8cpp_source.html#l00048">48</a> pliku <a class="el" href="SocketException_8cpp_source.html">SocketException.cpp</a>.</p>
 
 </div>
 </div>
@@ -228,9 +233,12 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
+<p>zwraca zakończony \0 komunikat o błędzie </p>
+<dl class="section return"><dt>Zwraca</dt><dd>wzkaźnik na bufor z komunikatem </dd></dl>
+
 <p>Implementuje <a class="el" href="classSockEx.html#aff1ceda26ef22a8a8aff420e232599ac">SockEx</a>.</p>
 
-<p>Definicja w linii <a class="el" href="SocketException_8cpp_source.html#l00053">53</a> pliku <a class="el" href="SocketException_8cpp_source.html">SocketException.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="SocketException_8cpp_source.html#l00056">56</a> pliku <a class="el" href="SocketException_8cpp_source.html">SocketException.cpp</a>.</p>
 
 </div>
 </div>
@@ -253,7 +261,7 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="SocketException_8hpp_source.html#l00084">84</a> pliku <a class="el" href="SocketException_8hpp_source.html">SocketException.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="SocketException_8hpp_source.html#l00119">119</a> pliku <a class="el" href="SocketException_8hpp_source.html">SocketException.hpp</a>.</p>
 
 </div>
 </div>
@@ -267,7 +275,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classConnectSockEx.html">ConnectSockEx</a></li>
-    <li class="footer">Wygenerowano Cz, 7 sty 2016 17:23:58 dla LOTC programem
+    <li class="footer">Wygenerowano Cz, 7 sty 2016 22:11:00 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

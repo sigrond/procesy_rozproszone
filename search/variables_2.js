@@ -9,6 +9,5 @@ var searchData=
   ['connectionmanager',['connectionManager',['../classAgentClient.html#a52438f020977fee32396a51147439063',1,'AgentClient::connectionManager()'],['../classConsoleClient.html#a8a0876ecdb6602c8594b2935ae8d3aa2',1,'ConsoleClient::connectionManager()'],['../classAdminServer.html#ab41bb42d5b01b6297822ebdbd40859c2',1,'AdminServer::connectionManager()'],['../classAgentServer.html#a88defc2eaaefc2cbfe8cbfdc70d50080',1,'AgentServer::connectionManager()'],['../classSlave.html#afed47dcd87362e3c56de2213e63074e8',1,'Slave::connectionManager()']]],
   ['connguardsmutex',['connGuardsMutex',['../classConnectionManager.html#a5dfb188523df4d6969d46922be31c9c2',1,'ConnectionManager']]],
   ['controller',['controller',['../classStrategy.html#aa21b85fd8c90091840c6c51899693d2f',1,'Strategy::controller()'],['../classModel.html#a830195401b77e9b56009e4bac37ae6f3',1,'Model::controller()']]],
-  ['counter',['counter',['../classConnection.html#a0a2aec40fe257a2d79dbad1dc1f32120',1,'Connection']]],
   ['createdobjects',['createdObjects',['../classTestStrategy.html#a34516f7a3ab08da4df75df97fb2a3d76',1,'TestStrategy']]]
 ];

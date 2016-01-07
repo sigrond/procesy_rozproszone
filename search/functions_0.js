@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['accept',['accept',['../classSocket.html#a795d6b116c1996c280947981549d4ffe',1,'Socket::accept()'],['../classSocketIp4.html#ae3fc6c667edd538d9501a513f128ddd9',1,'SocketIp4::accept()']]],
+  ['accept',['accept',['../classSocket.html#a795d6b116c1996c280947981549d4ffe',1,'Socket::accept()'],['../classSocketIp4.html#ae3fc6c667edd538d9501a513f128ddd9',1,'SocketIp4::accept()'],['../classSocketIp6.html#aa912fa8fcad3652232a0f91310264646',1,'SocketIp6::accept()']]],
   ['acceptsockex',['AcceptSockEx',['../classAcceptSockEx.html#a0c5bc1b55979935f5c72cb64c5543884',1,'AcceptSockEx']]],
   ['address',['Address',['../classAddress.html#aa336ded2b0cdbc176fd0e5b841edd80f',1,'Address']]],
   ['addressipv4',['AddressIpv4',['../classAddressIpv4.html#a6be371faa82391f4f9a50ffda808ab23',1,'AddressIpv4']]],

@@ -112,47 +112,48 @@ $(document).ready(function(){initNavTree('Strategy_8hpp_source.html','');});
 <a href="Strategy_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/** \file Strategy.hpp</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * \author Tomasz Jakubczyk</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * \brief Plik nagłówkowy abstrakcyjnej klasy Strategy.</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">pragma</span> <span class="preprocessor">once</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">iostream</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/** \brief Wirtualna klasa strategii obsługi zdarzenia.</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * Klasę należy zkonkretyzować dziedzicząc po niej np. AdminServerStrategy</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classStrategy.html">   14</a></span>&#160;<span class="keyword">class</span> <a class="code" href="classStrategy.html">Strategy</a></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classStrategy.html#aa21b85fd8c90091840c6c51899693d2f">   17</a></span>&#160;        <span class="keywordtype">void</span>* <a class="code" href="classStrategy.html#aa21b85fd8c90091840c6c51899693d2f">controller</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classStrategy.html#a2021a15bbc4f0d13f7b92f8933db2235">   18</a></span>&#160;        <a class="code" href="classStrategy.html#a2021a15bbc4f0d13f7b92f8933db2235">Strategy</a>():<a class="code" href="classStrategy.html#aa21b85fd8c90091840c6c51899693d2f">controller</a>(<span class="keywordtype">nullptr</span>)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                #ifdef _DEBUG2</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                std::cout&lt;&lt;<span class="stringliteral">&quot;Strategy()&quot;</span>&lt;&lt;std::endl;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                #endif <span class="comment">// _DEBUG</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        };</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classStrategy.html#a2870e41ac77f36da35e5bc1e0b3de31f">   24</a></span>&#160;        <a class="code" href="classStrategy.html#a2870e41ac77f36da35e5bc1e0b3de31f">Strategy</a>(<span class="keywordtype">void</span>* c):<a class="code" href="classStrategy.html#aa21b85fd8c90091840c6c51899693d2f">controller</a>(c)</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                #ifdef _DEBUG2</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                std::cout&lt;&lt;<span class="stringliteral">&quot;Strategy(Controller* c)&quot;</span>&lt;&lt;std::endl;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                #endif <span class="comment">// _DEBUG</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        };</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">/**&lt; w sumie mozna było użyć operator(), było by to chyba bardziej intuicyjne */</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classStrategy.html#aa4abd0f386620e80343f272391848343">doJob</a>(<span class="keywordtype">void</span>* data, <span class="keywordtype">void</span>* who=<span class="keywordtype">nullptr</span>,<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port=0) = 0;<span class="comment">/**&lt; sposób realizacji danej strategii */</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
-<div class="ttc" id="classStrategy_html"><div class="ttname"><a href="classStrategy.html">Strategy</a></div><div class="ttdoc">Wirtualna klasa strategii obsługi zdarzenia. Klasę należy zkonkretyzować dziedzicząc po niej np...</div><div class="ttdef"><b>Definition:</b> <a href="Strategy_8hpp_source.html#l00014">Strategy.hpp:14</a></div></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * \date 3 Dec 2015</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Low Orbit Task Cannon</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">pragma</span> <span class="preprocessor">once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">iostream</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/** \brief Wirtualna klasa strategii obsługi zdarzenia.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * Klasę należy zkonkretyzować dziedzicząc po niej np. AdminServerStrategy</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classStrategy.html">   15</a></span>&#160;<span class="keyword">class</span> <a class="code" href="classStrategy.html">Strategy</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classStrategy.html#aa21b85fd8c90091840c6c51899693d2f">   18</a></span>&#160;        <span class="keywordtype">void</span>* <a class="code" href="classStrategy.html#aa21b85fd8c90091840c6c51899693d2f">controller</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classStrategy.html#a2021a15bbc4f0d13f7b92f8933db2235">   19</a></span>&#160;        <a class="code" href="classStrategy.html#a2021a15bbc4f0d13f7b92f8933db2235">Strategy</a>():<a class="code" href="classStrategy.html#aa21b85fd8c90091840c6c51899693d2f">controller</a>(<span class="keywordtype">nullptr</span>)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                #ifdef _DEBUG2</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                std::cout&lt;&lt;<span class="stringliteral">&quot;Strategy()&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                #endif <span class="comment">// _DEBUG</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        };</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classStrategy.html#a2870e41ac77f36da35e5bc1e0b3de31f">   25</a></span>&#160;        <a class="code" href="classStrategy.html#a2870e41ac77f36da35e5bc1e0b3de31f">Strategy</a>(<span class="keywordtype">void</span>* c):<a class="code" href="classStrategy.html#aa21b85fd8c90091840c6c51899693d2f">controller</a>(c)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                #ifdef _DEBUG2</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                std::cout&lt;&lt;<span class="stringliteral">&quot;Strategy(Controller* c)&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                #endif <span class="comment">// _DEBUG</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        };</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="comment">/**&lt; w sumie mozna było użyć operator(), było by to chyba bardziej intuicyjne */</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classStrategy.html#aa4abd0f386620e80343f272391848343">doJob</a>(<span class="keywordtype">void</span>* data, <span class="keywordtype">void</span>* who=<span class="keywordtype">nullptr</span>,<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> port=0) = 0;<span class="comment">/**&lt; sposób realizacji danej strategii */</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="ttc" id="classStrategy_html"><div class="ttname"><a href="classStrategy.html">Strategy</a></div><div class="ttdoc">Wirtualna klasa strategii obsługi zdarzenia. Klasę należy zkonkretyzować dziedzicząc po niej np...</div><div class="ttdef"><b>Definition:</b> <a href="Strategy_8hpp_source.html#l00015">Strategy.hpp:15</a></div></div>
 <div class="ttc" id="classStrategy_html_aa4abd0f386620e80343f272391848343"><div class="ttname"><a href="classStrategy.html#aa4abd0f386620e80343f272391848343">Strategy::doJob</a></div><div class="ttdeci">virtual void doJob(void *data, void *who=nullptr, unsigned short port=0)=0</div></div>
-<div class="ttc" id="classStrategy_html_a2021a15bbc4f0d13f7b92f8933db2235"><div class="ttname"><a href="classStrategy.html#a2021a15bbc4f0d13f7b92f8933db2235">Strategy::Strategy</a></div><div class="ttdeci">Strategy()</div><div class="ttdef"><b>Definition:</b> <a href="Strategy_8hpp_source.html#l00018">Strategy.hpp:18</a></div></div>
-<div class="ttc" id="classStrategy_html_aa21b85fd8c90091840c6c51899693d2f"><div class="ttname"><a href="classStrategy.html#aa21b85fd8c90091840c6c51899693d2f">Strategy::controller</a></div><div class="ttdeci">void * controller</div><div class="ttdef"><b>Definition:</b> <a href="Strategy_8hpp_source.html#l00017">Strategy.hpp:17</a></div></div>
-<div class="ttc" id="classStrategy_html_a2870e41ac77f36da35e5bc1e0b3de31f"><div class="ttname"><a href="classStrategy.html#a2870e41ac77f36da35e5bc1e0b3de31f">Strategy::Strategy</a></div><div class="ttdeci">Strategy(void *c)</div><div class="ttdef"><b>Definition:</b> <a href="Strategy_8hpp_source.html#l00024">Strategy.hpp:24</a></div></div>
+<div class="ttc" id="classStrategy_html_a2021a15bbc4f0d13f7b92f8933db2235"><div class="ttname"><a href="classStrategy.html#a2021a15bbc4f0d13f7b92f8933db2235">Strategy::Strategy</a></div><div class="ttdeci">Strategy()</div><div class="ttdef"><b>Definition:</b> <a href="Strategy_8hpp_source.html#l00019">Strategy.hpp:19</a></div></div>
+<div class="ttc" id="classStrategy_html_aa21b85fd8c90091840c6c51899693d2f"><div class="ttname"><a href="classStrategy.html#aa21b85fd8c90091840c6c51899693d2f">Strategy::controller</a></div><div class="ttdeci">void * controller</div><div class="ttdef"><b>Definition:</b> <a href="Strategy_8hpp_source.html#l00018">Strategy.hpp:18</a></div></div>
+<div class="ttc" id="classStrategy_html_a2870e41ac77f36da35e5bc1e0b3de31f"><div class="ttname"><a href="classStrategy.html#a2870e41ac77f36da35e5bc1e0b3de31f">Strategy::Strategy</a></div><div class="ttdeci">Strategy(void *c)</div><div class="ttdef"><b>Definition:</b> <a href="Strategy_8hpp_source.html#l00025">Strategy.hpp:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_342e7b6bc6a1e66453dad3633c4afb75.html">server</a></li><li class="navelem"><a class="el" href="Strategy_8hpp.html">Strategy.hpp</a></li>
-    <li class="footer">Wygenerowano Cz, 7 sty 2016 17:23:51 dla LOTC programem
+    <li class="footer">Wygenerowano Cz, 7 sty 2016 22:10:56 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

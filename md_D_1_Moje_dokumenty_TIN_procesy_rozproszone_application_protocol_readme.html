@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('md_D_1_Moje_dokumenty_TIN_procesy_rozp
 <div class="title">Koncepcja implementacji modułu komunikacyjnego </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h4>Klasa <a class="el" href="classSocket.html">Socket</a></h4>
+<div class="textblock"><h4>Klasa <a class="el" href="classSocket.html" title="Klasa bazowa Socket - obiektowy wrapper dla API socketów. ">Socket</a></h4>
 <p>Prosty wrapper obiektowy dla socketów unixowych.</p>
 <h4>Klasa <a class="el" href="classIp.html" title="Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. ">Ip</a> i dziedziczące</h4>
 <p>Bardzo drobna klasa, przechowuje adres <a class="el" href="classIp.html" title="Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. ">Ip</a> w postaci stringa przetrawialnego dla socketów unixowych. Generalnie zadaniem tej klasy jest sprawdzenie podczas wywołania konstruktora, czy podany adres jest poprawny.</p>
@@ -126,7 +126,7 @@ $(document).ready(function(){initNavTree('md_D_1_Moje_dokumenty_TIN_procesy_rozp
 <p>Czas życia obiektów <a class="el" href="classConnection.html" title="Klasa realizująca połączenie LOTC. ">Connection</a> odpowiada czasowi trwania połączenia.</p>
 <h4>Klasa <a class="el" href="classConnectionManager.html">ConnectionManager</a></h4>
 <p>"Centrum dowodzenia" połączeniami. Singleton, przechowuje gniazdo nasłuchujące na porcie 55555, zarządza przyjmowaniem i nawiazywaniem połączeń. Każde połączenie trzymane jest w mapie z IP jako kluczem. Z danym hostem nie można nawiązać więcej niż jednego połączenia jednocześnie.</p>
-<p><a class="el" href="classConnectionManager.html">ConnectionManager</a> wystawia całość interfejsu modułu komunikacyjnego protokołu LOTC. Nie ma potrzeby tworzenia własnych obiektów <a class="el" href="classSocket.html">Socket</a> lub <a class="el" href="classConnection.html" title="Klasa realizująca połączenie LOTC. ">Connection</a>.</p>
+<p><a class="el" href="classConnectionManager.html">ConnectionManager</a> wystawia całość interfejsu modułu komunikacyjnego protokołu LOTC. Nie ma potrzeby tworzenia własnych obiektów <a class="el" href="classSocket.html" title="Klasa bazowa Socket - obiektowy wrapper dla API socketów. ">Socket</a> lub <a class="el" href="classConnection.html" title="Klasa realizująca połączenie LOTC. ">Connection</a>.</p>
 <p>Obiekt tej klasy jest monitorem i gwarantuje bezpieczny dostęp współbieżny.</p>
 <p><b>Uwagi co do metod:</b></p>
 <p>send() - jeśli z danym adresem IP nie ma otwartego połączenia, jest ono automatycznie tworzone. receive() - jeśli z danym adresem IP nie ma otwartego połączenia, metoda ta czeka na utworzenie połączenia poprzez funkcję nasłuchującą.</p>
@@ -142,7 +142,7 @@ $(document).ready(function(){initNavTree('md_D_1_Moje_dokumenty_TIN_procesy_rozp
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Wygenerowano Cz, 7 sty 2016 17:23:55 dla LOTC programem
+    <li class="footer">Wygenerowano Cz, 7 sty 2016 22:10:59 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

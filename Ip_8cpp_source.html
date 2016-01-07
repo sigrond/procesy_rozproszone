@@ -110,139 +110,140 @@ $(document).ready(function(){initNavTree('Ip_8cpp_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="Ip_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * \file Ip.cpp</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Low Orbit Task Cannon</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * \brief Plik z implementacjami metod klasy Ip</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * \file     Ip.cpp</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * \authors Tomasz Jakubczyk, Andrzej Roguski</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * \brief    Plik z implementacjami metod klasy Ip</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * \todo IPv6</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * \authors Tomasz Jakubczyk, Andrzej Roguski</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">regex</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="Ip_8hpp.html">&quot;Ip.hpp&quot;</a></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">iostream</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// ------------------------------------------------------</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// Ip</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// ------------------------------------------------------</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classIp.html#abc1b04c5638f7ec50b5d4667c6e1a099">   21</a></span>&#160;<a class="code" href="classIp.html">Ip</a>::<a class="code" href="classIp.html#abc1b04c5638f7ec50b5d4667c6e1a099">Ip</a>(){}</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classIp.html#a4ee51aedb2afd092cfc9ae9295505440">   22</a></span>&#160;<a class="code" href="classIp.html">Ip</a>::~<a class="code" href="classIp.html#a4ee51aedb2afd092cfc9ae9295505440">Ip</a>(){}</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * \date    16.12.2015</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">regex</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="Ip_8hpp.html" title="Plik nagłówkowy klasy opakowującej adresy IP. ">&quot;Ip.hpp&quot;</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">iostream</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// ------------------------------------------------------</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// Ip</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// ------------------------------------------------------</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classIp.html#abc1b04c5638f7ec50b5d4667c6e1a099">   22</a></span>&#160;<a class="code" href="classIp.html">Ip</a>::<a class="code" href="classIp.html#abc1b04c5638f7ec50b5d4667c6e1a099">Ip</a>(){}</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classIp.html#a4ee51aedb2afd092cfc9ae9295505440">   23</a></span>&#160;<a class="code" href="classIp.html">Ip</a>::~<a class="code" href="classIp.html#a4ee51aedb2afd092cfc9ae9295505440">Ip</a>(){}</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// ------------------------------------------------------</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// Ipv4</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// ------------------------------------------------------</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classIpv4.html#a4f0a0e5fbf6950c99a2f12d5cef9aead">   28</a></span>&#160;Ipv4::<a class="code" href="classIpv4.html#a4f0a0e5fbf6950c99a2f12d5cef9aead">Ipv4</a> ( <span class="keyword">const</span> std::string &amp; str ) : <a class="code" href="classIpv4.html#a4f0a0e5fbf6950c99a2f12d5cef9aead">addrStr</a>(<a class="code" href="classIpv4.html#a4f0a0e5fbf6950c99a2f12d5cef9aead">str</a>)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">if</span>( ! isCorrect( str ) )</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">throw</span> BadIpException();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        inet_aton( str.c_str(), &amp;address );</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classIpv4.html#a4950f5b6bf02454faa8ba846851b1476">   36</a></span>&#160;Ipv4::<a class="code" href="classIpv4.html#a4950f5b6bf02454faa8ba846851b1476">Ipv4</a> ( <span class="keyword">const</span> Ipv4 &amp; that )</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        addrStr = that.getAddress();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        inet_aton( addrStr.c_str(), &amp;address);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classIpv4.html#a46ca11e71755241b345a721654a9ee04">   42</a></span>&#160;<span class="keywordtype">bool</span> Ipv4::<a class="code" href="classIpv4.html#a46ca11e71755241b345a721654a9ee04">isCorrect</a> ( <span class="keyword">const</span> std::string &amp; str ) <span class="keyword">const</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// ten koszmar poniżej to regex sprawdzający, czy ciąg jest poprwanym adresem IPv4 w konwencji A.B.C.D</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">const</span> <span class="keyword">static</span> std::regex exIpv4(<span class="stringliteral">&quot;(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)&quot;</span>);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> std::regex_match( str, exIpv4 );</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// ------------------------------------------------------</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// Ipv4</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// ------------------------------------------------------</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classIpv4.html#a4f0a0e5fbf6950c99a2f12d5cef9aead">   29</a></span>&#160;Ipv4::<a class="code" href="classIpv4.html#a4f0a0e5fbf6950c99a2f12d5cef9aead">Ipv4</a> ( <span class="keyword">const</span> std::string &amp; str ) : <a class="code" href="classIpv4.html#a4f0a0e5fbf6950c99a2f12d5cef9aead">addrStr</a>(<a class="code" href="classIpv4.html#a4f0a0e5fbf6950c99a2f12d5cef9aead">str</a>)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">if</span>( ! isCorrect( str ) )</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keywordflow">throw</span> BadIpException();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        inet_aton( str.c_str(), &amp;address );</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classIpv4.html#a4950f5b6bf02454faa8ba846851b1476">   37</a></span>&#160;Ipv4::<a class="code" href="classIpv4.html#a4950f5b6bf02454faa8ba846851b1476">Ipv4</a> ( <span class="keyword">const</span> Ipv4 &amp; that )</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        addrStr = that.getAddress();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        inet_aton( addrStr.c_str(), &amp;address);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classIpv4.html#a46ca11e71755241b345a721654a9ee04">   43</a></span>&#160;<span class="keywordtype">bool</span> Ipv4::<a class="code" href="classIpv4.html#a46ca11e71755241b345a721654a9ee04">isCorrect</a> ( <span class="keyword">const</span> std::string &amp; str ) <span class="keyword">const</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">// ten koszmar poniżej to regex sprawdzający, czy ciąg jest poprwanym adresem IPv4 w konwencji A.B.C.D</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">const</span> <span class="keyword">static</span> std::regex exIpv4(<span class="stringliteral">&quot;(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> std::regex_match( str, exIpv4 );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classIpv4.html#aed31825f0569c3c27632e4b97a25270d">   51</a></span>&#160;<a class="code" href="classIpv4.html#aed31825f0569c3c27632e4b97a25270d">std</a>::<a class="code" href="classIpv4.html#aed31825f0569c3c27632e4b97a25270d">string</a> Ipv4::<a class="code" href="classIpv4.html#aed31825f0569c3c27632e4b97a25270d">getAddress</a>() <span class="keyword">const</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> addrStr;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">   56</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> Ipv4::<a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">getAddressNum</a>() <span class="keyword">const</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> address.s_addr;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classIpv4.html#a3e64a1d8fe588db524439a500f1ca968">   61</a></span>&#160;<span class="keywordtype">bool</span> Ipv4::<a class="code" href="classIpv4.html#a3e64a1d8fe588db524439a500f1ca968">operator</a>&lt;( <span class="keyword">const</span> Ipv4 &amp; that ) <span class="keyword">const</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;       <span class="keywordflow">return</span> <a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">getAddressNum</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">(</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">)</a> &lt; that<a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">.</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">getAddressNum</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">(</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">)</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classIpv4.html#aed31825f0569c3c27632e4b97a25270d">   52</a></span>&#160;<a class="code" href="classIpv4.html#aed31825f0569c3c27632e4b97a25270d">std</a>::<a class="code" href="classIpv4.html#aed31825f0569c3c27632e4b97a25270d">string</a> Ipv4::<a class="code" href="classIpv4.html#aed31825f0569c3c27632e4b97a25270d">getAddress</a>() <span class="keyword">const</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> addrStr;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">   57</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> Ipv4::<a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">getAddressNum</a>() <span class="keyword">const</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> address.s_addr;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classIpv4.html#a3e64a1d8fe588db524439a500f1ca968">   62</a></span>&#160;<span class="keywordtype">bool</span> Ipv4::<a class="code" href="classIpv4.html#a3e64a1d8fe588db524439a500f1ca968">operator</a>&lt;( <span class="keyword">const</span> Ipv4 &amp; that ) <span class="keyword">const</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">getAddressNum</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">(</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">)</a> &lt; that<a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">.</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">getAddressNum</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">(</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">)</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classIpv4.html#ac8604d4a8438d8346b1cfd09feb3ab05">   67</a></span>&#160;<span class="keywordtype">bool</span> Ipv4::<a class="code" href="classIpv4.html#ac8604d4a8438d8346b1cfd09feb3ab05">operator</a>==( <span class="keyword">const</span> Ipv4 &amp; that ) <span class="keyword">const</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">getAddressNum</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">(</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">)</a> == that<a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">.</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">getAddressNum</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">(</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">)</a>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classIpv4.html#aa27179eacd576e634b76096dd9a56f23">   72</a></span>&#160;Ipv4 &amp; Ipv4::<a class="code" href="classIpv4.html#aa27179eacd576e634b76096dd9a56f23">operator</a>=( <span class="keyword">const</span> Ipv4 &amp; that )</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        addrStr = that.getAddress();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        inet_aton( addrStr.c_str(), &amp;address);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">// ------------------------------------------------------</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">// Ipv6</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">// ------------------------------------------------------</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classIpv6.html#a62862f0fdd6b5d655237b010390685e4">   82</a></span>&#160;Ipv6::<a class="code" href="classIpv6.html#a62862f0fdd6b5d655237b010390685e4">Ipv6</a> ( <span class="keyword">const</span> std::string &amp; str )</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classIpv6.html#a9d2e79609ddf4e6ffd6fd4f17ea97c2c">   87</a></span>&#160;<span class="keywordtype">bool</span> Ipv6::<a class="code" href="classIpv6.html#a9d2e79609ddf4e6ffd6fd4f17ea97c2c">isCorrect</a> () <span class="keyword">const</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classIpv6.html#a2fac2b701be4dd350fe031da1f38b721">   92</a></span>&#160;<span class="keywordtype">void</span> Ipv6::<a class="code" href="classIpv6.html#a2fac2b701be4dd350fe031da1f38b721">toNumbers</a>()</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classIpv6.html#a6fcd6db61d1a06ccc268c8f8780e6803">   97</a></span>&#160;<a class="code" href="classIpv6.html#a6fcd6db61d1a06ccc268c8f8780e6803">std</a>::<a class="code" href="classIpv6.html#a6fcd6db61d1a06ccc268c8f8780e6803">string</a> Ipv6::<a class="code" href="classIpv6.html#a6fcd6db61d1a06ccc268c8f8780e6803">getAddress</a>() <span class="keyword">const</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classIpv4.html#ac8604d4a8438d8346b1cfd09feb3ab05">   68</a></span>&#160;<span class="keywordtype">bool</span> Ipv4::<a class="code" href="classIpv4.html#ac8604d4a8438d8346b1cfd09feb3ab05">operator</a>==( <span class="keyword">const</span> Ipv4 &amp; that ) <span class="keyword">const</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">getAddressNum</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">(</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">)</a> == that<a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">.</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">getAddressNum</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">(</a><a class="code" href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">)</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classIpv4.html#aa27179eacd576e634b76096dd9a56f23">   73</a></span>&#160;Ipv4 &amp; Ipv4::<a class="code" href="classIpv4.html#aa27179eacd576e634b76096dd9a56f23">operator</a>=( <span class="keyword">const</span> Ipv4 &amp; that )</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        addrStr = that.getAddress();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        inet_aton( addrStr.c_str(), &amp;address);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">// ------------------------------------------------------</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">// Ipv6</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">// ------------------------------------------------------</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classIpv6.html#a62862f0fdd6b5d655237b010390685e4">   83</a></span>&#160;Ipv6::<a class="code" href="classIpv6.html#a62862f0fdd6b5d655237b010390685e4">Ipv6</a> ( <span class="keyword">const</span> std::string &amp; str )</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classIpv6.html#a9d2e79609ddf4e6ffd6fd4f17ea97c2c">   88</a></span>&#160;<span class="keywordtype">bool</span> Ipv6::<a class="code" href="classIpv6.html#a9d2e79609ddf4e6ffd6fd4f17ea97c2c">isCorrect</a> () <span class="keyword">const</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classIpv6.html#a2fac2b701be4dd350fe031da1f38b721">   93</a></span>&#160;<span class="keywordtype">void</span> Ipv6::<a class="code" href="classIpv6.html#a2fac2b701be4dd350fe031da1f38b721">toNumbers</a>()</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;{</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classIpv6.html#a6fcd6db61d1a06ccc268c8f8780e6803">   98</a></span>&#160;<a class="code" href="classIpv6.html#a6fcd6db61d1a06ccc268c8f8780e6803">std</a>::<a class="code" href="classIpv6.html#a6fcd6db61d1a06ccc268c8f8780e6803">string</a> Ipv6::<a class="code" href="classIpv6.html#a6fcd6db61d1a06ccc268c8f8780e6803">getAddress</a>() <span class="keyword">const</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">// ------------------------------------------------------</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">// BadIpException</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">// ------------------------------------------------------</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classBadIpException.html#a510d7c6030130d65fe71c2db748066c9">  107</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classBadIpException.html">BadIpException</a>::<a class="code" href="classBadIpException.html#a510d7c6030130d65fe71c2db748066c9">what</a>()</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;badIpException&quot;</span>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
-<div class="ttc" id="classIpv4_html_aa27179eacd576e634b76096dd9a56f23"><div class="ttname"><a href="classIpv4.html#aa27179eacd576e634b76096dd9a56f23">Ipv4::operator=</a></div><div class="ttdeci">Ipv4 &amp; operator=(const Ipv4 &amp;that)</div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00072">Ip.cpp:72</a></div></div>
-<div class="ttc" id="classBadIpException_html"><div class="ttname"><a href="classBadIpException.html">BadIpException</a></div><div class="ttdef"><b>Definition:</b> <a href="Ip_8hpp_source.html#l00122">Ip.hpp:122</a></div></div>
-<div class="ttc" id="classIpv4_html_a46ca11e71755241b345a721654a9ee04"><div class="ttname"><a href="classIpv4.html#a46ca11e71755241b345a721654a9ee04">Ipv4::isCorrect</a></div><div class="ttdeci">bool isCorrect(const std::string &amp;str) const </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00042">Ip.cpp:42</a></div></div>
-<div class="ttc" id="classIpv4_html_ab62bc10a0c32585c41565c87f25583da"><div class="ttname"><a href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">Ipv4::getAddressNum</a></div><div class="ttdeci">unsigned long getAddressNum() const </div><div class="ttdoc">Zwraca adres IPv4 w postaci przechowywanej przez strukturę in_addr. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00056">Ip.cpp:56</a></div></div>
-<div class="ttc" id="classIp_html_abc1b04c5638f7ec50b5d4667c6e1a099"><div class="ttname"><a href="classIp.html#abc1b04c5638f7ec50b5d4667c6e1a099">Ip::Ip</a></div><div class="ttdeci">Ip()</div><div class="ttdoc">Konstruktor. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00021">Ip.cpp:21</a></div></div>
-<div class="ttc" id="classIpv6_html_a9d2e79609ddf4e6ffd6fd4f17ea97c2c"><div class="ttname"><a href="classIpv6.html#a9d2e79609ddf4e6ffd6fd4f17ea97c2c">Ipv6::isCorrect</a></div><div class="ttdeci">bool isCorrect() const </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00087">Ip.cpp:87</a></div></div>
-<div class="ttc" id="classIp_html_a4ee51aedb2afd092cfc9ae9295505440"><div class="ttname"><a href="classIp.html#a4ee51aedb2afd092cfc9ae9295505440">Ip::~Ip</a></div><div class="ttdeci">virtual ~Ip()</div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00022">Ip.cpp:22</a></div></div>
-<div class="ttc" id="classIpv4_html_ac8604d4a8438d8346b1cfd09feb3ab05"><div class="ttname"><a href="classIpv4.html#ac8604d4a8438d8346b1cfd09feb3ab05">Ipv4::operator==</a></div><div class="ttdeci">bool operator==(const Ipv4 &amp;that) const </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00067">Ip.cpp:67</a></div></div>
-<div class="ttc" id="classIpv4_html_aed31825f0569c3c27632e4b97a25270d"><div class="ttname"><a href="classIpv4.html#aed31825f0569c3c27632e4b97a25270d">Ipv4::getAddress</a></div><div class="ttdeci">virtual std::string getAddress() const </div><div class="ttdoc">Zwraca adres IPv4 w konwencji A.B.C.D. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00051">Ip.cpp:51</a></div></div>
-<div class="ttc" id="classIp_html"><div class="ttname"><a href="classIp.html">Ip</a></div><div class="ttdoc">Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8hpp_source.html#l00023">Ip.hpp:23</a></div></div>
-<div class="ttc" id="classIpv4_html_a4f0a0e5fbf6950c99a2f12d5cef9aead"><div class="ttname"><a href="classIpv4.html#a4f0a0e5fbf6950c99a2f12d5cef9aead">Ipv4::Ipv4</a></div><div class="ttdeci">Ipv4(const std::string &amp;address=&quot;0.0.0.0&quot;)</div><div class="ttdoc">Konstruktor. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00028">Ip.cpp:28</a></div></div>
-<div class="ttc" id="classIpv6_html_a62862f0fdd6b5d655237b010390685e4"><div class="ttname"><a href="classIpv6.html#a62862f0fdd6b5d655237b010390685e4">Ipv6::Ipv6</a></div><div class="ttdeci">Ipv6(const std::string &amp;address=&quot;::1&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00082">Ip.cpp:82</a></div></div>
-<div class="ttc" id="classIpv4_html_a4950f5b6bf02454faa8ba846851b1476"><div class="ttname"><a href="classIpv4.html#a4950f5b6bf02454faa8ba846851b1476">Ipv4::Ipv4</a></div><div class="ttdeci">Ipv4(const Ipv4 &amp;that)</div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00036">Ip.cpp:36</a></div></div>
-<div class="ttc" id="classBadIpException_html_a510d7c6030130d65fe71c2db748066c9"><div class="ttname"><a href="classBadIpException.html#a510d7c6030130d65fe71c2db748066c9">BadIpException::what</a></div><div class="ttdeci">const char * what()</div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00107">Ip.cpp:107</a></div></div>
-<div class="ttc" id="classIpv6_html_a2fac2b701be4dd350fe031da1f38b721"><div class="ttname"><a href="classIpv6.html#a2fac2b701be4dd350fe031da1f38b721">Ipv6::toNumbers</a></div><div class="ttdeci">void toNumbers()</div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00092">Ip.cpp:92</a></div></div>
-<div class="ttc" id="classIpv6_html_a6fcd6db61d1a06ccc268c8f8780e6803"><div class="ttname"><a href="classIpv6.html#a6fcd6db61d1a06ccc268c8f8780e6803">Ipv6::getAddress</a></div><div class="ttdeci">virtual std::string getAddress() const </div><div class="ttdoc">Metoda zwracająca przechowywany adres IP jako ciąg znaków. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00097">Ip.cpp:97</a></div></div>
-<div class="ttc" id="classIpv4_html_a3e64a1d8fe588db524439a500f1ca968"><div class="ttname"><a href="classIpv4.html#a3e64a1d8fe588db524439a500f1ca968">Ipv4::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const Ipv4 &amp;that) const </div><div class="ttdoc">Operator &lt; (mniejszy niż). </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00061">Ip.cpp:61</a></div></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">// ------------------------------------------------------</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">// BadIpException</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">// ------------------------------------------------------</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classBadIpException.html#a510d7c6030130d65fe71c2db748066c9">  108</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classBadIpException.html">BadIpException</a>::<a class="code" href="classBadIpException.html#a510d7c6030130d65fe71c2db748066c9">what</a>()</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;badIpException&quot;</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="ttc" id="classIpv4_html_aa27179eacd576e634b76096dd9a56f23"><div class="ttname"><a href="classIpv4.html#aa27179eacd576e634b76096dd9a56f23">Ipv4::operator=</a></div><div class="ttdeci">Ipv4 &amp; operator=(const Ipv4 &amp;that)</div><div class="ttdoc">Operator =. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00073">Ip.cpp:73</a></div></div>
+<div class="ttc" id="classBadIpException_html"><div class="ttname"><a href="classBadIpException.html">BadIpException</a></div><div class="ttdef"><b>Definition:</b> <a href="Ip_8hpp_source.html#l00177">Ip.hpp:177</a></div></div>
+<div class="ttc" id="classIpv4_html_a46ca11e71755241b345a721654a9ee04"><div class="ttname"><a href="classIpv4.html#a46ca11e71755241b345a721654a9ee04">Ipv4::isCorrect</a></div><div class="ttdeci">bool isCorrect(const std::string &amp;str) const </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00043">Ip.cpp:43</a></div></div>
+<div class="ttc" id="classIpv4_html_ab62bc10a0c32585c41565c87f25583da"><div class="ttname"><a href="classIpv4.html#ab62bc10a0c32585c41565c87f25583da">Ipv4::getAddressNum</a></div><div class="ttdeci">unsigned long getAddressNum() const </div><div class="ttdoc">Zwraca adres IPv4 w postaci przechowywanej przez strukturę in_addr. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00057">Ip.cpp:57</a></div></div>
+<div class="ttc" id="classIp_html_abc1b04c5638f7ec50b5d4667c6e1a099"><div class="ttname"><a href="classIp.html#abc1b04c5638f7ec50b5d4667c6e1a099">Ip::Ip</a></div><div class="ttdeci">Ip()</div><div class="ttdoc">Konstruktor. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00022">Ip.cpp:22</a></div></div>
+<div class="ttc" id="classIpv6_html_a9d2e79609ddf4e6ffd6fd4f17ea97c2c"><div class="ttname"><a href="classIpv6.html#a9d2e79609ddf4e6ffd6fd4f17ea97c2c">Ipv6::isCorrect</a></div><div class="ttdeci">bool isCorrect() const </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00088">Ip.cpp:88</a></div></div>
+<div class="ttc" id="classIp_html_a4ee51aedb2afd092cfc9ae9295505440"><div class="ttname"><a href="classIp.html#a4ee51aedb2afd092cfc9ae9295505440">Ip::~Ip</a></div><div class="ttdeci">virtual ~Ip()</div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00023">Ip.cpp:23</a></div></div>
+<div class="ttc" id="classIpv4_html_ac8604d4a8438d8346b1cfd09feb3ab05"><div class="ttname"><a href="classIpv4.html#ac8604d4a8438d8346b1cfd09feb3ab05">Ipv4::operator==</a></div><div class="ttdeci">bool operator==(const Ipv4 &amp;that) const </div><div class="ttdoc">Operator ==. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00068">Ip.cpp:68</a></div></div>
+<div class="ttc" id="classIpv4_html_aed31825f0569c3c27632e4b97a25270d"><div class="ttname"><a href="classIpv4.html#aed31825f0569c3c27632e4b97a25270d">Ipv4::getAddress</a></div><div class="ttdeci">virtual std::string getAddress() const </div><div class="ttdoc">Zwraca adres IPv4 w konwencji A.B.C.D. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00052">Ip.cpp:52</a></div></div>
+<div class="ttc" id="classIp_html"><div class="ttname"><a href="classIp.html">Ip</a></div><div class="ttdoc">Abstrakcyjna klasa bazowa dla klas opakuwujących IPv4 i IPv6. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8hpp_source.html#l00024">Ip.hpp:24</a></div></div>
+<div class="ttc" id="classIpv4_html_a4f0a0e5fbf6950c99a2f12d5cef9aead"><div class="ttname"><a href="classIpv4.html#a4f0a0e5fbf6950c99a2f12d5cef9aead">Ipv4::Ipv4</a></div><div class="ttdeci">Ipv4(const std::string &amp;address=&quot;0.0.0.0&quot;)</div><div class="ttdoc">Konstruktor. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00029">Ip.cpp:29</a></div></div>
+<div class="ttc" id="classIpv6_html_a62862f0fdd6b5d655237b010390685e4"><div class="ttname"><a href="classIpv6.html#a62862f0fdd6b5d655237b010390685e4">Ipv6::Ipv6</a></div><div class="ttdeci">Ipv6(const std::string &amp;address=&quot;::1&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00083">Ip.cpp:83</a></div></div>
+<div class="ttc" id="classIpv4_html_a4950f5b6bf02454faa8ba846851b1476"><div class="ttname"><a href="classIpv4.html#a4950f5b6bf02454faa8ba846851b1476">Ipv4::Ipv4</a></div><div class="ttdeci">Ipv4(const Ipv4 &amp;that)</div><div class="ttdoc">KOnstruktor kopiujcy. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00037">Ip.cpp:37</a></div></div>
+<div class="ttc" id="classBadIpException_html_a510d7c6030130d65fe71c2db748066c9"><div class="ttname"><a href="classBadIpException.html#a510d7c6030130d65fe71c2db748066c9">BadIpException::what</a></div><div class="ttdeci">const char * what()</div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00108">Ip.cpp:108</a></div></div>
+<div class="ttc" id="classIpv6_html_a2fac2b701be4dd350fe031da1f38b721"><div class="ttname"><a href="classIpv6.html#a2fac2b701be4dd350fe031da1f38b721">Ipv6::toNumbers</a></div><div class="ttdeci">void toNumbers()</div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00093">Ip.cpp:93</a></div></div>
+<div class="ttc" id="classIpv6_html_a6fcd6db61d1a06ccc268c8f8780e6803"><div class="ttname"><a href="classIpv6.html#a6fcd6db61d1a06ccc268c8f8780e6803">Ipv6::getAddress</a></div><div class="ttdeci">virtual std::string getAddress() const </div><div class="ttdoc">Metoda zwracająca przechowywany adres IP jako ciąg znaków. </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00098">Ip.cpp:98</a></div></div>
+<div class="ttc" id="classIpv4_html_a3e64a1d8fe588db524439a500f1ca968"><div class="ttname"><a href="classIpv4.html#a3e64a1d8fe588db524439a500f1ca968">Ipv4::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const Ipv4 &amp;that) const </div><div class="ttdoc">Operator &lt; (mniejszy niż). </div><div class="ttdef"><b>Definition:</b> <a href="Ip_8cpp_source.html#l00062">Ip.cpp:62</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_75eb1ee5d767627a9a18a84e7e34c1ab.html">protocol</a></li><li class="navelem"><a class="el" href="Ip_8cpp.html">Ip.cpp</a></li>
-    <li class="footer">Wygenerowano Cz, 7 sty 2016 17:23:51 dla LOTC programem
+    <li class="footer">Wygenerowano Cz, 7 sty 2016 22:10:56 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

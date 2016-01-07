@@ -4,7 +4,7 @@ var searchData=
   ['ip_2ecpp',['Ip.cpp',['../Ip_8cpp.html',1,'']]],
   ['ip_2ehpp',['Ip.hpp',['../Ip_8hpp.html',1,'']]],
   ['ipv4',['Ipv4',['../classIpv4.html',1,'Ipv4'],['../classIpv4.html#a4f0a0e5fbf6950c99a2f12d5cef9aead',1,'Ipv4::Ipv4(const std::string &amp;address=&quot;0.0.0.0&quot;)'],['../classIpv4.html#a4950f5b6bf02454faa8ba846851b1476',1,'Ipv4::Ipv4(const Ipv4 &amp;that)']]],
-  ['ipv6',['Ipv6',['../classIpv6.html',1,'Ipv6'],['../classIpv6.html#a62862f0fdd6b5d655237b010390685e4',1,'Ipv6::Ipv6()']]],
+  ['ipv6',['Ipv6',['../classIpv6.html',1,'Ipv6'],['../classIpv6.html#a62862f0fdd6b5d655237b010390685e4',1,'Ipv6::Ipv6()'],['../opis__doswiadczen__z__projektu_8txt.html#a202cd406b2dcdaa60075d8ff4600c011',1,'IPv6():&#160;opis_doswiadczen_z_projektu.txt'],['../opis__doswiadczen__z__projektu_8txt.html#a442a2cc52c075469bff82bd14e94255b',1,'Ipv6():&#160;opis_doswiadczen_z_projektu.txt']]],
   ['isconnected',['isConnected',['../classAgentClient.html#a7809668c0636c9b8e3f00fde43d23c0d',1,'AgentClient']]],
   ['iscorrect',['isCorrect',['../classIpv4.html#a46ca11e71755241b345a721654a9ee04',1,'Ipv4::isCorrect()'],['../classIpv6.html#a9d2e79609ddf4e6ffd6fd4f17ea97c2c',1,'Ipv6::isCorrect()']]],
   ['ismainfile',['isMainFile',['../classmessage_1_1fileMessage.html#ae56576486b99b6057e68ec24db80c22d',1,'message::fileMessage']]],

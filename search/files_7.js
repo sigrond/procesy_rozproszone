@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['pasta_2eh',['pasta.h',['../pasta_8h.html',1,'']]],
-  ['projekt_20wstępny_2etex',['Projekt Wstępny.tex',['../Projekt_01Wst_xC4_x99pny_8tex.html',1,'']]]
+  ['opis_5fdoswiadczen_5fz_5fprojektu_2etxt',['opis_doswiadczen_z_projektu.txt',['../opis__doswiadczen__z__projektu_8txt.html',1,'']]]
 ];

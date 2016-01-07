@@ -2,7 +2,8 @@ var searchData=
 [
   ['styl_20kodu',['Styl kodu',['../md_D_1_Moje_dokumenty_TIN_procesy_rozproszone_organizacja_Styl_kodu.html',1,'']]],
   ['saddr',['saddr',['../classSocketIp4.html#ad6827e206b93d7c007c1d23e8071caf7',1,'SocketIp4::saddr()'],['../classSocketIp6.html#a5b234db3b75fabf599f2d60f68670efe',1,'SocketIp6::saddr()']]],
-  ['send',['send',['../classAgentClient.html#a7417cb37d33a126f01e92e07795a9f22',1,'AgentClient::send()'],['../classConnectionManager.html#a314bdb20e3fb92c2567dfac2da975618',1,'ConnectionManager::send(const Ipv4 &amp;ip, const message::Message &amp;msg, unsigned short port=55555)'],['../classConnectionManager.html#a7c6865a11cd9a88fd7fad35121f97292',1,'ConnectionManager::send(const Ipv6 &amp;ip, const message::Message &amp;msg, unsigned short port=55555)'],['../classConnection.html#ac8abd34010a78efd01e2af9aa7fa92fd',1,'Connection::send()'],['../classSocket.html#afe708d0a437f0b966fef606b2a2af2b0',1,'Socket::send()'],['../classSocketIp4.html#a9816ce4c69916b3472708975f056ef02',1,'SocketIp4::send()'],['../classTestMessage.html#aae1b4b880bdc6b1a6a62621cabf784b6',1,'TestMessage::send()']]],
+  ['semestru',['semestru',['../opis__doswiadczen__z__projektu_8txt.html#a14f57e1cc535eee6dce052914d690d4f',1,'opis_doswiadczen_z_projektu.txt']]],
+  ['send',['send',['../classAgentClient.html#a7417cb37d33a126f01e92e07795a9f22',1,'AgentClient::send()'],['../classConnectionManager.html#a6d9f9f9fbec8200760fea6059577f94b',1,'ConnectionManager::send(const Ipv4 &amp;ip, const message::Message &amp;msg, unsigned short port=SERVER_PORT)'],['../classConnectionManager.html#a637be8fbec74087d5b2bc9808fabbae6',1,'ConnectionManager::send(const Ipv6 &amp;ip, const message::Message &amp;msg, unsigned short port=SERVER_PORT)'],['../classConnection.html#ac8abd34010a78efd01e2af9aa7fa92fd',1,'Connection::send()'],['../classSocket.html#afe708d0a437f0b966fef606b2a2af2b0',1,'Socket::send()'],['../classSocketIp4.html#a9816ce4c69916b3472708975f056ef02',1,'SocketIp4::send()'],['../classSocketIp6.html#a6cc97ce5922ac8b90c376d1a42da1c13',1,'SocketIp6::send()'],['../classTestMessage.html#aae1b4b880bdc6b1a6a62621cabf784b6',1,'TestMessage::send()']]],
   ['send_5f',['send_',['../application_2protocol_2client_8cpp.html#a02512d6914c372c7e321b6ace0d039c3',1,'send_(ConnectionManager *cm, Ipv4 *ip, unsigned port):&#160;client.cpp'],['../application_2protocol_2server_8cpp.html#a02512d6914c372c7e321b6ace0d039c3',1,'send_(ConnectionManager *cm, Ipv4 *ip, unsigned port):&#160;server.cpp']]],
   ['sendcommand',['sendCommand',['../classConsoleClient.html#ab7f55eaf0fdee145bc6761d194c5d242',1,'ConsoleClient']]],
   ['sendfromqueue',['sendFromQueue',['../classAgentClient.html#a4bfd3f341cc610b1c1893a0baee3889d',1,'AgentClient::sendFromQueue()'],['../classConsoleClient.html#aa5b6a530e90378b0f57668012b6cb17c',1,'ConsoleClient::sendFromQueue()']]],
@@ -27,6 +28,8 @@ var searchData=
   ['shutdown',['shutDown',['../classAgentClient.html#aa8af04642a8d7b0a8a2724eb9986df4b',1,'AgentClient::shutDown()'],['../classConsoleClient.html#aaf194b0f440ed6f555669254706578ee',1,'ConsoleClient::shutDown()'],['../classAdminServer.html#aaad5d3a003688fc71db31d99b7d78922',1,'AdminServer::shutDown()'],['../classAgentServer.html#a998eef5867d468c1023604ed25f9143f',1,'AgentServer::shutDown()'],['../classModel.html#a85354b9b623f9b4785b0e915bc33ed42',1,'Model::shutDown()']]],
   ['shutdownserver',['shutDownServer',['../classController.html#ab67686706e7df70a768c111193e5f0eb',1,'Controller']]],
   ['shutdownstrategy',['ShutDownStrategy',['../classShutDownStrategy.html',1,'']]],
+  ['się',['się',['../opis__doswiadczen__z__projektu_8txt.html#ac19aa345f23f3f4b0c1cab69ac9ed1d1',1,'opis_doswiadczen_z_projektu.txt']]],
+  ['sięciowej',['sięciowej',['../opis__doswiadczen__z__projektu_8txt.html#ae633089e53e33cf7692a13c1661f969a',1,'opis_doswiadczen_z_projektu.txt']]],
   ['slave',['Slave',['../classSlave.html',1,'Slave'],['../classSlave.html#a298f9ea1a508f269d9a3fea3eee0d245',1,'Slave::Slave()']]],
   ['slave_2ecpp',['Slave.cpp',['../Slave_8cpp.html',1,'']]],
   ['slave_2ehpp',['Slave.hpp',['../Slave_8hpp.html',1,'']]],
@@ -42,8 +45,8 @@ var searchData=
   ['socket_2ehpp',['Socket.hpp',['../Socket_8hpp.html',1,'']]],
   ['socketexception_2ecpp',['SocketException.cpp',['../SocketException_8cpp.html',1,'']]],
   ['socketexception_2ehpp',['SocketException.hpp',['../SocketException_8hpp.html',1,'']]],
-  ['socketip4',['SocketIp4',['../classSocketIp4.html',1,'SocketIp4'],['../classSocketIp4.html#acd796d1aca24c05c0a20a772f41f79be',1,'SocketIp4::SocketIp4(const Ipv4 &amp;ip, unsigned short port, bool accSock=false)'],['../classSocketIp4.html#ad23f394d563556b512bdc653f76348f8',1,'SocketIp4::SocketIp4(int msgsock)']]],
-  ['socketip6',['SocketIp6',['../classSocketIp6.html',1,'SocketIp6'],['../classSocketIp6.html#a96482d1a74a32fe7ce1a5f1c24d6c1ec',1,'SocketIp6::SocketIp6()']]],
+  ['socketip4',['SocketIp4',['../classSocketIp4.html',1,'SocketIp4'],['../classSocketIp4.html#a430c59c57f709f3d163dafbe7397d7f5',1,'SocketIp4::SocketIp4(const Ipv4 &amp;ip, unsigned short port)'],['../classSocketIp4.html#ad23f394d563556b512bdc653f76348f8',1,'SocketIp4::SocketIp4(int msgsock)']]],
+  ['socketip6',['SocketIp6',['../classSocketIp6.html',1,'SocketIp6'],['../classSocketIp6.html#a96482d1a74a32fe7ce1a5f1c24d6c1ec',1,'SocketIp6::SocketIp6(const Ipv6 &amp;ip)'],['../classSocketIp6.html#a61b3620e589018f706170027590c9f49',1,'SocketIp6::SocketIp6(int msgsock)']]],
   ['sockex',['SockEx',['../classSockEx.html',1,'']]],
   ['sockfd',['sockfd',['../classSocket.html#a7870cb67ff277faa02663927f685e537',1,'Socket']]],
   ['start',['start',['../classAgentClient.html#af0e975638976932e9ab31c654843717e',1,'AgentClient::start()'],['../classConsoleClient.html#a416302ce226015ef7bdf6eef49ec6aa4',1,'ConsoleClient::start()'],['../classAdminServer.html#ad843107448ab68ee4d0eb00d3dd60fec',1,'AdminServer::start()'],['../classAgentServer.html#aec3723633cda932f432249930ea81694',1,'AgentServer::start()'],['../classController.html#ad535ad74055e645b7f44b7feeb4e82a8',1,'Controller::start()']]],
@@ -58,6 +61,8 @@ var searchData=
   ['subtract',['SUBTRACT',['../classTestMessage.html#af8a868ce511495fe4020f7a5b380112ca289340a4b7b8933b2cd55d14f1b9a152',1,'TestMessage']]],
   ['syn',['SYN',['../namespacemessage.html#ae332e93affac4506495c232e3f8a2be3abab6eed0f7cd8bd721e728003b63b54d',1,'message']]],
   ['syncommand',['SynCommand',['../classSynCommand.html',1,'SynCommand'],['../classSynCommand.html#ab89c0e22018d50ba8af3c18da453550c',1,'SynCommand::SynCommand()']]],
+  ['synmessage',['synMessage',['../classmessage_1_1synMessage.html',1,'message']]],
   ['synmessage',['synMessage',['../classmessage_1_1synMessage.html#adc773263592bfcd5ae421c8a476b7461',1,'message::synMessage']]],
-  ['synmessage',['synMessage',['../classmessage_1_1synMessage.html',1,'message']]]
+  ['szybciej',['szybciej',['../opis__doswiadczen__z__projektu_8txt.html#ab2f771fe524c20bd8d9ec0d54a683ff3',1,'opis_doswiadczen_z_projektu.txt']]],
+  ['sądzę',['Sądzę',['../opis__doswiadczen__z__projektu_8txt.html#ad09a6f60e7403a5f59956f81a3fc9ba0',1,'opis_doswiadczen_z_projektu.txt']]]
 ];

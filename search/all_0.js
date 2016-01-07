@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['accept',['accept',['../classSocket.html#a795d6b116c1996c280947981549d4ffe',1,'Socket::accept()'],['../classSocketIp4.html#ae3fc6c667edd538d9501a513f128ddd9',1,'SocketIp4::accept()']]],
+  ['accept',['accept',['../classSocket.html#a795d6b116c1996c280947981549d4ffe',1,'Socket::accept()'],['../classSocketIp4.html#ae3fc6c667edd538d9501a513f128ddd9',1,'SocketIp4::accept()'],['../classSocketIp6.html#aa912fa8fcad3652232a0f91310264646',1,'SocketIp6::accept()']]],
   ['acceptsockex',['AcceptSockEx',['../classAcceptSockEx.html',1,'AcceptSockEx'],['../classAcceptSockEx.html#a0c5bc1b55979935f5c72cb64c5543884',1,'AcceptSockEx::AcceptSockEx()']]],
   ['ack',['ACK',['../namespacemessage.html#abca3c7a830cb2ade8e0d8947d1d98063a0fc437bc317835cad5faafc12a83fad5',1,'message']]],
   ['add',['ADD',['../classConsoleClient.html#ac2ecb65be6f6e8cb2b1bd05258eab81faa2ea9f078338b79ff862ad4a0c356d0b',1,'ConsoleClient::ADD()'],['../classTestMessage.html#af8a868ce511495fe4020f7a5b380112ca167e1fd3adc4950b75c6f93ef2dabbb0',1,'TestMessage::ADD()']]],

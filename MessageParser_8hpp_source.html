@@ -109,50 +109,57 @@ $(document).ready(function(){initNavTree('MessageParser_8hpp_source.html','');})
 <div class="title">MessageParser.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="MessageParser_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">MessageParser_hpp</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">MessageParser_hpp</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;../protocol/ConnectionManager.hpp&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;../server/BlockingQueue.hpp&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="Command_8hpp.html">&quot;Command.hpp&quot;</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">iostream</span><span class="preprocessor">&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> <span class="keyword">namespace</span> <a class="code" href="namespacemessage.html">message</a>;</div>
+<a href="MessageParser_8hpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/** \file MessageParser.cpp</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * \authors Eryk Ratyński, Tomasz Jakubczyk</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * \brief Plik z deklaracją klasy MessageParser</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * \date 5 sty 2015</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * Low Orbit Task Cannon</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">ifndef</span> <span class="preprocessor">MessageParser_hpp</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">define</span> <span class="preprocessor">MessageParser_hpp</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classMessageParser.html">   11</a></span>&#160;<span class="keyword">class</span> <a class="code" href="classMessageParser.html">MessageParser</a></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classMessageParser.html#a2a0b0939898794c8907392c2e71f4ab2">MessageParser</a>(<a class="code" href="classmessage_1_1Message.html">Message</a> * msg,<a class="code" href="classBlockingQueue.html#a36cf39573f86b97a30081075a57434d6">BlockingQueue</a>&lt;<a class="code" href="namespacemessage.html">message</a>::<a class="code" href="classmessage_1_1Message.html">Message</a>*&gt;* q);</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classMessageParser.html#a161498e8b0e590e045cf3450660e7534">   17</a></span>&#160;    ~<a class="code" href="classMessageParser.html#a161498e8b0e590e045cf3450660e7534">MessageParser</a>(){}</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMessageParser.html#a518197ff5a664460585afc99c4f48c90">parse</a>();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;../protocol/ConnectionManager.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&quot;../server/BlockingQueue.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <a class="code" href="Command_8hpp.html" title="Plik nagłówkowy klasy Command. ">&quot;Command.hpp&quot;</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">include</span> <span class="preprocessor">&lt;</span><span class="preprocessor">iostream</span><span class="preprocessor">&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> <span class="keyword">namespace</span> <a class="code" href="namespacemessage.html">message</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classMessageParser.html">   18</a></span>&#160;<span class="keyword">class</span> <a class="code" href="classMessageParser.html">MessageParser</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classMessageParser.html#a14cf36f4ddbf9bb90fb82c58564d6f3b">   22</a></span>&#160;    <a class="code" href="classmessage_1_1Message.html">Message</a>* <a class="code" href="classMessageParser.html#a14cf36f4ddbf9bb90fb82c58564d6f3b">msg</a>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classMessageParser.html#a2112df3818c628d9c57a5119421aa34c">   23</a></span>&#160;    <a class="code" href="classBlockingQueue.html#a36cf39573f86b97a30081075a57434d6">BlockingQueue</a>&lt;<a class="code" href="namespacemessage.html">message</a>::<a class="code" href="classmessage_1_1Message.html">Message</a>*&gt;* <a class="code" href="classMessageParser.html#a2112df3818c628d9c57a5119421aa34c">q</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classMessageParser.html#a2a0b0939898794c8907392c2e71f4ab2">MessageParser</a>(<a class="code" href="classmessage_1_1Message.html">Message</a> * msg,<a class="code" href="classBlockingQueue.html#a36cf39573f86b97a30081075a57434d6">BlockingQueue</a>&lt;<a class="code" href="namespacemessage.html">message</a>::<a class="code" href="classmessage_1_1Message.html">Message</a>*&gt;* q);</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classMessageParser.html#a161498e8b0e590e045cf3450660e7534">   24</a></span>&#160;    ~<a class="code" href="classMessageParser.html#a161498e8b0e590e045cf3450660e7534">MessageParser</a>(){}</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMessageParser.html#a518197ff5a664460585afc99c4f48c90">parse</a>();</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
-<div class="ttc" id="classBlockingQueue_html_a36cf39573f86b97a30081075a57434d6"><div class="ttname"><a href="classBlockingQueue.html#a36cf39573f86b97a30081075a57434d6">BlockingQueue::q</a></div><div class="ttdeci">std::queue&lt; T &gt; q</div><div class="ttdef"><b>Definition:</b> <a href="BlockingQueue_8hpp_source.html#l00035">BlockingQueue.hpp:35</a></div></div>
-<div class="ttc" id="namespacemessage_html"><div class="ttname"><a href="namespacemessage.html">message</a></div><div class="ttdef"><b>Definition:</b> <a href="application_2protocol_2Message_8hpp_source.html#l00032">application/protocol/Message.hpp:32</a></div></div>
-<div class="ttc" id="classmessage_1_1Message_html"><div class="ttname"><a href="classmessage_1_1Message.html">message::Message</a></div><div class="ttdef"><b>Definition:</b> <a href="application_2protocol_2Message_8hpp_source.html#l00035">application/protocol/Message.hpp:35</a></div></div>
-<div class="ttc" id="classMessageParser_html_a14cf36f4ddbf9bb90fb82c58564d6f3b"><div class="ttname"><a href="classMessageParser.html#a14cf36f4ddbf9bb90fb82c58564d6f3b">MessageParser::msg</a></div><div class="ttdeci">Message * msg</div><div class="ttdef"><b>Definition:</b> <a href="MessageParser_8hpp_source.html#l00022">MessageParser.hpp:22</a></div></div>
-<div class="ttc" id="classMessageParser_html_a161498e8b0e590e045cf3450660e7534"><div class="ttname"><a href="classMessageParser.html#a161498e8b0e590e045cf3450660e7534">MessageParser::~MessageParser</a></div><div class="ttdeci">~MessageParser()</div><div class="ttdef"><b>Definition:</b> <a href="MessageParser_8hpp_source.html#l00017">MessageParser.hpp:17</a></div></div>
-<div class="ttc" id="classMessageParser_html_a518197ff5a664460585afc99c4f48c90"><div class="ttname"><a href="classMessageParser.html#a518197ff5a664460585afc99c4f48c90">MessageParser::parse</a></div><div class="ttdeci">void parse()</div><div class="ttdef"><b>Definition:</b> <a href="MessageParser_8cpp_source.html#l00010">MessageParser.cpp:10</a></div></div>
-<div class="ttc" id="classMessageParser_html_a2a0b0939898794c8907392c2e71f4ab2"><div class="ttname"><a href="classMessageParser.html#a2a0b0939898794c8907392c2e71f4ab2">MessageParser::MessageParser</a></div><div class="ttdeci">MessageParser(Message *msg, BlockingQueue&lt; message::Message * &gt; *q)</div><div class="ttdef"><b>Definition:</b> <a href="MessageParser_8cpp_source.html#l00005">MessageParser.cpp:5</a></div></div>
-<div class="ttc" id="classMessageParser_html_a2112df3818c628d9c57a5119421aa34c"><div class="ttname"><a href="classMessageParser.html#a2112df3818c628d9c57a5119421aa34c">MessageParser::q</a></div><div class="ttdeci">BlockingQueue&lt; message::Message * &gt; * q</div><div class="ttdef"><b>Definition:</b> <a href="MessageParser_8hpp_source.html#l00023">MessageParser.hpp:23</a></div></div>
-<div class="ttc" id="classMessageParser_html"><div class="ttname"><a href="classMessageParser.html">MessageParser</a></div><div class="ttdef"><b>Definition:</b> <a href="MessageParser_8hpp_source.html#l00011">MessageParser.hpp:11</a></div></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classMessageParser.html#a14cf36f4ddbf9bb90fb82c58564d6f3b">   29</a></span>&#160;    <a class="code" href="classmessage_1_1Message.html">Message</a>* <a class="code" href="classMessageParser.html#a14cf36f4ddbf9bb90fb82c58564d6f3b">msg</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classMessageParser.html#a2112df3818c628d9c57a5119421aa34c">   30</a></span>&#160;    <a class="code" href="classBlockingQueue.html#a36cf39573f86b97a30081075a57434d6">BlockingQueue</a>&lt;<a class="code" href="namespacemessage.html">message</a>::<a class="code" href="classmessage_1_1Message.html">Message</a>*&gt;* <a class="code" href="classMessageParser.html#a2112df3818c628d9c57a5119421aa34c">q</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#</span><span class="preprocessor">endif</span></div>
+<div class="ttc" id="classBlockingQueue_html_a36cf39573f86b97a30081075a57434d6"><div class="ttname"><a href="classBlockingQueue.html#a36cf39573f86b97a30081075a57434d6">BlockingQueue::q</a></div><div class="ttdeci">std::queue&lt; T &gt; q</div><div class="ttdef"><b>Definition:</b> <a href="BlockingQueue_8hpp_source.html#l00036">BlockingQueue.hpp:36</a></div></div>
+<div class="ttc" id="namespacemessage_html"><div class="ttname"><a href="namespacemessage.html">message</a></div><div class="ttdef"><b>Definition:</b> <a href="application_2protocol_2Message_8hpp_source.html#l00029">application/protocol/Message.hpp:29</a></div></div>
+<div class="ttc" id="classmessage_1_1Message_html"><div class="ttname"><a href="classmessage_1_1Message.html">message::Message</a></div><div class="ttdef"><b>Definition:</b> <a href="application_2protocol_2Message_8hpp_source.html#l00032">application/protocol/Message.hpp:32</a></div></div>
+<div class="ttc" id="classMessageParser_html_a14cf36f4ddbf9bb90fb82c58564d6f3b"><div class="ttname"><a href="classMessageParser.html#a14cf36f4ddbf9bb90fb82c58564d6f3b">MessageParser::msg</a></div><div class="ttdeci">Message * msg</div><div class="ttdef"><b>Definition:</b> <a href="MessageParser_8hpp_source.html#l00029">MessageParser.hpp:29</a></div></div>
+<div class="ttc" id="classMessageParser_html_a161498e8b0e590e045cf3450660e7534"><div class="ttname"><a href="classMessageParser.html#a161498e8b0e590e045cf3450660e7534">MessageParser::~MessageParser</a></div><div class="ttdeci">~MessageParser()</div><div class="ttdef"><b>Definition:</b> <a href="MessageParser_8hpp_source.html#l00024">MessageParser.hpp:24</a></div></div>
+<div class="ttc" id="classMessageParser_html_a518197ff5a664460585afc99c4f48c90"><div class="ttname"><a href="classMessageParser.html#a518197ff5a664460585afc99c4f48c90">MessageParser::parse</a></div><div class="ttdeci">void parse()</div><div class="ttdef"><b>Definition:</b> <a href="MessageParser_8cpp_source.html#l00019">MessageParser.cpp:19</a></div></div>
+<div class="ttc" id="classMessageParser_html_a2a0b0939898794c8907392c2e71f4ab2"><div class="ttname"><a href="classMessageParser.html#a2a0b0939898794c8907392c2e71f4ab2">MessageParser::MessageParser</a></div><div class="ttdeci">MessageParser(Message *msg, BlockingQueue&lt; message::Message * &gt; *q)</div><div class="ttdef"><b>Definition:</b> <a href="MessageParser_8cpp_source.html#l00014">MessageParser.cpp:14</a></div></div>
+<div class="ttc" id="classMessageParser_html_a2112df3818c628d9c57a5119421aa34c"><div class="ttname"><a href="classMessageParser.html#a2112df3818c628d9c57a5119421aa34c">MessageParser::q</a></div><div class="ttdeci">BlockingQueue&lt; message::Message * &gt; * q</div><div class="ttdef"><b>Definition:</b> <a href="MessageParser_8hpp_source.html#l00030">MessageParser.hpp:30</a></div></div>
+<div class="ttc" id="classMessageParser_html"><div class="ttname"><a href="classMessageParser.html">MessageParser</a></div><div class="ttdef"><b>Definition:</b> <a href="MessageParser_8hpp_source.html#l00018">MessageParser.hpp:18</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d75c23162a2652451dce46d2e7e8aead.html">application</a></li><li class="navelem"><a class="el" href="dir_6d76cf45829c3b3bce8b59b13f5eef91.html">agent</a></li><li class="navelem"><a class="el" href="MessageParser_8hpp.html">MessageParser.hpp</a></li>
-    <li class="footer">Wygenerowano Cz, 7 sty 2016 17:23:49 dla LOTC programem
+    <li class="footer">Wygenerowano Cz, 7 sty 2016 22:10:55 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -116,20 +116,23 @@ $(document).ready(function(){initNavTree('classListenSockEx.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Wyjątek: nieudane listen()  
+ <a href="classListenSockEx.html#details">Więcej...</a></p>
+
 <p><code>#include &lt;<a class="el" href="SocketException_8hpp_source.html">SocketException.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Diagram dziedziczenia dla ListenSockEx</div>
 <div class="dyncontent">
 <div class="center"><img src="classListenSockEx__inherit__graph.png" border="0" usemap="#ListenSockEx_inherit__map" alt="Inheritance graph"/></div>
 <map name="ListenSockEx_inherit__map" id="ListenSockEx_inherit__map">
-<area shape="rect" id="node2" href="classSockEx.html" title="{SockEx\n||+ what()\l+ ~SockEx()\l}" alt="" coords="23,131,119,223"/><area shape="rect" id="node3" title="STL class. " alt="" coords="19,5,123,83"/></map>
+<area shape="rect" id="node2" href="classSockEx.html" title="Abstrakcyjna klasa bazowa wyjątków związanych z socketami. " alt="" coords="23,131,119,223"/><area shape="rect" id="node3" title="STL class. " alt="" coords="19,5,123,83"/></map>
 </div>
 <div class="dynheader">
 Diagram współpracy dla ListenSockEx:</div>
 <div class="dyncontent">
 <div class="center"><img src="classListenSockEx__coll__graph.png" border="0" usemap="#ListenSockEx_coll__map" alt="Collaboration graph"/></div>
 <map name="ListenSockEx_coll__map" id="ListenSockEx_coll__map">
-<area shape="rect" id="node2" href="classSockEx.html" title="{SockEx\n||+ what()\l+ ~SockEx()\l}" alt="" coords="17,147,113,239"/><area shape="rect" id="node3" title="STL class. " alt="" coords="5,13,109,90"/><area shape="rect" id="node4" title="STL class. " alt="" coords="151,154,231,231"/><area shape="rect" id="node5" title="STL class. " alt="" coords="134,5,261,97"/></map>
+<area shape="rect" id="node2" href="classSockEx.html" title="Abstrakcyjna klasa bazowa wyjątków związanych z socketami. " alt="" coords="17,147,113,239"/><area shape="rect" id="node3" title="STL class. " alt="" coords="5,13,109,90"/><area shape="rect" id="node4" title="STL class. " alt="" coords="151,154,231,231"/><area shape="rect" id="node5" title="STL class. " alt="" coords="134,5,261,97"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -139,6 +142,7 @@ Metody publiczne</h2></td></tr>
 <tr class="memitem:a81be850521b12e73ec76dd5e6528049b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classListenSockEx.html#a81be850521b12e73ec76dd5e6528049b">~ListenSockEx</a> ()</td></tr>
 <tr class="separator:a81be850521b12e73ec76dd5e6528049b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5522b2ceba3d20252f2f734d5e9fe9bd"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classListenSockEx.html#a5522b2ceba3d20252f2f734d5e9fe9bd">what</a> () const noexcept</td></tr>
+<tr class="memdesc:a5522b2ceba3d20252f2f734d5e9fe9bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca zakończony \0 komunikat o błędzie  <a href="#a5522b2ceba3d20252f2f734d5e9fe9bd">Więcej...</a><br/></td></tr>
 <tr class="separator:a5522b2ceba3d20252f2f734d5e9fe9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classSockEx"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSockEx')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="classSockEx.html">SockEx</a></td></tr>
 <tr class="memitem:a444ea08d52b18712b9f3f3cdfe27903c inherit pub_methods_classSockEx"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSockEx.html#a444ea08d52b18712b9f3f3cdfe27903c">~SockEx</a> ()</td></tr>
@@ -150,8 +154,9 @@ Atrybuty prywatne</h2></td></tr>
 <tr class="separator:ab302a4280c5f0042c99cecf58df47183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
-<div class="textblock">
-<p>Definicja w linii <a class="el" href="SocketException_8hpp_source.html#l00063">63</a> pliku <a class="el" href="SocketException_8hpp_source.html">SocketException.hpp</a>.</p>
+<div class="textblock"><p>Wyjątek: nieudane listen() </p>
+
+<p>Definicja w linii <a class="el" href="SocketException_8hpp_source.html#l00089">89</a> pliku <a class="el" href="SocketException_8hpp_source.html">SocketException.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a class="anchor" id="a50566d24bd66b5d44d14fcff13b602c3"></a>
 <div class="memitem">
@@ -166,16 +171,16 @@ Atrybuty prywatne</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="SocketException_8cpp_source.html#l00075">75</a> pliku <a class="el" href="SocketException_8cpp_source.html">SocketException.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="SocketException_8cpp_source.html#l00078">78</a> pliku <a class="el" href="SocketException_8cpp_source.html">SocketException.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Socket_8cpp_source.html#l00045">Socket::listen()</a>.</p>
+<p>Odwołania w <a class="el" href="Socket_8cpp_source.html#l00044">Socket::listen()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classListenSockEx_a50566d24bd66b5d44d14fcff13b602c3_icgraph.png" border="0" usemap="#classListenSockEx_a50566d24bd66b5d44d14fcff13b602c3_icgraph" alt=""/></div>
 <map name="classListenSockEx_a50566d24bd66b5d44d14fcff13b602c3_icgraph" id="classListenSockEx_a50566d24bd66b5d44d14fcff13b602c3_icgraph">
-<area shape="rect" id="node2" href="classSocket.html#a34374a7d9ae416f8593bea924ab2099b" title="Socket::listen" alt="" coords="245,156,348,183"/><area shape="rect" id="node3" href="classConnectionManager.html#acddf7b9dd1fa9319ffba80b4ecf2e5e5" title="ConnectionManager::\lConnectionManager" alt="" coords="396,149,541,190"/><area shape="rect" id="node4" href="classConnectionManager.html#a38f4c092a52fd80c19d613fafad832b9" title="ConnectionManager::\lgetInstance" alt="" coords="589,149,735,190"/><area shape="rect" id="node5" href="classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2" title="Konstruktor bez podania adresu administratora. Oznacza to, że czekamy na pierwsze zapytanie z konsoli..." alt="" coords="790,5,966,32"/><area shape="rect" id="node6" href="classAgentClient.html#af82fc2e72f38fb7075d0667a18f4e8ba" title="AgentClient::AgentClient" alt="" coords="796,56,960,83"/><area shape="rect" id="node7" href="classAgentServer.html#ae00b5d7d78d9786b11a396246710a621" title="AgentServer::AgentServer" alt="" coords="793,131,963,157"/><area shape="rect" id="node9" href="classConsoleClient.html#aa23043606363a6d5e39ac4ac53e754fa" title="ConsoleClient::ConsoleClient" alt="" coords="783,181,973,208"/><area shape="rect" id="node11" href="application_2protocol_2client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="853,232,903,259"/><area shape="rect" id="node12" href="classSlave.html#a298f9ea1a508f269d9a3fea3eee0d245" title="Slave::Slave" alt="" coords="832,307,924,333"/><area shape="rect" id="node8" href="application_2server_2server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="1021,131,1072,157"/><area shape="rect" id="node10" href="Console_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="1021,181,1072,208"/></map>
+<area shape="rect" id="node2" href="classSocket.html#a34374a7d9ae416f8593bea924ab2099b" title="Ustawia socket w tryb nasluchiwania. " alt="" coords="245,156,348,183"/><area shape="rect" id="node3" href="classConnectionManager.html#acddf7b9dd1fa9319ffba80b4ecf2e5e5" title="ConnectionManager::\lConnectionManager" alt="" coords="396,149,541,190"/><area shape="rect" id="node4" href="classConnectionManager.html#a27fa06ae5a93d1c333fd14eb7db9089b" title="ConnectionManager::\lgetInstance" alt="" coords="589,149,735,190"/><area shape="rect" id="node5" href="classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2" title="Konstruktor bez podania adresu administratora. Oznacza to, że czekamy na pierwsze zapytanie z konsoli..." alt="" coords="790,5,966,32"/><area shape="rect" id="node6" href="classAgentClient.html#af82fc2e72f38fb7075d0667a18f4e8ba" title="AgentClient::AgentClient" alt="" coords="796,56,960,83"/><area shape="rect" id="node7" href="classAgentServer.html#ae00b5d7d78d9786b11a396246710a621" title="AgentServer::AgentServer" alt="" coords="793,131,963,157"/><area shape="rect" id="node9" href="classConsoleClient.html#aa23043606363a6d5e39ac4ac53e754fa" title="ConsoleClient::ConsoleClient" alt="" coords="783,181,973,208"/><area shape="rect" id="node11" href="application_2protocol_2client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="853,232,903,259"/><area shape="rect" id="node12" href="classSlave.html#a298f9ea1a508f269d9a3fea3eee0d245" title="Slave::Slave" alt="" coords="832,307,924,333"/><area shape="rect" id="node8" href="application_2server_2server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="1021,131,1072,157"/><area shape="rect" id="node10" href="Console_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="1021,181,1072,208"/></map>
 </div>
 </p>
 
@@ -202,7 +207,7 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="SocketException_8cpp_source.html#l00073">73</a> pliku <a class="el" href="SocketException_8cpp_source.html">SocketException.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="SocketException_8cpp_source.html#l00076">76</a> pliku <a class="el" href="SocketException_8cpp_source.html">SocketException.cpp</a>.</p>
 
 </div>
 </div>
@@ -228,9 +233,12 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
+<p>zwraca zakończony \0 komunikat o błędzie </p>
+<dl class="section return"><dt>Zwraca</dt><dd>wzkaźnik na bufor z komunikatem </dd></dl>
+
 <p>Implementuje <a class="el" href="classSockEx.html#aff1ceda26ef22a8a8aff420e232599ac">SockEx</a>.</p>
 
-<p>Definicja w linii <a class="el" href="SocketException_8cpp_source.html#l00081">81</a> pliku <a class="el" href="SocketException_8cpp_source.html">SocketException.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="SocketException_8cpp_source.html#l00084">84</a> pliku <a class="el" href="SocketException_8cpp_source.html">SocketException.cpp</a>.</p>
 
 </div>
 </div>
@@ -253,7 +261,7 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="SocketException_8hpp_source.html#l00071">71</a> pliku <a class="el" href="SocketException_8hpp_source.html">SocketException.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="SocketException_8hpp_source.html#l00101">101</a> pliku <a class="el" href="SocketException_8hpp_source.html">SocketException.hpp</a>.</p>
 
 </div>
 </div>
@@ -267,7 +275,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classListenSockEx.html">ListenSockEx</a></li>
-    <li class="footer">Wygenerowano Cz, 7 sty 2016 17:24:00 dla LOTC programem
+    <li class="footer">Wygenerowano Cz, 7 sty 2016 22:11:00 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -115,13 +115,16 @@ $(document).ready(function(){initNavTree('classSockEx.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Abstrakcyjna klasa bazowa wyjątków związanych z socketami.  
+ <a href="classSockEx.html#details">Więcej...</a></p>
+
 <p><code>#include &lt;<a class="el" href="SocketException_8hpp_source.html">SocketException.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Diagram dziedziczenia dla SockEx</div>
 <div class="dyncontent">
 <div class="center"><img src="classSockEx__inherit__graph.png" border="0" usemap="#SockEx_inherit__map" alt="Inheritance graph"/></div>
 <map name="SockEx_inherit__map" id="SockEx_inherit__map">
-<area shape="rect" id="node3" href="classAcceptSockEx.html" title="{AcceptSockEx\n|&#45; error\l|+ AcceptSockEx()\l+ ~AcceptSockEx()\l+ what()\l}" alt="" coords="5,271,143,377"/><area shape="rect" id="node4" href="classBindSockEx.html" title="{BindSockEx\n|&#45; error\l|+ BindSockEx()\l+ ~BindSockEx()\l+ what()\l}" alt="" coords="167,271,290,377"/><area shape="rect" id="node5" href="classConnectSockEx.html" title="{ConnectSockEx\n|&#45; error\l|+ ConnectSockEx()\l+ ~ConnectSockEx()\l+ what()\l}" alt="" coords="314,271,458,377"/><area shape="rect" id="node6" href="classCreateSockEx.html" title="{CreateSockEx\n|&#45; error\l|+ CreateSockEx()\l+ ~CreateSockEx()\l+ what()\l}" alt="" coords="483,271,617,377"/><area shape="rect" id="node7" href="classListenSockEx.html" title="{ListenSockEx\n|&#45; error\l|+ ListenSockEx()\l+ ~ListenSockEx()\l+ what()\l}" alt="" coords="642,271,773,377"/><area shape="rect" id="node8" href="classRecSockEx.html" title="{RecSockEx\n|&#45; error\l|+ RecSockEx()\l+ ~RecSockEx()\l+ what()\l}" alt="" coords="797,271,916,377"/><area shape="rect" id="node9" href="classSendSockEx.html" title="{SendSockEx\n|&#45; error\l|+ SendSockEx()\l+ ~SendSockEx()\l+ what()\l}" alt="" coords="940,271,1067,377"/><area shape="rect" id="node10" href="classTimeoutEx.html" title="{TimeoutEx\n|&#45; error\l|+ TimeoutEx()\l+ ~TimeoutEx()\l+ what()\l}" alt="" coords="1091,271,1203,377"/><area shape="rect" id="node2" title="STL class. " alt="" coords="577,5,681,83"/></map>
+<area shape="rect" id="node3" href="classAcceptSockEx.html" title="Wyjątek: nieudane accept() " alt="" coords="5,271,143,377"/><area shape="rect" id="node4" href="classBindSockEx.html" title="Wyjątek: nieudane bind() " alt="" coords="167,271,290,377"/><area shape="rect" id="node5" href="classConnectSockEx.html" title="Wyjątek: nieudane connect() " alt="" coords="314,271,458,377"/><area shape="rect" id="node6" href="classCreateSockEx.html" title="Wyjątek: nieudane socket() " alt="" coords="483,271,617,377"/><area shape="rect" id="node7" href="classListenSockEx.html" title="Wyjątek: nieudane listen() " alt="" coords="642,271,773,377"/><area shape="rect" id="node8" href="classRecSockEx.html" title="Wyjątek: nieudane receive() " alt="" coords="797,271,916,377"/><area shape="rect" id="node10" href="classSendSockEx.html" title="Wyjątek: nieudane send() " alt="" coords="940,271,1067,377"/><area shape="rect" id="node2" title="STL class. " alt="" coords="498,5,602,83"/><area shape="rect" id="node9" href="classTimeoutEx.html" title="Wyjątek: timeout na receive() " alt="" coords="801,425,913,532"/></map>
 </div>
 <div class="dynheader">
 Diagram współpracy dla SockEx:</div>
@@ -134,13 +137,15 @@ Diagram współpracy dla SockEx:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
 <tr class="memitem:aff1ceda26ef22a8a8aff420e232599ac"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSockEx.html#aff1ceda26ef22a8a8aff420e232599ac">what</a> () const noexcept=0</td></tr>
+<tr class="memdesc:aff1ceda26ef22a8a8aff420e232599ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca zakończony \0 komunikat o błędzie  <a href="#aff1ceda26ef22a8a8aff420e232599ac">Więcej...</a><br/></td></tr>
 <tr class="separator:aff1ceda26ef22a8a8aff420e232599ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a444ea08d52b18712b9f3f3cdfe27903c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSockEx.html#a444ea08d52b18712b9f3f3cdfe27903c">~SockEx</a> ()</td></tr>
 <tr class="separator:a444ea08d52b18712b9f3f3cdfe27903c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
-<div class="textblock">
-<p>Definicja w linii <a class="el" href="SocketException_8hpp_source.html#l00015">15</a> pliku <a class="el" href="SocketException_8hpp_source.html">SocketException.hpp</a>.</p>
+<div class="textblock"><p>Abstrakcyjna klasa bazowa wyjątków związanych z socketami. </p>
+
+<p>Definicja w linii <a class="el" href="SocketException_8hpp_source.html#l00021">21</a> pliku <a class="el" href="SocketException_8hpp_source.html">SocketException.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a class="anchor" id="a444ea08d52b18712b9f3f3cdfe27903c"></a>
 <div class="memitem">
@@ -163,7 +168,7 @@ Metody publiczne</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="SocketException_8cpp_source.html#l00014">14</a> pliku <a class="el" href="SocketException_8cpp_source.html">SocketException.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="SocketException_8cpp_source.html#l00017">17</a> pliku <a class="el" href="SocketException_8cpp_source.html">SocketException.cpp</a>.</p>
 
 </div>
 </div>
@@ -189,6 +194,9 @@ Metody publiczne</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>zwraca zakończony \0 komunikat o błędzie </p>
+<dl class="section return"><dt>Zwraca</dt><dd>wzkaźnik na bufor z komunikatem </dd></dl>
+
 <p>Implementowany w <a class="el" href="classTimeoutEx.html#adbe5ddc174345055c0ed071e85628726">TimeoutEx</a>, <a class="el" href="classRecSockEx.html#a7ad9f56a7cc924eb73bc1c18595d3c59">RecSockEx</a>, <a class="el" href="classSendSockEx.html#af74f634b7c5c5bf17bfa0c998bbbe7be">SendSockEx</a>, <a class="el" href="classConnectSockEx.html#a9dc151c6df86e563013705904ec57d82">ConnectSockEx</a>, <a class="el" href="classListenSockEx.html#a5522b2ceba3d20252f2f734d5e9fe9bd">ListenSockEx</a>, <a class="el" href="classCreateSockEx.html#a39a8e97460789a17509adbd416e9128f">CreateSockEx</a>, <a class="el" href="classAcceptSockEx.html#a0141c5451e5d6fe9b2e8506c1a180b23">AcceptSockEx</a> i <a class="el" href="classBindSockEx.html#ab35176d3ff3c39648a94c51e54adad6d">BindSockEx</a>.</p>
 
 </div>
@@ -203,7 +211,7 @@ Metody publiczne</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classSockEx.html">SockEx</a></li>
-    <li class="footer">Wygenerowano Cz, 7 sty 2016 17:24:02 dla LOTC programem
+    <li class="footer">Wygenerowano Cz, 7 sty 2016 22:11:01 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

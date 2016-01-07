@@ -32,9 +32,10 @@ var hierarchy =
         [ "ConnectSockEx", "classConnectSockEx.html", null ],
         [ "CreateSockEx", "classCreateSockEx.html", null ],
         [ "ListenSockEx", "classListenSockEx.html", null ],
-        [ "RecSockEx", "classRecSockEx.html", null ],
-        [ "SendSockEx", "classSendSockEx.html", null ],
-        [ "TimeoutEx", "classTimeoutEx.html", null ]
+        [ "RecSockEx", "classRecSockEx.html", [
+          [ "TimeoutEx", "classTimeoutEx.html", null ]
+        ] ],
+        [ "SendSockEx", "classSendSockEx.html", null ]
       ] ]
     ] ],
     [ "Ip", "classIp.html", [

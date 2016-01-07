@@ -1,8 +1,19 @@
 var searchData=
 [
-  ['waitfortaskcondition',['waitForTaskCondition',['../classAgentServer.html#a71223544c86014abf73ec7b978968fc0',1,'AgentServer']]],
-  ['waitfortaskmutex',['waitForTaskMutex',['../classAgentServer.html#aaa47ca3b1032a3dc901a4e994cb4b37e',1,'AgentServer']]],
-  ['when',['when',['../classTask.html#a8425e75c81a902240c1d8a03c6e3f58e',1,'Task']]],
-  ['who',['who',['../classEvent.html#a7483a1ab5354230c1a2c8333973cc88a',1,'Event']]],
-  ['working',['working',['../classAgentClient.html#a0309e41988778487b9765edc2d42753f',1,'AgentClient']]]
+  ['task',['task',['../classSlave.html#a37f03302910768cddadafa3857caaa8e',1,'Slave']]],
+  ['taskack',['taskAck',['../classConsoleClient.html#a45aeb7569a11a3bdbdee54e0ffc990fc',1,'ConsoleClient']]],
+  ['taskcount',['taskCount',['../classConsoleClient.html#a08c90a980c0d14f06f762ea0f4466985',1,'ConsoleClient']]],
+  ['taskcounter',['taskCounter',['../classTask.html#a591cc955cd7e491c7b423388b3331b92',1,'Task']]],
+  ['taskid',['taskID',['../classTask.html#ad6badd95723fafb97642a21027a3f341',1,'Task::taskID()'],['../classmessage_1_1taskMessage.html#ad3678516db93fa4c7a80075f3f5af760',1,'message::taskMessage::taskId()'],['../classmessage_1_1fileMessage.html#a4103789c3bffab22f66ce5223aab1f0f',1,'message::fileMessage::taskId()'],['../classmessage_1_1retMessage.html#a71d6666b42b5e0d7068d79ea13399525',1,'message::retMessage::taskId()']]],
+  ['tasks',['tasks',['../classmessage_1_1depMessage.html#aee90710bddce84e834df6810a9cd1eac',1,'message::depMessage::tasks()'],['../classAgentServer.html#adc4f968c94d4973c8dcb44784a6aae1b',1,'AgentServer::tasks()']]],
+  ['taskstate',['taskState',['../classTask.html#a594ec5abc1758a6a78a9a2ee28f0e0b1',1,'Task']]],
+  ['tasksub',['taskSub',['../classmessage_1_1taskMessage.html#ab75d3ee96d53cbe11ed8e8aec7c27de5',1,'message::taskMessage']]],
+  ['tego',['tego',['../opis__doswiadczen__z__projektu_8txt.html#a5bf634b266e9ec4388ade596bf6b57dd',1,'opis_doswiadczen_z_projektu.txt']]],
+  ['też',['też',['../opis__doswiadczen__z__projektu_8txt.html#aa3b21508138da231cf9016a7bad31fe3',1,'opis_doswiadczen_z_projektu.txt']]],
+  ['time',['time',['../classmessage_1_1taskMessage.html#ab96eae2d339db723300e7e18e03227ed',1,'message::taskMessage']]],
+  ['timeout',['TIMEOUT',['../Socket_8hpp.html#aa5871257ce20b177ca4e3c2af70d69e6',1,'Socket.hpp']]],
+  ['tmessage',['tMessage',['../classTaskCommand.html#a329ce45c67ab8c04c1ed0dcf86d9f16c',1,'TaskCommand']]],
+  ['tygodniu',['tygodniu',['../opis__doswiadczen__z__projektu_8txt.html#a4d413090331e0f41fbd32ab7e4042990',1,'opis_doswiadczen_z_projektu.txt']]],
+  ['tym',['tym',['../opis__doswiadczen__z__projektu_8txt.html#a27d0d403e9d5d97a79a00cbd77e61215',1,'opis_doswiadczen_z_projektu.txt']]],
+  ['type',['type',['../classEvent.html#ac721e4f34b3b9a1ae302165412221724',1,'Event']]]
 ];

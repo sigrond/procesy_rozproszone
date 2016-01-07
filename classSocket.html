@@ -116,29 +116,33 @@ $(document).ready(function(){initNavTree('classSocket.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Klasa bazowa <a class="el" href="classSocket.html" title="Klasa bazowa Socket - obiektowy wrapper dla API socketów. ">Socket</a> - obiektowy wrapper dla API socketów.  
+ <a href="classSocket.html#details">Więcej...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Socket_8hpp_source.html">Socket.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Diagram dziedziczenia dla Socket</div>
 <div class="dyncontent">
 <div class="center"><img src="classSocket__inherit__graph.png" border="0" usemap="#Socket_inherit__map" alt="Inheritance graph"/></div>
 <map name="Socket_inherit__map" id="Socket_inherit__map">
-<area shape="rect" id="node2" href="classSocketIp4.html" title="{SocketIp4\n|&#45; saddr\l&#45; ip\l|+ SocketIp4()\l+ SocketIp4()\l+ bind()\l+ connect()\l+ connect()\l+ accept()\l+ recv()\l+ send()\l+ getIp()\l+ getPort()\l}" alt="" coords="5,321,105,545"/><area shape="rect" id="node3" href="classSocketIp6.html" title="{SocketIp6\n|&#45; saddr\l&#45; caddr\l|+ SocketIp6()\l}" alt="" coords="129,387,229,479"/></map>
+<area shape="rect" id="node2" href="classSocketIp4.html" title="{SocketIp4\n|&#45; saddr\l&#45; ip\l|+ SocketIp4()\l+ SocketIp4()\l+ bind()\l+ connect()\l+ connect()\l+ accept()\l+ recv()\l+ send()\l+ getIp()\l+ getPort()\l}" alt="" coords="5,321,105,545"/><area shape="rect" id="node3" href="classSocketIp6.html" title="{SocketIp6\n|&#45; saddr\l&#45; caddr\l|+ SocketIp6()\l+ SocketIp6()\l+ bind()\l+ connect()\l+ connect()\l+ accept()\l+ recv()\l+ send()\l}" alt="" coords="129,336,229,531"/></map>
 </div>
 <div class="dynheader">
 Diagram współpracy dla Socket:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSocket__coll__graph.png" border="0" usemap="#Socket_coll__map" alt="Collaboration graph"/></div>
-<map name="Socket_coll__map" id="Socket_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
 <tr class="memitem:a2c55b94d9f5256b3297b67f9fb0f1428"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#a2c55b94d9f5256b3297b67f9fb0f1428">Socket</a> (unsigned short <a class="el" href="classSocket.html#a07e25fed1979f1aa9cb257aa756a2946">port</a>)</td></tr>
+<tr class="memdesc:a2c55b94d9f5256b3297b67f9fb0f1428"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#a2c55b94d9f5256b3297b67f9fb0f1428">Więcej...</a><br/></td></tr>
 <tr class="separator:a2c55b94d9f5256b3297b67f9fb0f1428"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf04a8c18d38ee0d3dceb24931e352e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#aaf04a8c18d38ee0d3dceb24931e352e7">Socket</a> (int msgsock, unsigned short <a class="el" href="classSocket.html#a07e25fed1979f1aa9cb257aa756a2946">port</a>)</td></tr>
+<tr class="memdesc:aaf04a8c18d38ee0d3dceb24931e352e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#aaf04a8c18d38ee0d3dceb24931e352e7">Więcej...</a><br/></td></tr>
 <tr class="separator:aaf04a8c18d38ee0d3dceb24931e352e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeac4eb6379a543d38ed88977d3b6630a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#aeac4eb6379a543d38ed88977d3b6630a">~Socket</a> ()</td></tr>
+<tr class="memdesc:aeac4eb6379a543d38ed88977d3b6630a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor.  <a href="#aeac4eb6379a543d38ed88977d3b6630a">Więcej...</a><br/></td></tr>
 <tr class="separator:aeac4eb6379a543d38ed88977d3b6630a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1722aa9af2ec480b999e6bb664a1b925"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#a1722aa9af2ec480b999e6bb664a1b925">connect</a> ()</td></tr>
 <tr class="separator:a1722aa9af2ec480b999e6bb664a1b925"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,6 +151,7 @@ Metody publiczne</h2></td></tr>
 <tr class="memitem:abda54549284a0626998e833bfead9f11"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#abda54549284a0626998e833bfead9f11">bind</a> ()</td></tr>
 <tr class="separator:abda54549284a0626998e833bfead9f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34374a7d9ae416f8593bea924ab2099b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#a34374a7d9ae416f8593bea924ab2099b">listen</a> ()</td></tr>
+<tr class="memdesc:a34374a7d9ae416f8593bea924ab2099b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia socket w tryb nasluchiwania.  <a href="#a34374a7d9ae416f8593bea924ab2099b">Więcej...</a><br/></td></tr>
 <tr class="separator:a34374a7d9ae416f8593bea924ab2099b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a795d6b116c1996c280947981549d4ffe"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSocket.html#a795d6b116c1996c280947981549d4ffe">accept</a> ()</td></tr>
 <tr class="separator:a795d6b116c1996c280947981549d4ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,8 +174,9 @@ Atrybuty chronione</h2></td></tr>
 <tr class="separator:a07e25fed1979f1aa9cb257aa756a2946"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
-<div class="textblock">
-<p>Definicja w linii <a class="el" href="Socket_8hpp_source.html#l00027">27</a> pliku <a class="el" href="Socket_8hpp_source.html">Socket.hpp</a>.</p>
+<div class="textblock"><p>Klasa bazowa <a class="el" href="classSocket.html" title="Klasa bazowa Socket - obiektowy wrapper dla API socketów. ">Socket</a> - obiektowy wrapper dla API socketów. </p>
+
+<p>Definicja w linii <a class="el" href="Socket_8hpp_source.html#l00033">33</a> pliku <a class="el" href="Socket_8hpp_source.html">Socket.hpp</a>.</p>
 </div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a class="anchor" id="a2c55b94d9f5256b3297b67f9fb0f1428"></a>
 <div class="memitem">
@@ -186,18 +192,26 @@ Atrybuty chronione</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00021">21</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
+<p>Konstruktor. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">port</td><td>serwera </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Odwołuje się do <a class="el" href="Socket_8hpp_source.html#l00056">port</a>.</p>
+<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00020">20</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Socket_8cpp_source.html#l00071">SocketIp4::SocketIp4()</a>.</p>
+<p>Odwołuje się do <a class="el" href="Socket_8hpp_source.html#l00083">port</a>.</p>
+
+<p>Odwołania w <a class="el" href="Socket_8cpp_source.html#l00070">SocketIp4::SocketIp4()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSocket_a2c55b94d9f5256b3297b67f9fb0f1428_icgraph.png" border="0" usemap="#classSocket_a2c55b94d9f5256b3297b67f9fb0f1428_icgraph" alt=""/></div>
 <map name="classSocket_a2c55b94d9f5256b3297b67f9fb0f1428_icgraph" id="classSocket_a2c55b94d9f5256b3297b67f9fb0f1428_icgraph">
-<area shape="rect" id="node2" href="classSocketIp4.html#acd796d1aca24c05c0a20a772f41f79be" title="SocketIp4::SocketIp4" alt="" coords="165,114,312,141"/><area shape="rect" id="node3" href="classConnection.html#ab49c655af4acc49507407a167325fee7" title="Konstruktor połączeń po IPv4. " alt="" coords="360,114,520,141"/><area shape="rect" id="node4" href="classConnectionManager.html#a314bdb20e3fb92c2567dfac2da975618" title="ConnectionManager::send" alt="" coords="568,114,741,141"/><area shape="rect" id="node5" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd" title="AgentServer::connect" alt="" coords="791,13,937,39"/><area shape="rect" id="node7" href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec" title="Metoda łącząca się z konsolą administratora. Wysyła wiadomość. " alt="" coords="789,63,939,90"/><area shape="rect" id="node9" href="application_2protocol_2client_8cpp.html#a3a07ed6ad76849366c5a5bcc3d1b42ca" title="rec" alt="" coords="844,114,884,141"/><area shape="rect" id="node10" href="classAgentClient.html#a7417cb37d33a126f01e92e07795a9f22" title="AgentClient::send" alt="" coords="801,165,927,191"/><area shape="rect" id="node12" href="application_2protocol_2client_8cpp.html#a02512d6914c372c7e321b6ace0d039c3" title="send_" alt="" coords="835,215,893,242"/><area shape="rect" id="node6" href="classMessageFromAgentStrategy.html#a7109a9ef64b2245661dbe0897dd10db3" title="obsługa wiadomości od agenta " alt="" coords="989,5,1177,47"/><area shape="rect" id="node8" href="classMessageFromAdminStrategy.html#ad549a2e03f2ccf7737639861af154c36" title="obsługa wiadomości od admina " alt="" coords="988,71,1179,112"/><area shape="rect" id="node11" href="classAgentClient.html#a4bfd3f341cc610b1c1893a0baee3889d" title="AgentClient::sendFromQueue" alt="" coords="987,165,1180,191"/></map>
+<area shape="rect" id="node2" href="classSocketIp4.html#a430c59c57f709f3d163dafbe7397d7f5" title="Konstruktor &#45; tworzy nowy socket. " alt="" coords="165,114,312,141"/><area shape="rect" id="node3" href="classConnection.html#ab49c655af4acc49507407a167325fee7" title="Konstruktor połączeń po IPv4. " alt="" coords="360,114,520,141"/><area shape="rect" id="node4" href="classConnectionManager.html#a6d9f9f9fbec8200760fea6059577f94b" title="ConnectionManager::send" alt="" coords="568,114,741,141"/><area shape="rect" id="node5" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd" title="AgentServer::connect" alt="" coords="791,13,937,39"/><area shape="rect" id="node7" href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec" title="Metoda łącząca się z konsolą administratora. Wysyła wiadomość. " alt="" coords="789,63,939,90"/><area shape="rect" id="node9" href="application_2protocol_2client_8cpp.html#a3a07ed6ad76849366c5a5bcc3d1b42ca" title="rec" alt="" coords="844,114,884,141"/><area shape="rect" id="node10" href="classAgentClient.html#a7417cb37d33a126f01e92e07795a9f22" title="AgentClient::send" alt="" coords="801,165,927,191"/><area shape="rect" id="node12" href="application_2protocol_2client_8cpp.html#a02512d6914c372c7e321b6ace0d039c3" title="send_" alt="" coords="835,215,893,242"/><area shape="rect" id="node6" href="classMessageFromAgentStrategy.html#a7109a9ef64b2245661dbe0897dd10db3" title="obsługa wiadomości od agenta " alt="" coords="989,5,1177,47"/><area shape="rect" id="node8" href="classMessageFromAdminStrategy.html#ad549a2e03f2ccf7737639861af154c36" title="obsługa wiadomości od admina " alt="" coords="988,71,1179,112"/><area shape="rect" id="node11" href="classAgentClient.html#a4bfd3f341cc610b1c1893a0baee3889d" title="AgentClient::sendFromQueue" alt="" coords="987,165,1180,191"/></map>
 </div>
 </p>
 
@@ -227,18 +241,27 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00025">25</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
+<p>Konstruktor. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">msgsock</td><td>deskryptor socketu</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>[in] port port serwera </p>
 
-<p>Odwołuje się do <a class="el" href="Socket_8hpp_source.html#l00056">port</a> i <a class="el" href="Socket_8hpp_source.html#l00054">sockfd</a>.</p>
+<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00024">24</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Socket_8cpp_source.html#l00093">SocketIp4::SocketIp4()</a>.</p>
+<p>Odwołuje się do <a class="el" href="Socket_8hpp_source.html#l00083">port</a> i <a class="el" href="Socket_8hpp_source.html#l00081">sockfd</a>.</p>
+
+<p>Odwołania w <a class="el" href="Socket_8cpp_source.html#l00089">SocketIp4::SocketIp4()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSocket_aaf04a8c18d38ee0d3dceb24931e352e7_icgraph.png" border="0" usemap="#classSocket_aaf04a8c18d38ee0d3dceb24931e352e7_icgraph" alt=""/></div>
 <map name="classSocket_aaf04a8c18d38ee0d3dceb24931e352e7_icgraph" id="classSocket_aaf04a8c18d38ee0d3dceb24931e352e7_icgraph">
-<area shape="rect" id="node2" href="classSocketIp4.html#ad23f394d563556b512bdc653f76348f8" title="SocketIp4::SocketIp4" alt="" coords="165,5,312,32"/><area shape="rect" id="node3" href="classConnection.html#affda888392bebd09786862c2d39acce8" title="Connection::Connection" alt="" coords="360,5,520,32"/><area shape="rect" id="node4" href="ConnectionManager_8cpp.html#a0356e21a4b8c9cb057224466de84606d" title="awaitConnections" alt="" coords="568,5,692,32"/></map>
+<area shape="rect" id="node2" href="classSocketIp4.html#ad23f394d563556b512bdc653f76348f8" title="Konstruktor &#45; używa istniejącego socketu. " alt="" coords="165,5,312,32"/><area shape="rect" id="node3" href="classConnection.html#affda888392bebd09786862c2d39acce8" title="Connection::Connection" alt="" coords="360,5,520,32"/><area shape="rect" id="node4" href="ConnectionManager_8cpp.html#a0356e21a4b8c9cb057224466de84606d" title="awaitConnections" alt="" coords="568,5,692,32"/></map>
 </div>
 </p>
 
@@ -265,7 +288,9 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00035">35</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
+<p>Destruktor. </p>
+
+<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00034">34</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
 
 </div>
 </div>
@@ -291,11 +316,11 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplementowana w <a class="el" href="classSocketIp4.html#ae3fc6c667edd538d9501a513f128ddd9">SocketIp4</a>.</p>
+<p>Reimplementowana w <a class="el" href="classSocketIp6.html#aa912fa8fcad3652232a0f91310264646">SocketIp6</a> i <a class="el" href="classSocketIp4.html#ae3fc6c667edd538d9501a513f128ddd9">SocketIp4</a>.</p>
 
-<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00039">39</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00038">38</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="ConnectionManager_8cpp_source.html#l00016">awaitConnections()</a>.</p>
+<p>Odwołania w <a class="el" href="ConnectionManager_8cpp_source.html#l00020">awaitConnections()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -329,9 +354,9 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplementowana w <a class="el" href="classSocketIp4.html#a05248ca93407d625ff34ee0682a1f310">SocketIp4</a>.</p>
+<p>Reimplementowana w <a class="el" href="classSocketIp6.html#aaf071f8652b99a62310ed7014eaf00de">SocketIp6</a> i <a class="el" href="classSocketIp4.html#a05248ca93407d625ff34ee0682a1f310">SocketIp4</a>.</p>
 
-<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00036">36</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00035">35</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
 
 <p>Odwołania w <a class="el" href="ConnectionManager_8cpp_source.html#l00084">ConnectionManager::ConnectionManager()</a>.</p>
 
@@ -340,7 +365,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSocket_abda54549284a0626998e833bfead9f11_icgraph.png" border="0" usemap="#classSocket_abda54549284a0626998e833bfead9f11_icgraph" alt=""/></div>
 <map name="classSocket_abda54549284a0626998e833bfead9f11_icgraph" id="classSocket_abda54549284a0626998e833bfead9f11_icgraph">
-<area shape="rect" id="node2" href="classConnectionManager.html#acddf7b9dd1fa9319ffba80b4ecf2e5e5" title="ConnectionManager::\lConnectionManager" alt="" coords="148,149,293,190"/><area shape="rect" id="node3" href="classConnectionManager.html#a38f4c092a52fd80c19d613fafad832b9" title="ConnectionManager::\lgetInstance" alt="" coords="341,149,487,190"/><area shape="rect" id="node4" href="classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2" title="Konstruktor bez podania adresu administratora. Oznacza to, że czekamy na pierwsze zapytanie z konsoli..." alt="" coords="542,5,718,32"/><area shape="rect" id="node5" href="classAgentClient.html#af82fc2e72f38fb7075d0667a18f4e8ba" title="AgentClient::AgentClient" alt="" coords="548,56,712,83"/><area shape="rect" id="node6" href="classAgentServer.html#ae00b5d7d78d9786b11a396246710a621" title="AgentServer::AgentServer" alt="" coords="545,131,715,157"/><area shape="rect" id="node8" href="classConsoleClient.html#aa23043606363a6d5e39ac4ac53e754fa" title="ConsoleClient::ConsoleClient" alt="" coords="535,181,725,208"/><area shape="rect" id="node10" href="application_2protocol_2client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="605,232,655,259"/><area shape="rect" id="node11" href="classSlave.html#a298f9ea1a508f269d9a3fea3eee0d245" title="Slave::Slave" alt="" coords="584,307,676,333"/><area shape="rect" id="node7" href="application_2server_2server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="773,131,824,157"/><area shape="rect" id="node9" href="Console_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="773,181,824,208"/></map>
+<area shape="rect" id="node2" href="classConnectionManager.html#acddf7b9dd1fa9319ffba80b4ecf2e5e5" title="ConnectionManager::\lConnectionManager" alt="" coords="148,149,293,190"/><area shape="rect" id="node3" href="classConnectionManager.html#a27fa06ae5a93d1c333fd14eb7db9089b" title="ConnectionManager::\lgetInstance" alt="" coords="341,149,487,190"/><area shape="rect" id="node4" href="classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2" title="Konstruktor bez podania adresu administratora. Oznacza to, że czekamy na pierwsze zapytanie z konsoli..." alt="" coords="542,5,718,32"/><area shape="rect" id="node5" href="classAgentClient.html#af82fc2e72f38fb7075d0667a18f4e8ba" title="AgentClient::AgentClient" alt="" coords="548,56,712,83"/><area shape="rect" id="node6" href="classAgentServer.html#ae00b5d7d78d9786b11a396246710a621" title="AgentServer::AgentServer" alt="" coords="545,131,715,157"/><area shape="rect" id="node8" href="classConsoleClient.html#aa23043606363a6d5e39ac4ac53e754fa" title="ConsoleClient::ConsoleClient" alt="" coords="535,181,725,208"/><area shape="rect" id="node10" href="application_2protocol_2client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="605,232,655,259"/><area shape="rect" id="node11" href="classSlave.html#a298f9ea1a508f269d9a3fea3eee0d245" title="Slave::Slave" alt="" coords="584,307,676,333"/><area shape="rect" id="node7" href="application_2server_2server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="773,131,824,157"/><area shape="rect" id="node9" href="Console_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="773,181,824,208"/></map>
 </div>
 </p>
 
@@ -359,16 +384,16 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00057">57</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00056">56</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Connection_8cpp_source.html#l00319">Connection::receive()</a> i <a class="el" href="Connection_8cpp_source.html#l00057">Connection::send()</a>.</p>
+<p>Odwołania w <a class="el" href="Connection_8cpp_source.html#l00316">Connection::receive()</a> i <a class="el" href="Connection_8cpp_source.html#l00054">Connection::send()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSocket_aef06605c6725958004116983f1a2051f_icgraph.png" border="0" usemap="#classSocket_aef06605c6725958004116983f1a2051f_icgraph" alt=""/></div>
 <map name="classSocket_aef06605c6725958004116983f1a2051f_icgraph" id="classSocket_aef06605c6725958004116983f1a2051f_icgraph">
-<area shape="rect" id="node2" href="classConnection.html#abc2969606fc0934d737c78cddd64ffcf" title="Funkcja oczekująca na komunikat od zdalnego hosta. " alt="" coords="156,120,291,147"/><area shape="rect" id="node10" href="classConnection.html#ac8abd34010a78efd01e2af9aa7fa92fd" title="Funcja wysyłająca komunikat. " alt="" coords="162,196,285,223"/><area shape="rect" id="node3" href="classConnectionManager.html#ac8fcde3746046cf78805935050c7b1c4" title="ConnectionManager::\lreceive" alt="" coords="353,99,498,141"/><area shape="rect" id="node4" href="classAgentServer.html#a001e979f72cf3d360d424cea0df70165" title="AgentServer::listen" alt="" coords="569,5,700,32"/><area shape="rect" id="node5" href="classAdminServer.html#a2c3c374cb8653d62a373735cf316d4e4" title="Metoda nasłuchująca na połączenie z konsoli administratora. Odbiera wiadomość i wrzuca w zdarzeniu do..." alt="" coords="567,56,702,83"/><area shape="rect" id="node7" href="classAgentClient.html#aa1f2e65a8c67cc6cf6d9b7d65d662812" title="AgentClient::listen" alt="" coords="571,107,699,133"/><area shape="rect" id="node9" href="application_2protocol_2client_8cpp.html#a3a07ed6ad76849366c5a5bcc3d1b42ca" title="rec" alt="" coords="615,157,655,184"/><area shape="rect" id="node6" href="classAdminServer.html#ad843107448ab68ee4d0eb00d3dd60fec" title="Metoda odpowiada za wewnętrzne życie AdminServer&#39;a. Należy raczej oczekiwać, że będzie się zawieszała..." alt="" coords="789,56,919,83"/><area shape="rect" id="node8" href="classAgentClient.html#af0e975638976932e9ab31c654843717e" title="AgentClient::start" alt="" coords="793,107,915,133"/><area shape="rect" id="node11" href="classConnectionManager.html#a314bdb20e3fb92c2567dfac2da975618" title="ConnectionManager::send" alt="" coords="339,247,512,273"/><area shape="rect" id="node12" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd" title="AgentServer::connect" alt="" coords="561,208,708,235"/><area shape="rect" id="node14" href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec" title="Metoda łącząca się z konsolą administratora. Wysyła wiadomość. " alt="" coords="560,259,709,285"/><area shape="rect" id="node16" href="classAgentClient.html#a7417cb37d33a126f01e92e07795a9f22" title="AgentClient::send" alt="" coords="572,309,697,336"/><area shape="rect" id="node18" href="application_2protocol_2client_8cpp.html#a02512d6914c372c7e321b6ace0d039c3" title="send_" alt="" coords="606,360,663,387"/><area shape="rect" id="node13" href="classMessageFromAgentStrategy.html#a7109a9ef64b2245661dbe0897dd10db3" title="obsługa wiadomości od agenta " alt="" coords="760,193,948,234"/><area shape="rect" id="node15" href="classMessageFromAdminStrategy.html#ad549a2e03f2ccf7737639861af154c36" title="obsługa wiadomości od admina " alt="" coords="759,258,949,299"/><area shape="rect" id="node17" href="classAgentClient.html#a4bfd3f341cc610b1c1893a0baee3889d" title="AgentClient::sendFromQueue" alt="" coords="757,324,951,351"/></map>
+<area shape="rect" id="node2" href="classConnection.html#abc2969606fc0934d737c78cddd64ffcf" title="Funkcja oczekująca na komunikat od zdalnego hosta. " alt="" coords="156,120,291,147"/><area shape="rect" id="node10" href="classConnection.html#ac8abd34010a78efd01e2af9aa7fa92fd" title="Funcja wysyłająca komunikat. " alt="" coords="162,196,285,223"/><area shape="rect" id="node3" href="classConnectionManager.html#a115016e0b145e2284fc29fc331bc76a4" title="ConnectionManager::\lreceive" alt="" coords="353,99,498,141"/><area shape="rect" id="node4" href="classAgentServer.html#a001e979f72cf3d360d424cea0df70165" title="AgentServer::listen" alt="" coords="569,5,700,32"/><area shape="rect" id="node5" href="classAdminServer.html#a2c3c374cb8653d62a373735cf316d4e4" title="Metoda nasłuchująca na połączenie z konsoli administratora. Odbiera wiadomość i wrzuca w zdarzeniu do..." alt="" coords="567,56,702,83"/><area shape="rect" id="node7" href="classAgentClient.html#aa1f2e65a8c67cc6cf6d9b7d65d662812" title="AgentClient::listen" alt="" coords="571,107,699,133"/><area shape="rect" id="node9" href="application_2protocol_2client_8cpp.html#a3a07ed6ad76849366c5a5bcc3d1b42ca" title="rec" alt="" coords="615,157,655,184"/><area shape="rect" id="node6" href="classAdminServer.html#ad843107448ab68ee4d0eb00d3dd60fec" title="Metoda odpowiada za wewnętrzne życie AdminServer&#39;a. Należy raczej oczekiwać, że będzie się zawieszała..." alt="" coords="789,56,919,83"/><area shape="rect" id="node8" href="classAgentClient.html#af0e975638976932e9ab31c654843717e" title="AgentClient::start" alt="" coords="793,107,915,133"/><area shape="rect" id="node11" href="classConnectionManager.html#a6d9f9f9fbec8200760fea6059577f94b" title="ConnectionManager::send" alt="" coords="339,247,512,273"/><area shape="rect" id="node12" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd" title="AgentServer::connect" alt="" coords="561,208,708,235"/><area shape="rect" id="node14" href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec" title="Metoda łącząca się z konsolą administratora. Wysyła wiadomość. " alt="" coords="560,259,709,285"/><area shape="rect" id="node16" href="classAgentClient.html#a7417cb37d33a126f01e92e07795a9f22" title="AgentClient::send" alt="" coords="572,309,697,336"/><area shape="rect" id="node18" href="application_2protocol_2client_8cpp.html#a02512d6914c372c7e321b6ace0d039c3" title="send_" alt="" coords="606,360,663,387"/><area shape="rect" id="node13" href="classMessageFromAgentStrategy.html#a7109a9ef64b2245661dbe0897dd10db3" title="obsługa wiadomości od agenta " alt="" coords="760,193,948,234"/><area shape="rect" id="node15" href="classMessageFromAdminStrategy.html#ad549a2e03f2ccf7737639861af154c36" title="obsługa wiadomości od admina " alt="" coords="759,258,949,299"/><area shape="rect" id="node17" href="classAgentClient.html#a4bfd3f341cc610b1c1893a0baee3889d" title="AgentClient::sendFromQueue" alt="" coords="757,324,951,351"/></map>
 </div>
 </p>
 
@@ -395,18 +420,18 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplementowana w <a class="el" href="classSocketIp4.html#a201eb6bf4dae6ba9e92e7609eaa3a8b1">SocketIp4</a>.</p>
+<p>Reimplementowana w <a class="el" href="classSocketIp6.html#a30f2a2c5c632885daebbe21904396cd5">SocketIp6</a> i <a class="el" href="classSocketIp4.html#a201eb6bf4dae6ba9e92e7609eaa3a8b1">SocketIp4</a>.</p>
 
-<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00037">37</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00036">36</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Connection_8cpp_source.html#l00027">Connection::Connection()</a>.</p>
+<p>Odwołania w <a class="el" href="Connection_8cpp_source.html#l00024">Connection::Connection()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSocket_a1722aa9af2ec480b999e6bb664a1b925_icgraph.png" border="0" usemap="#classSocket_a1722aa9af2ec480b999e6bb664a1b925_icgraph" alt=""/></div>
 <map name="classSocket_a1722aa9af2ec480b999e6bb664a1b925_icgraph" id="classSocket_a1722aa9af2ec480b999e6bb664a1b925_icgraph">
-<area shape="rect" id="node2" href="classConnection.html#ab49c655af4acc49507407a167325fee7" title="Konstruktor połączeń po IPv4. " alt="" coords="171,114,331,141"/><area shape="rect" id="node3" href="classConnectionManager.html#a314bdb20e3fb92c2567dfac2da975618" title="ConnectionManager::send" alt="" coords="379,114,552,141"/><area shape="rect" id="node4" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd" title="AgentServer::connect" alt="" coords="601,13,748,39"/><area shape="rect" id="node6" href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec" title="Metoda łącząca się z konsolą administratora. Wysyła wiadomość. " alt="" coords="600,63,749,90"/><area shape="rect" id="node8" href="application_2protocol_2client_8cpp.html#a3a07ed6ad76849366c5a5bcc3d1b42ca" title="rec" alt="" coords="655,114,695,141"/><area shape="rect" id="node9" href="classAgentClient.html#a7417cb37d33a126f01e92e07795a9f22" title="AgentClient::send" alt="" coords="612,165,737,191"/><area shape="rect" id="node11" href="application_2protocol_2client_8cpp.html#a02512d6914c372c7e321b6ace0d039c3" title="send_" alt="" coords="646,215,703,242"/><area shape="rect" id="node5" href="classMessageFromAgentStrategy.html#a7109a9ef64b2245661dbe0897dd10db3" title="obsługa wiadomości od agenta " alt="" coords="800,5,988,47"/><area shape="rect" id="node7" href="classMessageFromAdminStrategy.html#ad549a2e03f2ccf7737639861af154c36" title="obsługa wiadomości od admina " alt="" coords="799,71,989,112"/><area shape="rect" id="node10" href="classAgentClient.html#a4bfd3f341cc610b1c1893a0baee3889d" title="AgentClient::sendFromQueue" alt="" coords="797,165,991,191"/></map>
+<area shape="rect" id="node2" href="classConnection.html#ab49c655af4acc49507407a167325fee7" title="Konstruktor połączeń po IPv4. " alt="" coords="171,114,331,141"/><area shape="rect" id="node3" href="classConnectionManager.html#a6d9f9f9fbec8200760fea6059577f94b" title="ConnectionManager::send" alt="" coords="379,114,552,141"/><area shape="rect" id="node4" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd" title="AgentServer::connect" alt="" coords="601,13,748,39"/><area shape="rect" id="node6" href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec" title="Metoda łącząca się z konsolą administratora. Wysyła wiadomość. " alt="" coords="600,63,749,90"/><area shape="rect" id="node8" href="application_2protocol_2client_8cpp.html#a3a07ed6ad76849366c5a5bcc3d1b42ca" title="rec" alt="" coords="655,114,695,141"/><area shape="rect" id="node9" href="classAgentClient.html#a7417cb37d33a126f01e92e07795a9f22" title="AgentClient::send" alt="" coords="612,165,737,191"/><area shape="rect" id="node11" href="application_2protocol_2client_8cpp.html#a02512d6914c372c7e321b6ace0d039c3" title="send_" alt="" coords="646,215,703,242"/><area shape="rect" id="node5" href="classMessageFromAgentStrategy.html#a7109a9ef64b2245661dbe0897dd10db3" title="obsługa wiadomości od agenta " alt="" coords="800,5,988,47"/><area shape="rect" id="node7" href="classMessageFromAdminStrategy.html#ad549a2e03f2ccf7737639861af154c36" title="obsługa wiadomości od admina " alt="" coords="799,71,989,112"/><area shape="rect" id="node10" href="classAgentClient.html#a4bfd3f341cc610b1c1893a0baee3889d" title="AgentClient::sendFromQueue" alt="" coords="797,165,991,191"/></map>
 </div>
 </p>
 
@@ -434,18 +459,18 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplementowana w <a class="el" href="classSocketIp4.html#a008589e3d367eab315f1dce5defef1a3">SocketIp4</a>.</p>
+<p>Reimplementowana w <a class="el" href="classSocketIp6.html#a69356a8112645f870692c00c68f0db52">SocketIp6</a> i <a class="el" href="classSocketIp4.html#a008589e3d367eab315f1dce5defef1a3">SocketIp4</a>.</p>
 
-<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00038">38</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00037">37</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Connection_8cpp_source.html#l00027">Connection::Connection()</a>.</p>
+<p>Odwołania w <a class="el" href="Connection_8cpp_source.html#l00024">Connection::Connection()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSocket_a76be78eed8ed97aefab6364eced8917c_icgraph.png" border="0" usemap="#classSocket_a76be78eed8ed97aefab6364eced8917c_icgraph" alt=""/></div>
 <map name="classSocket_a76be78eed8ed97aefab6364eced8917c_icgraph" id="classSocket_a76be78eed8ed97aefab6364eced8917c_icgraph">
-<area shape="rect" id="node2" href="classConnection.html#ab49c655af4acc49507407a167325fee7" title="Konstruktor połączeń po IPv4. " alt="" coords="171,114,331,141"/><area shape="rect" id="node3" href="classConnectionManager.html#a314bdb20e3fb92c2567dfac2da975618" title="ConnectionManager::send" alt="" coords="379,114,552,141"/><area shape="rect" id="node4" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd" title="AgentServer::connect" alt="" coords="601,13,748,39"/><area shape="rect" id="node6" href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec" title="Metoda łącząca się z konsolą administratora. Wysyła wiadomość. " alt="" coords="600,63,749,90"/><area shape="rect" id="node8" href="application_2protocol_2client_8cpp.html#a3a07ed6ad76849366c5a5bcc3d1b42ca" title="rec" alt="" coords="655,114,695,141"/><area shape="rect" id="node9" href="classAgentClient.html#a7417cb37d33a126f01e92e07795a9f22" title="AgentClient::send" alt="" coords="612,165,737,191"/><area shape="rect" id="node11" href="application_2protocol_2client_8cpp.html#a02512d6914c372c7e321b6ace0d039c3" title="send_" alt="" coords="646,215,703,242"/><area shape="rect" id="node5" href="classMessageFromAgentStrategy.html#a7109a9ef64b2245661dbe0897dd10db3" title="obsługa wiadomości od agenta " alt="" coords="800,5,988,47"/><area shape="rect" id="node7" href="classMessageFromAdminStrategy.html#ad549a2e03f2ccf7737639861af154c36" title="obsługa wiadomości od admina " alt="" coords="799,71,989,112"/><area shape="rect" id="node10" href="classAgentClient.html#a4bfd3f341cc610b1c1893a0baee3889d" title="AgentClient::sendFromQueue" alt="" coords="797,165,991,191"/></map>
+<area shape="rect" id="node2" href="classConnection.html#ab49c655af4acc49507407a167325fee7" title="Konstruktor połączeń po IPv4. " alt="" coords="171,114,331,141"/><area shape="rect" id="node3" href="classConnectionManager.html#a6d9f9f9fbec8200760fea6059577f94b" title="ConnectionManager::send" alt="" coords="379,114,552,141"/><area shape="rect" id="node4" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd" title="AgentServer::connect" alt="" coords="601,13,748,39"/><area shape="rect" id="node6" href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec" title="Metoda łącząca się z konsolą administratora. Wysyła wiadomość. " alt="" coords="600,63,749,90"/><area shape="rect" id="node8" href="application_2protocol_2client_8cpp.html#a3a07ed6ad76849366c5a5bcc3d1b42ca" title="rec" alt="" coords="655,114,695,141"/><area shape="rect" id="node9" href="classAgentClient.html#a7417cb37d33a126f01e92e07795a9f22" title="AgentClient::send" alt="" coords="612,165,737,191"/><area shape="rect" id="node11" href="application_2protocol_2client_8cpp.html#a02512d6914c372c7e321b6ace0d039c3" title="send_" alt="" coords="646,215,703,242"/><area shape="rect" id="node5" href="classMessageFromAgentStrategy.html#a7109a9ef64b2245661dbe0897dd10db3" title="obsługa wiadomości od agenta " alt="" coords="800,5,988,47"/><area shape="rect" id="node7" href="classMessageFromAdminStrategy.html#ad549a2e03f2ccf7737639861af154c36" title="obsługa wiadomości od admina " alt="" coords="799,71,989,112"/><area shape="rect" id="node10" href="classAgentClient.html#a4bfd3f341cc610b1c1893a0baee3889d" title="AgentClient::sendFromQueue" alt="" coords="797,165,991,191"/></map>
 </div>
 </p>
 
@@ -474,9 +499,9 @@ Oto graf wywoływań tej funkcji:</div>
 
 <p>Reimplementowana w <a class="el" href="classSocketIp4.html#a324af3c1bf76094bc60e4a1664a83337">SocketIp4</a>.</p>
 
-<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00042">42</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00041">41</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="ConnectionManager_8cpp_source.html#l00016">awaitConnections()</a>.</p>
+<p>Odwołania w <a class="el" href="ConnectionManager_8cpp_source.html#l00020">awaitConnections()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -512,9 +537,9 @@ Oto graf wywoływań tej funkcji:</div>
 
 <p>Reimplementowana w <a class="el" href="classSocketIp4.html#a006ceef03836f074fd695bbdcf32eb28">SocketIp4</a>.</p>
 
-<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00043">43</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00042">42</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="ConnectionManager_8cpp_source.html#l00016">awaitConnections()</a>.</p>
+<p>Odwołania w <a class="el" href="ConnectionManager_8cpp_source.html#l00020">awaitConnections()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
@@ -540,9 +565,11 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00045">45</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
+<p>Ustawia socket w tryb nasluchiwania. </p>
 
-<p>Odwołuje się do <a class="el" href="SocketException_8cpp_source.html#l00075">ListenSockEx::ListenSockEx()</a>.</p>
+<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00044">44</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
+
+<p>Odwołuje się do <a class="el" href="SocketException_8cpp_source.html#l00078">ListenSockEx::ListenSockEx()</a>.</p>
 
 <p>Odwołania w <a class="el" href="ConnectionManager_8cpp_source.html#l00084">ConnectionManager::ConnectionManager()</a>.</p>
 
@@ -560,7 +587,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSocket_a34374a7d9ae416f8593bea924ab2099b_icgraph.png" border="0" usemap="#classSocket_a34374a7d9ae416f8593bea924ab2099b_icgraph" alt=""/></div>
 <map name="classSocket_a34374a7d9ae416f8593bea924ab2099b_icgraph" id="classSocket_a34374a7d9ae416f8593bea924ab2099b_icgraph">
-<area shape="rect" id="node2" href="classConnectionManager.html#acddf7b9dd1fa9319ffba80b4ecf2e5e5" title="ConnectionManager::\lConnectionManager" alt="" coords="156,149,301,190"/><area shape="rect" id="node3" href="classConnectionManager.html#a38f4c092a52fd80c19d613fafad832b9" title="ConnectionManager::\lgetInstance" alt="" coords="349,149,495,190"/><area shape="rect" id="node4" href="classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2" title="Konstruktor bez podania adresu administratora. Oznacza to, że czekamy na pierwsze zapytanie z konsoli..." alt="" coords="550,5,726,32"/><area shape="rect" id="node5" href="classAgentClient.html#af82fc2e72f38fb7075d0667a18f4e8ba" title="AgentClient::AgentClient" alt="" coords="556,56,720,83"/><area shape="rect" id="node6" href="classAgentServer.html#ae00b5d7d78d9786b11a396246710a621" title="AgentServer::AgentServer" alt="" coords="553,131,723,157"/><area shape="rect" id="node8" href="classConsoleClient.html#aa23043606363a6d5e39ac4ac53e754fa" title="ConsoleClient::ConsoleClient" alt="" coords="543,181,733,208"/><area shape="rect" id="node10" href="application_2protocol_2client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="613,232,663,259"/><area shape="rect" id="node11" href="classSlave.html#a298f9ea1a508f269d9a3fea3eee0d245" title="Slave::Slave" alt="" coords="592,307,684,333"/><area shape="rect" id="node7" href="application_2server_2server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="781,131,832,157"/><area shape="rect" id="node9" href="Console_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="781,181,832,208"/></map>
+<area shape="rect" id="node2" href="classConnectionManager.html#acddf7b9dd1fa9319ffba80b4ecf2e5e5" title="ConnectionManager::\lConnectionManager" alt="" coords="156,149,301,190"/><area shape="rect" id="node3" href="classConnectionManager.html#a27fa06ae5a93d1c333fd14eb7db9089b" title="ConnectionManager::\lgetInstance" alt="" coords="349,149,495,190"/><area shape="rect" id="node4" href="classAdminServer.html#a54b8d8388cf90eacb049daa9ae08bac2" title="Konstruktor bez podania adresu administratora. Oznacza to, że czekamy na pierwsze zapytanie z konsoli..." alt="" coords="550,5,726,32"/><area shape="rect" id="node5" href="classAgentClient.html#af82fc2e72f38fb7075d0667a18f4e8ba" title="AgentClient::AgentClient" alt="" coords="556,56,720,83"/><area shape="rect" id="node6" href="classAgentServer.html#ae00b5d7d78d9786b11a396246710a621" title="AgentServer::AgentServer" alt="" coords="553,131,723,157"/><area shape="rect" id="node8" href="classConsoleClient.html#aa23043606363a6d5e39ac4ac53e754fa" title="ConsoleClient::ConsoleClient" alt="" coords="543,181,733,208"/><area shape="rect" id="node10" href="application_2protocol_2client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="613,232,663,259"/><area shape="rect" id="node11" href="classSlave.html#a298f9ea1a508f269d9a3fea3eee0d245" title="Slave::Slave" alt="" coords="592,307,684,333"/><area shape="rect" id="node7" href="application_2server_2server_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="781,131,832,157"/><area shape="rect" id="node9" href="Console_8cpp.html#af78beb4a0d33807a778c4dd88e28f164" title="main" alt="" coords="781,181,832,208"/></map>
 </div>
 </p>
 
@@ -598,18 +625,18 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplementowana w <a class="el" href="classSocketIp4.html#a2665bf63f5b84a551b351ccee32638d6">SocketIp4</a>.</p>
+<p>Reimplementowana w <a class="el" href="classSocketIp6.html#af35b05bbe9039b228e9ab58242a3f959">SocketIp6</a> i <a class="el" href="classSocketIp4.html#a2665bf63f5b84a551b351ccee32638d6">SocketIp4</a>.</p>
 
-<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00041">41</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00040">40</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Connection_8cpp_source.html#l00285">Connection::recDep()</a>, <a class="el" href="Connection_8cpp_source.html#l00319">Connection::receive()</a>, <a class="el" href="Connection_8cpp_source.html#l00169">Connection::recErr()</a>, <a class="el" href="Connection_8cpp_source.html#l00106">Connection::recFile()</a>, <a class="el" href="Connection_8cpp_source.html#l00183">Connection::recHost()</a>, <a class="el" href="Connection_8cpp_source.html#l00236">Connection::recRet()</a> i <a class="el" href="Connection_8cpp_source.html#l00066">Connection::recTask()</a>.</p>
+<p>Odwołania w <a class="el" href="Connection_8cpp_source.html#l00282">Connection::recDep()</a>, <a class="el" href="Connection_8cpp_source.html#l00316">Connection::receive()</a>, <a class="el" href="Connection_8cpp_source.html#l00166">Connection::recErr()</a>, <a class="el" href="Connection_8cpp_source.html#l00103">Connection::recFile()</a>, <a class="el" href="Connection_8cpp_source.html#l00180">Connection::recHost()</a>, <a class="el" href="Connection_8cpp_source.html#l00233">Connection::recRet()</a> i <a class="el" href="Connection_8cpp_source.html#l00063">Connection::recTask()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSocket_a6817b8ad1ae209f740f303dc8cbc6ed8_icgraph.png" border="0" usemap="#classSocket_a6817b8ad1ae209f740f303dc8cbc6ed8_icgraph" alt=""/></div>
 <map name="classSocket_a6817b8ad1ae209f740f303dc8cbc6ed8_icgraph" id="classSocket_a6817b8ad1ae209f740f303dc8cbc6ed8_icgraph">
-<area shape="rect" id="node2" href="classConnection.html#aeb32d06dfe76dbaf772d23fa4536e789" title="Connection::recDep" alt="" coords="151,5,287,32"/><area shape="rect" id="node3" href="classConnection.html#abc2969606fc0934d737c78cddd64ffcf" title="Funkcja oczekująca na komunikat od zdalnego hosta. " alt="" coords="337,157,472,184"/><area shape="rect" id="node11" href="classConnection.html#a5e0be3518e85ec27066cb512c636d5fb" title="Connection::recErr" alt="" coords="153,107,284,133"/><area shape="rect" id="node12" href="classConnection.html#a19a12271edf96cd222811ee82176988e" title="Connection::recFile" alt="" coords="151,157,286,184"/><area shape="rect" id="node13" href="classConnection.html#a003ce0ffaf8c0e1c390cf1f3317fce79" title="Connection::recHost" alt="" coords="149,208,289,235"/><area shape="rect" id="node14" href="classConnection.html#a1fb3bbb3d8905999cdb7304a84c254fd" title="Connection::recRet" alt="" coords="152,259,285,285"/><area shape="rect" id="node15" href="classConnection.html#a6a4e873b39006bf7fa50f8df7326acbe" title="Connection::recTask" alt="" coords="148,309,289,336"/><area shape="rect" id="node4" href="classConnectionManager.html#ac8fcde3746046cf78805935050c7b1c4" title="ConnectionManager::\lreceive" alt="" coords="520,150,665,191"/><area shape="rect" id="node5" href="classAgentServer.html#a001e979f72cf3d360d424cea0df70165" title="AgentServer::listen" alt="" coords="715,81,846,108"/><area shape="rect" id="node6" href="classAdminServer.html#a2c3c374cb8653d62a373735cf316d4e4" title="Metoda nasłuchująca na połączenie z konsoli administratora. Odbiera wiadomość i wrzuca w zdarzeniu do..." alt="" coords="713,132,848,159"/><area shape="rect" id="node8" href="classAgentClient.html#aa1f2e65a8c67cc6cf6d9b7d65d662812" title="AgentClient::listen" alt="" coords="717,183,845,209"/><area shape="rect" id="node10" href="application_2protocol_2client_8cpp.html#a3a07ed6ad76849366c5a5bcc3d1b42ca" title="rec" alt="" coords="761,233,801,260"/><area shape="rect" id="node7" href="classAdminServer.html#ad843107448ab68ee4d0eb00d3dd60fec" title="Metoda odpowiada za wewnętrzne życie AdminServer&#39;a. Należy raczej oczekiwać, że będzie się zawieszała..." alt="" coords="896,132,1025,159"/><area shape="rect" id="node9" href="classAgentClient.html#af0e975638976932e9ab31c654843717e" title="AgentClient::start" alt="" coords="899,183,1022,209"/></map>
+<area shape="rect" id="node2" href="classConnection.html#aeb32d06dfe76dbaf772d23fa4536e789" title="Connection::recDep" alt="" coords="151,5,287,32"/><area shape="rect" id="node3" href="classConnection.html#abc2969606fc0934d737c78cddd64ffcf" title="Funkcja oczekująca na komunikat od zdalnego hosta. " alt="" coords="337,157,472,184"/><area shape="rect" id="node11" href="classConnection.html#a5e0be3518e85ec27066cb512c636d5fb" title="Connection::recErr" alt="" coords="153,107,284,133"/><area shape="rect" id="node12" href="classConnection.html#a19a12271edf96cd222811ee82176988e" title="Connection::recFile" alt="" coords="151,157,286,184"/><area shape="rect" id="node13" href="classConnection.html#a003ce0ffaf8c0e1c390cf1f3317fce79" title="Connection::recHost" alt="" coords="149,208,289,235"/><area shape="rect" id="node14" href="classConnection.html#a1fb3bbb3d8905999cdb7304a84c254fd" title="Connection::recRet" alt="" coords="152,259,285,285"/><area shape="rect" id="node15" href="classConnection.html#a6a4e873b39006bf7fa50f8df7326acbe" title="Connection::recTask" alt="" coords="148,309,289,336"/><area shape="rect" id="node4" href="classConnectionManager.html#a115016e0b145e2284fc29fc331bc76a4" title="ConnectionManager::\lreceive" alt="" coords="520,150,665,191"/><area shape="rect" id="node5" href="classAgentServer.html#a001e979f72cf3d360d424cea0df70165" title="AgentServer::listen" alt="" coords="715,81,846,108"/><area shape="rect" id="node6" href="classAdminServer.html#a2c3c374cb8653d62a373735cf316d4e4" title="Metoda nasłuchująca na połączenie z konsoli administratora. Odbiera wiadomość i wrzuca w zdarzeniu do..." alt="" coords="713,132,848,159"/><area shape="rect" id="node8" href="classAgentClient.html#aa1f2e65a8c67cc6cf6d9b7d65d662812" title="AgentClient::listen" alt="" coords="717,183,845,209"/><area shape="rect" id="node10" href="application_2protocol_2client_8cpp.html#a3a07ed6ad76849366c5a5bcc3d1b42ca" title="rec" alt="" coords="761,233,801,260"/><area shape="rect" id="node7" href="classAdminServer.html#ad843107448ab68ee4d0eb00d3dd60fec" title="Metoda odpowiada za wewnętrzne życie AdminServer&#39;a. Należy raczej oczekiwać, że będzie się zawieszała..." alt="" coords="896,132,1025,159"/><area shape="rect" id="node9" href="classAgentClient.html#af0e975638976932e9ab31c654843717e" title="AgentClient::start" alt="" coords="899,183,1022,209"/></map>
 </div>
 </p>
 
@@ -647,18 +674,18 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplementowana w <a class="el" href="classSocketIp4.html#a9816ce4c69916b3472708975f056ef02">SocketIp4</a>.</p>
+<p>Reimplementowana w <a class="el" href="classSocketIp6.html#a6cc97ce5922ac8b90c376d1a42da1c13">SocketIp6</a> i <a class="el" href="classSocketIp4.html#a9816ce4c69916b3472708975f056ef02">SocketIp4</a>.</p>
 
-<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00040">40</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Socket_8cpp_source.html#l00039">39</a> pliku <a class="el" href="Socket_8cpp_source.html">Socket.cpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Connection_8cpp_source.html#l00057">Connection::send()</a>.</p>
+<p>Odwołania w <a class="el" href="Connection_8cpp_source.html#l00054">Connection::send()</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSocket_afe708d0a437f0b966fef606b2a2af2b0_icgraph.png" border="0" usemap="#classSocket_afe708d0a437f0b966fef606b2a2af2b0_icgraph" alt=""/></div>
 <map name="classSocket_afe708d0a437f0b966fef606b2a2af2b0_icgraph" id="classSocket_afe708d0a437f0b966fef606b2a2af2b0_icgraph">
-<area shape="rect" id="node2" href="classConnection.html#ac8abd34010a78efd01e2af9aa7fa92fd" title="Funcja wysyłająca komunikat. " alt="" coords="152,114,275,141"/><area shape="rect" id="node3" href="classConnectionManager.html#a314bdb20e3fb92c2567dfac2da975618" title="ConnectionManager::send" alt="" coords="323,114,496,141"/><area shape="rect" id="node4" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd" title="AgentServer::connect" alt="" coords="545,13,692,39"/><area shape="rect" id="node6" href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec" title="Metoda łącząca się z konsolą administratora. Wysyła wiadomość. " alt="" coords="544,63,693,90"/><area shape="rect" id="node8" href="application_2protocol_2client_8cpp.html#a3a07ed6ad76849366c5a5bcc3d1b42ca" title="rec" alt="" coords="599,114,639,141"/><area shape="rect" id="node9" href="classAgentClient.html#a7417cb37d33a126f01e92e07795a9f22" title="AgentClient::send" alt="" coords="556,165,681,191"/><area shape="rect" id="node11" href="application_2protocol_2client_8cpp.html#a02512d6914c372c7e321b6ace0d039c3" title="send_" alt="" coords="590,215,647,242"/><area shape="rect" id="node5" href="classMessageFromAgentStrategy.html#a7109a9ef64b2245661dbe0897dd10db3" title="obsługa wiadomości od agenta " alt="" coords="744,5,932,47"/><area shape="rect" id="node7" href="classMessageFromAdminStrategy.html#ad549a2e03f2ccf7737639861af154c36" title="obsługa wiadomości od admina " alt="" coords="743,71,933,112"/><area shape="rect" id="node10" href="classAgentClient.html#a4bfd3f341cc610b1c1893a0baee3889d" title="AgentClient::sendFromQueue" alt="" coords="741,165,935,191"/></map>
+<area shape="rect" id="node2" href="classConnection.html#ac8abd34010a78efd01e2af9aa7fa92fd" title="Funcja wysyłająca komunikat. " alt="" coords="152,114,275,141"/><area shape="rect" id="node3" href="classConnectionManager.html#a6d9f9f9fbec8200760fea6059577f94b" title="ConnectionManager::send" alt="" coords="323,114,496,141"/><area shape="rect" id="node4" href="classAgentServer.html#a118dad89f6c0aa20e455e5d3d9fbf6fd" title="AgentServer::connect" alt="" coords="545,13,692,39"/><area shape="rect" id="node6" href="classAdminServer.html#ae0cc7705054a63f1ee974ba30ef9a5ec" title="Metoda łącząca się z konsolą administratora. Wysyła wiadomość. " alt="" coords="544,63,693,90"/><area shape="rect" id="node8" href="application_2protocol_2client_8cpp.html#a3a07ed6ad76849366c5a5bcc3d1b42ca" title="rec" alt="" coords="599,114,639,141"/><area shape="rect" id="node9" href="classAgentClient.html#a7417cb37d33a126f01e92e07795a9f22" title="AgentClient::send" alt="" coords="556,165,681,191"/><area shape="rect" id="node11" href="application_2protocol_2client_8cpp.html#a02512d6914c372c7e321b6ace0d039c3" title="send_" alt="" coords="590,215,647,242"/><area shape="rect" id="node5" href="classMessageFromAgentStrategy.html#a7109a9ef64b2245661dbe0897dd10db3" title="obsługa wiadomości od agenta " alt="" coords="744,5,932,47"/><area shape="rect" id="node7" href="classMessageFromAdminStrategy.html#ad549a2e03f2ccf7737639861af154c36" title="obsługa wiadomości od admina " alt="" coords="743,71,933,112"/><area shape="rect" id="node10" href="classAgentClient.html#a4bfd3f341cc610b1c1893a0baee3889d" title="AgentClient::sendFromQueue" alt="" coords="741,165,935,191"/></map>
 </div>
 </p>
 
@@ -683,9 +710,9 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Socket_8hpp_source.html#l00056">56</a> pliku <a class="el" href="Socket_8hpp_source.html">Socket.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Socket_8hpp_source.html#l00083">83</a> pliku <a class="el" href="Socket_8hpp_source.html">Socket.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Socket_8cpp_source.html#l00021">Socket()</a>.</p>
+<p>Odwołania w <a class="el" href="Socket_8cpp_source.html#l00020">Socket()</a>.</p>
 
 </div>
 </div>
@@ -707,9 +734,9 @@ Oto graf wywoływań tej funkcji:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definicja w linii <a class="el" href="Socket_8hpp_source.html#l00054">54</a> pliku <a class="el" href="Socket_8hpp_source.html">Socket.hpp</a>.</p>
+<p>Definicja w linii <a class="el" href="Socket_8hpp_source.html#l00081">81</a> pliku <a class="el" href="Socket_8hpp_source.html">Socket.hpp</a>.</p>
 
-<p>Odwołania w <a class="el" href="Socket_8cpp_source.html#l00025">Socket()</a>.</p>
+<p>Odwołania w <a class="el" href="Socket_8cpp_source.html#l00024">Socket()</a>.</p>
 
 </div>
 </div>
@@ -723,7 +750,7 @@ Oto graf wywoływań tej funkcji:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classSocket.html">Socket</a></li>
-    <li class="footer">Wygenerowano Cz, 7 sty 2016 17:24:01 dla LOTC programem
+    <li class="footer">Wygenerowano Cz, 7 sty 2016 22:11:00 dla LOTC programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
