@@ -42,7 +42,7 @@
 	
 		\begin{itemize}
 	        \item Low Orbit Task Cannon (LOTC) uruchamiany jest na systemie operacyjnym GNU/Linux
-	        \item LOTC ma stały dostęp do zewnętrznego serwera NTP (w szczególności - łączność z Internetem)
+	        \item Hosty systemu LOTC mają działającą usługę synchronizacji czasu 
 	    \end{itemize}
 	    
 	    \subsection{Zadania}
@@ -64,16 +64,14 @@
 		        \item Serwer
 		        \item Klient (agent)
 		        \item Konsola administratora
-		        \item Minimalny klient NTP
-		        \item Plugin Wireshark (opcjonalny)
 		    \end{enumerate}
 		    
 	    \subsection{Topologia}
 	    
 		    \begin{itemize}
-		        \item Każdy klient LOTC musi być połączony siecią TCP/IP z serwerem LOTC i serwerem NTP 
+		        \item Każdy klient LOTC musi być połączony siecią TCP/IP z serwerem LOTC
 		        \item Konsola administratora musi być połączona siecią TCP/IP z serwerem LOTC 
-		        \item Serwer LOTC musi być połączony siecią TCP/IP z serwerem NTP
+		        \item Serwer LOTC musi być połączony siecią TCP/IP
 		    \end{itemize}
 		    
 		    \begin{figure}[H]
@@ -97,7 +95,7 @@
 	
 	    \begin{itemize}   
 			\item System operacyjny: GNU/Linux
-			\item Język programowania: C++14 (system LOTC), Lua (Plugin Wireshark)
+			\item Język programowania: C++14 (system LOTC)
 		    \item Biblioteki: Boost $ \geqslant $ 1.59 (z wyłączeniem nakładek na API gniazd BSD)
 			\item Kompilator: GCC $ \geqslant $ 5.2.0
 			\item Debugger: GDB $ \geqslant $ 7.10
@@ -226,17 +224,17 @@
 		        \begin{tabular}{ c | c | c | c }
 				    \textbf{Kod binarnie} & \textbf{Kod dziesiątkowo} & \textbf{Stan} & \textbf{Opis} \\
 				    \hline
-				    000 & 0 & REQ & Inicjacja czynności \\
-				    001 & 1 & ACK & Potwierdzenie otrzymania komunikatu REQ \\
-				    010 & 2 & OK & Zakończenie czynności - sukces \\
-				    011 & 3 & ERR & Zakończenie czynności - porażka \\
+				    00 & 0 & REQ & Inicjacja czynności \\
+				    01 & 1 & ACK & Potwierdzenie otrzymania komunikatu REQ \\
+				    10 & 2 & OK & Zakończenie czynności - sukces \\
+				    11 & 3 & ERR & Zakończenie czynności - porażka \\
 				\end{tabular}
 				
         \subsubsection{Szczegóły protokołu}
             Każda z kategorii komunikatów posiada własny nagłówek.
             
             \paragraph{Kategoria HOST:\\}
-            Pozwala na dodanie albo usunięcie do $2^{16}$ agentów jednocześnie, obsługuje zarówno IPv4 jak i IPv6. Kod H\_STATE ponadto pozwala zapytać serwer o stan agenta, przy czym adres IP złożony z samych jedynek odpowiada zapytaniu o wszystkich agentów.
+            Pozwala na dodanie albo usunięcie do $2^{16}$ agentów jednocześnie.
             
             \begin{tabular}{ c | c | c }
 			    \textbf{Pole} & \textbf{Długość [bit]} & \textbf{Opis} \\
@@ -290,25 +288,25 @@
 			    Długość nazwy pliku & 7 & Maksymalnie 128 znaków \\
 			    Suma kontrolna & 16 & Wyliczana z nazwy i zawartości pliku \\
 			    ID zadania & 32 & Określa, do jakiego zadania należy plik \\
-			    Rozmiar pliku & 32 & Maksymalnie $ 2^{3} $ 2 bajtów \\
+			    Rozmiar pliku & 32 & Maksymalnie $ 2^{32} $ bajtów \\
 			    Nazwa pliku & 8 - $ 8 \cdot 128 $ &  \\
 			    Zawartość pliku & 0 - $ 8 \cdot 2^{32} $ &  \\
 			\end{tabular}
 			
 			\paragraph{Kategoria RET:\\}
-            Pozwala zwracać wyniki działania zadań. ID zadania 0xFFFFFFFF odpowiada wszystkim zadaniom - wykorzystywane przez konsolę do wysyłania żądań raportu o całym systemie.
+            Pozwala zwracać wyniki działania zadań w postaci pliku.
             
             \begin{tabular}{ c | c | c }
 			    \textbf{Pole} & \textbf{Długość [bit]} & \textbf{Opis} \\
 			    \hline
 			    Kod komunikatu & 8 & \\
 			    Kod zakończenia zadania & 8 & POSIX exit status \\
-			    Zwracany typ & 8 & któryś z typów prostych lub ciąg bitów \\
+			    Długość nazwy pliku & 8 & któryś z typów prostych lub ciąg bitów \\
 			    Wyrównanie & 8 & Zera \\
 			    ID Zadania & 32 & \\
-			    Liczba & 32/64 & Tylko gdy exit status = 0 i zwracana jest liczba \\
-			    Rozmiar danych & 32 & Tylko gdy exit status = 0 i zwracany jest ciąg \\
-			    Dane & 0 - $ 8 \cdot 2^{32} $ & Tylko gdy exit status = 0 i zwracany jest ciąg \\
+			    Rozmiar pliku & 32 & Maksymalnie $ 2^{32} $ bajtów \\
+			    Nazwa pliku & 8 - $ 8 \cdot 128 $ &  \\
+			    Zawartość pliku & 0 - $ 8 \cdot 2^{32} $ &  \\
 			\end{tabular}
 			
 			\paragraph{Kategorie SYN, PING:\\}
@@ -335,7 +333,7 @@
     \section{Serwer}
 			
 		\subsection{Opis}
-			Serwer zarządza agentami, które kontrolują procesy na swojej platformie. Informacje o tym gdzie i co ma być zrobione dostaje z konsoli administratora. Kanałem komunikacyjnym z serwerem jest protokół LOTC działający na IPv6 i Ipv4 z wykorzystaniem mechanizmu gniazd sieciowych. \\
+			Serwer zarządza agentami, które kontrolują procesy na swojej platformie. Informacje o tym gdzie i co ma być zrobione dostaje z konsoli administratora. Kanałem komunikacyjnym z serwerem jest protokół LOTC działający na Ipv4 z wykorzystaniem mechanizmu gniazd sieciowych. \\
 		
 		\subsection{Reagowanie na zdarzenia}
 			Zdarzeniami przychodzącymi do serwera mogą być polecenia z konsoli administratora, odpowiedzi od agentów lub zdarzenia wewnętrzne serwera np. time-out. Zdarzenia są obiektami z różnych klas typów zdarzeń dziedziczących po bazowej klasie zdarzeń, pojawiającymi się w kolejce zdarzeń. Zostają one obsłużone na podstawie mapy strategii i zdjęte z kolejki. Prawdopodobnie będzie około trzech różnych typów zdarzeń: komunikat z agenta, polecenie od administratora, zdarzenie wewnętrzne.
@@ -361,7 +359,7 @@
     \section{Agent (klient LOTC)}
 		\subsection{Opis}
 			Agent to autonomiczny program zarządzający przydzielonymi przez serwer zadaniami. Agent zarządzający może: załadować/usunąć zadanie, uruchomić/zatrzymać/wznowić/zabić dany proces zgodnie z harmonogramem, podać dane statystyczne serwerowi. \\
-			Agent komunikuje się z serwerem (protokołem działającym na IPv6 i IPv4) wykorzystując mechanizm gniazd sieciowych. \\
+			Agent komunikuje się z serwerem (protokołem działającym na IPv4) wykorzystując mechanizm gniazd sieciowych. \\
 		
 		\subsection{Zasady działania agenta}
 			Agent po starcie łączy się z serwerem, następnie stale oczekuje na komunikaty wysyłane przez serwer. Po przyjściu komunikatu potwierdza jego otrzymanie a następnie analizuje jego treść według ustalonego protokołu. Potem wywołuje odpowiednią metodę w nowym wątku. Główny wątek dalej czeka na komunikaty od serwera, oraz wysyła raporty z wykonania innych wątków. \\
@@ -406,20 +404,6 @@
 		
 		\subsection{Raporty}
 			Konsola administratora, dzięki otrzymywaniu raportów z serwera, w tym raportów cyklicznych, może generować zbiorczy raport z całej pracy systemu (przez określony czas lub do zakończenia pracy) w oddzielnym pliku. Format tych raportów pozostaje do ustalenia (jakie informacje, kiedy, jak często, w jakiej formie to przedstawić).
-    
-    \section{Klient NTP}
-    
-        W celu przeprowadzenia synchronizacji hostów, serwer i klienci korzystają z modułu implementującego minimalistycznego klienta NTP. Moduł ten poza pobraniem aktualnego czasu oblicza też różnicę między czasem systemowym i zwraca parametr korygujący pozwalający uzyskać synchronizację systemu LOTC bez zmieniania zegarów systemowych poszczególnych maszyn. 
-    
-    \section{Plugin Wireshark}
-    
-        Plugin Wireshark nie jest częścią systemu LOTC, lecz ma na celu ułatwienie analizy komunikacji między jego hostami. Podstawowymi zadaniami pluginu są:
-        
-        \begin{itemize}   
-			\item Identyfikacja i dysekcja protokołu LOTC
-			\item Zdekodowanie pól nagłówka
-		    \item Czytelna prezentacja nagłówka
-	    \end{itemize}    
     
     \section{Przypadki użycia}
         Aby zmniejszyć objętość przypadków użycia, a zwłaszcza scenariuszy alternatywnych, powtarzające się, schematyczne działania zostaną opisane osobno w sposób ogólny.                    
