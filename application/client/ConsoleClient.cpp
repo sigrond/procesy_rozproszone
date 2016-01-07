@@ -202,7 +202,7 @@ int ConsoleClient::readCommand(string* arg)
     //sprawdzanie wprowadzonej komendy
     if (arg[0].compare("exit")==0) command = EXT;
     else if (arg[0].compare("connect")==0) command = CON;
-    else if(arg[0].compare("add")==0) command = CON;
+    else if(arg[0].compare("add")==0) command = ADD;
 
     return command;
 }
