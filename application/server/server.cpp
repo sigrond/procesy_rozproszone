@@ -1,7 +1,7 @@
 /** \file server.cpp
  * \author Tomasz Jakubczyk
  * \brief Głowny plik serwera zarządzającego procesami rozproszonymi.
- * \date
+ * \date 20 Nov 2015
  * Low Orbit Task Cannon
  */
 

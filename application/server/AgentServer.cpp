@@ -10,6 +10,7 @@
 #include <iostream>
 #include <thread>
 #include <condition_variable>
+#include <chrono>
 
 using namespace std;
 
@@ -100,6 +101,7 @@ void AgentServer::connect(Slave* who, message::Message* m)
 			#ifdef _DEBUG
 			cout<<"agent send exceptin"<<endl;
 			#endif // _DEBUG
+			std::this_thread::sleep_for (std::chrono::milliseconds(1000));
 		}
 	}
 }
