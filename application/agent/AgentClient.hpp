@@ -1,6 +1,8 @@
 /** \file AgentClient.hpp
- * \author Eryk Ratyński
+ * \authors Eryk Ratyński, Tomasz Jakubczyk
  * \brief Plik nagłówkowy klienta dla agenta
+ * \date 12 gru 2015
+ * Low Orbit Task Cannon
  */
 #ifndef AgentClient_hpp
 #define AgentClient_hpp
