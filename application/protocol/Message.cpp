@@ -508,7 +508,7 @@ synMessage::synMessage ( State state ) : Message::Message( Category::SYN, state 
 //---------------
 pingMessage::pingMessage ( State state ) : Message::Message( Category::PING, state )
 {
-	DBG_M( "taskMessage() ACK/OK/NOK" );
+	DBG_M( "pingMessage() ACK/OK/NOK" );
 }
 
 
