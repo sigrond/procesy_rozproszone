@@ -1,8 +1,13 @@
-/** \file Message.cpp
+/**
+ * Low Orbit Task Cannon
  *
- * \authors Tomasz Jakubczyk, ...
- * \brief Plik z implementacjami metod klasy Message.
- * \todo Andrzej napisze, a na razie zaślepki.
+ * \file    Message.cpp
+ *
+ * \authors Tomasz Jakubczyk, Andrzej Roguski
+ *
+ * \brief   Plik z implementacjami metod klasy Message.
+ *
+ * \date    16.12.2015
  */
 
 #include <iostream>
@@ -162,10 +167,10 @@ std::vector<Ipv4> & hostMessage::getAddresses()
 taskMessage::taskMessage( TaskSub sub,
                           State s,
                           bool rPriority,
-			  unsigned short priority,
-			  unsigned long tId,
-			  const std::chrono::steady_clock::time_point & timestamp ) :
-			
+                          unsigned short priority,
+                          unsigned long tId,
+                          const std::chrono::steady_clock::time_point & timestamp ) :
+
 	Message::Message( Category::TASK ),
 	taskSub(sub),
 	respectPriority(rPriority),

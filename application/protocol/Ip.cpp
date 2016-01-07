@@ -1,12 +1,13 @@
 /**
- * \file Ip.cpp
+ * Low Orbit Task Cannon
  *
- * \brief Plik z implementacjami metod klasy Ip
+ * \file     Ip.cpp
+ *
+ * \brief    Plik z implementacjami metod klasy Ip
  *
  * \authors Tomasz Jakubczyk, Andrzej Roguski
  *
- * \todo IPv6
- *
+ * \date    16.12.2015
  */
 
 #include <regex>
@@ -27,10 +28,10 @@ Ip::~Ip(){}
 // ------------------------------------------------------
 Ipv4::Ipv4 ( const std::string & str ) : addrStr(str)
 {
-        if( ! isCorrect( str ) )
-                throw BadIpException();
+	if( ! isCorrect( str ) )
+		throw BadIpException();
 
-        inet_aton( str.c_str(), &address );
+	inet_aton( str.c_str(), &address );
 }
 
 Ipv4::Ipv4 ( const Ipv4 & that )
@@ -41,32 +42,32 @@ Ipv4::Ipv4 ( const Ipv4 & that )
 
 bool Ipv4::isCorrect ( const std::string & str ) const
 {
-        // ten koszmar poniżej to regex sprawdzający, czy ciąg jest poprwanym adresem IPv4 w konwencji A.B.C.D
-        const static std::regex exIpv4("(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)");
+	// ten koszmar poniżej to regex sprawdzający, czy ciąg jest poprwanym adresem IPv4 w konwencji A.B.C.D
+	const static std::regex exIpv4("(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)");
 	
-        return std::regex_match( str, exIpv4 );
+	return std::regex_match( str, exIpv4 );
 }
 
 
 std::string Ipv4::getAddress() const
 {
-        return addrStr;
+	return addrStr;
 }
 
 unsigned long Ipv4::getAddressNum() const
 {
-        return address.s_addr;
+	return address.s_addr;
 }
 
 bool Ipv4::operator<( const Ipv4 & that ) const
 {
-       return getAddressNum() < that.getAddressNum();
+	return getAddressNum() < that.getAddressNum();
 }
 
 
 bool Ipv4::operator==( const Ipv4 & that ) const
 {
-        return getAddressNum() == that.getAddressNum();
+	return getAddressNum() == that.getAddressNum();
 }
 
 Ipv4 & Ipv4::operator=( const Ipv4 & that )
@@ -96,7 +97,7 @@ void Ipv6::toNumbers()
 
 std::string Ipv6::getAddress() const
 {
-        return "";
+	return "";
 }
 
 

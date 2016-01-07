@@ -1,9 +1,13 @@
-/** 
- * \file Connection.cpp
+/**
+ * Low Orbit Task Cannon
  *
- * \brief Plik z implementacjami metod klasy Connection.
+ * \file    Connection.cpp
+ *
+ * \brief   Plik z implementacjami metod klasy Connection.
  *
  * \authors Tomasz Jakubczyk, Andrzej Roguski
+ *
+ * \date    16.12.2015
  */
 
 #include <fstream>
@@ -19,8 +23,8 @@
 
 Connection::Connection ( const Ipv4 & address, unsigned short port, unsigned short clientPort )
 {
-        DBG("Connection( " << address.getAddress() << ":" << port <<" )")       
-        socket = new SocketIp4( address, port );
+	DBG("Connection( " << address.getAddress() << ":" << port <<" )")
+	socket = new SocketIp4( address, port );
 
 	if( port != 55555 )
 		socket->connect();
@@ -35,13 +39,13 @@ Connection::Connection ( const Ipv6 & address )
 
 Connection::Connection ( int msgsock )
 {
-        DBG("Connection( " << msgsock << " )")
-        socket = new SocketIp4( msgsock );
+	DBG("Connection( " << msgsock << " )")
+	socket = new SocketIp4( msgsock );
 }
 
 Connection::~Connection ()
 {
-        DBG("~Connection(): My ancestors are smiling at me, Imperials. Can you say the same?")
+	DBG("~Connection(): My ancestors are smiling at me, Imperials. Can you say the same?")
 	
 	if( socket )
 		delete socket;
@@ -49,7 +53,7 @@ Connection::~Connection ()
 
 void Connection::send ( const message::Message & message )
 {
-        DBG("Conn::send()")
+	DBG("Conn::send()")
 
 	socket->send( message.getBuffer(), message.getBufferSize() );
 
@@ -311,8 +315,8 @@ void Connection::recDep ( message::Message * & message )
 
 void Connection::receive ( message::Message * & message )
 {
-        DBG("Conn::rec()")
-        
+	DBG("Conn::rec()")
+
 	char * code = new char [ 1 ];
 
 	memset( code, 0, sizeof( code ) );
@@ -413,6 +417,6 @@ void Connection::receive ( message::Message * & message )
 
 	delete code;
 
-        
+
 	socket->close();
 }

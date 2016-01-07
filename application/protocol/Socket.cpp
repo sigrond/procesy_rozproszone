@@ -1,15 +1,14 @@
-/*
+/**
+ * Low Orbit Task Cannon
+ *
  * \file     Socket.cpp
  * 
  * \author   Andrzej Roguski
  *
- * \todo     WYJĄTKI!!!
+ * \brief    Plik z definicjami klas Socket
+ *
+ * \date     19.12.2015
  */
-
-
-// >2015
-// >sprawdzanie zwracanej wartości w celu wyłapania błędów
-
 
 #include "Socket.hpp"
 #include <string>
@@ -44,87 +43,84 @@ unsigned short Socket::getPort() const {}
 
 int Socket::listen()
 {
-        DBG("Socket::listen()")
+	DBG("Socket::listen()")
 
-        int ret = ::listen( sockfd, BACKLOG );
+	int ret = ::listen( sockfd, BACKLOG );
 
-        if( ret != 0 )
-                throw ListenSockEx();
+	if( ret != 0 )
+		throw ListenSockEx();
 
-        return ret;
+	return ret;
 }
 
 int Socket::close()
 {
 	DBG("Socket::Close()" )
-        shutdown( sockfd, 2 );
+	shutdown( sockfd, 2 );
 
 	int c = ::close( sockfd );
 
 	usleep(10000);
 
-        return c;
+	return c;
 }
 
 
 
 SocketIp4::SocketIp4( const Ipv4 & ip, unsigned short port ) : Socket( port ), ip(ip)
 {
-        DBG("SocketIp4( " << ip.getAddress() << " )")
+	DBG("SocketIp4( " << ip.getAddress() << " )")
 
-        sockfd = socket ( AF_INET, SOCK_STREAM, 0 );
+	sockfd = socket ( AF_INET, SOCK_STREAM, 0 );
 
-        saddr.sin_family = AF_INET;
+	saddr.sin_family = AF_INET;
 
-        saddr.sin_addr.s_addr = ip.getAddressNum();
+	saddr.sin_addr.s_addr = ip.getAddressNum();
 
-        saddr.sin_port = htons( port );
+	saddr.sin_port = htons( port );
 
 	struct timeval tv;
 
 	tv.tv_sec = TIMEOUT;
 	tv.tv_usec = 0;
-
-	//setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, (char *)&tv,sizeof(struct timeval));
-
 }
 
 
 SocketIp4::SocketIp4( int msgsock ) : Socket( msgsock, 0 )
 {
-        DBG("SocketIp4( " << msgsock << " )")
+	DBG("SocketIp4( " << msgsock << " )")
 }
 
 int SocketIp4::bind()
 {
-        DBG("SocketIp4::bind()")
+	DBG("SocketIp4::bind()")
 
-        int reuseaddr = 1;
-        setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &reuseaddr, sizeof(reuseaddr));
+	int reuseaddr = 1;
+	setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &reuseaddr, sizeof(reuseaddr));
 
-        int ret = ::bind( sockfd, (struct sockaddr *) &saddr, sizeof( saddr ) ); 
+	int ret = ::bind( sockfd, (struct sockaddr *) &saddr, sizeof( saddr ) ); 
 
-        if(ret != 0)
-                throw BindSockEx();
+	if(ret != 0)
+		throw BindSockEx();
 
-        return ret;
+	return ret;
 }
 
 int SocketIp4::connect()
 {
-        DBG("SocketIp4::connect()")
+	DBG("SocketIp4::connect()")
 
-        int ret = ::connect( sockfd, (struct sockaddr *) &saddr, sizeof( saddr ) );
+	int ret = ::connect( sockfd, (struct sockaddr *) &saddr, sizeof( saddr ) );
 
-        if( ret != 0 )
-                throw ConnectSockEx();
+	if( ret != 0 )
+		throw ConnectSockEx();
 
-        return ret;
+	return ret;
 }
 
 int SocketIp4::connect( unsigned short clientPort )
 {
-        DBG("SocketIp4::connect( " << clientPort << " )")
+	DBG("SocketIp4::connect( " << clientPort << " )")
 
 	sockaddr_in tmp = saddr;
 
@@ -134,87 +130,84 @@ int SocketIp4::connect( unsigned short clientPort )
 
 	saddr = tmp;
 
-        int ret = ::connect( sockfd, (struct sockaddr *) &saddr, sizeof( saddr ) );
+	int ret = ::connect( sockfd, (struct sockaddr *) &saddr, sizeof( saddr ) );
 
-        if( ret != 0 )
-                throw ConnectSockEx();
+	if( ret != 0 )
+		throw ConnectSockEx();
 
-        return ret;
+	return ret;
 }
 
 int SocketIp4::accept()
 {
-        DBG("SocketIp4::accept()")
+	DBG("SocketIp4::accept()")
 
-        socklen_t addrlen = sizeof( saddr );
+	socklen_t addrlen = sizeof( saddr );
 
-        int msgsock = ::accept( sockfd, (struct sockaddr *) &saddr, &addrlen  );
+	int msgsock = ::accept( sockfd, (struct sockaddr *) &saddr, &addrlen  );
 
-        if( msgsock == -1 )
-	/*	if( errno == EAGAIN || errno == EWOULDBLOCK || errno == EINPROGRESS )
-			throw TimeoutEx();
-		else*/
-			throw AcceptSockEx();
+	if( msgsock == -1 )
+		throw AcceptSockEx();
 
-        return msgsock;
+	return msgsock;
 }
 
 int SocketIp4::recv( char * buffer, int bufferSize )
 {
-        DBG("SocketIp4::recv()")
+	DBG("SocketIp4::recv()")
 
-        int bytesRec;
+	int bytesRec;
 	unsigned bytesTotal = 0;
 
-        while( bufferSize > 0 )
-        {
+	while( bufferSize > 0 )
+	{
 		DBG("bufSize: " << bufferSize )
-                bytesRec = ::read(sockfd, buffer, bufferSize);
+		bytesRec = ::read(sockfd, buffer, bufferSize);
                 
-                if (bytesRec == 0)
-                        break;
+		if (bytesRec == 0)
+			break;
 
-                else if (bytesRec < 0)
+		else if (bytesRec < 0)
 			if( errno == EAGAIN || errno == EWOULDBLOCK || errno == EINPROGRESS )
 				throw TimeoutEx();
 			else
 				throw RecSockEx();
 
-                buffer += bytesRec;
-                bufferSize -= bytesRec;
+		buffer += bytesRec;
+		bufferSize -= bytesRec;
 		bytesTotal += bytesRec;
-        }
+	}
 
-        return bytesTotal; 
+	return bytesTotal; 
 }
 
 int SocketIp4::send( char * buffer, int bufferSize )
 {
-        DBG("SocketIp4::send()")
+	DBG("SocketIp4::send()")
 
-        int bytesSent;
+	int bytesSent;
 
-        while( bufferSize > 0 )
-        {
-                bytesSent = ::send(sockfd, buffer, bufferSize, MSG_NOSIGNAL);
-                
-                if (bytesSent == 0)
-                        break;
+	while( bufferSize > 0 )
+	{
+		bytesSent = ::send(sockfd, buffer, bufferSize, MSG_NOSIGNAL);
 
-                else if (bytesSent < 0)
-                        throw SendSockEx();
+		if (bytesSent == 0)
+			break;
 
-                buffer += bytesSent;
-                bufferSize -= bytesSent;
-        }
+		else if (bytesSent < 0)
+			throw SendSockEx();
 
-        return bytesSent; 
+		buffer += bytesSent;
+		bufferSize -= bytesSent;
+	}
+
+	return bytesSent; 
 }
 
 
 Ipv4 SocketIp4::getIp()
 {
-        return Ipv4( inet_ntoa( saddr.sin_addr ) );
+	return Ipv4( inet_ntoa( saddr.sin_addr ) );
 }
 
 unsigned short SocketIp4::getPort() const

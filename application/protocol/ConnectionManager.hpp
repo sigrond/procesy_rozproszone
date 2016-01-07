@@ -1,10 +1,13 @@
-/* 
+/**
+ * Low Orbit Task Cannon
+ *
  * \file     ConnectionManager.hpp
  *
  * \brief    Plik nagłówkowy klasy zarządzajacej polączeniami
  *
  * \author   Andrzej Roguski
  *
+ * \date     23.12.2015
  */
 
 #ifndef CONNECTION_MANAGER_HPP
@@ -35,8 +38,9 @@ class ConnectionManager
 
 public:
         /*
-         * \brief   Zwraca referencję do obiektu ConnectionManager. Jesli taki nie istnieje, tworzy go.
-         * \return  Referencja do obiektu ConnectionManager
+         * \brief                 Zwraca referencję do obiektu ConnectionManager. Jesli taki nie istnieje, tworzy go.
+	 * \param[in] listenPort  numer portu do nasłuchiwania połączeń
+         * \return                Referencja do obiektu ConnectionManager
          */
         static ConnectionManager * getInstance( unsigned short listenPort = SERVER_PORT );
 
@@ -44,6 +48,7 @@ public:
          * \brief           Wysyła komunikat msg do hosta o wskazanym adresie IPv4
          * \param[in]  ip   Adres na który ma być wyslana wiadomość
          * \param[in]  msg  Wiadomość do wysłania
+	 * \param[in]  port Port na który ma być wysłana wiadomość
          */
         void send( const Ipv4 & ip, const message::Message & msg, unsigned short port = SERVER_PORT );
 
@@ -51,6 +56,7 @@ public:
          * \brief           Wysyła komunikat msg do hosta o wskazanym adresie IPv6
          * \param[in]  ip   Adres na który ma być wyslana wiadomość
          * \param[in]  msg  Wiadomość do wysłania
+	 * \param[in]  port Port na który ma być wysłana wiadomość
          */
         void send( const Ipv6 & ip, const message::Message & msg, unsigned short port = SERVER_PORT );
         
@@ -58,6 +64,7 @@ public:
          * \brief           Czeka na wiadomość od hosta o wskazanym adresie IPv4
          * \param[in]  ip   Adres z którego ma przyjść wiadomość
          * \param[out] msg  Wskaźnik do oczekiwanej wiadomości
+	 * \param[in]  port Port nasłuchujący hosta, z którego na przyjść wiadomość
          */ 
         void receive( const Ipv4 & ip, message::Message * & msg, unsigned short port = SERVER_PORT );
 
@@ -65,18 +72,21 @@ public:
          * \brief           Czeka na wiadomość od hosta o wskazanym adresie IPv6
          * \param[in]  ip   Adres z którego ma przyjść wiadomość
          * \param[out] msg  Wskaźnik do oczekiwanej wiadomości
+	 * \param[in]  port Port nasłuchujący hosta, z którego na przyjść wiadomość
          */ 
         void receive( const Ipv6 & ip, message::Message * & msg, unsigned short port = SERVER_PORT );
         
         /*
-         * \brief           Usuwa IPv4 z mapy.
-         * \param[in]  ip   Adres IP do usunięcia
+         * \brief           Usuwa adres (IPv4 + port) z mapy.
+         * \param[in]  ip   Adres IPv4 do usunięcia
+	 * \param[in]  port Port
          */
         void remove( const Ipv4 & ip, unsigned short port = SERVER_PORT );
 
         /*
-         * \brief           Usuwa IPv6 z mapy.
-         * \param[in]  ip   Adres IP do usunięcia
+         * \brief           Usuwa (IPv6 + port) z mapy.
+         * \param[in]  ip   Adres IPv6 do usunięcia
+	 * \param[in]  port Port
          */
         void remove( const Ipv6 & ip, unsigned short port = SERVER_PORT );
         

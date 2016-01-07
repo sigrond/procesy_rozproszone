@@ -1,16 +1,13 @@
-/*
+/**
+ * Low Orbit Task Cannon
+ *
  * \file     Message.hpp
  *
  * \brief    Plik nagłówkowy klasy opakowującej komunikaty LOTC
  *
- * \version  0.3
- * \date     07.12.2015
- *
  * \authors   Andrzej Roguski, Tomasz Jakubczyk
  *
- * \todo     wyjątki
- * \todo     komantarze dokumentayjne
- * \todo     sekcje prywatne
+ * \date     06.12.2015
  */
 
 // WAŻNE : PEWNIE PODZIELĘ TEN PLIK NA MNIEJSZE JAK SIĘ ROZROŚNIE
@@ -32,24 +29,24 @@
 namespace message
 {
 
-        class Message
-        {
-        public:
+	class Message
+	{
+	public:
 		Message( Category category );
 
 		Message( Category category, unsigned long bufferSize );
 
 		Message( Category category, State state );
 
-                virtual ~Message();
+		virtual ~Message();
 
-                unsigned char getCode() const;
+		unsigned char getCode() const;
 
-                unsigned char getCategory() const;
+		unsigned char getCategory() const;
 
-                unsigned char getState() const;
+		unsigned char getState() const;
 
-                unsigned char getSubcategory() const;
+		unsigned char getSubcategory() const;
 
 		char * getBuffer() const;
 
@@ -57,164 +54,164 @@ namespace message
 
 		void print() const;
 
-        protected:
-                virtual bool checkMessage () const; //= 0; TYLKO TYMCZASOWO, BO JEST TO SZYBSZE NIŻ PISANIE METODY DLA 8 PODKLAS
+	protected:
+		virtual bool checkMessage () const; //= 0; TYLKO TYMCZASOWO, BO JEST TO SZYBSZE NIŻ PISANIE METODY DLA 8 PODKLAS
 
-                unsigned char code;
+		unsigned char code;
 
 		char * buffer;
 
 		unsigned long bufferSize;
-        };
+	};
 
 //------------------------------
 // hostMessage
 //------------------------------
-        class hostMessage : public Message
-        {
-        public:
-                hostMessage ( HostSub sub, State state, const std::vector<Ipv4> & addresses );
+	class hostMessage : public Message
+	{
+	public:
+		hostMessage ( HostSub sub, State state, const std::vector<Ipv4> & addresses );
 
-                hostMessage ( State state );
+		hostMessage ( State state );
 
-                unsigned short getAgentCount() const;
+		unsigned short getAgentCount() const;
 
-                std::vector<Ipv4> & getAddresses();
+		std::vector<Ipv4> & getAddresses();
 	
 	private:
 		std::vector<Ipv4> addresses;
-        };
+	};
 
 //------------------------------
 // taskMessage
 //------------------------------
-        class taskMessage : public Message
-        {
-        public:
-                taskMessage ( TaskSub sub,
-                              State state,
-                              bool respectPriority,
-                              unsigned short priority,
-                              unsigned long taskId,
-                              const std::chrono::steady_clock::time_point & timestamp );
+	class taskMessage : public Message
+	{
+	public:
+		taskMessage ( TaskSub sub,
+		              State state,
+		              bool respectPriority,
+		              unsigned short priority,
+		              unsigned long taskId,
+		              const std::chrono::steady_clock::time_point & timestamp );
 
-                taskMessage ( State state );
+		taskMessage ( State state );
 
-                bool getRespectPriority();
+		bool getRespectPriority();
 
-                unsigned short getPriority() const;
+		unsigned short getPriority() const;
 
-                unsigned long getTaskId() const;
+		unsigned long getTaskId() const;
 
-                std::chrono::steady_clock::time_point getTimestamp() const;
-	
+		std::chrono::steady_clock::time_point getTimestamp() const;
+
 	private:
 		TaskSub taskSub;
 		bool respectPriority;
 		unsigned short priority;
 		unsigned long taskId;
 		std::chrono::steady_clock::time_point time;
-        };
+	};
 
 //------------------------------
 // depMessage
 //------------------------------
-        class depMessage : public Message
-        {
-        public:
-                depMessage ( State state, std::vector<unsigned long> & tasks );
+	class depMessage : public Message
+	{
+	public:
+		depMessage ( State state, std::vector<unsigned long> & tasks );
 
 		depMessage ( char * buffer, unsigned long bufferSize );
 
-                depMessage ( State state );
+		depMessage ( State state );
 
-                unsigned short getTaskCount();
+		unsigned short getTaskCount();
 
-                std::vector<unsigned long> & getTasks();
-	
+		std::vector<unsigned long> & getTasks();
+
 	private:
 		std::vector<unsigned long> tasks;
-        };
+	};
 
 //------------------------------
 // fileMessage
 //------------------------------
-        class fileMessage : public Message
-        {
-        public:
-                fileMessage ( State state, bool isMainFile, unsigned long taskId, std::string filename );
+	class fileMessage : public Message
+	{
+	public:
+		fileMessage ( State state, bool isMainFile, unsigned long taskId, std::string filename );
 
-                fileMessage ( State state );
+		fileMessage ( State state );
 
-                bool getIsMainFile();
+		bool getIsMainFile();
 
-                unsigned long getTaskId();
+		unsigned long getTaskId();
 
-                std::string getFilename();
+		std::string getFilename();
 
 	private:
 		bool isMainFile;
 		unsigned long taskId;
 		std::string name;
-        };
+	};
 
 //------------------------------
 // retMessage
 //------------------------------
-        class retMessage : public Message
-        {
-        public:
-                retMessage ( State state, unsigned char exitStatus, unsigned long taskId, std::string filename);
+	class retMessage : public Message
+	{
+	public:
+		retMessage ( State state, unsigned char exitStatus, unsigned long taskId, std::string filename);
 
-                retMessage ( State state );
+		retMessage ( State state );
 
-                unsigned char getExitStatus();
+		unsigned char getExitStatus();
 
-                unsigned long getTaskId();
+		unsigned long getTaskId();
 
-                std::string getFilename();
+		std::string getFilename();
 		
 	private:
 		unsigned char exitStatus;
 		unsigned long taskId;
 		std::string name;
-        };
+	};
 
 //------------------------------
 // synMessage
 //------------------------------
-        class synMessage : public Message
-        {
-        public:
-                synMessage ( State state );
+	class synMessage : public Message
+	{
+	public:
+		synMessage ( State state );
 
-        };
+	};
 
 //------------------------------
 // pingMessage
 //------------------------------
-        class pingMessage : public Message
-        {
-        public:
-                pingMessage ( State state );
+	class pingMessage : public Message
+	{
+	public:
+		pingMessage ( State state );
 
-        };
+	};
 
 //------------------------------
 // errMessage
 //------------------------------
-        class errMessage : public Message
-        {
-        public:
-                errMessage ( ErrSub sub, State state, unsigned char errCode );
+	class errMessage : public Message
+	{
+	public:
+		errMessage ( ErrSub sub, State state, unsigned char errCode );
 
-                errMessage ( State state );
+		errMessage ( State state );
 
-                unsigned char getErrCode () const;
+		unsigned char getErrCode () const;
 	
 	private:
 		unsigned char errCode;
-        };
+	};
 
 }
 #endif // MESSAGE_HPP

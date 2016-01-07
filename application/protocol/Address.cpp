@@ -1,9 +1,13 @@
-/** 
+/**
+ * Low Orbit Task Cannon 
+ *
  * \file   Address.cpp
  *
  * \brief  Plik z defunicją klasy Address
  *
  * \author Andrzej Roguski
+ *
+ * \date   04.01.2016
  */
 
 #include "Address.hpp"

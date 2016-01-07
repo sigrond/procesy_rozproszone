@@ -1,10 +1,13 @@
-/*
+/**
+ * Low Orbit Task Cannon
+ *
  * \file     Socket.hpp
  *
- * \brief    Obiektowy wrapper dla API socketów
+ * \brief    Plik nagłówkowy klas Socket
  *
  * \author   Andrzej Roguski
  *
+ * \date     19.12.2015
  */
 
 #ifndef SOCKET_HPP
@@ -35,7 +38,7 @@ public:
 	 *
 	 * \param[in] port serwera 
 	 */
-        Socket( unsigned short port );
+	Socket( unsigned short port );
 
 	/**
 	 * \brief Konstruktor
@@ -44,37 +47,38 @@ public:
 	 *
 	 * \parem[in] port    port serwera
 	 */
-        Socket( int msgsock, unsigned short port );
+	Socket( int msgsock, unsigned short port );
 
 	/**
 	 * \brief Destruktor
 	 */
-        virtual ~Socket();
+	virtual ~Socket();
 
-        virtual int connect();
-        
+	virtual int connect();
+
 	virtual int connect( unsigned short clientPort );
 
-        virtual int bind();
+	virtual int bind();
 
 	/**
 	 * \brief Ustawia socket w tryb nasluchiwania
 	 */
-        int listen();
-        
+	int listen();
+
 	virtual int accept();
 
-        virtual int recv( char * buffer, int bufferSize );
-        virtual int send( char * buffer, int bufferSize );
+	virtual int recv( char * buffer, int bufferSize );
+	
+	virtual int send( char * buffer, int bufferSize );
 
-        virtual Ipv4 getIp();
+	virtual Ipv4 getIp();
 
 	virtual unsigned short getPort() const;
 
-        int close();
+	int close();
 
 protected:
-        int sockfd;
+	int sockfd;
 
 	unsigned short port;
 };
@@ -89,7 +93,7 @@ public:
 	 *
 	 * \param[in] port  port zdalnego hosta
 	 */
-        SocketIp4( const Ipv4 & ip, unsigned short port );
+	SocketIp4( const Ipv4 & ip, unsigned short port );
 
 	/**
 	 * \brief              Konstruktor - używa istniejącego socketu
@@ -97,17 +101,17 @@ public:
 	 * \param[in] msgsock  deskryptor socketu
 	 *
 	 */
-        SocketIp4( int msgsock );
+	SocketIp4( int msgsock );
 
 	/**
 	 * \brief Wiąże socket z adresem
 	 */
-        virtual int bind();
+	virtual int bind();
 
 	/**
 	 * \brief Łączy z serwerem
 	 */
-        virtual int connect();
+	virtual int connect();
 
 	/**
 	 * \brief                 Łączy ze zdalnym hostem za pomoca ustalonego portu
@@ -128,7 +132,7 @@ public:
 	 *
 	 * \param[in]     bufferSize  rozmiar bufora
 	 */
-        virtual int recv( char * buffer, int bufferSize );
+	virtual int recv( char * buffer, int bufferSize );
 
 	/**
 	 * \brief                     Wysyła dane z bufora
@@ -137,12 +141,12 @@ public:
 	 *
 	 * \param[in]     bufferSize  rozmiar bufora
 	 */
-        virtual int send( char * buffer, int bufferSize );
+	virtual int send( char * buffer, int bufferSize );
 
 	/**
 	 * \brief Zwraca adres IPv4 zdalengo hosta
 	 */
-        virtual Ipv4 getIp();
+	virtual Ipv4 getIp();
 
 	/**
 	 * \brief Zwraca port zdalnego hosta
@@ -150,37 +154,34 @@ public:
 	virtual unsigned short getPort() const;
 
 private:
-        sockaddr_in saddr;
+	sockaddr_in saddr;
 
-        Ipv4 ip;
+	Ipv4 ip;
 };
 
 class SocketIp6 : public Socket
 {
 public:
-        SocketIp6( const Ipv6 & ip);
+	SocketIp6( const Ipv6 & ip);
 
-        SocketIp6( int msgsock );
+	SocketIp6( int msgsock );
 
-        virtual int bind();
+	virtual int bind();
 
-        virtual int connect();
+	virtual int connect();
 
 	virtual int connect( unsigned short clientPort );
 
 	virtual int accept();
 
-        virtual int recv( char * buffer, int bufferSize );
+	virtual int recv( char * buffer, int bufferSize );
 
-        virtual int send( char * buffer, int bufferSize );
+	virtual int send( char * buffer, int bufferSize );
 
 
 private:
-        sockaddr_in6 saddr;
-        sockaddr_in6 caddr;
+	sockaddr_in6 saddr;
+	sockaddr_in6 caddr;
 };
-
-
-
 
 #endif // SOCKET_HPP
