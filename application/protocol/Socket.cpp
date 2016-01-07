@@ -26,8 +26,8 @@ Socket::Socket( int msgsock, unsigned short port ) : sockfd( msgsock ), port(por
 {
 	struct timeval tv;
 
-	tv.tv_sec = 3;  /* 30 Secs Timeout */
-	tv.tv_usec = 0;  // Not init'ing this can cause strange errors
+	tv.tv_sec = TIMEOUT;
+	tv.tv_usec = 0;
 
 	setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, (char *)&tv,sizeof(struct timeval));
 }
@@ -68,7 +68,7 @@ int Socket::close()
 
 
 
-SocketIp4::SocketIp4( const Ipv4 & ip, unsigned short port, bool accSock ) : Socket( port ), ip(ip)
+SocketIp4::SocketIp4( const Ipv4 & ip, unsigned short port ) : Socket( port ), ip(ip)
 {
         DBG("SocketIp4( " << ip.getAddress() << " )")
 
@@ -221,3 +221,5 @@ unsigned short SocketIp4::getPort() const
 {
 	return ntohs(saddr.sin_port);
 }
+
+

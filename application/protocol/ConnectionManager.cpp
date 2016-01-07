@@ -84,7 +84,7 @@ ConnectionManager * ConnectionManager::getInstance( unsigned short listenPort )
 ConnectionManager::ConnectionManager( unsigned short listenPort ) : listeningPort(listenPort), lockAddr( AddressIpv4(Ipv4( "127.0.0.1" ), 55555) )
 {
         DBG("ConnectionManager( " << listenPort << " )")
-        listeningSocket = new SocketIp4( Ipv4(), listenPort, true );
+        listeningSocket = new SocketIp4( Ipv4(), listenPort );
 
         try
         {

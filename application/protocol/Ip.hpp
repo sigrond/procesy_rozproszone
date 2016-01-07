@@ -53,6 +53,11 @@ public:
          */
         Ipv4 ( const std::string & address = "0.0.0.0" );
 
+	/**
+	 * \brief KOnstruktor kopiujcy
+	 *
+	 * \param[in] that referencja do kopiowanego Ipv4
+	 */
 	Ipv4 ( const Ipv4 & that );
 
         /**
@@ -81,9 +86,23 @@ public:
          * \return    czy porównywany obiekt jest "mniejszy"
          */
         bool operator<( const Ipv4 & that ) const;
-
+	
+	/**
+	 * \brief Operator ==
+	 *
+	 * \param[in] porównywany obiekt Ipv4
+	 *
+	 * \return czy równe
+	 */
         bool operator==( const Ipv4 & that ) const;
 
+	/**
+	 * \brief Operator =
+	 *
+	 * \param[in] przypisywany obiekt Ipv4
+	 *
+	 * \return obiekt po przypisaniu
+	 */
         Ipv4 & operator=( const Ipv4 & that );
 
 private:
@@ -106,6 +125,41 @@ public:
         Ipv6 ( const std::string & address = "::1" );
 
         virtual std::string getAddress () const;
+
+	unsigned long getAddressNum( unsigned short n ) const;
+	
+    	/**
+         * \brief     Operator < (mniejszy niż). 
+         *
+         * Służy włącznie do wprowadzenia **jakiegokolwiek** porządku w zbiorze adresów.
+         * Nie musi to być koniecznie porządek typu ::1 < ::2.
+         * Rzeczywiste uporządkowanie zależy ot tego, co inet_aton() wyprawia z adresami.
+         *
+         * \param[in] porównywany obiekt
+         *
+         * \return    czy porównywany obiekt jest "mniejszy"
+         */
+        bool operator<( const Ipv4 & that ) const;
+	
+	/**
+	 * \brief Operator ==
+	 *
+	 * \param[in] porównywany obiekt Ipv6
+	 *
+	 * \return czy równe
+	 */
+        bool operator==( const Ipv6 & that ) const;
+
+	/**
+	 * \brief Operator =
+	 *
+	 * \param[in] przypisywany obiekt Ipv6
+	 *
+	 * \return obiekt po przypisaniu
+	 */
+        Ipv4 & operator=( const Ipv6 & that );
+
+
 private:
         bool isCorrect () const;
         void toNumbers();
