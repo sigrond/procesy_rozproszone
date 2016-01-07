@@ -1,7 +1,8 @@
 /** \file ConsoleClient.hpp
  * \authors Tomasz Jakubczyk, Kacper Stachyra
  * \brief plik nagłówkowy klasy ConsoleClient
- *
+ * \date 9 Dec 2015
+ * Low Orbit Task Cannon
  */
 
 #ifndef ConsoleClient_hpp

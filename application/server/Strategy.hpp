@@ -1,7 +1,7 @@
 /** \file Strategy.hpp
  * \author Tomasz Jakubczyk
  * \brief Plik nagłówkowy abstrakcyjnej klasy Strategy.
- * \date
+ * \date 3 Dec 2015
  * Low Orbit Task Cannon
  */
 

@@ -1,7 +1,7 @@
 /** \file BlockingQueueTests.cpp
  * \author Tomasz Jakubczyk
  * \brief Plik z testami do klasy BlockingQueue.
- * \date
+ * \date 3 Dec 2015
  * Low Orbit Task Cannon
  */
 

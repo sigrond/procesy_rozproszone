@@ -1,7 +1,10 @@
 /** \file console.cpp
- * \author Kacper Stachyra
+ * \authors Kacper Stachyra, Tomasz Jakubczyk
  * \brief Glowny plik konsoli administratora, watek klienta,
+ * \date 9 Dec 2015
+ * Low Orbit Task Cannon
  */
+
 
 #include "ConsoleClient.hpp"
 

@@ -1,7 +1,7 @@
 /** \file Controller.hpp
  * \author Tomasz Jakubczyk
  * \brief Plik nagłówkowy klasy kontrolera
- * \date
+ * \date 21 Nov 2015
  * Low Orbit Task Cannon
  */
 

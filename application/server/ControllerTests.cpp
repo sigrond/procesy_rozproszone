@@ -1,7 +1,7 @@
 /** \file ControllerTests.cpp
  * \author Tomasz Jakubczyk
  * \brief Plik z testami do klasy Controller.
- * \date
+ * \date  9 grudnia 215
  * Low Orbit Task Cannon
  */
 

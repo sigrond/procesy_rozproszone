@@ -1,7 +1,8 @@
 /** \file ConsoleClient.cpp
  * \authors Tomasz Jakubczyk, Kacper Stachyra
  * \brief Implementacje metod klasy ConsoleClient
- *
+ * \date 9 Dec 2015
+ * Low Orbit Task Cannon
  */
 
 

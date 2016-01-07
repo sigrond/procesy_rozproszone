@@ -1,7 +1,7 @@
 /** \file Controller.cpp
  * \author Tomasz Jakubczyk
  * \brief Plik z implementacjami metod klasy Controller
- * \date
+ * \date 4 Dec 2015
  * Low Orbit Task Cannon
  */
 
