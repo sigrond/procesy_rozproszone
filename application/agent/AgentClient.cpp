@@ -56,6 +56,9 @@ void AgentClient::listen()
         #endif // _DEBUG
         return;
 	}
+	#ifdef _DEBUG
+	cout<<"odebraliśmy coś"<<endl;
+	#endif // _DEBUG
 	/** TO DO  rozszyfrowac wiadomosc */
 	if (msg != nullptr)
 	{
@@ -84,6 +87,8 @@ void AgentClient::send( message::Message *msg)
 
 void AgentClient::readMsg( message::Message *msg)
 {
+    #ifdef _DEBUG
+    cout<<"AgentClient::readMsg( message::Message *msg)"<<endl;
     MessageParser messageParser(msg,q);
     messageParser.parse();
 

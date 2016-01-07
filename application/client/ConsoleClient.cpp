@@ -161,6 +161,7 @@ void ConsoleClient::start()
                 cout<<"Brak polaczenia z serwerem\n";
             }
         }
+        else if(command == ADD_AGENT)
 
 
         //...//
@@ -203,6 +204,7 @@ int ConsoleClient::readCommand(string* arg)
     if (arg[0].compare("exit")==0) command = EXT;
     else if (arg[0].compare("connect")==0) command = CON;
     else if(arg[0].compare("add")==0) command = ADD;
+    else if(arg[0].compare("add_agent")==0) command = ADD_AGENT;
 
     return command;
 }

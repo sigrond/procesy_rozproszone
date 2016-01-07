@@ -36,6 +36,7 @@ public:
         CON, /*polacz*/
         ADD, /*nowe zadanie*/
         EXT, /*wyjscie*/
+        ADD_AGENT,
     };
 
 private:
