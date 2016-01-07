@@ -44,8 +44,6 @@ void awaitConnections( ConnectionManager * conMan )
                                 DBG("awaitConnections(): connection not found, new connection")
                                 *connection = new Connection( socket );
 
-				DBG( connection << ": " << *connection )
-
                                 try
                                 {
 					std::condition_variable * conVar;
@@ -73,8 +71,6 @@ void awaitConnections( ConnectionManager * conMan )
 }
 
 
-// tak, to działa i jest bezpieczne wątkowo (Magic Statics)
-// C++11 takie piękne
 ConnectionManager * ConnectionManager::getInstance( unsigned short listenPort )
 {
         static ConnectionManager instance = ConnectionManager( listenPort );
@@ -137,8 +133,6 @@ void ConnectionManager::receive( const Ipv4 & ip, message::Message * & msg, unsi
 
 		Connection * check = connection;
 
-		DBG( "r1 " << &connection << ": " << connection );
-
                 if( connection == nullptr )
                 {
                         DBG("ConMan::rec() connection not found, waiting for new connection")
@@ -152,8 +146,6 @@ void ConnectionManager::receive( const Ipv4 & ip, message::Message * & msg, unsi
                         connection = map4[ addr ];
 
 			check = connection;
-
-			DBG( "r2 " << &connection << ": " << connection );
                 }
 
         lock.unlock(); 

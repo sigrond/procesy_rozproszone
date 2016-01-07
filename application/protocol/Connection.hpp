@@ -65,12 +65,8 @@ public:
          * \return     Wskaźnik na obiekt Message utworzony na podstawie danych otrzymanych ze zdalnego hosta 
          */
         void receive ( message::Message *& message );
-
-        char getCounter();
 private:
         Ip * ip;
-
-        char counter;
 
         Socket * socket;
 

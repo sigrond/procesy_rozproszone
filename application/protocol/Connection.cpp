@@ -6,25 +6,18 @@
  * \authors Tomasz Jakubczyk, Andrzej Roguski
  */
 
-// UWAGA!!!
-// Poniższy kod został wyprodukowany na (bardzo) szybko, w celach uzyskania JAKIEGOKOLWIEK połączenia
-// Planowo do wigilii przestanie to wyglądać jak program napisany przez absolwenta szkoły wyższej informatyki i zarządzania
-
 #include <fstream>
 #include <boost/crc.hpp>
 
-
 #include "Connection.hpp"
 #include "MessageCodes.hpp"
-// chwilowo
+
 #include <cstring>
 #include <iostream>
 
 #include "debug.h"
 
-#include "pasta.h"
-
-Connection::Connection ( const Ipv4 & address, unsigned short port, unsigned short clientPort ) : counter(0)
+Connection::Connection ( const Ipv4 & address, unsigned short port, unsigned short clientPort )
 {
         DBG("Connection( " << address.getAddress() << ":" << port <<" )")       
         socket = new SocketIp4( address, port );
@@ -35,12 +28,12 @@ Connection::Connection ( const Ipv4 & address, unsigned short port, unsigned sho
 		socket->connect( clientPort );
 }
 
-Connection::Connection ( const Ipv6 & address ) : counter(0)
+Connection::Connection ( const Ipv6 & address )
 {
 
 }
 
-Connection::Connection ( int msgsock ) : counter(0)
+Connection::Connection ( int msgsock )
 {
         DBG("Connection( " << msgsock << " )")
         socket = new SocketIp4( msgsock );
@@ -320,114 +313,106 @@ void Connection::receive ( message::Message * & message )
 {
         DBG("Conn::rec()")
         
-        if( counter < 4 )
-        {
-		char * code = new char [ 1 ];
+	char * code = new char [ 1 ];
 
-		memset( code, 0, sizeof( code ) );
+	memset( code, 0, sizeof( code ) );
 
-		unsigned long received = socket->recv( code, 1 );
+	unsigned long received = socket->recv( code, 1 );
 
-		
-		DBG( "Conn::rec() code[0] = " << std::hex << (unsigned)code[0] );
-		
-		std::cout << std::dec;
+	
+	DBG( "Conn::rec() code[0] = " << std::hex << (unsigned)code[0] );
+	
+	std::cout << std::dec;
 
-		switch( (message::Category)( (unsigned)code[0] & 0xE0 ) )
-		{
-			case message::Category::HOST:
-				if( ((unsigned)code[0] & 0x03) == 0x00 )
-				{
-					recHost( message, code[0] );	
-				}
-				else
-				{
-					DBG_M("Conn::rec() HOST ACK/OK/NOK");
-					message = new message::hostMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
-				}
-				break;
+	switch( (message::Category)( (unsigned)code[0] & 0xE0 ) )
+	{
+		case message::Category::HOST:
+			if( ((unsigned)code[0] & 0x03) == 0x00 )
+			{
+				recHost( message, code[0] );	
+			}
+			else
+			{
+				DBG_M("Conn::rec() HOST ACK/OK/NOK");
+				message = new message::hostMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
+			}
+			break;
 
-			case message::Category::TASK:
-				if( ((unsigned)code[0] & 0x03) == 0x00 )
-				{
-					DBG_M("Conn::rec() TASK ACK/OK/NOK");
-					recTask( message, code[0] );
-				}
-				else
-				{
-					message = new message::taskMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
-				}
-				break;
+		case message::Category::TASK:
+			if( ((unsigned)code[0] & 0x03) == 0x00 )
+			{
+				DBG_M("Conn::rec() TASK ACK/OK/NOK");
+				recTask( message, code[0] );
+			}
+			else
+			{
+				message = new message::taskMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
+			}
+			break;
 
-			case message::Category::DEP:
-				if( ((unsigned)code[0] & 0x03) == 0x00 )
-					recDep( message );
-				else
-				{
-					DBG_M("Conn::rec() DEP ACK/OK/NOK");
-					message = new message::depMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
-				}
-				break;
+		case message::Category::DEP:
+			if( ((unsigned)code[0] & 0x03) == 0x00 )
+				recDep( message );
+			else
+			{
+				DBG_M("Conn::rec() DEP ACK/OK/NOK");
+				message = new message::depMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
+			}
+			break;
 
-			case message::Category::FILE:
-				if( ((unsigned)code[0] & 0x03) == 0x00 )
-				{
-					recFile( message );
-				}
-				else
-				{
-					DBG_M("Conn::rec() FILE ACK/OK/NOK");
-					message = new message::fileMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
-				}
-				break;
+		case message::Category::FILE:
+			if( ((unsigned)code[0] & 0x03) == 0x00 )
+			{
+				recFile( message );
+			}
+			else
+			{
+				DBG_M("Conn::rec() FILE ACK/OK/NOK");
+				message = new message::fileMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
+			}
+			break;
 
-			case message::Category::RET:
-				if( ((unsigned)code[0] & 0x03) == 0x00 )
-				{
-					recRet( message );
-				}
-				else
-				{
-					DBG_M("Conn::rec() RET ACK/OK/NOK");
-					message = new message::depMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
-				}
-				break;
+		case message::Category::RET:
+			if( ((unsigned)code[0] & 0x03) == 0x00 )
+			{
+				recRet( message );
+			}
+			else
+			{
+				DBG_M("Conn::rec() RET ACK/OK/NOK");
+				message = new message::depMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
+			}
+			break;
 
-			case message::Category::SYN:
-				DBG_M("Conn::rec() SYN");
-				message = new message::synMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
-				break;
+		case message::Category::SYN:
+			DBG_M("Conn::rec() SYN");
+			message = new message::synMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
+			break;
 
-			case message::Category::PING:
-				DBG_M("Conn::rec() SYN");
-				message = new message::pingMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
-				break;
+		case message::Category::PING:
+			DBG_M("Conn::rec() SYN");
+			message = new message::pingMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
+			break;
 
-			case message::Category::ERR:
-				if( ((unsigned)code[0] & 0x03) == 0x00 )
-				{
-					recErr( message, code[0] );
-				}
-				else
-				{
-					DBG_M("Conn::rec() ERR ACK/OK/NOK");
-					message = new message::depMessage( code, received );
-				}
-				break;
+		case message::Category::ERR:
+			if( ((unsigned)code[0] & 0x03) == 0x00 )
+			{
+				recErr( message, code[0] );
+			}
+			else
+			{
+				DBG_M("Conn::rec() ERR ACK/OK/NOK");
+				message = new message::depMessage( code, received );
+			}
+			break;
 
-			default:
-				DBG("Conn::rec() Nieznana kategoria")
-				break;
-		};
+		default:
+			DBG("Conn::rec() Nieznana kategoria")
+			break;
+	};
 
-		delete code;
-	}
+	delete code;
 
         
 	socket->close();
-}
-
-char Connection::getCounter()
-{        
-        return counter;
 }
