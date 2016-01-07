@@ -70,6 +70,7 @@ private:
     bool pingAck;
     bool fileAck;
     bool taskAck;
+    bool hostAck;
     Ipv4 serverip;
     int taskCount;
 };

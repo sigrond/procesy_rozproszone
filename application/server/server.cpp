@@ -104,7 +104,7 @@ int main(int argi, char* argv[])
 						Ipv4* ip=new Ipv4(ss);/**< dalej opiekunem tego adresu zostaje slave i nikt inny nie powinnien wywołać destruktora */
 						/**< \todo sprawdzanie poprawności adresu */
 						cout<<"Dodawanie agenta: "<<ip->getAddress()<<endl;
-						model->pushAddAgent(ip);
+						model->pushAddAgent(ip,46000);
 					}
 					continue;
 				}

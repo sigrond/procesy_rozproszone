@@ -89,6 +89,7 @@ void AgentClient::readMsg( message::Message *msg)
 {
     #ifdef _DEBUG
     cout<<"AgentClient::readMsg( message::Message *msg)"<<endl;
+    #endif // _DEBUG
     MessageParser messageParser(msg,q);
     messageParser.parse();
 
