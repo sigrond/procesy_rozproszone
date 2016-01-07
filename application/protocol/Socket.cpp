@@ -85,7 +85,7 @@ SocketIp4::SocketIp4( const Ipv4 & ip, unsigned short port ) : Socket( port ), i
 	tv.tv_sec = TIMEOUT;
 	tv.tv_usec = 0;
 
-	setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, (char *)&tv,sizeof(struct timeval));
+	//setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, (char *)&tv,sizeof(struct timeval));
 
 }
 
@@ -151,9 +151,9 @@ int SocketIp4::accept()
         int msgsock = ::accept( sockfd, (struct sockaddr *) &saddr, &addrlen  );
 
         if( msgsock == -1 )
-		if( errno == EAGAIN || errno == EWOULDBLOCK || errno == EINPROGRESS )
+	/*	if( errno == EAGAIN || errno == EWOULDBLOCK || errno == EINPROGRESS )
 			throw TimeoutEx();
-		else
+		else*/
 			throw AcceptSockEx();
 
         return msgsock;
