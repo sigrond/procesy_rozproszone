@@ -516,7 +516,7 @@
 		Demonstracja rezultatów będzie się opierała na realizacji wybranych (lub wszystkich) przypadków użycia przy wykorzystaniu napisanego wcześniej skryptu testującego.
 		
 	\section{Wnioski}
-        \subsection{Tomasz Jakubczyk}
+        \subsection{Tomasz Jakubczyk - wnioski z testowania}
             Niezaprzeczalnie poprawnie działa kolejka blokująca BlockingQueue. Jest to bardzo ważny element projektu, gdyż zapewnia niezawodną synchronizację wątków. Bez tego nie było by szans, żeby coś działało. \\
             Każdy z modułów, czyli serwer, konsola, agent i protokół, same z siebie wydają się działać poprawnie, jednak testowanie wykazało, że moduły te zapałały do siebie gorącą nienawiścią. \\
             Ponadto wykorzystywane kompilatory g++ i biblioteki obsługujące standard c++11 i c++14 wykazują się różnymi dziwnymi zachowaniami. O ile kompilacja i linkowanie przebiega pomyślnie, to nie można powiedzieć, że wykonanie programów takie jest. \\
@@ -531,8 +531,28 @@
             Mimo usilnych starań nie udało się przekonać członków zespołu do napisania odpowiedniej liczby testów jednostkowych i postało ich zaledwie kilka.\\
             Zostało napisanych kilka skryptów testowych, ale raczej w niczym one nam nie pomogły, a próby doprowadzenia ich do działania na niektórych maszynach i systemach zajęły sporo czasu. Oczywiście niezwykle przydatne okazały się ogromne ilości komunikatów debugowania oraz GDB pozwoliło szybko znaleźć kilka poważnych błędów, ale nie wszystkie. \\
             GDB wykazuje się złym zachowaniem, jeśli w programie zwracane są wyjątki, które nie mają zakończyć programu. \\
-            Być może powinno się wyznaczyć jedną osobę, która zajmowała by się tylko testowaniem tego co inni napisali. \\
-            
+            Być może powinno się wyznaczyć jedną osobę, która zajmowała by się tylko testowaniem tego co inni napisali. \\   
+        \subsection{Tomasz Jakubczyk - opis doświadczeń z projektu}
+Po pierwsze lepiej dobierać współpracowników. \\
+Zwykle ten obowiązek spada na head hunterów, a przynajmniej można zobaczyć CV. Niestety, osoby preferowane na członków projektu postanowiły nie zapisać się na przedmiot TIN. Nie uzyskałem też zgody na realizowanie projektu w mniejszym zespole, co niewątpliwie dało by lepszy efekt. \\
+Bardzo zauważalny okazał się brak środków nacisku na członków zespołu. Niektórzy członkowie mimo napomnień odkładali pisanie projektu, a na końcu zamiast wziąć się w garść i zarwać trzy noce odpuścili sobie zupełnie. Być może częściowo ponosi za to winę okres świąteczny, zalew kolokwiami i innymi projektami przez czas trwania projektu od prezentacji wstępnej do terminu oddania. \\
+Być może jeśli cały projekt byłby zadany już w pierwszym lub drugim tygodniu semestru, kiedy jest jeszcze dużo czasu i termin oddania byłby gdzieś w pierwszej połowie semestru, przebieg projektu byłby zgoła inny. Nie widzę też żadnego dobrego uzasadnienia, czemu tak by nie miało być, bo wiedzę potrzebną do zakodowania aplikacji albo w większości już posiadaliśmy, albo i tak musieliśmy doczytać bezpośrednio ze źródeł (internetu). \\ \\
+Problemem okazało się też zbyt mało precyzyjne opisanie szczegółów implementacji protokołu w dokumentacji wstępnej. Uważam, że opis pól komunikatów był niewystarczający. Powinniśmy byli napisać jak dokładnie będziemy wykorzystywać gniazda, z pewnością oszczędziło by to wiele czasu przy próbach integracji modułów aplikacji. \\ \\
+Okazało się, że niektórzy członkowie mają skłonność do rzadkiego commitowania swoich postępów na githuba, co utrudniało kontrolę sytuacji. Przydało by się jakieś oprogramowanie do podglądania, czym właśnie zajmują się członkowie zespołu.
+Niezwykle przydatny okazał się komunikator Skype w fazie integracji i debugowania aplikacji. Pozwoliło to szybko zorientować się w sytuacji co do projektu i nakierować tok prac na właściwe tory. \\
+Dla odmiany Facebook nie okazał się zbyt dobrym sposobem komunikacji, chociaż mogło to wynikać z tego którzy członkowie zespołu wykorzystywali go do komunikacji. Komunikacja przez Facebooka prowadziła często do tego, że pytania bądź polecenia
+pozostawały bez odpowiedzi. Może być to też związane ze zbyt dużym natłokiem informacji na Facebooku. \\
+Zauważalna była duża rozbieżność w umiejętnościach programistycznych członków zespołu. Jest to zapewne związane z tym, że program studiów informatyki na Wydziale Elektroniki Politechniki Warszawskiej przewiduje stanowczo za mało
+godzin poświęconym nauce języków programowania. \\
+Testowanie regresyjne oraz integracyjne powinno być przeprowadzane co najmniej raz w tygodniu, niestety, niektórzy członkowie aż do końca projektu nie napisali nic co mogło by się do tego nadawać. \\
+Sądzę, że wprowadziliśmy zbyt rozbudowaną strukturę logiczną projektu, który tego na prawdę nie wymagał i przez to nie starczyło czasu na pełne zrealizowanie projektu. Jeśli projekt zostałby napisany strukturalnie w języku c przez jedną
+osobę, to wyszło by to dużo prościej, dużo szybciej, zostały by zrealizowane wszystkie założenia projektowe i debugowanie okazało by się dużo prostsze. \\
+Ubolewamy, też nad tym, że nie udało się napisać pluginu Wiresharka do podglądania komunikacji sieciowej, jednak w naszym przypadku dużo by nie pomógł i uznaliśmy, że w zbyt ograniczonym czasie potrzeba zająć się raczej usuwaniem błędów
+krytycznych wywołania programu. \\
+W ostatnich dniach projektu byliśmy o krok od uzyskania działającego jednocześnie IPv4 i IPv6, jednak zabrakło na to czasu i w ogromie innych problemów musieliśmy zadowolić się działającym IPv4. Gdyby na początku projektu klasa Ip nie była
+by klasą wirtualną po której dziedziczą Ipv4 i Ipv6, to niewątpliwie to by się nam udało. Niestety na chwilę obecną Ipv6 jest tylko częściowo zrealizowane w kodzie. \\
+Już tydzień przed końcem projektu zorientowaliśmy się, że raczej nie ma szans na realizacje synchronizacji zegarów przez pobranie z serwera NTP, niemniej został napisany kod do protokołu który może bez problemu obsługiwać tą opcję. \\
+Okazało się też, że i tak testujemy naszą aplikację w jednym środowisku i sens tego jest znikomy. \\
         \subsection{Andrzej Roguski}
             Jeśli miałbym wskazać największe gwoździe w trumnie projektu, byłyby nimi faza projektowania i testowania. \\
             \\
@@ -566,6 +586,16 @@
 		    Eryk Ratyński  & Agent  \\
 		    Andrzej Roguski  & Protokół (IPv4), dokumentacja, testowanie \\
 		    Kacper Stachyra & Konsola administratora \\
+		\end{tabular}
+		
+	\subsection{Czas}
+        \begin{tabular}{ l | l }
+		    \textbf{Osoba} & \textbf{Zadania} \\
+		    \hline
+		    Tomasz Jakubczyk  & około 100 h  \\
+		    Eryk Ratyński  & około 25 h  \\
+		    Andrzej Roguski  & około 100 h \\
+		    Kacper Stachyra & około 100 h \\
 		\end{tabular}
 		
 		
