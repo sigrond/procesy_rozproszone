@@ -24,22 +24,28 @@
 
 #include "pasta.h"
 
-Connection::Connection ( const Ipv4 & address, unsigned short port, unsigned short clientPort ) : counter(0)
+Connection::Connection ( const Ipv4 & address, Socket * & sock, unsigned short port, unsigned short clientPort ) : counter(0)
 {
-        DBG("Connection( " << address.getAddress() << ":" << port <<" )")       
-        socket = new SocketIp4( address, port );
+        DBG("Connection( " << address.getAddress() << ":" << port <<" )")
+	
+	if( sock )	
+		socket = sock;
+	else
+	{
+		socket = new SocketIp4( address, port );
 
-        try
-        {
-		if( port != 55555 )
-			socket->connect();
-		else
-			socket->connect( clientPort );
-        }
-        catch (std::exception & e)
-        {
-                std::cerr << e.what() << std::endl;
-        }
+		try
+		{
+			if( port != 55555 )
+				socket->connect();
+			else
+				socket->connect( clientPort );
+		}
+		catch (std::exception & e)
+		{
+			std::cerr << e.what() << std::endl;
+		}
+	}
 }
 
 Connection::Connection ( const Ipv6 & address ) : counter(0)
@@ -47,10 +53,14 @@ Connection::Connection ( const Ipv6 & address ) : counter(0)
 
 }
 
-Connection::Connection ( int msgsock ) : counter(0)
+Connection::Connection ( int msgsock, Socket * & sock ) : counter(0)
 {
         DBG("Connection( " << msgsock << " )")
-        socket = new SocketIp4( msgsock );
+
+	if( sock )
+		socket = sock;
+	else
+		socket = new SocketIp4( msgsock );
 }
 
 Connection::~Connection ()

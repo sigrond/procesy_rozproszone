@@ -96,6 +96,9 @@ private:
 
         Socket * listeningSocket;
 
+	std::map<AddressIpv4, Socket *> recSocket;
+	std::map<AddressIpv4, Socket *> sendSocket;
+
 	unsigned short listeningPort;
 
         friend void awaitConnections( ConnectionManager * conMan );

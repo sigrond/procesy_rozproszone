@@ -35,14 +35,22 @@ void awaitConnections( ConnectionManager * conMan )
 		
 			Connection ** connection;	
 
-			if( conMan->listeningPort == SERVER_PORT )
-				connection = &conMan->map4[ addr ];
-			else
-				connection = &conMan->map4[ conMan -> lockAddr ];
+			Socket * * recsock;
 
+			if( conMan->listeningPort == SERVER_PORT )
+			{
+				recsock = &conMan->recSocket[ addr ];
+				connection = &conMan->map4[ addr ];
+			}
+			else
+			{
+				recsock = &conMan->recSocket[ conMan -> lockAddr ];
+				connection = &conMan->map4[ conMan -> lockAddr ];
+			}
 				DBG( connection )
                                 DBG("awaitConnections(): connection not found, new connection")
-                                *connection = new Connection( socket );
+
+                                *connection = new Connection( socket, *recsock);
 
 				DBG( connection << ": " << *connection )
 
@@ -110,13 +118,11 @@ void ConnectionManager::send( const Ipv4 & ip, const message::Message & msg, uns
 
 	AddressIpv4 addr = AddressIpv4( ip, port );
 
-        Connection connection = Connection( ip, port, listeningPort - PORT_SHIFT );
-
         {
                 std::unique_lock<std::mutex> lock( connGuardsMutex );
                 connectionGuards4in[ addr ].lock();  
         }
-
+	Connection connection = Connection( ip, sendSocket[ addr ], port, listeningPort - PORT_SHIFT );
         connection.send(msg);
 
         std::unique_lock<std::mutex> lock( connGuardsMutex );
