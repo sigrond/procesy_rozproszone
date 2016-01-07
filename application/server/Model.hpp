@@ -1,7 +1,7 @@
 /** \file Model.hpp
  * \author Tomasz Jakubczyk
  * \brief plik nagłówkowy klasy modelu
- * \date
+ * \date 21 Nov 2015
  * Low Orbit Task Cannon
  */
 

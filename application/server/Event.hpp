@@ -1,7 +1,7 @@
 /** \file Event.hpp
  * \author Tomasz Jakubczyk
  * \brief Plik nagłówkowy klasy Event
- * \date
+ * \date 3 Dec 2015
  * Low Orbit Task Cannon
  */
 

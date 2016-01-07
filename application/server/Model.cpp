@@ -1,7 +1,7 @@
 /** \file Model.cpp
  * \author Tomasz Jakubczyk
  * \brief plik z implementacjami metod klasy modelu
- * \date
+ * \date 9 grudnia 215
  * Low Orbit Task Cannon
  */
 

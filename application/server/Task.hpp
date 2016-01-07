@@ -1,7 +1,7 @@
 /** \file Task.hpp
  * \author Tomasz Jakubczyk
  * \brief Plik nagłówkowy klasy Task.
- * \date
+ * \date  15 gru 2015
  * Low Orbit Task Cannon
  */
 

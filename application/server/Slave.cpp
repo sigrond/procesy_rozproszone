@@ -1,7 +1,7 @@
 /** \file Slave.cpp
  * \author Tomasz Jakubczyk
  * \brief Plik z implementacjami metod klasy Slave.
- * \date
+ * \date 15 gru 2015
  * Low Orbit Task Cannon
  */
 

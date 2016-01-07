@@ -1,7 +1,7 @@
 /** \file AgentServer.hpp
  * \author Tomasz Jakubczyk
  * \brief plik nagłówkowy serwera klienta / agenta
- * \date
+ * \date 21 Nov 2015
  * Low Orbit Task Cannon
  */
 

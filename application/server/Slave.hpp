@@ -1,7 +1,7 @@
 /** \file Slave.hpp
  * \author Tomasz Jakubczyk
  * \brief Plik nagłówkowy klasy Slave.
- * \date
+ * \date  15 gru 2015
  * Low Orbit Task Cannon
  */
 

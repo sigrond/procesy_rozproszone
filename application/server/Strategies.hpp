@@ -6,7 +6,7 @@
  * Jeśli w puźniejszych fazach projektu okaże się, że jednak klasy strategii się rozrosną,
  * co jest bardzo mało prawdopodobne, to powinno się podzielić ten plik na więcej plików,
  * dla każdej klasy osobny.
- * \date
+ * \date 6 Dec 2015
  * Low Orbit Task Cannon
  */
 
