@@ -390,7 +390,7 @@ void Connection::receive ( message::Message * & message )
 			break;
 
 		case message::Category::PING:
-			DBG_M("Conn::rec() SYN");
+			DBG_M("Conn::rec() PING");
 			message = new message::pingMessage( (message::State)( (unsigned)code[0] & 0x03 ) );
 			break;
 
