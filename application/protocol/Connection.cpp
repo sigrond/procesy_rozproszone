@@ -29,17 +29,10 @@ Connection::Connection ( const Ipv4 & address, unsigned short port, unsigned sho
         DBG("Connection( " << address.getAddress() << ":" << port <<" )")       
         socket = new SocketIp4( address, port );
 
-        try
-        {
-		if( port != 55555 )
-			socket->connect();
-		else
-			socket->connect( clientPort );
-        }
-        catch (std::exception & e)
-        {
-                std::cerr << e.what() << std::endl;
-        }
+	if( port != 55555 )
+		socket->connect();
+	else
+		socket->connect( clientPort );
 }
 
 Connection::Connection ( const Ipv6 & address ) : counter(0)
